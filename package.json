@@ -19,11 +19,11 @@
     "postinstall": "if [ \"$NETLIFY\" = \"true\" ]; then node node_modules/puppeteer/install.mjs; fi"
   },
   "dependencies": {
-    "@contentful/live-preview": "^4.6.9",
+    "@contentful/live-preview": "^4.6.11",
     "@contentful/rich-text-html-renderer": "^17.0.0",
     "@contentful/rich-text-types": "^17.0.0",
     "@sendgrid/mail": "^8.1.4",
-    "axios": "^1.8.2",
+    "axios": "^1.8.3",
     "dotenv": "^16.4.7",
     "gatsby": "^5.14.1",
     "gatsby-adapter-netlify": "^1.2.0",
@@ -44,7 +44,7 @@
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
     "google-map-react": "^2.2.1",
-    "i18next": "^24.2.2",
+    "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
     "puppeteer": "^24.4.0",
@@ -52,11 +52,11 @@
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.4.1",
-    "sass": "^1.85.1",
+    "sass": "^1.86.0",
     "swiper": "^11.2.5"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.26.8",
+    "@babel/eslint-parser": "^7.26.10",
     "eslint": "^9.22.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "^7.0.1",
@@ -66,7 +66,7 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-webpack-plugin": "^5.0.0",
-    "stylelint": "^16.15.0",
+    "stylelint": "^16.16.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^14.0.0"
   },
