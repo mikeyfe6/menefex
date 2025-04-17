@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import * as hamburgerStyles from '../../styles/modules/hamburger.module.scss';
+import * as hamburgerStyles from "../../styles/modules/hamburger.module.scss";
 
 const HamburgerBtn = ({ click }) => (
-  <button
-    type="button"
-    className={hamburgerStyles.hamburger}
-    onClick={click}
-    aria-label="Menu"
-  >
-    <div />
-    <div />
-    <div />
-  </button>
+    <button
+        type="button"
+        className={hamburgerStyles.hamburger}
+        onClick={click}
+        aria-label="Menu"
+    >
+        <div />
+        <div />
+        <div />
+    </button>
 );
 
 export default HamburgerBtn;

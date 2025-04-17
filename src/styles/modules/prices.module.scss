@@ -1,159 +1,159 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .prices {
-  display: flex;
-  gap: 1.5em;
-  justify-content: space-evenly;
-
-  @include laptop {
-    flex-wrap: wrap;
-    row-gap: 3em;
-  }
-
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 90%;
-    gap: 2.5em;
-  }
-
-  > * {
-    @include laptop {
-      flex: 0 0 48%;
-    }
-
-    @include phablet {
-      flex: 0 0 46%;
-    }
-  }
-
-  > li {
-    padding: 1.5em 1em;
-    gap: 1em;
     display: flex;
-    flex-direction: column;
-    max-width: 450px;
-    background: linear-gradient(to bottom, $spec-color, $secondary-color);
-    border-radius: 25px;
+    gap: 1.5em;
+    justify-content: space-evenly;
 
-    @include smoothTrans;
-    @include boxShadow;
-
-    h3 {
-      font-family: $right-font;
-      text-align: center;
-      text-decoration: underline;
-      text-decoration-color: $super-color;
-      font-weight: 700;
+    @include laptop {
+        flex-wrap: wrap;
+        row-gap: 3em;
     }
 
-    &:hover {
-      transform: scale(1.0125);
-      @include smoothTrans;
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+        gap: 2.5em;
     }
 
-    .price {
-      text-align: center;
-      font-weight: 700;
-      opacity: 0.8;
-      margin: 0 0 0.5em;
+    > * {
+        @include laptop {
+            flex: 0 0 48%;
+        }
 
-      @include fluidTyping(24, 26);
-
-      > data {
-        color: $primary-color;
-      }
-
-      > span {
-        text-decoration: line-through;
-
-        @include fluidTyping(13, 14);
-      }
-
-      > sup {
-        font-weight: 500;
-        display: block;
-        top: 0.5em;
-
-        @include fluidTyping(12, 13);
-      }
-
-      &-action {
-        text-align: center;
-        font-weight: bolder;
-        opacity: 0.5;
-
-        @include fluidTyping(12, 13);
-      }
-
-      &-contains {
-        text-align: center;
-        font-weight: bold;
-        margin: 0.25em 0 1em;
-        text-decoration: underline;
-        text-decoration-color: $super-color;
-
-        @include fluidTyping(12, 13);
-      }
-
-      &-feat {
-        font-style: italic;
-        font-weight: bold;
-        color: white;
-
-        @include fluidTyping(12, 13);
-      }
-
-      &-bold {
-        font-weight: 700;
-        font-style: oblique;
-        background: rgba(245 245 245 / 37.5%);
-        border-radius: 2.5px;
-      }
+        @include phablet {
+            flex: 0 0 46%;
+        }
     }
 
-    > ul {
-      margin-bottom: 2em;
+    > li {
+        padding: 1.5em 1em;
+        gap: 1em;
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        background: linear-gradient(to bottom, $spec-color, $secondary-color);
+        border-radius: 25px;
 
-      > li {
-        list-style: none;
-        text-align: center;
-        border-bottom: 1px $spec-color solid;
-        padding: 0.875em 0.5em;
+        @include smoothTrans;
+        @include boxShadow;
 
-        @include fluidTyping(14, 16);
-      }
+        h3 {
+            font-family: $right-font;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: $super-color;
+            font-weight: 700;
+        }
+
+        &:hover {
+            transform: scale(1.0125);
+            @include smoothTrans;
+        }
+
+        .price {
+            text-align: center;
+            font-weight: 700;
+            opacity: 0.8;
+            margin: 0 0 0.5em;
+
+            @include fluidTyping(24, 26);
+
+            > data {
+                color: $primary-color;
+            }
+
+            > span {
+                text-decoration: line-through;
+
+                @include fluidTyping(13, 14);
+            }
+
+            > sup {
+                font-weight: 500;
+                display: block;
+                top: 0.5em;
+
+                @include fluidTyping(12, 13);
+            }
+
+            &-action {
+                text-align: center;
+                font-weight: bolder;
+                opacity: 0.5;
+
+                @include fluidTyping(12, 13);
+            }
+
+            &-contains {
+                text-align: center;
+                font-weight: bold;
+                margin: 0.25em 0 1em;
+                text-decoration: underline;
+                text-decoration-color: $super-color;
+
+                @include fluidTyping(12, 13);
+            }
+
+            &-feat {
+                font-style: italic;
+                font-weight: bold;
+                color: white;
+
+                @include fluidTyping(12, 13);
+            }
+
+            &-bold {
+                font-weight: 700;
+                font-style: oblique;
+                background: rgba(245 245 245 / 37.5%);
+                border-radius: 2.5px;
+            }
+        }
+
+        > ul {
+            margin-bottom: 2em;
+
+            > li {
+                list-style: none;
+                text-align: center;
+                border-bottom: 1px $spec-color solid;
+                padding: 0.875em 0.5em;
+
+                @include fluidTyping(14, 16);
+            }
+        }
+
+        button {
+            margin: auto auto 0;
+            display: block;
+
+            @include tertiaryButton;
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
     }
-
-    button {
-      margin: auto auto 0;
-      display: block;
-
-      @include tertiaryButton;
-
-      &:hover {
-        transform: scale(1);
-      }
-    }
-  }
 }
 
 .callme {
-  color: #1ca111;
-  font-weight: 500;
-  box-shadow: none;
+    color: #1ca111;
+    font-weight: 500;
+    box-shadow: none;
 
-  @include smoothTrans;
+    @include smoothTrans;
 
-  &:hover {
-    color: #187710;
-  }
+    &:hover {
+        color: #187710;
+    }
 }
 
 .contactus {
-  font-weight: 500;
-  box-shadow: none;
+    font-weight: 500;
+    box-shadow: none;
 
-  @include textLink;
+    @include textLink;
 }

@@ -1,16 +1,16 @@
 {
-  "extends": ["airbnb"],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+    "extends": ["airbnb"],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {},
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
-  },
-  "rules": {},
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
 }

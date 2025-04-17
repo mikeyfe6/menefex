@@ -1,17 +1,17 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from "react";
 
 export const HydrationContext = createContext();
 
 export const HydrationProvider = ({ children }) => {
-  const [isHydrated, setIsHydrated] = useState(false);
+    const [isHydrated, setIsHydrated] = useState(false);
 
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
+    useEffect(() => {
+        setIsHydrated(true);
+    }, []);
 
-  return (
-    <HydrationContext.Provider value={{ isHydrated }}>
-      {children}
-    </HydrationContext.Provider>
-  );
+    return (
+        <HydrationContext.Provider value={{ isHydrated }}>
+            {children}
+        </HydrationContext.Provider>
+    );
 };

@@ -1,61 +1,61 @@
 @mixin mini {
-  @media only screen and (width <= 23em) {
-    @content;
-  }
+    @media only screen and (width <= 23em) {
+        @content;
+    }
 }
 
 @mixin compact {
-  @media only screen and (width <= 30em) {
-    @content;
-  }
+    @media only screen and (width <= 30em) {
+        @content;
+    }
 }
 
 @mixin mobile {
-  @media only screen and (width <= 40em) {
-    @content;
-  }
+    @media only screen and (width <= 40em) {
+        @content;
+    }
 }
 
 @mixin phablet {
-  @media only screen and (width <= 52em) {
-    @content;
-  }
+    @media only screen and (width <= 52em) {
+        @content;
+    }
 }
 
 @mixin tablet {
-  @media only screen and (width <= 64em) {
-    @content;
-  }
+    @media only screen and (width <= 64em) {
+        @content;
+    }
 }
 
 @mixin laptop {
-  @media only screen and (width <= 76em) {
-    @content;
-  }
+    @media only screen and (width <= 76em) {
+        @content;
+    }
 }
 
 @mixin desktop {
-  @media only screen and (width <= 90em) {
-    @content;
-  }
+    @media only screen and (width <= 90em) {
+        @content;
+    }
 }
 
 @mixin wide {
-  @media only screen and (width <= 120em) {
-    @content;
-  }
+    @media only screen and (width <= 120em) {
+        @content;
+    }
 }
 
 @mixin massive {
-  @media only screen and (width >= 120.063em) {
-    @content;
-  }
+    @media only screen and (width >= 120.063em) {
+        @content;
+    }
 }
 
 @mixin landscape {
-  @media only screen and (width >= 23em) and (width <= 64em) and (orientation: landscape) {
-    @content;
-  }
+    @media only screen and (width >= 23em) and (width <= 64em) and (orientation: landscape) {
+        @content;
+    }
 }
 
 // $pocket: 'max-width: 426px';

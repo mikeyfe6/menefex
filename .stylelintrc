@@ -5,8 +5,6 @@
     ],
     "rules": {
         "media-feature-range-notation": "context",
-        "no-descending-specificity": null,
-        "scss/at-mixin-pattern": "^[a-z][a-zA-Z]*$",
         "scss/dollar-variable-empty-line-before": null
     }
 }

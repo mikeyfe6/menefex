@@ -1,63 +1,63 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .smallbio {
-  &-container {
-    background: linear-gradient(145deg, $spec-color, $white-color);
-    opacity: 0.95;
+    &-container {
+        background: linear-gradient(145deg, $spec-color, $white-color);
+        opacity: 0.95;
 
-    @include fullWidth;
-  }
-
-  &-wrapper {
-    @include container(0, 4em);
-
-    @include mobile {
-      @include container(0, 3em);
+        @include fullWidth;
     }
 
-    .thick-hr {
-      margin: 0;
-      width: 15%;
-      border: 3px solid $white-color;
-    }
+    &-wrapper {
+        @include container(0, 4em);
 
-    .thin-hr {
-      border: 2px solid $white-color;
-    }
-
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2em;
-
-      i {
-        color: $primary-color;
-        font-size: 2em;
-
-        @include smoothTrans;
-
-        &:hover {
-          color: $link-color;
+        @include mobile {
+            @include container(0, 3em);
         }
-      }
-    }
-  }
 
-  &-text {
-    margin: 2em 0;
-    max-width: 87.5%;
+        .thick-hr {
+            margin: 0;
+            width: 15%;
+            border: 3px solid $white-color;
+        }
 
-    a {
-      @include textLink;
+        .thin-hr {
+            border: 2px solid $white-color;
+        }
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2em;
+
+            i {
+                color: $primary-color;
+                font-size: 2em;
+
+                @include smoothTrans;
+
+                &:hover {
+                    color: $link-color;
+                }
+            }
+        }
     }
 
-    @include mobile {
-      max-width: 100%;
+    &-text {
+        margin: 2em 0;
+        max-width: 87.5%;
+
+        a {
+            @include textLink;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
     }
-  }
 }
 
 .meerover {
-  @include primaryButton;
+    @include primaryButton;
 }

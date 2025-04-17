@@ -1,18 +1,18 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .about {
-  h3 {
-    font-family: $right-font;
-    margin-bottom: 0.375em;
+    h3 {
+        font-family: $right-font;
+        margin-bottom: 0.375em;
 
-    &:not(:first-of-type) {
-      margin-top: 1em;
+        &:not(:first-of-type) {
+            margin-top: 1em;
+        }
     }
-  }
 
-  a {
-    font-weight: 500;
+    a {
+        font-weight: 500;
 
-    @include textLink;
-  }
+        @include textLink;
+    }
 }

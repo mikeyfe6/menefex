@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const GoogleAdsMulti = ({ slot }) => {
-  useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
-    return () => {};
-  }, []);
+    useEffect(() => {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        return () => {};
+    }, []);
 
-  return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: 'block' }}
-      data-ad-format="autorelaxed"
-      data-ad-client={process.env.GATSBY_GOOGLE_CA_PUB}
-      data-ad-slot={slot}
-    />
-  );
+    return (
+        <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-format="autorelaxed"
+            data-ad-client={process.env.GATSBY_GOOGLE_CA_PUB}
+            data-ad-slot={slot}
+        />
+    );
 };
 
 export default GoogleAdsMulti;

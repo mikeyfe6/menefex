@@ -1,462 +1,462 @@
-@use './customs' as *;
-@use 'resets';
-@use 'cookie';
+@use "./customs" as *;
+@use "resets";
+@use "cookie";
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: $poppins-font;
-  color: $body-color;
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: $poppins-font;
+    color: $body-color;
+    line-height: 1.6;
+    overflow-x: hidden;
 
-  &:has(#backdrop),
-  &:has(.cookie) {
-    overflow: hidden;
-  }
+    &:has(#backdrop),
+    &:has(.cookie) {
+        overflow: hidden;
+    }
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .menefex {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
-  flex: 1;
+    flex: 1;
 
-  @include container(100px);
+    @include container(100px);
 
-  &:has(> .page-title) {
-    @include container(100px, 3em);
+    &:has(> .page-title) {
+        @include container(100px, 3em);
 
-    @include mobile {
-      @include container(100px, 1em);
+        @include mobile {
+            @include container(100px, 1em);
+        }
     }
-  }
 }
 
 header,
 footer,
 main {
-  @media (width <= 319px) {
-    display: none;
-  }
+    @media (width <= 319px) {
+        display: none;
+    }
 }
 
 #tosmallforyouscreen {
-  display: block;
-  text-align: center;
+    display: block;
+    text-align: center;
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    gap: 25px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        gap: 25px;
 
-    img {
-      width: 37.5%;
-      margin: 0 auto;
+        img {
+            width: 37.5%;
+            margin: 0 auto;
+        }
     }
-  }
 
-  @media (width >= 320px) {
-    display: none;
-  }
+    @media (width >= 320px) {
+        display: none;
+    }
 }
 
 section,
 form {
-  margin: 2em 0;
+    margin: 2em 0;
 
-  &#biografie,
-  &#services,
-  &#actual,
-  &#portfolio {
-    margin-top: 1em;
-  }
+    &#biografie,
+    &#services,
+    &#actual,
+    &#portfolio {
+        margin-top: 1em;
+    }
 
-  @include mobile {
-    margin: 2em 0 1em;
-  }
+    @include mobile {
+        margin: 2em 0 1em;
+    }
 
-  section {
-    margin: 0;
-    padding: 0;
-  }
+    section {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 h1 {
-  @include fluidTyping(28, 32);
+    @include fluidTyping(28, 32);
 
-  span {
-    color: $secondary-color;
-  }
+    span {
+        color: $secondary-color;
+    }
 }
 
 h2 {
-  @include fluidTyping(24, 28);
+    @include fluidTyping(24, 28);
 }
 
 h3 {
-  @include fluidTyping(20, 24);
+    @include fluidTyping(20, 24);
 }
 
 h4 {
-  font-weight: 500;
+    font-weight: 500;
 
-  @include fluidTyping(16, 20);
+    @include fluidTyping(16, 20);
 }
 
 h5 {
-  @include fluidTyping(16, 18);
+    @include fluidTyping(16, 18);
 }
 
 h6 {
-  @include fluidTyping(16, 16);
+    @include fluidTyping(16, 16);
 }
 
 h1,
 h2,
 h3 {
-  letter-spacing: $low-spacing;
+    letter-spacing: $low-spacing;
 }
 
 h4,
 h5,
 h6 {
-  letter-spacing: $medium-spacing;
+    letter-spacing: $medium-spacing;
 }
 
 p {
-  letter-spacing: $medium-spacing;
-  font-weight: 300;
-  max-width: 75ch;
+    letter-spacing: $medium-spacing;
+    font-weight: 300;
+    max-width: 75ch;
 
-  @include fluidTyping(16, 18);
+    @include fluidTyping(16, 18);
 }
 
 a {
-  text-decoration: none;
-  display: inline;
-  word-break: break-word;
+    text-decoration: none;
+    display: inline;
+    word-break: break-word;
 }
 
 b,
 strong {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 strike {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 u {
-  text-decoration: underline;
-  text-underline-offset: 0.125em;
-  text-decoration-color: $secondary-color;
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+    text-decoration-color: $secondary-color;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 
-  @include boxShadow;
+    @include boxShadow;
 }
 
 input,
 textarea,
 select {
-  font-weight: 500;
-  border: none;
-  outline: none;
+    font-weight: 500;
+    border: none;
+    outline: none;
 
-  @include fluidTyping(16, 18);
+    @include fluidTyping(16, 18);
 }
 
 input,
 textarea {
-  width: 100%;
-  caret-color: $link-color;
+    width: 100%;
+    caret-color: $link-color;
 }
 
 [hidden] {
-  display: none;
+    display: none;
 }
 
 /* Width */
 ::-webkit-scrollbar {
-  width: 7.5px;
+    width: 7.5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $secondary-color;
+    background: $secondary-color;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $primary-color;
+    background: $primary-color;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $fifth-color;
+    background: $fifth-color;
 }
 
 /* Selection */
 ::selection {
-  color: $textbase-color;
-  background: $secondary-color;
+    color: $textbase-color;
+    background: $secondary-color;
 }
 
 .home-title {
-  font-family: $right-font;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: $secondary-color;
+    font-family: $right-font;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $secondary-color;
 
-  @include fluidTyping(26, 28);
+    @include fluidTyping(26, 28);
 }
 
 .page-title {
-  font-family: $right-font;
-  margin-bottom: 0.375em;
+    font-family: $right-font;
+    margin-bottom: 0.375em;
 
-  small {
-    font-size: 75%;
-  }
+    small {
+        font-size: 75%;
+    }
 }
 
 .page-sub {
-  font-weight: 300;
-  opacity: 0.9;
-  max-width: 75ch;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 75ch;
 
-  @include fluidTyping(18, 20);
+    @include fluidTyping(18, 20);
 }
 
 .page-content {
-  h3 {
-    margin-bottom: 0.75em;
-  }
-
-  ol {
-    text-decoration-color: $secondary-color;
-    list-style-type: decimal;
-    margin-inline-start: 1em;
-
-    li {
-      padding-left: 0.5em;
-      margin-bottom: 0.75em;
+    h3 {
+        margin-bottom: 0.75em;
     }
-  }
 
-  ul {
-    list-style: none;
+    ol {
+        text-decoration-color: $secondary-color;
+        list-style-type: decimal;
+        margin-inline-start: 1em;
 
-    li {
-      margin-bottom: 0.75em;
-      display: flex;
-
-      &::before {
-        content: '\203B';
-        margin-top: -5px;
-        color: $secondary-color;
-        font-weight: bold;
-        font-size: 1.25em;
-        margin-right: 0.5em;
-      }
+        li {
+            padding-left: 0.5em;
+            margin-bottom: 0.75em;
+        }
     }
-  }
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 0.75em;
+            display: flex;
+
+            &::before {
+                content: "\203B";
+                margin-top: -5px;
+                color: $secondary-color;
+                font-weight: bold;
+                font-size: 1.25em;
+                margin-right: 0.5em;
+            }
+        }
+    }
 }
 
 .thick-hr {
-  border-radius: $low-radius;
-  border: 2.5px solid $spec-color;
+    border-radius: $low-radius;
+    border: 2.5px solid $spec-color;
 }
 
 .thin-hr {
-  border-radius: $low-radius;
-  border: 5px solid $sixth-color;
+    border-radius: $low-radius;
+    border: 5px solid $sixth-color;
 }
 
 .vertical-line-short {
-  border-left: 5px solid $spec-color;
-  border-radius: $low-radius;
-  display: table;
-  margin: 5em auto;
-  height: 70px;
-  opacity: 0.5;
+    border-left: 5px solid $spec-color;
+    border-radius: $low-radius;
+    display: table;
+    margin: 5em auto;
+    height: 70px;
+    opacity: 0.5;
 
-  @include mobile {
-    margin: 4em auto;
-  }
+    @include mobile {
+        margin: 4em auto;
+    }
 }
 
 .vertical-line-long {
-  border-left: 5px solid $spec-color;
-  border-radius: $low-radius;
-  display: table;
-  margin: 0 auto 5em;
-  height: 100px;
-  opacity: 0.5;
+    border-left: 5px solid $spec-color;
+    border-radius: $low-radius;
+    display: table;
+    margin: 0 auto 5em;
+    height: 100px;
+    opacity: 0.5;
 
-  @include mobile {
-    margin: 2em auto 4em;
-  }
+    @include mobile {
+        margin: 2em auto 4em;
+    }
 }
 
 .about-spotify {
-  display: flex;
-  gap: 5em;
+    display: flex;
+    gap: 5em;
 
-  @include tablet {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0;
-  }
+    @include tablet {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 .notes-call {
-  display: flex;
-  gap: 3em;
-
-  @include tablet {
-    gap: 2em;
-  }
-
-  @include phablet {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  > section {
-    flex: 60%;
+    display: flex;
+    gap: 3em;
 
     @include tablet {
-      flex: 50%;
+        gap: 2em;
     }
-  }
 
-  > form {
-    flex: 40%;
-
-    @include tablet {
-      flex: 50%;
+    @include phablet {
+        flex-direction: column;
+        gap: 0;
     }
-  }
+
+    > section {
+        flex: 60%;
+
+        @include tablet {
+            flex: 50%;
+        }
+    }
+
+    > form {
+        flex: 40%;
+
+        @include tablet {
+            flex: 50%;
+        }
+    }
 }
 
 .form-info {
-  display: flex;
-  align-items: center;
-  gap: 5em;
+    display: flex;
+    align-items: center;
+    gap: 5em;
 
-  @include tablet {
-    gap: 2em;
-  }
-
-  @include phablet {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  > section {
-    flex: 50%;
+    @include tablet {
+        gap: 2em;
+    }
 
     @include phablet {
-      width: 100%;
-      flex: 100%;
+        flex-direction: column;
+        gap: 0;
     }
-  }
 
-  > form {
-    flex: 50%;
+    > section {
+        flex: 50%;
 
-    @include phablet {
-      width: 100%;
-      flex: 100%;
+        @include phablet {
+            width: 100%;
+            flex: 100%;
+        }
     }
-  }
+
+    > form {
+        flex: 50%;
+
+        @include phablet {
+            width: 100%;
+            flex: 100%;
+        }
+    }
 }
 
 // Terms & Cods
 
 .terms-conditions,
 .privacy-policy {
-  h1 {
-    margin-bottom: 1em;
-  }
+    h1 {
+        margin-bottom: 1em;
+    }
 
-  h5 {
-    margin-top: 2em;
-  }
+    h5 {
+        margin-top: 2em;
+    }
 
-  p {
-    margin: 1em 0;
-  }
+    p {
+        margin: 1em 0;
+    }
 
-  a {
-    color: $link-color;
-  }
+    a {
+        color: $link-color;
+    }
 
-  ol,
-  ul {
-    margin: 1em 0;
-    padding-left: 1.5em;
-  }
+    ol,
+    ul {
+        margin: 1em 0;
+        padding-left: 1.5em;
+    }
 
-  ol {
-    list-style-type: decimal;
-  }
+    ol {
+        list-style-type: decimal;
+    }
 
-  ul {
-    list-style-type: disc;
-  }
+    ul {
+        list-style-type: disc;
+    }
 }
 
 // LAZY CSS CLASSES
 
 span.lazy-color {
-  color: $secondary-color;
+    color: $secondary-color;
 }
 
 .responsive-tag {
-  position: fixed;
-  top: 1%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.25em 0.75em;
-  z-index: 1000;
-  font-weight: bold;
-  text-align: center;
-  background: $white-color;
-  opacity: 0.5;
-  color: $textbase-color;
-  outline: $textbase-color 1px solid;
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25em 0.75em;
+    z-index: 1000;
+    font-weight: bold;
+    text-align: center;
+    background: $white-color;
+    opacity: 0.5;
+    color: $textbase-color;
+    outline: $textbase-color 1px solid;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  @include mobile {
-    display: none !important;
-  }
+    @include mobile {
+        display: none !important;
+    }
 }
 
 #hubspot-messages-iframe-container {
-  /* stylelint-disable-next-line selector-class-pattern */
-  [class*='WidgetWrapper__Wrapper'] {
-    padding: 20px !important;
-  }
+    /* stylelint-disable-next-line selector-class-pattern */
+    [class*="WidgetWrapper__Wrapper"] {
+        padding: 20px !important;
+    }
 }

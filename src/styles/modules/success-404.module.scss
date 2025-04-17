@@ -1,5 +1,5 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .goback {
-  @include textLink;
+    @include textLink;
 }

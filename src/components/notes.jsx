@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import useTranslation from '../hooks/use-translation';
+import useTranslation from "../hooks/use-translation";
 
-import * as notesStyles from '../styles/modules/notes.module.scss';
+import * as notesStyles from "../styles/modules/notes.module.scss";
 
 const Notes = () => {
-  const { t, isHydrated } = useTranslation();
+    const { t, isHydrated } = useTranslation();
 
-  if (!isHydrated) return null;
+    if (!isHydrated) return null;
 
-  return (
-    <section className={notesStyles.notes}>
-      <h3>{t('priceNotesTitle')}</h3>
-      <p dangerouslySetInnerHTML={{ __html: t('priceNotesText') }} />
-    </section>
-  );
+    return (
+        <section className={notesStyles.notes}>
+            <h3>{t("priceNotesTitle")}</h3>
+            <p dangerouslySetInnerHTML={{ __html: t("priceNotesText") }} />
+        </section>
+    );
 };
 
 export default Notes;

@@ -1,100 +1,100 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .mobile-menu {
-  height: 100%;
-  opacity: 0.95;
-  background: linear-gradient(145deg, white, $third-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-  transform: translateY(100%);
-  transition: transform 0.5s ease-in-out;
+    height: 100%;
+    opacity: 0.95;
+    background: linear-gradient(145deg, white, $third-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
 
-  @include laptop {
-    &.open {
-      transform: translateY(0);
+    @include laptop {
+        &.open {
+            transform: translateY(0);
+        }
     }
-  }
-
-  @include landscape {
-    overflow: auto;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    height: 100vh;
 
     @include landscape {
-      justify-content: flex-end;
-      padding: 6em 0 2em;
-      overflow: auto;
-      height: fit-content;
+        overflow: auto;
     }
 
-    li {
-      &:last-of-type {
-        border-top: 3px solid $third-color;
-        padding-top: 1em;
-        margin-top: 0.75em;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        height: 100vh;
 
         @include landscape {
-          padding-top: 0;
-        }
-      }
-
-      a {
-        font-family: $right-font;
-        color: #555;
-        letter-spacing: $high-spacing;
-        text-shadow: -5px 0 #ccc, 0 5px #ccc, 5px 0 #ccc, 0 -5px #ccc;
-
-        @include fluidTyping(20, 24);
-
-        @include landscape {
-          line-height: normal;
+            justify-content: flex-end;
+            padding: 6em 0 2em;
+            overflow: auto;
+            height: fit-content;
         }
 
-        &:hover:not(.active-page) {
-          color: $textbase-color;
-          text-shadow: -15px 0 $third-color, 0 15px $third-color,
-            15px 0 $third-color, 0 -15px $third-color;
+        li {
+            &:last-of-type {
+                border-top: 3px solid $third-color;
+                padding-top: 1em;
+                margin-top: 0.75em;
+
+                @include landscape {
+                    padding-top: 0;
+                }
+            }
+
+            a {
+                font-family: $right-font;
+                color: #555;
+                letter-spacing: $high-spacing;
+                text-shadow: -5px 0 #ccc, 0 5px #ccc, 5px 0 #ccc, 0 -5px #ccc;
+
+                @include fluidTyping(20, 24);
+
+                @include landscape {
+                    line-height: normal;
+                }
+
+                &:hover:not(.active-page) {
+                    color: $textbase-color;
+                    text-shadow: -15px 0 $third-color, 0 15px $third-color,
+                        15px 0 $third-color, 0 -15px $third-color;
+                }
+
+                .dots {
+                    color: $secondary-color;
+                    font-size: 25px;
+                }
+
+                &.whapp {
+                    @include fluidTyping(16, 20);
+
+                    > i {
+                        margin-right: 0.5em;
+                        font-size: 1.25em;
+                        color: #3fd252;
+                    }
+                }
+            }
+
+            .active-page {
+                color: $textbase-color;
+                text-shadow: -10px 0 $secondary-color, 0 10px $secondary-color,
+                    10px 0 $secondary-color, 0 -10px $secondary-color;
+
+                @include smoothTrans;
+
+                @include fluidTyping(24, 28);
+
+                .dots {
+                    color: $third-color;
+                }
+            }
         }
-
-        .dots {
-          color: $secondary-color;
-          font-size: 25px;
-        }
-
-        &.whapp {
-          @include fluidTyping(16, 20);
-
-          > i {
-            margin-right: 0.5em;
-            font-size: 1.25em;
-            color: #3fd252;
-          }
-        }
-      }
-
-      .active-page {
-        color: $textbase-color;
-        text-shadow: -10px 0 $secondary-color, 0 10px $secondary-color,
-          10px 0 $secondary-color, 0 -10px $secondary-color;
-
-        @include smoothTrans;
-
-        @include fluidTyping(24, 28);
-
-        .dots {
-          color: $third-color;
-        }
-      }
     }
-  }
 }

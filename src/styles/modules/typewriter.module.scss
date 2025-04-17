@@ -1,179 +1,179 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .tpwriter {
-  font-family: $poppins-font;
-  margin: 0 auto;
-  letter-spacing: -0.5px;
-  font-size: 2rem;
-  font-weight: 600;
+    font-family: $poppins-font;
+    margin: 0 auto;
+    letter-spacing: -0.5px;
+    font-size: 2rem;
+    font-weight: 600;
 
-  @include phablet {
-    font-size: 1.75rem;
-  }
+    @include phablet {
+        font-size: 1.75rem;
+    }
 
-  @include mobile {
-    font-size: 1.5rem;
-  }
+    @include mobile {
+        font-size: 1.5rem;
+    }
 
-  @include compact {
+    @include compact {
+        br {
+            display: block !important;
+        }
+
+        .wmb {
+            font-size: 1.675rem;
+        }
+
+        .mnfx {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    }
+
+    .dot {
+        color: $secondary-color;
+
+        @include compact {
+            font-size: 2em;
+        }
+    }
+
+    .welkom {
+        @include compact {
+            display: none;
+        }
+    }
+
+    span {
+        color: $base-color;
+    }
+
     br {
-      display: block !important;
+        display: none;
     }
 
-    .wmb {
-      font-size: 1.675rem;
+    &.anim-typewriter {
+        &-nl {
+            animation: typewriter 6s steps(50) 1.5s 1 normal both,
+                blink-text-cursor 1300ms steps(60) infinite normal;
+            max-width: 590px;
+
+            @keyframes typewriter {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 590px;
+                }
+            }
+
+            @keyframes blink-text-cursor {
+                from {
+                    border-right-color: $secondary-color;
+                }
+
+                to {
+                    border-right-color: transparent;
+                }
+            }
+
+            @include phablet {
+                @keyframes typewriter {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 525px;
+                    }
+                }
+            }
+
+            @include mobile {
+                @keyframes typewriter {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 440px;
+                    }
+                }
+            }
+
+            @include compact {
+                animation: none;
+            }
+        }
+
+        &-en {
+            animation: typewriter 6s steps(50) 1.5s 1 normal both,
+                blink-text-cursor 1300ms steps(60) infinite normal;
+            max-width: 685px;
+
+            @keyframes typewriter {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 685px;
+                }
+            }
+
+            @keyframes blink-text-cursor {
+                from {
+                    border-right-color: $secondary-color;
+                }
+
+                to {
+                    border-right-color: transparent;
+                }
+            }
+
+            @include phablet {
+                @keyframes typewriter {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 600px;
+                    }
+                }
+            }
+
+            @include mobile {
+                font-size: 1.3rem;
+
+                @keyframes typewriter {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 445px;
+                    }
+                }
+            }
+
+            @include compact {
+                animation: none;
+            }
+        }
     }
 
-    .mnfx {
-      font-size: 3rem;
-      font-weight: 700;
+    &.line {
+        margin: auto;
+        border-right: 3px solid $secondary-color;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @include compact {
+            border-right: none;
+            line-height: 1.2;
+        }
     }
-  }
-
-  .dot {
-    color: $secondary-color;
-
-    @include compact {
-      font-size: 2em;
-    }
-  }
-
-  .welkom {
-    @include compact {
-      display: none;
-    }
-  }
-
-  span {
-    color: $base-color;
-  }
-
-  br {
-    display: none;
-  }
-
-  &.anim-typewriter {
-    &-nl {
-      animation: typewriter 6s steps(50) 1.5s 1 normal both,
-        blink-text-cursor 1300ms steps(60) infinite normal;
-      max-width: 590px;
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-
-        to {
-          width: 590px;
-        }
-      }
-
-      @keyframes blink-text-cursor {
-        from {
-          border-right-color: $secondary-color;
-        }
-
-        to {
-          border-right-color: transparent;
-        }
-      }
-
-      @include phablet {
-        @keyframes typewriter {
-          from {
-            width: 0;
-          }
-
-          to {
-            width: 525px;
-          }
-        }
-      }
-
-      @include mobile {
-        @keyframes typewriter {
-          from {
-            width: 0;
-          }
-
-          to {
-            width: 440px;
-          }
-        }
-      }
-
-      @include compact {
-        animation: none;
-      }
-    }
-
-    &-en {
-      animation: typewriter 6s steps(50) 1.5s 1 normal both,
-        blink-text-cursor 1300ms steps(60) infinite normal;
-      max-width: 685px;
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-
-        to {
-          width: 685px;
-        }
-      }
-
-      @keyframes blink-text-cursor {
-        from {
-          border-right-color: $secondary-color;
-        }
-
-        to {
-          border-right-color: transparent;
-        }
-      }
-
-      @include phablet {
-        @keyframes typewriter {
-          from {
-            width: 0;
-          }
-
-          to {
-            width: 600px;
-          }
-        }
-      }
-
-      @include mobile {
-        font-size: 1.3rem;
-
-        @keyframes typewriter {
-          from {
-            width: 0;
-          }
-
-          to {
-            width: 445px;
-          }
-        }
-      }
-
-      @include compact {
-        animation: none;
-      }
-    }
-  }
-
-  &.line {
-    margin: auto;
-    border-right: 3px solid $secondary-color;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-
-    @include compact {
-      border-right: none;
-      line-height: 1.2;
-    }
-  }
 }

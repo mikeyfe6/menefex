@@ -1,44 +1,44 @@
-import React from 'react';
+import React from "react";
 
-import RootElement from './src/components/root-element';
+import RootElement from "./src/components/root-element";
 
 const HtmlAttributes = {
-  lang: 'nl',
+    lang: "nl",
 };
 
 const HeadComponents = [
-  <link
-    key="mnfxRss"
-    rel="alternate"
-    type="application/rss+xml"
-    title="Menefex WMB: RSS Feeds"
-    href="https://menefex.nl/rss.xml"
-  />,
-  <script key="mnfxDefer" defer={false} />,
+    <link
+        key="mnfxRss"
+        rel="alternate"
+        type="application/rss+xml"
+        title="Menefex WMB: RSS Feeds"
+        href="https://menefex.nl/rss.xml"
+    />,
+    <script key="mnfxDefer" defer={false} />,
 ];
 
 const BodyAttributes = {
-  // 'data-theme': 'dark',
+    // 'data-theme': 'dark',
 };
 
 export const onRenderBody = ({
-  setHeadComponents,
-  setHtmlAttributes,
-  setBodyAttributes,
+    setHeadComponents,
+    setHtmlAttributes,
+    setBodyAttributes,
 }) => {
-  setHtmlAttributes(HtmlAttributes);
-  setHeadComponents(HeadComponents);
-  setBodyAttributes(BodyAttributes);
+    setHtmlAttributes(HtmlAttributes);
+    setHeadComponents(HeadComponents);
+    setBodyAttributes(BodyAttributes);
 };
 
 export const onPreRenderHTML = ({
-  getHeadComponents,
-  replaceHeadComponents,
+    getHeadComponents,
+    replaceHeadComponents,
 }) => {
-  const headComponents = getHeadComponents();
-  replaceHeadComponents(headComponents);
+    const headComponents = getHeadComponents();
+    replaceHeadComponents(headComponents);
 };
 
 export const wrapRootElement = ({ element }) => {
-  return <RootElement>{element}</RootElement>;
+    return <RootElement>{element}</RootElement>;
 };

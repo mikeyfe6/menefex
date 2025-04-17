@@ -1,97 +1,97 @@
-@use './customs' as *;
+@use "./customs" as *;
 
 .cookie {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background-color: rgba(0 0 0 / 50%);
-  z-index: 10;
-
-  &-container {
-    background: linear-gradient(145deg, $primary-color, $button-hover);
-    opacity: 0.95;
-    color: $fourth-color;
-    border-bottom: 7.5px solid $secondary-color;
-    border-top: 7.5px solid $primary-color;
+    position: fixed;
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -12.5%);
-    border-radius: $low-radius;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0 0 0 / 50%);
+    z-index: 10;
 
-    @include laptop {
-      max-width: 95%;
+    &-container {
+        background: linear-gradient(145deg, $primary-color, $button-hover);
+        opacity: 0.95;
+        color: $fourth-color;
+        border-bottom: 7.5px solid $secondary-color;
+        border-top: 7.5px solid $primary-color;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -12.5%);
+        border-radius: $low-radius;
+
+        @include laptop {
+            max-width: 95%;
+        }
+
+        @include mobile {
+            transform: translate(-50%, -7.5%);
+        }
     }
 
-    @include mobile {
-      transform: translate(-50%, -7.5%);
-    }
-  }
+    &-content {
+        > h3 {
+            font-family: $right-font;
 
-  &-content {
-    > h3 {
-      font-family: $right-font;
+            @include fluidTyping(28, 32);
+        }
 
-      @include fluidTyping(28, 32);
-    }
+        > p {
+            color: $white-color;
+            margin: 1em 0 1.5em;
 
-    > p {
-      color: $white-color;
-      margin: 1em 0 1.5em;
+            @include fluidTyping(16, 18);
 
-      @include fluidTyping(16, 18);
+            > span {
+                display: block;
+                margin: 1em 0;
 
-      > span {
-        display: block;
-        margin: 1em 0;
-
-        @include fluidTyping(15, 17);
-      }
-    }
-  }
-
-  &-btn {
-    &-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      gap: 1em;
-      align-items: center;
-
-      @include mobile {
-        justify-content: flex-start;
-      }
+                @include fluidTyping(15, 17);
+            }
+        }
     }
 
-    &-accept {
-      color: $textbase-color;
-      background-color: $secondary-color;
-      border-radius: $low-radius;
-      padding: 0.5em 1em;
+    &-btn {
+        &-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1em;
+            align-items: center;
 
-      @include smoothTrans;
+            @include mobile {
+                justify-content: flex-start;
+            }
+        }
 
-      &:hover {
-        background-color: $super-color;
-      }
+        &-accept {
+            color: $textbase-color;
+            background-color: $secondary-color;
+            border-radius: $low-radius;
+            padding: 0.5em 1em;
+
+            @include smoothTrans;
+
+            &:hover {
+                background-color: $super-color;
+            }
+        }
+
+        &-decline {
+            font-weight: 300;
+            background: transparent;
+            border: 1px solid #dadada86;
+            border-radius: $low-radius;
+            padding: 0.5em 1em;
+            color: $secondary-color;
+
+            @include smoothTrans;
+
+            &:hover {
+                border: 1px solid $white-color;
+            }
+        }
     }
-
-    &-decline {
-      font-weight: 300;
-      background: transparent;
-      border: 1px solid #dadada86;
-      border-radius: $low-radius;
-      padding: 0.5em 1em;
-      color: $secondary-color;
-
-      @include smoothTrans;
-
-      &:hover {
-        border: 1px solid $white-color;
-      }
-    }
-  }
 }

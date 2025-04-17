@@ -1,193 +1,193 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .service {
-  &-container {
-    background: linear-gradient(145deg, $sixth-color, $fourth-color);
+    &-container {
+        background: linear-gradient(145deg, $sixth-color, $fourth-color);
 
-    @include fullWidth;
-  }
-
-  &-wrapper {
-    @include container(0, 4em);
-
-    @include laptop {
-      @include container(0, 2.5em);
+        @include fullWidth;
     }
 
-    @include mobile {
-      @include container(0, 2em);
-    }
-
-    > div:nth-child(1) {
-      display: flex;
-      justify-content: space-between;
-
-      @include laptop {
-        flex-wrap: wrap;
-        gap: 2.5em 1.5em;
-      }
-
-      @include phablet {
-        flex-direction: column;
-        gap: 1.5em;
-      }
-
-      > div {
-        flex: 1;
-        padding: 1.5em 2em;
-        border-left: 5px groove rgba($white-color, 0.125);
+    &-wrapper {
+        @include container(0, 4em);
 
         @include laptop {
-          flex: 0 0 47.5%;
-          border-left: none !important;
-          padding: 0;
-
-          &:nth-child(3),
-          &:nth-child(4) {
-            border-top: 5px solid rgba($white-color, 1);
-            padding-top: 1.5em;
-          }
+            @include container(0, 2.5em);
         }
 
-        @include phablet {
-          flex: 1;
-
-          &:not(:first-of-type) {
-            border-top: 5px solid rgba($white-color, 1);
-            padding-top: 2em;
-            margin-top: 2em;
-          }
+        @include mobile {
+            @include container(0, 2em);
         }
 
-        &:last-of-type {
-          border-right: 5px groove rgba($white-color, 0.125);
-          padding-right: 2.5em;
+        > div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
 
-          @include laptop {
-            border-right: none;
-            padding-right: 0;
-          }
-        }
-
-        span {
-          font-weight: 700;
-
-          @include fluidTyping(17, 18);
-        }
-
-        p {
-          min-height: 325px;
-          max-width: 95%;
-          margin: 2.5em 0 2em;
-
-          @include desktop {
-            min-height: 375px;
-          }
-
-          @include laptop {
-            min-height: 175px;
-          }
-
-          @include tablet {
-            min-height: 200px;
-          }
-
-          @include phablet {
-            min-height: fit-content;
-            margin-bottom: 2em;
-          }
-
-          @include mobile {
-            margin-bottom: 2.5em;
-          }
-        }
-
-        ul {
-          margin-top: 1em;
-          list-style: none;
-          font-weight: 400;
-
-          li {
-            @include fluidTyping(15, 16);
-
-            &::before {
-              content: '\203B';
-              color: $secondary-color;
-              font-weight: bold;
-              font-size: 1.25em;
-              margin-right: 0.5em;
+            @include laptop {
+                flex-wrap: wrap;
+                gap: 2.5em 1.5em;
             }
-          }
+
+            @include phablet {
+                flex-direction: column;
+                gap: 1.5em;
+            }
+
+            > div {
+                flex: 1;
+                padding: 1.5em 2em;
+                border-left: 5px groove rgba($white-color, 0.125);
+
+                @include laptop {
+                    flex: 0 0 47.5%;
+                    border-left: none !important;
+                    padding: 0;
+
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        border-top: 5px solid rgba($white-color, 1);
+                        padding-top: 1.5em;
+                    }
+                }
+
+                @include phablet {
+                    flex: 1;
+
+                    &:not(:first-of-type) {
+                        border-top: 5px solid rgba($white-color, 1);
+                        padding-top: 2em;
+                        margin-top: 2em;
+                    }
+                }
+
+                &:last-of-type {
+                    border-right: 5px groove rgba($white-color, 0.125);
+                    padding-right: 2.5em;
+
+                    @include laptop {
+                        border-right: none;
+                        padding-right: 0;
+                    }
+                }
+
+                span {
+                    font-weight: 700;
+
+                    @include fluidTyping(17, 18);
+                }
+
+                p {
+                    min-height: 325px;
+                    max-width: 95%;
+                    margin: 2.5em 0 2em;
+
+                    @include desktop {
+                        min-height: 375px;
+                    }
+
+                    @include laptop {
+                        min-height: 175px;
+                    }
+
+                    @include tablet {
+                        min-height: 200px;
+                    }
+
+                    @include phablet {
+                        min-height: fit-content;
+                        margin-bottom: 2em;
+                    }
+
+                    @include mobile {
+                        margin-bottom: 2.5em;
+                    }
+                }
+
+                ul {
+                    margin-top: 1em;
+                    list-style: none;
+                    font-weight: 400;
+
+                    li {
+                        @include fluidTyping(15, 16);
+
+                        &::before {
+                            content: "\203B";
+                            color: $secondary-color;
+                            font-weight: bold;
+                            font-size: 1.25em;
+                            margin-right: 0.5em;
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
 
-    > div:nth-child(2) {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 5em;
-      gap: 1.5em;
+        > div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5em;
+            gap: 1.5em;
 
-      > a {
-        @include primaryButton;
+            > a {
+                @include primaryButton;
 
-        &:nth-of-type(2) {
-          @include primaryButton(2);
+                &:nth-of-type(2) {
+                    @include primaryButton(2);
+                }
+            }
         }
-      }
+
+        .thick {
+            width: 25%;
+            border: 3px solid $third-color;
+        }
+
+        .thin {
+            width: 75%;
+            border: 1px solid $secondary-color;
+            opacity: 0.5;
+            margin-bottom: 2em;
+        }
+
+        .endline {
+            border-width: 5px;
+            background: $secondary-color;
+            opacity: 0.5;
+            display: none;
+        }
     }
 
-    .thick {
-      width: 25%;
-      border: 3px solid $third-color;
+    &-title {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        min-height: 75px;
+        margin-bottom: 1em;
+
+        // @include mobile {
+        //   min-height: 50px;
+        // }
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: $secondary-color;
+            outline: 2px solid white;
+            border-radius: 50%;
+            min-width: 55px;
+            min-height: 55px;
+            background: #5b5a5a;
+
+            @include boxShadow;
+        }
+
+        h4 {
+            font-weight: 600;
+
+            @include fluidTyping(20, 22);
+        }
     }
-
-    .thin {
-      width: 75%;
-      border: 1px solid $secondary-color;
-      opacity: 0.5;
-      margin-bottom: 2em;
-    }
-
-    .endline {
-      border-width: 5px;
-      background: $secondary-color;
-      opacity: 0.5;
-      display: none;
-    }
-  }
-
-  &-title {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    min-height: 75px;
-    margin-bottom: 1em;
-
-    // @include mobile {
-    //   min-height: 50px;
-    // }
-
-    i {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2em;
-      color: $secondary-color;
-      outline: 2px solid white;
-      border-radius: 50%;
-      min-width: 55px;
-      min-height: 55px;
-      background: #5b5a5a;
-
-      @include boxShadow;
-    }
-
-    h4 {
-      font-weight: 600;
-
-      @include fluidTyping(20, 22);
-    }
-  }
 }
