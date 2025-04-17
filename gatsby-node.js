@@ -203,8 +203,6 @@ exports.onPostBuild = async () => {
     await captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000);
 };
 
-exports.onPreBootstrap = exports.onPostBuild;
-
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     const blogTemplate = path.resolve("./src/templates/blogtemplate.jsx");
