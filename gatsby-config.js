@@ -55,7 +55,6 @@ module.exports = {
                 // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
             },
         },
-
         {
             resolve: "gatsby-plugin-canonical-urls",
             options: {
