@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as backDropStyles from "../../styles/modules/backdrop.module.scss";
+import * as backDropStyles from "../../styles/modules/layout/backdrop.module.scss";
 
 const MenuOverlay = ({ click }) => (
     <div

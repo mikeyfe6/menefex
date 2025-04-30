@@ -12,14 +12,6 @@ require("dotenv").config({
 });
 
 module.exports = {
-    flags: {
-        DEV_SSR: true,
-        FAST_DEV: true,
-        PRESERVE_FILE_DOWNLOAD_CACHE: true,
-        PARALLEL_SOURCING: true,
-        DETECT_NODE_MUTATIONS: false,
-        // PARTIAL_HYDRATION: true,
-    },
     siteMetadata: {
         siteUrl: "https://menefex.nl",
 
@@ -32,15 +24,15 @@ module.exports = {
         bizEmail: "info@menefex.nl",
 
         author: "Michael Fransman",
-        authorImage: "/MichaelFransman.jpeg",
+        authorImage: "/michaelFransman.jpeg",
         authorEmail: "michaelfransman@menefex.nl",
 
         socialHandle: "@MenefexWMB",
 
-        image: "/Menefex-scl.png",
-        favicon: "/Menefex-favi.png",
+        image: "/mnfx-scl.png",
+        favicon: "/mnfx-favi.png",
 
-        priceImage: "/Menefex-price.jpeg",
+        priceImage: "/mnfx-screens.jpeg",
     },
     plugins: [
         {
@@ -96,12 +88,8 @@ module.exports = {
         {
             resolve: "gatsby-plugin-sharp",
             options: {
-                // Defaults used for gatsbyImageData and StaticImage
                 defaults: {
-                    placeholder: "blurred",
-                    formats: ["auto", "webp"],
-                    backgroundColor: "transparent",
-                    quality: 100,
+                    placeholder: `blurred`,
                 },
                 // Set to false to allow builds to continue on image errors
                 failOn: "warning",
@@ -117,11 +105,8 @@ module.exports = {
         {
             resolve: "gatsby-plugin-nprogress",
             options: {
-                // Setting a color is optional.
                 color: "#595858",
-                // Disable the loading spinner.
                 showSpinner: true,
-                minimum: 0.1,
             },
         },
         {
@@ -147,7 +132,7 @@ module.exports = {
                     description: site.siteMetadata.description,
                     site_url: site.siteMetadata.siteUrl,
                     feed_url: `${site.siteMetadata.siteUrl}/rss.xml`,
-                    image_url: `${site.siteMetadata.siteUrl}/Menefex-favi.png`,
+                    image_url: `${site.siteMetadata.siteUrl}/mnfx-favi.png`,
                     webMaster: `${site.siteMetadata.bizEmail} (${site.siteMetadata.title})`,
                     managingEditor: `${site.siteMetadata.authorEmail} (${site.siteMetadata.author})`,
                     copyright: `© 2019 - ${new Date().getFullYear()} ${
@@ -163,15 +148,15 @@ module.exports = {
                         {
                             "webfeeds:cover": {
                                 _attr: {
-                                    image: `${site.siteMetadata.siteUrl}/Menefex-scl.png`,
+                                    image: `${site.siteMetadata.siteUrl}/mnfx-scl.png`,
                                 },
                             },
                         },
                         {
-                            "webfeeds:icon": `${site.siteMetadata.siteUrl}/Menefex-favi.png`,
+                            "webfeeds:icon": `${site.siteMetadata.siteUrl}/mnfx-favi.png`,
                         },
                         {
-                            "webfeeds:logo": `${site.siteMetadata.siteUrl}/Menefex-favi.png`,
+                            "webfeeds:logo": `${site.siteMetadata.siteUrl}/mnfx-favi.png`,
                         },
                         { "webfeeds:accentColor": "FFCC00" },
                         {
@@ -391,7 +376,7 @@ module.exports = {
                 lang: "nl",
                 theme_color: "#FFCC00",
                 display: "standalone",
-                icon: "src/images/Menefex-icon.png",
+                icon: "src/images/logo/mnfx-icon.png",
                 // icon_options: {
                 //   purpose: 'any maskable',
                 // },

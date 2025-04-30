@@ -1,0 +1,121 @@
+@use "../../customs" as *;
+
+.slider {
+    &-wrapper {
+        overflow: hidden;
+        border-radius: 15px 15px 5px 5px;
+
+        --swiper-navigation-sides-offset: 20px;
+        --swiper-navigation-size: 30px;
+        --swiper-scrollbar-drag-bg-color: #008cd2;
+        --swiper-theme-color: #008cd2;
+
+        @include phablet {
+            border-radius: 0;
+
+            --swiper-navigation-size: 25px;
+
+            @include fullWidth;
+        }
+    }
+
+    &-container {
+        border-top: 3px solid $fourth-color;
+        border-right: 3px solid $fourth-color;
+        border-left: 3px solid $fourth-color;
+        border-bottom: 5px solid $secondary-color;
+        overflow: hidden;
+        border-radius: 15px 15px 5px 5px;
+        max-height: 700px;
+
+        @include phablet {
+            border-radius: 0;
+            border-right: none;
+            border-left: none;
+        }
+
+        img {
+            object-position: top;
+        }
+    }
+
+    &-info {
+        z-index: 1;
+        position: absolute;
+        background: #fff;
+        opacity: 0.95;
+        right: 20px;
+        bottom: 30px;
+        max-width: 500px;
+        border: 2.5px solid $fifth-color;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        gap: 1.5em;
+
+        @include phablet {
+            position: static;
+            max-width: 100%;
+            border-radius: 0;
+            border: none;
+            padding: 1.5em 1.5em 2.5em;
+            gap: 1em;
+        }
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
+
+            @include phablet {
+                gap: 1em;
+            }
+
+            > a[target="_blank"] {
+                @include primaryButton;
+            }
+        }
+
+        a > h5 {
+            font-family: $right-font;
+            text-decoration: underline;
+            text-decoration-color: $secondary-color;
+            text-align: right;
+
+            @include fluidTyping(20, 24);
+        }
+
+        > p {
+            color: $primary-color;
+            text-align: right;
+            max-width: 70ch;
+            margin-left: auto;
+
+            @include fluidTyping(15, 16);
+        }
+
+        > ul {
+            display: flex;
+            gap: 0.25em;
+            justify-content: flex-end;
+
+            > li {
+                background: linear-gradient(
+                    145deg,
+                    $primary-color,
+                    $button-hover
+                );
+                border-radius: $low-radius;
+                padding: 0 0.75em;
+                width: fit-content;
+                color: $sixth-color;
+                white-space: nowrap;
+
+                @include boxShadow;
+
+                @include fluidTyping(10, 12);
+            }
+        }
+    }
+}

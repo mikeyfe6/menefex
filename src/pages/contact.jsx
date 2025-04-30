@@ -6,8 +6,8 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import LeadForm from "../components/leadForm";
-import Info from "../components/info";
+import LeadForm from "../components/forms/leadForm";
+import Info from "../components/ui/info";
 import Maps from "../components/google/maps";
 
 const ContactPage = () => {

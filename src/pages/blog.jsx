@@ -9,7 +9,7 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as blogpostStyles from "../styles/modules/blog.module.scss";
+import * as blogpostStyles from "../styles/modules/pages/blog.module.scss";
 
 // TODO: images naar GatsbyImage verwerken
 

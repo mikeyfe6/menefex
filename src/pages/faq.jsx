@@ -6,8 +6,6 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-// import * as topicStyles from '../styles/modules/topics.module.scss';
-
 const FaqPage = () => {
     const { t, isHydrated } = useTranslation();
 

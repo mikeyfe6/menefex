@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as hamburgerStyles from "../../styles/modules/hamburger.module.scss";
+import * as hamburgerStyles from "../../styles/modules/layout/hamburger.module.scss";
 
 const HamburgerBtn = ({ click }) => (
     <button

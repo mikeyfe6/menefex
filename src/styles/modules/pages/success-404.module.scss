@@ -1,0 +1,5 @@
+@use "../../customs" as *;
+
+.goback {
+    @include textLink;
+}

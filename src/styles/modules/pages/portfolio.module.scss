@@ -1,0 +1,123 @@
+@use "../../customs" as *;
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
+    &-img {
+        max-height: 100%;
+        max-width: 100%;
+        border: 2px $fourth-color solid;
+        border-radius: 10px;
+        margin-bottom: 2em;
+        z-index: 1;
+
+        @include smoothTrans;
+        @include boxShadow;
+
+        &:hover {
+            opacity: 0.7;
+            border-color: $link-color;
+
+            @include smoothTrans;
+        }
+    }
+
+    &-info {
+        padding: 0.5rem 1rem;
+        border: 0.5px solid $third-color;
+        border-bottom: none;
+        border-top: none;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+
+        @include laptop {
+            min-height: 300px;
+        }
+
+        @include tablet {
+            min-height: auto;
+        }
+
+        span {
+            font-family: $right-font;
+            margin-right: 1em;
+            color: $secondary-color;
+            display: inline;
+        }
+
+        h3 {
+            font-family: $right-font;
+            display: inline;
+
+            @include fluidTyping(18, 22);
+        }
+
+        p {
+            font-weight: 300;
+            margin: 1em 0;
+
+            @include fluidTyping(14, 16);
+        }
+
+        .tools {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.25em;
+
+                li {
+                    background: linear-gradient(
+                        145deg,
+                        $primary-color,
+                        $button-hover
+                    );
+                    border-radius: $low-radius;
+                    padding: 0 0.75em;
+                    color: $sixth-color;
+                    white-space: nowrap;
+
+                    @include boxShadow;
+
+                    @include fluidTyping(10, 12);
+                }
+            }
+        }
+    }
+
+    &-btns {
+        display: flex;
+        gap: 1em;
+
+        .btn {
+            &-dark {
+                @include darkButton;
+
+                i {
+                    margin-right: 0.5em;
+                    font-size: 1.125em;
+                }
+            }
+
+            &-light {
+                @include lightButton;
+
+                i {
+                    margin-right: 0.5em;
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+}

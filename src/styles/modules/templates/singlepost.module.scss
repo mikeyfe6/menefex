@@ -1,0 +1,568 @@
+@use "../../customs" as *;
+
+.singlepost {
+    .view {
+        .backbtn {
+            @include primaryButton;
+
+            i {
+                margin-right: 0.5em;
+            }
+        }
+
+        .thick-hr {
+            margin: 2em 0 1em;
+            border-radius: $low-radius;
+            border: 2.5px solid $spec-color;
+        }
+
+        > div {
+            max-width: 80%;
+            margin: 0 auto;
+
+            @include phablet {
+                max-width: 100%;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                gap: 2em;
+                padding: 0.5em;
+
+                @include mobile {
+                    gap: 1em;
+                }
+
+                > img {
+                    max-height: 75px;
+
+                    @include mobile {
+                        max-height: 50px;
+                    }
+                }
+
+                .title {
+                    font-weight: 500;
+                    letter-spacing: $medium-spacing;
+                    line-height: 1.4;
+
+                    @include fluidTyping(20, 26);
+
+                    @include mobile {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .thin-hr {
+                border: 5px solid $sixth-color;
+                border-radius: $low-radius;
+                margin: 1em 0 3em;
+            }
+
+            .main {
+                display: flex;
+                gap: 4em;
+
+                @include tablet {
+                    flex-direction: column;
+                    gap: 2em;
+                }
+
+                > section {
+                    flex: 65%;
+
+                    .image {
+                        display: block;
+                        border-radius: $medium-radius;
+                        overflow: hidden;
+                        border: 1.5px solid #e9e9e9;
+
+                        @include boxShadow;
+
+                        @include tablet {
+                            width: 100%;
+                        }
+                    }
+
+                    .subtitle {
+                        font-weight: 600;
+                        margin: 2em 0 1em;
+                        line-height: 2.2rem;
+
+                        @include fluidTyping(20, 24);
+
+                        @include phablet {
+                            line-height: 2rem;
+                        }
+
+                        @include mobile {
+                            line-height: 1.8rem;
+                        }
+
+                        &::first-letter {
+                            color: $secondary-color;
+                            margin-right: 0.025em;
+
+                            @include fluidTyping(32, 42);
+                        }
+                    }
+
+                    .content {
+                        .paragraphness {
+                            // p
+
+                            &:not(:last-of-type) {
+                                margin-bottom: 1.5em;
+                            }
+                        }
+
+                        .horizontness {
+                            // hr
+                            margin: 2em 0;
+                            border: 1px solid rgba($base-color, 0.75);
+                        }
+
+                        .headoneness {
+                            // h1
+                            display: block;
+                        }
+
+                        .headtwoness {
+                            // h2
+                            font-family: $poppins-font;
+                        }
+
+                        .headthreeness {
+                            // h3
+                            font-family: $poppins-font;
+                            margin-bottom: 0.25em;
+                            font-weight: 600;
+
+                            @include fluidTyping(20, 22);
+                        }
+
+                        .headfourness {
+                            // h4
+                            margin-top: 1.5em;
+                            margin-bottom: 0.5em;
+                            font-weight: 600;
+
+                            @include fluidTyping(18, 20);
+                        }
+
+                        .headfiveness {
+                            // h5
+                            margin-top: 1.5em;
+                            font-weight: 700;
+
+                            @include fluidTyping(16, 18);
+                        }
+
+                        .headsixness {
+                            // h6
+                            display: block;
+
+                            @include fluidTyping(14, 16);
+                        }
+
+                        .quoteness {
+                            // blockquote
+                            display: block;
+                        }
+
+                        .orderedlistness {
+                            // ol
+                            text-decoration-color: $secondary-color;
+                            margin: 1.5em 0;
+                            padding-left: 1em;
+                            list-style-type: decimal;
+
+                            .listitemness {
+                                // ol li
+                                > * {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+
+                        .unorderedlistness {
+                            // ul
+                            text-decoration-color: $secondary-color;
+                            margin: 1.5em 0;
+
+                            .listitemness {
+                                // ul li
+
+                                > * {
+                                    display: inline-block;
+                                }
+
+                                &::before {
+                                    content: "\203B";
+                                    color: $secondary-color;
+                                    font-weight: bold;
+                                    font-size: 1.25em;
+                                    margin-right: 0.5em;
+                                }
+                            }
+                        }
+
+                        .hyperlinkness {
+                            // a
+                            font-weight: 500;
+                            word-break: break-word;
+                            display: inline;
+
+                            @include textLink;
+                        }
+
+                        .assets {
+                            border-radius: $medium-radius;
+                            overflow: hidden;
+                            border: 1.5px solid #e9e9e9;
+                            margin: 2.5em 0;
+
+                            @include boxShadow;
+                        }
+                    }
+
+                    .rss {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 1em;
+                        margin: 3em 0;
+
+                        .feedly {
+                            font-weight: 500;
+
+                            @include fluidTyping(12, 14);
+
+                            > a {
+                                color: #93be44;
+
+                                display: flex;
+                                align-items: center;
+                                gap: 0.5em;
+
+                                @include smoothTrans;
+
+                                > img {
+                                    width: 20px;
+                                }
+
+                                &:hover {
+                                    color: #1f57ad;
+                                }
+                            }
+                        }
+
+                        .feedburner {
+                            font-weight: 500;
+
+                            @include fluidTyping(12, 14);
+
+                            > a {
+                                color: #fa9b3b;
+
+                                display: flex;
+                                align-items: center;
+                                gap: 0.5em;
+
+                                @include smoothTrans;
+
+                                > img {
+                                    width: 20px;
+                                }
+
+                                &:hover {
+                                    span {
+                                        color: #1f57ad;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > aside {
+                    flex: 35%;
+                    position: sticky;
+                    margin-bottom: 3em;
+                    top: 7.5em;
+                    height: 100%;
+
+                    @include tablet {
+                        position: static;
+                        margin-bottom: 2em;
+                    }
+
+                    .gepost {
+                        color: $secondary-color;
+                        font-style: italic;
+                        background: linear-gradient(
+                            to right,
+                            $primary-color,
+                            $fifth-color
+                        );
+                        border: solid 1px $fifth-color;
+                        border-radius: $low-radius;
+                        padding: 0.25em 0.5em;
+                        margin-bottom: 1em;
+                        text-align: center;
+                        letter-spacing: $low-spacing;
+
+                        @include fluidTyping(12, 14);
+                    }
+
+                    .sidebar {
+                        background: linear-gradient(
+                            to right,
+                            #f2f2f2,
+                            $white-color
+                        );
+                        border: 2px solid $fourth-color;
+                        border-radius: $low-radius;
+                        color: $base-color;
+                        padding: 1em;
+
+                        max-height: calc(100vh - 15em);
+                        overflow-y: auto;
+
+                        @include boxShadow;
+
+                        .author {
+                            text-align: right;
+
+                            @include fluidTyping(14, 16);
+
+                            a {
+                                @include textLink;
+                            }
+
+                            > span {
+                                display: block;
+                                font-weight: 500;
+                                min-width: 75px;
+
+                                &:nth-of-type(2) {
+                                    margin-top: 0.75em;
+                                }
+                            }
+                        }
+
+                        hr {
+                            border-radius: $low-radius;
+                            border: 2.5px solid rgba($base-color, 0.75);
+                            margin: 1.5em 0;
+
+                            @include tablet {
+                                display: none;
+                            }
+                        }
+
+                        .related {
+                            h6 {
+                                font-family: $right-font;
+                                text-align: center;
+                                margin: 2em 0 1em;
+
+                                @include fluidTyping(18, 20);
+                            }
+
+                            @include tablet {
+                                display: none;
+                            }
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1em;
+
+                                li {
+                                    &:not(:first-of-type) {
+                                        border-top: 1px solid $base-color;
+                                        padding-top: 1em;
+                                    }
+
+                                    > a {
+                                        display: block;
+                                        padding: 0.25em;
+                                        border-radius: $low-radius;
+
+                                        @include smoothTrans;
+
+                                        &:hover {
+                                            opacity: 0.875;
+
+                                            span {
+                                                text-decoration: underline;
+                                                text-underline-offset: 0.125em;
+                                            }
+                                        }
+
+                                        > {
+                                            h5 {
+                                                font-family: $poppins-font;
+                                                font-weight: 500;
+
+                                                @include clamp;
+
+                                                @include fluidTyping(14, 16);
+                                            }
+
+                                            p {
+                                                margin: 0.5em 0;
+
+                                                @include clamp;
+
+                                                @include fluidTyping(12, 14);
+                                            }
+
+                                            span {
+                                                color: $link-color;
+
+                                                @include fluidTyping(13, 15);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .topics {
+                margin-top: 3em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2em;
+
+                @include tablet {
+                    align-items: flex-start;
+                }
+
+                @include mobile {
+                    margin-top: 0;
+                }
+
+                @include mini {
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                > ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.25em 0.75em;
+
+                    li > a {
+                        @include topicButton;
+                    }
+                }
+
+                > a {
+                    white-space: nowrap;
+                    margin-left: auto;
+                }
+            }
+
+            .family {
+                margin-bottom: 1em;
+
+                > h6 {
+                    font-family: $right-font;
+                    text-align: center;
+                    text-decoration: underline;
+                    text-decoration-color: $secondary-color;
+                    margin: 4rem 0 2rem 0.25rem;
+
+                    @include fluidTyping(24, 28);
+                }
+
+                > ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    margin-bottom: 3em;
+                    gap: 2em;
+
+                    > li {
+                        a {
+                            background: linear-gradient(
+                                145deg,
+                                $fourth-color,
+                                #f2f2f2
+                            );
+                            outline: 2px solid $fourth-color;
+                            border-radius: $high-radius;
+                            max-width: 300px;
+                            min-height: 400px;
+                            color: $base-color;
+                            height: 100%;
+
+                            overflow: hidden;
+                            display: flex;
+                            flex-direction: column;
+
+                            @include smoothTrans;
+
+                            > [data-gatsby-image-wrapper] {
+                                height: 215px;
+                            }
+
+                            h5 {
+                                font-family: $poppins-font;
+                                font-weight: 600;
+                                margin: 1em 1em 0;
+
+                                @include fluidTyping(16, 18);
+                            }
+
+                            p {
+                                margin: 1em 1em 1.5em;
+                                font-weight: 400;
+                                color: $base-color;
+
+                                @include fluidTyping(14, 16);
+                            }
+
+                            span {
+                                margin: 0 1em 1em;
+                                font-weight: 500;
+                                margin-top: auto;
+
+                                @include fluidTyping(14, 16);
+                            }
+
+                            &:hover {
+                                opacity: 0.875;
+                                color: $link-color;
+                                outline-color: $link-color;
+                                transform: scale(1.025);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .disqus {
+                color: $base-color;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                a {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

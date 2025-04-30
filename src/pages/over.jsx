@@ -6,8 +6,8 @@ import useTranslation from "../hooks/use-translation";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import About from "../components/about";
-import Spotify from "../components/spotify";
+import About from "../components/ui/about";
+import Spotify from "../components/ui/spotify";
 
 const AboutPage = () => {
     const { t, isHydrated } = useTranslation();

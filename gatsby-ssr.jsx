@@ -1,6 +1,6 @@
 import React from "react";
 
-import RootElement from "./src/components/root-element";
+import RootElement from "./src/context/root-element";
 
 const HtmlAttributes = {
     lang: "nl",

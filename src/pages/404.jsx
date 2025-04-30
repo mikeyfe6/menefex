@@ -7,7 +7,7 @@ import useTranslation from "../hooks/use-translation";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as successAndNotFoundStyles from "../styles/modules/success-404.module.scss";
+import * as successAndNotFoundStyles from "../styles/modules/pages/success-404.module.scss";
 
 const NotFound = () => {
     const { t, isHydrated } = useTranslation();

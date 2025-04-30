@@ -8,7 +8,7 @@ import useTranslation from "../hooks/use-translation";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as portfolioStyles from "../styles/modules/portfolio.module.scss";
+import * as portfolioStyles from "../styles/modules/pages/portfolio.module.scss";
 
 const PortfolioPage = () => {
     const { t, isHydrated } = useTranslation();

@@ -1,0 +1,23 @@
+@use "../../customs" as *;
+
+.notes {
+    background: linear-gradient(145deg, $spec-color, $very-color);
+    padding: 2em;
+    border-radius: $medium-radius;
+    height: 100%;
+
+    @include boxShadow;
+
+    h3 {
+        font-family: $right-font;
+        margin-bottom: 1em;
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    a {
+        @include textLink;
+    }
+}

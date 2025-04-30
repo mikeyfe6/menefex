@@ -4,9 +4,9 @@ import GoogleMapReact from "google-map-react";
 
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
-import mapsLogo from "../../logo/Menefex-icon.svg";
+import mapsLogo from "../../images/logo/mnfx-icon.svg";
 
-import * as mapsStyles from "../../styles/modules/maps.module.scss";
+import * as mapsStyles from "../../styles/modules/ui/maps.module.scss";
 
 const defaultProps = {
     center: {

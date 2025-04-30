@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://menefex.nl" rel="noopener noreferrer"
               target="_blank">
-    <img alt="Menefex Github Banner" src="https://menefex.nl/Menefex-scl.png" width="750" />
+    <img alt="Menefex Github Banner" src="https://menefex.nl/mnfx-scl.png" width="750" />
   </a>
 </p>
 

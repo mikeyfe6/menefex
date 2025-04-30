@@ -8,7 +8,7 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as topicStyles from "../styles/modules/topics.module.scss";
+import * as topicStyles from "../styles/modules/pages/topics.module.scss";
 
 // TODO: images naar GatsbyImage verwerken
 

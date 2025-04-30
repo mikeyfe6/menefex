@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import useTranslation from "../../hooks/use-translation";
 
-import * as mobileMenuStyles from "../../styles/modules/mobileMenu.module.scss";
+import * as mobileMenuStyles from "../../styles/modules/layout/mobileMenu.module.scss";
 
 const MobileMenu = ({ show }) => {
     const { t, isHydrated } = useTranslation();

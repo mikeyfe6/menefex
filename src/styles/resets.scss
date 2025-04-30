@@ -1,0 +1,147 @@
+/* Optimized CSS Reset (2025) - Combines Normalize.css, New CSS Reset, and modern best practices */
+
+/* 1️⃣ Universal Reset - Resets everything except critical elements */
+*:where(:not(html, iframe, canvas, img, svg, video, audio, svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* 2️⃣ Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 3️⃣ Base Typography & Structure */
+html {
+    font-size: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    line-height: 1.5;
+    font-family: system-ui, sans-serif;
+}
+
+/* 4️⃣ Forms & Interactive Elements */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+input,
+textarea {
+    user-select: auto;
+    border: none;
+}
+
+textarea {
+    white-space: revert;
+    overflow: auto;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+/* 5️⃣ Images & Media */
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+/* 6️⃣ Lists */
+ul,
+ol,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 7️⃣ Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0;
+}
+
+/* 8️⃣ Block & Interactive Elements */
+main {
+    display: block;
+}
+
+hr {
+    height: 0;
+    box-sizing: content-box;
+    border: none;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace;
+    font-size: 1em;
+    overflow: auto;
+}
+
+/* 9️⃣ Accessibility & Focus */
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 0 solid transparent; // override 2px
+    outline-offset: 0; // override 2px
+}
+
+[type="search"] {
+    appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    appearance: none;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}

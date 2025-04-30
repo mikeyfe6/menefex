@@ -6,11 +6,11 @@ import useTranslation from "../hooks/use-translation";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import Hero from "../components/hero";
-import Service from "../components/services";
-import Projects from "../components/slider";
-import Smallbio from "../components/smallbio";
-import Actual from "../components/actual";
+import Hero from "../components/layout/hero";
+import Service from "../components/ui/services";
+import Projects from "../components/ui/slider";
+import Smallbio from "../components/ui/smallbio";
+import Actual from "../components/ui/actual";
 
 const IndexPage = () => {
     const { t, isHydrated } = useTranslation();

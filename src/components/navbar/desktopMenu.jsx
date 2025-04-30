@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 
 import HamburgerBtn from "./hamburgerBtn";
 
-import logo from "../../logo/Menefex-logo.svg";
+import logo from "../../images/logo/mnfx-logo.svg";
 
-import * as desktopMenuStyles from "../../styles/modules/desktopMenu.module.scss";
+import * as desktopMenuStyles from "../../styles/modules/layout/desktopMenu.module.scss";
 
 const DesktopMenu = ({ drawerClickHandler }) => {
     const { t, i18n } = useTranslation();

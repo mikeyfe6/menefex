@@ -7,11 +7,11 @@ import useTranslation from "../hooks/use-translation";
 import DesktopMenu from "./navbar/desktopMenu";
 import MobileMenu from "./navbar/mobileMenu";
 import MenuOverlay from "./navbar/menuOverlay";
-import Footer from "./footer";
+import Footer from "./layout/footer";
 
 import ResponsiveTag from "./helpers/responsiveTag";
 
-import minilogo from "../logo/Menefex-icon.svg";
+import minilogo from "../images/logo/mnfx-icon.svg";
 
 import "../styles/layout.scss";
 

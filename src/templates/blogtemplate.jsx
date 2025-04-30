@@ -21,9 +21,9 @@ import SEO from "../components/seo";
 import GoogleAdsDisplay from "../components/google/adsdisp";
 import GoogleAdsMulti from "../components/google/adsmulti";
 
-import mini from "../logo/Menefex-icon.svg";
+import mini from "../images/logo/mnfx-icon.svg";
 
-import * as singlepostStyle from "../styles/modules/singlepost.module.scss";
+import * as singlepostStyle from "../styles/modules/templates/singlepost.module.scss";
 
 const Blog = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();

@@ -8,7 +8,7 @@ import useSiteMetadata from "../../hooks/use-site-metadata";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import * as powersStyles from "../../styles/modules/powers.module.scss";
+import * as powersStyles from "../../styles/modules/pages/powers.module.scss";
 
 const WebsitePage = () => {
     const { t, isHydrated } = useTranslation();

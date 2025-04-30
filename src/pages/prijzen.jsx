@@ -8,11 +8,11 @@ import useTranslation from "../hooks/use-translation";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import PriceTable from "../components/pricetable";
-import Notes from "../components/notes";
-import CallForm from "../components/callForm";
+import PriceTable from "../components/ui/pricetable";
+import Notes from "../components/ui/notes";
+import CallForm from "../components/forms/callForm";
 
-import * as pricesStyles from "../styles/modules/prices.module.scss";
+import * as pricesStyles from "../styles/modules/ui/prices.module.scss";
 
 const discountUntil = new Date("2024-08-31").toLocaleDateString("nl-NL", {
     day: "numeric",
