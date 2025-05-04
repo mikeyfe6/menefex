@@ -376,10 +376,10 @@ module.exports = {
                 lang: "nl",
                 theme_color: "#FFCC00",
                 display: "standalone",
-                icon: "src/images/logo/mnfx-icon.png",
-                // icon_options: {
-                //   purpose: 'any maskable',
-                // },
+                icon: "src/images/favicon/mnfx-icon.png",
+                icon_options: {
+                    purpose: "any maskable",
+                },
                 crossOrigin: "use-credentials",
             },
         },
