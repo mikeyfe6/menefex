@@ -30,6 +30,59 @@ const PortfolioPage = () => {
           // * AFRODIASPHERE !
           */}
 
+                    <div id="#EUP">
+                        <a
+                            href="https://edutainuproductions.nl"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <StaticImage
+                                src="../../public/project-images/edutainuproductions.png"
+                                alt="Edutain U Productions"
+                                className={portfolioStyles.portfolioImg}
+                            />
+                        </a>
+                        <div className={portfolioStyles.portfolioInfo}>
+                            <h3>
+                                <span>Client:</span>Edutain U Productions
+                            </h3>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("portfolioEUPbio"),
+                                }}
+                            />
+                            <div className={portfolioStyles.tools}>
+                                <span>Tools:</span>
+                                <ul>
+                                    <li>GatsbyJS</li>
+                                    <li>ReactJS</li>
+                                    <li>Netlify</li>
+                                    <li>Contentful</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={portfolioStyles.portfolioBtns}>
+                            <a
+                                href="https://edutainuproductions.nl"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnLight}
+                            >
+                                <i className="fa-solid fa-eye" />
+                                {t("portfolioGoToProject")}
+                            </a>
+                            <a
+                                href="https://github.com/mikeyfe6/edutainuproductions"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnDark}
+                            >
+                                <i className="fa-brands fa-github" />
+                                {t("portfolioGoToRepo")}
+                            </a>
+                        </div>
+                    </div>
+
                     <div id="#PZ">
                         <a
                             href="https://prio-zorg.nl"
@@ -291,7 +344,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                <strike>{t("portfolioGoToProject")}</strike>
                             </a>
                             <a className={portfolioStyles.btnDark}>
                                 <i className="fa-brands fa-github" />

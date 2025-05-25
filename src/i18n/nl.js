@@ -79,15 +79,15 @@ export default {
     recentProjectsViewSiteButton: "Bekijk website",
     recentProjectsViewAppButton: "Bekijk webapp",
 
-    recentProjectsEPbio: "Stichting Eternity Percussion uit Amsterdam",
-    recentProjectsBHbio: "Zanggroep Black Harmony uit Amsterdam",
-    recentProjectsADSbio:
-        "Ons eigen initiatief opgezet, vooral gericht op sociale interacties",
-    recentProjectsDSbio: "Steelpannist Derek Simpey uit Amsterdam",
-    recentProjectsKNbio:
-        "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
-    recentProjectsKIRbio: "Stichting Regalness.nl uit Amsterdam",
-    recentProjectsPZbio: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
+    // recentProjectsEPbio: "Stichting Eternity Percussion uit Amsterdam",
+    // recentProjectsBHbio: "Zanggroep Black Harmony uit Amsterdam",
+    // recentProjectsADSbio:
+    //     "Ons eigen initiatief opgezet, vooral gericht op sociale interacties",
+    // recentProjectsDSbio: "Steelpannist Derek Simpey uit Amsterdam",
+    // recentProjectsKNbio:
+    //     "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
+    // recentProjectsKIRbio: "Stichting Regalness.nl uit Amsterdam",
+    // recentProjectsPZbio: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
 
     portfolioTitle: "Recente Projecten",
     portfolioIntro:
@@ -96,6 +96,8 @@ export default {
     portfolioGoToRepo: "Github Repo",
     portfolioNoRepo: "Niet op Github",
 
+    portfolioEUPbio:
+        "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
     portfolioKIRbio:
         "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
     portfolioADSbio:

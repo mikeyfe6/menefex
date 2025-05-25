@@ -67,7 +67,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsEPbio")}</p>
             <ul>
                 <li>GatsbyJS</li>
                 <li>ReactJS</li>
@@ -92,7 +91,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsBHbio")}</p>
             <ul>
                 <li>Wordpress</li>
                 <li>Advanced Custom Field Types</li>
@@ -117,7 +115,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsADSbio")}</p>
             <ul>
                 <li>GatsbyJS</li>
                 <li>Strapi</li>
@@ -143,7 +140,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsDSbio")}</p>
             <ul>
                 <li>Wordpress</li>
                 <li>Custom CSS</li>
@@ -167,7 +163,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsKNbio")}</p>
             <ul>
                 <li>Wordpress</li>
                 <li>Custom CSS</li>
@@ -191,7 +186,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsKIRbio")}</p>
             <ul>
                 <li>GatsbyJS</li>
                 <li>ReactJS</li>
@@ -216,7 +210,6 @@ const Projects = () => {
                 </Link>
             </div>
 
-            <p>{t("recentProjectsPZbio")}</p>
             <ul>
                 <li>GatsbyJS</li>
                 <li>ReactJS</li>
@@ -226,7 +219,30 @@ const Projects = () => {
         </div>
     );
 
-    // TODO: swiper met thumbnails fixen
+    const edutainUProductions = (
+        <div className={sliderStyles.sliderInfo}>
+            <div>
+                <a
+                    href="https://edutainuproductions.nl"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    {t("recentProjectsViewSiteButton")}
+                </a>
+                <Link to="/portfolio/">
+                    <h5>Edutain U Productions</h5>
+                </Link>
+            </div>
+
+            <ul>
+                <li>GatsbyJS</li>
+                <li>ReactJS</li>
+                <li>Netlify</li>
+            </ul>
+        </div>
+    );
+
+    // TODO: swiper met thumbnails fixen (met logos dat zou dom zijn!)
 
     return (
         <section id="portfolio" data-scroll-center>
@@ -285,6 +301,8 @@ const Projects = () => {
                                         return keepItReal;
                                     case "priozorg":
                                         return prioZorg;
+                                    case "edutainuproductions":
+                                        return edutainUProductions;
                                     default:
                                         return null;
                                 }

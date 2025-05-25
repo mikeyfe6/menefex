@@ -194,6 +194,11 @@ const captureScreenshot = async (url, filename, delay) => {
 };
 
 exports.onPostBuild = async () => {
+    await captureScreenshot(
+        "https://edutainuproductions.nl",
+        "edutainuproductions",
+        0
+    );
     await captureScreenshot("https://prio-zorg.nl", "priozorg", 2000);
     await captureScreenshot("https://keeptreal.nl", "keeptreal", 2000);
     await captureScreenshot("https://blackharmony.nl", "blackharmony", 0);

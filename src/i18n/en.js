@@ -80,15 +80,15 @@ export default {
     recentProjectsViewSiteButton: "View website",
     recentProjectsViewAppButton: "View webapp",
 
-    recentProjectsEPbio: "Eternity Percussion Foundation from Amsterdam",
-    recentProjectsBHbio: "Singing group Black Harmony from Amsterdam",
-    recentProjectsADSbio:
-        "Our very own initiative set up, mainly focused on social interactions",
-    recentProjectsDSbio: "Steelpan player Derek Simpey from Amsterdam",
-    recentProjectsKNbio:
-        "Knowledge Network Afro Caribbean Diaspora Community Foundation from The Hague",
-    recentProjectsKIRbio: "Regalness.nl Foundation from Amsterdam",
-    recentProjectsPZbio: "Aid organization Prio Zorg from Amsterdam",
+    // recentProjectsEPbio: "Eternity Percussion Foundation from Amsterdam",
+    // recentProjectsBHbio: "Singing group Black Harmony from Amsterdam",
+    // recentProjectsADSbio:
+    //     "Our very own initiative set up, mainly focused on social interactions",
+    // recentProjectsDSbio: "Steelpan player Derek Simpey from Amsterdam",
+    // recentProjectsKNbio:
+    //     "Knowledge Network Afro Caribbean Diaspora Community Foundation from The Hague",
+    // recentProjectsKIRbio: "Regalness.nl Foundation from Amsterdam",
+    // recentProjectsPZbio: "Aid organization Prio Zorg from Amsterdam",
 
     portfolioTitle: "Recent Projects",
     portfolioIntro:
@@ -97,6 +97,8 @@ export default {
     portfolioGoToRepo: "Github Repo",
     portfolioNoRepo: "Not on Github",
 
+    portfolioEUPbio:
+        "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment..",
     portfolioKIRbio:
         "<strong>Keep It Real</strong> is a program led by cultural professional Wenner Regales, which helps young people grow beyond the boundaries of traditional education. It provides a platform for making positive choices and seizing opportunities, rooted in Wenner's experience and network.",
     portfolioADSbio:
