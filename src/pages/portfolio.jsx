@@ -57,7 +57,6 @@ const PortfolioPage = () => {
                                     <li>GatsbyJS</li>
                                     <li>ReactJS</li>
                                     <li>Netlify</li>
-                                    <li>Contentful</li>
                                 </ul>
                             </div>
                         </div>
