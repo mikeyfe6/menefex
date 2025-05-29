@@ -1,0 +1,71 @@
+@use "./customs/" as *;
+
+h1 {
+    @include fluid-typing(28, 32);
+
+    span {
+        color: $secondary-color;
+    }
+}
+
+h2 {
+    @include fluid-typing(24, 28);
+}
+
+h3 {
+    @include fluid-typing(20, 24);
+}
+
+h4 {
+    font-weight: 500;
+
+    @include fluid-typing(16, 20);
+}
+
+h5 {
+    @include fluid-typing(16, 18);
+}
+
+h6 {
+    @include fluid-typing(16, 16);
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: $low-spacing;
+}
+
+h4,
+h5,
+h6 {
+    letter-spacing: $medium-spacing;
+}
+
+p {
+    letter-spacing: $medium-spacing;
+    font-weight: 300;
+    max-width: 75ch;
+
+    @include fluid-typing(16, 18);
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+}
+
+b,
+strong {
+    font-weight: 500;
+}
+
+strike {
+    text-decoration: line-through;
+}
+
+u {
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+    text-decoration-color: $secondary-color;
+}

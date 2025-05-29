@@ -7,41 +7,11 @@
     font-size: 2rem;
     font-weight: 600;
 
-    @include phablet {
-        font-size: 1.75rem;
-    }
-
-    @include mobile {
-        font-size: 1.5rem;
-    }
-
-    @include compact {
-        br {
-            display: block !important;
-        }
-
-        .wmb {
-            font-size: 1.675rem;
-        }
-
-        .mnfx {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-    }
-
     .dot {
         color: $secondary-color;
-
-        @include compact {
-            font-size: 2em;
-        }
     }
 
     .welkom {
-        @include compact {
-            display: none;
-        }
     }
 
     span {
@@ -77,34 +47,6 @@
                     border-right-color: transparent;
                 }
             }
-
-            @include phablet {
-                @keyframes typewriter {
-                    from {
-                        width: 0;
-                    }
-
-                    to {
-                        width: 525px;
-                    }
-                }
-            }
-
-            @include mobile {
-                @keyframes typewriter {
-                    from {
-                        width: 0;
-                    }
-
-                    to {
-                        width: 440px;
-                    }
-                }
-            }
-
-            @include compact {
-                animation: none;
-            }
         }
 
         &-en {
@@ -131,36 +73,6 @@
                     border-right-color: transparent;
                 }
             }
-
-            @include phablet {
-                @keyframes typewriter {
-                    from {
-                        width: 0;
-                    }
-
-                    to {
-                        width: 600px;
-                    }
-                }
-            }
-
-            @include mobile {
-                font-size: 1.3rem;
-
-                @keyframes typewriter {
-                    from {
-                        width: 0;
-                    }
-
-                    to {
-                        width: 445px;
-                    }
-                }
-            }
-
-            @include compact {
-                animation: none;
-            }
         }
     }
 
@@ -170,10 +82,5 @@
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
-
-        @include compact {
-            border-right: none;
-            line-height: 1.2;
-        }
     }
 }

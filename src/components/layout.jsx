@@ -11,8 +11,6 @@ import Footer from "./layout/footer";
 
 import ResponsiveTag from "./helpers/responsiveTag";
 
-import minilogo from "../images/logo/mnfx-icon.svg";
-
 import "../styles/layout.scss";
 
 const Layout = ({ children }) => {
@@ -37,25 +35,13 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <div id="tosmallforyouscreen">
-                <div className="container">
-                    <img
-                        src={minilogo}
-                        alt="Menefex Mini Logo"
-                        width={120}
-                        height={120}
-                    />
-                    <p
-                        dangerouslySetInnerHTML={{
-                            __html: t("screenToSmallText"),
-                        }}
-                    />
-                </div>
-            </div>
-
             <div className="menefex">
-                <DesktopMenu drawerClickHandler={drawerToggleClickHandler} />
-                <MobileMenu show={sideDrawerOpen} />
+                <header>
+                    <DesktopMenu
+                        drawerClickHandler={drawerToggleClickHandler}
+                    />
+                    <MobileMenu show={sideDrawerOpen} />
+                </header>
 
                 <main>{children}</main>
 

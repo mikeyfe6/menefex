@@ -2,7 +2,7 @@
 
 .actual {
     &-container {
-        @include smoothTrans;
+        @include smooth-trans;
     }
 
     &-wrapper {
@@ -18,14 +18,14 @@
         max-width: 550px;
 
         h4 {
-            @include fluidTyping(20, 24);
+            @include fluid-typing(20, 24);
         }
 
         > p {
             margin: 1em 0;
 
             > a {
-                @include textLink;
+                @include text-link;
             }
         }
 
@@ -36,12 +36,8 @@
             gap: 2em 0.75em;
             margin: 2.5em 0 0;
 
-            @include mobile {
-                margin: 2em 0 0;
-            }
-
             > li > a {
-                @include topicButton;
+                @include topic-button;
             }
         }
     }

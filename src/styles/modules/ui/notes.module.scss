@@ -6,7 +6,7 @@
     border-radius: $medium-radius;
     height: 100%;
 
-    @include boxShadow;
+    @include box-shadow;
 
     h3 {
         font-family: $right-font;
@@ -18,6 +18,6 @@
     }
 
     a {
-        @include textLink;
+        @include text-link;
     }
 }

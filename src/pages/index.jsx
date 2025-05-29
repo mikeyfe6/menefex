@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
 import useTranslation from "../hooks/use-translation";

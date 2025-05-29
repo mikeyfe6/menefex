@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { Link } from "gatsby";
 
@@ -10,7 +10,7 @@ import SEO from "../components/seo";
 
 import * as powersStyles from "../styles/modules/pages/powers.module.scss";
 
-const powersPage = () => {
+const PowersPage = () => {
     const { t, isHydrated } = useTranslation();
 
     if (!isHydrated) return null;
@@ -100,7 +100,7 @@ const powersPage = () => {
     );
 };
 
-export default powersPage;
+export default PowersPage;
 
 export const Head = () => {
     const { title, siteUrl } = useSiteMetadata();

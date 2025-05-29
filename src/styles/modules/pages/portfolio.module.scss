@@ -5,10 +5,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
 
-    @include tablet {
-        grid-template-columns: 1fr;
-    }
-
     &-img {
         max-height: 100%;
         max-width: 100%;
@@ -17,14 +13,14 @@
         margin-bottom: 2em;
         z-index: 1;
 
-        @include smoothTrans;
-        @include boxShadow;
+        @include smooth-trans;
+        @include box-shadow;
 
         &:hover {
             opacity: 0.7;
             border-color: $link-color;
 
-            @include smoothTrans;
+            @include smooth-trans;
         }
     }
 
@@ -38,14 +34,6 @@
         flex-direction: column;
         margin-bottom: 2em;
 
-        @include laptop {
-            min-height: 300px;
-        }
-
-        @include tablet {
-            min-height: auto;
-        }
-
         span {
             font-family: $right-font;
             margin-right: 1em;
@@ -57,14 +45,14 @@
             font-family: $right-font;
             display: inline;
 
-            @include fluidTyping(18, 22);
+            @include fluid-typing(18, 22);
         }
 
         p {
             font-weight: 300;
             margin: 1em 0;
 
-            @include fluidTyping(14, 16);
+            @include fluid-typing(14, 16);
         }
 
         .tools {
@@ -88,9 +76,9 @@
                     color: $sixth-color;
                     white-space: nowrap;
 
-                    @include boxShadow;
+                    @include box-shadow;
 
-                    @include fluidTyping(10, 12);
+                    @include fluid-typing(10, 12);
                 }
             }
         }
@@ -102,7 +90,7 @@
 
         .btn {
             &-dark {
-                @include darkButton;
+                @include dark-button;
 
                 i {
                     margin-right: 0.5em;
@@ -111,7 +99,7 @@
             }
 
             &-light {
-                @include lightButton;
+                @include light-button;
 
                 i {
                     margin-right: 0.5em;

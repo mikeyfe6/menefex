@@ -6,7 +6,7 @@
     border-radius: $medium-radius;
     padding: 2em;
 
-    @include boxShadow;
+    @include box-shadow;
 
     > h3 {
         font-family: $right-font;
@@ -42,14 +42,14 @@
         color: $primary-color;
         border-bottom: 1.5px solid $spec-color;
 
-        @include smoothTrans;
+        @include smooth-trans;
     }
 
     input:focus,
     textarea:focus {
         border-color: $link-color;
 
-        @include smoothTrans;
+        @include smooth-trans;
     }
 
     textarea {
@@ -71,7 +71,7 @@
         background-position: right 0.7em top 50%, 0 0;
         background-size: 0.65em auto, 100%;
 
-        @include smoothTrans;
+        @include smooth-trans;
 
         &:focus {
             box-shadow: 0 0 0 2px -moz-mac-focusring;
@@ -82,6 +82,6 @@
     button {
         margin: 2em 0 0 auto;
 
-        @include primaryButton;
+        @include primary-button;
     }
 }

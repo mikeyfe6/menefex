@@ -4,39 +4,42 @@
 @use "colors" as *;
 @use "variables" as *;
 @use "mediaqueries" as *;
+@use "functions" as *;
 @use "fonts" as *;
 @use "utils" as *;
 
-@mixin smoothTrans($prop: all) {
+@mixin smooth-trans($prop: all) {
     transition: $prop 0.1s ease-in-out;
 }
 
-@mixin boxShadow {
-    box-shadow: 1px 3px 7px rgba(66 66 66 / 25%);
+@mixin box-shadow {
+    box-shadow: 1px 3px 7px rgb(66 66 66 / 25%);
 }
 
-@mixin container($my: 0, $py: 0) {
+@mixin container(
+    $maxWidth: rem-calc($layout),
+    $pT: 0,
+    $pR: rem-calc(20),
+    $pB: 0,
+    $pL: rem-calc(20)
+) {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: $pT rem-calc(16) $pB;
     width: 100%;
-    max-width: 1400px;
-    margin: $my auto;
-    padding: $py 2em;
-
-    @include mobile {
-        padding: $py 1em;
-    }
 }
 
-@mixin textLink {
+@mixin text-link {
     color: $link-color;
 
-    @include smoothTrans;
+    @include smooth-trans;
 
     &:hover {
         color: color.adjust($link-color, $lightness: -10%);
     }
 }
 
-@mixin footerDot {
+@mixin footer-dot {
     display: inline-block;
     content: "";
     border-radius: 100%;
@@ -47,7 +50,7 @@
 
 // Functions --------------------------------------------
 
-@mixin fullWidth {
+@mixin full-width {
     width: 100vw;
     position: relative;
     left: 50%;
@@ -71,7 +74,7 @@
 
 // Buttons --------------------------------------------
 
-@mixin primaryButton($type: 1) {
+@mixin primary-button($type: 1) {
     font-family: $alata-font;
     display: block;
     text-transform: uppercase;
@@ -84,8 +87,8 @@
     outline: 3px solid $secondary-color;
     white-space: nowrap;
 
-    @include smoothTrans;
-    @include boxShadow;
+    @include smooth-trans;
+    @include box-shadow;
 
     @if $type == 1 {
         color: $sixth-color;
@@ -104,10 +107,10 @@
         }
     }
 
-    @include fluidTyping(12, 14);
+    @include fluid-typing(12, 14);
 }
 
-@mixin secondaryButton {
+@mixin secondary-button {
     padding: 0.7em 1em;
     width: 100%;
     min-height: 44px;
@@ -117,10 +120,10 @@
     align-items: center;
     justify-content: center;
 
-    @include smoothTrans;
-    @include boxShadow;
+    @include smooth-trans;
+    @include box-shadow;
 
-    @include fluidTyping(14, 16);
+    @include fluid-typing(14, 16);
 
     &:not([href]) {
         &:hover {
@@ -130,7 +133,7 @@
     }
 }
 
-@mixin tertiaryButton {
+@mixin tertiary-button {
     min-height: 44px;
     text-transform: uppercase;
     padding: 0.75em 1.5em;
@@ -142,19 +145,19 @@
     border: 3px solid $spec-color;
     border-radius: $low-radius;
 
-    @include smoothTrans;
-    @include boxShadow;
+    @include smooth-trans;
+    @include box-shadow;
 
     &[name="cta"] {
-        @include fluidTyping(10, 14);
+        @include fluid-typing(10, 14);
     }
 
     &[name="offerte"] {
-        @include fluidTyping(12, 14);
+        @include fluid-typing(12, 14);
     }
 
     &[name="service"] {
-        @include fluidTyping(12, 14);
+        @include fluid-typing(12, 14);
     }
 
     &:hover {
@@ -165,14 +168,14 @@
     }
 }
 
-@mixin darkButton {
+@mixin dark-button {
     background: $primary-color;
     color: $sixth-color;
     text-align: center;
     outline: 2px solid $base-color;
     white-space: nowrap;
 
-    @include secondaryButton;
+    @include secondary-button;
 
     &:hover {
         color: $primary-color;
@@ -181,14 +184,14 @@
     }
 }
 
-@mixin lightButton {
+@mixin light-button {
     background: $fourth-color;
     color: $primary-color;
     text-align: center;
     outline: 2px solid $fourth-color;
     white-space: nowrap;
 
-    @include secondaryButton;
+    @include secondary-button;
 
     &:hover {
         background: $secondary-color;
@@ -196,7 +199,7 @@
     }
 }
 
-@mixin topicButton {
+@mixin topic-button {
     border-width: 2px;
     border-style: solid;
     border-radius: $low-radius;
@@ -208,10 +211,10 @@
     min-height: 44px;
     white-space: nowrap;
 
-    @include boxShadow;
-    @include smoothTrans;
+    @include box-shadow;
+    @include smooth-trans;
 
-    @include fluidTyping(12, 14);
+    @include fluid-typing(12, 14);
 
     &:hover {
         background: $sixth-color;
@@ -220,7 +223,7 @@
 
 // Components --------------------------------------------
 
-@mixin blogCard {
+@mixin blog-card {
     background: linear-gradient(145deg, $fourth-color, #f2f2f2);
     padding: 1em;
     display: flex;
@@ -231,14 +234,8 @@
     border-radius: $high-radius;
     min-height: 175px;
 
-    @include smoothTrans;
-    @include boxShadow;
-
-    @include phablet {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 1.5em;
-    }
+    @include smooth-trans;
+    @include box-shadow;
 
     &:hover {
         opacity: 0.7;
@@ -257,12 +254,12 @@
         h3 {
             font-weight: 600;
 
-            @include fluidTyping(16, 20);
+            @include fluid-typing(16, 20);
         }
 
         p {
             @include clamp(2);
-            @include fluidTyping(14, 16);
+            @include fluid-typing(14, 16);
         }
 
         span {
@@ -275,12 +272,7 @@
             display: inline;
             width: fit-content;
 
-            @include fluidTyping(9, 12);
-
-            @include phablet {
-                align-self: flex-end;
-                width: 100%;
-            }
+            @include fluid-typing(9, 12);
         }
     }
 
@@ -291,30 +283,10 @@
         max-width: 250px;
         width: 100%;
 
-        @include boxShadow;
-
-        @include tablet {
-            max-width: 200px;
-        }
-
-        @include phablet {
-            max-width: 100%;
-        }
+        @include box-shadow;
 
         > [data-gatsby-image-wrapper] {
             max-height: 175px;
-
-            @include phablet {
-                max-height: 300px;
-            }
-
-            @include mobile {
-                max-height: 250px;
-            }
-
-            @include mobile {
-                max-height: 200px;
-            }
         }
     }
 }

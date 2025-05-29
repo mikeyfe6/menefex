@@ -1,3 +1,17 @@
-@function rem-calc($px, $base-font-size: 16) {
-    @return ($px / $base-font-size) * 1rem;
+@use "sass:math";
+@use "sass:list";
+
+@function rem-calc($values, $base-font-size: 16) {
+    $result: ();
+
+    @each $value in $values {
+        $converted: if(
+            $value == 0,
+            0,
+            math.div($value, $base-font-size) * 1rem
+        );
+        $result: list.append($result, $converted);
+    }
+
+    @return $result;
 }

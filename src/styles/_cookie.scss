@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     inset: 0;
-    background-color: rgba(0 0 0 / 50%);
+    background-color: rgb(0 0 0 / 50%);
     z-index: 10;
 
     &-container {
@@ -22,34 +22,26 @@
         left: 50%;
         transform: translate(-50%, -12.5%);
         border-radius: $low-radius;
-
-        @include laptop {
-            max-width: 95%;
-        }
-
-        @include mobile {
-            transform: translate(-50%, -7.5%);
-        }
     }
 
     &-content {
         > h3 {
             font-family: $right-font;
 
-            @include fluidTyping(28, 32);
+            @include fluid-typing(28, 32);
         }
 
         > p {
             color: $white-color;
             margin: 1em 0 1.5em;
 
-            @include fluidTyping(16, 18);
+            @include fluid-typing(16, 18);
 
             > span {
                 display: block;
                 margin: 1em 0;
 
-                @include fluidTyping(15, 17);
+                @include fluid-typing(15, 17);
             }
         }
     }
@@ -60,10 +52,6 @@
             justify-content: flex-end;
             gap: 1em;
             align-items: center;
-
-            @include mobile {
-                justify-content: flex-start;
-            }
         }
 
         &-accept {
@@ -72,7 +60,7 @@
             border-radius: $low-radius;
             padding: 0.5em 1em;
 
-            @include smoothTrans;
+            @include smooth-trans;
 
             &:hover {
                 background-color: $super-color;
@@ -87,7 +75,7 @@
             padding: 0.5em 1em;
             color: $secondary-color;
 
-            @include smoothTrans;
+            @include smooth-trans;
 
             &:hover {
                 border: 1px solid $white-color;

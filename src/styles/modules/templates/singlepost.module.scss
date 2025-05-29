@@ -3,7 +3,7 @@
 .singlepost {
     .view {
         .backbtn {
-            @include primaryButton;
+            @include primary-button;
 
             i {
                 margin-right: 0.5em;
@@ -20,26 +20,14 @@
             max-width: 80%;
             margin: 0 auto;
 
-            @include phablet {
-                max-width: 100%;
-            }
-
             .header {
                 display: flex;
                 align-items: center;
                 gap: 2em;
                 padding: 0.5em;
 
-                @include mobile {
-                    gap: 1em;
-                }
-
                 > img {
                     max-height: 75px;
-
-                    @include mobile {
-                        max-height: 50px;
-                    }
                 }
 
                 .title {
@@ -47,11 +35,7 @@
                     letter-spacing: $medium-spacing;
                     line-height: 1.4;
 
-                    @include fluidTyping(20, 26);
-
-                    @include mobile {
-                        text-align: right;
-                    }
+                    @include fluid-typing(20, 26);
                 }
             }
 
@@ -65,11 +49,6 @@
                 display: flex;
                 gap: 4em;
 
-                @include tablet {
-                    flex-direction: column;
-                    gap: 2em;
-                }
-
                 > section {
                     flex: 65%;
 
@@ -79,11 +58,7 @@
                         overflow: hidden;
                         border: 1.5px solid #e9e9e9;
 
-                        @include boxShadow;
-
-                        @include tablet {
-                            width: 100%;
-                        }
+                        @include box-shadow;
                     }
 
                     .subtitle {
@@ -91,21 +66,13 @@
                         margin: 2em 0 1em;
                         line-height: 2.2rem;
 
-                        @include fluidTyping(20, 24);
-
-                        @include phablet {
-                            line-height: 2rem;
-                        }
-
-                        @include mobile {
-                            line-height: 1.8rem;
-                        }
+                        @include fluid-typing(20, 24);
 
                         &::first-letter {
                             color: $secondary-color;
                             margin-right: 0.025em;
 
-                            @include fluidTyping(32, 42);
+                            @include fluid-typing(32, 42);
                         }
                     }
 
@@ -140,7 +107,7 @@
                             margin-bottom: 0.25em;
                             font-weight: 600;
 
-                            @include fluidTyping(20, 22);
+                            @include fluid-typing(20, 22);
                         }
 
                         .headfourness {
@@ -149,7 +116,7 @@
                             margin-bottom: 0.5em;
                             font-weight: 600;
 
-                            @include fluidTyping(18, 20);
+                            @include fluid-typing(18, 20);
                         }
 
                         .headfiveness {
@@ -157,14 +124,14 @@
                             margin-top: 1.5em;
                             font-weight: 700;
 
-                            @include fluidTyping(16, 18);
+                            @include fluid-typing(16, 18);
                         }
 
                         .headsixness {
                             // h6
                             display: block;
 
-                            @include fluidTyping(14, 16);
+                            @include fluid-typing(14, 16);
                         }
 
                         .quoteness {
@@ -212,10 +179,9 @@
                         .hyperlinkness {
                             // a
                             font-weight: 500;
-                            word-break: break-word;
                             display: inline;
 
-                            @include textLink;
+                            @include text-link;
                         }
 
                         .assets {
@@ -224,7 +190,7 @@
                             border: 1.5px solid #e9e9e9;
                             margin: 2.5em 0;
 
-                            @include boxShadow;
+                            @include box-shadow;
                         }
                     }
 
@@ -238,7 +204,7 @@
                         .feedly {
                             font-weight: 500;
 
-                            @include fluidTyping(12, 14);
+                            @include fluid-typing(12, 14);
 
                             > a {
                                 color: #93be44;
@@ -247,7 +213,7 @@
                                 align-items: center;
                                 gap: 0.5em;
 
-                                @include smoothTrans;
+                                @include smooth-trans;
 
                                 > img {
                                     width: 20px;
@@ -262,7 +228,7 @@
                         .feedburner {
                             font-weight: 500;
 
-                            @include fluidTyping(12, 14);
+                            @include fluid-typing(12, 14);
 
                             > a {
                                 color: #fa9b3b;
@@ -271,7 +237,7 @@
                                 align-items: center;
                                 gap: 0.5em;
 
-                                @include smoothTrans;
+                                @include smooth-trans;
 
                                 > img {
                                     width: 20px;
@@ -294,11 +260,6 @@
                     top: 7.5em;
                     height: 100%;
 
-                    @include tablet {
-                        position: static;
-                        margin-bottom: 2em;
-                    }
-
                     .gepost {
                         color: $secondary-color;
                         font-style: italic;
@@ -314,7 +275,7 @@
                         text-align: center;
                         letter-spacing: $low-spacing;
 
-                        @include fluidTyping(12, 14);
+                        @include fluid-typing(12, 14);
                     }
 
                     .sidebar {
@@ -331,15 +292,15 @@
                         max-height: calc(100vh - 15em);
                         overflow-y: auto;
 
-                        @include boxShadow;
+                        @include box-shadow;
 
                         .author {
                             text-align: right;
 
-                            @include fluidTyping(14, 16);
+                            @include fluid-typing(14, 16);
 
                             a {
-                                @include textLink;
+                                @include text-link;
                             }
 
                             > span {
@@ -357,10 +318,6 @@
                             border-radius: $low-radius;
                             border: 2.5px solid rgba($base-color, 0.75);
                             margin: 1.5em 0;
-
-                            @include tablet {
-                                display: none;
-                            }
                         }
 
                         .related {
@@ -369,11 +326,7 @@
                                 text-align: center;
                                 margin: 2em 0 1em;
 
-                                @include fluidTyping(18, 20);
-                            }
-
-                            @include tablet {
-                                display: none;
+                                @include fluid-typing(18, 20);
                             }
 
                             ul {
@@ -392,7 +345,7 @@
                                         padding: 0.25em;
                                         border-radius: $low-radius;
 
-                                        @include smoothTrans;
+                                        @include smooth-trans;
 
                                         &:hover {
                                             opacity: 0.875;
@@ -410,7 +363,7 @@
 
                                                 @include clamp;
 
-                                                @include fluidTyping(14, 16);
+                                                @include fluid-typing(14, 16);
                                             }
 
                                             p {
@@ -418,13 +371,13 @@
 
                                                 @include clamp;
 
-                                                @include fluidTyping(12, 14);
+                                                @include fluid-typing(12, 14);
                                             }
 
                                             span {
                                                 color: $link-color;
 
-                                                @include fluidTyping(13, 15);
+                                                @include fluid-typing(13, 15);
                                             }
                                         }
                                     }
@@ -443,26 +396,13 @@
                 align-items: center;
                 gap: 2em;
 
-                @include tablet {
-                    align-items: flex-start;
-                }
-
-                @include mobile {
-                    margin-top: 0;
-                }
-
-                @include mini {
-                    flex-direction: column;
-                    justify-content: flex-end;
-                }
-
                 > ul {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 1.25em 0.75em;
 
                     li > a {
-                        @include topicButton;
+                        @include topic-button;
                     }
                 }
 
@@ -482,7 +422,7 @@
                     text-decoration-color: $secondary-color;
                     margin: 4rem 0 2rem 0.25rem;
 
-                    @include fluidTyping(24, 28);
+                    @include fluid-typing(24, 28);
                 }
 
                 > ul {
@@ -511,7 +451,7 @@
                             display: flex;
                             flex-direction: column;
 
-                            @include smoothTrans;
+                            @include smooth-trans;
 
                             > [data-gatsby-image-wrapper] {
                                 height: 215px;
@@ -522,7 +462,7 @@
                                 font-weight: 600;
                                 margin: 1em 1em 0;
 
-                                @include fluidTyping(16, 18);
+                                @include fluid-typing(16, 18);
                             }
 
                             p {
@@ -530,7 +470,7 @@
                                 font-weight: 400;
                                 color: $base-color;
 
-                                @include fluidTyping(14, 16);
+                                @include fluid-typing(14, 16);
                             }
 
                             span {
@@ -538,7 +478,7 @@
                                 font-weight: 500;
                                 margin-top: auto;
 
-                                @include fluidTyping(14, 16);
+                                @include fluid-typing(14, 16);
                             }
 
                             &:hover {
@@ -554,10 +494,6 @@
 
             .disqus {
                 color: $base-color;
-
-                @include mobile {
-                    width: 100%;
-                }
 
                 a {
                     color: $secondary-color;

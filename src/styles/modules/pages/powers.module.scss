@@ -16,7 +16,7 @@
         background: linear-gradient(145deg, $primary-color, $button-hover);
         color: $white-color;
 
-        @include boxShadow;
+        @include box-shadow;
 
         > hr {
             border: 2px solid $primary-color;
@@ -33,7 +33,7 @@
             display: flex;
             margin: auto 0 0 auto;
 
-            @include tertiaryButton;
+            @include tertiary-button;
         }
 
         span {
@@ -50,7 +50,7 @@
                 color: white;
             }
 
-            @include fluidTyping(22, 20);
+            @include fluid-typing(22, 20);
         }
     }
 }
@@ -61,15 +61,11 @@
     margin-top: 3em;
     gap: 1.5em;
 
-    @include mobile {
-        justify-content: center;
-    }
-
     > a {
-        @include primaryButton;
+        @include primary-button;
 
         &:nth-of-type(1) {
-            @include primaryButton(2);
+            @include primary-button(2);
         }
     }
 }

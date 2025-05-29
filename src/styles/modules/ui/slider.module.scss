@@ -9,14 +9,6 @@
         --swiper-navigation-size: 30px;
         --swiper-scrollbar-drag-bg-color: #008cd2;
         --swiper-theme-color: #008cd2;
-
-        @include phablet {
-            border-radius: 0;
-
-            --swiper-navigation-size: 25px;
-
-            @include fullWidth;
-        }
     }
 
     &-container {
@@ -27,12 +19,6 @@
         overflow: hidden;
         border-radius: 15px 15px 5px 5px;
         max-height: 700px;
-
-        @include phablet {
-            border-radius: 0;
-            border-right: none;
-            border-left: none;
-        }
 
         img {
             object-position: top;
@@ -54,26 +40,13 @@
         padding: 1em;
         gap: 1.5em;
 
-        @include phablet {
-            position: static;
-            max-width: 100%;
-            border-radius: 0;
-            border: none;
-            padding: 1.5em 1.5em 2.5em;
-            gap: 1em;
-        }
-
         > div {
             display: flex;
             justify-content: space-between;
             gap: 2em;
 
-            @include phablet {
-                gap: 1em;
-            }
-
             > a[target="_blank"] {
-                @include primaryButton;
+                @include primary-button;
             }
         }
 
@@ -83,7 +56,7 @@
             text-decoration-color: $secondary-color;
             text-align: right;
 
-            @include fluidTyping(20, 24);
+            @include fluid-typing(20, 24);
         }
 
         > p {
@@ -92,7 +65,7 @@
             max-width: 70ch;
             margin-left: auto;
 
-            @include fluidTyping(15, 16);
+            @include fluid-typing(15, 16);
         }
 
         > ul {
@@ -112,9 +85,9 @@
                 color: $sixth-color;
                 white-space: nowrap;
 
-                @include boxShadow;
+                @include box-shadow;
 
-                @include fluidTyping(10, 12);
+                @include fluid-typing(10, 12);
             }
         }
     }

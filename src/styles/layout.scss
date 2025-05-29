@@ -1,5 +1,6 @@
 @use "./customs" as *;
 @use "cookie";
+@use "typography";
 
 html {
     scroll-behavior: smooth;
@@ -9,20 +10,12 @@ body {
     font-family: $poppins-font;
     color: $body-color;
     line-height: 1.6;
-    overflow-x: hidden;
+    min-width: rem-calc(320);
 
-    &:has(#backdrop),
-    &:has(.cookie) {
+    &:has(.cookie),
+    &:has(#backdrop) {
         overflow: hidden;
     }
-}
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 .menefex {
@@ -33,46 +26,11 @@ body {
 
 main {
     flex: 1;
-
-    @include container(100px);
-
-    &:has(> .page-title) {
-        @include container(100px, 3em);
-
-        @include mobile {
-            @include container(100px, 1em);
-        }
-    }
+    margin-top: rem-calc(90);
 }
 
-header,
-footer,
-main {
-    @media (width <= 319px) {
-        display: none;
-    }
-}
-
-#tosmallforyouscreen {
-    display: block;
-    text-align: center;
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        gap: 25px;
-
-        img {
-            width: 37.5%;
-            margin: 0 auto;
-        }
-    }
-
-    @media (width >= 320px) {
-        display: none;
-    }
+footer {
+    flex-shrink: 0;
 }
 
 section,
@@ -86,89 +44,14 @@ form {
         margin-top: 1em;
     }
 
-    @include mobile {
-        margin: 2em 0 1em;
-    }
-
     section {
         margin: 0;
         padding: 0;
     }
 }
 
-h1 {
-    @include fluidTyping(28, 32);
-
-    span {
-        color: $secondary-color;
-    }
-}
-
-h2 {
-    @include fluidTyping(24, 28);
-}
-
-h3 {
-    @include fluidTyping(20, 24);
-}
-
-h4 {
-    font-weight: 500;
-
-    @include fluidTyping(16, 20);
-}
-
-h5 {
-    @include fluidTyping(16, 18);
-}
-
-h6 {
-    @include fluidTyping(16, 16);
-}
-
-h1,
-h2,
-h3 {
-    letter-spacing: $low-spacing;
-}
-
-h4,
-h5,
-h6 {
-    letter-spacing: $medium-spacing;
-}
-
-p {
-    letter-spacing: $medium-spacing;
-    font-weight: 300;
-    max-width: 75ch;
-
-    @include fluidTyping(16, 18);
-}
-
-a {
-    text-decoration: none;
-    display: inline;
-    word-break: break-word;
-}
-
-b,
-strong {
-    font-weight: 500;
-}
-
-strike {
-    text-decoration: line-through;
-}
-
-u {
-    text-decoration: underline;
-    text-underline-offset: 0.125em;
-    text-decoration-color: $secondary-color;
-}
-
 button {
-    @include boxShadow;
+    @include box-shadow;
 }
 
 input,
@@ -178,7 +61,7 @@ select {
     border: none;
     outline: none;
 
-    @include fluidTyping(16, 18);
+    @include fluid-typing(16, 18);
 }
 
 input,
@@ -223,7 +106,7 @@ textarea {
     text-decoration: underline;
     text-decoration-color: $secondary-color;
 
-    @include fluidTyping(26, 28);
+    @include fluid-typing(26, 28);
 }
 
 .page-title {
@@ -240,7 +123,7 @@ textarea {
     opacity: 0.9;
     max-width: 75ch;
 
-    @include fluidTyping(18, 20);
+    @include fluid-typing(18, 20);
 }
 
 .page-content {
@@ -295,10 +178,6 @@ textarea {
     margin: 5em auto;
     height: 70px;
     opacity: 0.5;
-
-    @include mobile {
-        margin: 4em auto;
-    }
 }
 
 .vertical-line-long {
@@ -308,50 +187,23 @@ textarea {
     margin: 0 auto 5em;
     height: 100px;
     opacity: 0.5;
-
-    @include mobile {
-        margin: 2em auto 4em;
-    }
 }
 
 .about-spotify {
     display: flex;
     gap: 5em;
-
-    @include tablet {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0;
-    }
 }
 
 .notes-call {
     display: flex;
     gap: 3em;
 
-    @include tablet {
-        gap: 2em;
-    }
-
-    @include phablet {
-        flex-direction: column;
-        gap: 0;
-    }
-
     > section {
         flex: 60%;
-
-        @include tablet {
-            flex: 50%;
-        }
     }
 
     > form {
         flex: 40%;
-
-        @include tablet {
-            flex: 50%;
-        }
     }
 }
 
@@ -360,31 +212,12 @@ textarea {
     align-items: center;
     gap: 5em;
 
-    @include tablet {
-        gap: 2em;
-    }
-
-    @include phablet {
-        flex-direction: column;
-        gap: 0;
-    }
-
     > section {
         flex: 50%;
-
-        @include phablet {
-            width: 100%;
-            flex: 100%;
-        }
     }
 
     > form {
         flex: 50%;
-
-        @include phablet {
-            width: 100%;
-            flex: 100%;
-        }
     }
 }
 
@@ -432,28 +265,25 @@ span.lazy-color {
 .responsive-tag {
     position: fixed;
     top: 1%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.25em 0.75em;
+    left: 5px;
+    // transform: translateX(-50%);
+    padding: rem-calc(5 10);
     z-index: 1000;
-    font-weight: bold;
-    text-align: center;
-    background: $white-color;
     opacity: 0.5;
     color: $textbase-color;
+    background-color: $white-color;
     outline: $textbase-color 1px solid;
-}
+    text-align: center;
 
-.swiper-button-next,
-.swiper-button-prev {
-    @include mobile {
-        display: none !important;
+    p {
+        font-size: rem-calc(14);
+        font-weight: bold;
     }
 }
 
-#hubspot-messages-iframe-container {
-    /* stylelint-disable-next-line selector-class-pattern */
-    [class*="WidgetWrapper__Wrapper"] {
-        padding: 20px !important;
-    }
-}
+// .swiper-button-next,
+// .swiper-button-prev {
+//     @include mobile {
+//         display: none !important;
+//     }
+// }

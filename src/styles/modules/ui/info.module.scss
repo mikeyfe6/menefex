@@ -10,10 +10,6 @@
     border-radius: $medium-radius;
     color: white;
 
-    @include mobile {
-        padding: 1.5em;
-    }
-
     > h3 {
         font-family: $right-font;
     }
@@ -30,7 +26,7 @@
     }
 
     .details {
-        @include fluidTyping(14, 16);
+        @include fluid-typing(14, 16);
     }
 
     .communication {
@@ -69,7 +65,7 @@
                     border-radius: $medium-radius;
                     padding: 0.25em 0.25em 0;
 
-                    @include smoothTrans;
+                    @include smooth-trans;
 
                     i {
                         font-size: 1.5em;
@@ -138,7 +134,7 @@
         a {
             color: #2b9d53;
 
-            @include smoothTrans;
+            @include smooth-trans;
 
             &:hover {
                 color: color.adjust(#2b9d53, $lightness: 10%);
@@ -160,7 +156,7 @@
         a {
             color: #84bcde;
 
-            @include smoothTrans;
+            @include smooth-trans;
 
             &:hover {
                 color: color.adjust(#84bcde, $lightness: 10%);

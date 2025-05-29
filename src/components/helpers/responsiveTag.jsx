@@ -1,7 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 
+// interface Breakpoint {
+//     size: number;
+//     label: string;
+// }
+
+// const ResponsiveTag: FC = () => {
 const ResponsiveTag = () => {
     const breakpoints = [
+        // const breakpoints: Breakpoint[] = [
         { size: 23, label: "Mini View" },
         { size: 30, label: "Compact View" },
         { size: 40, label: "Mobile View" },
@@ -9,7 +16,7 @@ const ResponsiveTag = () => {
         { size: 64, label: "Tablet View" },
         { size: 76, label: "Laptop View" },
         { size: 90, label: "Desktop View" },
-        { size: 120, label: "Wide View" },
+        { size: 100, label: "Wide View" },
         { size: Infinity, label: "Massive View" },
     ];
 
@@ -20,12 +27,13 @@ const ResponsiveTag = () => {
         const breakpoint = breakpoints.find(
             (breakpoint) => width <= breakpoint.size
         );
-        setScreenSize(breakpoint.label);
+        if (breakpoint) {
+            setScreenSize(breakpoint.label);
+        }
     };
 
     useEffect(() => {
         handleResize();
-
         window.addEventListener("resize", handleResize);
 
         return () => {
@@ -35,9 +43,7 @@ const ResponsiveTag = () => {
 
     return (
         <div className="responsive-tag">
-            <p>
-                <strong>{screenSize}</strong>
-            </p>
+            <p>{screenSize}</p>
         </div>
     );
 };

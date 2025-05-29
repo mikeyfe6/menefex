@@ -8,18 +8,9 @@
         flex-direction: column;
         gap: 1.25em;
 
-        @include phablet {
-            gap: 2.5em;
-        }
-
-        @include mobile {
-            width: 100%;
-            gap: 2em;
-        }
-
         li {
             a {
-                @include blogCard;
+                @include blog-card;
             }
         }
     }
@@ -30,16 +21,7 @@
     margin-left: auto;
     margin-right: 3em;
 
-    @include primaryButton;
-
-    @include tablet {
-        margin: 3em 2em 0 auto;
-    }
-
-    @include mobile {
-        max-width: 100%;
-        margin: 3em 0 0 auto;
-    }
+    @include primary-button;
 
     i {
         margin-right: 0.5em;

@@ -1,67 +1,70 @@
 @mixin mini {
-    @media only screen and (width <= 23em) {
+    // 368px
+    @media (width >= 23em) {
         @content;
     }
 }
 
 @mixin compact {
-    @media only screen and (width <= 30em) {
+    // 480px
+    @media (width >= 30em) {
         @content;
     }
 }
 
 @mixin mobile {
-    @media only screen and (width <= 40em) {
+    // 640px
+    @media (width >= 40em) {
         @content;
     }
 }
 
 @mixin phablet {
-    @media only screen and (width <= 52em) {
+    // 768px
+    @media (width >= 52em) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media only screen and (width <= 64em) {
+    // 1024px
+    @media (width >= 64em) {
         @content;
     }
 }
 
 @mixin laptop {
-    @media only screen and (width <= 76em) {
+    // 1280px
+    @media (width >= 76em) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media only screen and (width <= 90em) {
+    // 1440px
+    @media (width >= 90em) {
         @content;
     }
 }
 
 @mixin wide {
-    @media only screen and (width <= 120em) {
+    // 1600px
+    @media (width >= 100em) {
         @content;
     }
 }
 
 @mixin massive {
-    @media only screen and (width >= 120.063em) {
+    // 1920px
+    @media (width >= 120em) {
         @content;
     }
 }
+
+// Orientation-based media queries (for mobile-first)
 
 @mixin landscape {
-    @media only screen and (width >= 23em) and (width <= 64em) and (orientation: landscape) {
+    @media (width >= 23em) and (width <= 64em) and (orientation: landscape) {
         @content;
     }
 }
-
-// $pocket: 'max-width: 426px';
-// $mobile: 'max-width: 576px';
-// $tablet: 'max-width: 768px';
-// $laptop: 'max-width: 992px';
-// $desktop: 'max-width: 1200px';
-// $wide: 'max-width: 1400px';
-// $massive: 'min-width: 1401px';

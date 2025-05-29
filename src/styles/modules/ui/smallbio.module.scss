@@ -5,15 +5,11 @@
         background: linear-gradient(145deg, $spec-color, $white-color);
         opacity: 0.95;
 
-        @include fullWidth;
+        @include full-width;
     }
 
     &-wrapper {
-        @include container(0, 4em);
-
-        @include mobile {
-            @include container(0, 3em);
-        }
+        @include container;
 
         .thick-hr {
             margin: 0;
@@ -35,7 +31,7 @@
                 color: $primary-color;
                 font-size: 2em;
 
-                @include smoothTrans;
+                @include smooth-trans;
 
                 &:hover {
                     color: $link-color;
@@ -49,15 +45,11 @@
         max-width: 87.5%;
 
         a {
-            @include textLink;
-        }
-
-        @include mobile {
-            max-width: 100%;
+            @include text-link;
         }
     }
 }
 
 .meerover {
-    @include primaryButton;
+    @include primary-button;
 }

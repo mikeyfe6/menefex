@@ -12,18 +12,10 @@
         flex-wrap: wrap;
         gap: 0.75em 0.5em;
 
-        @include fluidTyping(14, 18);
-
-        @include mobile {
-            padding-right: 0;
-        }
+        @include fluid-typing(14, 18);
 
         br {
             display: none;
-
-            @include mobile {
-                display: block;
-            }
         }
 
         cite {
@@ -53,14 +45,6 @@
         margin: 3em auto 4em;
         text-align: center;
         width: fit-content;
-
-        @include laptop {
-            margin: 3em auto;
-        }
-
-        @include mobile {
-            margin: 3em auto 2.5em;
-        }
     }
 
     &-logo {
@@ -68,7 +52,7 @@
         animation: roll 45s infinite;
         transform: rotate(30deg);
 
-        @include smoothTrans;
+        @include smooth-trans;
 
         @keyframes roll {
             0% {
@@ -99,16 +83,6 @@
         margin: 5em 0;
         gap: 3em;
 
-        @include laptop {
-            flex-direction: column;
-            margin: 4em 0 3em;
-            gap: 2em;
-        }
-
-        @include mobile {
-            margin: 3.5em 0 2.5em;
-        }
-
         > div {
             flex: 1;
         }
@@ -121,7 +95,7 @@
         a {
             color: $primary-color;
 
-            @include smoothTrans;
+            @include smooth-trans;
 
             &:hover {
                 color: $link-color;
@@ -130,7 +104,7 @@
 
         a,
         p {
-            @include fluidTyping(17, 19);
+            @include fluid-typing(17, 19);
         }
 
         .personal {
@@ -168,31 +142,31 @@
                     &.fb::before {
                         background: #4064ad;
 
-                        @include footerDot;
+                        @include footer-dot;
                     }
 
                     &.ig::before {
                         background: #dd2a7b;
 
-                        @include footerDot;
+                        @include footer-dot;
                     }
 
                     &.tw::before {
                         background: #55acee;
 
-                        @include footerDot;
+                        @include footer-dot;
                     }
 
                     &.li::before {
                         background: #0177b5;
 
-                        @include footerDot;
+                        @include footer-dot;
                     }
 
                     &.gh::before {
                         background: #24292e;
 
-                        @include footerDot;
+                        @include footer-dot;
                     }
                 }
             }
@@ -220,10 +194,10 @@
         max-width: 77.5ch;
         margin: 0 auto;
 
-        @include fluidTyping(12, 14);
+        @include fluid-typing(12, 14);
 
         a {
-            @include textLink;
+            @include text-link;
         }
 
         span {

@@ -5,27 +5,7 @@
     gap: 1.5em;
     justify-content: space-evenly;
 
-    @include laptop {
-        flex-wrap: wrap;
-        row-gap: 3em;
-    }
-
-    @include mobile {
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        width: 90%;
-        gap: 2.5em;
-    }
-
     > * {
-        @include laptop {
-            flex: 0 0 48%;
-        }
-
-        @include phablet {
-            flex: 0 0 46%;
-        }
     }
 
     > li {
@@ -37,8 +17,8 @@
         background: linear-gradient(to bottom, $spec-color, $secondary-color);
         border-radius: 25px;
 
-        @include smoothTrans;
-        @include boxShadow;
+        @include smooth-trans;
+        @include box-shadow;
 
         h3 {
             font-family: $right-font;
@@ -50,7 +30,7 @@
 
         &:hover {
             transform: scale(1.0125);
-            @include smoothTrans;
+            @include smooth-trans;
         }
 
         .price {
@@ -59,7 +39,7 @@
             opacity: 0.8;
             margin: 0 0 0.5em;
 
-            @include fluidTyping(24, 26);
+            @include fluid-typing(24, 26);
 
             > data {
                 color: $primary-color;
@@ -68,7 +48,7 @@
             > span {
                 text-decoration: line-through;
 
-                @include fluidTyping(13, 14);
+                @include fluid-typing(13, 14);
             }
 
             > sup {
@@ -76,7 +56,7 @@
                 display: block;
                 top: 0.5em;
 
-                @include fluidTyping(12, 13);
+                @include fluid-typing(12, 13);
             }
 
             &-action {
@@ -84,7 +64,7 @@
                 font-weight: bolder;
                 opacity: 0.5;
 
-                @include fluidTyping(12, 13);
+                @include fluid-typing(12, 13);
             }
 
             &-contains {
@@ -94,7 +74,7 @@
                 text-decoration: underline;
                 text-decoration-color: $super-color;
 
-                @include fluidTyping(12, 13);
+                @include fluid-typing(12, 13);
             }
 
             &-feat {
@@ -102,7 +82,7 @@
                 font-weight: bold;
                 color: white;
 
-                @include fluidTyping(12, 13);
+                @include fluid-typing(12, 13);
             }
 
             &-bold {
@@ -122,7 +102,7 @@
                 border-bottom: 1px $spec-color solid;
                 padding: 0.875em 0.5em;
 
-                @include fluidTyping(14, 16);
+                @include fluid-typing(14, 16);
             }
         }
 
@@ -130,7 +110,7 @@
             margin: auto auto 0;
             display: block;
 
-            @include tertiaryButton;
+            @include tertiary-button;
 
             &:hover {
                 transform: scale(1);
@@ -144,7 +124,7 @@
     font-weight: 500;
     box-shadow: none;
 
-    @include smoothTrans;
+    @include smooth-trans;
 
     &:hover {
         color: #187710;
@@ -155,5 +135,5 @@
     font-weight: 500;
     box-shadow: none;
 
-    @include textLink;
+    @include text-link;
 }

@@ -12,14 +12,12 @@
     transform: translateY(100%);
     transition: transform 0.5s ease-in-out;
 
-    @include laptop {
-        &.open {
-            transform: translateY(0);
-        }
+    &.open {
+        transform: translateY(0);
     }
 
-    @include landscape {
-        overflow: auto;
+    @include laptop {
+        display: none;
     }
 
     ul {
@@ -30,22 +28,11 @@
         gap: 1em;
         height: 100vh;
 
-        @include landscape {
-            justify-content: flex-end;
-            padding: 6em 0 2em;
-            overflow: auto;
-            height: fit-content;
-        }
-
         li {
             &:last-of-type {
                 border-top: 3px solid $third-color;
                 padding-top: 1em;
                 margin-top: 0.75em;
-
-                @include landscape {
-                    padding-top: 0;
-                }
             }
 
             a {
@@ -54,11 +41,7 @@
                 letter-spacing: $high-spacing;
                 text-shadow: -5px 0 #ccc, 0 5px #ccc, 5px 0 #ccc, 0 -5px #ccc;
 
-                @include fluidTyping(20, 24);
-
-                @include landscape {
-                    line-height: normal;
-                }
+                @include fluid-typing(20, 24);
 
                 &:hover:not(.active-page) {
                     color: $textbase-color;
@@ -72,7 +55,7 @@
                 }
 
                 &.whapp {
-                    @include fluidTyping(16, 20);
+                    @include fluid-typing(16, 20);
 
                     > i {
                         margin-right: 0.5em;
@@ -87,9 +70,9 @@
                 text-shadow: -10px 0 $secondary-color, 0 10px $secondary-color,
                     10px 0 $secondary-color, 0 -10px $secondary-color;
 
-                @include smoothTrans;
+                @include smooth-trans;
 
-                @include fluidTyping(24, 28);
+                @include fluid-typing(24, 28);
 
                 .dots {
                     color: $third-color;
