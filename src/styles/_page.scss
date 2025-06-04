@@ -1,0 +1,22 @@
+@use "./customs" as *;
+
+.page {
+    $page: &;
+
+    &-intro {
+        @include container($mt: rem-calc(32));
+
+        h1 {
+            font-family: $wdxl-font;
+            margin-bottom: rem-calc(16);
+        }
+
+        h2 {
+            font-weight: 500;
+            font-family: $poppins-font;
+            letter-spacing: $medium-spacing;
+
+            @include fluid-typing(19, 21);
+        }
+    }
+}

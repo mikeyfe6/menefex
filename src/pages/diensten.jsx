@@ -8,99 +8,119 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as powersStyles from "../styles/modules/pages/powers.module.scss";
+import * as servicesStyles from "../styles/modules/pages/services.module.scss";
 
-const PowersPage = () => {
+const ServicesPage = () => {
     const { t, isHydrated } = useTranslation();
 
     if (!isHydrated) return null;
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("powersTitle")}
-                <span>.</span>
-            </h1>
-            <h2 className="page-sub">{t("powersIntro")}</h2>
-            <section className={powersStyles.powers}>
-                <div>
-                    <h3
-                        dangerouslySetInnerHTML={{ __html: t("powersWebsite") }}
-                    />
-                    <hr />
-                    <p>{t("powersWebsiteInfo")}</p>
-                    <Link to="/diensten/website-laten-maken/" name="service">
-                        {t("powersMoreInfo")}
-                    </Link>
-                </div>
-                <div>
-                    <h3
-                        dangerouslySetInnerHTML={{ __html: t("powersWebapp") }}
-                    />
-                    <hr />
-                    <p>{t("powersWebappInfo")}</p>
-                    <Link
-                        to="/diensten/webapplicatie-laten-maken/"
-                        name="service"
-                    >
-                        {t("powersMoreInfo")}
-                    </Link>
-                </div>
-                <div>
-                    <h3
-                        dangerouslySetInnerHTML={{ __html: t("powersWebshop") }}
-                    />
-                    <hr />
-                    <p>{t("powersWebshopInfo")}</p>
-                    <Link to="/diensten/webshop-laten-maken/" name="service">
-                        {t("powersMoreInfo")}
-                    </Link>
-                </div>
-                <div>
-                    <h3
-                        dangerouslySetInnerHTML={{ __html: t("powersEmail") }}
-                    />
-                    <hr />
-                    <p>{t("powersEmailInfo")}</p>
-                    <Link
-                        to="/diensten/email-template-laten-maken/"
-                        name="service"
-                    >
-                        {t("powersMoreInfo")}
-                    </Link>
-                </div>
-                <div>
-                    <h3
-                        dangerouslySetInnerHTML={{
-                            __html: t("powersMaintenance"),
-                        }}
-                    />
-                    <hr />
-                    <p>{t("powersMaintenanceInfo")}</p>
-                    <Link
-                        to="/diensten/onderhoud-updates-uitvoeren/"
-                        name="service"
-                    >
-                        {t("powersMoreInfo")}
-                    </Link>
-                </div>
-                <div>
-                    <h3 dangerouslySetInnerHTML={{ __html: t("powersSeo") }} />
-                    <hr />
-                    <p>{t("powersSeoInfo")}</p>
-                    <Link
-                        to="/diensten/zoekmachine-optimalisatie/"
-                        name="service"
-                    >
-                        {t("powersMoreInfo")}
-                    </Link>
+            <section className="page-intro">
+                <h1>
+                    {t("services.title")}
+                    <span>.</span>
+                </h1>
+                <h2>{t("services.intro")}</h2>
+            </section>
+            <section className={servicesStyles.servicesOverview}>
+                <div className={servicesStyles.servicesContainer}>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("services.websites.caption"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("services.websites.snippet")}</p>
+                        <Link
+                            to="/diensten/website-laten-maken/"
+                            name="service"
+                        >
+                            {t("services.websites.cta")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("powersWebapp"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("powersWebappInfo")}</p>
+                        <Link
+                            to="/diensten/webapplicatie-laten-maken/"
+                            name="service"
+                        >
+                            {t("powersMoreInfo")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("powersWebshop"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("powersWebshopInfo")}</p>
+                        <Link
+                            to="/diensten/webshop-laten-maken/"
+                            name="service"
+                        >
+                            {t("powersMoreInfo")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("powersEmail"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("powersEmailInfo")}</p>
+                        <Link
+                            to="/diensten/email-template-laten-maken/"
+                            name="service"
+                        >
+                            {t("powersMoreInfo")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("powersMaintenance"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("powersMaintenanceInfo")}</p>
+                        <Link
+                            to="/diensten/onderhoud-updates-uitvoeren/"
+                            name="service"
+                        >
+                            {t("powersMoreInfo")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{ __html: t("powersSeo") }}
+                        />
+                        <hr />
+                        <p>{t("powersSeoInfo")}</p>
+                        <Link
+                            to="/diensten/zoekmachine-optimalisatie/"
+                            name="service"
+                        >
+                            {t("powersMoreInfo")}
+                        </Link>
+                    </div>
                 </div>
             </section>
         </Layout>
     );
 };
 
-export default PowersPage;
+export default ServicesPage;
 
 export const Head = () => {
     const { title, siteUrl } = useSiteMetadata();

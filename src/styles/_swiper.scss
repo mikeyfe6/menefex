@@ -1,0 +1,12 @@
+@use "./customs/" as *;
+
+.swiper {
+    &-pagination-bullet-active {
+        background: $secondary-color !important;
+    }
+
+    &-pagination-bullet {
+        width: rem-calc(10) !important;
+        height: rem-calc(10) !important;
+    }
+}

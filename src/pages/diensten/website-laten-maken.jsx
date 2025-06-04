@@ -8,7 +8,7 @@ import useSiteMetadata from "../../hooks/use-site-metadata";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import * as powersStyles from "../../styles/modules/pages/powers.module.scss";
+import * as servicesStyles from "../../styles/modules/pages/services.module.scss";
 
 const WebsitePage = () => {
     const { t, isHydrated } = useTranslation();
@@ -17,30 +17,37 @@ const WebsitePage = () => {
 
     return (
         <Layout>
-            <h1
-                dangerouslySetInnerHTML={{ __html: t("powersWebsiteTitle") }}
-                className="page-title"
-            />
+            <section className="page-intro">
+                <h1
+                    dangerouslySetInnerHTML={{
+                        __html: t("services.websites.title"),
+                    }}
+                />
 
-            <h2 className="page-sub">{t("powersWebsiteIntro")}</h2>
+                <h2>{t("services.websites.intro")}</h2>
+            </section>
 
-            <br />
+            <section className={servicesStyles.servicesDetail}>
+                <div className={servicesStyles.servicesContainer}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("services.websites.content"),
+                        }}
+                        className={servicesStyles.servicesContent}
+                    />
 
-            <div
-                dangerouslySetInnerHTML={{ __html: t("powersWebsiteDetail") }}
-                className="page-content"
-            />
-
-            <div className={powersStyles.buttons}>
-                <Link to="/diensten/">
-                    <i className="fa-solid fa-angles-left" />{" "}
-                    {t("powersServices")}
-                </Link>
-                <Link to="/prijzen/">
-                    {t("powersPrices")}{" "}
-                    <i className="fa-solid fa-angles-right" />
-                </Link>
-            </div>
+                    <div className={servicesStyles.servicesButtons}>
+                        <Link to="/diensten/">
+                            <i className="fa-solid fa-angles-left" />{" "}
+                            {t("services.showAllServices")}
+                        </Link>
+                        <Link to="/prijzen/">
+                            {t("services.goToPrices")}{" "}
+                            <i className="fa-solid fa-angles-right" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };

@@ -4,14 +4,12 @@
 
 .info {
     padding: 2.5em;
-    background: linear-gradient(145deg, $primary-color, $button-hover);
-    opacity: 0.875;
+    background: linear-gradient(145deg, $primary-color, $dark-color);
     outline: 3px solid $primary-color;
     border-radius: $medium-radius;
     color: white;
 
     > h3 {
-        font-family: $right-font;
     }
 
     > span {

@@ -13,6 +13,8 @@ import ResponsiveTag from "./helpers/responsiveTag";
 
 import "../styles/layout.scss";
 
+// TODO: klaar voor TS'en..
+
 const Layout = ({ children }) => {
     const { t, isHydrated } = useTranslation();
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
@@ -49,8 +51,8 @@ const Layout = ({ children }) => {
 
                 <CookieConsent
                     expires={60}
-                    buttonText={t("cookieAccept")}
-                    declineButtonText={t("cookieDecline")}
+                    buttonText={t("cookie.accept")}
+                    declineButtonText={t("cookie.decline")}
                     cookieName="menefex-cookie"
                     extraCookieOptions={{ domain: ".menefex.nl" }}
                     enableDeclineButton
@@ -58,7 +60,7 @@ const Layout = ({ children }) => {
                     overlayClasses="cookie"
                     containerClasses="cookie-container"
                     contentClasses="cookie-content"
-                    buttonWrapperClasses="cookie-btn-wrapper"
+                    buttonWrapperClasses="cookie-btns"
                     buttonClasses="cookie-btn-accept"
                     declineButtonClasses="cookie-btn-decline"
                     disableStyles
@@ -66,7 +68,7 @@ const Layout = ({ children }) => {
                     overlay
                 >
                     <h3>Cookies</h3>
-                    <p dangerouslySetInnerHTML={{ __html: t("cookieText") }} />
+                    <p dangerouslySetInnerHTML={{ __html: t("cookie.text") }} />
                 </CookieConsent>
             </div>
 

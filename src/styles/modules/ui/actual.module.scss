@@ -1,43 +1,66 @@
 @use "../../customs" as *;
 
 .actual {
+    $actual: &;
+
+    > h3 {
+        @include section-title(center, $space: rem-calc(36));
+    }
+
     &-container {
-        @include smooth-trans;
-    }
-
-    &-wrapper {
         display: flex;
-        gap: 25px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        gap: rem-calc(48);
 
-    &-text {
-        text-align: center;
-        max-width: 550px;
+        @include container($pt: 0, $pb: 0);
 
-        h4 {
-            @include fluid-typing(20, 24);
-        }
-
-        > p {
-            margin: 1em 0;
-
-            > a {
-                @include text-link;
-            }
-        }
-
-        ul {
+        #{$actual}-wrapper {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2em 0.75em;
-            margin: 2.5em 0 0;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            gap: rem-calc(24);
 
-            > li > a {
-                @include topic-button;
+            #{$actual}-image {
+                > a {
+                    [data-gatsby-image-wrapper] {
+                        max-height: rem-calc(235);
+                        height: 100%;
+                        border-radius: $low-radius;
+                    }
+                }
+            }
+
+            #{$actual}-content {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: rem-calc(18);
+
+                > h4 {
+                    @include fluid-typing(18, 21);
+                }
+
+                > div {
+                    > span {
+                        color: $grey-color;
+                        pointer-events: none;
+                    }
+
+                    > a {
+                        @include text-link;
+                    }
+                }
+            }
+
+            > ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: rem-calc(16 12);
+
+                > li > a {
+                    @include topic-button;
+                }
             }
         }
     }

@@ -1,6 +1,8 @@
 @use "./customs" as *;
 
 .cookie {
+    $cookie: &;
+
     position: fixed;
     width: 100%;
     height: 100%;
@@ -9,76 +11,74 @@
     z-index: 10;
 
     &-container {
-        background: linear-gradient(145deg, $primary-color, $button-hover);
+        background: linear-gradient(145deg, $primary-color, $dark-color);
         opacity: 0.95;
-        color: $fourth-color;
+        color: $snow-color;
         border-bottom: 7.5px solid $secondary-color;
         border-top: 7.5px solid $primary-color;
-        width: 100%;
-        max-width: 1100px;
+        width: calc(100% - 2.5rem);
+        max-width: rem-calc(1200);
         margin: 0 auto;
-        padding: 1.5rem;
+        padding: rem-calc(24);
         position: absolute;
         left: 50%;
         transform: translate(-50%, -12.5%);
         border-radius: $low-radius;
-    }
 
-    &-content {
-        > h3 {
-            font-family: $right-font;
+        #{$cookie}-content {
+            > h3 {
+                @include fluid-typing(28, 32);
+            }
 
-            @include fluid-typing(28, 32);
-        }
+            > p {
+                color: $white-color;
+                margin: rem-calc(16 0 24);
 
-        > p {
-            color: $white-color;
-            margin: 1em 0 1.5em;
+                @include fluid-typing(16, 18);
 
-            @include fluid-typing(16, 18);
+                > span {
+                    display: block;
+                    margin: rem-calc(16 0);
 
-            > span {
-                display: block;
-                margin: 1em 0;
-
-                @include fluid-typing(15, 17);
+                    @include fluid-typing(15, 17);
+                }
             }
         }
-    }
 
-    &-btn {
-        &-wrapper {
+        #{$cookie}-btns {
             display: flex;
             justify-content: flex-end;
-            gap: 1em;
+            gap: rem-calc(16);
             align-items: center;
-        }
 
-        &-accept {
-            color: $textbase-color;
-            background-color: $secondary-color;
-            border-radius: $low-radius;
-            padding: 0.5em 1em;
+            #{$cookie}-btn {
+                &-accept,
+                &-decline {
+                    border-radius: $low-radius;
+                    padding: rem-calc(8 16);
 
-            @include smooth-trans;
+                    @include smooth-trans;
+                }
 
-            &:hover {
-                background-color: $super-color;
-            }
-        }
+                &-accept {
+                    color: $dark-color;
+                    background-color: $secondary-color;
 
-        &-decline {
-            font-weight: 300;
-            background: transparent;
-            border: 1px solid #dadada86;
-            border-radius: $low-radius;
-            padding: 0.5em 1em;
-            color: $secondary-color;
+                    &:hover {
+                        background-color: $ivory-color;
+                    }
+                }
 
-            @include smooth-trans;
+                &-decline {
+                    font-weight: 300;
+                    background: transparent;
+                    border: 1px solid #dadada86;
+                    color: $secondary-color;
 
-            &:hover {
-                border: 1px solid $white-color;
+                    &:hover {
+                        border-color: $white-color;
+                    }
+                }
             }
         }
     }

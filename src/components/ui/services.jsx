@@ -6,89 +6,120 @@ import * as servicesStyles from "../../styles/modules/ui/services.module.scss";
 
 import useTranslation from "../../hooks/use-translation";
 
-const Service = () => {
+// TODO: klaar voor TS'en..
+
+const Services = () => {
     const { t, isHydrated } = useTranslation();
+    const [selected, setSelected] = React.useState("websites");
+
+    const services = {
+        websites: {
+            name: t("services.websites.name"),
+            icon: "fa-solid fa-globe",
+            excerpt: t("services.websites.excerpt"),
+            focus: t("services.websites.focus", { returnObjects: true }),
+            url: "/diensten/website-laten-maken/",
+            cta: t("services.websites.cta"),
+        },
+        webshops: {
+            name: t("services.webshops.name"),
+            icon: "fa-solid fa-shopping-cart",
+            excerpt: t("services.webshops.excerpt"),
+            focus: t("services.webshops.focus", { returnObjects: true }),
+            url: "/diensten/webshop-laten-maken/",
+            cta: t("services.webshops.cta"),
+        },
+        webapps: {
+            name: t("services.webapps.name"),
+            icon: "fa-solid fa-mobile",
+            excerpt: t("services.webapps.excerpt"),
+            focus: t("services.webapps.focus", { returnObjects: true }),
+            url: "/diensten/webapplicatie-laten-maken/",
+            cta: t("services.webapps.cta"),
+        },
+        seo: {
+            name: t("services.seo.name"),
+            icon: "fa-brands fa-searchengin",
+            excerpt: t("services.seo.excerpt"),
+            focus: t("services.seo.focus", { returnObjects: true }),
+            url: "/diensten/zoekmachine-optimalisatie/",
+            cta: t("services.seo.cta"),
+        },
+        maintenance: {
+            name: t("services.maintenance.name"),
+            icon: "fa-solid fa-wrench",
+            excerpt: t("services.maintenance.excerpt"),
+            focus: t("services.maintenance.focus", { returnObjects: true }),
+            url: "/diensten/onderhoud-en-support/",
+            cta: t("services.maintenance.cta"),
+        },
+        optimization: {
+            name: t("services.optimization.name"),
+            icon: "fa-solid fa-rocket",
+            excerpt: t("services.optimization.excerpt"),
+            focus: t("services.optimization.focus", { returnObjects: true }),
+            url: "/diensten/optimalisatie/",
+            cta: t("services.optimization.cta"),
+        },
+    };
+
+    const serviceKeys = [
+        "websites",
+        "webshops",
+        "webapps",
+        "seo",
+        "maintenance",
+        "optimization",
+    ];
 
     if (!isHydrated) return null;
 
     return (
-        <section className={servicesStyles.serviceContainer} id="services">
-            <div className={servicesStyles.serviceWrapper}>
-                <div>
-                    <div>
-                        <div className={servicesStyles.serviceTitle}>
-                            <i className="fa-solid fa-globe" />
-                            <h4>{t("servicesTitleWebsites")}</h4>
-                        </div>
-                        <hr className={servicesStyles.thick} />
-                        <p>{t("servicesContentWebsites")}</p>
-                        <hr className={servicesStyles.thin} />
-                        <span>Focus:</span>
-                        <ul>
-                            <li>{t("servicesFocusWebsitesOne")}</li>
-                            <li>{t("servicesFocusWebsitesTwo")}</li>
-                            <li>{t("servicesFocusWebsitesThree")}</li>
-                            <li>{t("servicesFocusWebsitesFour")}</li>
-                        </ul>
-                        <hr className={servicesStyles.endline} />
-                    </div>
-                    <div>
-                        <div className={servicesStyles.serviceTitle}>
-                            <i className="fa-solid fa-shopping-cart" />
-                            <h4>{t("servicesTitleWebshops")}</h4>
-                        </div>
-                        <hr className={servicesStyles.thick} />
-                        <p>{t("servicesContentWebshops")}</p>
-                        <hr className={servicesStyles.thin} />
-                        <span>Focus:</span>
-                        <ul>
-                            <li>{t("servicesFocusWebshopsOne")}</li>
-                            <li>{t("servicesFocusWebshopsTwo")}</li>
-                            <li>{t("servicesFocusWebshopsThree")}</li>
-                            <li>{t("servicesFocusWebshopsFour")}</li>
-                        </ul>
-                        <hr className={servicesStyles.endline} />
-                    </div>
-                    <div>
-                        <div className={servicesStyles.serviceTitle}>
-                            <i className="fa-solid fa-mobile" />
-                            <h4>{t("servicesTitleWebapps")}</h4>
-                        </div>
-                        <hr className={servicesStyles.thick} />
-                        <p>{t("servicesContentWebapps")}</p>
-                        <hr className={servicesStyles.thin} />
-                        <span>Focus:</span>
-                        <ul>
-                            <li>{t("servicesFocusWebappsOne")}</li>
-                            <li>{t("servicesFocusWebappsTwo")}</li>
-                            <li>{t("servicesFocusWebappsThree")}</li>
-                        </ul>
-                        <hr className={servicesStyles.endline} />
-                    </div>
-                    <div>
-                        <div className={servicesStyles.serviceTitle}>
-                            <i className="fa-brands fa-searchengin" />
-                            <h4>{t("servicesTitleSeo")}</h4>
-                        </div>
-                        <hr className={servicesStyles.thick} />
-                        <p>{t("servicesContentSeo")}</p>
-                        <hr className={servicesStyles.thin} />
-                        <span>Focus:</span>
-                        <ul>
-                            <li>{t("servicesFocusSeoOne")}</li>
-                            <li>{t("servicesFocusSeoTwo")}</li>
-                            <li>{t("servicesFocusSeoThree")}</li>
-                        </ul>
-                        <hr className={servicesStyles.endline} />
-                    </div>
+        <section className={servicesStyles.service} id="services">
+            <div className={servicesStyles.serviceContainer}>
+                <div className={servicesStyles.serviceOverlay}>
+                    <i className={services[selected].icon} />
+                    <h4>{services[selected].name}</h4>
+                    <p>{services[selected].excerpt}</p>
+                    <span>Focus:</span>
+                    <ul>
+                        {services[selected].focus.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
+                    </ul>
+                    <Link to={services[selected].url}>
+                        {services[selected].cta}
+                    </Link>
                 </div>
-                <div>
-                    <Link to="/prijzen/">{t("servicesPricesButton")}</Link>
-                    <Link to="/diensten/">{t("servicesPricesButtonTwo")}</Link>
-                </div>
+                <h3>{t("services.name")}</h3>
+                <p>
+                    Bij Menefex bieden we een compleet pakket aan digitale
+                    diensten om jouw online aanwezigheid te versterken. Of je nu
+                    op zoek bent naar een op maat gemaakte website, krachtige
+                    webapplicatie, converterende webshop, betere vindbaarheid in
+                    Google, technische ondersteuning of
+                    performance-optimalisatie — wij zorgen dat jouw digitale
+                    platform werkt, scoort én groeit.
+                </p>
+                {serviceKeys.map((key) => (
+                    <button
+                        key={key}
+                        className={
+                            servicesStyles[
+                                `service${
+                                    key.charAt(0).toUpperCase() + key.slice(1)
+                                }`
+                            ]
+                        }
+                        onClick={() => setSelected(key)}
+                    >
+                        <i className={services[key].icon} />
+                        <span>{services[key].name}</span>
+                    </button>
+                ))}
             </div>
         </section>
     );
 };
 
-export default Service;
+export default Services;

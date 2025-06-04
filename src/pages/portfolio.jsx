@@ -305,7 +305,7 @@ const PortfolioPage = () => {
           */}
 
                     <div id="#KNA">
-                        <a
+                        {/* <a
                             href="https://kn-acdig.com"
                             // href="#!"
                             rel="noopener noreferrer"
@@ -316,7 +316,7 @@ const PortfolioPage = () => {
                                 alt="KN-ACDiG"
                                 className={portfolioStyles.portfolioImg}
                             />
-                        </a>
+                        </a> */}
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
                                 <span>Client:</span>KennisNetwerk ACDiG

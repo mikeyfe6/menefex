@@ -1,123 +1,176 @@
 @use "../../customs" as *;
 
 .service {
+    $service: &;
+
+    background: $smoke-color;
+
     &-container {
-        background: linear-gradient(145deg, $sixth-color, $fourth-color);
+        display: grid;
+        grid-template:
+            "overlay title title" 1fr
+            "overlay intro intro" auto
+            "overlay websites webapps" auto
+            "overlay webshops seo" auto
+            "overlay maintenance optimization" auto
+            / auto 1fr 1fr;
+        gap: rem-calc(24);
 
-        @include full-width;
-    }
-
-    &-wrapper {
         @include container;
 
-        > div:nth-child(1) {
+        > h3 {
+            grid-area: title;
+            margin-top: auto;
+
+            @include section-title($space: 0);
+        }
+
+        > p {
+            grid-area: intro;
+            margin-bottom: rem-calc(24);
+        }
+
+        #{$service}-overlay {
+            grid-area: overlay;
+            padding: rem-calc(36 32);
+            min-height: rem-calc(700);
+            height: 100%;
+            position: relative;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
 
-            > div {
-                flex: 1;
-                padding: 1.5em 2em;
-                border-left: 5px groove rgba($white-color, 0.125);
+            > i {
+                position: absolute;
+                top: rem-calc(-45);
+                right: rem-calc(-45);
+                font-size: rem-calc(48);
+                min-width: rem-calc(100);
+                min-height: rem-calc(100);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $secondary-color;
+                border-radius: 50%;
+            }
 
-                &:last-of-type {
-                    border-right: 5px groove rgba($white-color, 0.125);
-                    padding-right: 2.5em;
-                }
+            > h4 {
+                margin-bottom: rem-calc(24);
+            }
 
-                span {
-                    font-weight: 700;
+            > p {
+                margin-bottom: rem-calc(28);
 
-                    @include fluid-typing(17, 18);
-                }
+                @include fluid-typing(18, 19);
+            }
 
-                p {
-                    min-height: 325px;
-                    max-width: 95%;
-                    margin: 2.5em 0 2em;
-                }
+            > span {
+                font-weight: 700;
 
-                ul {
-                    margin-top: 1em;
-                    list-style: none;
-                    font-weight: 400;
+                @include fluid-typing(17, 18);
+            }
 
-                    li {
-                        @include fluid-typing(15, 16);
+            > ul {
+                margin-top: rem-calc(8);
+                margin-bottom: rem-calc(24);
+                font-weight: 400;
 
-                        &::before {
-                            content: "\203B";
-                            color: $secondary-color;
-                            font-weight: bold;
-                            font-size: 1.25em;
-                            margin-right: 0.5em;
-                        }
+                > li {
+                    @include fluid-typing(15, 17);
+
+                    &::before {
+                        content: "\203B";
+                        color: $secondary-color;
+                        font-weight: bold;
+                        font-size: rem-calc(20);
+                        margin-right: rem-calc(8);
                     }
                 }
             }
-        }
-
-        > div:nth-child(2) {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 5em;
-            gap: 1.5em;
 
             > a {
-                @include primary-button;
+                margin-top: auto;
 
-                &:nth-of-type(2) {
-                    @include primary-button(2);
-                }
+                @include primary-button($width: 100%);
             }
         }
 
-        .thick {
-            width: 25%;
-            border: 3px solid $third-color;
+        #{$service}-websites {
+            grid-area: websites;
         }
 
-        .thin {
-            width: 75%;
-            border: 1px solid $secondary-color;
-            opacity: 0.5;
-            margin-bottom: 2em;
+        #{$service}-webapps {
+            grid-area: webapps;
         }
 
-        .endline {
-            border-width: 5px;
-            background: $secondary-color;
-            opacity: 0.5;
-            display: none;
+        #{$service}-webshops {
+            grid-area: webshops;
         }
-    }
 
-    &-title {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        min-height: 75px;
-        margin-bottom: 1em;
+        #{$service}-seo {
+            grid-area: seo;
+        }
 
-        i {
+        #{$service}-maintenance {
+            grid-area: maintenance;
+        }
+
+        #{$service}-optimization {
+            grid-area: optimization;
+        }
+
+        #{$service}-overlay,
+        #{$service}-websites,
+        #{$service}-webapps,
+        #{$service}-webshops,
+        #{$service}-seo,
+        #{$service}-maintenance,
+        #{$service}-optimization {
+            background-color: $white-color;
+            border-radius: $medium-radius;
+
+            @include border($color: $lightgrey-color);
+        }
+
+        #{$service}-websites,
+        #{$service}-webapps,
+        #{$service}-webshops,
+        #{$service}-seo,
+        #{$service}-maintenance,
+        #{$service}-optimization {
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 2em;
-            color: $secondary-color;
-            outline: 2px solid white;
-            border-radius: 50%;
-            min-width: 55px;
-            min-height: 55px;
-            background: #5b5a5a;
+            gap: rem-calc(16);
+            letter-spacing: $medium-spacing;
+            padding: rem-calc(20 24);
 
-            @include box-shadow;
-        }
+            span {
+                display: block;
+                font-weight: 600;
+                white-space: nowrap;
 
-        h4 {
-            font-weight: 600;
+                @include fluid-typing(17, 17);
+            }
 
-            @include fluid-typing(20, 22);
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem-calc(24);
+                color: $secondary-color;
+                outline: 2px solid white;
+                border-radius: 50%;
+                min-width: rem-calc(45);
+                min-height: rem-calc(45);
+                background: #5b5a5a;
+
+                @include box-shadow;
+            }
+
+            &:hover {
+                border-color: $link-color;
+                background: $primary-color;
+                color: $white-color;
+            }
         }
     }
 }

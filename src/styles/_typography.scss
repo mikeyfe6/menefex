@@ -1,7 +1,162 @@
 @use "./customs/" as *;
 
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Thin.woff2") format("woff2");
+    font-weight: 100; /* Thin */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-ThinItalic.woff2") format("woff2");
+    font-weight: 100; /* Thin */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-ExtraLight.woff2") format("woff2");
+    font-weight: 200; /* ExtraLight */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-ExtraLightItalic.woff2") format("woff2");
+    font-weight: 200; /* ExtraLight */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Light.woff2") format("woff2");
+    font-weight: 300; /* Light */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-LightItalic.woff2") format("woff2");
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Italic.woff2") format("woff2");
+    font-weight: 400; /* Regular */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Medium.woff2") format("woff2");
+    font-weight: 500; /* Medium */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-MediumItalic.woff2") format("woff2");
+    font-weight: 500; /* Medium */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600; /* SemiBold */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Bold.woff2") format("woff2");
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-BoldItalic.woff2") format("woff2");
+    font-weight: 700; /* Bold */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-ExtraBold.woff2") format("woff2");
+    font-weight: 800; /* ExtraBold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800; /* ExtraBold */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Black.woff2") format("woff2");
+    font-weight: 900; /* Black */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-BlackItalic.woff2") format("woff2");
+    font-weight: 900; /* Black */
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "WDXL Lubrifont TC";
+    src: url("../fonts/WDXLLubrifontTC-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 h1 {
-    @include fluid-typing(28, 32);
+    font-weight: 600;
+    letter-spacing: $high-spacing;
+
+    @include fluid-typing(30, 40);
 
     span {
         color: $secondary-color;
@@ -9,50 +164,51 @@ h1 {
 }
 
 h2 {
-    @include fluid-typing(24, 28);
+    @include fluid-typing(26, 36);
 }
 
 h3 {
-    @include fluid-typing(20, 24);
+    @include fluid-typing(22, 32);
 }
 
 h4 {
-    font-weight: 500;
-
-    @include fluid-typing(16, 20);
+    @include fluid-typing(20, 30);
 }
 
 h5 {
-    @include fluid-typing(16, 18);
+    @include fluid-typing(18, 28);
 }
 
 h6 {
-    @include fluid-typing(16, 16);
+    @include fluid-typing(16, 26);
 }
 
-h1,
 h2,
 h3 {
-    letter-spacing: $low-spacing;
+    letter-spacing: $extreme-spacing;
+    font-family: $wdxl-font;
+    font-weight: 900;
 }
 
 h4,
 h5,
 h6 {
     letter-spacing: $medium-spacing;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 p {
     letter-spacing: $medium-spacing;
-    font-weight: 300;
-    max-width: 75ch;
 
-    @include fluid-typing(16, 18);
+    @include fluid-typing(18, 20);
 }
 
 a {
     text-decoration: none;
     display: inline;
+
+    @include smooth-trans;
 }
 
 b,

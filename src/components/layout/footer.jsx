@@ -30,7 +30,7 @@ const Footer = () => {
 
     const today = new Date().getFullYear();
 
-    const footerText = t("footerText")
+    const footerText = t("footer.text")
         .replace("{{today}}", today)
         .replace("{{title}}", title);
 
@@ -38,112 +38,118 @@ const Footer = () => {
 
     return (
         <footer className={footerStyles.footer}>
-            <blockquote>
-                <cite>
-                    &quot;Instead of thinking outside of the box, get rid of the
-                    box&quot;
-                </cite>{" "}
-                - Deepak Chopra
-            </blockquote>
+            <div className={footerStyles.footerQuote}>
+                <blockquote>
+                    <cite>
+                        &quot;Instead of thinking outside of the box, get rid of
+                        the box&quot;
+                    </cite>{" "}
+                    - Deepak Chopra
+                </blockquote>
+            </div>
+            <div className={footerStyles.footerMain}>
+                <div className={footerStyles.footerContainer}>
+                    <div className={footerStyles.footerInfo}>
+                        <div className={footerStyles.personal}>
+                            <h5>connect with us</h5>
 
-            <hr />
+                            <div>
+                                <a
+                                    href={`mailto:${bizEmail}`}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
+                                    <span className={footerStyles.mail}>
+                                        e:
+                                    </span>{" "}
+                                    {bizEmail}
+                                </a>{" "}
+                                ∙{" "}
+                                <a href="tel:0611054318">
+                                    <span className={footerStyles.tel}>t:</span>{" "}
+                                    +31 6 11 05 43 18
+                                </a>
+                            </div>
+                        </div>
 
-            <div className={footerStyles.footerInfo}>
-                <div className={footerStyles.personal}>
-                    <h4>connect with us</h4>
+                        <div className={footerStyles.media}>
+                            <h5>follow us on</h5>
 
-                    <p>
-                        <a
-                            href={`mailto:${bizEmail}`}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <span className={footerStyles.mailfoot}>e:</span>{" "}
-                            {bizEmail}
-                        </a>{" "}
-                        ∙{" "}
-                        <a href="tel:0611054318">
-                            <span className={footerStyles.telfoot}>t:</span> +31
-                            6 11 05 43 18
-                        </a>
-                    </p>
-                </div>
+                            <ul>
+                                <li className={footerStyles.fb}>
+                                    <a
+                                        href="https://www.facebook.com/MenefexWMB"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        fb
+                                    </a>
+                                </li>
+                                <li className={footerStyles.ig}>
+                                    <a
+                                        href="https://www.instagram.com/menefexwmb/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        ig
+                                    </a>
+                                </li>
+                                <li className={footerStyles.tw}>
+                                    <a
+                                        href="https://www.twitter.com/MenefexWMB"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        tw
+                                    </a>
+                                </li>
+                                <li className={footerStyles.li}>
+                                    <a
+                                        href="https://www.linkedin.com/company/menefexwmb/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        li
+                                    </a>
+                                </li>
+                                <li className={footerStyles.gh}>
+                                    <a
+                                        href="https://github.com/mikeyfe6"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        gh
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
-                <div className={footerStyles.media}>
-                    <h4>follow us on</h4>
+                        <div className={footerStyles.address}>
+                            <h5>straight from</h5>
+                            <p>
+                                <span className={footerStyles.amsterdam}>
+                                    x x x
+                                </span>{" "}
+                                amsterdam, netherlands
+                            </p>
+                        </div>
+                    </div>
 
-                    <ul>
-                        <li className={footerStyles.fb}>
-                            <a
-                                href="https://www.facebook.com/MenefexWMB"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                fb
-                            </a>
-                        </li>
-                        <li className={footerStyles.ig}>
-                            <a
-                                href="https://www.instagram.com/menefexwmb/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                ig
-                            </a>
-                        </li>
-                        <li className={footerStyles.tw}>
-                            <a
-                                href="https://www.twitter.com/MenefexWMB"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                tw
-                            </a>
-                        </li>
-                        <li className={footerStyles.li}>
-                            <a
-                                href="https://www.linkedin.com/company/menefexwmb/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                li
-                            </a>
-                        </li>
-                        <li className={footerStyles.gh}>
-                            <a
-                                href="https://github.com/mikeyfe6"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                gh
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <Link to="/" className={footerStyles.footerLogo}>
+                        <img
+                            src={minilogo}
+                            alt="Menefex Mini Logo"
+                            width={110}
+                            height={110}
+                        />
+                    </Link>
 
-                <div className={footerStyles.address}>
-                    <h4>straight from</h4>
-                    <p>
-                        <span className={footerStyles.amsterdam}>xxx</span>{" "}
-                        amsterdam, netherlands
-                    </p>
+                    <small
+                        className={footerStyles.footerCredits}
+                        dangerouslySetInnerHTML={{ __html: footerText }}
+                    />
                 </div>
             </div>
-
-            <Link to="/">
-                <img
-                    className={footerStyles.footerLogo}
-                    src={minilogo}
-                    alt="Menefex Mini Logo"
-                    width={110}
-                    height={110}
-                />
-            </Link>
-
-            <small
-                className={footerStyles.credits}
-                dangerouslySetInnerHTML={{ __html: footerText }}
-            />
         </footer>
     );
 };

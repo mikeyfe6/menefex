@@ -1,0 +1,142 @@
+@use "../../customs" as *;
+
+.projects {
+    $projects: &;
+
+    &-container {
+        @include container;
+
+        > h3 {
+            @include section-title($align: left, $space: rem-calc(36));
+        }
+
+        #{$projects}-wrapper {
+            display: flex;
+            gap: rem-calc(64);
+
+            #{$projects}-content {
+                flex: 1 1 32.5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: fit-content;
+                border-left: 5px solid $smoke-color;
+                padding-left: rem-calc(36);
+
+                #{$projects}-logo {
+                    width: fit-content;
+                    margin-bottom: rem-calc(24);
+                    padding: rem-calc(8);
+
+                    @include border($color: rgba($smoke-color, 0.5));
+                }
+
+                > h4 {
+                    margin-bottom: rem-calc(16);
+
+                    @include fluid-typing(22, 26);
+                }
+
+                > p {
+                    margin-bottom: rem-calc(16);
+
+                    @include fluid-typing(16, 18);
+                }
+
+                > span {
+                    font-weight: 700;
+                    margin-bottom: rem-calc(8);
+                }
+
+                > ul {
+                    display: flex;
+                    gap: rem-calc(6);
+                    flex-wrap: wrap;
+                    margin-bottom: rem-calc(48);
+
+                    > li {
+                        background: linear-gradient(
+                            145deg,
+                            $primary-color,
+                            $dark-color
+                        );
+                        border-radius: $low-radius;
+                        padding: rem-calc(2 12);
+                        width: fit-content;
+                        color: $smoke-color;
+                        white-space: nowrap;
+
+                        @include box-shadow;
+
+                        @include fluid-typing(10, 12);
+                    }
+                }
+
+                > a {
+                    @include primary-button(2);
+                }
+            }
+
+            #{$projects}-slider {
+                flex: 1 1 67.5%;
+                min-width: 0;
+
+                img {
+                    border-radius: $medium-radius;
+
+                    @include smooth-trans;
+
+                    @include border($color: $smoke-color);
+
+                    &:hover {
+                        border-color: $link-color;
+                    }
+                }
+
+                #{$projects}-navigation {
+                    margin-top: rem-calc(24);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    > div {
+                        width: fit-content;
+                    }
+
+                    > button {
+                        background: #00000020;
+                        border-radius: $low-radius;
+                        width: rem-calc(32);
+                        height: rem-calc(32);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @include smooth-trans;
+
+                        > i {
+                            color: $primary-color;
+                            font-size: rem-calc(18);
+                        }
+
+                        &:hover {
+                            background: $lightgrey-color;
+
+                            > i {
+                                color: $link-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-no-image {
+        p {
+            display: block;
+            max-height: 500px;
+            height: 100%;
+        }
+    }
+}

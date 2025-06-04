@@ -8,7 +8,7 @@ import useSiteMetadata from "../../hooks/use-site-metadata";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
-import * as powersStyles from "../../styles/modules/pages/powers.module.scss";
+import * as servicesStyles from "../../styles/modules/pages/services.module.scss";
 
 const SeoPage = () => {
     const { t, isHydrated } = useTranslation();
@@ -23,7 +23,7 @@ const SeoPage = () => {
             </h1>
             <h2 className="page-sub">{t("powersSeoInfo")}</h2>
 
-            <div className={powersStyles.buttons}>
+            <div className={servicesStyles.buttons}>
                 <Link to="/diensten/">
                     <i className="fa-solid fa-angles-left" />{" "}
                     {t("powersServices")}

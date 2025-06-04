@@ -8,47 +8,46 @@
 @use "fonts" as *;
 @use "utils" as *;
 
-@mixin smooth-trans($prop: all) {
-    transition: $prop 0.1s ease-in-out;
+// CUSTOMS (SPECIFIC) --------------------------------------------
+
+@mixin section-title(
+    $align: unset,
+    $color: $primary-color,
+    $line-color: $secondary-color,
+    $space: rem-calc(24)
+) {
+    text-align: $align;
+    text-decoration: underline;
+    text-decoration-color: $line-color;
+    margin-bottom: $space;
+    color: $color;
+
+    @include fluid-typing(36, 40);
 }
 
-@mixin box-shadow {
-    box-shadow: 1px 3px 7px rgb(66 66 66 / 25%);
-}
+// SPACING --------------------------------------------
 
 @mixin container(
     $maxWidth: rem-calc($layout),
-    $pT: 0,
-    $pR: rem-calc(20),
-    $pB: 0,
-    $pL: rem-calc(20)
+    $pt: rem-calc(0),
+    $pr: rem-calc(24),
+    $pb: rem-calc(0),
+    $pl: rem-calc(24),
+    $mt: rem-calc(0)
 ) {
     max-width: $maxWidth;
-    margin: 0 auto;
-    padding: $pT rem-calc(16) $pB;
+    margin: $mt auto 0;
+    padding: $pt rem-calc(16) $pb;
     width: 100%;
-}
 
-@mixin text-link {
-    color: $link-color;
+    @include mobile {
+        padding: $pt rem-calc(24) $pb;
+    }
 
-    @include smooth-trans;
-
-    &:hover {
-        color: color.adjust($link-color, $lightness: -10%);
+    @include phablet {
+        padding: $pt $pr $pb $pl;
     }
 }
-
-@mixin footer-dot {
-    display: inline-block;
-    content: "";
-    border-radius: 100%;
-    height: 6px;
-    width: 6px;
-    margin-right: 5px;
-}
-
-// Functions --------------------------------------------
 
 @mixin full-width {
     width: 100vw;
@@ -58,6 +57,25 @@
     margin-left: -50vw;
     margin-right: -50vw;
 }
+
+// ELEMENTS --------------------------------------------
+
+@mixin box-shadow {
+    box-shadow: 1px 3px 7px rgb(66 66 66 / 25%);
+}
+
+@mixin border($color: $primary-color) {
+    border: 2.5px solid $color;
+}
+
+@mixin underline($offset: 5px, $thickness: 2px, $color: $secondary-color) {
+    text-decoration-line: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: $thickness;
+    text-underline-offset: $offset;
+}
+
+// FUNCTIONS --------------------------------------------
 
 @mixin clamp($lines: 2) {
     display: -webkit-box;
@@ -72,42 +90,72 @@
     text-overflow: ellipsis;
 }
 
-// Buttons --------------------------------------------
+@mixin smooth-trans($prop: all) {
+    transition: $prop 0.2s ease-in-out;
+}
 
-@mixin primary-button($type: 1) {
-    font-family: $alata-font;
+// LINKS --------------------------------------------
+
+@mixin link($color: $link-color, $thickness: 2px, $offset: 3px) {
+    text-decoration-line: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: $thickness;
+    text-underline-offset: $offset;
+
+    @include smooth-trans;
+
+    &:hover {
+        text-decoration-thickness: 4px;
+    }
+}
+
+@mixin text-link {
+    color: $link-color;
+
+    @include smooth-trans;
+
+    &:hover {
+        color: color.adjust($link-color, $lightness: -10%);
+    }
+}
+
+// BUTTONS --------------------------------------------
+
+@mixin primary-button($type: 1, $width: fit-content) {
     display: block;
     text-transform: uppercase;
     border-radius: $low-radius;
-    width: fit-content;
+    width: $width;
     height: fit-content;
-    min-height: 44px;
-    padding: 1em 2em;
-    letter-spacing: 2.5px;
-    outline: 3px solid $secondary-color;
+    min-height: rem-calc(44);
+    padding: rem-calc(14 24);
+    border: 3px solid $lightgrey-color;
     white-space: nowrap;
+    font-weight: 600;
+    letter-spacing: $high-spacing;
+    text-align: center;
 
     @include smooth-trans;
     @include box-shadow;
 
     @if $type == 1 {
-        color: $sixth-color;
         background-color: $primary-color;
+        color: $smoke-color;
 
         &:hover {
-            background-color: $textbase-color;
-            outline-color: $link-color;
+            background-color: $dark-color;
+            border-color: $link-color;
         }
     } @else if $type == 2 {
-        background-color: $sixth-color;
+        background-color: $smoke-color;
         color: $primary-color;
 
         &:hover {
-            outline-color: $link-color;
+            border-color: $link-color;
         }
     }
 
-    @include fluid-typing(12, 14);
+    @include fluid-typing(13, 15);
 }
 
 @mixin secondary-button {
@@ -128,7 +176,7 @@
     &:not([href]) {
         &:hover {
             cursor: not-allowed;
-            background-color: $fifth-color;
+            background-color: $grey-color;
         }
     }
 }
@@ -142,7 +190,7 @@
     background-color: #f2f2f2;
     font-weight: 700;
     letter-spacing: $high-spacing;
-    border: 3px solid $spec-color;
+    border: 3px solid $lemon-color;
     border-radius: $low-radius;
 
     @include smooth-trans;
@@ -170,9 +218,9 @@
 
 @mixin dark-button {
     background: $primary-color;
-    color: $sixth-color;
+    color: $smoke-color;
     text-align: center;
-    outline: 2px solid $base-color;
+    outline: 2px solid $dark-color;
     white-space: nowrap;
 
     @include secondary-button;
@@ -185,10 +233,10 @@
 }
 
 @mixin light-button {
-    background: $fourth-color;
+    background: $snow-color;
     color: $primary-color;
     text-align: center;
-    outline: 2px solid $fourth-color;
+    outline: 2px solid $snow-color;
     white-space: nowrap;
 
     @include secondary-button;
@@ -200,15 +248,14 @@
 }
 
 @mixin topic-button {
+    display: block;
     border-width: 2px;
     border-style: solid;
     border-radius: $low-radius;
-    padding: 0.5em 1em;
-    color: $base-color;
+    padding: rem-calc(4 10);
     font-weight: 500;
     background: $white-color;
     width: fit-content;
-    min-height: 44px;
     white-space: nowrap;
 
     @include box-shadow;
@@ -217,20 +264,20 @@
     @include fluid-typing(12, 14);
 
     &:hover {
-        background: $sixth-color;
+        background: $smoke-color;
     }
 }
 
-// Components --------------------------------------------
+// COMPONENTS --------------------------------------------
 
 @mixin blog-card {
-    background: linear-gradient(145deg, $fourth-color, #f2f2f2);
+    background: linear-gradient(145deg, $snow-color, #f2f2f2);
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2em;
-    border: 2px solid $fourth-color;
+    border: 2px solid $snow-color;
     border-radius: $high-radius;
     min-height: 175px;
 
@@ -277,7 +324,7 @@
     }
 
     > div:nth-of-type(2) {
-        outline: 3px solid $fourth-color;
+        outline: 3px solid $snow-color;
         border-radius: $low-radius;
         overflow: hidden;
         max-width: 250px;

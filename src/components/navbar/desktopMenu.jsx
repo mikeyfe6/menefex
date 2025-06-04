@@ -3,14 +3,17 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { useTranslation } from "react-i18next";
 
-import HamburgerBtn from "./hamburgerBtn";
+import Hamburger from "./hamburger";
 
 import logo from "../../images/logo/mnfx-logo.svg";
 
 import * as desktopMenuStyles from "../../styles/modules/layout/desktopMenu.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const DesktopMenu = ({ drawerClickHandler }) => {
     const { t, i18n } = useTranslation();
+
     const currentLanguage = i18n.language;
 
     const switchLanguage = (lang) => {
@@ -28,7 +31,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
     };
 
     return (
-        <header className={desktopMenuStyles.desktopMenu}>
+        <div className={desktopMenuStyles.desktopMenu}>
             <nav>
                 <Link to="/">
                     <img
@@ -46,7 +49,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menuItemHome").toLowerCase()}
+                            {t("menu.home").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -56,7 +59,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             activeClassName={desktopMenuStyles.activePage}
                             partiallyActive
                         >
-                            {t("menuItemServices").toLowerCase()}
+                            {t("menu.services").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -65,7 +68,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/portfolio/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menuItemPortfolio").toLowerCase()}
+                            {t("menu.portfolio").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -74,7 +77,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/prijzen/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menuItemPrices").toLowerCase()}
+                            {t("menu.prices").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -84,7 +87,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             activeClassName={desktopMenuStyles.activePage}
                             getProps={checkIfPartiallyActive}
                         >
-                            {t("menuItemBlog").toLowerCase()}
+                            {t("menu.blog").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -93,7 +96,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/faq/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menuItemFaq").toLowerCase()}
+                            {t("menu.faq").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -102,7 +105,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/over/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menuItemAbout").toLowerCase()}
+                            {t("menu.about").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -111,7 +114,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/contact/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menuItemContact").toLowerCase()}
+                            {t("menu.contact").toLowerCase()}
                             <span>.</span>
                         </Link>
                     </li>
@@ -136,7 +139,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                         >
                             nl
                         </button>
-                        <span>|</span>
+                        <span>·</span>
                         <button
                             onClick={() => switchLanguage("en")}
                             className={
@@ -175,10 +178,10 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                         </button>
                     </div>
 
-                    <HamburgerBtn click={drawerClickHandler} />
+                    <Hamburger click={drawerClickHandler} />
                 </div>
             </nav>
-        </header>
+        </div>
     );
 };
 

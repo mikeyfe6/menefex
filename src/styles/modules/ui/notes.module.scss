@@ -1,7 +1,7 @@
 @use "../../customs" as *;
 
 .notes {
-    background: linear-gradient(145deg, $spec-color, $very-color);
+    background: linear-gradient(145deg, $lemon-color, $primary-color);
     padding: 2em;
     border-radius: $medium-radius;
     height: 100%;
@@ -9,7 +9,6 @@
     @include box-shadow;
 
     h3 {
-        font-family: $right-font;
         margin-bottom: 1em;
     }
 

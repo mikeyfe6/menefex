@@ -7,14 +7,12 @@ import useTranslation from "../../hooks/use-translation";
 import * as mobileMenuStyles from "../../styles/modules/layout/mobileMenu.module.scss";
 
 const MobileMenu = ({ show }) => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
 
     let drawerClasses = mobileMenuStyles.mobileMenu;
     if (show) {
         drawerClasses = `${mobileMenuStyles.mobileMenu} ${mobileMenuStyles.open}`;
     }
-
-    if (!isHydrated) return null;
 
     const checkIfPartiallyActive = ({ isPartiallyCurrent, location }) => {
         return location.pathname.includes("/blog") ||
@@ -30,7 +28,7 @@ const MobileMenu = ({ show }) => {
             <ul>
                 <li>
                     <Link to="/" activeClassName={mobileMenuStyles.activePage}>
-                        {t("menuItemHome").toLowerCase()}
+                        {t("menu.home").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -40,7 +38,7 @@ const MobileMenu = ({ show }) => {
                         activeClassName={mobileMenuStyles.activePage}
                         partiallyActive
                     >
-                        {t("menuItemServices").toLowerCase()}
+                        {t("menu.services").toLowerCase()}
 
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
@@ -50,7 +48,7 @@ const MobileMenu = ({ show }) => {
                         to="/portfolio/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menuItemPortfolio").toLowerCase()}
+                        {t("menu.portfolio").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -59,7 +57,7 @@ const MobileMenu = ({ show }) => {
                         to="/prijzen/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menuItemPrices").toLowerCase()}
+                        {t("menu.prices").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -69,7 +67,7 @@ const MobileMenu = ({ show }) => {
                         activeClassName={mobileMenuStyles.activePage}
                         getProps={checkIfPartiallyActive}
                     >
-                        {t("menuItemBlog").toLowerCase()}
+                        {t("menu.blog").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -78,7 +76,7 @@ const MobileMenu = ({ show }) => {
                         to="/faq/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menuItemFaq").toLowerCase()}
+                        {t("menu.faq").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -87,7 +85,7 @@ const MobileMenu = ({ show }) => {
                         to="/over/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menuItemAbout").toLowerCase()}
+                        {t("menu.about").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -96,7 +94,7 @@ const MobileMenu = ({ show }) => {
                         to="/contact/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menuItemContact").toLowerCase()}
+                        {t("menu.contact").toLowerCase()}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -108,7 +106,7 @@ const MobileMenu = ({ show }) => {
                         className={mobileMenuStyles.whapp}
                     >
                         <i className="fa-brands fa-whatsapp" />
-                        {t("menuItemWhatsapp")}
+                        {t("menu.whatsapp")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </a>
                 </li>

@@ -1,94 +1,129 @@
 export default {
-    screenToSmallText:
-        "<strong>Sorry!</strong> The screen of your device is too small to display the website correctly...",
+    cookie: {
+        text: "This site places cookies on your computer to optimize your website visit and offer personalized services, both here and through other media. Consult our <a href='/privacy-policy/' style='color: #FFCC00;'>privacy policy</a> for more information about the cookies used. <span> We do not track your data <b>not</b> during site visits, but to meet your preferences, we use some cookies so that you do not have to make this choice repeatedly.</span>",
+        accept: "Accept",
+        decline: "Decline",
+    },
 
-    cookieText:
-        "This site places cookies on your computer to optimize your website visit and offer personalized services, both here and through other media. Consult our <a href='/privacy-policy/' style='color: #FFCC00;'> Privacy Policy </a> for more information about the cookies used. <span> We do not track your data <b>not</b> during site visits, but to meet your preferences, we use some cookies so that you do not have to make this choice repeatedly.</span>",
-
-    cookieAccept: "Accept",
-    cookieDecline: "Decline",
-
-    menuItemHome: "Home",
-    menuItemPortfolio: "Portfolio",
-    menuItemServices: "Services",
-    menuItemBlog: "Blog",
-    menuItemPrices: "Prices",
-    menuItemFaq: "Faq",
-    menuItemAbout: "About",
-    menuItemContact: "Contact",
-    menuItemWhatsapp: "Send a WhatsApp message",
-
-    footerText:
-        '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacy-policy/">privacy policy</a> <span>|</span> <a href="/terms-conditions/">terms & conditions</a> <span>|</span> all rights reserved <span>|</span> CoC <span>#</span> 76045315 <span>|</span> VAT <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94',
-
-    homeBiographyTitle: "Biography",
-    homeActualTitle: "Blog",
-    homeServicesTitle: "Our Services",
-    homeProjectsTitle: "Recent Projects",
+    menu: {
+        home: "Home",
+        services: "Services",
+        portfolio: "Portfolio",
+        prices: "Prices",
+        blog: "Blog",
+        faq: "Faq",
+        about: "About",
+        contact: "Contact",
+        whatsapp: "Send a WhatsApp message",
+    },
 
     hero: {
-        webMediaCompany: "Web Media Company",
-        menefex: "Menefex",
-        welcome: "Welcome!",
+        menefex: "Menefex Webmediacompany",
         slogan: "<span>・</span>Web<span>sites</span>, web<span>applications</span> & SE<span>O</span>・",
+        biography: "Biography",
+        services: "Services",
+        portfolio: "Portfolio",
     },
-    heroBiography: "Biography",
-    heroServices: "Services",
-    heroPortfolio: "Portfolio",
 
-    smallbio: {
+    footer: {
+        text: `<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacy-policy/">privacy policy</a> <span>|</span> <a href="/terms-conditions/">terms & conditions</a> <span>|</span> all rights reserved <span>|</span> CoC <span>#</span> 76045315 <span>|</span> VAT <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94`,
+    },
+
+    biography: {
+        title: "Biography",
         intro: "<b>Menefex</b> is a modern web media company founded by <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. We specialize in designing, developing, and optimizing websites and web applications for both startups and established companies. Our focus is on realizing digital ambitions and creating custom software solutions tailored to your business goals. With <b>Menefex</b>, you gain a reliable partner dedicated to elevating your online presence.",
-        moreButton: "More about Menefex",
+        more: "More about Menefex",
     },
 
-    actualReadMore: "Read more...",
+    actual: { title: "Actual", readMore: "Read more..." },
 
-    servicesTitleWebsites: "Websites",
-    servicesContentWebsites:
-        "We create functional and efficient websites that are fully customized to meet your needs. Our websites adhere to all modern technical standards, ensuring a future-proof online presence.",
-    servicesFocusWebsitesOne: "Fast loading times",
-    servicesFocusWebsitesTwo: "Unique custom design",
-    servicesFocusWebsitesThree: "User-friendly interface and experience",
-    servicesFocusWebsitesFour:
-        "Cross-platform compatibility with all popular browsers",
+    services: {
+        title: "Our Services",
+        websites: {
+            title: "Websites",
+            content:
+                "We create functional and efficient websites that are fully customized to meet your needs. Our websites adhere to all modern technical standards, ensuring a future-proof online presence.",
+            focus: [
+                "Fast loading times",
+                "Unique custom design",
+                "User-friendly interface and experience",
+                "Cross-platform compatibility with all popular browsers",
+            ],
+            cta: "More about our websites",
+        },
+        webshops: {
+            title: "Webshops",
+            content:
+                "Webshops are essential for local businesses today. They provide access to a wider network, greater availability, and boost both conversion rates and product visibility.",
+            focus: [
+                "Clear overview of your product range",
+                "Generate more leads",
+                "24/7 trading opportunities",
+                "Automated processes",
+            ],
+            cta: "More about our webshops",
+        },
+        webapps: {
+            title: "Webapplications",
+            content:
+                "As digitalization and mobility grow, the demand for web and mobile apps is rising. Web applications stand out from websites by incorporating complex interactions that offer a seamless user experience.",
+            focus: [
+                "Offline functionality",
+                "Optimized for all devices",
+                "Integration with built-in features (e.g., camera, microphone, location)",
+            ],
+            cta: "More about our web applications",
+        },
+        seo: {
+            title: "Search Engine Optimization",
+            content:
+                "With our search engine optimization services, we ensure your website ranks high on search engines like Google, Bing, and Yahoo. This increases your business’s visibility and helps potential customers discover you faster.",
+            focus: [
+                "Enhanced visibility in popular search engines",
+                "Significantly more direct and indirect web traffic",
+                "Use of data analysis, strategies, and statistics",
+            ],
+            cta: "More about our SEO services",
+        },
+        maintenance: {
+            title: "Maintenance & Support",
+            content:
+                "We offer comprehensive maintenance and support services to ensure your website or web application remains up-to-date, secure, and functional. Our team is always ready to assist you with any issues or updates.",
+            focus: [
+                "Regular updates and security checks",
+                "Quick response to technical issues",
+                "Ongoing support for your digital products",
+            ],
+            cta: "More about our maintenance services",
+        },
+        optimization: {
+            title: "Optimizations",
+            content:
+                "We optimize your website or web application to ensure it runs smoothly and efficiently. This includes performance enhancements, user experience improvements, and technical adjustments.",
+            focus: [
+                "Improved loading times",
+                "Enhanced user experience",
+                "Technical adjustments for better performance",
+            ],
+            cta: "More about our optimizations",
+        },
+    },
 
-    servicesTitleWebshops: "Webshops",
-    servicesContentWebshops:
-        "Webshops are essential for local businesses today. They provide access to a wider network, greater availability, and boost both conversion rates and product visibility.",
-    servicesFocusWebshopsOne: "Clear overview of your product range",
-    servicesFocusWebshopsTwo: "Generate more leads",
-    servicesFocusWebshopsThree: "24/7 trading opportunities",
-    servicesFocusWebshopsFour: "Automated processes",
-
-    servicesTitleWebapps: "Webapplications",
-    servicesContentWebapps:
-        "As digitalization and mobility grow, the demand for web and mobile apps is rising. Web applications stand out from websites by incorporating complex interactions that offer a seamless user experience.",
-    servicesFocusWebappsOne: "Offline functionality",
-    servicesFocusWebappsTwo: "Optimized for all devices",
-    servicesFocusWebappsThree:
-        "Integration with built-in features (e.g., camera, microphone, location)",
-
-    servicesTitleSeo: "Search Engine Optimization",
-    servicesContentSeo:
-        "With our search engine optimization services, we ensure your website ranks high on search engines like Google, Bing, and Yahoo. This increases your business’s visibility and helps potential customers discover you faster.",
-    servicesFocusSeoOne: "Enhanced visibility in popular search engines",
-    servicesFocusSeoTwo: "Significantly more direct and indirect web traffic",
-    servicesFocusSeoThree: "Use of data analysis, strategies, and statistics",
-    servicesPricesButton: "Our prices",
-    servicesPricesButtonTwo: "All services",
-
-    recentProjectsViewSiteButton: "View website",
-    recentProjectsViewAppButton: "View webapp",
-
-    // recentProjectsEPbio: "Eternity Percussion Foundation from Amsterdam",
-    // recentProjectsBHbio: "Singing group Black Harmony from Amsterdam",
-    // recentProjectsADSbio:
-    //     "Our very own initiative set up, mainly focused on social interactions",
-    // recentProjectsDSbio: "Steelpan player Derek Simpey from Amsterdam",
-    // recentProjectsKNbio:
-    //     "Knowledge Network Afro Caribbean Diaspora Community Foundation from The Hague",
-    // recentProjectsKIRbio: "Regalness.nl Foundation from Amsterdam",
-    // recentProjectsPZbio: "Aid organization Prio Zorg from Amsterdam",
+    projects: {
+        title: "Recent Projects",
+        viewWebsite: "View website",
+        viewWebapp: "View webapp",
+        eternitydrum: "Eternity Percussion Foundation from Amsterdam",
+        blackharmony: "Singing group Black Harmony from Amsterdam",
+        afrodiasphere:
+            "Our very own initiative set up, mainly focused on social interactions",
+        dsmelodies: "Steelpan player Derek Simpey from Amsterdam",
+        knacdig:
+            "Knowledge Network Afro Caribbean Diaspora Community Foundation from The Hague",
+        keeptreal: "Regalness.nl Foundation from Amsterdam",
+        priozorg: "Aid organization Prio Zorg from Amsterdam",
+        edutainuproductions: "",
+    },
 
     portfolioTitle: "Recent Projects",
     portfolioIntro:
@@ -134,8 +169,7 @@ export default {
         "Professionally customized web applications that fully meet your business needs. Our web applications are user-friendly and designed to optimize your processes and increase efficiency.",
     powersWebappIntro:
         "At Menefex we create professionally customized web applications that seamlessly meet the specific needs of your company. Our applications are designed for user-friendliness and efficiency, so that they optimize your daily processes and increase productivity within your organization. Whether you are a small business or a large enterprise, we develop web applications that perfectly fit your unique goals.",
-    powersWebappDetail:
-        "<h3><strong>What You Can Expect from Us:</strong></h3> <ol> <li> <h4>Custom-Built Solutions and Functionality</h4> <p>Every web application we develop is fully tailored to your business processes and specific needs. We don’t offer generic solutions, but instead, create a web app that is designed to streamline your workflows, save time, and make your business operations more efficient. From project management tools to client portals and accounting systems, we build it for you.</p> </li> <li> <h4>User-Friendly and Intuitive Design</h4> <p>A good web application should be easy to use without compromising functionality. We design an interface that feels intuitive for everyone, regardless of their technical expertise. This ensures a smooth user experience and boosts your team's productivity.</p> </li> <li> <h4>Optimized Performance, Anytime, Anywhere</h4> <p>Our web applications are optimized for use across all devices and in any situation. Whether your team is working from the office, from home, or on the go, the application will function flawlessly. Additionally, we provide offline capabilities, ensuring your app is always available, even without an internet connection.</p> </li> <li> <h4>Integration of Advanced Features</h4> <p>Modern web applications require more than just basic functionality. That’s why we integrate advanced features such as access to the camera, microphone, GPS, and other device hardware. This ensures your web app is not only functional but also innovative and future-proof.</p> </li> </ol> <br /> <h3><strong>Benefits of a Custom Web Application:</strong></h3> <ul> <li> <p><strong>Process Optimization:</strong> By digitizing and automating your business processes, you save both time and money. Our web apps are designed to simplify your workflows and increase efficiency.</p> </li> <li> <p><strong>Future-Proof:</strong> These applications are built using modern technologies, meaning they are easily scalable and can expand as your business grows.</p> </li> <li> <p><strong>Security and Reliability:</strong> Security is our top priority. Our web applications come with the latest security protocols and comply with all relevant privacy and security standards, ensuring your data is always safe.</p> </li> <li> <p><strong>SEO-Friendly:</strong> Although web applications are often designed for specific business processes, we ensure they are optimized for search engines if relevant, making them as visible as possible online.</p> </li> </ul>",
+    powersWebappDetail: `<h3><strong>What You Can Expect from Us:</strong></h3> <ol> <li> <h4>Custom-Built Solutions and Functionality</h4> <p>Every web application we develop is fully tailored to your business processes and specific needs. We don’t offer generic solutions, but instead, create a web app that is designed to streamline your workflows, save time, and make your business operations more efficient. From project management tools to client portals and accounting systems, we build it for you.</p> </li> <li> <h4>User-Friendly and Intuitive Design</h4> <p>A good web application should be easy to use without compromising functionality. We design an interface that feels intuitive for everyone, regardless of their technical expertise. This ensures a smooth user experience and boosts your team's productivity.</p> </li> <li> <h4>Optimized Performance, Anytime, Anywhere</h4> <p>Our web applications are optimized for use across all devices and in any situation. Whether your team is working from the office, from home, or on the go, the application will function flawlessly. Additionally, we provide offline capabilities, ensuring your app is always available, even without an internet connection.</p> </li> <li> <h4>Integration of Advanced Features</h4> <p>Modern web applications require more than just basic functionality. That’s why we integrate advanced features such as access to the camera, microphone, GPS, and other device hardware. This ensures your web app is not only functional but also innovative and future-proof.</p> </li> </ol> <br /> <h3><strong>Benefits of a Custom Web Application:</strong></h3> <ul> <li> <p><strong>Process Optimization:</strong> By digitizing and automating your business processes, you save both time and money. Our web apps are designed to simplify your workflows and increase efficiency.</p> </li> <li> <p><strong>Future-Proof:</strong> These applications are built using modern technologies, meaning they are easily scalable and can expand as your business grows.</p> </li> <li> <p><strong>Security and Reliability:</strong> Security is our top priority. Our web applications come with the latest security protocols and comply with all relevant privacy and security standards, ensuring your data is always safe.</p> </li> <li> <p><strong>SEO-Friendly:</strong> Although web applications are often designed for specific business processes, we ensure they are optimized for search engines if relevant, making them as visible as possible online.</p> </li> </ul>`,
     powersWebshop: "<small>Have a</small> webshop <small>created</small>",
     powersWebshopTitle: "Have a webshop created",
     powersWebshopInfo:

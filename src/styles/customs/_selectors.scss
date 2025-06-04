@@ -1,0 +1,34 @@
+@use "colors" as *;
+
+%image {
+    --border: 6px; /* border thickness */
+    --size: 60px; /* size of the corner */
+    --gap: 14px; /* the gap */
+    --color: #{$secondary-color}; /* color of the border */
+    --color-two: #{$primary-color}; /* color of the border */
+
+    padding: calc(var(--border) + var(--gap));
+    background-image: conic-gradient(
+            from 90deg at top var(--border) left var(--border),
+            #0000 25%,
+            var(--color) 0
+        ),
+        conic-gradient(
+            from -90deg at bottom var(--border) right var(--border),
+            #0000 25%,
+            var(--color-two) 0
+        );
+    background-position: var(--position, 0%) var(--position, 0%),
+        calc(100% - var(--position, 0%)) calc(100% - var(--position, 0%));
+    background-size: var(--size) var(--size);
+    background-repeat: no-repeat;
+    transition: background-position 0.3s var(--transition, 0.3s),
+        background-size 0.3s calc(0.3s - var(--transition, 0.3s));
+
+    &:hover {
+        background-size: calc(100% - var(--gap)) calc(100% - var(--gap));
+
+        --position: calc(var(--gap) / 2);
+        --transition: 0s;
+    }
+}

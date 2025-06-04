@@ -1,0 +1,7 @@
+@use "../../customs" as *;
+
+.faq {
+    &-container {
+        @include container;
+    }
+}

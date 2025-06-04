@@ -1,0 +1,44 @@
+@use "../../customs" as *;
+
+.biography {
+    $biography: &;
+
+    h3 {
+        @include section-title;
+    }
+
+    &-container {
+        @include container;
+
+        #{$biography}-wrapper {
+            padding: rem-calc(36 48);
+
+            @include border;
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                i {
+                    color: $primary-color;
+                    font-size: rem-calc(32);
+
+                    @include smooth-trans;
+
+                    &:hover {
+                        color: $link-color;
+                    }
+                }
+
+                .meerover {
+                    @include primary-button;
+                }
+            }
+
+            #{$biography}-text {
+                margin-bottom: rem-calc(40);
+            }
+        }
+    }
+}

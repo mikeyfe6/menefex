@@ -1,132 +1,144 @@
 export default {
-    screenToSmallText:
-        "<strong>Sorry!</strong> De scherm van je toestel is te klein om de website juist weer te geven...",
+    cookie: {
+        text: "Deze site plaatst cookies op je computer om je websitebezoek te optimaliseren en gepersonaliseerde diensten aan te bieden, zowel hier als via andere media. Raadpleeg ons <a href='/privacy-policy/' style='color: #FFCC00;'>privacybeleid</a> voor meer informatie over de gebruikte cookies. <span> We volgen je gegevens <b>niet</b> bij sitebezoeken, maar om aan je voorkeuren te voldoen, gebruiken we enkele cookies zodat je deze keuze niet herhaaldelijk hoeft te maken.</span>",
+        accept: "Accepteer",
+        decline: "Weiger",
+    },
 
-    cookieText:
-        "Deze site plaatst cookies op je computer om je websitebezoek te optimaliseren en gepersonaliseerde diensten aan te bieden, zowel hier als via andere media. Raadpleeg ons <a href='/privacy-policy/' style='color: #FFCC00;'> Privacybeleid </a> voor meer informatie over de gebruikte cookies. <span> We volgen je gegevens <b>niet</b> bij sitebezoeken, maar om aan je voorkeuren te voldoen, gebruiken we enkele cookies zodat je deze keuze niet herhaaldelijk hoeft te maken.</span>",
-
-    cookieAccept: "Accepteer",
-    cookieDecline: "Weiger",
-
-    menuItemHome: "Home",
-    menuItemPortfolio: "Portfolio",
-    menuItemServices: "Diensten",
-    menuItemBlog: "Blog",
-    menuItemPrices: "Prijzen",
-    menuItemFaq: "Faq",
-    menuItemAbout: "Over",
-    menuItemContact: "Contact",
-    menuItemWhatsapp: "Stuur een WhatsApp bericht",
-
-    footerText:
-        '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacy-policy/">privacybeleid</a> <span>|</span> <a href="/terms-conditions/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94',
-
-    homeBiographyTitle: "Biografie",
-    homeActualTitle: "Blog",
-    homeServicesTitle: "Onze Diensten",
-    homeProjectsTitle: "Recente Projecten",
+    menu: {
+        home: "Home",
+        services: "Diensten",
+        portfolio: "Portfolio",
+        prices: "Prijzen",
+        blog: "Blog",
+        faq: "Faq",
+        about: "Over",
+        contact: "Contact",
+        whatsapp: "Stuur een WhatsApp bericht",
+    },
 
     hero: {
-        webMediaCompany: "Webmediabedrijf",
-        menefex: "Menefex",
-        welcome: "Welkom!",
+        menefex: "Menefex Webmediabedrijf",
         slogan: "<span>・</span>Web<span>sites</span>, web<span>applicaties</span> & SE<span>O</span>・",
+        biography: "Biografie",
+        services: "Diensten",
+        portfolio: "Portfolio",
     },
-    heroBiography: "Biografie",
-    heroServices: "Diensten",
-    heroPortfolio: "Portfolio",
 
-    smallbio: {
+    footer: {
+        text: '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacy-policy/">privacybeleid</a> <span>|</span> <a href="/terms-conditions/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94',
+    },
+
+    biography: {
+        title: "Biografie",
         intro: "<b>Menefex</b> is een modern webmediabedrijf, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij uw bedrijfsdoelen. Met <b>Menefex</b> haalt u een betrouwbare partner in huis die uw online aanwezigheid naar een hoger niveau tilt.",
-        moreButton: "Meer over Menefex",
+        more: "Meer over Menefex",
     },
 
-    actualReadMore: "Lees meer...",
+    actual: { title: "Actueel", readMore: "Lees meer..." },
 
-    servicesTitleWebsites: "Websites",
-    servicesContentWebsites:
-        "Wij bouwen functionele en efficiënte websites die volledig op maat zijn gemaakt. Onze websites voldoen aan alle moderne technische eisen en voorwaarden, zodat u verzekerd bent van een toekomstbestendige online aanwezigheid.",
-    servicesFocusWebsitesOne: "Snelle laadtijden",
-    servicesFocusWebsitesTwo: "Uniek maatwerkdesign",
-    servicesFocusWebsitesThree: "Gebruiksvriendelijke interface en ervaring",
-    servicesFocusWebsitesFour: "Compatibiliteit met alle populaire browsers",
+    services: {
+        title: "Onze Diensten",
+        intro: "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
+        showAllServices: "Bekijk alle diensten",
+        goToPrices: "Ga naar prijzen",
+        websites: {
+            name: "Websites",
+            excerpt:
+                "Wij bouwen functionele en efficiënte websites die volledig op maat zijn gemaakt. Onze websites voldoen aan alle moderne technische eisen en voorwaarden, zodat u verzekerd bent van een toekomstbestendige online aanwezigheid.",
+            focus: [
+                "Snelle laadtijden",
+                "Uniek maatwerkdesign",
+                "Gebruiksvriendelijke interface en ervaring",
+                "Compatibiliteit met alle populaire browsers",
+            ],
+            cta: "Meer over onze website diensten",
 
-    servicesTitleWebshops: "Webshops",
-    servicesContentWebshops:
-        "In deze tijd zijn webshops onmisbaar voor lokale ondernemingen. Ze bieden toegang tot een breder netwerk, een hogere beschikbaarheid en verhogen de conversie en zichtbaarheid van uw producten.",
-    servicesFocusWebshopsOne: "Duidelijk overzicht van het assortiment",
-    servicesFocusWebshopsTwo: "Meer leads genereren",
-    servicesFocusWebshopsThree: "24/7 verkoopmogelijkheden",
-    servicesFocusWebshopsFour: "Geautomatiseerde processen",
+            // overview
+            caption: `Website <small>laten maken</small>`,
+            snippet:
+                "Op maat gemaakte websites die perfect aansluiten bij jouw branding en doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke websites die zorgen voor een sterke online aanwezigheid en optimale gebruikerservaring.",
 
-    servicesTitleWebapps: "Webapplicaties",
-    servicesContentWebapps:
-        "Met de groei van digitalisering en mobiliteit stijgt de vraag naar (web)apps. Webapplicaties onderscheiden zich van websites door de implementatie van complexe interacties die zorgen voor een naadloze gebruikerservaring.",
-    servicesFocusWebappsOne: "Offline gebruiksmogelijkheden",
-    servicesFocusWebappsTwo: "Geoptimaliseerd voor alle apparaten",
-    servicesFocusWebappsThree:
-        "Integratie met ingebouwde functies (bijv. camera, microfoon, locatie)",
+            // detail
+            title: "Website laten maken: <small>Op maat en professioneel</small><span>.</span>",
+            intro: "Op maat gemaakte websites die perfect aansluiten bij jouw branding en doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke websites die zorgen voor een sterke online aanwezigheid en optimale gebruikerservaring.",
+            content:
+                "<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Uniek Maatwerkdesign</h4><p>Elke website die wij ontwerpen, is uniek. We nemen jouw wensen en branding als uitgangspunt om een visueel aantrekkelijk ontwerp te creëren dat zich onderscheidt van de concurrentie. Geen standaardtemplates, maar een website die jouw verhaal vertelt.</p></li><li><h4>Snelle Laadtijden</h4><p>Wij begrijpen hoe belangrijk snelheid is voor zowel gebruikers als zoekmachines. Daarom optimaliseren we jouw website voor snelle laadtijden, zodat bezoekers niet afhaken en zoekmachines jouw website hoger waarderen.</p></li><li><h4>Gebruiksvriendelijke Interface en Ervaring</h4><p>Een goede website is eenvoudig te navigeren. Wij zorgen voor een intuïtieve gebruikerservaring, waarbij bezoekers snel en gemakkelijk de informatie vinden die ze zoeken. Dit verbetert niet alleen de gebruikerstevredenheid, maar verhoogt ook de kans op conversies.</p></li><li><h4>Toekomstbestendig en Compatibel</h4><p>Onze websites voldoen aan alle moderne technische eisen en zijn compatibel met alle populaire browsers en apparaten. Dit betekent dat jouw website overal en altijd toegankelijk is, of het nu op desktop, tablet of mobiel is.</p></li></ol><br /><h3><strong>Voordelen van een website op maat:</strong></h3><ul><li><p><strong>SEO-vriendelijk:</strong> Onze websites zijn volledig geoptimaliseerd voor zoekmachines, wat betekent dat je online beter gevonden wordt.</p></li><li><p><strong>Flexibiliteit:</strong> De website kan meegroeien met je bedrijf. Of je nu op zoek bent naar een webshop, blog of portfolio, wij integreren naadloos alle functionaliteiten.</p></li><li><p><strong>Beveiliging:</strong> Jouw website is veilig en voldoet aan alle moderne beveiligingsstandaarden, zoals SSL-certificaten.</p></li></ul></div>",
+        },
+        webshops: {
+            name: "Webshops",
+            excerpt:
+                "In deze tijd zijn webshops onmisbaar voor lokale ondernemingen. Ze bieden toegang tot een breder netwerk, een hogere beschikbaarheid en verhogen de conversie en zichtbaarheid van uw producten.",
+            focus: [
+                "Duidelijk overzicht van het assortiment",
+                "Meer leads genereren",
+                "24/7 verkoopmogelijkheden",
+                "Geautomatiseerde processen",
+            ],
+            cta: "Meer over onze webshop diensten",
+        },
+        webapps: {
+            name: "Webapplicaties",
+            excerpt:
+                "Met de groei van digitalisering en mobiliteit stijgt de vraag naar (web)apps. Webapplicaties onderscheiden zich van websites door de implementatie van complexe interacties die zorgen voor een naadloze gebruikerservaring.",
+            focus: [
+                "Offline gebruiksmogelijkheden",
+                "Geoptimaliseerd voor alle apparaten",
+                "Integratie met ingebouwde functies (bijv. camera, microfoon, locatie)",
+            ],
+            cta: "Meer over onze webapp diensten",
+        },
+        seo: {
+            name: "Zoekmachine Optimalisatie",
+            excerpt:
+                "Met zoekmachine optimalisatie zorgen wij ervoor dat uw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt uw bedrijf sneller gevonden door potentiële klanten.",
+            focus: [
+                "Verbeterde vindbaarheid in populaire zoekmachines",
+                "Aanzienlijk meer directe en indirecte webbezoekers",
+                "Gebruik van analyses, strategieën en statistieken",
+            ],
+            cta: "Meer over onze SEO diensten",
+        },
+        maintenance: {
+            name: "Onderhoud en support",
+            excerpt:
+                "Wij bieden onderhoud en support voor uw website of webapplicatie, zodat deze altijd optimaal functioneert. Dit omvat regelmatige updates, beveiliging en technische ondersteuning.",
+            focus: [
+                "Regelmatig onderhoud en updates",
+                "Probleemoplossing en technische ondersteuning",
+                "Veiligheid en prestaties garanderen",
+            ],
+            cta: "Meer over onderhoud en support",
+        },
+        optimization: {
+            name: "Optimalisaties",
+            excerpt:
+                "Wij optimaliseren uw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
+            focus: [
+                "Verbeterde laadtijden en prestaties",
+                "Gebruiksvriendelijke interface en ervaring",
+                "Visuele aantrekkingskracht en functionaliteit in balans",
+            ],
+            cta: "Meer over onze optimalisaties",
+        },
+    },
 
-    servicesTitleSeo: "Zoekmachine Optimalisatie",
-    servicesContentSeo:
-        "Met zoekmachine optimalisatie zorgen wij ervoor dat uw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt uw bedrijf sneller gevonden door potentiële klanten.",
-    servicesFocusSeoOne: "Verbeterde vindbaarheid in populaire zoekmachines",
-    servicesFocusSeoTwo: "Aanzienlijk meer directe en indirecte webbezoekers",
-    servicesFocusSeoThree: "Gebruik van analyses, strategieën en statistieken",
-    servicesPricesButton: "Onze prijzen",
-    servicesPricesButtonTwo: "Alle diensten",
+    projects: {
+        title: "Recente Projecten",
+        viewWebsite: "Bekijk website",
+        viewWebapp: "Bekijk webapp",
+        eternitydrum: "Stichting Eternity Percussion uit Amsterdam",
+        blackharmony: "Zanggroep Black Harmony uit Amsterdam",
+        afrodiasphere:
+            "Ons eigen initiatief opgezet, vooral gericht op sociale interacties",
+        dsmelodies: "Steelpannist Derek Simpey uit Amsterdam",
+        knacdig:
+            "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
+        keeptreal: "Stichting Regalness.nl uit Amsterdam",
+        priozorg: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
+        edutainuproductions: "",
+    },
 
-    recentProjectsViewSiteButton: "Bekijk website",
-    recentProjectsViewAppButton: "Bekijk webapp",
-
-    // recentProjectsEPbio: "Stichting Eternity Percussion uit Amsterdam",
-    // recentProjectsBHbio: "Zanggroep Black Harmony uit Amsterdam",
-    // recentProjectsADSbio:
-    //     "Ons eigen initiatief opgezet, vooral gericht op sociale interacties",
-    // recentProjectsDSbio: "Steelpannist Derek Simpey uit Amsterdam",
-    // recentProjectsKNbio:
-    //     "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
-    // recentProjectsKIRbio: "Stichting Regalness.nl uit Amsterdam",
-    // recentProjectsPZbio: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
-
-    portfolioTitle: "Recente Projecten",
-    portfolioIntro:
-        "Wij zijn trots op ons werk en showcasen dat ook graag! Neem een kijk in ons archief van recente projecten..",
-    portfolioGoToProject: "Ga naar project",
-    portfolioGoToRepo: "Github Repo",
-    portfolioNoRepo: "Niet op Github",
-
-    portfolioEUPbio:
-        "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
-    portfolioKIRbio:
-        "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
-    portfolioADSbio:
-        "<strong>Afrodiasphere</strong> is een project geheel op eigen initiatief opgezet, voornamelijk gericht op het makkelijker maken van het delen van informatie onder particulieren / bedrijven die zich willen voortmanifesteren. Maak je profiel aan & join the MOVEMENT!",
-    portfolioEPbio:
-        "<strong>Eternity Percussion</strong> is een culturele instelling die bijdrage levert aan talentontwikkeling, cultuurparticipatie en visieverbreding van jongeren. D.m.v. o.a. muziekeducatie en inzet van jongeren in eigen organisatie biedt Eternity jongeren de gelegenheid om cultureel te ondernemen en participeren binnen de Nederlandse samenleving.",
-    portfolioKNbio:
-        "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
-    portfolioDSbio:
-        "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
-    portfolioBHbio:
-        "<strong>Black Harmony</strong> is een populaire en getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina. Black harmony wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
-    portfolioPZbio:
-        "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Priozorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
-
-    powersTitle: "Diensten",
-    powersServices: "Diensten",
-    powersPrices: "Prijzen",
-    powersIntro:
-        "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
-    powersWebsite: `Website <small>laten maken</small>`,
-    powersWebsiteTitle:
-        "Website laten maken: <small>Op maat en professioneel</small><span>.</span>",
-    powersWebsiteInfo:
-        "Op maat gemaakte websites die perfect aansluiten bij jouw branding en doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke websites die zorgen voor een sterke online aanwezigheid en optimale gebruikerservaring.",
-    powersWebsiteIntro:
-        "Bij Menefex bieden we op maat gemaakte websites die perfect aansluiten bij jouw merk, doelen en doelgroep. Onze focus ligt op het ontwerpen van websites die zowel visueel aantrekkelijk als functioneel zijn. Of je nu een start-up bent of een gevestigde onderneming, wij zorgen ervoor dat jouw online aanwezigheid krachtig, modern en gebruiksvriendelijk is.",
-    powersWebsiteDetail:
-        "<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Uniek Maatwerkdesign</h4><p>Elke website die wij ontwerpen, is uniek. We nemen jouw wensen en branding als uitgangspunt om een visueel aantrekkelijk ontwerp te creëren dat zich onderscheidt van de concurrentie. Geen standaardtemplates, maar een website die jouw verhaal vertelt.</p></li><li><h4>Snelle Laadtijden</h4><p>Wij begrijpen hoe belangrijk snelheid is voor zowel gebruikers als zoekmachines. Daarom optimaliseren we jouw website voor snelle laadtijden, zodat bezoekers niet afhaken en zoekmachines jouw website hoger waarderen.</p></li><li><h4>Gebruiksvriendelijke Interface en Ervaring</h4><p>Een goede website is eenvoudig te navigeren. Wij zorgen voor een intuïtieve gebruikerservaring, waarbij bezoekers snel en gemakkelijk de informatie vinden die ze zoeken. Dit verbetert niet alleen de gebruikerstevredenheid, maar verhoogt ook de kans op conversies.</p></li><li><h4>Toekomstbestendig en Compatibel</h4><p>Onze websites voldoen aan alle moderne technische eisen en zijn compatibel met alle populaire browsers en apparaten. Dit betekent dat jouw website overal en altijd toegankelijk is, of het nu op desktop, tablet of mobiel is.</p></li></ol><br /><h3><strong>Voordelen van een website op maat:</strong></h3><ul><li><p><strong>SEO-vriendelijk:</strong> Onze websites zijn volledig geoptimaliseerd voor zoekmachines, wat betekent dat je online beter gevonden wordt.</p></li><li><p><strong>Flexibiliteit:</strong> De website kan meegroeien met je bedrijf. Of je nu op zoek bent naar een webshop, blog of portfolio, wij integreren naadloos alle functionaliteiten.</p></li><li><p><strong>Beveiliging:</strong> Jouw website is veilig en voldoet aan alle moderne beveiligingsstandaarden, zoals SSL-certificaten.</p></li></ul></div>",
     powersWebapp: "Webapplicatie <small>laten maken</small>",
     powersWebappTitle:
         "Webapplicatie Laten Maken: <small>Efficiëntie en Innovatie op Maat</small><span>.</span>",
@@ -154,6 +166,30 @@ export default {
     powersSeoInfo:
         "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.",
     powersMoreInfo: "Meer info",
+
+    portfolioTitle: "Recente Projecten",
+    portfolioIntro:
+        "Wij zijn trots op ons werk en showcasen dat ook graag! Neem een kijk in ons archief van recente projecten..",
+    portfolioGoToProject: "Ga naar project",
+    portfolioGoToRepo: "Github Repo",
+    portfolioNoRepo: "Niet op Github",
+
+    portfolioEUPbio:
+        "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
+    portfolioKIRbio:
+        "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
+    portfolioADSbio:
+        "<strong>Afrodiasphere</strong> is een project geheel op eigen initiatief opgezet, voornamelijk gericht op het makkelijker maken van het delen van informatie onder particulieren / bedrijven die zich willen voortmanifesteren. Maak je profiel aan & join the MOVEMENT!",
+    portfolioEPbio:
+        "<strong>Eternity Percussion</strong> is een culturele instelling die bijdrage levert aan talentontwikkeling, cultuurparticipatie en visieverbreding van jongeren. D.m.v. o.a. muziekeducatie en inzet van jongeren in eigen organisatie biedt Eternity jongeren de gelegenheid om cultureel te ondernemen en participeren binnen de Nederlandse samenleving.",
+    portfolioKNbio:
+        "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
+    portfolioDSbio:
+        "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
+    portfolioBHbio:
+        "<strong>Black Harmony</strong> is een populaire en getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina. Black harmony wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
+    portfolioPZbio:
+        "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Priozorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
 
     blogPostedOn: "Gepost:",
     blogAuthor: "Auteur",

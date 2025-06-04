@@ -8,7 +8,7 @@
     &-img {
         max-height: 100%;
         max-width: 100%;
-        border: 2px $fourth-color solid;
+        border: 2px $snow-color solid;
         border-radius: 10px;
         margin-bottom: 2em;
         z-index: 1;
@@ -26,7 +26,7 @@
 
     &-info {
         padding: 0.5rem 1rem;
-        border: 0.5px solid $third-color;
+        border: 0.5px solid $lightgrey-color;
         border-bottom: none;
         border-top: none;
         min-height: 250px;
@@ -35,14 +35,12 @@
         margin-bottom: 2em;
 
         span {
-            font-family: $right-font;
             margin-right: 1em;
             color: $secondary-color;
             display: inline;
         }
 
         h3 {
-            font-family: $right-font;
             display: inline;
 
             @include fluid-typing(18, 22);
@@ -69,11 +67,11 @@
                     background: linear-gradient(
                         145deg,
                         $primary-color,
-                        $button-hover
+                        $dark-color
                     );
                     border-radius: $low-radius;
                     padding: 0 0.75em;
-                    color: $sixth-color;
+                    color: $smoke-color;
                     white-space: nowrap;
 
                     @include box-shadow;

@@ -3,7 +3,7 @@
 .mobile-menu {
     height: 100%;
     opacity: 0.95;
-    background: linear-gradient(145deg, white, $third-color);
+    background: linear-gradient(145deg, white, $lightgrey-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -30,23 +30,21 @@
 
         li {
             &:last-of-type {
-                border-top: 3px solid $third-color;
+                border-top: 3px solid $lightgrey-color;
                 padding-top: 1em;
                 margin-top: 0.75em;
             }
 
             a {
-                font-family: $right-font;
                 color: #555;
-                letter-spacing: $high-spacing;
                 text-shadow: -5px 0 #ccc, 0 5px #ccc, 5px 0 #ccc, 0 -5px #ccc;
 
                 @include fluid-typing(20, 24);
 
                 &:hover:not(.active-page) {
-                    color: $textbase-color;
-                    text-shadow: -15px 0 $third-color, 0 15px $third-color,
-                        15px 0 $third-color, 0 -15px $third-color;
+                    text-shadow: -15px 0 $lightgrey-color,
+                        0 15px $lightgrey-color, 15px 0 $lightgrey-color,
+                        0 -15px $lightgrey-color;
                 }
 
                 .dots {
@@ -66,7 +64,6 @@
             }
 
             .active-page {
-                color: $textbase-color;
                 text-shadow: -10px 0 $secondary-color, 0 10px $secondary-color,
                     10px 0 $secondary-color, 0 -10px $secondary-color;
 
@@ -75,7 +72,7 @@
                 @include fluid-typing(24, 28);
 
                 .dots {
-                    color: $third-color;
+                    color: $lightgrey-color;
                 }
             }
         }

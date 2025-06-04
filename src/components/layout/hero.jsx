@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import * as React from "react";
 
 import useTranslation from "../../hooks/use-translation";
+
+import { StaticImage } from "gatsby-plugin-image";
 
 import heroLogo from "../../images/logo/mnfx-icon.svg";
 
@@ -8,123 +10,66 @@ import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
 import * as tpWriterStyles from "../../styles/modules/layout/typewriter.module.scss";
 
 const Hero = () => {
-    const { t, i18n } = useTranslation();
-    const currentLanguage = i18n.language;
-
-    useEffect(() => {
-        const updateVhVariable = () => {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty("--vh", `${vh}px`);
-        };
-
-        updateVhVariable();
-
-        window.addEventListener("resize", updateVhVariable);
-
-        return () => {
-            window.removeEventListener("resize", updateVhVariable);
-        };
-    }, []);
-
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (!section) return;
-
-        const hasScrollPosition = section.hasAttribute("data-scroll-center");
-
-        if (hasScrollPosition) {
-            const blockValue = "center";
-            const scrollOptions = {
-                behavior: "smooth",
-                block: blockValue,
-                inline: "nearest",
-            };
-            section.scrollIntoView(scrollOptions);
-        } else {
-            const offset = 175;
-            const scrollOptions = {
-                top: section.offsetTop - offset,
-                behavior: "smooth",
-            };
-
-            window.scrollTo(scrollOptions);
-        }
-    };
+    const { t } = useTranslation();
 
     return (
         <section className={heroStyles.hero} id="hero">
-            <div className={heroStyles.heroImage}>
-                <img
-                    className={heroStyles.heroLogo}
-                    src={heroLogo}
-                    alt="Menefex Logo"
-                    width={320}
-                    height={320}
-                />
-            </div>
-            <div>
-                <h1
-                    className={`${tpWriterStyles.tpwriter} ${
-                        tpWriterStyles.line
-                    } ${
-                        currentLanguage === "nl"
-                            ? tpWriterStyles.animTypewriterNl
-                            : tpWriterStyles.animTypewriterEn
-                    }`}
-                >
-                    <span className={tpWriterStyles.wmb}>
-                        {t("hero.webMediaCompany")}
-                    </span>{" "}
-                    <br />
-                    <span className={tpWriterStyles.mnfx}>
-                        {t("hero.menefex")}
-                    </span>
-                    <span className={tpWriterStyles.dot}>.</span>{" "}
-                    <span className={tpWriterStyles.welkom}>
-                        {t("hero.welcome")}
-                    </span>
-                </h1>
-                <h2
-                    className={heroStyles.heroSlogan}
-                    dangerouslySetInnerHTML={{ __html: t("hero.slogan") }}
-                />
-            </div>
+            <div className={heroStyles.heroContainer}>
+                <div className={heroStyles.heroVisual}>
+                    <div className={heroStyles.heroContent}>
+                        <div className={heroStyles.heroLogo}>
+                            <img
+                                src={heroLogo}
+                                alt="Menefex Logo"
+                                width={320}
+                                height={320}
+                            />
+                        </div>
 
-            <div className={heroStyles.heroCta}>
-                <div
-                    className={heroStyles.scrollDown}
-                    type="button"
-                    onClick={() => scrollToSection("cta")}
-                />
+                        <h1>
+                            {t("hero.menefex")}
+                            <span className={tpWriterStyles.dot}>.</span>{" "}
+                        </h1>
+                        <h2
+                            className={heroStyles.heroSlogan}
+                            dangerouslySetInnerHTML={{
+                                __html: t("hero.slogan"),
+                            }}
+                        />
+                    </div>
 
-                <div
-                    className={heroStyles.heroButtons}
-                    id="cta"
-                    data-scroll-center
-                >
-                    <button
+                    <hr />
+
+                    <div className={heroStyles.heroImage}>
+                        <StaticImage
+                            src="../../images/ghibli-mf.png"
+                            alt="Edutain U Productions"
+                        />
+                    </div>
+                </div>
+
+                <div className={heroStyles.heroCta}>
+                    <a
+                        href="#cta"
+                        className={heroStyles.heroScroll}
                         type="button"
-                        name="cta"
-                        onClick={() => scrollToSection("biografie")}
-                    >
-                        {t("heroBiography")}
-                    </button>
-                    <span>|</span>
-                    <button
-                        type="button"
-                        name="cta"
-                        onClick={() => scrollToSection("services")}
-                    >
-                        {t("heroServices")}
-                    </button>
-                    <span>|</span>
-                    <button
-                        type="button"
-                        name="cta"
-                        onClick={() => scrollToSection("portfolio")}
-                    >
-                        {t("heroPortfolio")}
-                    </button>
+                    />
+
+                    <div className={heroStyles.heroButtons} id="cta">
+                        <span>-</span>
+                        <a href="#biografie" type="button" name="cta">
+                            {t("hero.biography")}
+                        </a>
+                        <span>|</span>
+                        <a href="#services" name="cta">
+                            {t("hero.services")}
+                        </a>
+                        <span>|</span>
+                        <a href="#portfolio" name="cta">
+                            {t("hero.portfolio")}
+                        </a>
+                        <span>-</span>
+                    </div>
                 </div>
             </div>
         </section>

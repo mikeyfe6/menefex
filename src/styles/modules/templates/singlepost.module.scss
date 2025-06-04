@@ -13,7 +13,7 @@
         .thick-hr {
             margin: 2em 0 1em;
             border-radius: $low-radius;
-            border: 2.5px solid $spec-color;
+            border: 2.5px solid $lemon-color;
         }
 
         > div {
@@ -32,7 +32,6 @@
 
                 .title {
                     font-weight: 500;
-                    letter-spacing: $medium-spacing;
                     line-height: 1.4;
 
                     @include fluid-typing(20, 26);
@@ -40,7 +39,7 @@
             }
 
             .thin-hr {
-                border: 5px solid $sixth-color;
+                border: 5px solid $smoke-color;
                 border-radius: $low-radius;
                 margin: 1em 0 3em;
             }
@@ -88,7 +87,7 @@
                         .horizontness {
                             // hr
                             margin: 2em 0;
-                            border: 1px solid rgba($base-color, 0.75);
+                            border: 1px solid rgba($dark-color, 0.75);
                         }
 
                         .headoneness {
@@ -98,12 +97,11 @@
 
                         .headtwoness {
                             // h2
-                            font-family: $poppins-font;
                         }
 
                         .headthreeness {
                             // h3
-                            font-family: $poppins-font;
+
                             margin-bottom: 0.25em;
                             font-weight: 600;
 
@@ -266,14 +264,13 @@
                         background: linear-gradient(
                             to right,
                             $primary-color,
-                            $fifth-color
+                            $grey-color
                         );
-                        border: solid 1px $fifth-color;
+                        border: solid 1px $grey-color;
                         border-radius: $low-radius;
                         padding: 0.25em 0.5em;
                         margin-bottom: 1em;
                         text-align: center;
-                        letter-spacing: $low-spacing;
 
                         @include fluid-typing(12, 14);
                     }
@@ -284,9 +281,8 @@
                             #f2f2f2,
                             $white-color
                         );
-                        border: 2px solid $fourth-color;
+                        border: 2px solid $snow-color;
                         border-radius: $low-radius;
-                        color: $base-color;
                         padding: 1em;
 
                         max-height: calc(100vh - 15em);
@@ -316,13 +312,12 @@
 
                         hr {
                             border-radius: $low-radius;
-                            border: 2.5px solid rgba($base-color, 0.75);
+                            border: 2.5px solid rgba($dark-color, 0.75);
                             margin: 1.5em 0;
                         }
 
                         .related {
                             h6 {
-                                font-family: $right-font;
                                 text-align: center;
                                 margin: 2em 0 1em;
 
@@ -336,7 +331,7 @@
 
                                 li {
                                     &:not(:first-of-type) {
-                                        border-top: 1px solid $base-color;
+                                        border-top: 1px solid $dark-color;
                                         padding-top: 1em;
                                     }
 
@@ -358,7 +353,6 @@
 
                                         > {
                                             h5 {
-                                                font-family: $poppins-font;
                                                 font-weight: 500;
 
                                                 @include clamp;
@@ -416,7 +410,6 @@
                 margin-bottom: 1em;
 
                 > h6 {
-                    font-family: $right-font;
                     text-align: center;
                     text-decoration: underline;
                     text-decoration-color: $secondary-color;
@@ -437,14 +430,13 @@
                         a {
                             background: linear-gradient(
                                 145deg,
-                                $fourth-color,
+                                $snow-color,
                                 #f2f2f2
                             );
-                            outline: 2px solid $fourth-color;
+                            outline: 2px solid $snow-color;
                             border-radius: $high-radius;
                             max-width: 300px;
                             min-height: 400px;
-                            color: $base-color;
                             height: 100%;
 
                             overflow: hidden;
@@ -458,7 +450,6 @@
                             }
 
                             h5 {
-                                font-family: $poppins-font;
                                 font-weight: 600;
                                 margin: 1em 1em 0;
 
@@ -468,7 +459,6 @@
                             p {
                                 margin: 1em 1em 1.5em;
                                 font-weight: 400;
-                                color: $base-color;
 
                                 @include fluid-typing(14, 16);
                             }
@@ -493,7 +483,7 @@
             }
 
             .disqus {
-                color: $base-color;
+                color: $dark-color;
 
                 a {
                     color: $secondary-color;

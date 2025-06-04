@@ -1,121 +1,184 @@
 @use "../../customs" as *;
 
 .hero {
-    height: 100vh;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 2.5em;
-    margin: 0;
+    $hero: &;
 
-    &-image {
-        margin: 0 auto;
-    }
-
-    &-logo {
-        width: 225px;
-        height: 225px;
-        animation: roll 60s infinite;
-        transform: rotate(180deg);
-
-        @include smooth-trans;
-
-        @keyframes roll {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            25% {
-                transform: rotate(180deg);
-            }
-
-            50% {
-                transform: rotate(360deg);
-            }
-
-            75% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    }
-
-    &-slogan {
-        font-family: $right-font;
-        color: $secondary-color;
-        font-size: 2.25rem;
-        letter-spacing: 0.25rem;
-        background: linear-gradient(145deg, $primary-color, $button-hover);
-        border: 3px solid $primary-color;
-        padding: 0.1em 1.25em;
-        border-radius: 10px;
-        width: fit-content;
-        margin: 0.5em auto;
-        text-align: center;
-        word-wrap: break-word;
-
-        @include box-shadow;
-
-        > span {
-            color: $sixth-color;
-        }
-    }
-
-    &-cta {
-        margin: 2em auto;
-
-        .scroll-down {
-            position: relative;
-            cursor: pointer;
-            bottom: 75px;
-            margin: 0 auto;
-            z-index: 0;
-            text-decoration: none;
-            text-shadow: 0;
-            width: 25px;
-            height: 25px;
-            border-bottom: 5px solid $secondary-color;
-            border-right: 5px solid $primary-color;
-            transform: translate(-50%, 0) rotate(45deg);
-            animation: fade-move-down 1.5s cubic-bezier(0.19, 1, 0.22, 1)
-                infinite;
-
-            @keyframes fade-move-down {
-                0% {
-                    transform: translate(0, -20px) rotate(45deg);
-                    opacity: 0;
-                }
-
-                50% {
-                    opacity: 1;
-                }
-
-                100% {
-                    transform: translate(0, 20px) rotate(45deg);
-                    opacity: 0;
-                }
-            }
-        }
-    }
-
-    &-buttons {
+    #{$hero}-container {
         display: flex;
         align-items: center;
-        gap: 0.75em;
-        margin: 2em 0;
+        flex-direction: column;
+        gap: rem-calc(60);
 
-        > button {
-            @include tertiary-button;
+        @include container;
+
+        #{$hero}-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem-calc(75);
+
+            h1 {
+                @include fluid-typing(28, 32);
+            }
+
+            #{$hero}-content {
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                gap: rem-calc(16);
+
+                #{$hero}-logo {
+                    position: relative;
+                    width: fit-content;
+                    margin-left: auto;
+
+                    img {
+                        width: rem-calc(125);
+                        height: rem-calc(125);
+                        animation: roll 60s infinite;
+                        transform: rotate(180deg);
+                        margin-bottom: rem-calc(24);
+
+                        @include smooth-trans;
+
+                        @keyframes roll {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+
+                            25% {
+                                transform: rotate(180deg);
+                            }
+
+                            50% {
+                                transform: rotate(360deg);
+                            }
+
+                            75% {
+                                transform: rotate(0deg);
+                            }
+
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: rem-calc(200);
+                        height: rem-calc(10);
+                        border-radius: 5px;
+                        border: 4px solid $primary-color;
+                        outline: 2px solid $dark-color;
+                        bottom: 0;
+                        right: rem-calc(5);
+                        background-color: $secondary-color;
+                    }
+                }
+
+                #{$hero}-slogan {
+                    color: $secondary-color;
+                    background: linear-gradient(
+                        145deg,
+                        $primary-color,
+                        $dark-color
+                    );
+                    border: 3px solid $primary-color;
+                    padding: rem-calc(0 24);
+                    border-radius: 10px;
+                    width: fit-content;
+                    text-align: center;
+                    word-wrap: break-word;
+
+                    @include fluid-typing(32, 36);
+
+                    > span {
+                        color: $smoke-color;
+                    }
+                }
+            }
+
+            > hr {
+                display: block;
+                width: rem-calc(3);
+                height: rem-calc(200);
+                border-radius: 5px;
+                background: linear-gradient(
+                    145deg,
+                    $primary-color,
+                    $secondary-color
+                );
+            }
+
+            #{$hero}-image {
+                max-width: rem-calc(400);
+
+                @extend %image;
+
+                img {
+                    border-radius: $low-radius;
+                }
+            }
         }
 
-        > span {
-            color: $fifth-color;
-            font-weight: bolder;
-            opacity: 0.75;
+        #{$hero}-cta {
+            display: flex;
+            flex-direction: column;
+            gap: rem-calc(75);
+
+            #{$hero}-scroll {
+                position: relative;
+                bottom: 0;
+                margin: 0 auto;
+                width: rem-calc(25);
+                height: rem-calc(25);
+                border-bottom: 7.5px solid $secondary-color;
+                border-right: 7.5px solid $primary-color;
+                transform: translate(-50%, 0) rotate(45deg);
+                animation: fade-down 1.5s cubic-bezier(0.19, 1, 0.22, 1)
+                    infinite;
+                cursor: pointer;
+
+                @keyframes fade-down {
+                    0% {
+                        transform: translate(0, -20px) rotate(45deg);
+                        opacity: 0;
+                    }
+
+                    50% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                        transform: translate(0, 20px) rotate(45deg);
+                        opacity: 0;
+                    }
+                }
+            }
+
+            #{$hero}-buttons {
+                display: flex;
+                align-items: center;
+                gap: rem-calc(16);
+
+                > a {
+                    font-weight: 600;
+
+                    @include fluid-typing(16, 20);
+
+                    &:hover {
+                        color: $link-color;
+                    }
+                }
+
+                > span {
+                    color: $secondary-color;
+                    pointer-events: none;
+                }
+            }
         }
     }
 }

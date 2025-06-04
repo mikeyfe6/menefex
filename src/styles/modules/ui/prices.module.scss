@@ -14,17 +14,16 @@
         display: flex;
         flex-direction: column;
         max-width: 450px;
-        background: linear-gradient(to bottom, $spec-color, $secondary-color);
+        background: linear-gradient(to bottom, $lemon-color, $secondary-color);
         border-radius: 25px;
 
         @include smooth-trans;
         @include box-shadow;
 
         h3 {
-            font-family: $right-font;
             text-align: center;
             text-decoration: underline;
-            text-decoration-color: $super-color;
+            text-decoration-color: $ivory-color;
             font-weight: 700;
         }
 
@@ -36,7 +35,6 @@
         .price {
             text-align: center;
             font-weight: 700;
-            opacity: 0.8;
             margin: 0 0 0.5em;
 
             @include fluid-typing(24, 26);
@@ -62,7 +60,6 @@
             &-action {
                 text-align: center;
                 font-weight: bolder;
-                opacity: 0.5;
 
                 @include fluid-typing(12, 13);
             }
@@ -72,7 +69,7 @@
                 font-weight: bold;
                 margin: 0.25em 0 1em;
                 text-decoration: underline;
-                text-decoration-color: $super-color;
+                text-decoration-color: $ivory-color;
 
                 @include fluid-typing(12, 13);
             }
@@ -99,7 +96,7 @@
             > li {
                 list-style: none;
                 text-align: center;
-                border-bottom: 1px $spec-color solid;
+                border-bottom: 1px $lemon-color solid;
                 padding: 0.875em 0.5em;
 
                 @include fluid-typing(14, 16);

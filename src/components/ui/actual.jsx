@@ -7,6 +7,8 @@ import useTranslation from "../../hooks/use-translation";
 
 import * as actualStyles from "../../styles/modules/ui/actual.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const Actual = () => {
     const { t, i18n, isHydrated } = useTranslation();
     const currentLanguage = i18n.language;
@@ -14,7 +16,7 @@ const Actual = () => {
     const data = useStaticQuery(graphql`
         query ActualQuery {
             nlContent: allContentfulBlogPost(
-                limit: 1
+                limit: 3
                 sort: { publishedDate: DESC }
                 filter: { node_locale: { eq: "nl" } }
             ) {
@@ -39,7 +41,7 @@ const Actual = () => {
             }
 
             enContent: allContentfulBlogPost(
-                limit: 1
+                limit: 3
                 sort: { publishedDate: DESC }
                 filter: { node_locale: { eq: "en" } }
             ) {
@@ -65,54 +67,69 @@ const Actual = () => {
         }
     `);
 
-    const currentContent =
-        currentLanguage === "nl"
-            ? data.nlContent.edges[0]?.node
-            : data.enContent.edges[0]?.node;
+    const posts =
+        currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
 
-    if (!currentContent) {
+    if (!posts.length) {
         return <p>Geen content beschikbaar / No content available.</p>;
     }
-
-    const frontImage = getImage(currentContent.image);
 
     if (!isHydrated) return null;
 
     return (
-        <section className={actualStyles.actualContainer} id="actual">
-            <div className={actualStyles.actualWrapper}>
-                <div>
-                    <Link to={`/blog/${currentContent.slug}/`}>
-                        <GatsbyImage
-                            image={frontImage}
-                            alt={currentContent.image.title}
-                            style={{ borderRadius: "5px" }}
-                        />
-                    </Link>
-                </div>
-                <div className={actualStyles.actualText}>
-                    <h4>{currentContent.title}</h4>
-                    <p>
-                        {currentContent.subtitle}{" "}
-                        <Link to={`/blog/${currentContent.slug}/`}>
-                            <b>{t("actualReadMore")}</b>
-                        </Link>
-                    </p>
-                    <ul>
-                        {currentContent.topics.map((topic) => (
-                            <li key={topic.slug}>
-                                <Link
-                                    to={`/topics/${topic.slug}/`}
-                                    style={{
-                                        borderColor: topic.bdcolor,
-                                    }}
-                                >
-                                    {topic.name}
+        <section className={actualStyles.actual} id="actual">
+            <h3>{t("actual.title")}</h3>
+            <div className={actualStyles.actualContainer}>
+                {posts.map(({ node }) => (
+                    <div className={actualStyles.actualWrapper} key={node.slug}>
+                        <div className={actualStyles.actualImage}>
+                            <Link to={`/blog/${node.slug}/`}>
+                                <GatsbyImage
+                                    image={getImage(node.image)}
+                                    alt={node.image.title}
+                                />
+                            </Link>
+                        </div>
+                        <div className={actualStyles.actualContent}>
+                            <h4>{node.title}</h4>
+
+                            <div>
+                                <span>
+                                    {new Date(
+                                        node.publishedDate
+                                    ).toLocaleDateString(
+                                        currentLanguage === "nl"
+                                            ? "nl-NL"
+                                            : "en-GB",
+                                        {
+                                            day: "numeric",
+                                            month: "short",
+                                            year: "numeric",
+                                        }
+                                    )}
+                                </span>
+                                <span> · </span>
+                                <Link to={`/blog/${node.slug}/`}>
+                                    <b>{t("actual.readMore")}</b>
                                 </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            {node.topics.map((topic) => (
+                                <li key={topic.slug}>
+                                    <Link
+                                        to={`/topics/${topic.slug}/`}
+                                        style={{
+                                            borderColor: topic.bdcolor,
+                                        }}
+                                    >
+                                        {topic.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
         </section>
     );

@@ -7,10 +7,15 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import Hero from "../components/layout/hero";
-import Service from "../components/ui/services";
-import Projects from "../components/ui/slider";
-import Smallbio from "../components/ui/smallbio";
+import Biography from "../components/ui/biography";
 import Actual from "../components/ui/actual";
+import Services from "../components/ui/services";
+import Projects from "../components/ui/projects";
+// import Faq from "../components/ui/faq";
+// import Usp from "../components/ui/usp";
+// import SmartForm from "../components/forms/smartForm";
+
+import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
 const IndexPage = () => {
     const { t, isHydrated } = useTranslation();
@@ -21,29 +26,47 @@ const IndexPage = () => {
         <Layout>
             <Hero />
 
-            <div className="vertical-line-long" />
+            <div className={indexStyles.verticalLineLong} />
 
-            <h3 className="home-title">{t("homeBiographyTitle")}</h3>
+            <Biography />
 
-            <Smallbio />
-
-            <div className="vertical-line-short" />
-
-            <h3 className="home-title">{t("homeActualTitle")}</h3>
+            <div className={indexStyles.verticalLineShort} />
 
             <Actual />
 
-            <div className="vertical-line-short" />
+            <div className={indexStyles.verticalLineShort} />
 
-            <h3 className="home-title">{t("homeServicesTitle")}</h3>
+            <Services />
 
-            <Service />
-
-            <div className="vertical-line-short" />
-
-            <h3 className="home-title">{t("homeProjectsTitle")}</h3>
+            <div className={indexStyles.verticalLineShort} />
 
             <Projects />
+
+            {/* <div className={indexStyles.verticalLineShort} /> */}
+
+            {/* <Faq /> */}
+
+            {/* <div className={indexStyles.verticalLineShort} /> */}
+
+            {/* <Usp /> */}
+
+            {/* <div className={indexStyles.verticalLineShort} /> */}
+
+            {/* <SmartForm /> */}
+
+            {/* <div className={indexStyles.verticalLineShort} /> */}
+
+            {/* <section hidden>
+                <div>faq seqment</div>
+                <div>smartform seqment</div>
+                <div>
+                    prijzen seqment (op basis van smartform, dus nog over
+                    nadenken!?)
+                </div>
+                <div>
+                    usp-achtig ding met 1, 2 & 3. zo komen we aan jouw product
+                </div>
+            </section> */}
         </Layout>
     );
 };

@@ -1,0 +1,37 @@
+@use "sass:color";
+
+@use "./customs" as *;
+
+.form {
+    $form: &;
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 5em;
+
+        > section {
+            flex: 50%;
+        }
+
+        > form {
+            flex: 50%;
+        }
+    }
+
+    input,
+    textarea,
+    select {
+        font-weight: 500;
+        border: none;
+        outline: none;
+
+        @include fluid-typing(16, 18);
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        caret-color: $link-color;
+    }
+}

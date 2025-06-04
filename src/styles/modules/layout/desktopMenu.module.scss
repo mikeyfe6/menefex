@@ -8,17 +8,12 @@
     background: linear-gradient(
         to bottom,
         $white-color,
-        rgba($white-color, 50%)
+        rgba($white-color, 90%)
     );
-    height: 90px;
+    padding: rem-calc(24 0);
     z-index: 7;
     border-top: 7.5px solid $secondary-color;
     border-bottom: 1px solid rgba($white-color, 100%);
-
-    .logo {
-        padding-top: 0.25em;
-        width: 225px;
-    }
 
     > nav {
         display: flex;
@@ -26,29 +21,41 @@
         justify-content: space-between;
         height: 100%;
 
-        @include container;
+        @include container($pt: rem-calc(0), $pb: rem-calc(0));
+
+        .logo {
+            width: rem-calc(250);
+        }
 
         > ul {
             display: none;
             align-items: center;
-            gap: 1em;
+            gap: rem-calc(16);
+            border: 2px solid rgba($dark-color, 0.75);
+            padding: rem-calc(0 16);
+            border-radius: $medium-radius;
 
             @include laptop {
                 display: flex;
             }
 
             > li {
+                &:has(.whapp) {
+                    padding: rem-calc(0 12);
+                    border-left: 2px solid rgba($dark-color, 0.75);
+                    border-right: 2px solid rgba($dark-color, 0.75);
+                }
+
                 > a {
-                    font-family: $right-font;
-                    color: #535252;
-                    opacity: 0.75;
+                    font-weight: 600;
+                    font-family: $wdxl-font;
 
                     @include smooth-trans;
 
                     @include fluid-typing(20, 24);
 
                     &:hover {
-                        color: $textbase-color;
+                        color: $dark-color;
 
                         @include smooth-trans;
                     }
@@ -58,8 +65,7 @@
                     }
 
                     &.whapp {
-                        font-size: 1.75em;
-                        margin-left: 0.375em;
+                        font-size: rem-calc(28);
 
                         @include smooth-trans;
 
@@ -69,21 +75,9 @@
                     }
 
                     &.active-page {
-                        color: $secondary-color;
-                        text-shadow: -1px 1px 0 $textbase-color,
-                            1px 1px 0 $textbase-color,
-                            1px -1px 0 $textbase-color,
-                            -1px -1px 0 $textbase-color;
+                        color: $dark-color;
 
                         @include smooth-trans;
-
-                        &:hover {
-                            color: $spec-color;
-                        }
-
-                        .dots {
-                            color: white;
-                        }
                     }
                 }
             }
@@ -91,44 +85,47 @@
     }
 
     .language {
-        margin-left: 1em;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.375em;
+        gap: rem-calc(8);
 
         > button {
-            font-family: $right-font;
-            padding: 0.125em 0.425em;
+            width: rem-calc(28);
+            height: rem-calc(28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: $low-radius;
-            background: linear-gradient(145deg, $sixth-color, $third-color);
+            border: 2px solid rgba($lightgrey-color, 1);
             aspect-ratio: 1;
 
             @include smooth-trans;
 
+            @include fluid-typing(12, 14);
+
             &:hover {
-                background: $spec-color;
-                color: #535252;
+                background: $lemon-color;
             }
 
             &.active {
-                background: $secondary-color;
-                color: #535252;
+                background: $primary-color;
+                color: $white-color;
             }
         }
 
         > span {
-            color: #535252;
+            font-size: rem-calc(24);
         }
     }
 
     .lang-and-hamburger {
         display: flex;
+        align-items: center;
+        gap: rem-calc(24);
 
         @include laptop {
             display: none;
-            align-items: center;
-            gap: 1.5em;
         }
     }
 }

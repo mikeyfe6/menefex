@@ -2,7 +2,9 @@ import * as React from "react";
 
 import * as hamburgerStyles from "../../styles/modules/layout/hamburger.module.scss";
 
-const HamburgerBtn = ({ click }) => (
+// TODO: klaar voor TS'en..
+
+const Hamburger = ({ click }) => (
     <button
         type="button"
         className={hamburgerStyles.hamburger}
@@ -15,4 +17,4 @@ const HamburgerBtn = ({ click }) => (
     </button>
 );
 
-export default HamburgerBtn;
+export default Hamburger;
