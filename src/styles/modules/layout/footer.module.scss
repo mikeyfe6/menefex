@@ -72,9 +72,9 @@
 
                     a,
                     p {
-                        @include fluid-typing(17, 19);
-
                         color: $white-color;
+
+                        @include fluid-typing(17, 19);
                     }
                 }
 

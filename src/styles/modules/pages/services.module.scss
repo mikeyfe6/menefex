@@ -7,7 +7,7 @@
         #{$services}-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1em;
+            gap: rem-calc(16);
 
             @include container;
 
@@ -15,8 +15,8 @@
                 display: flex;
                 flex-direction: column;
                 flex: 1;
-                padding: 1em;
-                min-width: 325px;
+                padding: rem-calc(16);
+                min-width: rem-calc(325);
                 border-radius: $low-radius;
                 outline: 2px solid $primary-color;
                 background: linear-gradient(145deg, $white-color, $smoke-color);
@@ -38,11 +38,11 @@
                     border: 2px solid $lightgrey-color;
                     border-radius: 5px;
                     width: 100%;
-                    margin: 1.5em 0;
+                    margin: rem-calc(24 0);
                 }
 
                 > p {
-                    margin: 0 0 3em;
+                    margin-bottom: rem-calc(48);
                 }
 
                 > a {
@@ -68,7 +68,7 @@
 
                     @include underline;
 
-                    @include fluid-typing(28, 32);
+                    @include fluid-typing(24, 28);
                 }
 
                 h4 {
@@ -78,19 +78,20 @@
                 ol {
                     text-decoration-color: $secondary-color;
                     list-style-type: decimal;
-                    margin-inline-start: 1em;
+                    margin-inline-start: rem-calc(16);
 
                     li {
-                        padding-left: 0.5em;
-                        margin-bottom: 0.75em;
+                        padding-left: rem-calc(8);
+                        margin-bottom: rem-calc(12);
                     }
                 }
 
                 ul {
-                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem-calc(12);
 
                     li {
-                        margin-bottom: 0.75em;
                         display: flex;
 
                         &::before {
@@ -111,6 +112,9 @@
                 gap: rem-calc(24);
 
                 > a {
+                    display: flex;
+                    gap: rem-calc(12);
+
                     @include primary-button;
 
                     &:nth-of-type(1) {

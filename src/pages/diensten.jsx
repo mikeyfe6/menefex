@@ -44,74 +44,91 @@ const ServicesPage = () => {
                     <div>
                         <h3
                             dangerouslySetInnerHTML={{
-                                __html: t("powersWebapp"),
+                                __html: t("services.webapps.caption"),
                             }}
                         />
                         <hr />
-                        <p>{t("powersWebappInfo")}</p>
+                        <p>{t("services.webapps.snippet")}</p>
                         <Link
                             to="/diensten/webapplicatie-laten-maken/"
                             name="service"
                         >
-                            {t("powersMoreInfo")}
+                            {t("services.webapps.cta")}
                         </Link>
                     </div>
                     <div>
                         <h3
                             dangerouslySetInnerHTML={{
-                                __html: t("powersWebshop"),
+                                __html: t("services.webshops.caption"),
                             }}
                         />
                         <hr />
-                        <p>{t("powersWebshopInfo")}</p>
+                        <p>{t("services.webshops.snippet")}</p>
                         <Link
                             to="/diensten/webshop-laten-maken/"
                             name="service"
                         >
-                            {t("powersMoreInfo")}
+                            {t("services.webshops.cta")}
                         </Link>
                     </div>
                     <div>
                         <h3
                             dangerouslySetInnerHTML={{
-                                __html: t("powersEmail"),
+                                __html: t("services.seo.caption"),
                             }}
                         />
                         <hr />
-                        <p>{t("powersEmailInfo")}</p>
-                        <Link
-                            to="/diensten/email-template-laten-maken/"
-                            name="service"
-                        >
-                            {t("powersMoreInfo")}
-                        </Link>
-                    </div>
-                    <div>
-                        <h3
-                            dangerouslySetInnerHTML={{
-                                __html: t("powersMaintenance"),
-                            }}
-                        />
-                        <hr />
-                        <p>{t("powersMaintenanceInfo")}</p>
-                        <Link
-                            to="/diensten/onderhoud-updates-uitvoeren/"
-                            name="service"
-                        >
-                            {t("powersMoreInfo")}
-                        </Link>
-                    </div>
-                    <div>
-                        <h3
-                            dangerouslySetInnerHTML={{ __html: t("powersSeo") }}
-                        />
-                        <hr />
-                        <p>{t("powersSeoInfo")}</p>
+                        <p>{t("services.seo.snippet")}</p>
                         <Link
                             to="/diensten/zoekmachine-optimalisatie/"
                             name="service"
                         >
-                            {t("powersMoreInfo")}
+                            {t("services.seo.cta")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("services.maintenance.caption"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("services.maintenance.snippet")}</p>
+                        <Link
+                            to="/diensten/onderhoud-updates-uitvoeren/"
+                            name="service"
+                        >
+                            {t("services.maintenance.cta")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("services.optimizations.caption"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("services.optimizations.snippet")}</p>
+                        <Link
+                            to="/diensten/optimalisaties-laten-uitvoeren/"
+                            name="service"
+                        >
+                            {t("services.optimizations.cta")}
+                        </Link>
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("services.email.caption"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("services.email.snippet")}</p>
+                        <Link
+                            to="/diensten/email-template-laten-maken/"
+                            name="service"
+                        >
+                            {t("services.email.cta")}
                         </Link>
                     </div>
                 </div>

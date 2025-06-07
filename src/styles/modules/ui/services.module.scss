@@ -12,7 +12,7 @@
             "overlay intro intro" auto
             "overlay websites webapps" auto
             "overlay webshops seo" auto
-            "overlay maintenance optimization" auto
+            "overlay maintenance optimizations" auto
             / auto 1fr 1fr;
         gap: rem-calc(24);
 
@@ -114,8 +114,8 @@
             grid-area: maintenance;
         }
 
-        #{$service}-optimization {
-            grid-area: optimization;
+        #{$service}-optimizations {
+            grid-area: optimizations;
         }
 
         #{$service}-overlay,
@@ -124,7 +124,7 @@
         #{$service}-webshops,
         #{$service}-seo,
         #{$service}-maintenance,
-        #{$service}-optimization {
+        #{$service}-optimizations {
             background-color: $white-color;
             border-radius: $medium-radius;
 
@@ -136,7 +136,7 @@
         #{$service}-webshops,
         #{$service}-seo,
         #{$service}-maintenance,
-        #{$service}-optimization {
+        #{$service}-optimizations {
             display: flex;
             align-items: center;
             gap: rem-calc(16);

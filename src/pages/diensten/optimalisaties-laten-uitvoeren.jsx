@@ -12,7 +12,7 @@ import * as servicesStyles from "../../styles/modules/pages/services.module.scss
 
 // TODO: klaar voor TS'en..
 
-const WebappPage = () => {
+const OptimizationPage = () => {
     const { t, isHydrated } = useTranslation();
 
     if (!isHydrated) return null;
@@ -20,24 +20,16 @@ const WebappPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1
-                    dangerouslySetInnerHTML={{
-                        __html: t("services.webapps.title"),
-                    }}
-                />
+                <h1 className="page-title">
+                    {t("services.optimizations.title")}
+                    <span>.</span>
+                </h1>
 
-                <h2>{t("services.webapps.intro")}</h2>
+                <h2>{t("services.optimizations.intro")}</h2>
             </section>
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: t("services.webapps.content"),
-                        }}
-                        className={servicesStyles.servicesContent}
-                    />
-
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <i className="fa-solid fa-angles-left" />{" "}
@@ -54,7 +46,7 @@ const WebappPage = () => {
     );
 };
 
-export default WebappPage;
+export default OptimizationPage;
 
 export const Head = () => {
     const { title, siteUrl } = useSiteMetadata();
@@ -79,21 +71,18 @@ export const Head = () => {
             {
                 "@type": "ListItem",
                 position: 3,
-                name: "Webapplicatie laten maken",
-                item: siteUrl + "/diensten/webapplicatie-laten-maken/",
+                name: "Optimalisaties laten uitvoeren",
+                item: siteUrl + "/diensten/optimalisaties-laten-uitvoeren/",
             },
         ],
     };
 
     return (
         <SEO
-            title="Webapplicatie laten maken"
-            description="Op maat gemaakte websites die perfect aansluiten bij jouw branding en
-        doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke
-        websites die zorgen voor een sterke online aanwezigheid en optimale
-        gebruikerservaring."
+            title="Optimalisaties laten uitvoeren"
+            description="Laat een e-mailtemplate maken die past bij jouw huisstijl en merkidentiteit. Perfect voor nieuwsbrieven, marketingcampagnes en meer."
             keywords=""
-            pathname="/diensten/webapplicatie-laten-maken/"
+            pathname="/diensten/optimalisaties-laten-uitvoeren/"
             schemaMarkup={breadcrumbSchema}
         />
     );

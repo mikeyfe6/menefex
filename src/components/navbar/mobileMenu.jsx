@@ -7,7 +7,7 @@ import useTranslation from "../../hooks/use-translation";
 import * as mobileMenuStyles from "../../styles/modules/layout/mobileMenu.module.scss";
 
 const MobileMenu = ({ show }) => {
-    const { t } = useTranslation();
+    const { t, isHydrated } = useTranslation();
 
     let drawerClasses = mobileMenuStyles.mobileMenu;
     if (show) {
@@ -22,6 +22,8 @@ const MobileMenu = ({ show }) => {
             ? { className: mobileMenuStyles.activePage }
             : null;
     };
+
+    if (!isHydrated) return null;
 
     return (
         <nav className={drawerClasses}>

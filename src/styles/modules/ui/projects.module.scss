@@ -66,9 +66,7 @@
                         color: $smoke-color;
                         white-space: nowrap;
 
-                        @include box-shadow;
-
-                        @include fluid-typing(10, 12);
+                        @include fluid-typing(10, 11);
                     }
                 }
 
@@ -135,7 +133,7 @@
     &-no-image {
         p {
             display: block;
-            max-height: 500px;
+            max-height: rem-calc(500);
             height: 100%;
         }
     }

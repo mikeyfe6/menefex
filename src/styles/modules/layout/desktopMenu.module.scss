@@ -111,6 +111,7 @@
             &.active {
                 background: $primary-color;
                 color: $white-color;
+                pointer-events: none;
             }
         }
 

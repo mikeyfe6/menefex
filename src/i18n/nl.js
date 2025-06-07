@@ -43,6 +43,7 @@ export default {
         showAllServices: "Bekijk alle diensten",
         goToPrices: "Ga naar prijzen",
         websites: {
+            // component
             name: "Websites",
             excerpt:
                 "Wij bouwen functionele en efficiënte websites die volledig op maat zijn gemaakt. Onze websites voldoen aan alle moderne technische eisen en voorwaarden, zodat u verzekerd bent van een toekomstbestendige online aanwezigheid.",
@@ -61,11 +62,34 @@ export default {
 
             // detail
             title: "Website laten maken: <small>Op maat en professioneel</small><span>.</span>",
-            intro: "Op maat gemaakte websites die perfect aansluiten bij jouw branding en doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke websites die zorgen voor een sterke online aanwezigheid en optimale gebruikerservaring.",
+            intro: "Bij Menefex bieden we op maat gemaakte websites die perfect aansluiten bij jouw merk, doelen en doelgroep. Onze focus ligt op het ontwerpen van websites die zowel visueel aantrekkelijk als functioneel zijn. Of je nu een start-up bent of een gevestigde onderneming, wij zorgen ervoor dat jouw online aanwezigheid krachtig, modern en gebruiksvriendelijk is.",
             content:
                 "<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Uniek Maatwerkdesign</h4><p>Elke website die wij ontwerpen, is uniek. We nemen jouw wensen en branding als uitgangspunt om een visueel aantrekkelijk ontwerp te creëren dat zich onderscheidt van de concurrentie. Geen standaardtemplates, maar een website die jouw verhaal vertelt.</p></li><li><h4>Snelle Laadtijden</h4><p>Wij begrijpen hoe belangrijk snelheid is voor zowel gebruikers als zoekmachines. Daarom optimaliseren we jouw website voor snelle laadtijden, zodat bezoekers niet afhaken en zoekmachines jouw website hoger waarderen.</p></li><li><h4>Gebruiksvriendelijke Interface en Ervaring</h4><p>Een goede website is eenvoudig te navigeren. Wij zorgen voor een intuïtieve gebruikerservaring, waarbij bezoekers snel en gemakkelijk de informatie vinden die ze zoeken. Dit verbetert niet alleen de gebruikerstevredenheid, maar verhoogt ook de kans op conversies.</p></li><li><h4>Toekomstbestendig en Compatibel</h4><p>Onze websites voldoen aan alle moderne technische eisen en zijn compatibel met alle populaire browsers en apparaten. Dit betekent dat jouw website overal en altijd toegankelijk is, of het nu op desktop, tablet of mobiel is.</p></li></ol><br /><h3><strong>Voordelen van een website op maat:</strong></h3><ul><li><p><strong>SEO-vriendelijk:</strong> Onze websites zijn volledig geoptimaliseerd voor zoekmachines, wat betekent dat je online beter gevonden wordt.</p></li><li><p><strong>Flexibiliteit:</strong> De website kan meegroeien met je bedrijf. Of je nu op zoek bent naar een webshop, blog of portfolio, wij integreren naadloos alle functionaliteiten.</p></li><li><p><strong>Beveiliging:</strong> Jouw website is veilig en voldoet aan alle moderne beveiligingsstandaarden, zoals SSL-certificaten.</p></li></ul></div>",
         },
+        webapps: {
+            // component
+            name: "Webapplicaties",
+            excerpt:
+                "Met de groei van digitalisering en mobiliteit stijgt de vraag naar (web)apps. Webapplicaties onderscheiden zich van websites door de implementatie van complexe interacties die zorgen voor een naadloze gebruikerservaring.",
+            focus: [
+                "Offline gebruiksmogelijkheden",
+                "Geoptimaliseerd voor alle apparaten",
+                "Integratie met ingebouwde functies (bijv. camera, microfoon, locatie)",
+            ],
+            cta: "Meer over onze webapp diensten",
+
+            // overview
+            caption: `Webapplicatie <small>laten maken</small>`,
+            snippet:
+                "Professioneel op maat gemaakte webapplicaties die volledig aansluiten op jouw bedrijfsbehoeften. Onze webapplicaties zijn gebruiksvriendelijk en ontworpen om jouw processen te optimaliseren en de efficiëntie te verhogen.",
+
+            // detail
+            title: "Webapplicatie Laten Maken: <small>Efficiëntie en Innovatie op Maat</small><span>.</span>",
+            intro: "Bij Menefex creëren we professioneel op maat gemaakte webapplicaties die naadloos aansluiten op de specifieke behoeften van jouw bedrijf. Onze applicaties zijn ontworpen met het oog op gebruiksvriendelijkheid en efficiëntie, zodat ze je dagelijkse processen optimaliseren en de productiviteit binnen je organisatie verhogen. Of je nu een klein bedrijf of een grote onderneming bent, wij ontwikkelen webapplicaties die perfect passen bij jouw unieke doelen.",
+            content: `<h3><strong>Wat Je Van Ons Kunt Verwachten:</strong></h3><ol><li><h4>Volledig Maatwerk en Functionaliteit</h4><p>Elke webapplicatie die we ontwikkelen, is volledig afgestemd op jouw bedrijfsprocessen en wensen. Geen generieke oplossingen, maar een webapp die is gebouwd om jouw workflows te stroomlijnen, tijd te besparen en de bedrijfsvoering efficiënter te maken. Van projectmanagementtools tot klantportalen en boekhoudsystemen: wij bouwen het voor je.</p></li><li><h4>Gebruiksvriendelijk en Intuïtief Ontwerp</h4><p>Een goede webapplicatie moet eenvoudig te gebruiken zijn, zonder in te leveren op functionaliteit. We ontwerpen een interface die voor iedereen intuïtief aanvoelt, ongeacht technische ervaring. Dit zorgt voor een soepele gebruikservaring en verhoogt de productiviteit van je team.</p></li><li><h4>Optimale Prestaties, Altijd en Overal</h4><p>Onze webapplicaties zijn geoptimaliseerd voor gebruik op alle apparaten en in alle omstandigheden. Of je medewerkers nu op kantoor werken, thuis, of onderweg zijn: de applicatie functioneert overal even goed. Bovendien bieden we offline gebruiksmogelijkheden, zodat je applicatie altijd beschikbaar is, zelfs zonder internetverbinding.</p></li><li><h4>Integratie van Geavanceerde Functionaliteiten</h4><p>Moderne webapplicaties vragen om meer dan alleen basisfunctionaliteit. Daarom integreren we geavanceerde functies zoals toegang tot de camera, microfoon, GPS en andere hardware van apparaten. Dit zorgt ervoor dat je webapp niet alleen functioneel, maar ook innovatief en toekomstbestendig is.</p></li></ol><br /><h3><strong>Voordelen Van Een Op Maat Gemaakte Webapplicatie:</strong></h3><ul><li><p><strong>Procesoptimalisatie:</strong> Door je bedrijfsprocessen te digitaliseren en automatiseren, bespaar je tijd en geld. Onze webapps zijn erop gericht om je werkstromen te vereenvoudigen en de efficiëntie te verhogen.</p></li><li><p><strong>Toekomstbestendig:</strong> De applicaties zijn gebouwd met moderne technologieën, wat betekent dat ze gemakkelijk schaalbaar en uitbreidbaar zijn naarmate je bedrijf groeit.</p></li><li><p><strong>Veiligheid en Betrouwbaarheid:</strong> Veiligheid staat voorop bij ons. Onze webapplicaties zijn voorzien van de laatste beveiligingsprotocollen en voldoen aan alle relevante privacy- en veiligheidsnormen, zodat je data altijd veilig is.</p></li><li><p><strong>SEO-vriendelijk:</strong> Hoewel webapplicaties vaak gericht zijn op specifieke processen binnen een bedrijf, zorgen wij ervoor dat ze, indien relevant, geoptimaliseerd zijn voor zoekmachines om zo zichtbaar mogelijk te zijn.</p></li></ul>`,
+        },
         webshops: {
+            // component
             name: "Webshops",
             excerpt:
                 "In deze tijd zijn webshops onmisbaar voor lokale ondernemingen. Ze bieden toegang tot een breder netwerk, een hogere beschikbaarheid en verhogen de conversie en zichtbaarheid van uw producten.",
@@ -76,19 +100,19 @@ export default {
                 "Geautomatiseerde processen",
             ],
             cta: "Meer over onze webshop diensten",
-        },
-        webapps: {
-            name: "Webapplicaties",
-            excerpt:
-                "Met de groei van digitalisering en mobiliteit stijgt de vraag naar (web)apps. Webapplicaties onderscheiden zich van websites door de implementatie van complexe interacties die zorgen voor een naadloze gebruikerservaring.",
-            focus: [
-                "Offline gebruiksmogelijkheden",
-                "Geoptimaliseerd voor alle apparaten",
-                "Integratie met ingebouwde functies (bijv. camera, microfoon, locatie)",
-            ],
-            cta: "Meer over onze webapp diensten",
+
+            // overview
+            caption: `Webshop <small>laten maken</small>`,
+            snippet:
+                "Professioneel ontworpen webshops die volledig zijn afgestemd op jouw producten en doelgroep. Onze op maat gemaakte webshops bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online verkoop te maximaliseren.",
+
+            // detail
+            title: "Webshop laten maken",
+            intro: "Professioneel ontworpen webshops die volledig zijn afgestemd op jouw producten en doelgroep. Onze op maat gemaakte webshops bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online verkoop te maximaliseren.",
+            // content: "",
         },
         seo: {
+            // component
             name: "Zoekmachine Optimalisatie",
             excerpt:
                 "Met zoekmachine optimalisatie zorgen wij ervoor dat uw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt uw bedrijf sneller gevonden door potentiële klanten.",
@@ -98,6 +122,16 @@ export default {
                 "Gebruik van analyses, strategieën en statistieken",
             ],
             cta: "Meer over onze SEO diensten",
+
+            // overview
+            caption: `Zoekmachine Optimalisatie <small>(SEO)</small>`,
+            snippet:
+                "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.",
+
+            // detail
+            title: "Zoekmachine Optimalisatie (SEO)",
+            intro: "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.",
+            // content: "",
         },
         maintenance: {
             name: "Onderhoud en support",
@@ -109,8 +143,18 @@ export default {
                 "Veiligheid en prestaties garanderen",
             ],
             cta: "Meer over onderhoud en support",
+
+            // overview
+            caption: `Onderhoud <small>en / of</small> updates <small>uit laten voeren</small>`,
+            snippet:
+                "Regelmatig onderhoud en updates om de optimale prestaties en veiligheid van je website of webapplicatie te garanderen. Wij zorgen ervoor dat alles up-to-date blijft en probleemloos functioneert.",
+
+            // detail
+            title: "Onderhoud en / of updates uit laten voeren",
+            intro: "Regelmatig onderhoud en updates om de optimale prestaties en veiligheid van je website of webapplicatie te garanderen. Wij zorgen ervoor dat alles up-to-date blijft en probleemloos functioneert.",
+            // content: "",
         },
-        optimization: {
+        optimizations: {
             name: "Optimalisaties",
             excerpt:
                 "Wij optimaliseren uw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
@@ -120,6 +164,37 @@ export default {
                 "Visuele aantrekkingskracht en functionaliteit in balans",
             ],
             cta: "Meer over onze optimalisaties",
+
+            // overview
+            caption: `Optimalisaties <small>laten uitvoeren</small>`,
+            snippet:
+                "Wij optimaliseren uw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
+
+            // detail
+            title: "Optimalisatie van Websites & Webapplicaties",
+            intro: "Haal het maximale uit je website of webapplicatie met onze uitgebreide optimalisatiediensten. Van snellere laadtijden tot een gebruiksvriendelijkere ervaring en hogere conversies — wij perfectioneren elk detail voor zichtbare resultaten.",
+            // content: "",
+        },
+        email: {
+            name: "Optimalisaties",
+            excerpt:
+                "Wij optimaliseren uw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
+            focus: [
+                "Verbeterde laadtijden en prestaties",
+                "Gebruiksvriendelijke interface en ervaring",
+                "Visuele aantrekkingskracht en functionaliteit in balans",
+            ],
+            cta: "Meer over onze e-mail template diensten",
+
+            // overview
+            caption: `E-mail template <small>laten maken</small>`,
+            snippet:
+                "Op maat gemaakte e-mail templates die passen bij jouw branding en zorgen voor een consistente en professionele uitstraling in al je e-mailcommunicatie.",
+
+            // detail
+            title: "E-mail template laten maken",
+            intro: "Op maat gemaakte e-mail templates die passen bij jouw branding en zorgen voor een consistente en professionele uitstraling in al je e-mailcommunicatie.",
+            // content: "",
         },
     },
 
@@ -136,82 +211,43 @@ export default {
             "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
         keeptreal: "Stichting Regalness.nl uit Amsterdam",
         priozorg: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
-        edutainuproductions: "",
+        edutainuproductions: "Edutain U Productions uit Amsterdam",
     },
 
-    powersWebapp: "Webapplicatie <small>laten maken</small>",
-    powersWebappTitle:
-        "Webapplicatie Laten Maken: <small>Efficiëntie en Innovatie op Maat</small><span>.</span>",
-    powersWebappInfo:
-        "Professioneel op maat gemaakte webapplicaties die volledig aansluiten op jouw bedrijfsbehoeften. Onze webapplicaties zijn gebruiksvriendelijk en ontworpen om jouw processen te optimaliseren en de efficiëntie te verhogen.",
-    powersWebappIntro:
-        "Bij Menefex creëren we professioneel op maat gemaakte webapplicaties die naadloos aansluiten op de specifieke behoeften van jouw bedrijf. Onze applicaties zijn ontworpen met het oog op gebruiksvriendelijkheid en efficiëntie, zodat ze je dagelijkse processen optimaliseren en de productiviteit binnen je organisatie verhogen. Of je nu een klein bedrijf of een grote onderneming bent, wij ontwikkelen webapplicaties die perfect passen bij jouw unieke doelen.",
-    powersWebappDetail:
-        "<h3><strong>Wat Je Van Ons Kunt Verwachten:</strong></h3><ol><li><h4>Volledig Maatwerk en Functionaliteit</h4><p>Elke webapplicatie die we ontwikkelen, is volledig afgestemd op jouw bedrijfsprocessen en wensen. Geen generieke oplossingen, maar een webapp die is gebouwd om jouw workflows te stroomlijnen, tijd te besparen en de bedrijfsvoering efficiënter te maken. Van projectmanagementtools tot klantportalen en boekhoudsystemen: wij bouwen het voor je.</p></li><li><h4>Gebruiksvriendelijk en Intuïtief Ontwerp</h4><p>Een goede webapplicatie moet eenvoudig te gebruiken zijn, zonder in te leveren op functionaliteit. We ontwerpen een interface die voor iedereen intuïtief aanvoelt, ongeacht technische ervaring. Dit zorgt voor een soepele gebruikservaring en verhoogt de productiviteit van je team.</p></li><li><h4>Optimale Prestaties, Altijd en Overal</h4><p>Onze webapplicaties zijn geoptimaliseerd voor gebruik op alle apparaten en in alle omstandigheden. Of je medewerkers nu op kantoor werken, thuis, of onderweg zijn: de applicatie functioneert overal even goed. Bovendien bieden we offline gebruiksmogelijkheden, zodat je applicatie altijd beschikbaar is, zelfs zonder internetverbinding.</p></li><li><h4>Integratie van Geavanceerde Functionaliteiten</h4><p>Moderne webapplicaties vragen om meer dan alleen basisfunctionaliteit. Daarom integreren we geavanceerde functies zoals toegang tot de camera, microfoon, GPS en andere hardware van apparaten. Dit zorgt ervoor dat je webapp niet alleen functioneel, maar ook innovatief en toekomstbestendig is.</p></li></ol><br /><h3><strong>Voordelen Van Een Op Maat Gemaakte Webapplicatie:</strong></h3><ul><li><p><strong>Procesoptimalisatie:</strong> Door je bedrijfsprocessen te digitaliseren en automatiseren, bespaar je tijd en geld. Onze webapps zijn erop gericht om je werkstromen te vereenvoudigen en de efficiëntie te verhogen.</p></li><li><p><strong>Toekomstbestendig:</strong> De applicaties zijn gebouwd met moderne technologieën, wat betekent dat ze gemakkelijk schaalbaar en uitbreidbaar zijn naarmate je bedrijf groeit.</p></li><li><p><strong>Veiligheid en Betrouwbaarheid:</strong> Veiligheid staat voorop bij ons. Onze webapplicaties zijn voorzien van de laatste beveiligingsprotocollen en voldoen aan alle relevante privacy- en veiligheidsnormen, zodat je data altijd veilig is.</p></li><li><p><strong>SEO-vriendelijk:</strong> Hoewel webapplicaties vaak gericht zijn op specifieke processen binnen een bedrijf, zorgen wij ervoor dat ze, indien relevant, geoptimaliseerd zijn voor zoekmachines om zo zichtbaar mogelijk te zijn.</p></li></ul>",
-    powersWebshop: "Webshop <small>laten maken</small>",
-    powersWebshopTitle: "Webshop laten maken",
-    powersWebshopInfo:
-        "Professioneel ontworpen webshops die volledig zijn afgestemd op jouw producten en doelgroep. Onze op maat gemaakte webshops bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online verkoop te maximaliseren.",
-    powersEmail: "E-mail template <small>laten maken</small>",
-    powersEmailTitle: "E-mail template laten maken",
-    powersEmailInfo:
-        "Op maat gemaakte e-mail templates die passen bij jouw branding en zorgen voor een consistente en professionele uitstraling in al je e-mailcommunicatie.",
-    powersMaintenance:
-        "Onderhoud <small>en / of</small> updates <small>uit laten voeren</small>",
-    powersMaintenanceTitle: "Onderhoud en / of updates uit laten voeren",
-    powersMaintenanceInfo:
-        "Regelmatig onderhoud en updates om de optimale prestaties en veiligheid van je website of webapplicatie te garanderen. Wij zorgen ervoor dat alles up-to-date blijft en probleemloos functioneert.",
-    powersSeo: "Zoekmachine Optimalisatie <small>(SEO)</small>",
-    powersSeoTitle: "Zoekmachine Optimalisatie (SEO)",
-    powersSeoInfo:
-        "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.",
-    powersMoreInfo: "Meer info",
+    portfolio: {
+        title: "Recente Projecten",
+        intro: "Wij zijn trots op ons werk en showcasen dat ook graag! Neem een kijk in ons archief van recente projecten..",
+        goToProject: "Ga naar project",
+        goToRepo: "Github Repo",
+        noRepo: "Niet op Github",
 
-    portfolioTitle: "Recente Projecten",
-    portfolioIntro:
-        "Wij zijn trots op ons werk en showcasen dat ook graag! Neem een kijk in ons archief van recente projecten..",
-    portfolioGoToProject: "Ga naar project",
-    portfolioGoToRepo: "Github Repo",
-    portfolioNoRepo: "Niet op Github",
+        edutainuproductions:
+            "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
+        priozorg:
+            "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Priozorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
+        keeptreal:
+            "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
+        afrodiasphere:
+            "<strong>Afrodiasphere</strong> is een project geheel op eigen initiatief opgezet, voornamelijk gericht op het makkelijker maken van het delen van informatie onder particulieren / bedrijven die zich willen voortmanifesteren. Maak je profiel aan & join the MOVEMENT!",
+        eternitydrum:
+            "<strong>Eternity Percussion</strong> is een culturele instelling die bijdrage levert aan talentontwikkeling, cultuurparticipatie en visieverbreding van jongeren. D.m.v. o.a. muziekeducatie en inzet van jongeren in eigen organisatie biedt Eternity jongeren de gelegenheid om cultureel te ondernemen en participeren binnen de Nederlandse samenleving.",
+        knacdig:
+            "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
+        dsmelodies:
+            "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
+        blackharmony:
+            "<strong>Black Harmony</strong> is een populaire en getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina. Black harmony wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
+    },
 
-    portfolioEUPbio:
-        "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
-    portfolioKIRbio:
-        "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
-    portfolioADSbio:
-        "<strong>Afrodiasphere</strong> is een project geheel op eigen initiatief opgezet, voornamelijk gericht op het makkelijker maken van het delen van informatie onder particulieren / bedrijven die zich willen voortmanifesteren. Maak je profiel aan & join the MOVEMENT!",
-    portfolioEPbio:
-        "<strong>Eternity Percussion</strong> is een culturele instelling die bijdrage levert aan talentontwikkeling, cultuurparticipatie en visieverbreding van jongeren. D.m.v. o.a. muziekeducatie en inzet van jongeren in eigen organisatie biedt Eternity jongeren de gelegenheid om cultureel te ondernemen en participeren binnen de Nederlandse samenleving.",
-    portfolioKNbio:
-        "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
-    portfolioDSbio:
-        "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
-    portfolioBHbio:
-        "<strong>Black Harmony</strong> is een populaire en getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina. Black harmony wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
-    portfolioPZbio:
-        "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Priozorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
-
-    blogPostedOn: "Gepost:",
-    blogAuthor: "Auteur",
-    blogBackToAll: "Alle Blogposts",
-    blogPostedOn: "Gepost op",
-    blogFeedly: "Lees op Feedly",
-    blogFeedburner: "Aboneer via Feedburner",
-    blogLastUpdated: "Laatst bijgewerkt",
-    blogRelatedPosts: "Gerelateerde Artikelen",
-    blogReadMore: "Lees meer",
-
-    topicsIntro: "Al onze blog onderwerpen op een rijtje..",
-    topicsBackToAll: "Alle 'Topics'",
-    noContentAvailable: "Geen content beschikbaar",
-    noBlogPosts: "* Nog geen blogposts betreft deze topic ..",
-
-    pricesTitle: "Prijzen & tarieven",
-    pricesIntroOne:
-        "Hier ziet u een indicatie van onze scherpe prijzen. Heeft u liever een georiënteerd gesprek,",
-    pricesContact: "neem contact",
-    pricesIntroTwo: "met ons op of vraag om een",
-    pricesCallBack: "terugbelverzoek",
+    prices: {
+        title: "Prijzen & Tarieven",
+        intro: {
+            one: "Hier ziet u een indicatie van onze scherpe prijzen. Heeft u liever een georiënteerd gesprek,",
+            contact: "neem contact",
+            two: "met ons op of vraag om een",
+            callBack: "terugbelverzoek",
+        },
+    },
 
     priceTableVat: "(excl. btw)",
     priceTableDiscount: "*ACTIE: 5% korting",
@@ -251,6 +287,21 @@ export default {
     pricesFormChooseDay: "Kies een dag en tijd",
     pricesFormComments: "Heeft u nog opmerkingen? (optioneel)",
     pricesFormCallMeBack: "Bel mij terug",
+
+    blogPostedOn: "Gepost:",
+    blogAuthor: "Auteur",
+    blogBackToAll: "Alle Blogposts",
+    blogPostedOn: "Gepost op",
+    blogFeedly: "Lees op Feedly",
+    blogFeedburner: "Aboneer via Feedburner",
+    blogLastUpdated: "Laatst bijgewerkt",
+    blogRelatedPosts: "Gerelateerde Artikelen",
+    blogReadMore: "Lees meer",
+
+    topicsIntro: "Al onze blog onderwerpen op een rijtje..",
+    topicsBackToAll: "Alle 'Topics'",
+    noContentAvailable: "Geen content beschikbaar",
+    noBlogPosts: "* Nog geen blogposts betreft deze topic ..",
 
     faqTitle: "FAQ (Veelgestelde vragen)",
     faqIntro: "Pagina komt binnenkort!",

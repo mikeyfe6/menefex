@@ -10,6 +10,8 @@ import SEO from "../../components/seo";
 
 import * as servicesStyles from "../../styles/modules/pages/services.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const MaintenancePage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -17,22 +19,29 @@ const MaintenancePage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("powersMaintenanceTitle")}
-                <span>.</span>
-            </h1>
-            <h2 className="page-sub">{t("powersMaintenanceInfo")}</h2>
+            <section className="page-intro">
+                <h1 className="page-title">
+                    {t("services.maintenance.title")}
+                    <span>.</span>
+                </h1>
 
-            <div className={servicesStyles.buttons}>
-                <Link to="/diensten/">
-                    <i className="fa-solid fa-angles-left" />{" "}
-                    {t("powersServices")}
-                </Link>
-                <Link to="/prijzen/">
-                    {t("powersPrices")}{" "}
-                    <i className="fa-solid fa-angles-right" />
-                </Link>
-            </div>
+                <h2>{t("services.maintenance.intro")}</h2>
+            </section>
+
+            <section className={servicesStyles.servicesDetail}>
+                <div className={servicesStyles.servicesContainer}>
+                    <div className={servicesStyles.servicesButtons}>
+                        <Link to="/diensten/">
+                            <i className="fa-solid fa-angles-left" />{" "}
+                            {t("services.showAllServices")}
+                        </Link>
+                        <Link to="/prijzen/">
+                            {t("services.goToPrices")}{" "}
+                            <i className="fa-solid fa-angles-right" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };

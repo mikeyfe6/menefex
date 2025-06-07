@@ -39,9 +39,12 @@ export default {
 
     services: {
         title: "Our Services",
+        intro: "Here you will find an overview of the different services we offer. These services are designed to help businesses with their online presence and efficiency.",
+        showAllServices: "Show all services",
+        goToPrices: "Go to prices",
         websites: {
-            title: "Websites",
-            content:
+            name: "Websites",
+            excerpt:
                 "We create functional and efficient websites that are fully customized to meet your needs. Our websites adhere to all modern technical standards, ensuring a future-proof online presence.",
             focus: [
                 "Fast loading times",
@@ -50,10 +53,41 @@ export default {
                 "Cross-platform compatibility with all popular browsers",
             ],
             cta: "More about our websites",
+
+            // overview
+            caption: `<small>Have a</small> website <small>created</small>`,
+            snippet:
+                "Customized websites that perfectly match your branding and objectives. We design professional, user-friendly websites that ensure a strong online presence and optimal user experience.",
+
+            // detail
+            title: "Have a website created: <small>Custom and professional</small><span>.</span>",
+            intro: "At Menefex, we offer custom-built websites that perfectly align with your brand, goals, and target audience. Our focus is on designing websites that are both visually appealing and functional. Whether you're a start-up or an established business, we ensure that your online presence is strong, modern, and user-friendly.",
+            content: `<h3><strong>What you can expect from us:</strong></h3><ol><li><h4>Unique Custom Design</h4><p>Every website we design is one of a kind. We take your preferences and branding as a starting point to create a visually appealing design that stands out from the competition. No standard templates—just a website that tells your story.</p></li><li><h4>Fast Loading Times</h4><p>We understand the importance of speed for both users and search engines. That’s why we optimize your website for fast loading times, ensuring visitors don’t lose interest and search engines rank your site higher.</p></li><li><h4>User-Friendly Interface and Experience</h4><p>A good website is easy to navigate. We provide an intuitive user experience, where visitors can quickly and easily find the information they need. This not only enhances user satisfaction but also increases the chances of conversions.</p></li><li><h4>Future-Proof and Compatible</h4><p>Our websites meet all modern technical standards and are compatible with all popular browsers and devices. This ensures that your website is accessible anywhere, anytime, whether on desktop, tablet, or mobile.</p></li></ol><br /><h3><strong>Benefits of a custom-built website:</strong></h3><ul><li><p><strong>SEO-Friendly:</strong> Our websites are fully optimized for search engines, meaning you’ll be found more easily online.</p></li><li><p><strong>Flexibility:</strong> Your website can grow with your business. Whether you’re looking for an online store, blog, or portfolio, we seamlessly integrate all functionalities.</p></li><li><p><strong>Security:</strong> Your website is secure and meets all modern security standards, including SSL certificates.</p></li></ul>`,
+        },
+        webapps: {
+            name: "Webapplications",
+            excerpt:
+                "As digitalization and mobility grow, the demand for web and mobile apps is rising. Web applications stand out from websites by incorporating complex interactions that offer a seamless user experience.",
+            focus: [
+                "Offline functionality",
+                "Optimized for all devices",
+                "Integration with built-in features (e.g., camera, microphone, location)",
+            ],
+            cta: "More about our web applications",
+
+            // overview
+            caption: `<small>Have a</small> webapplication <small>created</small>`,
+            snippet:
+                "Professionally customized web applications that fully meet your business needs. Our web applications are user-friendly and designed to optimize your processes and increase efficiency.",
+
+            // detail
+            title: "Have a web Application created: Efficiency and customized innovation<span>.</span>",
+            intro: "At Menefex we create professionally customized web applications that seamlessly meet the specific needs of your company. Our applications are designed for user-friendliness and efficiency, so that they optimize your daily processes and increase productivity within your organization. Whether you are a small business or a large enterprise, we develop web applications that perfectly fit your unique goals.",
+            content: `<h3><strong>What You Can Expect from Us:</strong></h3> <ol> <li> <h4>Custom-Built Solutions and Functionality</h4> <p>Every web application we develop is fully tailored to your business processes and specific needs. We don’t offer generic solutions, but instead, create a web app that is designed to streamline your workflows, save time, and make your business operations more efficient. From project management tools to client portals and accounting systems, we build it for you.</p> </li> <li> <h4>User-Friendly and Intuitive Design</h4> <p>A good web application should be easy to use without compromising functionality. We design an interface that feels intuitive for everyone, regardless of their technical expertise. This ensures a smooth user experience and boosts your team's productivity.</p> </li> <li> <h4>Optimized Performance, Anytime, Anywhere</h4> <p>Our web applications are optimized for use across all devices and in any situation. Whether your team is working from the office, from home, or on the go, the application will function flawlessly. Additionally, we provide offline capabilities, ensuring your app is always available, even without an internet connection.</p> </li> <li> <h4>Integration of Advanced Features</h4> <p>Modern web applications require more than just basic functionality. That’s why we integrate advanced features such as access to the camera, microphone, GPS, and other device hardware. This ensures your web app is not only functional but also innovative and future-proof.</p> </li> </ol> <br /> <h3><strong>Benefits of a Custom Web Application:</strong></h3> <ul> <li> <p><strong>Process Optimization:</strong> By digitizing and automating your business processes, you save both time and money. Our web apps are designed to simplify your workflows and increase efficiency.</p> </li> <li> <p><strong>Future-Proof:</strong> These applications are built using modern technologies, meaning they are easily scalable and can expand as your business grows.</p> </li> <li> <p><strong>Security and Reliability:</strong> Security is our top priority. Our web applications come with the latest security protocols and comply with all relevant privacy and security standards, ensuring your data is always safe.</p> </li> <li> <p><strong>SEO-Friendly:</strong> Although web applications are often designed for specific business processes, we ensure they are optimized for search engines if relevant, making them as visible as possible online.</p> </li> </ul>`,
         },
         webshops: {
-            title: "Webshops",
-            content:
+            name: "Webshops",
+            excerpt:
                 "Webshops are essential for local businesses today. They provide access to a wider network, greater availability, and boost both conversion rates and product visibility.",
             focus: [
                 "Clear overview of your product range",
@@ -62,21 +96,20 @@ export default {
                 "Automated processes",
             ],
             cta: "More about our webshops",
-        },
-        webapps: {
-            title: "Webapplications",
-            content:
-                "As digitalization and mobility grow, the demand for web and mobile apps is rising. Web applications stand out from websites by incorporating complex interactions that offer a seamless user experience.",
-            focus: [
-                "Offline functionality",
-                "Optimized for all devices",
-                "Integration with built-in features (e.g., camera, microphone, location)",
-            ],
-            cta: "More about our web applications",
+
+            // overview
+            caption: `<small>Have a</small> webshop <small>created</small>`,
+            snippet:
+                "Professionally designed web shops that are fully tailored to your products and target group. Our tailor-made web shops offer a user-friendly interface and optimal functionality to maximize your online sales.",
+
+            // detail
+            title: "Have a webshop created",
+            intro: "Professionally designed web shops that are fully tailored to your products and target group. Our tailor-made web shops offer a user-friendly interface and optimal functionality to maximize your online sales.",
+            // content: ``,
         },
         seo: {
-            title: "Search Engine Optimization",
-            content:
+            name: "Search Engine Optimization",
+            excerpt:
                 "With our search engine optimization services, we ensure your website ranks high on search engines like Google, Bing, and Yahoo. This increases your business’s visibility and helps potential customers discover you faster.",
             focus: [
                 "Enhanced visibility in popular search engines",
@@ -84,10 +117,20 @@ export default {
                 "Use of data analysis, strategies, and statistics",
             ],
             cta: "More about our SEO services",
+
+            // overview
+            caption: `Search Engine Optimization <small>(SEO)</small>`,
+            snippet:
+                "Improve the findability of your website in search engines with targeted SEO strategies. We optimize your website to achieve higher positions in search results, so that you attract more traffic and customers.",
+
+            // detail
+            title: "Search Engine Optimization (SEO)",
+            intro: "Improve the findability of your website in search engines with targeted SEO strategies. We optimize your website to achieve higher positions in search results, so that you attract more traffic and customers.",
+            // content: ``,
         },
         maintenance: {
-            title: "Maintenance & Support",
-            content:
+            name: "Maintenance & Support",
+            excerpt:
                 "We offer comprehensive maintenance and support services to ensure your website or web application remains up-to-date, secure, and functional. Our team is always ready to assist you with any issues or updates.",
             focus: [
                 "Regular updates and security checks",
@@ -95,17 +138,58 @@ export default {
                 "Ongoing support for your digital products",
             ],
             cta: "More about our maintenance services",
+
+            // overview
+            caption: `Maintenance <small>and / or</small> updates <small>carried out</small>`,
+            snippet:
+                "Regular maintenance and updates to ensure the optimal performance and security of your website or web application. We ensure that everything stays up to date and functions smoothly.",
+
+            // detail
+            title: "Have maintenance and / or updates carried out",
+            intro: "Regular maintenance and updates to ensure the optimal performance and security of your website or web application. We ensure that everything stays up to date and functions smoothly.",
+            // content: ``,
         },
-        optimization: {
-            title: "Optimizations",
-            content:
-                "We optimize your website or web application to ensure it runs smoothly and efficiently. This includes performance enhancements, user experience improvements, and technical adjustments.",
+        optimizations: {
+            name: "Optimizations",
+            excerpt:
+                "We optimize your website or web application to improve performance, user experience, and conversion rates. This includes technical improvements, UX refinements, and visual enhancements.",
             focus: [
-                "Improved loading times",
-                "Enhanced user experience",
-                "Technical adjustments for better performance",
+                "Improved loading times and performance",
+                "User-friendly interface and experience",
+                "Balanced visual appeal and functionality",
             ],
             cta: "More about our optimizations",
+
+            // overview
+            caption: `<small>Have</small> optimizations <small>done for you</small>`,
+            snippet:
+                "We optimize your website or web application to improve performance, user experience, and conversion rates. This includes technical improvements, UX refinements, and visual enhancements.",
+
+            // detail
+            title: "Website & App Optimization Services",
+            intro: "Unlock the full potential of your website or web application with our comprehensive optimization services. From faster loading times to a smoother user experience and improved conversions, we fine-tune every detail to deliver measurable results.",
+            // content: "",
+        },
+        email: {
+            name: "Email Templates",
+            excerpt:
+                "Custom-designed email templates that align with your branding and ensure a consistent, professional look across all your email communications.",
+            focus: [
+                "Branded, tailor-made templates",
+                "Professional and consistent appearance",
+                "Optimized for readability and performance",
+            ],
+            cta: "More about our email template services",
+
+            // overview
+            caption: `<small>Have an</small> email template <small>created</small>`,
+            snippet:
+                "Custom-designed email templates that align with your branding and ensure a consistent, professional look across all your email communications.",
+
+            // detail
+            title: "Have an email template created",
+            intro: "Custom-designed email templates that align with your branding and ensure a consistent, professional look across all your email communications.",
+            // content: "",
         },
     },
 
@@ -122,72 +206,33 @@ export default {
             "Knowledge Network Afro Caribbean Diaspora Community Foundation from The Hague",
         keeptreal: "Regalness.nl Foundation from Amsterdam",
         priozorg: "Aid organization Prio Zorg from Amsterdam",
-        edutainuproductions: "",
+        edutainuproductions: "Edutain U Productions from Amsterdam",
     },
 
-    portfolioTitle: "Recent Projects",
-    portfolioIntro:
-        "We are proud of our work and like to show it! Take a look at our archive of recent projects..",
-    portfolioGoToProject: "View project",
-    portfolioGoToRepo: "Github Repo",
-    portfolioNoRepo: "Not on Github",
+    portfolio: {
+        title: "Recent Projects",
+        intro: "We are proud of our work and like to show it! Take a look at our archive of recent projects..",
+        goToProject: "View project",
+        goToRepo: "Github Repo",
+        noRepo: "Not on Github",
 
-    portfolioEUPbio:
-        "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment..",
-    portfolioKIRbio:
-        "<strong>Keep It Real</strong> is a program led by cultural professional Wenner Regales, which helps young people grow beyond the boundaries of traditional education. It provides a platform for making positive choices and seizing opportunities, rooted in Wenner's experience and network.",
-    portfolioADSbio:
-        "<strong>Afrodiasphere</strong> is a project set up entirely on our own initiative, mainly aimed at making it easier to share information among private individuals/companies that want to develop themselves. Create your profile & join the MOVEMENT!",
-    portfolioEPbio:
-        "<strong>Eternity Percussion</strong> is a cultural institution that contributes to talent development, cultural participation and broadening the vision of young people. By means of including music education and the deployment of young people in their own organization, Eternity offers young people the opportunity to undertake cultural activities and participate within Dutch society.",
-    portfolioKNbio:
-        "<strong>KN-ACDiG</strong> or Knowledge Network African-Caribbean Diaspora Community is a foundation that focuses on working on strengthening the identity, increasing visibility and knowledge management (advice to monitoring) of the African-Caribbean Diaspora Community.",
-    portfolioDSbio:
-        "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, formed from 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
-    portfolioBHbio:
-        "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina. Black harmony wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
-    portfolioPZbio:
-        "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Priozorg offers expert support in the form of coaching, mentoring and educational guidance.",
-
-    powersTitle: "Services",
-    powersServices: "Services",
-    powersPrices: "Prices",
-    powersIntro:
-        "Here you will find an overview of the different services we offer. These services are designed to help businesses with their online presence and efficiency.",
-    powersWebsite: "<small>Have a</small> website <small>created</small>",
-    powersWebsiteTitle: "Have a website created: Custom and professional",
-    powersWebsiteInfo:
-        "Customized websites that perfectly match your branding and objectives. We design professional, user-friendly websites that ensure a strong online presence and optimal user experience.",
-    powersWebsiteIntro:
-        "At Menefex, we offer custom-built websites that perfectly align with your brand, goals, and target audience. Our focus is on designing websites that are both visually appealing and functional. Whether you're a start-up or an established business, we ensure that your online presence is strong, modern, and user-friendly.",
-    powersWebsiteDetail:
-        "<h3><strong>What you can expect from us:</strong></h3><ol><li><h4>Unique Custom Design</h4><p>Every website we design is one of a kind. We take your preferences and branding as a starting point to create a visually appealing design that stands out from the competition. No standard templates—just a website that tells your story.</p></li><li><h4>Fast Loading Times</h4><p>We understand the importance of speed for both users and search engines. That’s why we optimize your website for fast loading times, ensuring visitors don’t lose interest and search engines rank your site higher.</p></li><li><h4>User-Friendly Interface and Experience</h4><p>A good website is easy to navigate. We provide an intuitive user experience, where visitors can quickly and easily find the information they need. This not only enhances user satisfaction but also increases the chances of conversions.</p></li><li><h4>Future-Proof and Compatible</h4><p>Our websites meet all modern technical standards and are compatible with all popular browsers and devices. This ensures that your website is accessible anywhere, anytime, whether on desktop, tablet, or mobile.</p></li></ol><br /><h3><strong>Benefits of a custom-built website:</strong></h3><ul><li><p><strong>SEO-Friendly:</strong> Our websites are fully optimized for search engines, meaning you’ll be found more easily online.</p></li><li><p><strong>Flexibility:</strong> Your website can grow with your business. Whether you’re looking for an online store, blog, or portfolio, we seamlessly integrate all functionalities.</p></li><li><p><strong>Security:</strong> Your website is secure and meets all modern security standards, including SSL certificates.</p></li></ul>",
-    powersWebapp: "<small>Have a</small> webapplication <small>created</small>",
-    powersWebappTitle:
-        "Have a web Application created: Efficiency and customized innovation.",
-    powersWebappInfo:
-        "Professionally customized web applications that fully meet your business needs. Our web applications are user-friendly and designed to optimize your processes and increase efficiency.",
-    powersWebappIntro:
-        "At Menefex we create professionally customized web applications that seamlessly meet the specific needs of your company. Our applications are designed for user-friendliness and efficiency, so that they optimize your daily processes and increase productivity within your organization. Whether you are a small business or a large enterprise, we develop web applications that perfectly fit your unique goals.",
-    powersWebappDetail: `<h3><strong>What You Can Expect from Us:</strong></h3> <ol> <li> <h4>Custom-Built Solutions and Functionality</h4> <p>Every web application we develop is fully tailored to your business processes and specific needs. We don’t offer generic solutions, but instead, create a web app that is designed to streamline your workflows, save time, and make your business operations more efficient. From project management tools to client portals and accounting systems, we build it for you.</p> </li> <li> <h4>User-Friendly and Intuitive Design</h4> <p>A good web application should be easy to use without compromising functionality. We design an interface that feels intuitive for everyone, regardless of their technical expertise. This ensures a smooth user experience and boosts your team's productivity.</p> </li> <li> <h4>Optimized Performance, Anytime, Anywhere</h4> <p>Our web applications are optimized for use across all devices and in any situation. Whether your team is working from the office, from home, or on the go, the application will function flawlessly. Additionally, we provide offline capabilities, ensuring your app is always available, even without an internet connection.</p> </li> <li> <h4>Integration of Advanced Features</h4> <p>Modern web applications require more than just basic functionality. That’s why we integrate advanced features such as access to the camera, microphone, GPS, and other device hardware. This ensures your web app is not only functional but also innovative and future-proof.</p> </li> </ol> <br /> <h3><strong>Benefits of a Custom Web Application:</strong></h3> <ul> <li> <p><strong>Process Optimization:</strong> By digitizing and automating your business processes, you save both time and money. Our web apps are designed to simplify your workflows and increase efficiency.</p> </li> <li> <p><strong>Future-Proof:</strong> These applications are built using modern technologies, meaning they are easily scalable and can expand as your business grows.</p> </li> <li> <p><strong>Security and Reliability:</strong> Security is our top priority. Our web applications come with the latest security protocols and comply with all relevant privacy and security standards, ensuring your data is always safe.</p> </li> <li> <p><strong>SEO-Friendly:</strong> Although web applications are often designed for specific business processes, we ensure they are optimized for search engines if relevant, making them as visible as possible online.</p> </li> </ul>`,
-    powersWebshop: "<small>Have a</small> webshop <small>created</small>",
-    powersWebshopTitle: "Have a webshop created",
-    powersWebshopInfo:
-        "Professionally designed web shops that are fully tailored to your products and target group. Our tailor-made web shops offer a user-friendly interface and optimal functionality to maximize your online sales.",
-    powersEmail: "<small>Have an</small> email template <small>created</small>",
-    powersEmailTitle: "Have an email template created",
-    powersEmailInfo:
-        "Customized email templates that match your branding and ensure a consistent and professional look in all your email communications.",
-    powersMaintenance:
-        "<small>Have</small> maintenance <small>and / or</small> updates <small>carried out</small>",
-    powersMaintenanceTitle: "Have maintenance and / or updates carried out",
-    powersMaintenanceInfo:
-        "Regular maintenance and updates to ensure the optimal performance and security of your website or web application. We ensure that everything stays up to date and functions smoothly.",
-    powersSeo: "Search Engine Optimization <small>(SEO)</small>",
-    powersSeoTitle: "Search Engine Optimization (SEO)",
-    powersSeoInfo:
-        "Improve the findability of your website in search engines with targeted SEO strategies. We optimize your website to achieve higher positions in search results, so that you attract more traffic and customers.",
-    powersMoreInfo: "More info",
+        edutainuproductions:
+            "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment..",
+        priozorg:
+            "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Priozorg offers expert support in the form of coaching, mentoring and educational guidance.",
+        keeptreal:
+            "<strong>Keep It Real</strong> is a program led by cultural professional Wenner Regales, which helps young people grow beyond the boundaries of traditional education. It provides a platform for making positive choices and seizing opportunities, rooted in Wenner's experience and network.",
+        afrodiasphere:
+            "<strong>Afrodiasphere</strong> is a project set up entirely on our own initiative, mainly aimed at making it easier to share information among private individuals/companies that want to develop themselves. Create your profile & join the MOVEMENT!",
+        eternitydrum:
+            "<strong>Eternity Percussion</strong> is a cultural institution that contributes to talent development, cultural participation and broadening the vision of young people. By means of including music education and the deployment of young people in their own organization, Eternity offers young people the opportunity to undertake cultural activities and participate within Dutch society.",
+        knacdig:
+            "<strong>KN-ACDiG</strong> or Knowledge Network African-Caribbean Diaspora Community is a foundation that focuses on working on strengthening the identity, increasing visibility and knowledge management (advice to monitoring) of the African-Caribbean Diaspora Community.",
+        dsmelodies:
+            "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, formed from 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
+        blackharmony:
+            "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina. Black harmony wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
+    },
 
     blogPostedOn: "Posted on:",
     blogAuthor: "Author",

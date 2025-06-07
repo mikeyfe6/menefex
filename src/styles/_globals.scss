@@ -19,19 +19,6 @@
     gap: 5em;
 }
 
-.notes-call {
-    display: flex;
-    gap: 3em;
-
-    > section {
-        flex: 60%;
-    }
-
-    > form {
-        flex: 40%;
-    }
-}
-
 // Terms & Cods
 
 .terms-conditions,
@@ -66,4 +53,3 @@
         list-style-type: disc;
     }
 }
-

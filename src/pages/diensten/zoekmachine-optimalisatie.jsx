@@ -10,6 +10,8 @@ import SEO from "../../components/seo";
 
 import * as servicesStyles from "../../styles/modules/pages/services.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const SeoPage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -17,22 +19,36 @@ const SeoPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("powersSeoTitle")}
-                <span>.</span>
-            </h1>
-            <h2 className="page-sub">{t("powersSeoInfo")}</h2>
+            <section className="page-intro">
+                <h1 className="page-title">
+                    {t("services.seo.title")}
+                    <span>.</span>
+                </h1>
 
-            <div className={servicesStyles.buttons}>
-                <Link to="/diensten/">
-                    <i className="fa-solid fa-angles-left" />{" "}
-                    {t("powersServices")}
-                </Link>
-                <Link to="/prijzen/">
-                    {t("powersPrices")}{" "}
-                    <i className="fa-solid fa-angles-right" />
-                </Link>
-            </div>
+                <h2>{t("services.seo.intro")}</h2>
+            </section>
+
+            <section className={servicesStyles.servicesDetail}>
+                <div className={servicesStyles.servicesContainer}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("services.seo.content"),
+                        }}
+                        className={servicesStyles.servicesContent}
+                    />
+
+                    <div className={servicesStyles.servicesButtons}>
+                        <Link to="/diensten/">
+                            <i className="fa-solid fa-angles-left" />{" "}
+                            {t("services.showAllServices")}
+                        </Link>
+                        <Link to="/prijzen/">
+                            {t("services.goToPrices")}{" "}
+                            <i className="fa-solid fa-angles-right" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };

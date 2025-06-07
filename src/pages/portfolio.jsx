@@ -10,6 +10,8 @@ import SEO from "../components/seo";
 
 import * as portfolioStyles from "../styles/modules/pages/portfolio.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const PortfolioPage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -17,29 +19,29 @@ const PortfolioPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("portfolioTitle")}
-                <span>.</span>
-            </h1>
+            <section className="page-intro">
+                <h1>
+                    {t("portfolio.title")}
+                    <span>.</span>
+                </h1>
+                <h2>{t("portfolio.intro")}</h2>
+            </section>
 
-            <h2 className="page-sub">{t("portfolioIntro")}</h2>
-
-            <section>
-                <div className={portfolioStyles.portfolio}>
+            <section className={portfolioStyles.portfolio}>
+                <div className={portfolioStyles.portfolioContainer}>
                     {/*
-          // * AFRODIASPHERE !
+          // * EDUTAIN U PRODOCTIONS !
           */}
-
                     <div id="#EUP">
                         <a
                             href="https://edutainuproductions.nl"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/edutainuproductions.png"
                                 alt="Edutain U Productions"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -48,7 +50,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioEUPbio"),
+                                    __html: t("portfolio.edutainuproductions"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -68,7 +70,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/edutainuproductions"
@@ -77,21 +79,25 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnDark}
                             >
                                 <i className="fa-brands fa-github" />
-                                {t("portfolioGoToRepo")}
+                                {t("portfolio.goToRepo")}
                             </a>
                         </div>
                     </div>
+
+                    {/*
+          // * PRIO ZORG !
+          */}
 
                     <div id="#PZ">
                         <a
                             href="https://prio-zorg.nl"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/priozorg.png"
                                 alt="Prio Zorg"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -100,7 +106,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioPZbio"),
+                                    __html: t("portfolio.priozorg"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -121,7 +127,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/prio-zorg"
@@ -130,21 +136,25 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnDark}
                             >
                                 <i className="fa-brands fa-github" />
-                                {t("portfolioGoToRepo")}
+                                {t("portfolio.goToRepo")}
                             </a>
                         </div>
                     </div>
+
+                    {/*
+          // * KEEP IT REAL !
+          */}
 
                     <div id="#KIR">
                         <a
                             href="https://keeptreal.nl"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/keeptreal.png"
                                 alt="Keep It Real"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -153,7 +163,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioKIRbio"),
+                                    __html: t("portfolio.keeptreal"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -174,7 +184,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/keepitreal"
@@ -183,21 +193,25 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnDark}
                             >
                                 <i className="fa-brands fa-github" />
-                                {t("portfolioGoToRepo")}
+                                {t("portfolio.goToRepo")}
                             </a>
                         </div>
                     </div>
+
+                    {/*
+          // * AFRODIASPHERE!
+          */}
 
                     <div id="#ADS">
                         <a
                             href="https://afrodiasphere.com"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/afrodiasphere.png"
                                 alt="Afrodiasphere"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -206,7 +220,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioADSbio"),
+                                    __html: t("portfolio.afrodiasphere"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -229,7 +243,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/Afrodiasphere"
@@ -238,13 +252,13 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnDark}
                             >
                                 <i className="fa-brands fa-github" />
-                                {t("portfolioGoToRepo")}
+                                {t("portfolio.goToRepo")}
                             </a>
                         </div>
                     </div>
 
                     {/*
-          // * ETERNITY PERCUSSION!
+          // * ETERNITY PERCUSSION !
           */}
 
                     <div id="#EP">
@@ -252,11 +266,11 @@ const PortfolioPage = () => {
                             href="https://eternitydrum.com"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/eternitydrum.png"
                                 alt="Eternity Percussion"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -265,7 +279,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioEPbio"),
+                                    __html: t("portfolio.eternitydrum"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -286,7 +300,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/eternity-drum"
@@ -295,7 +309,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnDark}
                             >
                                 <i className="fa-brands fa-github" />
-                                {t("portfolioGoToRepo")}
+                                {t("portfolio.goToRepo")}
                             </a>
                         </div>
                     </div>
@@ -323,7 +337,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioKNbio"),
+                                    __html: t("portfolio.knacdig"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -337,23 +351,23 @@ const PortfolioPage = () => {
                         </div>
                         <div className={portfolioStyles.portfolioBtns}>
                             <a
-                                href="https://kn-acdig.com"
-                                rel="noopener noreferrer"
-                                target="_blank"
+                                // href="https://kn-acdig.com"
+                                // rel="noopener noreferrer"
+                                // target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                <strike>{t("portfolioGoToProject")}</strike>
+                                <strike>{t("portfolio.goToProject")}</strike>
                             </a>
-                            <a className={portfolioStyles.btnDark}>
+                            <a className={portfolioStyles.btnDark} disabled>
                                 <i className="fa-brands fa-github" />
-                                <strike>{t("portfolioNoRepo")}</strike>
+                                <strike>{t("portfolio.noRepo")}</strike>
                             </a>
                         </div>
                     </div>
 
                     {/*
-          // * DS Melodies !
+          // * DS MELODIES !
           */}
 
                     <div id="#DSM">
@@ -361,11 +375,11 @@ const PortfolioPage = () => {
                             href="https://dsmelodies.com"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/dsmelodies.png"
                                 alt="DS Melodies"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -374,7 +388,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioDSbio"),
+                                    __html: t("portfolio.dsmelodies"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -394,12 +408,12 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                                 {/* Komt Binnenkort */}
                             </a>
-                            <a className={portfolioStyles.btnDark}>
+                            <a className={portfolioStyles.btnDark} disabled>
                                 <i className="fa-brands fa-github" />
-                                <strike>{t("portfolioNoRepo")}</strike>
+                                <strike>{t("portfolio.noRepo")}</strike>
                             </a>
                         </div>
                     </div>
@@ -413,11 +427,11 @@ const PortfolioPage = () => {
                             href="https://blackharmony.nl"
                             rel="noopener noreferrer"
                             target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
                             <StaticImage
                                 src="../../public/project-images/blackharmony.png"
                                 alt="Eternity Percussion"
-                                className={portfolioStyles.portfolioImg}
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -426,7 +440,7 @@ const PortfolioPage = () => {
                             </h3>
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: t("portfolioBHbio"),
+                                    __html: t("portfolio.blackharmony"),
                                 }}
                             />
                             <div className={portfolioStyles.tools}>
@@ -447,18 +461,14 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <i className="fa-solid fa-eye" />
-                                {t("portfolioGoToProject")}
+                                {t("portfolio.goToProject")}
                             </a>
-                            <a className={portfolioStyles.btnDark}>
+                            <a className={portfolioStyles.btnDark} disabled>
                                 <i className="fa-brands fa-github" />
-                                <strike>{t("portfolioNoRepo")}</strike>
+                                <strike>{t("portfolio.noRepo")}</strike>
                             </a>
                         </div>
                     </div>
-
-                    {/*
-          // * EXTRA PROJECTEN BIJVOEGEN HIERONDER!
-          */}
                 </div>
             </section>
         </Layout>

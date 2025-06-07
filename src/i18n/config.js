@@ -6,8 +6,8 @@ import nl from "./nl";
 import en from "./en";
 
 const resources = {
-    en: { translation: en },
-    nl: { translation: nl },
+    en: { translation: en || {} },
+    nl: { translation: nl || {} },
 };
 
 i18n.use(Backend)
@@ -15,6 +15,7 @@ i18n.use(Backend)
     .init({
         resources,
         fallbackLng: "nl",
+        debug: true,
         detection: {
             order: ["localStorage", "cookie", "navigator"],
             caches: ["localStorage", "cookie"],
@@ -24,6 +25,9 @@ i18n.use(Backend)
         },
         react: {
             useSuspense: false,
+        },
+        missingKeyHandler: function (lng, ns, key, fallbackValue) {
+            console.warn(`Missing translation: ${key} (${lng})`);
         },
     });
 

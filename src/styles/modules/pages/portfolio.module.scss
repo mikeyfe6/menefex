@@ -1,107 +1,131 @@
 @use "../../customs" as *;
 
 .portfolio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    $portfolio: &;
 
-    &-img {
-        max-height: 100%;
-        max-width: 100%;
-        border: 2px $snow-color solid;
-        border-radius: 10px;
-        margin-bottom: 2em;
-        z-index: 1;
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: rem-calc(48);
 
-        @include smooth-trans;
-        @include box-shadow;
+        @include container;
 
-        &:hover {
-            opacity: 0.7;
-            border-color: $link-color;
-
-            @include smooth-trans;
-        }
-    }
-
-    &-info {
-        padding: 0.5rem 1rem;
-        border: 0.5px solid $lightgrey-color;
-        border-bottom: none;
-        border-top: none;
-        min-height: 250px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2em;
-
-        span {
-            margin-right: 1em;
-            color: $secondary-color;
-            display: inline;
-        }
-
-        h3 {
-            display: inline;
-
-            @include fluid-typing(18, 22);
-        }
-
-        p {
-            font-weight: 300;
-            margin: 1em 0;
-
-            @include fluid-typing(14, 16);
-        }
-
-        .tools {
+        > div {
             display: flex;
-            align-items: center;
-            margin-top: auto;
+            flex-direction: column;
 
-            ul {
+            &:has(img) {
+                #{$portfolio}-btns {
+                    margin-top: auto;
+                }
+            }
+
+            #{$portfolio}-img {
+                display: block;
+                border: 2px $snow-color solid;
+                border-radius: $medium-radius;
+                margin-bottom: rem-calc(32);
+                overflow: hidden;
+                z-index: 1;
+
+                @include smooth-trans;
+
+                &:hover {
+                    opacity: 0.7;
+                    border-color: $link-color;
+
+                    @include smooth-trans;
+                }
+            }
+
+            #{$portfolio}-info {
+                padding: rem-calc(8 24);
+                border-left: 2px solid $smoke-color;
+                border-right: 2px solid $smoke-color;
+                min-height: rem-calc(250);
                 display: flex;
-                flex-wrap: wrap;
-                gap: 0.25em;
+                flex-direction: column;
+                margin-bottom: rem-calc(32);
 
-                li {
-                    background: linear-gradient(
-                        145deg,
-                        $primary-color,
-                        $dark-color
-                    );
-                    border-radius: $low-radius;
-                    padding: 0 0.75em;
-                    color: $smoke-color;
-                    white-space: nowrap;
+                > h3 {
+                    display: inline;
+                    font-family: $poppins-font;
+                    font-weight: 600;
+                    letter-spacing: $low-spacing;
 
-                    @include box-shadow;
+                    @include fluid-typing(18, 21);
 
-                    @include fluid-typing(10, 12);
+                    > span {
+                        margin-right: rem-calc(16);
+                        color: $secondary-color;
+                        font-weight: 600;
+                        display: inline;
+
+                        @include fluid-typing(16, 18);
+                    }
+                }
+
+                > p {
+                    margin: rem-calc(16 0 28);
+
+                    @include fluid-typing(16, 18);
+                }
+
+                .tools {
+                    display: flex;
+                    align-items: center;
+                    margin-top: auto;
+
+                    > span {
+                        margin-right: rem-calc(16);
+                        color: $secondary-color;
+                        font-weight: 600;
+                        display: inline;
+                    }
+
+                    > ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: rem-calc(4);
+
+                        > li {
+                            background: linear-gradient(
+                                145deg,
+                                $primary-color,
+                                $dark-color
+                            );
+                            border-radius: $low-radius;
+                            padding: rem-calc(2 12);
+                            width: fit-content;
+                            color: $smoke-color;
+                            white-space: nowrap;
+
+                            @include fluid-typing(10, 11);
+                        }
+                    }
                 }
             }
-        }
-    }
 
-    &-btns {
-        display: flex;
-        gap: 1em;
+            #{$portfolio}-btns {
+                display: flex;
+                gap: rem-calc(16);
 
-        .btn {
-            &-dark {
-                @include dark-button;
+                .btn {
+                    &-dark,
+                    &-light {
+                        i {
+                            margin-right: rem-calc(8);
+                            font-size: rem-calc(18);
+                        }
+                    }
 
-                i {
-                    margin-right: 0.5em;
-                    font-size: 1.125em;
-                }
-            }
+                    &-dark {
+                        @include dark-button;
+                    }
 
-            &-light {
-                @include light-button;
-
-                i {
-                    margin-right: 0.5em;
-                    font-size: 1.125em;
+                    &-light {
+                        @include light-button;
+                    }
                 }
             }
         }

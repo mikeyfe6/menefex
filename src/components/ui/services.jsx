@@ -21,14 +21,6 @@ const Services = () => {
             url: "/diensten/website-laten-maken/",
             cta: t("services.websites.cta"),
         },
-        webshops: {
-            name: t("services.webshops.name"),
-            icon: "fa-solid fa-shopping-cart",
-            excerpt: t("services.webshops.excerpt"),
-            focus: t("services.webshops.focus", { returnObjects: true }),
-            url: "/diensten/webshop-laten-maken/",
-            cta: t("services.webshops.cta"),
-        },
         webapps: {
             name: t("services.webapps.name"),
             icon: "fa-solid fa-mobile",
@@ -36,6 +28,14 @@ const Services = () => {
             focus: t("services.webapps.focus", { returnObjects: true }),
             url: "/diensten/webapplicatie-laten-maken/",
             cta: t("services.webapps.cta"),
+        },
+        webshops: {
+            name: t("services.webshops.name"),
+            icon: "fa-solid fa-shopping-cart",
+            excerpt: t("services.webshops.excerpt"),
+            focus: t("services.webshops.focus", { returnObjects: true }),
+            url: "/diensten/webshop-laten-maken/",
+            cta: t("services.webshops.cta"),
         },
         seo: {
             name: t("services.seo.name"),
@@ -53,23 +53,23 @@ const Services = () => {
             url: "/diensten/onderhoud-en-support/",
             cta: t("services.maintenance.cta"),
         },
-        optimization: {
-            name: t("services.optimization.name"),
+        optimizations: {
+            name: t("services.optimizations.name"),
             icon: "fa-solid fa-rocket",
-            excerpt: t("services.optimization.excerpt"),
-            focus: t("services.optimization.focus", { returnObjects: true }),
-            url: "/diensten/optimalisatie/",
-            cta: t("services.optimization.cta"),
+            excerpt: t("services.optimizations.excerpt"),
+            focus: t("services.optimizations.focus", { returnObjects: true }),
+            url: "/diensten/optimalisaties-laten-uitvoeren/",
+            cta: t("services.optimizations.cta"),
         },
     };
 
     const serviceKeys = [
         "websites",
-        "webshops",
         "webapps",
+        "webshops",
         "seo",
         "maintenance",
-        "optimization",
+        "optimizations",
     ];
 
     if (!isHydrated) return null;
@@ -91,7 +91,7 @@ const Services = () => {
                         {services[selected].cta}
                     </Link>
                 </div>
-                <h3>{t("services.name")}</h3>
+                <h3>{t("services.title")}</h3>
                 <p>
                     Bij Menefex bieden we een compleet pakket aan digitale
                     diensten om jouw online aanwezigheid te versterken. Of je nu
