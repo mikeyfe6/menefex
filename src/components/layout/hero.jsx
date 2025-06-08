@@ -9,6 +9,8 @@ import heroLogo from "../../images/logo/mnfx-icon.svg";
 import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
 import * as tpWriterStyles from "../../styles/modules/layout/typewriter.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const Hero = () => {
     const { t } = useTranslation();
 

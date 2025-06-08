@@ -36,6 +36,14 @@
 
                 @include fluid-typing(16, 18);
 
+                > a {
+                    color: $secondary-color;
+
+                    &:hover {
+                        color: $link-color;
+                    }
+                }
+
                 > span {
                     display: block;
                     margin: rem-calc(16 0);

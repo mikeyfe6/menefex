@@ -6,6 +6,8 @@ import useTranslation from "../../hooks/use-translation";
 
 import * as pricesStyles from "../../styles/modules/ui/prices.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const PriceTable = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -35,38 +37,40 @@ const PriceTable = () => {
     if (!isHydrated) return null;
 
     return (
-        <section>
-            <ul className={pricesStyles.prices}>
-                <li>
+        <section className={pricesStyles.prices}>
+            <div className={pricesStyles.pricesContainer}>
+                <div className={pricesStyles.price}>
                     <h3>BUDGET PLAN</h3>
-                    <p className={pricesStyles.price}>
-                        <span>€ 295,-</span> <SalePrice ogPrice={295} />{" "}
-                        <sup>{t("priceTableVat")}</sup>
-                    </p>
-                    <p className={pricesStyles.priceAction}>
-                        {t("priceTableDiscount")}
-                    </p>
-                    <p className={pricesStyles.priceContains}>
-                        {t("priceTableContains")}
-                    </p>
+                    <div>
+                        <p className={pricesStyles.priceMain}>
+                            <span>€ 295,-</span> <SalePrice ogPrice={295} />{" "}
+                            <sup>{t("prices.table.vat")}</sup>
+                        </p>
+                        <p className={pricesStyles.priceAction}>
+                            {t("prices.table.discount")}
+                        </p>
+                        <p className={pricesStyles.priceContains}>
+                            {t("prices.table.contains")}
+                        </p>
+                    </div>
                     <ul>
                         <li className={pricesStyles.priceBold}>
-                            1 - 2 {t("priceTablePages")}
+                            1 - 2 {t("prices.table.pages")}
                         </li>
-                        <li>{t("priceTableCustomDesign")}</li>
-                        <li>{t("priceTableResponsive")}</li>
-                        <li>{t("priceTableCms")}</li>
-                        <li>{t("priceTableMedia")}</li>
-                        <li>{t("priceTableForms")}</li>
-                        <li>{t("priceTableSocialMedia")}</li>
-                        <li>{t("priceTableReviews")}</li>
-                        <li>{t("priceTableStatistics")}</li>
-                        <li>{t("priceTableSsl")}</li>
+                        <li>{t("prices.table.customDesign")}</li>
+                        <li>{t("prices.table.responsive")}</li>
+                        <li>{t("prices.table.cms")}</li>
+                        <li>{t("prices.table.media")}</li>
+                        <li>{t("prices.table.forms")}</li>
+                        <li>{t("prices.table.socialMedia")}</li>
+                        <li>{t("prices.table.reviews")}</li>
+                        <li>{t("prices.table.statistics")}</li>
+                        <li>{t("prices.table.ssl")}</li>
                         <li className={pricesStyles.priceFeat}>
-                            {t("priceTableExtra")}
+                            {t("prices.table.extra")}
                         </li>
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableOneMonth")}
+                            {t("prices.table.oneMonth")}
                         </li>
                     </ul>
                     <button
@@ -79,46 +83,47 @@ const PriceTable = () => {
                             )
                         }
                     >
-                        {t("priceQuote")}
+                        {t("prices.table.button")}
                     </button>
-                </li>
+                </div>
 
-                <li>
+                <div className={pricesStyles.price}>
                     <h3>STARTER PLAN</h3>
-                    <p className={pricesStyles.price}>
-                        <span>€ 595,-</span> <SalePrice ogPrice={595} />{" "}
-                        <sup>{t("priceTableVat")}</sup>
-                    </p>
-                    <p className={pricesStyles.priceAction}>
-                        {t("priceTableDiscount")}
-                    </p>
-                    <p className={pricesStyles.priceContains}>
-                        {t("priceTableContains")}
-                    </p>
+                    <div>
+                        <p className={pricesStyles.priceMain}>
+                            <span>€ 595,-</span> <SalePrice ogPrice={595} />{" "}
+                            <sup>{t("prices.table.vat")}</sup>
+                        </p>
+                        <p className={pricesStyles.priceAction}>
+                            {t("prices.table.discount")}
+                        </p>
+                        <p className={pricesStyles.priceContains}>
+                            {t("prices.table.contains")}
+                        </p>
+                    </div>
                     <ul>
                         <li className={pricesStyles.priceBold}>
-                            1 - 5 {t("priceTablePages")}
+                            1 - 5 {t("prices.table.pages")}
                         </li>
-                        <li>{t("priceTableCustomDesign")}</li>
-                        <li>{t("priceTableResponsive")}</li>
-                        <li>{t("priceTableCms")}</li>
+                        <li>{t("prices.table.customDesign")}</li>
+                        <li>{t("prices.table.responsive")}</li>
+                        <li>{t("prices.table.cms")}</li>
                         <li className={pricesStyles.priceBold}>Blog</li>
-                        <li>{t("priceTableSocialMedia")}</li>
-                        <li>{t("priceTableForms")}</li>
-                        <li>{t("priceTableSocialMedia")}</li>
-                        <li>{t("priceTableReviews")}</li>
-                        <li>{t("priceTableStatistics")}</li>
-                        <li>{t("priceTableSsl")}</li>
+                        <li>{t("prices.table.media")}</li>
+                        <li>{t("prices.table.forms")}</li>
+                        <li>{t("prices.table.socialMedia")}</li>
+                        <li>{t("prices.table.reviews")}</li>
+                        <li>{t("prices.table.statistics")}</li>
+                        <li>{t("prices.table.ssl")}</li>
                         <li className={pricesStyles.priceFeat}>
-                            {t("priceTableExtra")}
+                            {t("prices.table.extra")}
                         </li>
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableThreeMonths")}
+                            {t("prices.table.threeMonths")}
                         </li>
                     </ul>
                     <button
                         type="button"
-                        name="offerte"
                         onClick={() =>
                             handlePrice(
                                 "Hi Michael, ik wil graag een offerte aanvragen voor de Starter Plan...",
@@ -126,44 +131,46 @@ const PriceTable = () => {
                             )
                         }
                     >
-                        {t("priceQuote")}
+                        {t("prices.table.button")}
                     </button>
-                </li>
+                </div>
 
-                <li>
+                <div className={pricesStyles.price}>
                     <h3>ESTABLISHED PLAN</h3>
-                    <p className={pricesStyles.price}>
-                        <span>€ 1025,-</span> <SalePrice ogPrice={1025} />{" "}
-                        <sup>{t("priceTableVat")}</sup>
-                    </p>
-                    <p className={pricesStyles.priceAction}>
-                        {t("priceTableDiscount")}
-                    </p>
-                    <p className={pricesStyles.priceContains}>
-                        {t("priceTableContains")}
-                    </p>
+                    <div>
+                        <p className={pricesStyles.priceMain}>
+                            <span>€ 1025,-</span> <SalePrice ogPrice={1025} />{" "}
+                            <sup>{t("prices.table.vat")}</sup>
+                        </p>
+                        <p className={pricesStyles.priceAction}>
+                            {t("prices.table.discount")}
+                        </p>
+                        <p className={pricesStyles.priceContains}>
+                            {t("prices.table.contains")}
+                        </p>
+                    </div>
                     <ul>
                         <li className={pricesStyles.priceBold}>
-                            ± 10 {t("priceTablePages")}
+                            ± 10 {t("prices.table.pages")}
                         </li>
-                        <li>{t("priceTableCustomDesign")}</li>
-                        <li>{t("priceTableResponsive")}</li>
-                        <li>{t("priceTableCms")}</li>
+                        <li>{t("prices.table.customDesign")}</li>
+                        <li>{t("prices.table.responsive")}</li>
+                        <li>{t("prices.table.cms")}</li>
                         <li className={pricesStyles.priceBold}>Blog</li>
-                        <li>{t("priceTableSocialMedia")}</li>
-                        <li>{t("priceTableForms")}</li>
+                        <li>{t("prices.table.media")}</li>
+                        <li>{t("prices.table.forms")}</li>
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableSearch")}
+                            {t("prices.table.search")}
                         </li>
-                        <li>{t("priceTableSocialMedia")}</li>
-                        <li>{t("priceTableReviews")}</li>
-                        <li>{t("priceTableStatistics")}</li>
-                        <li>{t("priceTableSsl")}</li>
+                        <li>{t("prices.table.socialMedia")}</li>
+                        <li>{t("prices.table.reviews")}</li>
+                        <li>{t("prices.table.statistics")}</li>
+                        <li>{t("prices.table.ssl")}</li>
                         <li className={pricesStyles.priceFeat}>
-                            {t("priceTableExtra")}
+                            {t("prices.table.extra")}
                         </li>
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableSixMonths")}
+                            {t("prices.table.sixMonths")}
                         </li>
                     </ul>
                     <button
@@ -176,50 +183,53 @@ const PriceTable = () => {
                             )
                         }
                     >
-                        {t("priceQuote")}
+                        {t("prices.table.button")}
                     </button>
-                </li>
+                </div>
 
-                <li>
+                <div className={pricesStyles.price}>
                     <h3>BUSINESS PLAN</h3>
-                    <p className={pricesStyles.price}>
-                        <span>€ 1575,-</span> <SalePrice ogPrice={1575} />{" "}
-                        <sup>{t("priceTableVat")}</sup>
-                    </p>
-                    <p className={pricesStyles.priceAction}>
-                        {t("priceTableDiscount")}
-                    </p>{" "}
-                    <p className={pricesStyles.priceContains}>
-                        {t("priceTableContains")}
-                    </p>
+                    <div>
+                        <p className={pricesStyles.priceMain}>
+                            <span>€ 1575,-</span> <SalePrice ogPrice={1575} />{" "}
+                            <sup>{t("prices.table.vat")}</sup>
+                        </p>
+                        <p className={pricesStyles.priceAction}>
+                            {t("prices.table.discount")}
+                        </p>{" "}
+                        <p className={pricesStyles.priceContains}>
+                            {t("prices.table.contains")}
+                        </p>
+                    </div>
                     <ul>
                         <li className={pricesStyles.priceBold}>
-                            ∞ {t("priceTablePages")}
+                            ∞ {t("prices.table.pages")}
                         </li>
-                        <li>{t("priceTableCustomDesign")}</li>
-                        <li>{t("priceTableResponsive")}</li>
-                        <li>{t("priceTableCms")}</li>
+                        <li>{t("prices.table.customDesign")}</li>
+                        <li>{t("prices.table.responsive")}</li>
+                        <li>{t("prices.table.cms")}</li>
                         <li className={pricesStyles.priceBold}>Blog</li>
-                        <li>{t("priceTableSocialMedia")}</li>
+                        <li>{t("prices.table.media")}</li>
                         <li className={pricesStyles.priceBold}>
                             User Login / Register
                         </li>
-                        <li>{t("priceTableForms")}</li>
+                        <li>{t("prices.table.forms")}</li>
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableSearch")}
+                            {t("prices.table.search")}
                         </li>
-                        <li>{t("priceTableSocialMedia")}</li>
+                        <li>{t("prices.table.socialMedia")}</li>
+
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableBank")}
+                            {t("prices.table.ecommerce")}
                         </li>
-                        <li>{t("priceTableReviews")}</li>
-                        <li>{t("priceTableStatistics")}</li>
-                        <li>{t("priceTableSsl")}</li>
+                        <li>{t("prices.table.reviews")}</li>
+                        <li>{t("prices.table.statistics")}</li>
+                        <li>{t("prices.table.ssl")}</li>
                         <li className={pricesStyles.priceFeat}>
-                            {t("priceTableExtra")}
+                            {t("prices.table.extra")}
                         </li>
                         <li className={pricesStyles.priceBold}>
-                            {t("priceTableTwelveMonths")}
+                            {t("prices.table.twelveMonths")}
                         </li>
                     </ul>
                     <button
@@ -232,10 +242,10 @@ const PriceTable = () => {
                             )
                         }
                     >
-                        {t("priceQuote")}
+                        {t("prices.table.button")}
                     </button>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
     );
 };

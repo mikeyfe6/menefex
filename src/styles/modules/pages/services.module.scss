@@ -7,7 +7,7 @@
         #{$services}-container {
             display: flex;
             flex-wrap: wrap;
-            gap: rem-calc(16);
+            gap: rem-calc(24);
 
             @include container;
 
@@ -21,17 +21,14 @@
                 outline: 2px solid $primary-color;
                 background: linear-gradient(145deg, $white-color, $smoke-color);
 
-                @include box-shadow;
-
                 > h3 {
                     font-weight: 600;
 
+                    @include fluid-typing(21, 23);
+
                     small {
-                        font-size: 75%;
                         color: $secondary-color;
                     }
-
-                    @include fluid-typing(21, 23);
                 }
 
                 > hr {
@@ -62,12 +59,10 @@
                 max-width: 80ch;
 
                 h3 {
-                    font-family: $poppins-font;
                     margin-bottom: rem-calc(24);
-                    letter-spacing: normal;
 
+                    @include poppins-title;
                     @include underline;
-
                     @include fluid-typing(24, 28);
                 }
 
@@ -112,7 +107,6 @@
                 gap: rem-calc(24);
 
                 > a {
-                    display: flex;
                     gap: rem-calc(12);
 
                     @include primary-button;

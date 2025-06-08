@@ -49,9 +49,8 @@
 
                 > h3 {
                     display: inline;
-                    font-family: $poppins-font;
-                    font-weight: 600;
-                    letter-spacing: $low-spacing;
+
+                    @include poppins-title;
 
                     @include fluid-typing(18, 21);
 

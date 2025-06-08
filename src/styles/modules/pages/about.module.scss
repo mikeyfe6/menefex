@@ -1,17 +1,33 @@
 @use "../../customs" as *;
 
 .about {
-    h3 {
-        margin-bottom: 0.375em;
+    &-content {
+        h3 {
+            margin-bottom: rem-calc(4);
 
-        &:not(:first-of-type) {
-            margin-top: 1em;
+            &:not(:first-of-type) {
+                margin-top: rem-calc(32);
+            }
+        }
+
+        a {
+            @include text-link;
         }
     }
 
-    a {
-        font-weight: 500;
+    &-spotify {
+        display: flex;
+        gap: rem-calc(80);
+        margin-bottom: rem-calc(80);
 
-        @include text-link;
+        @include container;
+
+        @include phablet {
+            margin-bottom: rem-calc(120);
+        }
+
+        @include tablet {
+            margin-bottom: rem-calc(160);
+        }
     }
 }

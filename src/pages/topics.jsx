@@ -10,9 +10,6 @@ import SEO from "../components/seo";
 
 import * as topicStyles from "../styles/modules/pages/topics.module.scss";
 
-// TODO: images naar GatsbyImage verwerken
-
-// CONTENTFUL blogposts genereren
 const TopicPage = () => {
     const { t, i18n, isHydrated } = useTranslation();
     const currentLanguage = i18n.language;

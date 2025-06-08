@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
-import useTranslation from "../hooks/use-translation";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -17,11 +16,9 @@ import Projects from "../components/ui/projects";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const IndexPage = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
-
     return (
         <Layout>
             <Hero />

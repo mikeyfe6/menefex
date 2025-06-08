@@ -1,0 +1,25 @@
+@use "../../customs" as *;
+
+.form-info {
+    display: flex;
+    gap: rem-calc(64);
+    padding-top: rem-calc(48);
+
+    @include container;
+
+    @include phablet {
+        padding-top: rem-calc(60);
+    }
+
+    @include tablet {
+        padding-top: rem-calc(80);
+    }
+
+    > form {
+        flex: 50%;
+    }
+
+    > section {
+        flex: 50%;
+    }
+}

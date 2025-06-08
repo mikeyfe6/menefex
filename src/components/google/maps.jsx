@@ -13,7 +13,7 @@ const defaultProps = {
         lat: 52.30994007862562,
         lng: 4.974422834381031,
     },
-    zoom: 15,
+    zoom: 12,
 };
 
 const Marker = ({ lat, lng }) => {
@@ -21,25 +21,29 @@ const Marker = ({ lat, lng }) => {
 
     return (
         <div data-lat={lat} data-lng={lng} className={mapsStyles.marker}>
-            <img src={mapsLogo} alt={title} width={50} height={50} />
+            <img src={mapsLogo} alt={title} width={37.5} height={37.5} />
         </div>
     );
 };
 
 const SimpleMap = () => (
-    <div className={mapsStyles.maps}>
-        <GoogleMapReact
-            bootstrapURLKeys={{
-                key: process.env.GATSBY_GOOGLE_MAPS_KEY,
-                language: "nl",
-                region: "NL",
-            }}
-            defaultCenter={defaultProps.center}
-            defaultZoom={defaultProps.zoom}
-        >
-            <Marker lat={52.31049600748774} lng={4.973736770446289} />
-        </GoogleMapReact>
-    </div>
+    <section className={mapsStyles.maps}>
+        <div className={mapsStyles.mapsContainer}>
+            <div className={mapsStyles.mapsContent}>
+                <GoogleMapReact
+                    bootstrapURLKeys={{
+                        key: process.env.GATSBY_GOOGLE_MAPS_KEY,
+                        language: "nl",
+                        region: "NL",
+                    }}
+                    defaultCenter={defaultProps.center}
+                    defaultZoom={defaultProps.zoom}
+                >
+                    <Marker lat={52.31049600748774} lng={4.973736770446289} />
+                </GoogleMapReact>
+            </div>
+        </div>
+    </section>
 );
 
 export default SimpleMap;

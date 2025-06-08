@@ -1,29 +1,40 @@
 @use "../../customs" as *;
 
 .blog {
-    &posts {
-        width: 95%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1.25em;
+    &-container {
+        @include container;
 
-        li {
-            a {
-                @include blog-card;
+        > ul {
+            display: flex;
+            flex-direction: column;
+
+            > li {
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid $smoke-color;
+
+                    > a {
+                        padding-bottom: rem-calc(24);
+                    }
+                }
+
+                &:not(:first-of-type) {
+                    > a {
+                        padding-top: rem-calc(24);
+                    }
+                }
+
+                > a {
+                    @include blog-card;
+                }
             }
         }
-    }
-}
 
-.back-btn {
-    margin: 3em 3em 0 auto;
-    margin-left: auto;
-    margin-right: 3em;
+        > a {
+            gap: rem-calc(12);
+            margin-top: rem-calc(64);
+            margin-left: auto;
 
-    @include primary-button;
-
-    i {
-        margin-right: 0.5em;
+            @include primary-button;
+        }
     }
 }

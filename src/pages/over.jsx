@@ -9,6 +9,8 @@ import SEO from "../components/seo";
 import About from "../components/ui/about";
 import Spotify from "../components/ui/spotify";
 
+import * as aboutStyles from "../styles/modules/pages/about.module.scss";
+
 const AboutPage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -16,12 +18,14 @@ const AboutPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("aboutTitle")}
-                <span>.</span>
-            </h1>
+            <section className="page-intro">
+                <h1>
+                    {t("about.title")}
+                    <span>.</span>
+                </h1>
+            </section>
 
-            <div className="about-spotify">
+            <div className={aboutStyles.aboutSpotify}>
                 <About />
                 <Spotify />
             </div>

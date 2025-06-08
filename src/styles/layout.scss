@@ -41,11 +41,7 @@ footer {
 section {
     scroll-margin-top: rem-calc(125);
 
-    // &.page-intro {
-    //     padding: rem-calc(24 0);
-    // }
-
-    &:not(.page-intro) {
+    &:not(.page-intro, #notes, #about, #spotify, #info) {
         padding: rem-calc(48 0);
 
         @include phablet {
@@ -88,6 +84,10 @@ section {
 
 [hidden] {
     display: none;
+}
+
+small {
+    font-size: 75%;
 }
 
 /* Width */

@@ -1,136 +1,135 @@
 @use "../../customs" as *;
 
 .prices {
-    display: flex;
-    gap: 1.5em;
-    justify-content: space-evenly;
-
-    > * {
-    }
-
-    > li {
-        padding: 1.5em 1em;
-        gap: 1em;
+    &-container {
         display: flex;
-        flex-direction: column;
-        max-width: 450px;
-        background: linear-gradient(to bottom, $lemon-color, $secondary-color);
-        border-radius: 25px;
+        gap: rem-calc(24);
+        justify-content: space-evenly;
 
-        @include smooth-trans;
-        @include box-shadow;
+        @include container;
 
-        h3 {
-            text-align: center;
-            text-decoration: underline;
-            text-decoration-color: $ivory-color;
-            font-weight: 700;
-        }
+        > div {
+            display: flex;
+            flex-direction: column;
+            border: 2px $primary-color solid;
+            border-radius: $high-radius;
+            background: $white-color;
+            overflow: hidden;
+            flex: 1;
 
-        &:hover {
-            transform: scale(1.0125);
             @include smooth-trans;
-        }
 
-        .price {
-            text-align: center;
-            font-weight: 700;
-            margin: 0 0 0.5em;
-
-            @include fluid-typing(24, 26);
-
-            > data {
-                color: $primary-color;
-            }
-
-            > span {
-                text-decoration: line-through;
-
-                @include fluid-typing(13, 14);
-            }
-
-            > sup {
-                font-weight: 500;
-                display: block;
-                top: 0.5em;
-
-                @include fluid-typing(12, 13);
-            }
-
-            &-action {
+            > h3 {
                 text-align: center;
-                font-weight: bolder;
-
-                @include fluid-typing(12, 13);
-            }
-
-            &-contains {
-                text-align: center;
-                font-weight: bold;
-                margin: 0.25em 0 1em;
                 text-decoration: underline;
                 text-decoration-color: $ivory-color;
+                padding: rem-calc(8 0);
+                background: linear-gradient(
+                    to bottom,
+                    $secondary-color,
+                    $secondary-color
+                );
 
-                @include fluid-typing(12, 13);
+                @include fluid-typing(24, 28);
             }
 
-            &-feat {
-                font-style: italic;
-                font-weight: bold;
-                color: white;
-
-                @include fluid-typing(12, 13);
+            > div {
+                background: rgba($primary-color, 1);
+                color: $white-color;
+                padding: rem-calc(16 0 24);
             }
-
-            &-bold {
-                font-weight: 700;
-                font-style: oblique;
-                background: rgba(245 245 245 / 37.5%);
-                border-radius: 2.5px;
-            }
-        }
-
-        > ul {
-            margin-bottom: 2em;
-
-            > li {
-                list-style: none;
-                text-align: center;
-                border-bottom: 1px $lemon-color solid;
-                padding: 0.875em 0.5em;
-
-                @include fluid-typing(14, 16);
-            }
-        }
-
-        button {
-            margin: auto auto 0;
-            display: block;
-
-            @include tertiary-button;
 
             &:hover {
-                transform: scale(1);
+                transform: scale(1.01);
+
+                @include smooth-trans;
+            }
+
+            .price {
+                $price: &;
+
+                &-main {
+                    text-align: center;
+                    font-weight: 600;
+                    margin-bottom: rem-calc(24);
+
+                    > data {
+                        @include fluid-typing(24, 26);
+                    }
+
+                    > span {
+                        text-decoration: line-through;
+
+                        @include fluid-typing(13, 14);
+                    }
+
+                    > sup {
+                        font-weight: 500;
+                        display: block;
+                        top: 0.5em;
+
+                        @include fluid-typing(12, 13);
+                    }
+                }
+
+                &-action {
+                    text-align: center;
+                    font-weight: bolder;
+                    color: $link-color;
+                    background-color: $white-color;
+                    width: fit-content;
+                    margin: 0 auto rem-calc(24);
+                    padding: rem-calc(2 8);
+                    border-radius: $low-radius;
+
+                    @include fluid-typing(12, 13);
+                }
+
+                &-contains {
+                    text-align: center;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    text-decoration-color: $ivory-color;
+
+                    @include fluid-typing(12, 13);
+                }
+
+                &-feat {
+                    font-style: italic;
+                    font-weight: 600;
+                    color: $grey-color;
+
+                    @include fluid-typing(12, 13);
+                }
+
+                &-bold {
+                    font-weight: 700;
+                    font-style: oblique;
+                    background: $smoke-color;
+                }
+            }
+
+            > ul {
+                margin-bottom: rem-calc(32);
+
+                > li {
+                    text-align: center;
+                    border-bottom: 1px $lightgrey-color solid;
+                    padding: rem-calc(14 12);
+
+                    @include fluid-typing(14, 16);
+                }
+            }
+
+            > button {
+                margin: auto auto rem-calc(16);
+
+                @include primary-button(1, 90%);
+
+                &:hover {
+                    transform: scale(1);
+                }
             }
         }
     }
-}
-
-.callme {
-    color: #1ca111;
-    font-weight: 500;
-    box-shadow: none;
-
-    @include smooth-trans;
-
-    &:hover {
-        color: #187710;
-    }
-}
-
-.contactus {
-    font-weight: 500;
-    box-shadow: none;
-
-    @include text-link;
 }

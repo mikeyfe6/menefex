@@ -13,12 +13,14 @@ const FaqPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("faqTitle")}
-                <span>.</span>
-            </h1>
+            <section className="page-intro">
+                <h1 className="page-title">
+                    {t("faq.title")}
+                    <span>.</span>
+                </h1>
 
-            <h2 className="page-sub">{t("faqIntro")}</h2>
+                <h2 className="page-sub">{t("faq.intro")}</h2>
+            </section>
         </Layout>
     );
 };

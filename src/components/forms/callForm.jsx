@@ -7,6 +7,8 @@ import useTranslation from "../../hooks/use-translation";
 
 import * as callStyles from "../../styles/modules/forms/callForm.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const Call = ({ callRef }) => {
     const { t, isHydrated } = useTranslation();
 
@@ -66,8 +68,8 @@ const Call = ({ callRef }) => {
 
             const dayPrefix =
                 currentHour >= slot.hour
-                    ? t("pricesFormTomorrow")
-                    : t("pricesFormToday");
+                    ? t("prices.form.tomorrow")
+                    : t("prices.form.today");
 
             return {
                 ...slot,
@@ -115,11 +117,11 @@ const Call = ({ callRef }) => {
             className={callStyles.callForm}
             action="/success/"
         >
-            <h3>{t("pricesFormTitle")}</h3>
+            <h3>{t("prices.form.title")}</h3>
             <hr />
 
             <label htmlFor="call_name">
-                <span>*</span> {t("pricesFormName")}
+                <span>*</span> {t("prices.form.name")}
             </label>
             <input
                 type="text"
@@ -132,7 +134,7 @@ const Call = ({ callRef }) => {
             />
 
             <label htmlFor="call_tel">
-                <span>*</span> {t("pricesFormPhone")}
+                <span>*</span> {t("prices.form.phone")}
             </label>
             <input
                 type="tel"
@@ -144,7 +146,7 @@ const Call = ({ callRef }) => {
             />
 
             <label htmlFor="call_time">
-                <span>*</span> {t("pricesFormSelectTime")}
+                <span>*</span> {t("prices.form.selectTime")}
             </label>
             <select
                 required
@@ -155,7 +157,7 @@ const Call = ({ callRef }) => {
                 multiple={false}
             >
                 <option value="" disabled>
-                    {t("pricesFormChooseDay")}
+                    {t("prices.form.chooseDay")}
                 </option>
                 {options.map((option, index) => (
                     <option key={index} value={option.display}>
@@ -165,7 +167,7 @@ const Call = ({ callRef }) => {
             </select>
 
             <label htmlFor="call_text">
-                <span>*</span> {t("pricesFormComments")}
+                <span>*</span> {t("prices.form.comments")}
             </label>
             <textarea
                 type="text"
@@ -176,7 +178,7 @@ const Call = ({ callRef }) => {
                 onChange={handleChange}
             />
 
-            <button type="submit">{t("pricesFormCallMeBack")}</button>
+            <button type="submit">{t("prices.form.callMeBack")}</button>
         </form>
     );
 };

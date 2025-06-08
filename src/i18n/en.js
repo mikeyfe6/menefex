@@ -234,6 +234,119 @@ export default {
             "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina. Black harmony wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
     },
 
+    prices: {
+        title: "Prices & rates",
+        intro: {
+            one: "Here you will see an indication of our competitive prices. If you prefer an oriented conversation, please",
+            contactUs: "contact us",
+            two: "or request an",
+            callBack: "callback request",
+        },
+        table: {
+            vat: "excl. VAT",
+            discount: "*PROMO: 5% discount",
+            contains: "... contains:",
+            pages: "pages",
+            customDesign: "Custom Design",
+            responsive: "Responsive for all devices",
+            cms: "CMS (Content Manager)",
+            media: "Photos, videos & other media",
+            forms: "Extensive Forms",
+            socialMedia: "Social Media Integration",
+            ecommerce: "E-commerce (+ Bank Integration)",
+            search: "Search module",
+            reviews: "Testimonials / Reviews",
+            statistics:
+                "Statistics; Google Analytics, Tag Manager and Search Console",
+            ssl: "SSL Certificate",
+            extra: "extra features: €45 per hour",
+            oneMonth: "1 month free support",
+            threeMonths: "3 months free support",
+            sixMonths: "6 months free support",
+            twelveMonths: "12 months free support",
+            button: "Request a quote",
+        },
+        notes: {
+            title: "Additional information:",
+            content: `<p>You have clearly also come to the right place for <b><u>smaller tasks</u></b>, for example <b>maintenance</b>, a <b>new logo</b>, <b>extra additions</b> of <b>applications</b> on your website, web app or webshop, better <b>visibility</b> via the search results <b>(SEO)</b> on e.g. Google, Bing, Yahoo... You name it, make it as crazy as you want. <u>We fix it!</u></p><p>We also tackle <b>larger projects</b> that require more time, such as updating an existing website. All important services are priced at <b>€45 per hour (excl. VAT).</b></p><p>If you are unable to decide which <b>package</b> best suited to you... No problem! We are happy to help you. Request a <b>callback</b> request below, <b>call</b> or <b>email</b> us and everything will be discussed in detail. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / view</b></a> an <u>overview</u> of our prices in <b>pdf</b> form.</p>`,
+        },
+        form: {
+            title: "Callback request",
+            name: "Name",
+            phone: "Telephone",
+            selectTime: "Select a desired time",
+            tomorrow: "Tomorrow between",
+            today: "Today between",
+            chooseDay: "Choose a day and time",
+            comments: "Do you have any comments? (optional)",
+            callMeBack: "Call me back",
+        },
+    },
+
+    faq: {
+        title: "FAQ (Frequently Asked Questions)",
+        intro: "Page coming soon!",
+    },
+
+    about: {
+        title: "About Menefex",
+        whoAreWe: {
+            title: "Who are we?",
+            text: "<p><b>Menefex</b> is a young and modern web media company, founded by <a href='https://www.linkedin.com/in/michaelfransman/' rel='noopener noreferrer' target='_blank'>Michael Fransman</a>, who is committed and specialized in designing and developing websites and web applications. We ensure that the customer's ambitions and the end product come together.</p>",
+        },
+        whatWeStandFor: {
+            title: "What do we stand for?",
+            text: "<b>Menefex</b> stands for efficiency, innovation, user-friendliness and perhaps two of our most important aspects; the functionality and the modern design. We build our software products on a custom basis and ensure that the customer can relate to the end product as much as possible. We believe that functionality should be balanced with the visual aspects of the website/web application for an ultimate experience.",
+        },
+        unique: {
+            title: "What makes Menefex so unique?",
+            text: "<b>Menefex</b> offers the necessary help, service and communication before, during and after the construction process of your product and has this on a high platform. We think along with the customer. We work with the latest and most stable software, so that your product remains safe and durable. At Menefex we respect essential details and nothing is impossible. When building, every last pixel is considered.",
+        },
+        goals: {
+            title: "Our goals, aspiration and motivation?",
+            text: "<b>Menefex's</b> driving force is its interest in the diversity of software and the endless possibilities that technology offers these days. Moreover, it motivates us if we can offer our satisfied customers a digital bridge and put their ambitions packaged in a digital product on the map worldwide through a website or web application.",
+        },
+
+        spotify:
+            "<b>WE ❤︎ MUSIC !</b> That's why we share our <u>work, chill & vibe</u> - playlist. Enjoy and stay tuned for updates.",
+    },
+
+    contact: {
+        intro: "<span>Have your website, webshop or web app built by <b>Menefex</b>?</span><span>Request a quote! If you have a <u>question or comment</u>, please do not hesitate to leave a message below.</span><span><b>We will send you a respond within one working day.</b></span>",
+        form: {
+            name: "Name",
+            company: "Company name (optional)",
+            phone: "Telephone",
+            subject: {
+                default: "Select subject",
+                quote: "Request a quote",
+                collab: "Entering into a collaboration",
+                question: "Question / Comment",
+                complaint: "Complaint / Feedback",
+                help: "Help & Troubleshooting",
+            },
+            message: "Type your message below",
+            send: "Send",
+        },
+        info: {
+            title: "Menefex Web Media Company",
+            location: "located in <b>Amsterdam-Zuidoost</b>",
+            availability: "We can be reached from:",
+            monday: "monday",
+            tuesday: "tuesday",
+            wednesday: "wednesday",
+            thursday: "thursday",
+            friday: "friday",
+            saturday: "saturday",
+            sunday: "sunday",
+            closed: "closed",
+            details:
+                "<u>Chamber of Commerce-number</u><br /><b>76045315</b><br /><br /><u>VAT-number</u><br /><b>NL 003040579B17</b><br /><br /><u>BANK-number</u><br /><b>NL10 BUNQ 2038 8619 94</b>",
+            socials:
+                "<u><b>Follow</b><span><b> / </b></span><b>support</b> our socials</u>",
+        },
+    },
+
     blogPostedOn: "Posted on:",
     blogAuthor: "Author",
     blogBackToAll: "All Blogposts",
@@ -248,107 +361,6 @@ export default {
     topicsBackToAll: "All 'Topics'",
     noContentAvailable: "No content available..",
     noBlogPosts: "* No blog posts yet regarding this topic ..",
-
-    pricesTitle: "Prices & rates",
-    pricesIntroOne:
-        "Here you will see an indication of our competitive prices. If you prefer an oriented conversation, please",
-    pricesContact: "contact us",
-    pricesIntroTwo: "or request an",
-    pricesCallBack: "callback request",
-
-    priceTableVat: "excl. VAT",
-    priceTableDiscount: "*PROMO: 5% discount",
-    priceTableContains: "... contains:",
-    priceTablePages: "pages",
-    priceTableCustomDesign: "Custom Design",
-    priceTableResponsive: "Responsive for all devices",
-    priceTableCms: "CMS (Content Manager)",
-    priceTableMedia: "Photos, videos & other media",
-    priceTableForms: "Extensive Forms",
-    priceTableSocialMedia: "Social Media Integration",
-    priceTableBank: "E-commerce (+ Bank Integration)",
-    priceTableSearch: "Search module",
-    priceTableReviews: "Testimonials / Reviews",
-    priceTableStatistics:
-        "Statistics; Google Analytics, Tag Manager and Search Console",
-    priceTableSsl: "SSL Certificate",
-    priceTableExtra: "extra features: €45 per hour",
-
-    priceTableOneMonth: "1 month free support",
-    priceTableThreeMonths: "3 months free support",
-    priceTableSixMonths: "6 months free support",
-    priceTableTwelveMonths: "12 months free support",
-    priceQuote: "QUOTE",
-
-    priceNotesTitle: "Additional information:",
-    priceNotesText:
-        '<p>You have clearly also come to the right place for <b><u>smaller tasks</u></b>, for example <b>maintenance</b>, a <b>new logo</b>, <b>extra additions</b> of <b>applications</b> on your website, web app or webshop, better <b>visibility</b> via the search results <b>(SEO)</b> on e.g. Google, Bing, Yahoo... You name it, make it as crazy as you want. <u>We fix it!</u></p><p>We also tackle <b>larger projects</b> that require more time, such as updating an existing website. All important services are priced at <b>€45 per hour (excl. VAT).</b></p><p>If you are unable to decide which <b>package</b> best suited to you... No problem! We are happy to help you. Request a <b>callback</b> request below, <b>call</b> or <b>email</b> us and everything will be discussed in detail. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / view</b></a> an <u>overview</u> of our prices in <b>pdf</b> form.</p>',
-
-    pricesFormTitle: "Callback request",
-    pricesFormName: "Name",
-    pricesFormPhone: "Telephone",
-    pricesFormSelectTime: "Select a desired time",
-    pricesFormTomorrow: "Tomorrow between",
-    pricesFormToday: "Today between",
-    pricesFormChooseDay: "Choose a day and time",
-    pricesFormComments: "Do you have any comments? (optional)",
-    pricesFormCallMeBack: "Call me back",
-
-    faqTitle: "FAQ (Frequently Asked Questions)",
-    faqIntro: "Page coming soon!",
-
-    aboutTitle: "About Menefex",
-    aboutWhoAreWeTitle: "Who are we?",
-    aboutWhoAreWeText:
-        "<p><b>Menefex</b> is a young and modern web media company, founded by <a href='https://www.linkedin.com/in/michaelfransman/' rel='noopener noreferrer' target='_blank'>Michael Fransman</a>, who is committed and specialized in designing and developing websites and web applications. We ensure that the customer's ambitions and the end product come together.</p>",
-
-    aboutWhatWeStandForTitle: "What do we stand for?",
-    aboutWhatWeStandForText:
-        "<b>Menefex</b> stands for efficiency, innovation, user-friendliness and perhaps two of our most important aspects; the functionality and the modern design. We build our software products on a custom basis and ensure that the customer can relate to the end product as much as possible. We believe that functionality should be balanced with the visual aspects of the website/web application for an ultimate experience.",
-
-    aboutUniqueTitle: "What makes Menefex so unique?",
-    aboutUniqueText:
-        "<b>Menefex</b> offers the necessary help, service and communication before, during and after the construction process of your product and has this on a high platform. We think along with the customer. We work with the latest and most stable software, so that your product remains safe and durable. At Menefex we respect essential details and nothing is impossible. When building, every last pixel is considered.",
-
-    aboutGoalsTitle: "Our goals, aspiration and motivation?",
-    aboutGoalsText:
-        "<b>Menefex's</b> driving force is its interest in the diversity of software and the endless possibilities that technology offers these days. Moreover, it motivates us if we can offer our satisfied customers a digital bridge and put their ambitions packaged in a digital product on the map worldwide through a website or web application.",
-
-    aboutSpotifyIntro:
-        "<b>WE ❤︎ MUSIC !</b> That's why we share our <u>work, chill & vibe</u> - playlist. Enjoy and stay tuned for updates.",
-
-    contactIntro:
-        "<p class='page-sub'>Have your website, webshop or web app built by <b>Menefex</b>?</p><br /><p class='page-sub'>Request a quote! If you have a <u>question or comment</u>, please do not hesitate to leave a message below.</p><br /><p class='page-sub'><b>We will send you a respond within one working day.</b></p>",
-
-    contactFormName: "Name",
-    contactFormCompany: "Company name (optional)",
-    contactFormPhone: "Telephone",
-    contactFormSubject: "Select subject",
-    contactFormSubjectQuote: "Request a quote",
-    contactFormSubjectCollab: "Entering into a collaboration",
-    contactFormSubjectQuestion: "Question / Comment",
-    contactFormSubjectComplaint: "Complaint / Feedback",
-    contactFormSubjectHelp: "Help & Troubleshooting",
-    contactFormMessage: "Type your message below",
-    contactFormSend: "Send",
-
-    contactInfoTitle: "Menefex Web Media Company",
-    contactInfoLocation: "located in <b>Amsterdam-Zuidoost</b>",
-    contactInfoAvaliable: "We can be reached from:",
-    contactInfoMonday: "monday",
-    contactInfoTuesday: "tuesday",
-    contactInfoWednesday: "wednesday",
-    contactInfoThursday: "thursday",
-    contactInfoFriday: "friday",
-    contactInfoSaturday: "saturday",
-    contactInfoSunday: "sunday",
-    contactInfoClosed: "closed",
-
-    contactInfoDetails:
-        "<u>Chamber of Commerce-number</u><br /><b>76045315</b><br /><br /><u>VAT-number</u><br /><b>NL 003040579B17</b><br /><br /><u>BANK-number</u><br /><b>NL10 BUNQ 2038 8619 94</b>",
-
-    contactInfoFollowSocials:
-        "<u><b>Follow</b><span><b> / </b></span><b>support</b> our socials</u>",
 
     successTitle: "Thank you for your message",
     successMessage: "We will contact you as soon as possible!",

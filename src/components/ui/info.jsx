@@ -4,73 +4,71 @@ import useTranslation from "../../hooks/use-translation";
 
 import * as infoStyles from "../../styles/modules/ui/info.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const Info = () => {
     const { t, isHydrated } = useTranslation();
 
     if (!isHydrated) return null;
 
     return (
-        <section className={infoStyles.info}>
-            <h3>{t("contactInfoTitle")}</h3>
+        <section className={infoStyles.info} id="info">
+            <h3>{t("contact.info.title")}</h3>
             <p
+                className={infoStyles.infoLocation}
                 dangerouslySetInnerHTML={{
-                    __html: t("contactInfoLocation"),
+                    __html: t("contact.info.location"),
                 }}
             />
-
-            <br />
 
             <p>
                 <b>
-                    <u>{t("contactInfoAvaliable")}</u>
+                    <u>{t("contact.info.availability")}</u>
                 </b>
             </p>
 
-            <ul className={infoStyles.times}>
+            <ul className={infoStyles.infoTimes}>
                 <li>
-                    <span>{t("contactInfoMonday")}</span> <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.monday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contactInfoTuesday")}</span> <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.tuesday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contactInfoWednesday")}</span> <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.wednesday")}</span>{" "}
+                    <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contactInfoThursday")}</span> <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.thursday")}</span>{" "}
+                    <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contactInfoFriday")}</span> <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.friday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contactInfoSaturday")}</span>{" "}
-                    <b>{t("contactInfoClosed")}</b>
+                    <span>{t("contact.info.saturday")}</span>{" "}
+                    <b>{t("contact.info.closed")}</b>
                 </li>
                 <li>
-                    <span>{t("contactInfoSunday")}</span>{" "}
-                    <b>{t("contactInfoClosed")}</b>
+                    <span>{t("contact.info.sunday")}</span>{" "}
+                    <b>{t("contact.info.closed")}</b>
                 </li>
             </ul>
 
-            <br />
-
             <p
-                className={infoStyles.details}
+                className={infoStyles.infoDetails}
                 dangerouslySetInnerHTML={{
-                    __html: t("contactInfoDetails"),
+                    __html: t("contact.info.details"),
                 }}
             />
 
-            <br />
-            <br />
-
-            <div className={infoStyles.communication}>
-                <p className={infoStyles.contacttel}>
+            <div className={infoStyles.infoCommunication}>
+                <p className={infoStyles.infoTel}>
                     <i className="fa-solid fa-phone" /> ·{" "}
                     <a href="tel:0611054318">+31 6 11 05 43 18</a>
                 </p>
 
-                <p className={infoStyles.contactmail}>
+                <p className={infoStyles.infoMail}>
                     <i className="fa-solid fa-envelope" /> ·{" "}
                     <a
                         href="mailto:info@menefex.nl"
@@ -82,13 +80,10 @@ const Info = () => {
                 </p>
             </div>
 
-            <br />
-            <br />
-
-            <div className={infoStyles.socials}>
+            <div className={infoStyles.infoSocials}>
                 <p
                     dangerouslySetInnerHTML={{
-                        __html: t("contactInfoFollowSocials"),
+                        __html: t("contact.info.socials"),
                     }}
                 />
                 <ul>

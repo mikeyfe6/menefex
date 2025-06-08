@@ -8,6 +8,8 @@ import minilogo from "../../images/logo/mnfx-icon.svg";
 
 import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const Footer = () => {
     const { t, isHydrated } = useTranslation();
 

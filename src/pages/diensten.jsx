@@ -10,6 +10,8 @@ import SEO from "../components/seo";
 
 import * as servicesStyles from "../styles/modules/pages/services.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const ServicesPage = () => {
     const { t, isHydrated } = useTranslation();
 

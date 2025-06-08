@@ -12,7 +12,9 @@ import PriceTable from "../components/ui/pricetable";
 import Notes from "../components/ui/notes";
 import CallForm from "../components/forms/callForm";
 
-import * as pricesStyles from "../styles/modules/ui/prices.module.scss";
+import * as pricesStyles from "../styles/modules/pages/prices.module.scss";
+
+// TODO: klaar voor TS'en..
 
 const discountUntil = new Date("2024-08-31").toLocaleDateString("nl-NL", {
     day: "numeric",
@@ -41,30 +43,32 @@ const Prices = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                {t("pricesTitle")}
-                <span>.</span>
-            </h1>
+            <section className="page-intro">
+                <h1>
+                    {t("prices.title")}
+                    <span>.</span>
+                </h1>
 
-            <h2 className="page-sub">
-                {t("pricesIntroOne")}{" "}
-                <Link to="/contact/" className={pricesStyles.contactus}>
-                    {t("pricesContact")}
-                </Link>{" "}
-                {t("pricesIntroTwo")}{" "}
-                <button
-                    className={pricesStyles.callme}
-                    onClick={goToCallForm}
-                    tabIndex={0}
-                >
-                    {t("pricesCallBack")}
-                </button>
-                .
-            </h2>
+                <h2>
+                    {t("prices.intro.one")}{" "}
+                    <Link to="/contact/" className={pricesStyles.contactUs}>
+                        {t("prices.intro.contactUs")}
+                    </Link>{" "}
+                    {t("prices.intro.two")}{" "}
+                    <button
+                        className={pricesStyles.callBack}
+                        onClick={goToCallForm}
+                        tabIndex={0}
+                    >
+                        {t("prices.intro.callBack")}
+                    </button>
+                    .
+                </h2>
+            </section>
 
             <PriceTable />
 
-            <div className="notes-call">
+            <div className={pricesStyles.notesCall}>
                 <Notes />
                 <CallForm callRef={callRef} />
             </div>

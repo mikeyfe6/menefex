@@ -1,6 +1,6 @@
 export default {
     cookie: {
-        text: "Deze site plaatst cookies op je computer om je websitebezoek te optimaliseren en gepersonaliseerde diensten aan te bieden, zowel hier als via andere media. Raadpleeg ons <a href='/privacy-policy/' style='color: #FFCC00;'>privacybeleid</a> voor meer informatie over de gebruikte cookies. <span> We volgen je gegevens <b>niet</b> bij sitebezoeken, maar om aan je voorkeuren te voldoen, gebruiken we enkele cookies zodat je deze keuze niet herhaaldelijk hoeft te maken.</span>",
+        text: "Deze site plaatst cookies op je computer om je websitebezoek te optimaliseren en gepersonaliseerde diensten aan te bieden, zowel hier als via andere media. Raadpleeg ons <a href='/privacy-policy/'>privacybeleid</a> voor meer informatie over de gebruikte cookies. <span> We volgen je gegevens <b>niet</b> bij sitebezoeken, maar om aan je voorkeuren te voldoen, gebruiken we enkele cookies zodat je deze keuze niet herhaaldelijk hoeft te maken.</span>",
         accept: "Accepteer",
         decline: "Weiger",
     },
@@ -243,50 +243,114 @@ export default {
         title: "Prijzen & Tarieven",
         intro: {
             one: "Hier ziet u een indicatie van onze scherpe prijzen. Heeft u liever een georiënteerd gesprek,",
-            contact: "neem contact",
+            contactUs: "neem contact",
             two: "met ons op of vraag om een",
             callBack: "terugbelverzoek",
         },
+        table: {
+            vat: "(excl. btw)",
+            discount: "*ACTIE: 5% korting",
+            contains: "... bevat:",
+            pages: "pagina's",
+            customDesign: "Maatwerk Design",
+            responsive: "Responsief voor alle toestellen",
+            cms: "CMS (Contentbeheer)",
+            media: "Foto's, video's & andere media",
+            forms: "Uitgebreide Formulieren",
+            socialMedia: "Social Media Integratie",
+            ecommerce: "E-commerce (+ Bank Integratie)",
+            search: "Zoekmodule",
+            reviews: "Testimonials / Reviews",
+            statistics:
+                "Statistieken; Google Analytics, Tagmanager en Zoekconsole",
+            ssl: "SSL Certificaat",
+            extra: "extra features: € 45,- per uur",
+            oneMonth: "1 maand gratis support",
+            threeMonths: "3 maanden gratis support",
+            sixMonths: "6 maanden gratis support",
+            twelveMonths: "12 maanden gratis support",
+            button: "Offerte aanvragen",
+        },
+        notes: {
+            title: "Aanvullende informatie",
+            content: `<p>U bent uiteraard ook voor de <b><u>kleinere taken</u></b> bij het juiste adres, denk bijvoorbeeld aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra toevoegingen</b> of <b>toepassingen</b> op uw website, webapp of webshop, beter <b>zichtbaarheid</b> via de zoekresultaten <b>(SEO)</b> op bijv. Google, Bing, Yahoo... Noem maar op, maak het zo gek als u wilt. <u>Wij fixen het!</u></p><p>Ook de <b>grotere projecten</b> die meer tijd vergen, zoals het vernieuwen van een bestaande website pakken we met beide handen aan. Alle genoemde services & diensten vallen onder een prijs van <b>€ 45,- per uur (excl. BTW).</b></p><p>Mocht u er niet uitkomen welk <b>pakket</b> u het beste schikt... Geen probleem! Wij helpen u graag verder. Vraag een <b>terugbelverzoek</b> hieronder aan, <b>bel</b> of <b>mail</b> ons en alles wordt u uitgebreid geïnformeerd. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / bekijk</b></a> een <u>overzicht</u> van onze prijzen in <b>pdf</b>-vorm.</p>`,
+        },
+        form: {
+            title: "Terugbelverzoek",
+            name: "Naam",
+            phone: "Telefoon",
+            selectTime: "Selecteer een gewenst tijdstip",
+            tomorrow: "Morgen tussen",
+            today: "Vandaag tussen",
+            chooseDay: "Kies een dag en tijd",
+            comments: "Heeft u nog opmerkingen? (optioneel)",
+            callMeBack: "Bel mij terug",
+        },
     },
 
-    priceTableVat: "(excl. btw)",
-    priceTableDiscount: "*ACTIE: 5% korting",
-    priceTableContains: "... bevat:",
-    priceTablePages: "pagina's",
-    priceTableCustomDesign: "Maatwerk Design",
-    priceTableResponsive: "Responsief voor alle toestellen",
-    priceTableCms: "CMS (Contentbeheer)",
-    priceTableMedia: "Foto's, video's & andere media",
-    priceTableForms: "Uitgebreide Formulieren",
-    priceTableSocialMedia: "Social Media Integratie",
-    priceTableBank: "E-commerce (+ Bank Integratie)",
-    priceTableSearch: "Zoekmodule",
-    priceTableReviews: "Testimonials / Reviews",
-    priceTableStatistics:
-        "Statistieken; Google Analytics, Tagmanager en Zoekconsole",
+    faq: {
+        title: "FAQ (Veelgestelde vragen)",
+        intro: "Pagina komt binnenkort!",
+    },
 
-    priceTableSsl: "SSL Certificaat",
-    priceTableExtra: "extra features: € 45,- per uur",
+    about: {
+        title: "Over Menefex",
+        whoAreWe: {
+            title: "Wie zijn wij?",
+            text: '<p><b>Menefex</b> is een jong en modern webmediabedrijf, opgericht door <a href="https://www.linkedin.com/in/michaelfransman/" rel="noopener noreferrer" target="_blank">Michael Fransman</a>, die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van websites en webapplicaties. Wij zorgen dat de ambities van de klant en het eindproduct tot één komen.</p>',
+        },
+        whatWeStandFor: {
+            title: "Waar staan wij voor?",
+            text: "<b>Menefex</b> staat voor efficiëntie, innovatie, gebruiksvriendelijkheid en misschien wel twee van onze belangrijkste aspecten; de functionaliteit en de moderne design. Wij bouwen onze softwareproducten op maatwerk en zorgen dat de klant zich zoveel mogelijk kan relativeren met het eindproduct. Wij zijn van mening dat de functionaliteit in balans moet zijn met de visuele aspecten van de website / webapplicatie voor een ultieme ervaring.",
+        },
+        unique: {
+            title: "Wat maakt Menefex zo uniek?",
+            text: "<b>Menefex</b> biedt de nodige hulp, service en communicatie vóór, tijdens en ná het bouwproces van uw product en heeft deze op een hoog plateau staan. Wij denken sterk mee met de klant. Wij werken met de nieuwste en meest stabiele software, zodat u product veilig en duurzaam blijft. Bij Menefex respecteren we essentiële details en is niks onmogelijk. Er wordt bij het bouwen tot over de laatste pixel nagedacht.",
+        },
+        goals: {
+            title: "Onze doelen, streven en motivatie?",
+            text: "<b>Menefex</b> heeft als drijfveren de interesse in de diversiteit van software en de oneindige mogelijkheden die technologie deze tijd biedt. Bovendien motiveert het ons als we onze tevreden klanten een digitale brug kunnen bieden en hun ambities verpakt een digitaal product wereldwijd op de kaart kunnen zetten door middel van een website of webapplicatie.",
+        },
 
-    priceTableOneMonth: "1 maand gratis support",
-    priceTableThreeMonths: "3 maanden gratis support",
-    priceTableSixMonths: "6 maanden gratis support",
-    priceTableTwelveMonths: "12 maanden gratis support",
-    priceQuote: "OFFERTE",
+        spotify:
+            "<b>WE ❤︎ MUSIC !</b> Daarom delen we ons <u>work, chill & vibe</u> - playlist. Geniet ervan en blijf ons volgen voor updates.",
+    },
 
-    priceNotesTitle: "Aanvullende informatie:",
-    priceNotesText:
-        '<p>U bent uiteraard ook voor de <b><u>kleinere taken</u></b> bij het juiste adres, denk bijvoorbeeld aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra toevoegingen</b> of <b>toepassingen</b> op uw website, webapp of webshop, beter <b>zichtbaarheid</b> via de zoekresultaten <b>(SEO)</b> op bijv. Google, Bing, Yahoo... Noem maar op, maak het zo gek als u wilt. <u>Wij fixen het!</u></p><p>Ook de <b>grotere projecten</b> die meer tijd vergen, zoals het vernieuwen van een bestaande website pakken we met beide handen aan. Alle genoemde services & diensten vallen onder een prijs van <b>€ 45,- per uur (excl. BTW).</b></p><p>Mocht u er niet uitkomen welk <b>pakket</b> u het beste schikt... Geen probleem! Wij helpen u graag verder. Vraag een <b>terugbelverzoek</b> hieronder aan, <b>bel</b> of <b>mail</b> ons en alles wordt u uitgebreid geïnformeerd. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / bekijk</b></a> een <u>overzicht</u> van onze prijzen in <b>pdf</b>-vorm.</p>',
-
-    pricesFormTitle: "Terugbelverzoek",
-    pricesFormName: "Naam",
-    pricesFormPhone: "Telefoon",
-    pricesFormSelectTime: "Selecteer een gewenst tijdstip",
-    pricesFormTomorrow: "Morgen tussen",
-    pricesFormToday: "Vandaag tussen",
-    pricesFormChooseDay: "Kies een dag en tijd",
-    pricesFormComments: "Heeft u nog opmerkingen? (optioneel)",
-    pricesFormCallMeBack: "Bel mij terug",
+    contact: {
+        intro: "<span>Jouw website, webshop of webapp laten bouwen door <b>Menefex</b>?</span><span>Vraag een offerte aan! Heb je anders een <u>vraag of opmerking</u>, aarzel niet een bericht achter te laten.</span><span><b>Binnen één werkdag nemen wij contact met je op.</b></span>",
+        form: {
+            name: "Naam",
+            company: "Bedrijfsnaam (optioneel)",
+            phone: "Telefoon",
+            subject: {
+                default: "Selecteer onderwerp",
+                quote: "Offerte aanvragen",
+                collab: "Samenwerking aangaan",
+                question: "Vraag / Opmerking",
+                complaint: "Klacht / Feedback",
+                help: "Hulp & Probleemoplossing",
+            },
+            message: "Type uw bericht hieronder",
+            send: "Versturen",
+        },
+        info: {
+            title: "Menefex Webmediabedrijf",
+            location: "gevestigd in <b>Amsterdam-Zuidoost</b>",
+            availability: "Wij zijn bereikbaar van:",
+            monday: "maandag",
+            tuesday: "dinsdag",
+            wednesday: "woensdag",
+            thursday: "donderdag",
+            friday: "vrijdag",
+            saturday: "zaterdag",
+            sunday: "zondag",
+            closed: "gesloten",
+            details:
+                "<u>Kamer van koophandel-nummer</u><br /><b>76045315</b><br /><br /><u>BTW-nummer</u><br /><b>NL 003040579B17</b><br /><br /><u>BANK-nummer</u><br /><b>NL10 BUNQ 2038 8619 94</b>",
+            socials:
+                "<u><b>Volg</b><span><b> / </b></span><b>support</b> onze socials</u>",
+        },
+    },
 
     blogPostedOn: "Gepost:",
     blogAuthor: "Auteur",
@@ -302,62 +366,6 @@ export default {
     topicsBackToAll: "Alle 'Topics'",
     noContentAvailable: "Geen content beschikbaar",
     noBlogPosts: "* Nog geen blogposts betreft deze topic ..",
-
-    faqTitle: "FAQ (Veelgestelde vragen)",
-    faqIntro: "Pagina komt binnenkort!",
-
-    aboutTitle: "Over Menefex",
-    aboutWhoAreWeTitle: "Wie zijn wij?",
-    aboutWhoAreWeText:
-        '<p><b>Menefex</b> is een jong en modern webmediabedrijf, opgericht door <a href="https://www.linkedin.com/in/michaelfransman/" rel="noopener noreferrer" target="_blank">Michael Fransman</a>, die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van websites en webapplicaties. Wij zorgen dat de ambities van de klant en het eindproduct tot één komen.</p>',
-
-    aboutWhatWeStandForTitle: "Waar staan wij voor?",
-    aboutWhatWeStandForText:
-        "<b>Menefex</b> staat voor efficiëntie, innovatie, gebruiksvriendelijkheid en misschien wel twee van onze belangrijkste aspecten; de functionaliteit en de moderne design. Wij bouwen onze softwareproducten op maatwerk en zorgen dat de klant zich zoveel mogelijk kan relativeren met het eindproduct. Wij zijn van mening dat de functionaliteit in balans moet zijn met de visuele aspecten van de website / webapplicatie voor een ultieme ervaring.",
-
-    aboutUniqueTitle: "Wat maakt Menefex zo uniek?",
-    aboutUniqueText:
-        "<b>Menefex</b> biedt de nodige hulp, service en communicatie vóór, tijdens en ná het bouwproces van uw product en heeft deze op een hoog plateau staan. Wij denken sterk mee met de klant. Wij werken met de nieuwste en meest stabiele software, zodat u product veilig en duurzaam blijft. Bij Menefex respecteren we essentiële details en is niks onmogelijk. Er wordt bij het bouwen tot over de laatste pixel nagedacht.",
-
-    aboutGoalsTitle: "Onze doelen, streven en motivatie?",
-    aboutGoalsText:
-        "<b>Menefex</b> heeft als drijfveren de interesse in de diversiteit van software en de oneindige mogelijkheden die technologie deze tijd biedt. Bovendien motiveert het ons als we onze tevreden klanten een digitale brug kunnen bieden en hun ambities verpakt een digitaal product wereldwijd op de kaart kunnen zetten door middel van een website of webapplicatie.",
-
-    aboutSpotifyIntro:
-        "<b>WE ❤︎ MUSIC !</b> Daarom delen we ons <u>work, chill & vibe</u> - playlist. Geniet ervan en blijf ons volgen voor updates.",
-
-    contactIntro:
-        '<p class="page-sub">Jouw website, webshop of webapp laten bouwen door <b>Menefex</b>?</p><br /><p class="page-sub">Vraag een offerte aan! Heb je anders een <u>vraag of opmerking</u>, aarzel niet een bericht achter te laten.</p><br /><p class="page-sub"><b>Binnen één werkdag nemen wij contact met je op.</b></p>',
-
-    contactFormName: "Naam",
-    contactFormCompany: "Bedrijfsnaam (optioneel)",
-    contactFormPhone: "Telefoon",
-    contactFormSubject: "Selecteer onderwerp",
-    contactFormSubjectQuote: "Offerte aanvragen",
-    contactFormSubjectCollab: "Samenwerking aangaan",
-    contactFormSubjectQuestion: "Vraag / Opmerking",
-    contactFormSubjectComplaint: "Klacht / Feedback",
-    contactFormSubjectHelp: "Hulp & Probleemoplossing",
-    contactFormMessage: "Type uw bericht hieronder",
-    contactFormSend: "Versturen",
-
-    contactInfoTitle: "Menefex Webmediabedrijf",
-    contactInfoLocation: "gevestigd in <b>Amsterdam-Zuidoost</b>",
-    contactInfoAvaliable: "Wij zijn bereikbaar van:",
-    contactInfoMonday: "maandag",
-    contactInfoTuesday: "dinsdag",
-    contactInfoWednesday: "woensdag",
-    contactInfoThursday: "donderdag",
-    contactInfoFriday: "vrijdag",
-    contactInfoSaturday: "zaterdag",
-    contactInfoSunday: "zondag",
-    contactInfoClosed: "gesloten",
-
-    contactInfoDetails:
-        "<u>Kamer van koophandel-nummer</u><br /><b>76045315</b><br /><br /><u>BTW-nummer</u><br /><b>NL 003040579B17</b><br /><br /><u>BANK-nummer</u><br /><b>NL10 BUNQ 2038 8619 94</b>",
-
-    contactInfoFollowSocials:
-        "<u><b>Volg</b><span><b> / </b></span><b>support</b> onze socials</u>",
 
     successTitle: "Bedankt voor uw bericht",
     successMessage: "Wij nemen zo spoeding mogelijk contact met u op!",

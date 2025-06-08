@@ -1,19 +1,18 @@
 @use "../../customs" as *;
 
 .notes {
-    background: linear-gradient(145deg, $lemon-color, $primary-color);
-    padding: 2em;
-    border-radius: $medium-radius;
-    height: 100%;
+    height: fit-content;
 
-    @include box-shadow;
+    @include lemon-bg;
 
     h3 {
-        margin-bottom: 1em;
+        margin-bottom: rem-calc(16);
     }
 
     p:not(:last-child) {
-        margin-bottom: 1em;
+        margin-bottom: rem-calc(16);
+
+        @include fluid-typing(17, 19);
     }
 
     a {

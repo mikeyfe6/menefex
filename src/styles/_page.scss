@@ -14,9 +14,22 @@
         h2 {
             font-weight: 500;
             font-family: $poppins-font;
-            letter-spacing: $medium-spacing;
+            letter-spacing: $low-spacing;
+            max-width: 70ch;
 
             @include fluid-typing(19, 21);
+        }
+
+        &.contact {
+            h2 {
+                display: flex;
+                flex-direction: column;
+                gap: rem-calc(16);
+
+                span {
+                    display: block;
+                }
+            }
         }
     }
 }

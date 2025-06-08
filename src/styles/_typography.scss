@@ -199,7 +199,7 @@ h6 {
 }
 
 p {
-    letter-spacing: $medium-spacing;
+    letter-spacing: $low-spacing;
 
     @include fluid-typing(18, 20);
 }

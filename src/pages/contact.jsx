@@ -10,6 +10,8 @@ import LeadForm from "../components/forms/leadForm";
 import Info from "../components/ui/info";
 import Maps from "../components/google/maps";
 
+import * as contactStyles from "../styles/modules/pages/contact.module.scss";
+
 const ContactPage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -17,13 +19,14 @@ const ContactPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                Contact<span>.</span>
-            </h1>
+            <section className="page-intro contact">
+                <h1>
+                    Contact<span>.</span>
+                </h1>
+                <h2 dangerouslySetInnerHTML={{ __html: t("contact.intro") }} />
+            </section>
 
-            <div dangerouslySetInnerHTML={{ __html: t("contactIntro") }} />
-
-            <div className="form-info">
+            <div className={contactStyles.formInfo}>
                 <LeadForm />
                 <Info />
             </div>

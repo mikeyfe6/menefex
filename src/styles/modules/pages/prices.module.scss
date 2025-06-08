@@ -1,0 +1,42 @@
+@use "../../customs" as *;
+
+// TODO: dit hieronder moet naar pages/prices
+
+.call-back {
+    color: #1ca111;
+    font-weight: 500;
+
+    @include smooth-trans;
+
+    &:hover {
+        color: #187710;
+    }
+}
+
+.contact-us {
+    @include text-link;
+}
+
+.notes-call {
+    display: flex;
+    gap: rem-calc(64);
+    margin-bottom: rem-calc(80);
+
+    @include container;
+
+    @include phablet {
+        margin-bottom: rem-calc(120);
+    }
+
+    @include tablet {
+        margin-bottom: rem-calc(160);
+    }
+
+    > section {
+        flex: 55%;
+    }
+
+    > form {
+        flex: 45%;
+    }
+}

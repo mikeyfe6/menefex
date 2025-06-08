@@ -3,70 +3,114 @@
 @use "../../customs" as *;
 
 .info {
-    padding: 2.5em;
+    $info: &;
+
+    padding: rem-calc(32);
     background: linear-gradient(145deg, $primary-color, $dark-color);
-    outline: 3px solid $primary-color;
+    outline: 2px solid $primary-color;
     border-radius: $medium-radius;
-    color: white;
+    color: $white-color;
 
-    > h3 {
+    &-location {
+        margin-bottom: rem-calc(24);
     }
 
-    > span {
-        margin-bottom: 1em;
-        display: block;
+    &-availability {
+        margin-bottom: rem-calc(24);
     }
 
-    ul.times > li > span {
-        color: $secondary-color;
-        min-width: 105px;
-        display: inline-block;
+    &-times {
+        margin-bottom: rem-calc(36);
+
+        > li > span {
+            color: $secondary-color;
+            min-width: rem-calc(140);
+            display: inline-block;
+        }
     }
 
-    .details {
+    &-details {
+        margin-bottom: rem-calc(48);
+
         @include fluid-typing(14, 16);
     }
 
-    .communication {
+    &-communication {
         display: flex;
         justify-content: space-around;
-        gap: 1em;
+        gap: rem-calc(16);
         flex-wrap: wrap;
+        margin-bottom: rem-calc(36);
+
+        #{$info}-tel,
+        #{$info}-mail {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem-calc(8);
+
+            > a {
+                font-weight: 500;
+
+                @include smooth-trans;
+
+                i {
+                    font-size: rem-calc(16);
+                }
+            }
+        }
+
+        #{$info}-tel {
+            > a {
+                color: #2b9d53;
+
+                &:hover {
+                    color: color.adjust(#2b9d53, $lightness: 10%);
+                }
+            }
+        }
+
+        #{$info}-mail {
+            > a {
+                color: #84bcde;
+
+                &:hover {
+                    color: color.adjust(#84bcde, $lightness: 10%);
+                }
+            }
+        }
     }
 
-    .socials {
+    &-socials {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        p {
+        > p {
             text-align: center;
         }
 
-        span {
-            color: $secondary-color;
-        }
-
-        ul {
+        > ul {
             display: flex;
-            gap: 1em;
+            gap: rem-calc(14);
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 1.25em;
-            padding: 0 2.5em;
+            margin-top: rem-calc(20);
 
             li {
                 a {
-                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     background: transparent;
                     border-radius: $medium-radius;
-                    padding: 0.25em 0.25em 0;
+                    padding: rem-calc(6);
 
                     @include smooth-trans;
 
-                    i {
-                        font-size: 1.5em;
+                    > i {
+                        font-size: rem-calc(26);
                     }
 
                     &:hover {
@@ -114,50 +158,6 @@
                         color: #1ca111;
                     }
                 }
-            }
-        }
-    }
-
-    .contacttel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 500;
-        gap: 0.5em;
-
-        i {
-            font-size: 1.25em;
-        }
-
-        a {
-            color: #2b9d53;
-
-            @include smooth-trans;
-
-            &:hover {
-                color: color.adjust(#2b9d53, $lightness: 10%);
-            }
-        }
-    }
-
-    .contactmail {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 500;
-        gap: 0.5em;
-
-        i {
-            font-size: 1.25em;
-        }
-
-        a {
-            color: #84bcde;
-
-            @include smooth-trans;
-
-            &:hover {
-                color: color.adjust(#84bcde, $lightness: 10%);
             }
         }
     }

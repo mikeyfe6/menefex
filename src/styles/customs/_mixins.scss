@@ -25,6 +25,19 @@
     @include fluid-typing(36, 40);
 }
 
+@mixin poppins-title {
+    font-family: $poppins-font;
+    font-weight: 600;
+    letter-spacing: normal;
+}
+
+@mixin lemon-bg {
+    background-color: $ivory-color;
+    border-radius: $medium-radius;
+    border: 2px solid $lemon-color;
+    padding: rem-calc(32);
+}
+
 // SPACING --------------------------------------------
 
 @mixin container(
@@ -33,10 +46,11 @@
     $pr: rem-calc(24),
     $pb: rem-calc(0),
     $pl: rem-calc(24),
-    $mt: rem-calc(0)
+    $mt: rem-calc(0),
+    $mb: rem-calc(0)
 ) {
     max-width: $maxWidth;
-    margin: $mt auto 0;
+    margin: $mt auto $mb;
     padding: $pt rem-calc(16) $pb;
     width: 100%;
 
@@ -110,6 +124,7 @@
 }
 
 @mixin text-link {
+    font-weight: 500;
     color: $link-color;
 
     @include smooth-trans;
@@ -136,9 +151,6 @@
     font-weight: 600;
     letter-spacing: $high-spacing;
 
-    @include smooth-trans;
-    @include box-shadow;
-
     @if $type == 1 {
         background-color: $primary-color;
         color: $smoke-color;
@@ -156,6 +168,7 @@
         }
     }
 
+    @include smooth-trans;
     @include fluid-typing(13, 15);
 }
 
@@ -170,8 +183,6 @@
     justify-content: center;
 
     @include smooth-trans;
-    @include box-shadow;
-
     @include fluid-typing(14, 16);
 
     &:not([href]) {
@@ -222,9 +233,7 @@
     width: fit-content;
     white-space: nowrap;
 
-    @include box-shadow;
     @include smooth-trans;
-
     @include fluid-typing(12, 14);
 
     &:hover {
@@ -235,69 +244,73 @@
 // COMPONENTS --------------------------------------------
 
 @mixin blog-card {
-    background: linear-gradient(145deg, $snow-color, #f2f2f2);
-    padding: rem-calc(16);
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: rem-calc(32);
-    border: 2px solid $snow-color;
-    border-radius: $high-radius;
-    min-height: rem-calc(175);
 
     @include smooth-trans;
-    @include box-shadow;
+
+    > div {
+        &:first-of-type {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: rem-calc(12);
+            width: 100%;
+
+            > h3 {
+                @include poppins-title;
+                @include fluid-typing(18, 22);
+            }
+
+            > p {
+                @include clamp(2);
+                @include fluid-typing(16, 18);
+            }
+
+            small {
+                display: flex;
+                gap: rem-calc(12);
+                margin-top: rem-calc(8);
+
+                span {
+                    color: $primary-color;
+                    border: 2px solid rgba($lightgrey-color, 0.5);
+                    border-radius: $low-radius;
+                    padding: rem-calc(2 8);
+                    font-style: italic;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: rem-calc(8);
+                    width: fit-content;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            outline: 2px solid $snow-color;
+            border-radius: $low-radius;
+            overflow: hidden;
+            max-width: rem-calc(250);
+            width: 100%;
+
+            @include smooth-trans;
+            @include box-shadow;
+
+            > [data-gatsby-image-wrapper] {
+                max-height: rem-calc(175);
+            }
+        }
+    }
 
     &:hover {
-        opacity: 0.7;
         color: $link-color;
         border-color: $link-color;
-        transform: scale(1.025);
-    }
 
-    > div:first-of-type {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: rem-calc(12);
-        width: 100%;
-
-        h3 {
-            font-weight: 600;
-
-            @include fluid-typing(16, 20);
-        }
-
-        p {
-            @include clamp(2);
-            @include fluid-typing(14, 16);
-        }
-
-        span {
-            color: $primary-color;
-            background: linear-gradient(145deg, $secondary-color, #e2e2e2);
-            border: 3px solid #e2e2e2;
-            border-radius: $medium-radius;
-            padding: rem-calc(8);
-            font-style: italic;
-            display: inline;
-            width: fit-content;
-
-            @include fluid-typing(9, 12);
-        }
-    }
-
-    > div:nth-of-type(2) {
-        outline: 3px solid $snow-color;
-        border-radius: $low-radius;
-        overflow: hidden;
-        max-width: rem-calc(250);
-        width: 100%;
-
-        @include box-shadow;
-
-        > [data-gatsby-image-wrapper] {
-            max-height: rem-calc(175);
+        > div:nth-of-type(2) {
+            outline-color: $link-color;
         }
     }
 }
