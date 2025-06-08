@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+// TODO: klaar voor TS'en..
+
 const GoogleAdsMulti = ({ slot }) => {
     useEffect(() => {
         (window.adsbygoogle = window.adsbygoogle || []).push({});

@@ -8,6 +8,8 @@ import mapsLogo from "../../images/logo/mnfx-icon.svg";
 
 import * as mapsStyles from "../../styles/modules/ui/maps.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const defaultProps = {
     center: {
         lat: 52.30994007862562,

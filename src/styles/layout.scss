@@ -41,7 +41,7 @@ footer {
 section {
     scroll-margin-top: rem-calc(125);
 
-    &:not(.page-intro, #notes, #about, #spotify, #info) {
+    &:not(.page-intro, #notes, #about, #spotify, #info, #post) {
         padding: rem-calc(48 0);
 
         @include phablet {

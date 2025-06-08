@@ -40,9 +40,7 @@
             }
 
             &:hover {
-                transform: scale(1.01);
-
-                @include smooth-trans;
+                transform: scale(1.0125);
             }
 
             .price {
@@ -125,10 +123,6 @@
                 margin: auto auto rem-calc(16);
 
                 @include primary-button(1, 90%);
-
-                &:hover {
-                    transform: scale(1);
-                }
             }
         }
     }

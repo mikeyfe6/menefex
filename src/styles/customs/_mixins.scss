@@ -35,7 +35,12 @@
     background-color: $ivory-color;
     border-radius: $medium-radius;
     border: 2px solid $lemon-color;
-    padding: rem-calc(32);
+}
+
+@mixin smoke-bg {
+    background-color: $smoke-color;
+    border-radius: $medium-radius;
+    border: 2px solid rgba($dark-color, 33%);
 }
 
 // SPACING --------------------------------------------

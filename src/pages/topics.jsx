@@ -62,45 +62,49 @@ const TopicPage = () => {
 
     return (
         <Layout>
-            <h1 className="page-title">
-                Topics<span>.</span>
-            </h1>
+            <section className="page-intro">
+                <h1>
+                    Topics<span>.</span>
+                </h1>
+                <h2 className="page-sub">{t("topics.intro")}</h2>
+            </section>
 
-            <h2 className="page-sub">{t("topicsIntro")}</h2>
+            <section className={topicStyles.topics}>
+                <div className={topicStyles.topicsContainer}>
+                    <ul>
+                        {currentContent.map(
+                            ({
+                                node: {
+                                    contentful_id,
+                                    slug,
+                                    bdcolor,
+                                    name,
+                                    description,
+                                },
+                            }) => (
+                                <li key={contentful_id}>
+                                    <Link
+                                        to={`/topics/${slug}/`}
+                                        style={{ borderColor: bdcolor }}
+                                    >
+                                        <h3>
+                                            <span style={{ color: bdcolor }}>
+                                                #
+                                            </span>{" "}
+                                            {name}
+                                        </h3>
+                                        <p>{description.description}</p>
+                                    </Link>
+                                </li>
+                            )
+                        )}
+                    </ul>
 
-            <section>
-                <ul className={topicStyles.topics}>
-                    {currentContent.map(
-                        ({
-                            node: {
-                                contentful_id,
-                                slug,
-                                bdcolor,
-                                name,
-                                description,
-                            },
-                        }) => (
-                            <li key={contentful_id}>
-                                <Link
-                                    to={`/topics/${slug}/`}
-                                    style={{ borderColor: bdcolor }}
-                                >
-                                    <h4>
-                                        <span style={{ color: bdcolor }}>
-                                            #
-                                        </span>{" "}
-                                        {name}
-                                    </h4>
-                                    <p>{description.description}</p>
-                                </Link>
-                            </li>
-                        )
-                    )}
-                </ul>
-
-                <Link to="/blog/" className={topicStyles.backBtn}>
-                    &apos;Blog&apos; <i className="fa-solid fa-angles-right" />
-                </Link>
+                    <Link to="/blog/">
+                        &apos;Blog&apos;{" "}
+                        <i className="fa-solid fa-angles-right" />
+                    </Link>
+                </div>
             </section>
         </Layout>
     );

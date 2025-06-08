@@ -12,7 +12,7 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as topicStyles from "../styles/modules/pages/topics.module.scss";
+import * as topicStyles from "../styles/modules/templates/topic.module.scss";
 
 // TODO: images naar GatsbyImage verwerken
 
@@ -37,73 +37,93 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
     };
 
     if (!content) {
-        return <DefaultInfo text={t("noContentAvailable")} />;
+        return <DefaultInfo text={t("topics.noContent")} />;
     }
 
     if (!isHydrated) return null;
 
     return (
         <Layout>
-            <h1 className="page-title">
-                Topics
-                <span>.</span>
-            </h1>
+            <section className="page-intro">
+                <h1>
+                    Topics
+                    <span>.</span>
+                </h1>
 
-            <h2 className="page-sub">
-                <span style={{ color: content.bdcolor, fontWeight: "bold" }}>
-                    #
-                </span>{" "}
-                {content.name}
-            </h2>
+                <h2>
+                    <span
+                        style={{ color: content.bdcolor, fontWeight: "bold" }}
+                    >
+                        #
+                    </span>{" "}
+                    {content.name}
+                </h2>
+            </section>
 
-            <ul className={topicStyles.posts}>
-                {!content.topicPosts || content.topicPosts.length === 0 ? (
-                    <DefaultInfo text={t("noBlogPosts")} />
-                ) : (
-                    content.topicPosts.map(
-                        ({
-                            slug,
-                            contentful_id,
-                            title,
-                            subtitle,
-                            createdAt,
-                            author,
-                            image,
-                        }) => {
-                            const topcImage = getImage(image.gatsbyImageData);
+            <section className={topicStyles.topic}>
+                <div className={topicStyles.topicContainer}>
+                    <ul className={topicStyles.posts}>
+                        {!content.topicPosts ||
+                        content.topicPosts.length === 0 ? (
+                            <DefaultInfo text={t("topics.noPosts")} />
+                        ) : (
+                            content.topicPosts.map(
+                                ({
+                                    slug,
+                                    contentful_id,
+                                    title,
+                                    subtitle,
+                                    createdAt,
+                                    author,
+                                    image,
+                                }) => {
+                                    const topcImage = getImage(
+                                        image.gatsbyImageData
+                                    );
 
-                            return (
-                                <li key={contentful_id}>
-                                    <Link to={`/blog/${slug}/`}>
-                                        <div>
-                                            <h4>{title}</h4>
-                                            <p>{subtitle}</p>
-                                            <span>
-                                                {t("blogPostedOn")}{" "}
-                                                <strong>
-                                                    {formatDate(createdAt)}
-                                                </strong>{" "}
-                                                ⌁ {t("blogAuthor")}{" "}
-                                                <strong>{author}</strong>
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <GatsbyImage
-                                                image={topcImage}
-                                                alt={image.title}
-                                            />
-                                        </div>
-                                    </Link>
-                                </li>
-                            );
-                        }
-                    )
-                )}
-            </ul>
+                                    return (
+                                        <li key={contentful_id}>
+                                            <Link to={`/blog/${slug}/`}>
+                                                <div>
+                                                    <h3>{title}</h3>
+                                                    <p>{subtitle}</p>
+                                                    <small>
+                                                        <span>
+                                                            <i class="fa-solid fa-calendar-days"></i>
+                                                            <strong>
+                                                                {formatDate(
+                                                                    createdAt
+                                                                )}
+                                                            </strong>{" "}
+                                                        </span>
+                                                        <span>
+                                                            <i class="fa-solid fa-feather-pointed"></i>
+                                                            <strong>
+                                                                {author}
+                                                            </strong>
+                                                        </span>
+                                                    </small>
+                                                </div>
+                                                <div>
+                                                    <GatsbyImage
+                                                        image={topcImage}
+                                                        alt={image.title}
+                                                    />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                    );
+                                }
+                            )
+                        )}
+                    </ul>
 
-            <Link to="/topics/" className={topicStyles.backBtn}>
-                <i className="fa-solid fa-angles-left" /> {t("topicsBackToAll")}
-            </Link>
+                    <Link to="/topics/">
+                        <i className="fa-solid fa-angles-left" />{" "}
+                        {t("topics.allTopics")}
+                    </Link>
+                </div>
+            </section>
         </Layout>
     );
 };

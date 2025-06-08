@@ -49,27 +49,33 @@ const Layout = ({ children }) => {
 
                 <Footer />
 
-                <CookieConsent
-                    expires={60}
-                    buttonText={t("cookie.accept")}
-                    declineButtonText={t("cookie.decline")}
-                    cookieName="menefex-cookie"
-                    extraCookieOptions={{ domain: ".menefex.nl" }}
-                    enableDeclineButton
-                    sameSite="strict"
-                    overlayClasses="cookie"
-                    containerClasses="cookie-container"
-                    contentClasses="cookie-content"
-                    buttonWrapperClasses="cookie-btns"
-                    buttonClasses="cookie-btn-accept"
-                    declineButtonClasses="cookie-btn-decline"
-                    disableStyles
-                    flipButtons
-                    overlay
-                >
-                    <h3>Cookies</h3>
-                    <p dangerouslySetInnerHTML={{ __html: t("cookie.text") }} />
-                </CookieConsent>
+                {process.env.NODE_ENV === "production" && (
+                    <CookieConsent
+                        expires={60}
+                        buttonText={t("cookie.accept")}
+                        declineButtonText={t("cookie.decline")}
+                        cookieName="menefex-cookie"
+                        extraCookieOptions={{ domain: ".menefex.nl" }}
+                        enableDeclineButton
+                        sameSite="strict"
+                        overlayClasses="cookie"
+                        containerClasses="cookie-container"
+                        contentClasses="cookie-content"
+                        buttonWrapperClasses="cookie-btns"
+                        buttonClasses="cookie-btn-accept"
+                        declineButtonClasses="cookie-btn-decline"
+                        disableStyles
+                        flipButtons
+                        overlay
+                    >
+                        <h3>Cookies</h3>
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: t("cookie.text"),
+                            }}
+                        />
+                    </CookieConsent>
+                )}
             </div>
 
             {backdrop}

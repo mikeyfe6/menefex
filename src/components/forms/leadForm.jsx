@@ -5,6 +5,8 @@ import axios from "axios";
 
 import useTranslation from "../../hooks/use-translation";
 
+// TODO: klaar voor TS'en..
+
 const Form = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -93,7 +95,6 @@ const Form = () => {
                 type="email"
                 name="email"
                 id="lead_email"
-                // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 value={inputs.email}
                 onChange={handleChange}
                 required
@@ -106,7 +107,6 @@ const Form = () => {
                 type="tel"
                 name="tel"
                 id="lead_tel"
-                // pattern="^\+?\d*$"
                 value={inputs.tel}
                 onChange={handleChange}
                 required

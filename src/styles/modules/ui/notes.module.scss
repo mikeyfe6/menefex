@@ -2,6 +2,7 @@
 
 .notes {
     height: fit-content;
+    padding: rem-calc(32);
 
     @include lemon-bg;
 

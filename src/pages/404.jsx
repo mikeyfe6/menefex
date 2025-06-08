@@ -7,8 +7,6 @@ import useTranslation from "../hooks/use-translation";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import * as successAndNotFoundStyles from "../styles/modules/pages/success-404.module.scss";
-
 const NotFound = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -16,20 +14,18 @@ const NotFound = () => {
 
     return (
         <Layout>
-            <div>
-                <div className="smallwhitespace" />
-                <h3>
-                    {t("NotfoundSigh")}
-                    <span className="lazy-color">..</span> {t("NotfoundPage")}
-                    <span className="lazy-color">.</span> {t("NotfoundTooBad")}
-                    <span className="lazy-color">..</span>
-                </h3>
-                <br />
-                <Link to="/" className={successAndNotFoundStyles.goback}>
-                    {t("NotFoundGoBack")}
+            <section className="page-intro">
+                <h1>
+                    {t("notfound.sigh")}
+                    <span className="page-color">..</span> {t("notfound.page")}
+                    <span className="page-color">.</span> {t("notfound.tooBad")}
+                    <span className="page-color">..</span>
+                </h1>
+                <Link to="/" className="page-link">
+                    {t("notfound.home")}
                 </Link>
                 <hr />
-            </div>
+            </section>
         </Layout>
     );
 };

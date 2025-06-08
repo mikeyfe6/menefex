@@ -1,0 +1,27 @@
+@use "../../customs" as *;
+
+.topic {
+    &-container {
+        @include container;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: rem-calc(36);
+
+            li {
+                a {
+                    @include blog-card;
+                }
+            }
+        }
+
+        > a {
+            gap: rem-calc(12);
+            margin-top: rem-calc(64);
+            margin-left: auto;
+
+            @include primary-button;
+        }
+    }
+}

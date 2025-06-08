@@ -22,9 +22,11 @@ import GoogleAdsMulti from "../components/google/adsmulti";
 
 import mini from "../images/logo/mnfx-icon.svg";
 
-import * as singlepostStyle from "../styles/modules/templates/singlepost.module.scss";
+import * as postStyle from "../styles/modules/templates/blog.module.scss";
 
-const Blog = ({ pageContext: { nlContent, enContent } }) => {
+// TODO: time implementeren bij dates
+
+const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
     const { siteUrl } = useSiteMetadata();
 
@@ -42,7 +44,7 @@ const Blog = ({ pageContext: { nlContent, enContent } }) => {
         renderMark: {
             [MARKS.BOLD]: (text) => <b>{text}</b>,
             [MARKS.CODE]: (text) => <code>{text}</code>,
-            [MARKS.ITALIC]: (text) => <i>{text}</i>,
+            [MARKS.ITALIC]: (text) => <em>{text}</em>,
             [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
         },
         renderNode: {
@@ -56,7 +58,7 @@ const Blog = ({ pageContext: { nlContent, enContent } }) => {
                 const image = getImage(gatsbyImageData);
 
                 return (
-                    <div className={singlepostStyle.assets}>
+                    <div className={postStyle.assets}>
                         <GatsbyImage image={image} alt={title} />
                     </div>
                 );
@@ -73,45 +75,21 @@ const Blog = ({ pageContext: { nlContent, enContent } }) => {
                 // return <img alt="" src="" />;
             },
 
-            [BLOCKS.PARAGRAPH]: (node, children) => (
-                <p className={singlepostStyle.paragraphness}>{children}</p>
-            ),
-            [BLOCKS.HEADING_1]: (node, children) => (
-                <h1 className={singlepostStyle.headoneness}>{children}</h1>
-            ),
-            [BLOCKS.HEADING_2]: (node, children) => (
-                <h2 className={singlepostStyle.headtwoness}>{children}</h2>
-            ),
-            [BLOCKS.HEADING_3]: (node, children) => (
-                <h3 className={singlepostStyle.headthreeness}>{children}</h3>
-            ),
-            [BLOCKS.HEADING_4]: (node, children) => (
-                <h4 className={singlepostStyle.headfourness}>{children}</h4>
-            ),
-            [BLOCKS.HEADING_5]: (node, children) => (
-                <h5 className={singlepostStyle.headfiveness}>{children}</h5>
-            ),
-            [BLOCKS.HEADING_6]: (node, children) => (
-                <h6 className={singlepostStyle.headsixness}>{children}</h6>
-            ),
-            [BLOCKS.UL_LIST]: (node, children) => (
-                <ul className={singlepostStyle.unorderedlistness}>
-                    {children}
-                </ul>
-            ),
-            [BLOCKS.OL_LIST]: (node, children) => (
-                <ol className={singlepostStyle.orderedlistness}>{children}</ol>
-            ),
-            [BLOCKS.LIST_ITEM]: (node, children) => (
-                <li className={singlepostStyle.listitemness}>{children}</li>
-            ),
+            [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+            [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
+            [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
+            [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
+            [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
+            [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
+            [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
+            [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+            [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+            [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
 
-            [BLOCKS.HR]: () => <hr className={singlepostStyle.horizontness} />,
+            [BLOCKS.HR]: () => <hr />,
 
             [BLOCKS.QUOTE]: (node, children) => (
-                <blockquote className={singlepostStyle.quoteness}>
-                    {children}
-                </blockquote>
+                <blockquote>{children}</blockquote>
             ),
 
             [INLINES.HYPERLINK]: ({ data }, children) => {
@@ -121,18 +99,10 @@ const Blog = ({ pageContext: { nlContent, enContent } }) => {
                     : data.uri;
 
                 if (isInternal) {
-                    return (
-                        <Link
-                            className={singlepostStyle.hyperlinkness}
-                            to={strippedUrl}
-                        >
-                            {children}
-                        </Link>
-                    );
+                    return <Link to={strippedUrl}>{children}</Link>;
                 } else {
                     return (
                         <a
-                            className={singlepostStyle.hyperlinkness}
                             href={data.uri}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -146,37 +116,19 @@ const Blog = ({ pageContext: { nlContent, enContent } }) => {
             [INLINES.ENTRY_HYPERLINK]: ({ data }, children) => {
                 const { slug } = data.target;
 
-                return (
-                    <Link
-                        className={singlepostStyle.hyperlinkness}
-                        to={"/blog/" + slug}
-                    >
-                        {children}
-                    </Link>
-                );
+                return <Link to={"/blog/" + slug}>{children}</Link>;
             },
 
             [INLINES.ASSET_HYPERLINK]: ({ data }, children) => {
                 const { slug } = data.target;
 
-                return (
-                    <Link className={singlepostStyle.hyperlinkness} to={slug}>
-                        {children}
-                    </Link>
-                );
+                return <Link to={slug}>{children}</Link>;
             },
 
             [INLINES.EMBEDDED_ENTRY]: ({ data }, children) => {
                 const { slug } = data.target;
 
-                return (
-                    <Link
-                        className={singlepostStyle.hyperlinkness}
-                        to={"/blog/" + slug}
-                    >
-                        {children}
-                    </Link>
-                );
+                return <Link to={"/blog/" + slug}>{children}</Link>;
             },
         },
     };
@@ -216,232 +168,206 @@ const Blog = ({ pageContext: { nlContent, enContent } }) => {
         }
     }, []);
 
-    if (!isHydrated) return null;
-
     const image = getImage(content.image.gatsbyImageData);
+
+    if (!isHydrated) return null;
 
     return (
         <Layout>
-            <div className={singlepostStyle.singlepost}>
-                <section className={singlepostStyle.view}>
-                    <Link to="/blog/" className={singlepostStyle.backbtn}>
-                        <i className="fa-solid fa-angles-left" />{" "}
-                        {t("blogBackToAll")}
-                    </Link>
+            <div className={postStyle.post}>
+                <div className={postStyle.postContainer}>
+                    <div className={postStyle.postHeader}>
+                        <img
+                            src={mini}
+                            alt="Menefex Icon"
+                            width={75}
+                            height={75}
+                        />
 
-                    <hr className={singlepostStyle.thickHr} />
+                        <h1>{content.title}</h1>
+                    </div>
 
-                    <div>
-                        <div className={singlepostStyle.header}>
-                            <img
-                                src={mini}
-                                alt="Menefex Icon"
-                                width={75}
-                                height={75}
-                            />
-                            <div>
-                                <h1 className={singlepostStyle.title}>
-                                    {content.title}
-                                </h1>
+                    <hr />
+
+                    <div className={postStyle.postMain}>
+                        <section id="post">
+                            <div className={postStyle.postImage}>
+                                <GatsbyImage
+                                    image={image}
+                                    alt={content.image.title}
+                                />
                             </div>
-                        </div>
 
-                        <hr className={singlepostStyle.thinHr} />
+                            <h2>{content.subtitle}</h2>
+                            <div className={postStyle.postContent}>
+                                {renderRichText(content.body, options)}
+                            </div>
 
-                        <div className={singlepostStyle.main}>
-                            <section>
-                                <div>
-                                    <GatsbyImage
-                                        image={image}
-                                        alt={content.image.title}
-                                        className={singlepostStyle.image}
-                                    />
+                            <div className={postStyle.postRss}>
+                                <div className={postStyle.feedly}>
+                                    <a
+                                        href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fmenefex.nl%2Frss.xml"
+                                        title="Menefex WMB: RSS Feeds"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            id="feedlyFollow"
+                                            src="https://s3.feedly.com/img/follows/feedly-follow-circle-flat-green_2x.png"
+                                            alt={t("blog.feedly")}
+                                            width="18"
+                                            height="18"
+                                        />{" "}
+                                        <span>{t("blog.feedly")}</span>
+                                    </a>
                                 </div>
-
-                                <h2 className={singlepostStyle.subtitle}>
-                                    {content.subtitle}
-                                </h2>
-                                <div className={singlepostStyle.content}>
-                                    {renderRichText(content.body, options)}
+                                <div className={postStyle.feedburner}>
+                                    <a
+                                        href="https://feeds.feedburner.com/MenefexWMB"
+                                        type="application/rss+xml"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        <i className="fa-solid fa-rss fa-lg" />
+                                        <span>{t("blog.feedburner")}</span>
+                                    </a>
                                 </div>
+                            </div>
 
-                                <div className={singlepostStyle.rss}>
-                                    <div className={singlepostStyle.feedly}>
-                                        <a
-                                            href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fmenefex.nl%2Frss.xml"
-                                            title="Menefex WMB: RSS Feeds"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                        >
-                                            <img
-                                                id="feedlyFollow"
-                                                src="https://s3.feedly.com/img/follows/feedly-follow-circle-flat-green_2x.png"
-                                                alt={t("blogFeedly")}
-                                                width="18"
-                                                height="18"
-                                            />{" "}
-                                            <span>{t("blogFeedly")}</span>
-                                        </a>
-                                    </div>
-                                    <div className={singlepostStyle.feedburner}>
-                                        <a
-                                            href="https://feeds.feedburner.com/MenefexWMB"
-                                            type="application/rss+xml"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                        >
-                                            <i className="fa-solid fa-rss fa-lg" />
-                                            <span>{t("blogFeedburner")}</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <section className={singlepostStyle.disqus}>
-                                    <Disqus
-                                        config={{
-                                            url: `https://menefex.nl/blog/${content.slug}/`,
-                                            identifier: content.contentful_id,
-                                            language: currentLanguage,
-                                            title: content.title,
-                                        }}
-                                    />
-                                </section>
-                            </section>
-                            <aside>
-                                <div className={singlepostStyle.gepost}>
-                                    {t("blogPostedOn")}{" "}
-                                    {formatDate(content.publishedPost)}
-                                </div>
-                                <div className={singlepostStyle.sidebar}>
-                                    <div className={singlepostStyle.author}>
-                                        <span>
-                                            <u>{t("blogAuthor")}</u>
-                                        </span>
-                                        <a
-                                            href="https://www.linkedin.com/in/michaelfransman/"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                        >
-                                            {content.author}
-                                        </a>
-                                        <span>
-                                            <u>{t("blogLastUpdated")}</u>
-                                        </span>
+                            <div className={postStyle.disqus}>
+                                <Disqus
+                                    config={{
+                                        url: `https://menefex.nl/blog/${content.slug}/`,
+                                        identifier: content.contentful_id,
+                                        language: currentLanguage,
+                                        title: content.title,
+                                    }}
+                                />
+                            </div>
+                        </section>
+                        <aside>
+                            <div className={postStyle.postDate}>
+                                {t("blog.postedOn")}{" "}
+                                {formatDate(content.publishedPost)}
+                            </div>
+                            <div className={postStyle.postSidebar}>
+                                <div className={postStyle.postAuthor}>
+                                    <span>
+                                        <u>{t("blog.author")}</u>
+                                    </span>
+                                    <a
+                                        href="https://www.linkedin.com/in/michaelfransman/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        {content.author}
+                                    </a>
+                                    <span>
+                                        <u>{t("blog.lastUpdated")}</u>
+                                    </span>
+                                    <time datetime={content.updatedPost}>
                                         {formatDate(content.updatedPost)}
-                                    </div>
-
-                                    {relatedPosts?.length === 0 ? null : <hr />}
-
-                                    <div className={singlepostStyle.related}>
-                                        {relatedPosts?.length === 0 ? null : (
-                                            <div>
-                                                <h6>
-                                                    <u>
-                                                        {t("blogRelatedPosts")}
-                                                    </u>
-                                                </h6>
-                                            </div>
-                                        )}
-
-                                        <ul>
-                                            {relatedPosts
-                                                ?.slice(0, 3)
-                                                .map((post) => (
-                                                    <li
-                                                        key={post.contentful_id}
-                                                    >
-                                                        <Link
-                                                            to={`/blog/${post.slug}/`}
-                                                        >
-                                                            <h5>
-                                                                {post.title}
-                                                            </h5>
-                                                            <p>
-                                                                {post.subtitle}
-                                                            </p>
-                                                            <span>
-                                                                {t(
-                                                                    "blogReadMore"
-                                                                )}
-                                                            </span>
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                        </ul>
-                                    </div>
+                                    </time>
                                 </div>
-                            </aside>
-                        </div>
 
-                        <div className={singlepostStyle.topics}>
-                            <ul>
-                                {postTopic.map((relTopic) => (
-                                    <li key={relTopic.id}>
-                                        <Link
-                                            to={`/topics/${relTopic.slug}/`}
-                                            key={relTopic.id}
-                                            style={{
-                                                borderColor: relTopic.bdcolor,
-                                            }}
-                                        >
-                                            {relTopic.name}
+                                {relatedPosts?.length === 0 ? null : <hr />}
+
+                                <div className={postStyle.postRelated}>
+                                    {relatedPosts?.length === 0 ? null : (
+                                        <div>
+                                            <h6>
+                                                <u>{t("blog.relatedPosts")}</u>
+                                            </h6>
+                                        </div>
+                                    )}
+
+                                    <ul>
+                                        {relatedPosts
+                                            ?.slice(0, 3)
+                                            .map((post) => (
+                                                <li key={post.contentful_id}>
+                                                    <Link
+                                                        to={`/blog/${post.slug}/`}
+                                                    >
+                                                        <h5>{post.title}</h5>
+                                                        <p>{post.subtitle}</p>
+                                                        <span>
+                                                            {t("blog.readMore")}
+                                                        </span>
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div className={postStyle.postTopics}>
+                        <ul>
+                            {postTopic.map((relTopic) => (
+                                <li key={relTopic.id}>
+                                    <Link
+                                        to={`/topics/${relTopic.slug}/`}
+                                        key={relTopic.id}
+                                        style={{
+                                            borderColor: relTopic.bdcolor,
+                                        }}
+                                    >
+                                        {relTopic.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Link to="/blog/">
+                            <i className="fa-solid fa-angles-left" />{" "}
+                            {t("blog.allPosts")}
+                        </Link>
+                    </div>
+
+                    <section className={postStyle.postFamily}>
+                        {relatedPosts?.length === 0 ? null : (
+                            <h6>{t("blog.alsoInteresting")}</h6>
+                        )}
+
+                        <ul>
+                            {relatedPosts?.slice(0, 3).map((post) => {
+                                const projectImg = getImage(
+                                    post?.image?.gatsbyImageData
+                                );
+
+                                return (
+                                    <li key={post?.contentful_id}>
+                                        <Link to={`/blog/${post?.slug}/`}>
+                                            <GatsbyImage
+                                                image={projectImg}
+                                                alt={post?.image?.title}
+                                            />
+                                            <h5>{post?.title}</h5>
+                                            <p>{post?.subtitle}</p>
+                                            <span>{t("blog.readMore")}</span>
                                         </Link>
                                     </li>
-                                ))}
-                            </ul>
+                                );
+                            })}
+                        </ul>
+                    </section>
 
-                            <Link
-                                to="/blog/"
-                                className={singlepostStyle.backbtn}
-                            >
-                                <i className="fa-solid fa-angles-left" />{" "}
-                                {t("blogBackToAll")}
-                            </Link>
-                        </div>
+                    {process.env.NODE_ENV !== "development" && (
+                        <GoogleAdsDisplay slot="3266975443" />
+                    )}
 
-                        <section className={singlepostStyle.family}>
-                            {relatedPosts?.length === 0 ? null : (
-                                <h6>{t("blogRelatedPosts")}</h6>
-                            )}
-
-                            <ul>
-                                {relatedPosts?.slice(0, 3).map((post) => {
-                                    const projectImg = getImage(
-                                        post?.image?.gatsbyImageData
-                                    );
-
-                                    return (
-                                        <li key={post?.contentful_id}>
-                                            <Link to={`/blog/${post?.slug}/`}>
-                                                <GatsbyImage
-                                                    image={projectImg}
-                                                    alt={post?.image?.title}
-                                                />
-                                                <h5>{post?.title}</h5>
-                                                <p>{post?.subtitle}</p>
-                                                <span>{t("blogReadMore")}</span>
-                                            </Link>
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        </section>
-
-                        {process.env.NODE_ENV !== "development" && (
-                            <GoogleAdsDisplay slot="3266975443" />
-                        )}
-
-                        {process.env.NODE_ENV !== "development" && (
-                            <GoogleAdsMulti slot="1625762341" />
-                        )}
-                    </div>
-                </section>
+                    {process.env.NODE_ENV !== "development" && (
+                        <GoogleAdsMulti slot="1625762341" />
+                    )}
+                </div>
             </div>
         </Layout>
     );
 };
 
-export default Blog;
+export default Post;
 
 export const Head = ({ pageContext: { nlContent } }) => {
     const { title: siteTitle, siteUrl, favicon } = useSiteMetadata();
