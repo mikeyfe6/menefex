@@ -60,9 +60,9 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                 </h2>
             </section>
 
-            <section className={topicStyles.topic}>
+            <section id="topic">
                 <div className={topicStyles.topicContainer}>
-                    <ul className={topicStyles.posts}>
+                    <ul>
                         {!content.topicPosts ||
                         content.topicPosts.length === 0 ? (
                             <DefaultInfo text={t("topics.noPosts")} />

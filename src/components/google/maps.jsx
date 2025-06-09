@@ -22,14 +22,14 @@ const Marker = ({ lat, lng }) => {
     const { title } = useSiteMetadata();
 
     return (
-        <div data-lat={lat} data-lng={lng} className={mapsStyles.marker}>
+        <div data-lat={lat} data-lng={lng}>
             <img src={mapsLogo} alt={title} width={37.5} height={37.5} />
         </div>
     );
 };
 
 const SimpleMap = () => (
-    <section className={mapsStyles.maps}>
+    <section id="maps">
         <div className={mapsStyles.mapsContainer}>
             <div className={mapsStyles.mapsContent}>
                 <GoogleMapReact

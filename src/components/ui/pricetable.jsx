@@ -37,9 +37,9 @@ const PriceTable = () => {
     if (!isHydrated) return null;
 
     return (
-        <section className={pricesStyles.prices}>
-            <div className={pricesStyles.pricesContainer}>
-                <div className={pricesStyles.price}>
+        <section>
+            <div className={pricesStyles.priceContainer}>
+                <div className={pricesStyles.priceTable}>
                     <h3>BUDGET PLAN</h3>
                     <div>
                         <p className={pricesStyles.priceMain}>
@@ -87,7 +87,7 @@ const PriceTable = () => {
                     </button>
                 </div>
 
-                <div className={pricesStyles.price}>
+                <div className={pricesStyles.priceTable}>
                     <h3>STARTER PLAN</h3>
                     <div>
                         <p className={pricesStyles.priceMain}>
@@ -135,7 +135,7 @@ const PriceTable = () => {
                     </button>
                 </div>
 
-                <div className={pricesStyles.price}>
+                <div className={pricesStyles.priceTable}>
                     <h3>ESTABLISHED PLAN</h3>
                     <div>
                         <p className={pricesStyles.priceMain}>
@@ -187,7 +187,7 @@ const PriceTable = () => {
                     </button>
                 </div>
 
-                <div className={pricesStyles.price}>
+                <div className={pricesStyles.priceTable}>
                     <h3>BUSINESS PLAN</h3>
                     <div>
                         <p className={pricesStyles.priceMain}>

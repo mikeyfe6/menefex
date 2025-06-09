@@ -46,7 +46,7 @@ const PortfolioPage = () => {
                 <h2>{t("portfolio.intro")}</h2>
             </section>
 
-            <section className={portfolioStyles.portfolio}>
+            <section id="portfolio">
                 <div className={portfolioStyles.portfolioContainer}>
                     {/*
           // * EDUTAIN U PRODOCTIONS !

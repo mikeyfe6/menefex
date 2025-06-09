@@ -1,6 +1,8 @@
 @use "../../customs" as *;
 
-.prices {
+.price {
+    $price: &;
+
     &-container {
         display: grid;
         gap: rem-calc(24);
@@ -16,7 +18,7 @@
             grid-template-columns: repeat(4, 1fr);
         }
 
-        > div {
+        #{$price}-table {
             display: flex;
             flex-direction: column;
             border: 2px $primary-color solid;
@@ -47,16 +49,8 @@
                 background: rgba($primary-color, 1);
                 color: $white-color;
                 padding: rem-calc(16 0 24);
-            }
 
-            &:hover {
-                transform: scale(1.0125);
-            }
-
-            .price {
-                $price: &;
-
-                &-main {
+                #{$price}-main {
                     text-align: center;
                     font-weight: 600;
                     margin-bottom: rem-calc(24);
@@ -80,7 +74,7 @@
                     }
                 }
 
-                &-action {
+                #{$price}-action {
                     text-align: center;
                     font-weight: bolder;
                     color: $link-color;
@@ -93,27 +87,13 @@
                     @include fluid-typing(12, 13);
                 }
 
-                &-contains {
+                #{$price}-contains {
                     text-align: center;
                     font-weight: bold;
                     text-decoration: underline;
                     text-decoration-color: $ivory-color;
 
                     @include fluid-typing(12, 13);
-                }
-
-                &-feat {
-                    font-style: italic;
-                    font-weight: 600;
-                    color: $grey-color;
-
-                    @include fluid-typing(13, 14);
-                }
-
-                &-bold {
-                    font-weight: 700;
-                    font-style: oblique;
-                    background: $smoke-color;
                 }
             }
 
@@ -127,12 +107,30 @@
 
                     @include fluid-typing(15, 16);
                 }
+
+                #{$price}-feat {
+                    font-style: italic;
+                    font-weight: 600;
+                    color: $grey-color;
+
+                    @include fluid-typing(13, 14);
+                }
+
+                #{$price}-bold {
+                    font-weight: 700;
+                    font-style: oblique;
+                    background: $smoke-color;
+                }
             }
 
             > button {
                 margin: auto auto rem-calc(16);
 
                 @include primary-button(1, 90%);
+            }
+
+            &:hover {
+                transform: scale(1.0125);
             }
         }
     }

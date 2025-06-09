@@ -71,7 +71,7 @@ const TopicPage = () => {
                 <h2 className="page-sub">{t("topics.intro")}</h2>
             </section>
 
-            <section className={topicStyles.topics}>
+            <section id="topics">
                 <div className={topicStyles.topicsContainer}>
                     <ul>
                         {currentContent.map(

@@ -179,11 +179,9 @@ const Projects = () => {
     if (!isHydrated) return null;
 
     return (
-        <section id="portfolio" className={projectsStyles.projects}>
+        <section id="projects">
             <div className={projectsStyles.projectsContainer}>
-                <h3 className={projectsStyles.homeTitle}>
-                    {t("projects.title")}
-                </h3>
+                <h3>{t("projects.title")}</h3>
                 <div className={projectsStyles.projectsWrapper}>
                     <div className={projectsStyles.projectsContent}>
                         {logoImg && (

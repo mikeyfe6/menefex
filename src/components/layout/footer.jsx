@@ -39,7 +39,7 @@ const Footer = () => {
     if (!isHydrated) return null;
 
     return (
-        <footer className={footerStyles.footer}>
+        <footer>
             <div className={footerStyles.footerQuote}>
                 <blockquote>
                     <cite>

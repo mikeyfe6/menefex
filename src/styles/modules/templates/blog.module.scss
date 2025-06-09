@@ -41,18 +41,15 @@
             gap: rem-calc(40);
             flex-direction: column;
 
-            @include phablet {
-                flex-direction: row;
-            }
-
             @include tablet {
+                flex-direction: row;
                 gap: rem-calc(80);
             }
 
             > section {
-                flex: 60%;
+                flex: 65%;
 
-                @include tablet {
+                @include laptop {
                     flex: 70%;
                 }
 
@@ -249,7 +246,7 @@
             }
 
             > aside {
-                flex: 40%;
+                flex: 35%;
                 margin-bottom: rem-calc(16);
                 top: rem-calc(150);
                 height: 100%;
@@ -259,7 +256,7 @@
                     margin-bottom: rem-calc(48);
                 }
 
-                @include tablet {
+                @include laptop {
                     flex: 30%;
                 }
 
@@ -308,7 +305,7 @@
                         margin: rem-calc(24 0);
                         display: none;
 
-                        @include phablet {
+                        @include tablet {
                             display: block;
                         }
                     }
@@ -316,7 +313,7 @@
                     #{$post}-related {
                         display: none;
 
-                        @include phablet {
+                        @include tablet {
                             display: block;
                         }
 
@@ -392,7 +389,7 @@
             align-items: center;
             gap: rem-calc(32);
 
-            @include phablet {
+            @include tablet {
                 margin-top: rem-calc(48);
             }
 

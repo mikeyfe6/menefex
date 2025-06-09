@@ -66,7 +66,7 @@ const Hero = () => {
                             {t("hero.services")}
                         </a>
                         <span>|</span>
-                        <a href="#portfolio" name="cta">
+                        <a href="#projects" name="cta">
                             {t("hero.portfolio")}
                         </a>
                         <span>-</span>

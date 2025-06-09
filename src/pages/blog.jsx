@@ -86,7 +86,7 @@ const BlogPage = () => {
                 <h2>What goes through our mind..</h2>
             </section>
 
-            <section className={blogStyles.blog}>
+            <section id="blog">
                 <div className={blogStyles.blogContainer}>
                     <ul>
                         {currentContent.map((edge) => {
