@@ -8,9 +8,10 @@
 
         h1 {
             font-family: $wdxl-font;
+            line-height: rem-calc(40);
 
             &:not(:only-child) {
-                margin-bottom: rem-calc(16);
+                margin-bottom: rem-calc(20);
             }
         }
 
@@ -51,6 +52,9 @@
 
         h1 {
             margin-bottom: rem-calc(24);
+            line-height: rem-calc(48);
+
+            @extend %as-h3;
         }
 
         h5 {
@@ -63,6 +67,8 @@
 
         a {
             @include text-link;
+
+            word-break: break-all;
         }
 
         ol,

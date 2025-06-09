@@ -11,7 +11,7 @@
         @include container;
 
         #{$biography}-wrapper {
-            padding: rem-calc(22 28);
+            padding: rem-calc(20 24);
 
             @include border;
 

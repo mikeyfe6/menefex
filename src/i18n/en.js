@@ -219,7 +219,7 @@ export default {
         edutainuproductions:
             "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment..",
         priozorg:
-            "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Priozorg offers expert support in the form of coaching, mentoring and educational guidance.",
+            "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Prio Zorg offers expert support in the form of coaching, mentoring and educational guidance.",
         keeptreal:
             "<strong>Keep It Real</strong> is a program led by cultural professional Wenner Regales, which helps young people grow beyond the boundaries of traditional education. It provides a platform for making positive choices and seizing opportunities, rooted in Wenner's experience and network.",
         afrodiasphere:
