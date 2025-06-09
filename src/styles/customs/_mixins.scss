@@ -346,6 +346,7 @@
 
             > [data-gatsby-image-wrapper] {
                 max-height: rem-calc(275);
+                width: 100%;
 
                 @include compact {
                     max-height: rem-calc(300);

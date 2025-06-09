@@ -15,7 +15,7 @@ const resources = {
 i18n.use(initReactI18next).init({
     resources,
     fallbackLng: "nl",
-    debug: true,
+    debug: process.env.NODE_ENV === "development",
     detection: {
         order: ["localStorage", "cookie", "navigator"],
         caches: ["localStorage", "cookie"],
