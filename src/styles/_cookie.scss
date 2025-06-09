@@ -26,15 +26,11 @@
         border-radius: $low-radius;
 
         #{$cookie}-content {
-            > h3 {
-                @include fluid-typing(28, 32);
-            }
-
             > p {
                 color: $white-color;
                 margin: rem-calc(16 0 24);
 
-                @include fluid-typing(16, 18);
+                @extend %as-medium;
 
                 > a {
                     color: $secondary-color;

@@ -19,24 +19,34 @@
 
 .notes-call {
     display: flex;
-    gap: rem-calc(64);
-    margin-bottom: rem-calc(80);
+    gap: rem-calc(24);
+    flex-direction: column;
 
-    @include container;
+    @include container($mb: rem-calc(80));
 
     @include phablet {
+        flex-direction: row;
         margin-bottom: rem-calc(120);
     }
 
     @include tablet {
+        gap: rem-calc(64);
         margin-bottom: rem-calc(160);
     }
 
     > section {
-        flex: 55%;
+        flex: 50%;
+
+        @include phablet {
+            flex: 55%;
+        }
     }
 
     > form {
-        flex: 45%;
+        flex: 50%;
+
+        @include phablet {
+            flex: 55%;
+        }
     }
 }

@@ -33,14 +33,8 @@ const DesktopMenu = ({ drawerClickHandler }) => {
     return (
         <div className={desktopMenuStyles.desktopMenu}>
             <nav>
-                <Link to="/">
-                    <img
-                        className={desktopMenuStyles.logo}
-                        src={logo}
-                        alt="Menefex Logo"
-                        width={225}
-                        height={60}
-                    />
+                <Link to="/" className={desktopMenuStyles.logo}>
+                    <img src={logo} alt="Menefex Logo" width={225} />
                 </Link>
 
                 <ul>
@@ -49,7 +43,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menu.home").toLowerCase()}
+                            {t("menu.home")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -59,7 +53,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             activeClassName={desktopMenuStyles.activePage}
                             partiallyActive
                         >
-                            {t("menu.services").toLowerCase()}
+                            {t("menu.services")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -68,7 +62,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/portfolio/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menu.portfolio").toLowerCase()}
+                            {t("menu.portfolio")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -77,7 +71,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/prijzen/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menu.prices").toLowerCase()}
+                            {t("menu.prices")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -87,7 +81,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             activeClassName={desktopMenuStyles.activePage}
                             getProps={checkIfPartiallyActive}
                         >
-                            {t("menu.blog").toLowerCase()}
+                            {t("menu.blog")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -96,7 +90,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/faq/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menu.faq").toLowerCase()}
+                            {t("menu.faq")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -105,7 +99,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/over/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menu.about").toLowerCase()}
+                            {t("menu.about")}
                             <span>.</span>
                         </Link>
                     </li>
@@ -114,7 +108,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             to="/contact/"
                             activeClassName={desktopMenuStyles.activePage}
                         >
-                            {t("menu.contact").toLowerCase()}
+                            {t("menu.contact")}
                             <span>.</span>
                         </Link>
                     </li>

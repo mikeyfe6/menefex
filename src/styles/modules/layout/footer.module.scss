@@ -40,13 +40,22 @@
         border-top: 7.5px solid $secondary-color;
 
         #{$footer}-container {
-            padding-top: rem-calc(64);
+            padding-top: rem-calc(48);
             padding-bottom: rem-calc(16);
+
+            @include laptop {
+                padding-top: rem-calc(64);
+            }
 
             #{$footer}-info {
                 display: flex;
                 justify-content: space-around;
+                flex-direction: column;
                 gap: rem-calc(48);
+
+                @include laptop {
+                    flex-direction: row;
+                }
 
                 .personal,
                 .media,
@@ -199,7 +208,7 @@
                 max-width: 77.5ch;
                 margin: 0 auto;
 
-                @include fluid-typing(12, 14);
+                @extend %as-tiny;
 
                 a {
                     @include text-link;

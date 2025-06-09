@@ -63,7 +63,7 @@ const Projects = () => {
                 nodes {
                     name
                     childImageSharp {
-                        gatsbyImageData(height: 80, layout: CONSTRAINED)
+                        gatsbyImageData(height: 70)
                     }
                 }
             }
@@ -227,7 +227,12 @@ const Projects = () => {
                                 Autoplay,
                             ]}
                             spaceBetween={10}
-                            slidesPerView={1.2}
+                            slidesPerView={1.1}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1.2,
+                                },
+                            }}
                             autoplay={{
                                 delay: 10000,
                             }}

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 
 import { Link } from "gatsby";
 
@@ -10,7 +10,8 @@ import useTranslation from "../../hooks/use-translation";
 
 const Services = () => {
     const { t, isHydrated } = useTranslation();
-    const [selected, setSelected] = React.useState("websites");
+    const [selected, setSelected] = useState("websites");
+    const overlayRef = React.useRef(null);
 
     const services = {
         websites: {
@@ -72,12 +73,17 @@ const Services = () => {
         "optimizations",
     ];
 
+    const handleSelect = (key) => {
+        setSelected(key);
+        overlayRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
     if (!isHydrated) return null;
 
     return (
         <section className={servicesStyles.service} id="services">
             <div className={servicesStyles.serviceContainer}>
-                <div className={servicesStyles.serviceOverlay}>
+                <div className={servicesStyles.serviceOverlay} ref={overlayRef}>
                     <i className={services[selected].icon} />
                     <h4>{services[selected].name}</h4>
                     <p>{services[selected].excerpt}</p>
@@ -104,14 +110,15 @@ const Services = () => {
                 {serviceKeys.map((key) => (
                     <button
                         key={key}
-                        className={
+                        className={[
                             servicesStyles[
                                 `service${
                                     key.charAt(0).toUpperCase() + key.slice(1)
                                 }`
-                            ]
-                        }
-                        onClick={() => setSelected(key)}
+                            ],
+                            selected === key ? servicesStyles.isActive : "",
+                        ].join(" ")}
+                        onClick={() => handleSelect(key)}
                     >
                         <i className={services[key].icon} />
                         <span>{services[key].name}</span>

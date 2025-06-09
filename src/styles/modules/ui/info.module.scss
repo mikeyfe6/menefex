@@ -5,11 +5,12 @@
 .info {
     $info: &;
 
-    padding: rem-calc(32);
     background: linear-gradient(145deg, $primary-color, $dark-color);
     outline: 2px solid $primary-color;
     border-radius: $medium-radius;
     color: $white-color;
+
+    @include box-padding;
 
     &-location {
         margin-bottom: rem-calc(24);
@@ -32,7 +33,7 @@
     &-details {
         margin-bottom: rem-calc(48);
 
-        @include fluid-typing(14, 16);
+        @extend %as-small;
     }
 
     &-communication {

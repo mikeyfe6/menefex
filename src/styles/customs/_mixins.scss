@@ -19,10 +19,14 @@
     text-align: $align;
     text-decoration: underline;
     text-decoration-color: $line-color;
-    margin-bottom: $space;
+    margin-bottom: rem-calc(20);
     color: $color;
 
-    @include fluid-typing(36, 40);
+    @extend %as-h1;
+
+    @include phablet {
+        margin-bottom: $space;
+    }
 }
 
 @mixin poppins-title {
@@ -56,7 +60,7 @@
 ) {
     max-width: $maxWidth;
     margin: $mt auto $mb;
-    padding: $pt rem-calc(16) $pb;
+    padding: $pt rem-calc(20) $pb;
     width: 100%;
 
     @include mobile {
@@ -75,6 +79,22 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+}
+
+@mixin box-padding($type: "normal") {
+    @if $type == "spaced" {
+        padding: rem-calc(28 24);
+
+        @include phablet {
+            padding: rem-calc(36 32);
+        }
+    } @else if $type == "normal" {
+        padding: rem-calc(24);
+
+        @include phablet {
+            padding: rem-calc(32);
+        }
+    }
 }
 
 // ELEMENTS --------------------------------------------
@@ -150,7 +170,7 @@
     width: $width;
     height: fit-content;
     min-height: rem-calc(44);
-    padding: rem-calc(14 24);
+    padding: rem-calc(12 16);
     border: 3px solid $lightgrey-color;
     white-space: nowrap;
     font-weight: 600;
@@ -175,6 +195,10 @@
 
     @include smooth-trans;
     @include fluid-typing(13, 15);
+
+    @include phablet {
+        padding: rem-calc(14 24);
+    }
 }
 
 @mixin secondary-button {
@@ -186,9 +210,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
 
     @include smooth-trans;
-    @include fluid-typing(14, 16);
+    @extend %as-small;
 
     &:not([href]) {
         pointer-events: none;
@@ -239,7 +264,7 @@
     white-space: nowrap;
 
     @include smooth-trans;
-    @include fluid-typing(12, 14);
+    @extend %as-tiny;
 
     &:hover {
         background: $smoke-color;
@@ -252,9 +277,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: rem-calc(32);
+    flex-direction: column-reverse;
+    gap: rem-calc(20);
 
     @include smooth-trans;
+
+    @include phablet {
+        gap: rem-calc(32);
+        flex-direction: row;
+    }
 
     > div {
         &:first-of-type {
@@ -271,13 +302,19 @@
 
             > p {
                 @include clamp(2);
-                @include fluid-typing(16, 18);
+                @extend %as-medium;
             }
 
             small {
                 display: flex;
-                gap: rem-calc(12);
+                gap: rem-calc(8);
                 margin-top: rem-calc(8);
+
+                @include fluid-typing(11, 13);
+
+                @include phablet {
+                    gap: rem-calc(12);
+                }
 
                 span {
                     color: $primary-color;
@@ -298,14 +335,33 @@
             outline: 2px solid $snow-color;
             border-radius: $low-radius;
             overflow: hidden;
-            max-width: rem-calc(250);
+            max-width: 100%;
             width: 100%;
 
             @include smooth-trans;
-            @include box-shadow;
+
+            @include phablet {
+                max-width: rem-calc(250);
+            }
 
             > [data-gatsby-image-wrapper] {
-                max-height: rem-calc(175);
+                max-height: rem-calc(275);
+
+                @include compact {
+                    max-height: rem-calc(300);
+                }
+
+                @include mobile {
+                    max-height: rem-calc(350);
+                }
+
+                @include phablet {
+                    max-height: rem-calc(400);
+                }
+
+                @include tablet {
+                    max-height: rem-calc(200);
+                }
             }
         }
     }

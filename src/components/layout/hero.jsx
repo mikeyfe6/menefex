@@ -7,7 +7,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import heroLogo from "../../images/logo/mnfx-icon.svg";
 
 import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
-import * as tpWriterStyles from "../../styles/modules/layout/typewriter.module.scss";
 
 // TODO: klaar voor TS'en..
 
@@ -30,7 +29,7 @@ const Hero = () => {
 
                         <h1>
                             {t("hero.menefex")}
-                            <span className={tpWriterStyles.dot}>.</span>{" "}
+                            <span>.</span>{" "}
                         </h1>
                         <h2
                             className={heroStyles.heroSlogan}

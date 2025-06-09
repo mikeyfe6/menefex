@@ -7,6 +7,8 @@ import useTranslation from "../hooks/use-translation";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 
+// TODO: klaar voor TS'en..
+
 const ThankYouPage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -17,7 +19,7 @@ const ThankYouPage = () => {
             <section className="page-intro">
                 <h1>
                     {t("success.title")}
-                    <span className="page-color">..</span>
+                    <span>..</span>
                 </h1>
                 <h2>{t("success.text")}</h2>
                 <br />

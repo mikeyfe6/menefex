@@ -2,11 +2,19 @@
 
 .prices {
     &-container {
-        display: flex;
+        display: grid;
         gap: rem-calc(24);
-        justify-content: space-evenly;
+        grid-template-columns: 1fr;
 
         @include container;
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(4, 1fr);
+        }
 
         > div {
             display: flex;
@@ -22,6 +30,8 @@
             > h3 {
                 text-align: center;
                 text-decoration: underline;
+                text-underline-offset: rem-calc(5);
+                text-decoration-thickness: 2px;
                 text-decoration-color: $ivory-color;
                 padding: rem-calc(8 0);
                 background: linear-gradient(
@@ -30,7 +40,7 @@
                     $secondary-color
                 );
 
-                @include fluid-typing(24, 28);
+                @include fluid-typing(28, 28);
             }
 
             > div {
@@ -97,7 +107,7 @@
                     font-weight: 600;
                     color: $grey-color;
 
-                    @include fluid-typing(12, 13);
+                    @include fluid-typing(13, 14);
                 }
 
                 &-bold {
@@ -115,7 +125,7 @@
                     border-bottom: 1px $lightgrey-color solid;
                     padding: rem-calc(14 12);
 
-                    @include fluid-typing(14, 16);
+                    @include fluid-typing(15, 16);
                 }
             }
 

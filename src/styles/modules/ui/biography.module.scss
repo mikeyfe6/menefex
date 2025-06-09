@@ -11,9 +11,13 @@
         @include container;
 
         #{$biography}-wrapper {
-            padding: rem-calc(36 48);
+            padding: rem-calc(22 28);
 
             @include border;
+
+            @include phablet {
+                padding: rem-calc(36 48);
+            }
 
             a {
                 @include text-link;

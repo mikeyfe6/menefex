@@ -16,7 +16,7 @@ import * as pricesStyles from "../styles/modules/pages/prices.module.scss";
 
 // TODO: klaar voor TS'en..
 
-const discountUntil = new Date("2024-08-31").toLocaleDateString("nl-NL", {
+const discountUntil = new Date("2025-12-31").toLocaleDateString("nl-NL", {
     day: "numeric",
     month: "numeric",
     year: "numeric",

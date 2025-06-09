@@ -14,7 +14,7 @@ import SEO from "../components/seo";
 
 import * as topicStyles from "../styles/modules/templates/topic.module.scss";
 
-// TODO: images naar GatsbyImage verwerken
+// TODO: klaar voor TS'en..
 
 const DefaultInfo = ({ text }) => (
     <li>
@@ -91,10 +91,16 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                                         <span>
                                                             <i class="fa-solid fa-calendar-days"></i>
                                                             <strong>
-                                                                {formatDate(
-                                                                    createdAt
-                                                                )}
-                                                            </strong>{" "}
+                                                                <time
+                                                                    datetime={
+                                                                        createdAt
+                                                                    }
+                                                                >
+                                                                    {formatDate(
+                                                                        createdAt
+                                                                    )}
+                                                                </time>
+                                                            </strong>
                                                         </span>
                                                         <span>
                                                             <i class="fa-solid fa-feather-pointed"></i>

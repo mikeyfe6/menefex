@@ -8,7 +8,10 @@
 
         h1 {
             font-family: $wdxl-font;
-            margin-bottom: rem-calc(16);
+
+            &:not(:only-child) {
+                margin-bottom: rem-calc(16);
+            }
         }
 
         h2 {
@@ -30,6 +33,50 @@
                     display: block;
                 }
             }
+        }
+
+        &.about {
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+
+        #{$page}-link {
+            @include text-link;
+        }
+    }
+
+    &-docs {
+        @include container;
+
+        h1 {
+            margin-bottom: rem-calc(24);
+        }
+
+        h5 {
+            margin-top: rem-calc(32);
+        }
+
+        p {
+            margin: rem-calc(16 0);
+        }
+
+        a {
+            @include text-link;
+        }
+
+        ol,
+        ul {
+            margin: rem-calc(16 0);
+            padding-left: rem-calc(20);
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        ul {
+            list-style-type: disc;
         }
     }
 }

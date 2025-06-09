@@ -15,10 +15,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: rem-calc(75);
+            flex-direction: column;
+            gap: rem-calc(50);
+
+            @include phablet {
+                flex-direction: row;
+            }
+
+            @include tablet {
+                gap: rem-calc(75);
+            }
 
             h1 {
-                @include fluid-typing(28, 32);
+                margin-top: rem-calc(4);
+
+                @include fluid-typing(21, 32);
             }
 
             #{$hero}-content {
@@ -33,13 +44,23 @@
                     margin-left: auto;
 
                     img {
-                        width: rem-calc(125);
-                        height: rem-calc(125);
+                        width: rem-calc(75);
+                        height: rem-calc(75);
                         animation: roll 60s infinite;
                         transform: rotate(180deg);
                         margin-bottom: rem-calc(24);
 
                         @include smooth-trans;
+
+                        @include mobile {
+                            width: rem-calc(100);
+                            height: rem-calc(100);
+                        }
+
+                        @include phablet {
+                            width: rem-calc(125);
+                            height: rem-calc(125);
+                        }
 
                         @keyframes roll {
                             0% {
@@ -68,7 +89,7 @@
                         content: "";
                         display: block;
                         position: absolute;
-                        width: rem-calc(200);
+                        width: rem-calc(150);
                         height: rem-calc(10);
                         border-radius: 5px;
                         border: 4px solid $primary-color;
@@ -76,6 +97,10 @@
                         bottom: 0;
                         right: rem-calc(5);
                         background-color: $secondary-color;
+
+                        @include phablet {
+                            width: rem-calc(200);
+                        }
                     }
                 }
 
@@ -87,13 +112,17 @@
                         $dark-color
                     );
                     border: 3px solid $primary-color;
-                    padding: rem-calc(0 24);
+                    padding: rem-calc(0 12);
                     border-radius: 10px;
                     width: fit-content;
                     text-align: center;
                     word-wrap: break-word;
 
-                    @include fluid-typing(32, 36);
+                    @include fluid-typing(20, 36);
+
+                    @include compact {
+                        padding: rem-calc(0 24);
+                    }
 
                     > span {
                         color: $smoke-color;
@@ -103,14 +132,19 @@
 
             > hr {
                 display: block;
-                width: rem-calc(3);
-                height: rem-calc(200);
+                height: rem-calc(3);
+                width: 100%;
                 border-radius: 5px;
                 background: linear-gradient(
                     145deg,
                     $primary-color,
                     $secondary-color
                 );
+
+                @include phablet {
+                    width: rem-calc(3);
+                    height: rem-calc(200);
+                }
             }
 
             #{$hero}-image {
@@ -167,7 +201,7 @@
                 > a {
                     font-weight: 600;
 
-                    @include fluid-typing(16, 20);
+                    @extend %as-h6;
 
                     &:hover {
                         color: $link-color;

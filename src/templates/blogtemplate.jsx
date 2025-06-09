@@ -24,7 +24,7 @@ import mini from "../images/logo/mnfx-icon.svg";
 
 import * as postStyle from "../styles/modules/templates/blog.module.scss";
 
-// TODO: time implementeren bij dates
+// TODO: klaar voor TS'en..
 
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
@@ -247,8 +247,10 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                         </section>
                         <aside>
                             <div className={postStyle.postDate}>
-                                {t("blog.postedOn")}{" "}
-                                {formatDate(content.publishedPost)}
+                                <span>{t("blog.postedOn")}</span>{" "}
+                                <time datetime={content.publishedPost}>
+                                    {formatDate(content.publishedPost)}
+                                </time>
                             </div>
                             <div className={postStyle.postSidebar}>
                                 <div className={postStyle.postAuthor}>

@@ -2,20 +2,28 @@
 
 .spotify {
     text-align: center;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
-    padding: rem-calc(32);
+    padding: rem-calc(20);
+    max-width: rem-calc(475);
+    margin-left: auto;
 
     @include lemon-bg;
+
+    @include phablet {
+        padding: rem-calc(24);
+        min-width: rem-calc(475);
+    }
 
     p {
         margin-bottom: rem-calc(32);
 
-        @include fluid-typing(14, 16);
+        @extend %as-small;
     }
 
     iframe {
         height: rem-calc(650);
         border: none;
+        width: -webkit-fill-available;
     }
 }

@@ -30,7 +30,7 @@ const MobileMenu = ({ show }) => {
             <ul>
                 <li>
                     <Link to="/" activeClassName={mobileMenuStyles.activePage}>
-                        {t("menu.home").toLowerCase()}
+                        {t("menu.home")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -40,7 +40,7 @@ const MobileMenu = ({ show }) => {
                         activeClassName={mobileMenuStyles.activePage}
                         partiallyActive
                     >
-                        {t("menu.services").toLowerCase()}
+                        {t("menu.services")}
 
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
@@ -50,7 +50,7 @@ const MobileMenu = ({ show }) => {
                         to="/portfolio/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menu.portfolio").toLowerCase()}
+                        {t("menu.portfolio")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -59,7 +59,7 @@ const MobileMenu = ({ show }) => {
                         to="/prijzen/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menu.prices").toLowerCase()}
+                        {t("menu.prices")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -69,7 +69,7 @@ const MobileMenu = ({ show }) => {
                         activeClassName={mobileMenuStyles.activePage}
                         getProps={checkIfPartiallyActive}
                     >
-                        {t("menu.blog").toLowerCase()}
+                        {t("menu.blog")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -78,7 +78,7 @@ const MobileMenu = ({ show }) => {
                         to="/faq/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menu.faq").toLowerCase()}
+                        {t("menu.faq")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -87,7 +87,7 @@ const MobileMenu = ({ show }) => {
                         to="/over/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menu.about").toLowerCase()}
+                        {t("menu.about")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
@@ -96,7 +96,7 @@ const MobileMenu = ({ show }) => {
                         to="/contact/"
                         activeClassName={mobileMenuStyles.activePage}
                     >
-                        {t("menu.contact").toLowerCase()}
+                        {t("menu.contact")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>

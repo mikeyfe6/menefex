@@ -13,10 +13,12 @@ const TermsConditions = () => {
 
     return (
         <Layout>
-            <section
-                className="terms-conditions"
-                dangerouslySetInnerHTML={{ __html: t("termsConditions") }}
-            />
+            <section>
+                <div
+                    className="page-docs"
+                    dangerouslySetInnerHTML={{ __html: t("termsConditions") }}
+                />
+            </section>
         </Layout>
     );
 };

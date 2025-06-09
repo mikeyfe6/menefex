@@ -1,5 +1,4 @@
 @use "./customs" as *;
-@use "base";
 @use "cookie";
 @use "forms";
 @use "globals";
@@ -31,7 +30,11 @@ body {
 
 main {
     flex: 1;
-    margin-top: rem-calc(125);
+    margin-top: rem-calc(100);
+
+    @include phablet {
+        margin-top: rem-calc(125);
+    }
 }
 
 footer {
@@ -40,6 +43,18 @@ footer {
 
 section {
     scroll-margin-top: rem-calc(125);
+
+    &:only-child {
+        margin-bottom: rem-calc(80);
+
+        @include phablet {
+            margin-bottom: rem-calc(120);
+        }
+
+        @include tablet {
+            margin-bottom: rem-calc(160);
+        }
+    }
 
     &:not(.page-intro, #notes, #about, #spotify, #info, #post) {
         padding: rem-calc(48 0);
@@ -80,14 +95,6 @@ section {
             margin: rem-calc(96 0);
         }
     }
-}
-
-[hidden] {
-    display: none;
-}
-
-small {
-    font-size: 75%;
 }
 
 /* Width */

@@ -9,11 +9,15 @@
         #{$post}-header {
             display: flex;
             align-items: center;
-            gap: rem-calc(32);
+            gap: rem-calc(16);
             padding: rem-calc(8);
             background-color: $ivory-color;
             border-radius: $medium-radius;
             border: 2px solid $lemon-color;
+
+            @include phablet {
+                gap: rem-calc(32);
+            }
 
             > img {
                 max-height: rem-calc(75);
@@ -34,10 +38,23 @@
 
         #{$post}-main {
             display: flex;
-            gap: rem-calc(64);
+            gap: rem-calc(40);
+            flex-direction: column;
+
+            @include phablet {
+                flex-direction: row;
+            }
+
+            @include tablet {
+                gap: rem-calc(80);
+            }
 
             > section {
-                flex: 65%;
+                flex: 60%;
+
+                @include tablet {
+                    flex: 70%;
+                }
 
                 #{$post}-image {
                     display: block;
@@ -54,11 +71,14 @@
                     font-weight: 600;
                     margin: rem-calc(32 0 24);
                     font-family: $poppins-font;
-                    line-height: rem-calc(38);
+                    line-height: rem-calc(32);
 
                     @include poppins-title;
+                    @extend %as-h5;
 
-                    @include fluid-typing(20, 24);
+                    @include phablet {
+                        line-height: rem-calc(38);
+                    }
 
                     &::first-letter {
                         color: $secondary-color;
@@ -84,20 +104,20 @@
                     h4 {
                         margin: rem-calc(24 0 8);
 
-                        @include fluid-typing(18, 20);
+                        @extend %as-p;
                     }
 
                     h5 {
                         margin-top: rem-calc(24);
                         font-weight: 700;
 
-                        @include fluid-typing(16, 18);
+                        @extend %as-medium;
                     }
 
                     h6 {
                         display: block;
 
-                        @include fluid-typing(14, 16);
+                        @extend %as-tiny;
                     }
 
                     p {
@@ -177,10 +197,8 @@
                     .assets {
                         border-radius: $medium-radius;
                         overflow: hidden;
-                        border: 1.5px solid #e9e9e9;
+                        border: 1.5px solid $snow-color;
                         margin: rem-calc(40 0);
-
-                        @include box-shadow;
                     }
                 }
 
@@ -195,7 +213,7 @@
                     .feedburner {
                         font-weight: 500;
 
-                        @include fluid-typing(12, 14);
+                        @extend %as-tiny;
 
                         > a {
                             display: flex;
@@ -231,11 +249,19 @@
             }
 
             > aside {
-                flex: 35%;
-                position: sticky;
-                margin-bottom: rem-calc(48);
+                flex: 40%;
+                margin-bottom: rem-calc(16);
                 top: rem-calc(150);
                 height: 100%;
+
+                @include phablet {
+                    position: sticky;
+                    margin-bottom: rem-calc(48);
+                }
+
+                @include tablet {
+                    flex: 30%;
+                }
 
                 #{$post}-date {
                     color: $secondary-color;
@@ -247,7 +273,7 @@
                     margin-bottom: rem-calc(16);
                     text-align: center;
 
-                    @include fluid-typing(12, 14);
+                    @extend %as-tiny;
                 }
 
                 #{$post}-sidebar {
@@ -260,7 +286,7 @@
                     #{$post}-author {
                         text-align: right;
 
-                        @include fluid-typing(14, 16);
+                        @extend %as-small;
 
                         > a {
                             @include text-link;
@@ -280,14 +306,25 @@
                         border-radius: $low-radius;
                         border: 2.5px solid rgba($dark-color, 0.75);
                         margin: rem-calc(24 0);
+                        display: none;
+
+                        @include phablet {
+                            display: block;
+                        }
                     }
 
                     #{$post}-related {
+                        display: none;
+
+                        @include phablet {
+                            display: block;
+                        }
+
                         h6 {
                             text-align: center;
                             margin: rem-calc(32 0 24);
 
-                            @include fluid-typing(18, 20);
+                            @extend %as-p;
                         }
 
                         ul {
@@ -324,16 +361,14 @@
                                             font-weight: 500;
 
                                             @include clamp;
-
-                                            @include fluid-typing(14, 16);
+                                            @extend %as-small;
                                         }
 
                                         p {
                                             margin: rem-calc(8 0);
 
                                             @include clamp;
-
-                                            @include fluid-typing(12, 14);
+                                            @extend %as-tiny;
                                         }
 
                                         span {
@@ -351,12 +386,15 @@
         }
 
         #{$post}-topics {
-            margin-top: rem-calc(48);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             gap: rem-calc(32);
+
+            @include phablet {
+                margin-top: rem-calc(48);
+            }
 
             > ul {
                 display: flex;
@@ -389,7 +427,7 @@
                 text-decoration-color: $secondary-color;
                 margin: rem-calc(32 0);
 
-                @include fluid-typing(24, 28);
+                @extend %as-h4;
             }
 
             > ul {
@@ -425,13 +463,13 @@
                         > h5 {
                             padding: rem-calc(16 16 0);
 
-                            @include fluid-typing(16, 18);
+                            @extend %as-medium;
                         }
 
                         > p {
                             padding: rem-calc(16 16 24);
 
-                            @include fluid-typing(14, 16);
+                            @extend %as-small;
                         }
 
                         > span {
@@ -439,7 +477,7 @@
                             font-weight: 500;
                             margin-top: auto;
 
-                            @include fluid-typing(14, 16);
+                            @extend %as-small;
                         }
 
                         &:hover {

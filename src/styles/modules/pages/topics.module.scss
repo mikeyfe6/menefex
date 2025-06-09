@@ -35,7 +35,7 @@
                     }
 
                     > p {
-                        @include fluid-typing(16, 18);
+                        @extend %as-medium;
                     }
 
                     &:hover {

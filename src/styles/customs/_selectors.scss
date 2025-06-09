@@ -1,4 +1,7 @@
 @use "colors" as *;
+@use "utils" as *;
+@use "functions" as *;
+@use "mediaqueries" as *;
 
 %image {
     --border: 6px; /* border thickness */
@@ -31,4 +34,44 @@
         --position: calc(var(--gap) / 2);
         --transition: 0s;
     }
+}
+
+%as-h1 {
+    @include fluid-typing(36, 40);
+}
+
+%as-h2 {
+    @include fluid-typing(32, 36);
+}
+
+%as-h3 {
+    @include fluid-typing(28, 32);
+}
+
+%as-h4 {
+    @include fluid-typing(24, 28);
+}
+
+%as-h5 {
+    @include fluid-typing(20, 24);
+}
+
+%as-h6 {
+    @include fluid-typing(16, 20);
+}
+
+%as-p {
+    @include fluid-typing(18, 20);
+}
+
+%as-medium {
+    @include fluid-typing(16, 18);
+}
+
+%as-small {
+    @include fluid-typing(14, 16);
+}
+
+%as-tiny {
+    @include fluid-typing(12, 14);
 }

@@ -94,7 +94,7 @@ const Actual = () => {
                             <h4>{node.title}</h4>
 
                             <div>
-                                <span>
+                                <time datetime={node.publishedDate}>
                                     {new Date(
                                         node.publishedDate
                                     ).toLocaleDateString(
@@ -107,7 +107,7 @@ const Actual = () => {
                                             year: "numeric",
                                         }
                                     )}
-                                </span>
+                                </time>
                                 <span> · </span>
                                 <Link to={`/blog/${node.slug}/`}>
                                     <b>{t("actual.readMore")}</b>

@@ -156,7 +156,7 @@ h1 {
     font-weight: 600;
     letter-spacing: $high-spacing;
 
-    @include fluid-typing(30, 40);
+    @extend %as-h1;
 
     span {
         color: $secondary-color;
@@ -164,23 +164,23 @@ h1 {
 }
 
 h2 {
-    @include fluid-typing(26, 36);
+    @extend %as-h2;
 }
 
 h3 {
-    @include fluid-typing(22, 32);
+    @extend %as-h3;
 }
 
 h4 {
-    @include fluid-typing(20, 30);
+    @extend %as-h4;
 }
 
 h5 {
-    @include fluid-typing(18, 28);
+    @extend %as-h5;
 }
 
 h6 {
-    @include fluid-typing(16, 26);
+    @extend %as-h6;
 }
 
 h2,
@@ -198,10 +198,11 @@ h6 {
     line-height: 1.5;
 }
 
-p {
+p,
+li {
     letter-spacing: $low-spacing;
 
-    @include fluid-typing(18, 20);
+    @extend %as-p;
 }
 
 a {
@@ -213,7 +214,7 @@ a {
 
 b,
 strong {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 strike {

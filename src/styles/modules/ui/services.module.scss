@@ -7,22 +7,53 @@
 
     &-container {
         display: grid;
-        grid-template:
-            "overlay title title" 1fr
-            "overlay intro intro" auto
-            "overlay websites webapps" auto
-            "overlay webshops seo" auto
-            "overlay maintenance optimizations" auto
-            / auto 1fr 1fr;
         gap: rem-calc(24);
+        grid-template:
+            "title" auto
+            "intro" auto
+            "websites" auto
+            "webapps" auto
+            "webshops" auto
+            "seo" auto
+            "maintenance" auto
+            "optimizations" auto
+            "overlay" 1fr
+            / 1fr;
 
         @include container;
+
+        @include phablet {
+            grid-template:
+                "title title" 1fr
+                "intro intro" auto
+                "overlay websites" auto
+                "overlay webapps" auto
+                "overlay webshops" auto
+                "overlay seo" auto
+                "overlay maintenance" auto
+                "overlay optimizations" auto
+                / auto 1fr;
+        }
+
+        @include desktop {
+            grid-template:
+                "overlay title title" 1fr
+                "overlay intro intro" auto
+                "overlay websites webapps" auto
+                "overlay webshops seo" auto
+                "overlay maintenance optimizations" auto
+                / auto 1fr 1fr;
+        }
 
         > h3 {
             grid-area: title;
             margin-top: auto;
 
             @include section-title($space: 0);
+
+            @include phablet {
+                margin-bottom: inherit;
+            }
         }
 
         > p {
@@ -32,25 +63,45 @@
 
         #{$service}-overlay {
             grid-area: overlay;
-            padding: rem-calc(36 32);
-            min-height: rem-calc(700);
             height: 100%;
             position: relative;
             display: flex;
             flex-direction: column;
+            scroll-margin-top: rem-calc(150);
+            margin-top: rem-calc(32);
+
+            @include box-padding("spaced");
+
+            @include phablet {
+                min-height: rem-calc(700);
+                margin-top: unset;
+            }
 
             > i {
                 position: absolute;
-                top: rem-calc(-45);
-                right: rem-calc(-45);
-                font-size: rem-calc(48);
-                min-width: rem-calc(100);
-                min-height: rem-calc(100);
+                top: rem-calc(-40);
+                right: rem-calc(10);
+                min-width: rem-calc(67.5);
+                min-height: rem-calc(67.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background: $secondary-color;
                 border-radius: 50%;
+
+                @include fluid-typing(36, 48);
+
+                @include phablet {
+                    min-width: rem-calc(87.5);
+                    min-height: rem-calc(87.5);
+                }
+
+                @include desktop {
+                    top: rem-calc(-45);
+                    right: rem-calc(-45);
+                    min-width: rem-calc(100);
+                    min-height: rem-calc(100);
+                }
             }
 
             > h4 {
@@ -142,6 +193,10 @@
             gap: rem-calc(16);
             letter-spacing: $medium-spacing;
             padding: rem-calc(20 24);
+
+            &.is-active {
+                background-color: $lightgrey-color;
+            }
 
             span {
                 display: block;

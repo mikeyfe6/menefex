@@ -15,16 +15,16 @@
                 display: flex;
                 flex-direction: column;
                 flex: 1;
-                padding: rem-calc(16);
-                min-width: rem-calc(325);
+                padding: rem-calc(20);
+                min-width: rem-calc(320);
                 border-radius: $low-radius;
                 outline: 2px solid $primary-color;
                 background: linear-gradient(145deg, $white-color, $smoke-color);
 
                 > h3 {
-                    font-weight: 600;
+                    font-weight: 900;
 
-                    @include fluid-typing(21, 23);
+                    @include fluid-typing(23, 23);
 
                     small {
                         color: $secondary-color;
@@ -35,7 +35,11 @@
                     border: 2px solid $lightgrey-color;
                     border-radius: 5px;
                     width: 100%;
-                    margin: rem-calc(24 0);
+                    margin: rem-calc(16 0);
+
+                    @include phablet {
+                        margin: rem-calc(24 0);
+                    }
                 }
 
                 > p {
@@ -63,11 +67,11 @@
 
                     @include poppins-title;
                     @include underline;
-                    @include fluid-typing(24, 28);
+                    @include fluid-typing(23, 28);
                 }
 
                 h4 {
-                    @include fluid-typing(20, 22);
+                    @include fluid-typing(19, 22);
                 }
 
                 ol {
@@ -103,8 +107,12 @@
             #{$services}-buttons {
                 display: flex;
                 flex-wrap: wrap;
-                margin-top: rem-calc(80);
+                margin-top: rem-calc(60);
                 gap: rem-calc(24);
+
+                @include phablet {
+                    margin-top: rem-calc(80);
+                }
 
                 > a {
                     gap: rem-calc(12);

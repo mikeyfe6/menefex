@@ -2,9 +2,9 @@
 
 .notes {
     height: fit-content;
-    padding: rem-calc(32);
 
     @include lemon-bg;
+    @include box-padding;
 
     h3 {
         margin-bottom: rem-calc(16);

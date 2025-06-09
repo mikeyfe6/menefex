@@ -3,9 +3,8 @@
 @use "./customs" as *;
 
 form {
-    padding: rem-calc(32);
-
     @include smoke-bg;
+    @include box-padding;
 
     > label {
         display: block;
@@ -33,7 +32,7 @@ form {
         width: 100%;
 
         @include smooth-trans;
-        @include fluid-typing(16, 18);
+        @extend %as-medium;
     }
 
     > input,

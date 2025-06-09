@@ -10,6 +10,8 @@
     &-container {
         display: flex;
         gap: rem-calc(48);
+        flex-wrap: wrap;
+        justify-content: center;
 
         @include container($pt: 0, $pb: 0);
 
@@ -19,6 +21,8 @@
             align-items: center;
             flex: 1;
             gap: rem-calc(24);
+            min-width: rem-calc(320);
+            max-width: rem-calc(400);
 
             #{$actual}-image {
                 > a {
@@ -41,7 +45,7 @@
                 }
 
                 > div {
-                    > span {
+                    > time {
                         color: $grey-color;
                         pointer-events: none;
                     }

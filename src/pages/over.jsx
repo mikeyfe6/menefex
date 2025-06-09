@@ -28,8 +28,10 @@ const AboutPage = () => {
             </section>
 
             <div className={aboutStyles.aboutSpotify}>
-                <About />
-                <Spotify />
+                <div className={aboutStyles.aboutSpotifyContainer}>
+                    <About />
+                    <Spotify />
+                </div>
             </div>
         </Layout>
     );

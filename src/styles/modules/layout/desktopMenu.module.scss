@@ -10,10 +10,14 @@
         $white-color,
         rgba($white-color, 90%)
     );
-    padding: rem-calc(24 0);
+    padding: rem-calc(16 0);
     z-index: 7;
     border-top: 7.5px solid $secondary-color;
     border-bottom: 1px solid rgba($white-color, 100%);
+
+    @include phablet {
+        padding: rem-calc(24 0);
+    }
 
     > nav {
         display: flex;
@@ -24,7 +28,16 @@
         @include container($pt: rem-calc(0), $pb: rem-calc(0));
 
         .logo {
-            width: rem-calc(250);
+            display: flex;
+            width: rem-calc(175);
+
+            @include mobile {
+                width: rem-calc(200);
+            }
+
+            @include phablet {
+                width: rem-calc(250);
+            }
         }
 
         > ul {
@@ -49,10 +62,11 @@
                 > a {
                     font-weight: 600;
                     font-family: $wdxl-font;
+                    text-transform: lowercase;
 
                     @include smooth-trans;
 
-                    @include fluid-typing(20, 24);
+                    @extend %as-h5;
 
                     &:hover {
                         color: $dark-color;
@@ -101,8 +115,7 @@
             aspect-ratio: 1;
 
             @include smooth-trans;
-
-            @include fluid-typing(12, 14);
+            @extend %as-tiny;
 
             &:hover {
                 background: $lemon-color;

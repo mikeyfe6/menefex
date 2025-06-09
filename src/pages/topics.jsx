@@ -10,6 +10,8 @@ import SEO from "../components/seo";
 
 import * as topicStyles from "../styles/modules/pages/topics.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const TopicPage = () => {
     const { t, i18n, isHydrated } = useTranslation();
     const currentLanguage = i18n.language;

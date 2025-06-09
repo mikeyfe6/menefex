@@ -5,6 +5,10 @@
         h3 {
             margin-bottom: rem-calc(4);
 
+            @include poppins-title;
+            @include underline;
+            @extend %as-h5;
+
             &:not(:first-of-type) {
                 margin-top: rem-calc(32);
             }
@@ -16,18 +20,26 @@
     }
 
     &-spotify {
-        display: flex;
-        gap: rem-calc(80);
-        margin-bottom: rem-calc(80);
-
-        @include container;
+        padding: rem-calc(48 0 80);
 
         @include phablet {
-            margin-bottom: rem-calc(120);
+            padding: rem-calc(60 0 120);
         }
 
         @include tablet {
-            margin-bottom: rem-calc(160);
+            padding: rem-calc(80 0 160);
+        }
+
+        &-container {
+            display: flex;
+            gap: rem-calc(80);
+            flex-direction: column;
+
+            @include container;
+
+            @include tablet {
+                flex-direction: row;
+            }
         }
     }
 }

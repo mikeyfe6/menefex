@@ -12,6 +12,8 @@ import Maps from "../components/google/maps";
 
 import * as contactStyles from "../styles/modules/pages/contact.module.scss";
 
+// TODO: klaar voor TS'en..
+
 const ContactPage = () => {
     const { t, isHydrated } = useTranslation();
 
@@ -27,8 +29,10 @@ const ContactPage = () => {
             </section>
 
             <div className={contactStyles.formInfo}>
-                <LeadForm />
-                <Info />
+                <div className={contactStyles.formInfoContainer}>
+                    <LeadForm />
+                    <Info />
+                </div>
             </div>
 
             <Maps />
