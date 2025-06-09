@@ -89,15 +89,19 @@
                 flex: 1 1 67.5%;
                 min-width: 0;
 
-                img {
-                    border-radius: $medium-radius;
+                [data-gatsby-image-wrapper] {
+                    aspect-ratio: 16 / 9;
 
-                    @include smooth-trans;
+                    img {
+                        border-radius: $medium-radius;
 
-                    @include border($color: $smoke-color);
+                        @include smooth-trans;
 
-                    &:hover {
-                        border-color: $link-color;
+                        @include border($color: $smoke-color);
+
+                        &:hover {
+                            border-color: $link-color;
+                        }
                     }
                 }
 

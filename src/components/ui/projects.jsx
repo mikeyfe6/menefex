@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import {
     Navigation,
@@ -117,7 +117,7 @@ const Projects = () => {
             name: "kn-acdig",
             title: "KN-ACDiG",
             description: t("projects.knacdig"),
-            url: "https://kn-acdig.com",
+            // url: "https://kn-acdig.com",
             type: "site",
             stack: ["Wordpress", "Custom CSS", "Elementor"],
         },
@@ -206,15 +206,17 @@ const Projects = () => {
                             ))}
                         </ul>
 
-                        <a
-                            href={currentProject.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {currentProject.type === "app"
-                                ? t("projects.viewWebapp")
-                                : t("projects.viewWebsite")}
-                        </a>
+                        {currentProject.url && (
+                            <a
+                                href={currentProject.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {currentProject.type === "app"
+                                    ? t("projects.viewWebapp")
+                                    : t("projects.viewWebsite")}
+                            </a>
+                        )}
                     </div>
                     <div className={projectsStyles.projectsSlider}>
                         <Swiper
@@ -290,7 +292,10 @@ const Projects = () => {
                                                     projectsStyles.projectsNoImage
                                                 }
                                             >
-                                                <p>No image</p>
+                                                <StaticImage
+                                                    src="../../images/mnfx-screens.jpeg"
+                                                    alt={project.title}
+                                                />
                                             </div>
                                         )}
                                     </SwiperSlide>
