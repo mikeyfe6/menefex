@@ -208,7 +208,6 @@ li {
 a {
     text-decoration: none;
     display: inline;
-    word-break: break-all;
 
     @include smooth-trans;
 }
