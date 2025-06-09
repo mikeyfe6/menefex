@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
 import useTranslation from "../hooks/use-translation";
@@ -14,6 +15,24 @@ import * as portfolioStyles from "../styles/modules/pages/portfolio.module.scss"
 
 const PortfolioPage = () => {
     const { t, isHydrated } = useTranslation();
+
+    const data = useStaticQuery(graphql`
+        query {
+            allFile(filter: { sourceInstanceName: { eq: "project-images" } }) {
+                nodes {
+                    name
+                    childImageSharp {
+                        gatsbyImageData(width: 600)
+                    }
+                }
+            }
+        }
+    `);
+
+    const getProjectImage = (name) => {
+        const node = data.allFile.nodes.find((n) => n.name === name);
+        return node ? getImage(node.childImageSharp.gatsbyImageData) : null;
+    };
 
     if (!isHydrated) return null;
 
@@ -39,10 +58,14 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/edutainuproductions.png"
-                                alt="Edutain U Productions"
-                            />
+                            {getProjectImage("edutainuproductions") && (
+                                <GatsbyImage
+                                    image={getProjectImage(
+                                        "edutainuproductions"
+                                    )}
+                                    alt="Edutain U Productions"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -95,10 +118,12 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/priozorg.png"
-                                alt="Prio Zorg"
-                            />
+                            {getProjectImage("priozorg") && (
+                                <GatsbyImage
+                                    image={getProjectImage("priozorg")}
+                                    alt="Prio Zorg"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -152,10 +177,12 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/keeptreal.png"
-                                alt="Keep It Real"
-                            />
+                            {getProjectImage("keeptreal") && (
+                                <GatsbyImage
+                                    image={getProjectImage("keeptreal")}
+                                    alt="Keep It Real"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -209,10 +236,12 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/afrodiasphere.png"
-                                alt="Afrodiasphere"
-                            />
+                            {getProjectImage("afrodiasphere") && (
+                                <GatsbyImage
+                                    image={getProjectImage("afrodiasphere")}
+                                    alt="Afrodiasphere"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -268,10 +297,12 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/eternitydrum.png"
-                                alt="Eternity Percussion"
-                            />
+                            {getProjectImage("eternitydrum") && (
+                                <GatsbyImage
+                                    image={getProjectImage("eternitydrum")}
+                                    alt="Eternity Percussion"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -377,10 +408,12 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/dsmelodies.png"
-                                alt="DS Melodies"
-                            />
+                            {getProjectImage("dsmelodies") && (
+                                <GatsbyImage
+                                    image={getProjectImage("dsmelodies")}
+                                    alt="DS Melodies"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -429,10 +462,12 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
-                                src="../../public/project-images/blackharmony.png"
-                                alt="Eternity Percussion"
-                            />
+                            {getProjectImage("blackharmony") && (
+                                <GatsbyImage
+                                    image={getProjectImage("blackharmony")}
+                                    alt="Black Harmony"
+                                />
+                            )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
