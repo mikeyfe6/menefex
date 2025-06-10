@@ -24,7 +24,7 @@ const Usp = () => {
     if (!isHydrated) return null;
 
     return (
-        <section className={uspStyles.usp} id="usp">
+        <section id="usp">
             <div className={uspStyles.uspContainer}>
                 <ul>
                     <li>
