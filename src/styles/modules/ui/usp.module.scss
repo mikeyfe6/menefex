@@ -25,8 +25,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: auto;
-                min-width: rem-calc(240);
+                width: rem-calc(225);
                 scroll-snap-align: start;
 
                 i {
@@ -43,10 +42,8 @@
                 }
 
                 p {
-                    height: 100%;
-                    min-width: rem-calc(220);
-                    max-width: rem-calc(225);
-                    min-height: rem-calc(200);
+                    width: 100%;
+                    height: rem-calc(200);
                     padding: rem-calc(20);
                     border-radius: $medium-radius;
                     margin-top: rem-calc(20);

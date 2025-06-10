@@ -3,17 +3,17 @@
 .vertical-line-short {
     border-radius: $low-radius;
     display: table;
-    margin: 0 auto;
-    height: 48px;
-    width: 3px;
-    background: linear-gradient(145deg, $white-color, $secondary-color);
+    margin: rem-calc(48) auto;
+    height: rem-calc(48);
+    width: rem-calc(3);
+    background: linear-gradient(145deg, $white-color, $lemon-color);
 }
 
 .vertical-line-long {
     border-radius: $low-radius;
     display: table;
-    margin: 0 auto;
-    height: 64px;
-    width: 3px;
-    background: linear-gradient(145deg, $white-color, $secondary-color);
+    margin: rem-calc(48) auto;
+    height: rem-calc(80);
+    width: rem-calc(3);
+    background: linear-gradient(145deg, $white-color, $lemon-color);
 }

@@ -13,7 +13,7 @@
         #{$biography}-wrapper {
             padding: rem-calc(20 24);
 
-            @include border;
+            @include border($grey-color);
 
             @include phablet {
                 padding: rem-calc(36 48);
