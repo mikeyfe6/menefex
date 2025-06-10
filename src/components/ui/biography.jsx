@@ -14,7 +14,7 @@ const Biography = () => {
     if (!isHydrated) return null;
 
     return (
-        <section className={biographyStyles.biography} id="biografie">
+        <section className={biographyStyles.biography} id="biography">
             <div className={biographyStyles.biographyContainer}>
                 <div className={biographyStyles.biographyWrapper}>
                     <h3>{t("biography.title")}</h3>

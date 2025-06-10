@@ -30,10 +30,18 @@ body {
 
 main {
     flex: 1;
-    margin-top: rem-calc(100);
+    margin-top: rem-calc(85);
 
     @include phablet {
-        margin-top: rem-calc(125);
+        margin-top: rem-calc(100);
+    }
+
+    @include laptop {
+        margin-top: rem-calc(110);
+    }
+
+    @include desktop {
+        margin-top: rem-calc(115);
     }
 }
 
@@ -42,8 +50,6 @@ footer {
 }
 
 section {
-    scroll-margin-top: rem-calc(125);
-
     &:only-child {
         margin-bottom: rem-calc(80);
 
@@ -80,8 +86,38 @@ section {
         }
     }
 
-    &#cta {
-        scroll-margin-top: rem-calc(250);
+    #cta {
+        scroll-margin-top: rem-calc(200);
+
+        @include phablet {
+            scroll-margin-top: rem-calc(215);
+        }
+
+        @include laptop {
+            scroll-margin-top: rem-calc(225);
+        }
+
+        @include desktop {
+            scroll-margin-top: rem-calc(230);
+        }
+    }
+
+    &#projects,
+    &#services,
+    &#biography {
+        scroll-margin-top: rem-calc(115);
+
+        @include phablet {
+            scroll-margin-top: rem-calc(130);
+        }
+
+        @include laptop {
+            scroll-margin-top: rem-calc(140);
+        }
+
+        @include desktop {
+            scroll-margin-top: rem-calc(145);
+        }
     }
 
     &#services {

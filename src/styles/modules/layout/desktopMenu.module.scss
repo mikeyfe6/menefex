@@ -16,6 +16,10 @@
     border-bottom: 1px solid rgba($white-color, 100%);
 
     @include phablet {
+        padding: rem-calc(20 0);
+    }
+
+    @include laptop {
         padding: rem-calc(24 0);
     }
 

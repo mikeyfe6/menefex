@@ -58,7 +58,7 @@ const Hero = () => {
 
                     <div className={heroStyles.heroButtons} id="cta">
                         <span>-</span>
-                        <a href="#biografie" type="button" name="cta">
+                        <a href="#biography" type="button" name="cta">
                             {t("hero.biography")}
                         </a>
                         <span>|</span>
