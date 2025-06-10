@@ -75,3 +75,29 @@
 %as-tiny {
     @include fluid-typing(12, 14);
 }
+
+// > small {
+//     visibility: hidden;
+//     opacity: 0;
+//     width: 90%;
+//     background: $primary-color;
+//     border: 2px solid $primary-color;
+//     color: $white-color;
+//     border-radius: $low-radius;
+//     padding: 0.75em 1em;
+//     position: absolute;
+//     z-index: 10;
+//     top: 105%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     transition: opacity 0.2s;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+//     pointer-events: none;
+// }
+
+// &:hover > small,
+// &:focus-within > small {
+//     visibility: visible;
+//     opacity: 1;
+//     pointer-events: auto;
+// }
