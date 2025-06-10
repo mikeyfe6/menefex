@@ -30,9 +30,9 @@
                 scroll-snap-align: start;
 
                 i {
-                    color: $secondary-color;
+                    color: $primary-color;
                     font-size: xx-large;
-                    background: $primary-color;
+                    background: $secondary-color;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -56,7 +56,7 @@
 
                 &:nth-child(odd) {
                     p {
-                        background-color: $lemon-color;
+                        background-color: $ivory-color;
                     }
                 }
 
