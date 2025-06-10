@@ -83,10 +83,10 @@
 
 @mixin box-padding($type: "normal") {
     @if $type == "spaced" {
-        padding: rem-calc(28 24);
+        padding: rem-calc(28 24 32);
 
         @include phablet {
-            padding: rem-calc(36 32);
+            padding: rem-calc(36 32 48);
         }
     } @else if $type == "normal" {
         padding: rem-calc(24);
@@ -155,7 +155,7 @@
     @include smooth-trans;
 
     &:hover {
-        color: color.adjust($link-color, $lightness: -10%);
+        color: color.adjust($link-color, $lightness: -5%);
     }
 }
 

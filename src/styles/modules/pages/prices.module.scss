@@ -1,15 +1,15 @@
+@use "sass:color";
+
 @use "../../customs" as *;
 
-// TODO: dit hieronder moet naar pages/prices
-
 .call-back {
-    color: #1ca111;
+    color: $tel-color;
     font-weight: 500;
 
     @include smooth-trans;
 
     &:hover {
-        color: #187710;
+        color: color.adjust($tel-color, $lightness: -5%);
     }
 }
 

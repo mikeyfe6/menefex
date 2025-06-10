@@ -10,7 +10,7 @@
     border-radius: $medium-radius;
     color: $white-color;
 
-    @include box-padding;
+    @include box-padding("spaced");
 
     &-location {
         margin-bottom: rem-calc(24);
@@ -38,10 +38,10 @@
 
     &-communication {
         display: flex;
-        justify-content: space-around;
-        gap: rem-calc(16);
+        justify-content: center;
+        gap: rem-calc(32);
         flex-wrap: wrap;
-        margin-bottom: rem-calc(36);
+        margin-bottom: rem-calc(48);
 
         #{$info}-tel,
         #{$info}-mail {
@@ -49,35 +49,36 @@
             justify-content: center;
             align-items: center;
             gap: rem-calc(8);
+            padding: rem-calc(10 20);
+            border-radius: $low-radius;
+            font-weight: 500;
+            border: 2px solid $primary-color;
+            color: $white-color;
 
-            > a {
-                font-weight: 500;
+            @include smooth-trans;
 
-                @include smooth-trans;
+            i {
+                font-size: rem-calc(18);
+            }
 
-                i {
-                    font-size: rem-calc(16);
-                }
+            span {
+                @include fluid-typing(16, 18);
             }
         }
 
         #{$info}-tel {
-            > a {
-                color: #2b9d53;
+            background-color: color.adjust($tel-color, $lightness: -2.5%);
 
-                &:hover {
-                    color: color.adjust(#2b9d53, $lightness: 10%);
-                }
+            &:hover {
+                background-color: color.adjust($tel-color, $lightness: -7.5%);
             }
         }
 
         #{$info}-mail {
-            > a {
-                color: #84bcde;
+            background-color: color.adjust($mail-color, $lightness: -2.5%);
 
-                &:hover {
-                    color: color.adjust(#84bcde, $lightness: 10%);
-                }
+            &:hover {
+                background-color: color.adjust($mail-color, $lightness: -10%);
             }
         }
     }
@@ -87,9 +88,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-bottom: rem-calc(16);
 
         > p {
             text-align: center;
+            margin-bottom: rem-calc(8);
         }
 
         > ul {

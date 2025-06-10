@@ -63,21 +63,20 @@ const Info = () => {
             />
 
             <div className={infoStyles.infoCommunication}>
-                <p className={infoStyles.infoTel}>
+                <a href="tel:0611054318" className={infoStyles.infoTel}>
                     <i className="fa-solid fa-phone" /> ·{" "}
-                    <a href="tel:0611054318">+31 6 11 05 43 18</a>
-                </p>
+                    <span>+31 6 11 05 43 18</span>
+                </a>
 
-                <p className={infoStyles.infoMail}>
+                <a
+                    href="mailto:info@menefex.nl"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className={infoStyles.infoMail}
+                >
                     <i className="fa-solid fa-envelope" /> ·{" "}
-                    <a
-                        href="mailto:info@menefex.nl"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        info@menefex.nl
-                    </a>
-                </p>
+                    <span>info@menefex.nl</span>
+                </a>
             </div>
 
             <div className={infoStyles.infoSocials}>

@@ -3,6 +3,8 @@
 @use "./customs" as *;
 
 form {
+    height: 100%;
+
     @include smoke-bg;
     @include box-padding;
 
@@ -70,7 +72,7 @@ form {
     }
 
     > button {
-        margin: rem-calc(32 0 0) auto;
+        margin: rem-calc(48 0 0) auto;
 
         @include primary-button;
     }

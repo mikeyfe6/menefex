@@ -92,11 +92,11 @@
                     align-items: flex-start;
 
                     .mail {
-                        color: #74aece;
+                        color: $mail-color;
                     }
 
                     .tel {
-                        color: #1ca111;
+                        color: $tel-color;
                     }
                 }
 
@@ -127,23 +127,23 @@
                             }
 
                             &.fb::before {
-                                background: #4064ad;
+                                background: $fb-color;
                             }
 
                             &.ig::before {
-                                background: #dd2a7b;
+                                background: $ig-color;
                             }
 
                             &.tw::before {
-                                background: #55acee;
+                                background: $tw-color;
                             }
 
                             &.li::before {
-                                background: #0177b5;
+                                background: $li-color;
                             }
 
                             &.gh::before {
-                                background: #24292e;
+                                background: $gh-color;
                             }
                         }
                     }
@@ -154,7 +154,8 @@
                     align-items: flex-end;
 
                     .amsterdam {
-                        color: red;
+                        color: #d4121a;
+                        font-weight: 700;
                     }
                 }
             }
