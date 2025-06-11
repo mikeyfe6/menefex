@@ -24,7 +24,7 @@
     ul {
         display: block;
         text-align: center;
-        padding-top: rem-calc(112);
+        padding-top: rem-calc(144);
         height: 100%;
 
         @include phablet {
@@ -35,7 +35,7 @@
             margin-bottom: rem-calc(16);
 
             &:last-of-type {
-                border-top: 3px solid $lightgrey-color;
+                border-top: 3px solid $snow-color;
                 padding-top: rem-calc(16);
                 margin-top: rem-calc(16);
                 padding-bottom: rem-calc(36);
