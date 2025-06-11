@@ -231,7 +231,7 @@ export default {
         dsmelodies:
             "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, formed from 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
         blackharmony:
-            "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina. Black harmony wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
+            "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina ánd wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
     },
 
     prices: {
