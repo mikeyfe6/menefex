@@ -371,11 +371,11 @@ export default {
     successGoBack: "Go back to the homepage!",
 
     usp: {
-        one: `"Simple and custom-made websites that grow with your business"`,
-        two: `"Tailor-made web solutions, no templates — just results"`,
-        three: `"From idea to launch — websites & web apps that convert"`,
-        four: `"Fast, optimized & future-proof development"`,
-        five: `"One partner for all your digital needs — design, code & SEO"`,
+        one: "Simple and custom-made websites that grow with your business",
+        two: "Tailor-made web solutions, no templates — just results",
+        three: "From idea to launch — websites & web apps that convert",
+        four: "Fast, optimized & future-proof development",
+        five: "One partner for all your digital needs — design, code & SEO",
     },
 
     privacyPolicy:

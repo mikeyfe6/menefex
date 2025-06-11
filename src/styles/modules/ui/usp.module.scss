@@ -28,7 +28,7 @@
                 width: rem-calc(225);
                 scroll-snap-align: start;
 
-                i {
+                > i {
                     color: $primary-color;
                     font-size: xx-large;
                     background: $secondary-color;
@@ -41,18 +41,35 @@
                     text-align: center;
                 }
 
-                p {
+                > p {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
                     width: 100%;
-                    height: rem-calc(200);
-                    padding: rem-calc(20);
+                    height: rem-calc(230);
+                    padding: rem-calc(16);
                     border-radius: $medium-radius;
                     margin-top: rem-calc(20);
+                    text-align: center;
 
                     @include fluid-typing(17, 19);
+
+                    > i {
+                        color: $lightgrey-color;
+
+                        &:first-child {
+                            align-self: flex-start;
+                        }
+
+                        &:last-child {
+                            align-self: flex-end;
+                        }
+                    }
                 }
 
                 &:nth-child(odd) {
-                    p {
+                    > p {
                         background-color: $ivory-color;
                     }
                 }

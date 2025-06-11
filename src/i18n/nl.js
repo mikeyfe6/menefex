@@ -385,11 +385,11 @@ export default {
     },
 
     usp: {
-        one: `"Eenvoudige en op maat gemaakte websites die meegroeien met jouw bedrijf"`,
-        two: `"Op maat gemaakte weboplossingen, geen sjablonen — alleen resultaten"`,
-        three: `"Van idee tot lancering — websites & webapps die converteren"`,
-        four: `"Snel, geoptimaliseerd & toekomstbestendig gebouwd"`,
-        five: `"Eén partner voor al je digitale behoeften — design, code & SEO"`,
+        one: "Eenvoudige en op maat gemaakte websites die meegroeien met jouw bedrijf",
+        two: "Op maat gemaakte weboplossingen, geen sjablonen — alleen resultaten",
+        three: "Van idee tot lancering — websites & webapps die converteren",
+        four: "Snel, geoptimaliseerd & toekomstbestendig gebouwd",
+        five: "Eén partner voor al je digitale behoeften — design, code & SEO",
     },
 
     privacyPolicy:
