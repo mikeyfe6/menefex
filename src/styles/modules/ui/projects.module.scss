@@ -89,17 +89,23 @@
                 flex: 1 1 67.5%;
                 min-width: 0;
 
-                [data-gatsby-image-wrapper] {
-                    aspect-ratio: 16 / 9;
-
+                div [data-gatsby-image-wrapper],
+                a [data-gatsby-image-wrapper] {
                     img {
                         border-radius: $medium-radius;
-
-                        @include smooth-trans;
+                        aspect-ratio: 16 / 9;
 
                         @include border($color: $smoke-color);
+                    }
+                }
 
-                        &:hover {
+                a [data-gatsby-image-wrapper] {
+                    img {
+                        @include smooth-trans;
+                    }
+
+                    &:hover {
+                        img {
                             border-color: $link-color;
                         }
                     }
