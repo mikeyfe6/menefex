@@ -19,14 +19,10 @@
     text-align: $align;
     text-decoration: underline;
     text-decoration-color: $line-color;
-    margin-bottom: rem-calc(20);
+    margin-bottom: $space;
     color: $color;
 
     @extend %as-h1;
-
-    @include phablet {
-        margin-bottom: $space;
-    }
 }
 
 @mixin poppins-title {

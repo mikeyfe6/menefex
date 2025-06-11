@@ -50,10 +50,6 @@
             margin-top: auto;
 
             @include section-title($space: 0);
-
-            @include phablet {
-                margin-bottom: inherit;
-            }
         }
 
         > p {
