@@ -217,7 +217,7 @@ export default {
         noRepo: "Not on Github",
 
         edutainuproductions:
-            "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment..",
+            "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment. Based on years of experience in the cultural sector, Edutain U Productions realizes projects that connect, deepen and strengthen. Always with a focus on inclusivity, heritage and social involvement.",
         priozorg:
             "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Prio Zorg offers expert support in the form of coaching, mentoring and educational guidance.",
         keeptreal:
@@ -229,7 +229,7 @@ export default {
         knacdig:
             "<strong>KN-ACDiG</strong> or Knowledge Network African-Caribbean Diaspora Community is a foundation that focuses on working on strengthening the identity, increasing visibility and knowledge management (advice to monitoring) of the African-Caribbean Diaspora Community.",
         dsmelodies:
-            "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, formed from 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
+            "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, shaped by more than 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
         blackharmony:
             "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina ánd wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
     },

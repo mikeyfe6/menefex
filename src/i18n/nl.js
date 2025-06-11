@@ -234,7 +234,7 @@ export default {
         knacdig:
             "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
         dsmelodies:
-            "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
+            "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit méér dan 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
         blackharmony:
             "<strong>Black Harmony</strong> is een populaire en getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina én wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
     },
