@@ -38,6 +38,8 @@
             #{$faq}-content {
                 > h3 {
                     @include section-title;
+
+                    @extend %as-h2;
                 }
 
                 #{$faq}-item {
