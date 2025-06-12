@@ -29,10 +29,9 @@
 
                 img {
                     border-radius: $high-radius;
-                    filter: opacity(0.75) grayscale(0.25) contrast(1.2)
-                        brightness(1);
+                    filter: opacity(0.9) brightness(1.1);
 
-                    @include border($smoke-color, 4px);
+                    @include border($white-color, 4px);
                 }
             }
 
@@ -52,7 +51,7 @@
                         > h4 {
                             @extend %as-h6;
                             @include smooth-trans;
-                            @include underline($color: $white-color);
+                            @include underline($color: $snow-color);
                         }
 
                         &:hover {
