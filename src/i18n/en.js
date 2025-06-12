@@ -39,6 +39,8 @@ export default {
 
     services: {
         title: "Our Services",
+        subtitle:
+            "At Menefex, we offer a complete package of digital services to strengthen your online presence. Whether you're looking for a custom-built website, a powerful web application, a high-converting webshop, better visibility on Google, technical support, or performance optimization — we make sure your digital platform works, performs, and grows.",
         intro: "Here you will find an overview of the different services we offer. These services are designed to help businesses with their online presence and efficiency.",
         showAllServices: "Show all services",
         goToPrices: "Go to prices",

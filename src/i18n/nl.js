@@ -39,6 +39,8 @@ export default {
 
     services: {
         title: "Onze Diensten",
+        subtitle:
+            "Bij Menefex bieden we een compleet pakket aan digitale diensten om jouw online aanwezigheid te versterken. Of je nu op zoek bent naar een op maat gemaakte website, krachtige webapplicatie, converterende webshop, betere vindbaarheid in Google, technische ondersteuning of performance-optimalisatie — wij zorgen dat jouw digitale platform werkt, scoort én groeit.",
         intro: "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
         showAllServices: "Bekijk alle diensten",
         goToPrices: "Ga naar prijzen",

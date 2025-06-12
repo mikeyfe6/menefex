@@ -98,15 +98,7 @@ const Services = () => {
                     </Link>
                 </div>
                 <h3>{t("services.title")}</h3>
-                <p>
-                    Bij Menefex bieden we een compleet pakket aan digitale
-                    diensten om jouw online aanwezigheid te versterken. Of je nu
-                    op zoek bent naar een op maat gemaakte website, krachtige
-                    webapplicatie, converterende webshop, betere vindbaarheid in
-                    Google, technische ondersteuning of
-                    performance-optimalisatie — wij zorgen dat jouw digitale
-                    platform werkt, scoort én groeit.
-                </p>
+                <p>{t("services.subtitle")}</p>
                 {serviceKeys.map((key) => (
                     <button
                         key={key}
