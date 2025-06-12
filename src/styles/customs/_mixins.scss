@@ -99,8 +99,8 @@
     box-shadow: 1px 3px 7px rgb(66 66 66 / 25%);
 }
 
-@mixin border($color: $primary-color) {
-    border: 2.5px solid $color;
+@mixin border($color: $primary-color, $width: 2.5px) {
+    border: $width solid $color;
 }
 
 @mixin underline($offset: 5px, $thickness: 2px, $color: $secondary-color) {

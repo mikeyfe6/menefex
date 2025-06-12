@@ -38,7 +38,7 @@
                     margin-bottom: rem-calc(24);
                     padding: rem-calc(8);
 
-                    @include border($color: rgba($smoke-color, 0.5));
+                    @include border(rgba($smoke-color, 0.5));
                 }
 
                 > h4 {
@@ -95,7 +95,7 @@
                         border-radius: $medium-radius;
                         aspect-ratio: 16 / 9;
 
-                        @include border($color: $smoke-color);
+                        @include border($smoke-color);
                     }
                 }
 

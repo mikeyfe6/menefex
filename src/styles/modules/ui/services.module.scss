@@ -175,7 +175,7 @@
             background-color: $white-color;
             border-radius: $medium-radius;
 
-            @include border($color: $lightgrey-color);
+            @include border($lightgrey-color);
         }
 
         #{$service}-websites,

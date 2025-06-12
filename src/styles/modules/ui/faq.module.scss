@@ -31,7 +31,7 @@
                     border-radius: $high-radius;
                     filter: opacity(0.75);
 
-                    @include border($color: $secondary-color);
+                    @include border($secondary-color, 4px);
                 }
             }
 
