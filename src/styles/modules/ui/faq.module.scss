@@ -29,7 +29,8 @@
 
                 img {
                     border-radius: $high-radius;
-                    filter: opacity(0.75);
+                    filter: opacity(0.75) grayscale(0.5) contrast(1.2)
+                        brightness(0.9);
 
                     @include border($secondary-color, 4px);
                 }
