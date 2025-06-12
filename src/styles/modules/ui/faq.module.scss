@@ -52,7 +52,7 @@
                         > h4 {
                             @extend %as-h6;
                             @include smooth-trans;
-                            @include underline($color: $snow-color);
+                            @include underline($color: $white-color);
                         }
 
                         &:hover {

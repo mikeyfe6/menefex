@@ -427,8 +427,7 @@ export default {
             answer: "Absoluut. We bieden onderhoudspakketten aan, of je kunt losse support afnemen wanneer nodig.",
         },
         itemEight: {
-            question:
-                "Bieden jullie ook onderhoud en support aan na oplevering?",
+            question: "Kan ik ook een webshop of boekingsfunctie laten bouwen?",
             answer: "Yes. Of je nu iets wilt verkopen, reserveringen wil laten maken of iets op maat nodig hebt – we denken met je mee.",
         },
         itemNine: {
