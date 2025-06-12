@@ -59,7 +59,7 @@ const Faq = () => {
     if (!isHydrated) return null;
 
     return (
-        <section className={faqStyles.faq} id="faq">
+        <section id="faq">
             <div className={faqStyles.faqContainer}>
                 <div>
                     <div className={faqStyles.faqImage}>
