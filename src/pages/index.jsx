@@ -11,7 +11,7 @@ import Actual from "../components/ui/actual";
 import Services from "../components/ui/services";
 import Projects from "../components/ui/projects";
 import Usp from "../components/ui/usp";
-// import Faq from "../components/ui/faq";
+import Faq from "../components/ui/faq";
 // import SmartForm from "../components/forms/smartForm";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
@@ -43,9 +43,9 @@ const IndexPage = () => {
 
             <Projects />
 
-            {/* <div className={indexStyles.verticalLineShort} /> */}
+            <div className={indexStyles.verticalLineShort} />
 
-            {/* <Faq /> */}
+            <Faq />
 
             {/* <div className={indexStyles.verticalLineShort} /> */}
 

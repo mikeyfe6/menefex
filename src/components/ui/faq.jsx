@@ -1,59 +1,112 @@
 import * as React from "react";
+
+import { Link } from "gatsby";
+
 import useTranslation from "../../hooks/use-translation";
 
-import * as faqStyles from "../../styles/modules/ui/faq.module.scss";
+import { StaticImage } from "gatsby-plugin-image";
 
-const faqData = [
-    {
-        question: "How do I contact support?",
-        answer: "You can contact support via the contact form on our website or by emailing support@example.com.",
-    },
-    {
-        question: "Can I change my account details?",
-        answer: "Yes, you can update your account details in your profile settings after logging in.",
-    },
-    {
-        question: "Is my data secure?",
-        answer: "We use industry-standard security measures to protect your data at all times.",
-    },
-];
+import * as faqStyles from "../../styles/modules/ui/faq.module.scss";
 
 const Faq = () => {
     const { t, isHydrated } = useTranslation();
     const [openIndex, setOpenIndex] = React.useState(null);
+
+    const faqData = [
+        {
+            question: t("faq.itemOne.question"),
+            answer: t("faq.itemOne.answer"),
+        },
+        {
+            question: t("faq.itemTwo.question"),
+            answer: t("faq.itemTwo.answer"),
+        },
+        {
+            question: t("faq.itemThree.question"),
+            answer: t("faq.itemThree.answer"),
+            link: "/prijzen/",
+        },
+        {
+            question: t("faq.itemFour.question"),
+            answer: t("faq.itemFour.answer"),
+        },
+        {
+            question: t("faq.itemFive.question"),
+            answer: t("faq.itemFive.answer"),
+        },
+        {
+            question: t("faq.itemSix.question"),
+            answer: t("faq.itemSix.answer"),
+        },
+        {
+            question: t("faq.itemSeven.question"),
+            answer: t("faq.itemSeven.answer"),
+        },
+        {
+            question: t("faq.itemEight.question"),
+            answer: t("faq.itemEight.answer"),
+        },
+        {
+            question: t("faq.itemNine.question"),
+            answer: t("faq.itemNine.answer"),
+        },
+        {
+            question: t("faq.itemTen.question"),
+            answer: t("faq.itemTen.answer"),
+        },
+    ];
 
     if (!isHydrated) return null;
 
     return (
         <section className={faqStyles.faq} id="faq">
             <div className={faqStyles.faqContainer}>
-                <h2>FAQ</h2>
                 <div>
-                    {faqData.map((item, idx) => (
-                        <div key={idx}>
-                            <button
-                                onClick={() =>
-                                    setOpenIndex(openIndex === idx ? null : idx)
-                                }
-                                aria-expanded={openIndex === idx}
-                                style={{
-                                    display: "block",
-                                    width: "100%",
-                                    textAlign: "left",
-                                    fontWeight: "bold",
-                                    margin: "1rem 0 0.5rem 0",
-                                    cursor: "pointer",
-                                }}
-                            >
-                                {item.question}
-                            </button>
-                            {openIndex === idx && (
-                                <div style={{ marginBottom: "1rem" }}>
-                                    {item.answer}
+                    <div className={faqStyles.faqImage}>
+                        <StaticImage
+                            src="../../images/michaelfransman.jpeg"
+                            alt={t("faq.imageAlt")}
+                            objectFit="contain"
+                            objectPosition="50% 50%"
+                            quality={100}
+                        />
+                    </div>
+                    <div className={faqStyles.faqContent}>
+                        <h3>{t("faq.title")}</h3>
+                        {faqData.map((item, idx) => (
+                            <div key={idx} className={faqStyles.faqItem}>
+                                <button
+                                    onClick={() =>
+                                        setOpenIndex(
+                                            openIndex === idx ? null : idx
+                                        )
+                                    }
+                                    aria-expanded={openIndex === idx}
+                                    className={faqStyles.faqQuestion}
+                                >
+                                    <h4>{item.question}</h4>
+                                </button>
+                                <div
+                                    className={`${faqStyles.faqAnswer} ${
+                                        openIndex === idx ? faqStyles.open : ""
+                                    }`}
+                                >
+                                    <i className="fa-solid fa-right-long fa-lg"></i>
+                                    <p>
+                                        {item.answer}{" "}
+                                        {item.link && (
+                                            <>
+                                                Bekijk hier ons{" "}
+                                                <Link to={item.link}>
+                                                    prijzenoverzicht.
+                                                </Link>
+                                            </>
+                                        )}
+                                    </p>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

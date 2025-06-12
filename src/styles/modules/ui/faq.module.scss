@@ -1,7 +1,96 @@
 @use "../../customs" as *;
 
 .faq {
+    $faq: &;
+
     &-container {
         @include container;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            gap: rem-calc(32);
+
+            @include phablet {
+                flex-direction: row;
+            }
+
+            #{$faq}-image {
+                min-width: rem-calc(300);
+                max-width: rem-calc(450);
+                width: 100%;
+                margin: 0 auto;
+                background-color: $smoke-color;
+                border-radius: $high-radius;
+
+                @include phablet {
+                    margin: unset;
+                }
+
+                img {
+                    border-radius: $high-radius;
+                    filter: opacity(0.75);
+
+                    @include border($color: $secondary-color);
+                }
+            }
+
+            #{$faq}-content {
+                > h3 {
+                    @include section-title;
+                }
+
+                #{$faq}-item {
+                    margin-bottom: rem-calc(12);
+
+                    #{$faq}-question {
+                        padding-bottom: rem-calc(8);
+
+                        > h4 {
+                            @extend %as-h6;
+                            @include smooth-trans;
+                            @include underline($color: $snow-color);
+                        }
+
+                        &:hover {
+                            > h4 {
+                                text-decoration-color: $link-color;
+                            }
+                        }
+                    }
+
+                    #{$faq}-answer {
+                        max-height: 0;
+                        opacity: 0;
+                        overflow: hidden;
+                        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                            opacity 0.4s;
+                        display: flex;
+                        align-items: baseline;
+                        gap: rem-calc(12);
+
+                        > i {
+                            color: $secondary-color;
+                        }
+
+                        > p {
+                            @extend %as-medium;
+
+                            a {
+                                @include text-link;
+                            }
+                        }
+
+                        &.open {
+                            max-height: rem-calc(200);
+                            opacity: 1;
+                            transition: max-height 0.5s
+                                    cubic-bezier(0.4, 0, 0.2, 1),
+                                opacity 0.5s;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
