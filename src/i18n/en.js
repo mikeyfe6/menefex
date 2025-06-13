@@ -397,7 +397,7 @@ export default {
         },
         itemFour: {
             question: "Do I need to provide the text and images myself?",
-            answer: "You can, but it’s not required. We can also help with content creation, photography, or stock materials.",
+            answer: "Yes, you provide the text and images yourself. We focus on the technical development of the website — so your own content and design are required to get started.",
         },
         itemFive: {
             question: "Will my website be easily found on Google?",
@@ -405,7 +405,7 @@ export default {
         },
         itemSix: {
             question: "Will I be able to make changes to my website myself?",
-            answer: "Yes. You'll get access to an easy-to-use CMS where you can update text and images yourself.",
+            answer: "Yes. You'll get access to an easy-to-use CMS that lets you update text and images yourself. Prefer to leave it to us? We’re happy to take care of content management for you.",
         },
         itemSeven: {
             question: "Do you offer maintenance and support after delivery?",

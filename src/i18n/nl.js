@@ -411,7 +411,7 @@ export default {
         },
         itemFour: {
             question: "Moet ik zelf teksten en afbeeldingen aanleveren?",
-            answer: "Dat mag, maar hoeft niet. We kunnen ook helpen met contentcreatie, fotografie of stockmateriaal.",
+            answer: "Ja, je levert zelf de teksten en afbeeldingen aan. Wij focussen op de technische realisatie van de website – je eigen content en tevens design zijn dus nodig om te kunnen starten.",
         },
         itemFive: {
             question: "Wordt mijn website goed vindbaar in Google?",
@@ -419,7 +419,7 @@ export default {
         },
         itemSix: {
             question: "Kan ik straks zelf aanpassingen doen aan mijn website?",
-            answer: "Ja. Je krijgt toegang tot een gebruiksvriendelijk CMS waarmee je eenvoudig zelf teksten of foto’s kunt aanpassen.",
+            answer: "Ja. Je krijgt toegang tot een gebruiksvriendelijk CMS waarmee je zelf eenvoudig teksten en afbeeldingen kunt aanpassen. Liever uitbesteden? Dan kunnen wij het contentbeheer ook voor je verzorgen.",
         },
         itemSeven: {
             question:
