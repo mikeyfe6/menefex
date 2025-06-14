@@ -139,7 +139,7 @@ export default {
                 "Quick response to technical issues",
                 "Ongoing support for your digital products",
             ],
-            cta: "More about our maintenance services",
+            cta: "More about maintenance & support",
 
             // overview
             caption: `Maintenance <small>and / or</small> updates <small>carried out</small>`,

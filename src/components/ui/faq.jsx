@@ -65,7 +65,7 @@ const Faq = () => {
                     <div className={faqStyles.faqImage}>
                         <StaticImage
                             src="../../images/michaelfransman.jpeg"
-                            alt={t("faq.imageAlt")}
+                            alt="Michael Fransman"
                             objectFit="contain"
                             objectPosition="50% 50%"
                             quality={100}

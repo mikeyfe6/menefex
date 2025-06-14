@@ -92,7 +92,7 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                                             <i class="fa-solid fa-calendar-days"></i>
                                                             <strong>
                                                                 <time
-                                                                    datetime={
+                                                                    dateTime={
                                                                         createdAt
                                                                     }
                                                                 >

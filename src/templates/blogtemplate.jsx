@@ -242,7 +242,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                     <aside>
                         <div className={postStyle.postDate}>
                             <span>{t("blog.postedOn")}</span>{" "}
-                            <time datetime={content.publishedPost}>
+                            <time dateTime={content.publishedPost}>
                                 {formatDate(content.publishedPost)}
                             </time>
                         </div>
@@ -261,7 +261,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                 <span>
                                     <u>{t("blog.lastUpdated")}</u>
                                 </span>
-                                <time datetime={content.updatedPost}>
+                                <time dateTime={content.updatedPost}>
                                     {formatDate(content.updatedPost)}
                                 </time>
                             </div>

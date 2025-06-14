@@ -94,7 +94,7 @@ const Actual = () => {
                             <h4>{node.title}</h4>
 
                             <div>
-                                <time datetime={node.publishedDate}>
+                                <time dateTime={node.publishedDate}>
                                     {new Date(
                                         node.publishedDate
                                     ).toLocaleDateString(
