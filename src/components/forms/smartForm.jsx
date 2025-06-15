@@ -501,17 +501,7 @@ const SmartForm = () => {
                             </div>
                         )}
                     </div>
-                    <form
-                        id="smart-form"
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            if (isAdviceStep) {
-                                handleSubmit(e);
-                            } else {
-                                handleNext();
-                            }
-                        }}
-                    >
+                    <form id="smart-form" onSubmit={handleSubmit}>
                         {success ? (
                             <div className={smartFormStyles.smartFormSuccess}>
                                 <h4>{t("smartform.success.title")}</h4>
@@ -593,11 +583,15 @@ const SmartForm = () => {
                                         </button>
                                     )}
                                     <button
-                                        type="submit"
-                                        disabled={
-                                            !inputValue &&
-                                            !currentQuestion.optional
-                                        }
+                                        type="button"
+                                        onClick={() => {
+                                            if (
+                                                inputValue ||
+                                                currentQuestion.optional
+                                            ) {
+                                                handleNext();
+                                            }
+                                        }}
                                     >
                                         {t("smartform.next")}
                                     </button>

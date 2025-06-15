@@ -139,14 +139,14 @@
                         justify-content: space-between;
 
                         > button {
-                            &[type="submit"] {
+                            &:first-of-type {
+                                @include primary-button(2);
+                            }
+
+                            &:last-of-type {
                                 margin-left: auto;
 
                                 @include primary-button;
-                            }
-
-                            &:not([type="submit"]) {
-                                @include primary-button(2);
                             }
                         }
                     }
@@ -211,14 +211,14 @@
                         padding-top: rem-calc(32);
 
                         > button {
-                            &[type="submit"] {
+                            &:first-of-type {
+                                @include primary-button(2);
+                            }
+
+                            &:last-of-type {
                                 margin-left: auto;
 
                                 @include primary-button;
-                            }
-
-                            &:not([type="submit"]) {
-                                @include primary-button(2);
                             }
                         }
                     }
