@@ -45,7 +45,6 @@
 
                 > h3 {
                     @include underline($thickness: 3px, $color: $white-color);
-                    @include fluid-typing(20, 30);
                 }
 
                 > p {
@@ -117,7 +116,7 @@
                         margin-bottom: rem-calc(24);
                         display: block;
 
-                        @extend %as-p;
+                        @extend %as-h6;
                     }
 
                     > div {
