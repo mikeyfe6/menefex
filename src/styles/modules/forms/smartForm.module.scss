@@ -63,7 +63,7 @@
                 }
 
                 #{$smart-form}-progress {
-                    height: 5px;
+                    height: rem-calc(5);
                     width: 100%;
                     background: $lightgrey-color;
                     margin-top: rem-calc(8);
@@ -93,9 +93,11 @@
 
             > form {
                 gap: rem-calc(24);
-                justify-content: space-between;
 
                 #{$smart-form}-question {
+                    height: 100%;
+                    padding-bottom: rem-calc(50);
+
                     > label,
                     > p {
                         font-weight: 600;
@@ -117,6 +119,7 @@
                 }
 
                 #{$smart-form}-buttons {
+                    margin-top: auto;
                     display: flex;
                     justify-content: space-between;
 

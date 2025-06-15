@@ -96,10 +96,11 @@ const Faq = () => {
                                         {item.answer}{" "}
                                         {item.link && (
                                             <>
-                                                Bekijk hier ons{" "}
+                                                {t("faq.priceText")}{" "}
                                                 <Link to={item.link}>
-                                                    prijzenoverzicht.
+                                                    {t("faq.priceLink")}
                                                 </Link>
+                                                .
                                             </>
                                         )}
                                     </p>

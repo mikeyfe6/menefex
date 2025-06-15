@@ -2,8 +2,58 @@
 
 @use "./customs" as *;
 
+.form {
+    $form: &;
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: rem-calc(90);
+
+        > section {
+            flex: 50%;
+        }
+
+        > form {
+            flex: 50%;
+        }
+    }
+}
+
 form {
     @include smooth-trans;
+
+    textarea {
+        resize: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+        font-weight: 500;
+        width: 100%;
+
+        @include smooth-trans;
+        @extend %as-medium;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea {
+        padding: rem-calc(8 0);
+        border-bottom: 1px solid $lightgrey-color;
+
+        &:focus {
+            border-color: $link-color;
+
+            @include smooth-trans;
+        }
+    }
 
     &:not(#smart-form) {
         height: 100%;
@@ -76,37 +126,9 @@ form {
                 }
             }
         }
-    }
 
-    textarea {
-        resize: none;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="url"],
-    textarea,
-    select {
-        font-weight: 500;
-        width: 100%;
-
-        @include smooth-trans;
-        @extend %as-medium;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="url"],
-    textarea {
-        padding: rem-calc(8 0);
-        border-bottom: 1px solid $lightgrey-color;
-
-        &:focus {
-            border-color: $link-color;
-
-            @include smooth-trans;
+        textarea {
+            height: 100%;
         }
     }
 
@@ -136,23 +158,5 @@ form {
         margin: rem-calc(48 0 0) auto;
 
         @include primary-button;
-    }
-}
-
-.form {
-    $form: &;
-
-    &-info {
-        display: flex;
-        align-items: center;
-        gap: rem-calc(90);
-
-        > section {
-            flex: 50%;
-        }
-
-        > form {
-            flex: 50%;
-        }
     }
 }

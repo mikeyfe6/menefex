@@ -397,6 +397,8 @@ export default {
     faq: {
         title: "FAQ (Veelgestelde vragen)",
         intro: "Pagina komt binnenkort!",
+        priceText: "Bekijk hier ons",
+        priceLink: "prijsoverzicht",
         itemOne: {
             question: "Wat heb ik nodig om een website te laten maken?",
             answer: "Helemaal niks ingewikkelds. Tijdens een gratis kennismaking bespreken we samen je wensen, doelen en ideeën. Daarna regelen wij de rest.",

@@ -202,7 +202,6 @@ const QuestionBlock = ({ question, inputValue, setInputValue }) => {
                         onChange={(e) => setInputValue(e.target.value)}
                         id={question.id}
                         name={question.name}
-                        rows="4"
                         autoComplete={question.autoComplete}
                         placeholder={question.placeholder}
                     />

@@ -383,6 +383,8 @@ export default {
     faq: {
         title: "FAQ (Frequently Asked Questions)",
         intro: "Page coming soon!",
+        priceText: "View our",
+        priceLink: "price overview",
         itemOne: {
             question: "What do I need to get a website made?",
             answer: "Nothing complicated at all. During a free introductory meeting, we'll discuss your goals, ideas, and needs. After that, we’ll take care of everything.",
