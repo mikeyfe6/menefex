@@ -93,6 +93,7 @@
 
             > form {
                 gap: rem-calc(24);
+                justify-content: space-between;
 
                 #{$smart-form}-question {
                     > label,
