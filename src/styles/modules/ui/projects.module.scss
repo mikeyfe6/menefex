@@ -9,7 +9,7 @@
         > h3 {
             @include section-title($align: center, $space: rem-calc(36));
 
-            @include phablet {
+            @include tablet {
                 text-align: left;
             }
         }
@@ -19,7 +19,7 @@
             flex-direction: column-reverse;
             gap: rem-calc(32);
 
-            @include phablet {
+            @include tablet {
                 flex-direction: row;
                 gap: rem-calc(64);
             }
@@ -29,9 +29,14 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                min-height: rem-calc(400);
                 height: fit-content;
                 border-left: 5px solid $smoke-color;
                 padding-left: rem-calc(36);
+
+                @include mobile {
+                    min-height: rem-calc(440);
+                }
 
                 #{$projects}-logo {
                     width: fit-content;
