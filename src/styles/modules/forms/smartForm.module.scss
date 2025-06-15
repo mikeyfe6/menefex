@@ -227,6 +227,8 @@
                 #{$smart-form}-success {
                     h4 {
                         margin-bottom: rem-calc(16);
+
+                        @extend %as-h5;
                     }
 
                     button {
