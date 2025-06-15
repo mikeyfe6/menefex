@@ -438,7 +438,6 @@ const SmartForm = () => {
                 },
             });
             setSuccess(true);
-            // setTimeout(() => handleReset(), 7000);
         } catch (error) {
             alert("Er ging iets mis bij het versturen. Probeer het opnieuw.");
             console.error(error);
@@ -478,14 +477,16 @@ const SmartForm = () => {
                                                           answers[q.id]
                                                       )}
                                             </strong>
-                                            <button
-                                                type="button"
-                                                onClick={() =>
-                                                    setCurrentStep(idx)
-                                                }
-                                            >
-                                                <i className="fa-regular fa-pen-to-square fa-sm"></i>
-                                            </button>
+                                            {!success && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setCurrentStep(idx)
+                                                    }
+                                                >
+                                                    <i className="fa-regular fa-pen-to-square fa-sm"></i>
+                                                </button>
+                                            )}
                                         </small>
                                     </li>
                                 ) : null
