@@ -43,15 +43,15 @@
                 }
 
                 #{$faq}-item {
-                    margin-bottom: rem-calc(12);
+                    margin-bottom: rem-calc(8);
 
                     #{$faq}-question {
-                        padding-bottom: rem-calc(8);
+                        padding-bottom: rem-calc(12);
 
                         > h4 {
                             @extend %as-h6;
                             @include smooth-trans;
-                            @include underline($color: $snow-color);
+                            @include underline($color: $smoke-color);
                         }
 
                         &:hover {
@@ -76,6 +76,8 @@
                         }
 
                         > p {
+                            padding-bottom: rem-calc(16);
+
                             @extend %as-medium;
 
                             a {
