@@ -49,9 +49,9 @@ const Call = ({ callRef }) => {
 
     const [inputs, setInputs] = useState({
         name: "",
-        tel: "",
-        tijdstip: "",
-        text: "",
+        phone: "",
+        time: "",
+        message: "",
     });
 
     useEffect(() => {
@@ -140,9 +140,9 @@ const Call = ({ callRef }) => {
             </label>
             <input
                 type="tel"
-                name="tel"
+                name="phone"
                 id="call_tel"
-                value={inputs.tel}
+                value={inputs.phone}
                 onChange={handleChange}
                 required
             />
@@ -152,9 +152,9 @@ const Call = ({ callRef }) => {
             </label>
             <select
                 required
-                name="tijdstip"
+                name="time"
                 id="call_time"
-                value={inputs.tijdstip}
+                value={inputs.time}
                 onChange={handleChange}
                 multiple={false}
             >
@@ -176,7 +176,7 @@ const Call = ({ callRef }) => {
                 name="text"
                 id="call_text"
                 rows="6"
-                value={inputs.text}
+                value={inputs.message}
                 onChange={handleChange}
             />
 

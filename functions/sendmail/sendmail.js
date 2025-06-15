@@ -11,34 +11,50 @@ exports.handler = async (event) => {
     switch (formId) {
         case "leadForm":
             dynamic_template_data = {
-                mfxName: data.name || "n.v.t.",
-                mfxCompany: data.company || "n.v.t.",
-                mfxEmail: data.email || "n.v.t.",
-                mfxTel: data.tel || "n.v.t.",
-                mfxSubject: data.subject || "n.v.t.",
-                mfxText: data.text || "n.v.t.",
+                mnfxForm: data.formId || "n.v.t.",
+                mnfxName: data.name || "n.v.t.",
+                mnfxSubject: data.subject || "n.v.t.",
+
+                mnfxCompany: data.company || "n.v.t.",
+                mnfxEmail: data.email || "n.v.t.",
+                mnfxPhone: data.phone || "n.v.t.",
+                mnfxMessage: data.message || "n.v.t.",
+
+                mnfxTime: data.time || "[LEADFORM]",
             };
             break;
         case "callForm":
             dynamic_template_data = {
-                mfxName: data.name || "n.v.t.",
-                mfxTel: data.tel || "n.v.t.",
-                mfxTijdstip: data.tijdstip || "n.v.t.",
-                mfxText: data.text || "n.v.t.",
-                mfxSubject: data.subject || "n.v.t.",
+                mnfxForm: data.formId || "n.v.t.",
+                mnfxName: data.name || "n.v.t.",
+                mnfxSubject: data.subject || "Terugbelverzoek",
+
+                mnfxPhone: data.phone || "n.v.t.",
+                mnfxTime: data.time || "n.v.t.",
+                mnfxMessage: data.message || "n.v.t.",
+
+                mnfxCompany: data.company || "[CALLFORM]",
+                mnfxEmail: data.email || "[CALLFORM]",
             };
             break;
         case "smartForm":
             dynamic_template_data = {
-                mfxName: data.name || "n.v.t.",
-                mfxEmail: data.email || "n.v.t.",
-                mfxTel: data.phone || "n.v.t.",
-                mfxText: data.message || "n.v.t.",
-                mfxNeed: data.need || "n.v.t.",
-                mfxHasWebsite: data.hasWebsite || "n.v.t.",
-                mfxWebsiteUrl: data.websiteUrl || "n.v.t.",
-                mfxSelfManage: data.selfManage || "n.v.t.",
-                mfxBudget: data.budget || "n.v.t.",
+                mnfxForm: data.formId || "n.v.t.",
+                mnfxName: data.name || "n.v.t.",
+                mnfxSubject: data.subject || "Slimme formulier",
+
+                mnfxNeed: data.need || "n.v.t.",
+                mnfxHasWebsite: data.hasWebsite || "n.v.t.",
+                mnfxWebsiteUrl: data.websiteUrl || "n.v.t.",
+                mnfxSelfManage: data.selfManage || "n.v.t.",
+                mnfxBudget: data.budget || "n.v.t.",
+
+                mnfxEmail: data.email || "n.v.t.",
+                mnfxPhone: data.phone || "n.v.t.",
+                mnfxMessage: data.message || "n.v.t.",
+
+                mnfxCompany: data.company || "[SMARTFORM]",
+                mnfxTime: data.time || "[SMARTFORM]",
             };
             break;
         default:
