@@ -501,73 +501,73 @@ const SmartForm = () => {
                             </div>
                         )}
                     </div>
-                    {success ? (
-                        <div className={smartFormStyles.smartFormSuccess}>
-                            <h4>{t("smartform.success.title")}</h4>
-                            <p>{t("smartform.success.subtitle")}</p>
-                            <button type="button" onClick={handleReset}>
-                                {t("smartform.restart")}{" "}
-                                <i className="fa-solid fa-rotate-left fa-xs"></i>
-                            </button>
-                        </div>
-                    ) : isAdviceStep ? (
-                        <div className={smartFormStyles.smartFormAdvice}>
-                            {(() => {
-                                const advice = getAdvice(answers);
-                                return (
-                                    <>
-                                        <h4>
-                                            {advice.title}{" "}
-                                            {advice.price && (
-                                                <span>{advice.price}</span>
+                    <form
+                        id="smart-form"
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            if (isAdviceStep) {
+                                handleSubmit(e);
+                            } else {
+                                handleNext();
+                            }
+                        }}
+                    >
+                        {success ? (
+                            <div className={smartFormStyles.smartFormSuccess}>
+                                <h4>{t("smartform.success.title")}</h4>
+                                <p>{t("smartform.success.subtitle")}</p>
+                                <button type="button" onClick={handleReset}>
+                                    {t("smartform.restart")}{" "}
+                                    <i className="fa-solid fa-rotate-left fa-xs"></i>
+                                </button>
+                            </div>
+                        ) : isAdviceStep ? (
+                            <div className={smartFormStyles.smartFormAdvice}>
+                                {(() => {
+                                    const advice = getAdvice(answers);
+                                    return (
+                                        <>
+                                            <h4>
+                                                {advice.title}{" "}
+                                                {advice.price && (
+                                                    <span>{advice.price}</span>
+                                                )}
+                                            </h4>
+                                            <p>{advice.description}</p>
+                                            {advice.hourCosts && (
+                                                <em>{advice.hourCosts}</em>
                                             )}
-                                        </h4>
-                                        <p>{advice.description}</p>
-                                        {advice.hourCosts && (
-                                            <em>{advice.hourCosts}</em>
-                                        )}
-                                        {advice.extra && (
-                                            <span>{advice.extra}</span>
-                                        )}
-                                        <Link to="/prijzen/">
-                                            {t("smartform.prices")}{" "}
-                                            <i className="fa-solid fa-arrow-right-long fa-sm"></i>
-                                        </Link>
+                                            {advice.extra && (
+                                                <span>{advice.extra}</span>
+                                            )}
+                                            <Link to="/prijzen/">
+                                                {t("smartform.prices")}{" "}
+                                                <i className="fa-solid fa-arrow-right-long fa-sm"></i>
+                                            </Link>
 
-                                        <button
-                                            type="button"
-                                            onClick={handleReset}
-                                        >
-                                            {t("smartform.restart")}{" "}
-                                            <i className="fa-solid fa-rotate-left fa-xs"></i>
-                                        </button>
-                                        <div>
                                             <button
                                                 type="button"
-                                                onClick={handleBack}
+                                                onClick={handleReset}
                                             >
-                                                {t("smartform.back")}
+                                                {t("smartform.restart")}{" "}
+                                                <i className="fa-solid fa-rotate-left fa-xs"></i>
                                             </button>
-                                            <button
-                                                onClick={handleSubmit}
-                                                type="submit"
-                                                form="smart-form"
-                                            >
-                                                {advice.cta}
-                                            </button>
-                                        </div>
-                                    </>
-                                );
-                            })()}
-                        </div>
-                    ) : (
-                        <form
-                            onSubmit={(e) => {
-                                e.preventDefault();
-                                handleNext();
-                            }}
-                            id="smart-form"
-                        >
+                                            <div>
+                                                <button
+                                                    type="button"
+                                                    onClick={handleBack}
+                                                >
+                                                    {t("smartform.back")}
+                                                </button>
+                                                <button type="submit">
+                                                    {getAdvice(answers).cta}
+                                                </button>
+                                            </div>
+                                        </>
+                                    );
+                                })()}
+                            </div>
+                        ) : (
                             <div className={smartFormStyles.smartFormQuestion}>
                                 <QuestionBlock
                                     question={{
@@ -581,25 +581,24 @@ const SmartForm = () => {
                                     inputValue={inputValue}
                                     setInputValue={setInputValue}
                                 />
-                            </div>
-
-                            <div className={smartFormStyles.smartFormButtons}>
-                                {currentStep > 0 && (
-                                    <button type="button" onClick={handleBack}>
-                                        {t("smartform.back")}
+                                <div className={smartFormStyles.smartFormButtons}>
+                                    {currentStep > 0 && (
+                                        <button type="button" onClick={handleBack}>
+                                            {t("smartform.back")}
+                                        </button>
+                                    )}
+                                    <button
+                                        type="submit"
+                                        disabled={
+                                            !inputValue && !currentQuestion.optional
+                                        }
+                                    >
+                                        {t("smartform.next")}
                                     </button>
-                                )}
-                                <button
-                                    type="submit"
-                                    disabled={
-                                        !inputValue && !currentQuestion.optional
-                                    }
-                                >
-                                    {t("smartform.next")}
-                                </button>
+                                </div>
                             </div>
-                        </form>
-                    )}
+                        )}
+                    </form>
                 </div>
             </div>
         </section>

@@ -82,6 +82,10 @@ form {
                 margin-top: rem-calc(24);
             }
         }
+
+        select {
+            margin: rem-calc(12 0 32);
+        }
     }
 
     &#smart-form {
@@ -136,7 +140,6 @@ form {
         display: block;
         color: $primary-color;
         padding: rem-calc(4 32 4 16);
-        margin: rem-calc(12 0 32);
         box-sizing: border-box;
         border-radius: $low-radius;
         appearance: none;
