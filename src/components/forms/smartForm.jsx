@@ -581,16 +581,22 @@ const SmartForm = () => {
                                     inputValue={inputValue}
                                     setInputValue={setInputValue}
                                 />
-                                <div className={smartFormStyles.smartFormButtons}>
+                                <div
+                                    className={smartFormStyles.smartFormButtons}
+                                >
                                     {currentStep > 0 && (
-                                        <button type="button" onClick={handleBack}>
+                                        <button
+                                            type="button"
+                                            onClick={handleBack}
+                                        >
                                             {t("smartform.back")}
                                         </button>
                                     )}
                                     <button
                                         type="submit"
                                         disabled={
-                                            !inputValue && !currentQuestion.optional
+                                            !inputValue &&
+                                            !currentQuestion.optional
                                         }
                                     >
                                         {t("smartform.next")}

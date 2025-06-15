@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../../customs" as *;
 
 .smart-form {
@@ -22,7 +24,7 @@
             }
 
             #{$smart-form}-content {
-                flex: 1;
+                flex: 50%;
                 background-color: $lemon-color;
 
                 @include laptop {
@@ -80,7 +82,7 @@
                 background-color: $smoke-color;
                 display: flex;
                 flex-direction: column;
-                flex: 1;
+                flex: 50%;
 
                 @include laptop {
                     flex: 55%;
@@ -89,18 +91,18 @@
                 #{$smart-form}-advice,
                 #{$smart-form}-success,
                 #{$smart-form}-question {
-                    @include box-padding("special");
-                }
-
-                #{$smart-form}-question {
                     height: 100%;
                     display: flex;
                     flex-direction: column;
 
+                    @include box-padding("special");
+                }
+
+                #{$smart-form}-question {
                     > label,
                     > p {
                         font-weight: 600;
-                        margin-bottom: rem-calc(16);
+                        margin-bottom: rem-calc(12);
                         display: block;
 
                         @extend %as-h6;
@@ -123,12 +125,10 @@
                     }
 
                     > div {
+                        margin-top: rem-calc(8);
+
                         > label {
                             @extend %as-p;
-                        }
-
-                        &:not(:last-child) {
-                            margin-bottom: rem-calc(8);
                         }
                     }
 
@@ -153,9 +153,6 @@
                 }
 
                 #{$smart-form}-advice {
-                    display: flex;
-                    flex-direction: column;
-
                     > h4 {
                         margin-bottom: rem-calc(18);
 
@@ -204,7 +201,7 @@
                         @include smooth-trans;
 
                         &:hover {
-                            color: $secondary-color;
+                            color: color.adjust($grey-color, $lightness: -15%);
                         }
                     }
 
