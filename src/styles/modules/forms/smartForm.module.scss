@@ -61,6 +61,22 @@
                         }
                     }
                 }
+
+                #{$smart-form}-progress {
+                    height: 5px;
+                    width: 100%;
+                    background: $lightgrey-color;
+                    margin-top: rem-calc(8);
+                    border-radius: $low-radius;
+                    overflow: hidden;
+
+                    > div {
+                        height: 100%;
+                        width: 0%;
+                        background: $link-color;
+                        transition: width 0.3s ease-in-out;
+                    }
+                }
             }
 
             > form,
@@ -76,8 +92,7 @@
             }
 
             > form {
-                justify-content: space-between;
-                gap: rem-calc(36);
+                gap: rem-calc(24);
 
                 #{$smart-form}-question {
                     > label,

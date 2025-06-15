@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { Link } from "gatsby";
 import axios from "axios";
@@ -92,6 +92,14 @@ const flow = [
 ];
 
 const QuestionBlock = ({ question, inputValue, setInputValue }) => {
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [question?.id]);
+
     if (!question) return null;
 
     switch (question.type) {
@@ -141,6 +149,7 @@ const QuestionBlock = ({ question, inputValue, setInputValue }) => {
                 <>
                     <label htmlFor={question.id}>{question.question}</label>
                     <input
+                        ref={inputRef}
                         type="url"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
@@ -156,6 +165,7 @@ const QuestionBlock = ({ question, inputValue, setInputValue }) => {
                 <>
                     <label htmlFor={question.id}>{question.question}</label>
                     <input
+                        ref={inputRef}
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
@@ -166,12 +176,12 @@ const QuestionBlock = ({ question, inputValue, setInputValue }) => {
                     />
                 </>
             );
-
         case "tel":
             return (
                 <>
                     <label htmlFor={question.id}>{question.question}</label>
                     <input
+                        ref={inputRef}
                         type="tel"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
@@ -187,6 +197,7 @@ const QuestionBlock = ({ question, inputValue, setInputValue }) => {
                 <>
                     <label htmlFor={question.id}>{question.question}</label>
                     <textarea
+                        ref={inputRef}
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         id={question.id}
@@ -315,7 +326,7 @@ const SmartForm = () => {
                 title: "Ons advies: BUSINESS PLAN",
                 description:
                     "Voor een webshop adviseren we altijd ons Business Plan voor maximale schaalbaarheid en ondersteuning.",
-                extra: "Jouw budget valt onder onze prijs, geen zorgen! Vraag een offerte aan en we kijken samen naar de mogelijkheden.",
+                extra: "Je budget is iets lager dan onze pakketprijzen, maar dat hoeft geen probleem te zijn. Vraag een offerte aan, dan bekijken we samen wat haalbaar is.",
                 cta: "Offerte aanvragen",
                 price: "€1595",
                 hourCosts,
@@ -404,6 +415,11 @@ const SmartForm = () => {
 
     const isAdviceStep = currentStep >= visibleFlow.length;
 
+    const progress =
+        visibleFlow.length > 0
+            ? Math.min(currentStep / visibleFlow.length, 1)
+            : 0;
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -462,6 +478,15 @@ const SmartForm = () => {
                                 ) : null
                             )}
                         </ul>
+                        {progress > 0 && (
+                            <div className={smartFormStyles.smartFormProgress}>
+                                <div
+                                    style={{
+                                        width: `${progress * 100}%`,
+                                    }}
+                                />
+                            </div>
+                        )}
                     </div>
                     {isAdviceStep ? (
                         <div className={smartFormStyles.smartFormAdvice}>
@@ -535,6 +560,7 @@ const SmartForm = () => {
                                     setInputValue={setInputValue}
                                 />
                             </div>
+
                             <div className={smartFormStyles.smartFormButtons}>
                                 {currentStep > 0 && (
                                     <button type="button" onClick={handleBack}>
