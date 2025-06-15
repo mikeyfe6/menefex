@@ -104,11 +104,9 @@
             }
 
             > form {
-                gap: rem-calc(24);
-
                 #{$smart-form}-question {
                     height: 100%;
-                    padding-bottom: rem-calc(50);
+                    margin-bottom: rem-calc(36);
 
                     > label,
                     > p {
@@ -117,6 +115,29 @@
                         display: block;
 
                         @extend %as-h6;
+                    }
+
+                    input {
+                        margin: rem-calc(12 0 24);
+                        display: block;
+
+                        @include phablet {
+                            margin: rem-calc(12 0 32);
+                        }
+                    }
+
+                    textarea {
+                        display: block;
+                        min-height: rem-calc(150);
+                        height: 100%;
+
+                        @include tablet {
+                            height: calc(100% - 80px);
+                        }
+
+                        @include laptop {
+                            height: calc(100% - 50px);
+                        }
                     }
 
                     > div {
