@@ -1,0 +1,187 @@
+@use "../../customs" as *;
+
+.smart-form {
+    $smart-form: &;
+
+    &-container {
+        @include container;
+
+        #{$smart-form}-wrapper {
+            display: flex;
+            border-radius: $high-radius;
+            overflow: hidden;
+            flex-direction: column;
+            min-height: rem-calc(400);
+
+            @include tablet {
+                flex-direction: row;
+            }
+
+            #{$smart-form}-content,
+            #{$smart-form}-advice,
+            > form {
+                @include box-padding;
+            }
+
+            #{$smart-form}-content {
+                flex: 1;
+                background-color: $secondary-color;
+
+                @include laptop {
+                    flex: 45%;
+                }
+
+                > h3 {
+                    @include underline($thickness: 3px, $color: $white-color);
+                    @include fluid-typing(20, 30);
+                }
+
+                > p {
+                    margin-top: rem-calc(12);
+
+                    @extend %as-medium;
+                }
+
+                > ul:has(li) {
+                    margin-top: rem-calc(24);
+                    padding: rem-calc(12 16);
+                    background-color: $white-color;
+                    border-radius: $low-radius;
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem-calc(4);
+
+                    li {
+                        line-height: 1.2;
+
+                        > small > button {
+                            margin-left: rem-calc(4);
+
+                            @include text-link;
+                        }
+                    }
+                }
+            }
+
+            > form,
+            #{$smart-form}-advice {
+                background-color: $smoke-color;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+
+                @include laptop {
+                    flex: 55%;
+                }
+            }
+
+            > form {
+                justify-content: space-between;
+                gap: rem-calc(36);
+
+                #{$smart-form}-question {
+                    > label,
+                    > p {
+                        font-weight: 600;
+                        margin-bottom: rem-calc(24);
+                        display: block;
+
+                        @extend %as-p;
+                    }
+
+                    > div {
+                        > label {
+                            @extend %as-p;
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: rem-calc(8);
+                        }
+                    }
+                }
+
+                #{$smart-form}-buttons {
+                    display: flex;
+                    justify-content: space-between;
+
+                    > button {
+                        &[type="submit"] {
+                            margin-left: auto;
+
+                            @include primary-button;
+                        }
+
+                        &:not([type="submit"]) {
+                            @include primary-button(2);
+                        }
+                    }
+                }
+            }
+
+            #{$smart-form}-advice {
+                > h4 {
+                    margin-bottom: rem-calc(18);
+
+                    @extend %as-h5;
+
+                    > span {
+                        background-color: $primary-color;
+                        color: $white-color;
+                        border-radius: $low-radius;
+                        padding: rem-calc(2 6);
+                        vertical-align: super;
+
+                        @extend %as-tiny;
+                    }
+                }
+
+                > p {
+                    margin-bottom: rem-calc(16);
+                    font-weight: 500;
+                }
+
+                > em {
+                    margin-bottom: rem-calc(18);
+
+                    @extend %as-small;
+                }
+
+                > span {
+                    color: $error-color;
+                    margin-bottom: rem-calc(18);
+
+                    @extend %as-small;
+                }
+
+                > a {
+                    margin-top: auto;
+
+                    @include text-link;
+                }
+
+                > button {
+                    color: $grey-color;
+                    margin-top: rem-calc(12);
+                }
+
+                > div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 32px;
+
+                    > button {
+                        &[type="submit"] {
+                            margin-left: auto;
+
+                            @include primary-button;
+                        }
+
+                        &:not([type="submit"]) {
+                            @include primary-button(2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

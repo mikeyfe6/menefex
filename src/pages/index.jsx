@@ -12,11 +12,12 @@ import Services from "../components/ui/services";
 import Projects from "../components/ui/projects";
 import Usp from "../components/ui/usp";
 import Faq from "../components/ui/faq";
-// import SmartForm from "../components/forms/smartForm";
+import SmartForm from "../components/forms/smartForm";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
 // TODO: klaar voor TS'en..
+// TODO: FAQ schema maken
 
 const IndexPage = () => {
     return (
@@ -47,25 +48,9 @@ const IndexPage = () => {
 
             <Faq />
 
-            {/* <div className={indexStyles.verticalLineShort} /> */}
+            <div className={indexStyles.verticalLineShort} />
 
-            {/* <div className={indexStyles.verticalLineShort} /> */}
-
-            {/* <SmartForm /> */}
-
-            {/* <div className={indexStyles.verticalLineShort} /> */}
-
-            {/* <section hidden>
-                <div>faq seqment</div>
-                <div>smartform seqment</div>
-                <div>
-                    prijzen seqment (op basis van smartform, dus nog over
-                    nadenken!?)
-                </div>
-                <div>
-                    usp-achtig ding met 1, 2 & 3. zo komen we aan jouw product
-                </div>
-            </section> */}
+            <SmartForm />
         </Layout>
     );
 };

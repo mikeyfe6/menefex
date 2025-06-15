@@ -101,6 +101,7 @@ const Call = ({ callRef }) => {
                 method: "POST",
                 data: {
                     ...inputs,
+                    formId: "callForm",
                 },
             })
                 .then(() => navigate(form.getAttribute("action")))
@@ -116,6 +117,7 @@ const Call = ({ callRef }) => {
             onSubmit={handleSubmit}
             className={callStyles.callForm}
             action="/success/"
+            id="call-form"
         >
             <h3>{t("prices.form.title")}</h3>
             <hr />

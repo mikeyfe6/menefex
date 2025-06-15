@@ -52,7 +52,10 @@ const Form = () => {
             axios({
                 url: "/.netlify/functions/sendmail",
                 method: "POST",
-                data: inputs,
+                data: {
+                    ...inputs,
+                    formId: "leadForm",
+                },
             })
                 .then(() => navigate(form.getAttribute("action")))
                 .catch((error) => console.log("POST ERROR", error));
@@ -64,7 +67,7 @@ const Form = () => {
     if (!isHydrated) return null;
 
     return (
-        <form onSubmit={handleSubmit} action="/success/">
+        <form onSubmit={handleSubmit} action="/success/" id="lead-form">
             <label htmlFor="lead_name">
                 <span>*</span> {t("contact.form.name")}
             </label>

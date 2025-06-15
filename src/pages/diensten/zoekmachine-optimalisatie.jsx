@@ -11,6 +11,7 @@ import SEO from "../../components/seo";
 import * as servicesStyles from "../../styles/modules/pages/services.module.scss";
 
 // TODO: klaar voor TS'en..
+// TODO: 'zoekmachineoptimalisatie' is vast aan elkaar..
 
 const SeoPage = () => {
     const { t, isHydrated } = useTranslation();
