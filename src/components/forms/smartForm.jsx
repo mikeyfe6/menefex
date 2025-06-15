@@ -7,216 +7,218 @@ import useTranslation from "../../hooks/use-translation";
 
 import * as smartFormStyles from "../../styles/modules/forms/smartForm.module.scss";
 
-const flow = [
-    {
-        id: "need",
-        type: "select",
-        options: [
-            { value: "Website", label: "Website laten maken" },
-            { value: "Webshop", label: "Webshop laten maken" },
-            { value: "Webapp", label: "Webapplicatie laten maken" },
-            { value: "SEO", label: "Zoekmachineoptimalisatie (SEO)" },
-            { value: "Other", label: "Anders / maatwerk" },
-        ],
-    },
-    {
-        id: "hasWebsite",
-        type: "radio",
-        dependsOn: {
-            id: "need",
-            value: ["Website", "Webshop", "Webapp"],
-        },
-    },
-    {
-        id: "websiteUrl",
-        type: "url",
-        name: "website-url",
-        autoComplete: "url",
-        placeholder: "bijv. https://www.jouwwebsite.nl",
-
-        dependsOn: [
-            { id: "hasWebsite", value: ["Ja"] },
-            { id: "need", value: ["SEO"] },
-        ],
-    },
-    {
-        id: "selfManage",
-        type: "radio",
-        dependsOn: { id: "need", value: ["Website", "Webshop", "Webapp"] },
-    },
-    {
-        id: "budget",
-        type: "select",
-        options: ["< €500", "€500 - €1000", "€1000 - €2500", "€2500 >"],
-        options: [
-            { value: "< €500", label: "< €500" },
-            { value: "€500 - €1000", label: "€500 - €1000" },
-            { value: "€1000 - €2500", label: "€1000 - €2500" },
-            { value: "€2500 >", label: "€2500 >" },
-        ],
-        dependsOn: {
-            id: "need",
-            value: ["Website", "Webshop", "Webapp"],
-        },
-    },
-    {
-        id: "name",
-        type: "text",
-        name: "full-name",
-        autoComplete: "name",
-        placeholder: "bijv. Jan Jansen",
-    },
-    {
-        id: "email",
-        type: "text",
-        name: "email",
-        autoComplete: "email",
-        placeholder: "bijv. jan.jansen@example.com",
-    },
-    {
-        id: "phone",
-        type: "tel",
-        name: "phone",
-        autoComplete: "tel",
-        placeholder: "bijv. 0612345678",
-        optional: true,
-    },
-    {
-        id: "message",
-        type: "textarea",
-        name: "message",
-        autoComplete: "off",
-        placeholder: "Jouw bericht of aanvullende informatie",
-        optional: true,
-    },
-];
-
-const QuestionBlock = ({ question, inputValue, setInputValue }) => {
-    const inputRef = useRef(null);
-
-    useEffect(() => {
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
-    }, [question?.id]);
-
-    if (!question) return null;
-
-    switch (question.type) {
-        case "select":
-            return (
-                <>
-                    <label htmlFor={question.id}>{question.question}</label>
-                    <select
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        id={question.id}
-                    >
-                        <option value="">-- Kies --</option>
-                        {question.options.map((opt, idx) => (
-                            <option key={idx} value={opt.value}>
-                                {opt.label}
-                            </option>
-                        ))}
-                    </select>
-                </>
-            );
-        case "radio":
-            return (
-                <>
-                    <p>{question.question}</p>
-                    {["Ja", "Nee"].map((opt) => (
-                        <div key={opt}>
-                            <label htmlFor={`${question.id}-${opt}`}>
-                                <input
-                                    type="radio"
-                                    value={opt}
-                                    checked={inputValue === opt}
-                                    id={`${question.id}-${opt}`}
-                                    onChange={(e) =>
-                                        setInputValue(e.target.value)
-                                    }
-                                />
-                                <span />
-                                {opt}
-                            </label>
-                        </div>
-                    ))}
-                </>
-            );
-        case "url":
-            return (
-                <>
-                    <label htmlFor={question.id}>{question.question}</label>
-                    <input
-                        ref={inputRef}
-                        type="url"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        id={question.id}
-                        name={question.name}
-                        autoComplete={question.autoComplete}
-                        placeholder={question.placeholder}
-                    />
-                </>
-            );
-        case "text":
-            return (
-                <>
-                    <label htmlFor={question.id}>{question.question}</label>
-                    <input
-                        ref={inputRef}
-                        type="text"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        id={question.id}
-                        name={question.name}
-                        autoComplete={question.autoComplete}
-                        placeholder={question.placeholder}
-                    />
-                </>
-            );
-        case "tel":
-            return (
-                <>
-                    <label htmlFor={question.id}>{question.question}</label>
-                    <input
-                        ref={inputRef}
-                        type="tel"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        id={question.id}
-                        name={question.name}
-                        autoComplete={question.autoComplete}
-                        placeholder={question.placeholder}
-                    />
-                </>
-            );
-        case "textarea":
-            return (
-                <>
-                    <label htmlFor={question.id}>{question.question}</label>
-                    <textarea
-                        ref={inputRef}
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        id={question.id}
-                        name={question.name}
-                        autoComplete={question.autoComplete}
-                        placeholder={question.placeholder}
-                    />
-                </>
-            );
-        default:
-            return null;
-    }
-};
-
 const SmartForm = () => {
     const { t, isHydrated } = useTranslation();
     const [answers, setAnswers] = useState({});
     const [currentStep, setCurrentStep] = useState(0);
     const [success, setSuccess] = useState(false);
+
+    const flow = [
+        {
+            id: "need",
+            type: "select",
+            options: [
+                { value: "website", label: t("smartform.options.website") },
+                { value: "webshop", label: t("smartform.options.webshop") },
+                { value: "webapp", label: t("smartform.options.webapp") },
+                { value: "seo", label: t("smartform.options.seo") },
+                { value: "other", label: t("smartform.options.other") },
+            ],
+        },
+        {
+            id: "hasWebsite",
+            type: "radio",
+            dependsOn: {
+                id: "need",
+                value: ["website", "webshop", "webapp"],
+            },
+        },
+        {
+            id: "websiteUrl",
+            type: "url",
+            name: "website-url",
+            autoComplete: "url",
+            placeholder: t("smartform.placeholder.websiteUrl"),
+
+            dependsOn: [
+                { id: "hasWebsite", value: ["yes"] },
+                { id: "need", value: ["seo"] },
+            ],
+        },
+        {
+            id: "selfManage",
+            type: "radio",
+            dependsOn: { id: "need", value: ["website", "webshop", "webapp"] },
+        },
+        {
+            id: "budget",
+            type: "select",
+            options: ["< €500", "€500 - €1000", "€1000 - €2500", "€2500 >"],
+            options: [
+                { value: "< €500", label: "< €500" },
+                { value: "€500 - €1000", label: "€500 - €1000" },
+                { value: "€1000 - €2500", label: "€1000 - €2500" },
+                { value: "€2500 >", label: "€2500 >" },
+            ],
+            dependsOn: {
+                id: "need",
+                value: ["website", "webshop", "webapp"],
+            },
+        },
+        {
+            id: "name",
+            type: "text",
+            name: "full-name",
+            autoComplete: "name",
+            placeholder: t("smartform.placeholder.name"),
+        },
+        {
+            id: "email",
+            type: "text",
+            name: "email",
+            autoComplete: "email",
+            placeholder: t("smartform.placeholder.email"),
+        },
+        {
+            id: "phone",
+            type: "tel",
+            name: "phone",
+            autoComplete: "tel",
+            placeholder: t("smartform.placeholder.phone"),
+            optional: true,
+        },
+        {
+            id: "message",
+            type: "textarea",
+            name: "message",
+            autoComplete: "off",
+            placeholder: t("smartform.placeholder.message"),
+            optional: true,
+        },
+    ];
+
+    const QuestionBlock = ({ question, inputValue, setInputValue }) => {
+        const inputRef = useRef(null);
+
+        useEffect(() => {
+            if (inputRef.current) {
+                inputRef.current.focus();
+            }
+        }, [question?.id]);
+
+        if (!question) return null;
+
+        switch (question.type) {
+            case "select":
+                return (
+                    <>
+                        <label htmlFor={question.id}>{question.question}</label>
+                        <select
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            id={question.id}
+                        >
+                            <option value="">
+                                {t("smartform.options.choose")}
+                            </option>
+                            {question.options.map((opt, idx) => (
+                                <option key={idx} value={opt.value}>
+                                    {opt.label}
+                                </option>
+                            ))}
+                        </select>
+                    </>
+                );
+            case "radio":
+                return (
+                    <>
+                        <p>{question.question}</p>
+                        {["yes", "no"].map((opt) => (
+                            <div key={opt}>
+                                <label htmlFor={`${question.id}-${opt}`}>
+                                    <input
+                                        type="radio"
+                                        value={opt}
+                                        checked={inputValue === opt}
+                                        id={`${question.id}-${opt}`}
+                                        onChange={(e) =>
+                                            setInputValue(e.target.value)
+                                        }
+                                    />
+                                    <span />
+                                    {t(`smartform.label.${opt}`)}
+                                </label>
+                            </div>
+                        ))}
+                    </>
+                );
+            case "url":
+                return (
+                    <>
+                        <label htmlFor={question.id}>{question.question}</label>
+                        <input
+                            ref={inputRef}
+                            type="url"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            id={question.id}
+                            name={question.name}
+                            autoComplete={question.autoComplete}
+                            placeholder={question.placeholder}
+                        />
+                    </>
+                );
+            case "text":
+                return (
+                    <>
+                        <label htmlFor={question.id}>{question.question}</label>
+                        <input
+                            ref={inputRef}
+                            type="text"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            id={question.id}
+                            name={question.name}
+                            autoComplete={question.autoComplete}
+                            placeholder={question.placeholder}
+                        />
+                    </>
+                );
+            case "tel":
+                return (
+                    <>
+                        <label htmlFor={question.id}>{question.question}</label>
+                        <input
+                            ref={inputRef}
+                            type="tel"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            id={question.id}
+                            name={question.name}
+                            autoComplete={question.autoComplete}
+                            placeholder={question.placeholder}
+                        />
+                    </>
+                );
+            case "textarea":
+                return (
+                    <>
+                        <label htmlFor={question.id}>{question.question}</label>
+                        <textarea
+                            ref={inputRef}
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            id={question.id}
+                            name={question.name}
+                            autoComplete={question.autoComplete}
+                            placeholder={question.placeholder}
+                        />
+                    </>
+                );
+            default:
+                return null;
+        }
+    };
 
     const isVisible = (q) => {
         if (!q.dependsOn) return true;
@@ -278,135 +280,140 @@ const SmartForm = () => {
     };
 
     const getDynamicQuestion = (id, need) => {
-        if (id === "need") return "Wat heb je nodig?";
+        if (id === "need") return t("smartform.questions.need");
         if (id === "hasWebsite") {
-            if (!need) return "Heb je al een website/webshop/webapp?";
-            if (need === "Website" || need === "SEO")
-                return "Heb je al een website?";
-            if (need === "Webshop") return "Heb je al een webshop?";
-            if (need === "Webapp") return "Heb je al een webapp?";
+            if (!need) return t("smartform.questions.hasWebsite.default");
+            if (need === "website" || need === "SEO")
+                return t("smartform.questions.hasWebsite.website");
+            if (need === "webshop")
+                return t("smartform.questions.hasWebsite.webshop");
+            if (need === "webapp")
+                return t("smartform.questions.hasWebsite.webapp");
         }
         if (id === "websiteUrl") {
-            if (!need) return "Wat is de URL?";
-            if (need === "Website" || need === "SEO")
-                return "Wat is de URL van je website?";
-            if (need === "Webshop") return "Wat is de URL van je webshop?";
-            if (need === "Webapp") return "Wat is de URL van je webapp?";
-            return "Wat is de URL?";
+            if (!need) return t("smartform.questions.websiteUrl.default");
+            if (need === "website" || need === "SEO")
+                return t("smartform.questions.websiteUrl.website");
+            if (need === "webshop")
+                return t("smartform.questions.websiteUrl.webshop");
+            if (need === "webapp")
+                return t("smartform.questions.websiteUrl.webapp");
+            return t("smartform.questions.websiteUrl.default");
         }
         if (id === "selfManage") {
-            if (!need) return "Wil je het zelf beheren?";
-            if (need === "Website") return "Wil je de website zelf beheren?";
-            if (need === "Webshop") return "Wil je de webshop zelf beheren?";
-            if (need === "Webapp") return "Wil je de webapp zelf beheren?";
+            if (!need) return t("smartform.questions.selfManage.default");
+            if (need === "website")
+                return t("smartform.questions.selfManage.website");
+            if (need === "webshop")
+                return t("smartform.questions.selfManage.webshop");
+            if (need === "webapp")
+                return t("smartform.questions.selfManage.webapp");
         }
-        if (id === "budget") return "Heb je een idee van je budget?";
-        if (id === "name") return "Wat is je naam?";
-        if (id === "email") return "Wat is je e-mailadres?";
-        if (id === "phone") return "Wat is je telefoonnummer? (optioneel)";
-        if (id === "message")
-            return "Heb je nog iets toe te voegen? (optioneel)";
+        if (id === "budget") return t("smartform.questions.budget");
+        if (id === "name") return t("smartform.questions.name");
+        if (id === "email") return t("smartform.questions.email");
+        if (id === "phone") return t("smartform.questions.phone");
+        if (id === "message") return t("smartform.questions.message");
         return "";
+    };
+
+    const getRadioLabel = (value) => t(`smartform.label.${value}`);
+
+    const getOptionLabel = (question, value) => {
+        const found = question.options?.find((opt) => opt.value === value);
+        return found ? found.label : value;
     };
 
     const getAdvice = (answers) => {
         let hourCosts = "";
-        if (answers.selfManage === "Nee") {
-            hourCosts =
-                "* Het uitbesteden van contentbeheer kost €45 per uur (excl. BTW).";
+        if (answers.selfManage === "no") {
+            hourCosts = t("smartform.hourCosts");
         }
 
         // Special case: Webshop + low budget
         if (
-            answers.need === "Webshop" &&
+            answers.need === "webshop" &&
             (answers.budget === "< €500" || answers.budget === "€500 - €1000")
         ) {
             return {
-                title: "Ons advies: BUSINESS PLAN",
-                description:
-                    "Voor een webshop adviseren we altijd ons Business Plan voor maximale schaalbaarheid en ondersteuning.",
-                extra: "Je budget is iets lager dan onze pakketprijzen, maar dat hoeft geen probleem te zijn. Vraag een offerte aan, dan bekijken we samen wat haalbaar is.",
-                cta: "Offerte aanvragen",
+                title: t("smartform.advice.businessPlan.title"),
+                description: t("smartform.advice.webshopLowBudget.description"),
+                extra: t("smartform.advice.webshopLowBudget.extra"),
+                cta: t("smartform.advice.cta.requestQuote"),
                 price: "€1595",
                 hourCosts,
             };
         }
 
         // Always show Business Plan for Webshop
-        if (answers.need === "Webshop") {
+        if (answers.need === "webshop") {
             return {
-                title: "Ons advies: BUSINESS PLAN",
-                description:
-                    "Voor een webshop adviseren we altijd ons Business Plan voor maximale schaalbaarheid en ondersteuning.",
-                cta: "Offerte aanvragen",
+                title: t("smartform.advice.businessPlan.title"),
+                description: t("smartform.advice.webshopAlwaysBusinessPlan"),
+                cta: t("smartform.advice.cta.requestQuote"),
                 price: "€1595",
                 hourCosts,
             };
         }
 
         // Always show hourly rate for SEO
-        if (answers.need === "SEO") {
+        if (answers.need === "seo") {
             return {
-                title: "Ons advies: gebruikelijke uurtarief",
-                description:
-                    "Voor SEO en andere gerelateerde diensten hanteren we een uurtarief van €45 per uur (excl. BTW).",
-                cta: "Offerte aanvragen",
-                price: "€45 p/u",
+                title: t("smartform.advice.seo.title"),
+                description: t("smartform.advice.seo.description"),
+                cta: t("smartform.advice.cta.requestQuote"),
+                price: t("smartform.advice.seo.price"),
             };
         }
 
-        if (answers.need === "Other") {
+        if (answers.need === "other") {
             return {
-                title: "Ons advies: neem contact op",
-                description:
-                    "Voor andere diensten of maatwerkoplossingen adviseren we om contact met ons op te nemen voor een offerte.",
-                cta: "Contactverzoek",
+                title: t("smartform.advice.other.title"),
+                description: t("smartform.advice.other.description"),
+                cta: t("smartform.advice.cta.contactRequest"),
             };
         }
 
         switch (answers.budget) {
             case "< €500":
                 return {
-                    title: "Ons advies: BUDGET PLAN",
-                    description:
-                        "Op basis van je input past ons 'Budget Plan' het beste bij jouw wensen.",
-                    cta: "Offerte aanvragen",
+                    title: t("smartform.advice.budgetPlan.title"),
+                    description: t("smartform.advice.budgetPlan.description"),
+                    cta: t("smartform.advice.cta.requestQuote"),
                     price: "€295",
                     hourCosts,
                 };
             case "€500 - €1000":
                 return {
-                    title: "Ons advies: STARTER PLAN",
-                    description:
-                        "Het 'Starter Plan' biedt meer mogelijkheden en flexibiliteit.",
-                    cta: "Offerte aanvragen",
+                    title: t("smartform.advice.starterPlan.title"),
+                    description: t("smartform.advice.starterPlan.description"),
+                    cta: t("smartform.advice.cta.requestQuote"),
                     price: "€595",
                     hourCosts,
                 };
             case "€1000 - €2500":
                 return {
-                    title: "Ons advies: ESTABLISHED PLAN",
-                    description:
-                        "Voor uitgebreide wensen adviseren we het 'Established Plan'.",
-                    cta: "Offerte aanvragen",
+                    title: t("smartform.advice.establishedPlan.title"),
+                    description: t(
+                        "smartform.advice.establishedPlan.description"
+                    ),
+                    cta: t("smartform.advice.cta.requestQuote"),
                     price: "€1025",
                     hourCosts,
                 };
             case "€2500 >":
                 return {
-                    title: "Ons advies: BUSINESS PLAN",
-                    description:
-                        "Voor grote projecten bieden we een maatwerkoplossing.",
-                    cta: "Offerte aanvragen",
+                    title: t("smartform.advice.businessPlan.title"),
+                    description: t("smartform.advice.businessPlan.description"),
+                    cta: t("smartform.advice.cta.requestQuote"),
                     price: "€1595",
                     hourCosts,
                 };
             default:
                 return {
-                    title: "Advies",
-                    description:
-                        "Vul je budget in om een passend advies te ontvangen.",
-                    cta: "Offerte aanvragen",
+                    title: t("smartform.advice.default.title"),
+                    description: t("smartform.advice.default.description"),
+                    cta: t("smartform.advice.cta.requestQuote"),
                     hourCosts,
                 };
         }
@@ -449,11 +456,8 @@ const SmartForm = () => {
             <div className={smartFormStyles.smartFormContainer}>
                 <div className={smartFormStyles.smartFormWrapper}>
                     <div className={smartFormStyles.smartFormContent}>
-                        <h3>Benieuwd wat wij kunnen betekenen!</h3>
-                        <p>
-                            Vertel ons kort wat je zoekt door een aantal vragen
-                            te beantwoorden, dan helpen we je snel verder.
-                        </p>
+                        <h3>{t("smartform.title")}</h3>
+                        <p>{t("smartform.subtitle")}</p>
                         <ul>
                             {visibleFlow.slice(0, currentStep).map((q, idx) =>
                                 answers[q.id] ? (
@@ -463,14 +467,24 @@ const SmartForm = () => {
                                                 q.id,
                                                 answers["need"]
                                             )}
-                                            : <strong>{answers[q.id]}</strong>{" "}
+                                            :{" "}
+                                            <strong>
+                                                {q.type === "radio"
+                                                    ? getRadioLabel(
+                                                          answers[q.id]
+                                                      )
+                                                    : getOptionLabel(
+                                                          q,
+                                                          answers[q.id]
+                                                      )}
+                                            </strong>
                                             <button
                                                 type="button"
                                                 onClick={() =>
                                                     setCurrentStep(idx)
                                                 }
                                             >
-                                                <i class="fa-regular fa-pen-to-square fa-sm"></i>
+                                                <i className="fa-regular fa-pen-to-square fa-sm"></i>
                                             </button>
                                         </small>
                                     </li>
@@ -489,13 +503,10 @@ const SmartForm = () => {
                     </div>
                     {success ? (
                         <div className={smartFormStyles.smartFormSuccess}>
-                            <h4>Bedankt voor je aanvraag!</h4>
-                            <p>
-                                We hebben je gegevens ontvangen en nemen zo snel
-                                mogelijk contact met je op.
-                            </p>
+                            <h4>{t("smartform.success.title")}</h4>
+                            <p>{t("smartform.success.subtitle")}</p>
                             <button type="button" onClick={handleReset}>
-                                Opnieuw beginnen{" "}
+                                {t("smartform.restart")}{" "}
                                 <i className="fa-solid fa-rotate-left fa-xs"></i>
                             </button>
                         </div>
@@ -519,23 +530,23 @@ const SmartForm = () => {
                                             <span>{advice.extra}</span>
                                         )}
                                         <Link to="/prijzen/">
-                                            Zie onze prijspakketten{" "}
-                                            <i class="fa-solid fa-arrow-right-long fa-sm"></i>
+                                            {t("smartform.prices")}{" "}
+                                            <i className="fa-solid fa-arrow-right-long fa-sm"></i>
                                         </Link>
 
                                         <button
                                             type="button"
                                             onClick={handleReset}
                                         >
-                                            Opnieuw beginnen{" "}
-                                            <i class="fa-solid fa-rotate-left fa-xs"></i>
+                                            {t("smartform.restart")}{" "}
+                                            <i className="fa-solid fa-rotate-left fa-xs"></i>
                                         </button>
                                         <div>
                                             <button
                                                 type="button"
                                                 onClick={handleBack}
                                             >
-                                                Terug
+                                                {t("smartform.back")}
                                             </button>
                                             <button
                                                 onClick={handleSubmit}
@@ -575,7 +586,7 @@ const SmartForm = () => {
                             <div className={smartFormStyles.smartFormButtons}>
                                 {currentStep > 0 && (
                                     <button type="button" onClick={handleBack}>
-                                        Terug
+                                        {t("smartform.back")}
                                     </button>
                                 )}
                                 <button
@@ -584,7 +595,7 @@ const SmartForm = () => {
                                         !inputValue && !currentQuestion.optional
                                     }
                                 >
-                                    Volgende
+                                    {t("smartform.next")}
                                 </button>
                             </div>
                         </form>

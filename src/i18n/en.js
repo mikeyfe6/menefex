@@ -427,6 +427,120 @@ export default {
         },
     },
 
+    smartform: {
+        title: "Curious about what we can do for you!",
+        subtitle:
+            "Briefly tell us what you're looking for by answering a few questions, and we'll help you quickly.",
+        restart: "Start over",
+        success: {
+            title: "Thanks for your request!",
+            subtitle:
+                "We've received your information and will contact you as soon as possible.",
+        },
+        prices: "See our pricing packages",
+        back: "Back",
+        next: "Next",
+        submit: "Submit",
+        options: {
+            choose: "Choose an option",
+            website: "Have a website made",
+            webapp: "Have a web application made",
+            webshop: "Have a webshop made",
+            seo: "Search engine optimization (SEO)",
+            other: "Other services",
+        },
+        placeholder: {
+            websiteUrl: "e.g. https://www.yourwebsite.com",
+            name: "e.g. John Johnson",
+            email: "e.g. john.johnson@example.com",
+            phone: "e.g. 0612345678",
+            message: "Your message or additional information",
+        },
+        label: {
+            yes: "Yes",
+            no: "No",
+        },
+        questions: {
+            need: "What do you need?",
+            hasWebsite: {
+                default: "Do you already have a website/webshop/web app?",
+                website: "Do you already have a website?",
+                webshop: "Do you already have a webshop?",
+                webapp: "Do you already have a web application?",
+            },
+            websiteUrl: {
+                default: "What is the URL?",
+                website: "What is the URL of your website?",
+                webshop: "What is the URL of your webshop?",
+                webapp: "What is the URL of your web application?",
+            },
+            selfManage: {
+                default: "Do you want to manage it yourself?",
+                website: "Do you want to manage your website yourself?",
+                webshop: "Do you want to manage your webshop yourself?",
+                webapp: "Do you want to manage your web application yourself?",
+            },
+            budget: "Do you have an idea of your budget?",
+            name: "What is your name?",
+            email: "What is your email address?",
+            phone: "What is your phone number? (optional)",
+            message:
+                "Do you have any additional information or questions? (optional)",
+        },
+        hourCosts:
+            "* Outsourcing content management costs €45 per hour (excl. VAT).",
+
+        advice: {
+            webshopLowBudget: {
+                description:
+                    "For a webshop, we always recommend our Business Plan for maximum scalability and support.",
+                extra: "Your budget is slightly lower than our package prices, but that's not a problem. Request a quote and we'll look at what's possible together.",
+            },
+            webshopAlwaysBusinessPlan:
+                "For a webshop, we always recommend our Business Plan for maximum scalability and support.",
+            budgetPlan: {
+                title: "Our advice: BUDGET PLAN",
+                description:
+                    "Based on your input, our 'Budget Plan' best fits your needs.",
+            },
+            starterPlan: {
+                title: "Our advice: STARTER PLAN",
+                description:
+                    "The 'Starter Plan' offers more features and flexibility.",
+            },
+            establishedPlan: {
+                title: "Our advice: ESTABLISHED PLAN",
+                description:
+                    "For more extensive needs, we recommend the 'Established Plan'.",
+            },
+            businessPlan: {
+                title: "Our advice: BUSINESS PLAN",
+                description:
+                    "For large projects, we offer a tailor-made solution.",
+            },
+            seo: {
+                title: "Our advice: standard hourly rate",
+                description:
+                    "For SEO and other related services, we charge an hourly rate of €45 (excl. VAT).",
+                price: "€45/hr",
+            },
+            other: {
+                title: "Our advice: CONTACT US",
+                description:
+                    "For other services or custom solutions, we recommend contacting us for a quote.",
+            },
+            cta: {
+                requestQuote: "Request a quote",
+                contactRequest: "Contact request",
+            },
+            default: {
+                title: "Advice",
+                description:
+                    "Based on your answers, we recommend the following package or action.",
+            },
+        },
+    },
+
     privacyPolicy:
         "<h1 class='page-title'>PRIVACY POLICY - Menefex</h1><p>Menefex respects the privacy of visitors to its website, particularly the rights of visitors regarding the automated processing of personal data. In the interest of full transparency with our customers, we have therefore formulated and implemented a policy regarding these processes, their purposes, and the possibilities for data subjects to exercise their rights as effectively as possible.</p><p>For any additional information about the protection of personal data, you can visit the website of the Dutch Data Protection Authority: <a href='https://autoriteitpersoonsgegevens.nl/en' rel='noopener noreferrer' target='_blank'>https://autoriteitpersoonsgegevens.nl/en</a>.</p><p>By continuing to visit this website, you accept the following terms of use. You accept the use of cookies and other tracking systems. If you wish to refuse this use, you must <b>clear or disable your cache</b>. This can also be done via an official Google Browser Add-on: <a href='https://tools.google.com/dlpage/gaoptout' rel='noopener noreferrer' target='_blank'>https://tools.google.com/dlpage/gaoptout</a>.</p><p><u>The cookies we use:</u></p><p><b>Anonymous Analytical Cookies</b></p><ul><li>Google Analytics (_gid): to measure and track website visitors</li><li>Google Analytics (_ga): this cookie stores additional anonymous data for calculating visitors, sessions, campaigns, etc.</li></ul><p><b>Functional Cookies</b></p><ul><li>Google Analytics (_gat): our Google Analytics UA-ID</li><li>Google Analytics (_ga_): our Google Analytics GA4-ID</li></ul><p><b>Advertising Cookies</b></p><ul><li>Google Ads (test_cookie): a test cookie to determine browser support for ads</li></ul><p>The current version of the privacy policy available on the website is the only version that applies while you visit the website, until a new version replaces the current version.</p><h5>Article 1 - Legal Provisions</h5><ol><li>Website (hereinafter also referred to as “The website”): menefex.nl</li><li>Responsible for processing personal data (Hereinafter also: “The Administrator”): Menefex, located at Kelbergen 192, 1104LJ Amsterdam, Chamber of Commerce number: 76045315.</li></ol><h5>Article 2 - Access to the website</h5><p>Access to and use of the website is strictly personal. You will not use this website or the data and information provided on it for commercial, political, or advertising purposes, nor for any commercial offers, and in particular not for unsolicited electronic offers.</p><h5>Article 3 - The content of the website</h5><p>All brands, images, texts, comments, illustrations, (animation) pictures, video images, sounds, as well as all technical applications that can be used to make the website function, and more generally all components used on this site, are protected by law by intellectual property rights. Any reproduction, repetition, use, or adaptation, in any way whatsoever, of the whole or just a part of it, including the technical applications, without prior written permission from the responsible party, is strictly prohibited. If the administrator does not immediately take action against any infringement, this cannot be construed as tacit permission or a waiver of legal action.</p><h5>Article 4 - Management of the website</h5><p>For proper management of the website, the administrator may at any time:</p><ul><li>temporarily suspend, interrupt, or limit access to a certain category of visitors to all or part of the website</li><li>remove any information that may disrupt the functioning of the website or be in conflict with national or international legislation or with internet etiquette</li><li>temporarily make the website unavailable to perform updates</li></ul><h5>Article 5 - Responsibilities</h5><p>The administrator is in no way responsible for failures, malfunctions, difficulties, or interruptions in the functioning of the website, causing the website or any of its functionalities to be inaccessible. The way you connect to the website is your own responsibility. You must take all appropriate measures to protect your equipment and your data against, among other things, virus attacks on the internet. You are also responsible for the websites and the data you consult on the internet.</p><p>The administrator is not liable for any legal proceedings taken against you:</p><ul><li>due to the use of the website or services accessible via the internet</li><li>for violating the terms of this privacy policy</li></ul><p>The administrator is not responsible for any damage you incur or that third parties or your equipment suffer as a result of your connection to or use of the website. You will refrain from any action against the administrator as a result.</p><p>If the administrator becomes involved in a dispute as a result of your use of this website, he is entitled to recover all damages he suffers and will suffer as a result from you.</p><h5>Article 6 - Data collection</h5><p>Your data is collected by Menefex. Personal data refers to all information about an identified or identifiable natural person; an identifiable person is considered to be a natural person who can be identified directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier, or one or more factors specific to the physical, physiological, genetic, mental, economic, cultural, or social identity.</p><p>The personal data collected on the website is mainly used by the administrator for maintaining relationships with you and, if applicable, for processing your orders.</p><h5>Article 7 - Your rights regarding your data</h5><p>Under Article 13(2)(b) GDPR, everyone has the right to access, rectify, or erase their personal data or restrict its processing, as well as the right to object to the processing and the right to data portability. You can exercise these rights by contacting us at michaelfransman@menefex.nl.</p><p>Any request to that effect must be accompanied by a copy of a valid ID on which you have signed and stated the address where you can be contacted. You will receive a response to your request within 1 month of submitting it. Depending on the complexity and number of requests, this period may be extended by 2 months if necessary.</p><h5>Article 8 - Processing of personal data</h5><p>In the event of any breach of any law or regulation of which the visitor is suspected and for which the authorities need personal data collected by the administrator, they will be provided to them after an explicit and reasoned request by those authorities, after which this personal data will no longer be protected by the provisions of this privacy statement.</p><p>If certain information is necessary to gain access to certain functionalities of the website, the responsible party will indicate the mandatory nature of this information when requesting the data.</p><h5>Article 9 - Commercial offers</h5><p>You may receive commercial offers from the administrator. If you do not (any longer) wish to receive them, please send an email to the following address: michaelfransman@menefex.nl.</p><p>If you encounter any personal data while visiting the website, you must refrain from collecting it or any other unauthorized use as well as from any act that infringes on the privacy of that/those person(s). The administrator is in no way responsible for the above-mentioned situations.</p><h5>Article 10 - Data retention period</h5><p>The data collected by the website administrator is used and stored for the period prescribed by law.</p><h5>Article 11 - Cookies</h5><ol><li>A cookie is a small text file that is placed on the hard drive of your computer when you visit our website. A cookie contains data so that you can be recognized as a visitor each time you visit our website. It allows us to set up our website specifically for you and makes it easier to log in. When you visit our website, a banner appears to inform you about the use of cookies. By continuing to use our website, you accept its use. Your consent is valid for a period of thirteen months.</li><li>We use the following types of cookies on our website: <br /><b>- Functional cookies:</b> such as session and login cookies for tracking session and login information.<br /><b>- Anonymous Analytical cookies:</b> to gain insights into website visits based on information about visitor numbers, popular pages, and topics. This allows us to better tailor communication and information provision to the needs of website visitors. We cannot see who visits our sites or from which personal device the visit occurs.<br /><b>- Non-anonymous Analytical cookies:</b> to gain insights into website visits based on information about visitor numbers, popular pages, and topics. This allows us to better tailor communication and information provision to the needs of website visitors.<br /><b>- Tracking Cookies:</b> such as advertising cookies that are intended to display relevant advertisements. Personal interests can be derived from the information about visited websites. This allows organizations, for example, to show their website visitors targeted advertisements. Tracking cookies enable profiles of people to be built up, and they are processed in such a way that they process personal data.</li></ol><p>For more information about the use, management and deletion of cookies for each control type, we invite you to consult the following link: <a href='https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies#faq' rel='noopener noreferrer' target='_blank'>https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-artikelen/cookies#faq</a> (page only only dutch)</p><h5>Article 12 - Visual material and products offered</h5><p>No rights can be derived from the visual material belonging to the products offered on the website.</p><h5>Article 13 - Applicable law</h5><p>Dutch law applies to these conditions. The court of the administrator's place of residence has exclusive jurisdiction in any disputes concerning these conditions, except where a legal exception applies.</p><h5>Article 14 - Contact</h5><p>For questions, product information, or information about the website itself, you can contact:Michael Fransman, <a href='mailto:michaelfransman@menefex.nl' rel='noopener noreferrer' target='_blank'>michaelfransman@menefex.nl</a>, <a href='tel:0611054318'>+31 6 11 05 43 18</a>.</p><br /><a href='/'>Return to the homepage!</a>",
 

@@ -37,7 +37,7 @@
 
             #{$smart-form}-content {
                 flex: 1;
-                background-color: $secondary-color;
+                background-color: $lemon-color;
 
                 @include laptop {
                     flex: 45%;
@@ -194,6 +194,12 @@
                 > button {
                     color: $grey-color;
                     margin-top: rem-calc(12);
+
+                    @include smooth-trans;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
                 }
 
                 > div {

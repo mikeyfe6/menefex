@@ -442,6 +442,119 @@ export default {
         },
     },
 
+    smartform: {
+        title: "Benieuwd wat wij kunnen betekenen!",
+        subtitle:
+            "Vertel ons kort wat je zoekt door een aantal vragen te beantwoorden, dan helpen we je snel verder.",
+        restart: "Opnieuw beginnen",
+        success: {
+            title: "Bedankt voor je aanvraag!",
+            subtitle:
+                "We hebben je gegevens ontvangen en nemen zo snel mogelijk contact met je op.",
+        },
+        prices: "Zie onze prijspakketten",
+        back: "Terug",
+        next: "Volgende",
+        submit: "Versturen",
+        options: {
+            choose: "Kies een optie",
+            website: "Website laten maken",
+            webapp: "Webapplicatie laten maken",
+            webshop: "Webshop laten maken",
+            seo: "Zoekmachine optimalisatie (SEO)",
+            other: "Andere diensten",
+        },
+        placeholder: {
+            websiteUrl: "bijv. https://www.jouwwebsite.nl",
+            name: "bijv. Jan Jansen",
+            email: "bijv. jan.jansen@example.com",
+            phone: "bijv. 0612345678",
+            message: "Jouw bericht of aanvullende informatie",
+        },
+        label: {
+            yes: "Ja",
+            no: "Nee",
+        },
+        questions: {
+            need: "Wat heb je nodig?",
+            hasWebsite: {
+                default: "Heb je al een website/webshop/webapp?",
+                website: "Heb je al een website?",
+                webshop: "Heb je al een webshop?",
+                webapp: "Heb je al een webapplicatie?",
+            },
+            websiteUrl: {
+                default: "Wat is de URL?",
+                website: "Wat is de URL van je website?",
+                webshop: "Wat is de URL van je webshop?",
+                webapp: "Wat is de URL van je webapplicatie?",
+            },
+            selfManage: {
+                default: "Wil je het zelf beheren?",
+                website: "Wil je je website zelf beheren?",
+                webshop: "Wil je je webshop zelf beheren?",
+                webapp: "Wil je je webapplicatie zelf beheren?",
+            },
+            budget: "Heb je een idee van je budget?",
+            name: "Wat is je naam?",
+            email: "Wat is je e-mailadres?",
+            phone: "Wat is je telefoonnummer? (optioneel)",
+            message: "Heb je nog aanvullende informatie of vragen? (optioneel)",
+        },
+        hourCosts:
+            "* Het uitbesteden van contentbeheer kost €45 per uur (excl. BTW).",
+
+        advice: {
+            webshopLowBudget: {
+                description:
+                    "Voor een webshop adviseren we altijd ons Business Plan voor maximale schaalbaarheid en ondersteuning.",
+                extra: "Je budget is iets lager dan onze pakketprijzen, maar dat hoeft geen probleem te zijn. Vraag een offerte aan, dan bekijken we samen wat haalbaar is.",
+            },
+            webshopAlwaysBusinessPlan:
+                "Voor een webshop adviseren we altijd ons Business Plan voor maximale schaalbaarheid en ondersteuning.",
+            budgetPlan: {
+                title: "Ons advies: BUDGET PLAN",
+                description:
+                    "Op basis van je input past ons 'Budget Plan' het beste bij jouw wensen.",
+            },
+            starterPlan: {
+                title: "Ons advies: STARTER PLAN",
+                description:
+                    "Het 'Starter Plan' biedt meer mogelijkheden en flexibiliteit.",
+            },
+            establishedPlan: {
+                title: "Ons advies: ESTABLISHED PLAN",
+                description:
+                    "Voor uitgebreide wensen adviseren we het 'Established Plan.",
+            },
+            businessPlan: {
+                title: "Ons advies: BUSINESS PLAN",
+                description:
+                    "Voor grote projecten bieden we een maatwerkoplossing.",
+            },
+            seo: {
+                title: "Ons advies: gebruikelijke uurtarief",
+                description:
+                    "Voor SEO en andere gerelateerde diensten hanteren we een uurtarief van €45 per uur (exclusief BTW).",
+                price: "€45 p/u",
+            },
+            other: {
+                title: "Ons advies: NEEM CONTACT OP",
+                description:
+                    "Voor andere diensten of maatwerkoplossingen adviseren we om contact met ons op te nemen voor een offerte.",
+            },
+            cta: {
+                requestQuote: "Offerte aanvragen",
+                contactRequest: "Contactverzoek",
+            },
+            default: {
+                title: "Advies",
+                description:
+                    "Op basis van je antwoorden adviseren we het volgende pakket of actie.",
+            },
+        },
+    },
+
     privacyPolicy:
         "<h1 class='page-title'>PRIVACYBELEID - Menefex</h1><p>Menefex respecteert de privacy van bezoekers van zijn website, met name de rechten van bezoekers met betrekking tot de geautomatiseerde verwerking van persoonsgegevens. In het belang van volledige transparantie met onze klanten hebben we daarom een beleid geformuleerd en geïmplementeerd met betrekking tot deze processen, hun doeleinden en de mogelijkheden voor betrokkenen om hun rechten zo effectief mogelijk uit te oefenen.</p><p>Voor aanvullende informatie over de bescherming van persoonsgegevens kunt u de website van de Autoriteit Persoonsgegevens bezoeken: <a href='https://autoriteitpersoonsgegevens.nl' rel='noopener noreferrer' target='_blank'>https://autoriteitpersoonsgegevens.nl</a>.</p><p>Door deze website te blijven bezoeken, accepteert u de volgende gebruiksvoorwaarden. U accepteert het gebruik van cookies en andere volgsystemen. Als u dit gebruik wilt weigeren, moet u <b>uw cache wissen of uitschakelen</b>. Dit kan ook via een officiële Google Browser-add-on: <a href='https://tools.google.com/dlpage/gaoptout' rel='noopener noreferrer' target='_blank'>https://tools.google.com/dlpage/gaoptout</a>.</p><p><u>De cookies die we gebruiken:</u></p><p><b>Anonieme analytische cookies</b></p><ul><li>Google Analytics (_gid): om websitebezoekers te meten en bij te houden</li><li>Google Analytics (_ga): deze cookie slaat aanvullende anonieme gegevens op voor het berekenen van bezoekers, sessies, campagnes, enz.</li></ul><p><b>Functionele cookies</b></p><ul><li>Google Analytics (_gat): onze Google Analytics UA-ID</li><li>Google Analytics (_ga_): onze Google Analytics GA4-ID</li></ul><p><b>Advertentiecookies</b></p><ul><li>Google Ads (test_cookie): een testcookie om browserondersteuning voor advertenties te bepalen</li></ul><p>De huidige versie van het privacybeleid die beschikbaar is op de website is de enige versie die van toepassing is zolang u de website bezoekt, totdat een nieuwe versie de huidige versie vervangt.</p><h5>Artikel 1 - Wettelijke Bepalingen</h5><ol><li>Website (hierna ook wel aangeduid als “De website”): menefex.nl</li><li>Verantwoordelijke voor de verwerking van persoonsgegevens (Hierna ook: “De Beheerder”): Menefex, gevestigd te Kelbergen 192, 1104LJ Amsterdam, KvK-nummer: 76045315.</li></ol><h5>Artikel 2 - Toegang tot de website</h5><p>Toegang tot en gebruik van de website is strikt persoonlijk. U zult deze website of de gegevens en informatie die daarop worden verstrekt niet gebruiken voor commerciële, politieke of advertentiedoeleinden, noch voor commerciële aanbiedingen, en in het bijzonder niet voor ongevraagde elektronische aanbiedingen.</p><h5>Artikel 3 - De inhoud van de website</h5><p>Alle merken, afbeeldingen, teksten, commentaren, illustraties, (animatie)afbeeldingen, videobeelden, geluiden, evenals alle technische toepassingen die kunnen worden gebruikt om de website te laten functioneren, en meer in het algemeen alle componenten die op deze site worden gebruikt, zijn beschermd door wettelijke intellectuele eigendomsrechten. Elke reproductie, herhaling, gebruik of aanpassing, op welke manier dan ook, van het geheel of een deel ervan, inclusief de technische toepassingen, zonder voorafgaande schriftelijke toestemming van de verantwoordelijke partij, is strikt verboden. Als de beheerder niet onmiddellijk actie onderneemt tegen een inbreuk, kan dit niet worden opgevat als stilzwijgende toestemming of afstand van rechtsmaatregelen.</p><h5>Artikel 4 - Beheer van de website</h5><p>Voor een goed beheer van de website kan de beheerder op elk moment:</p><ul><li>de toegang tot een bepaalde categorie bezoekers tijdelijk opschorten, onderbreken of beperken tot een deel of het geheel van de website</li><li>alle informatie verwijderen die de werking van de website kan verstoren of in strijd is met nationale of internationale wetgeving of met internetetiquette</li><li>de website tijdelijk onbeschikbaar maken om updates uit te voeren</li></ul><h5>Artikel 5 - Verantwoordelijkheden</h5><p>De beheerder is op geen enkele wijze verantwoordelijk voor storingen, disfuncties, moeilijkheden of onderbrekingen in het functioneren van de website, waardoor de website of een van zijn functionaliteiten ontoegankelijk is. De manier waarop u verbinding maakt met de website is uw eigen verantwoordelijkheid. U moet alle passende maatregelen nemen om uw apparatuur en uw gegevens te beschermen tegen onder andere virusaanvallen op het internet. U bent ook verantwoordelijk voor de websites en de gegevens die u op het internet raadpleegt.</p><p>De beheerder is niet aansprakelijk voor juridische procedures die tegen u worden ondernomen:</p><ul><li>vanwege het gebruik van de website of diensten die toegankelijk zijn via het internet</li><li>voor het overtreden van de voorwaarden van dit privacybeleid</li></ul><p>De beheerder is niet verantwoordelijk voor enige schade die u lijdt of die derden of uw apparatuur lijden als gevolg van uw verbinding met of gebruik van de website. U zult afzien van enige actie tegen de beheerder als gevolg daarvan.</p><p>Als de beheerder betrokken raakt bij een geschil als gevolg van uw gebruik van deze website, is hij gerechtigd om alle schade die hij lijdt en zal lijden als gevolg daarvan op u te verhalen.</p><h5>Artikel 6 - Gegevensverzameling</h5><p>Uw gegevens worden verzameld door Menefex. Persoonsgegevens verwijzen naar alle informatie over een geïdentificeerde of identificeerbare natuurlijke persoon; een identificeerbare persoon wordt beschouwd als een natuurlijke persoon die direct of indirect kan worden geïdentificeerd, met name door te verwijzen naar een identificator zoals een naam, een identificatienummer, locatiegegevens, een online identificator, of een of meer factoren die specifiek zijn voor de fysieke, fysiologische, genetische, mentale, economische, culturele of sociale identiteit.</p><p>De persoonsgegevens die op de website worden verzameld, worden voornamelijk door de beheerder gebruikt voor het onderhouden van relaties met u en, indien van toepassing, voor het verwerken van uw bestellingen.</p><h5>Artikel 7 - Uw rechten met betrekking tot uw gegevens</h5><p>Krachtens artikel 13(2)(b) AVG heeft iedereen het recht op inzage, rectificatie of verwijdering van zijn persoonsgegevens of beperking van de verwerking ervan, alsmede het recht om bezwaar te maken tegen de verwerking en het recht op gegevensoverdraagbaarheid. U kunt deze rechten uitoefenen door contact met ons op te nemen via michaelfransman@menefex.nl.</p><p>Elk verzoek daartoe moet vergezeld gaan van een kopie van een geldig identiteitsbewijs waarop u hebt ondertekend en het adres hebt vermeld waar u kunt worden gecontacteerd. U ontvangt binnen 1 maand na indiening een antwoord op uw verzoek. Afhankelijk van de complexiteit en het aantal verzoeken kan deze termijn indien nodig met 2 maanden worden verlengd.</p><h5>Artikel 8 - Verwerking van persoonsgegevens</h5><p>In het geval van een schending van enige wet of regelgeving waarvan de bezoeker wordt verdacht en waarvoor de autoriteiten persoonsgegevens nodig hebben die door de beheerder zijn verzameld, zullen deze na een expliciet en gemotiveerd verzoek van die autoriteiten aan hen worden verstrekt, waarna deze persoonsgegevens niet langer worden beschermd door de bepalingen van deze privacyverklaring.</p><p>Indien bepaalde informatie nodig is om toegang te krijgen tot bepaalde functionaliteiten van de website, zal de verantwoordelijke partij bij het opvragen van de gegevens de verplichte aard van deze informatie aangeven.</p><h5>Artikel 9 - Commerciële aanbiedingen</h5><p>U kunt commerciële aanbiedingen van de beheerder ontvangen. Als u deze niet (meer) wilt ontvangen, stuur dan een e-mail naar het volgende adres: michaelfransman@menefex.nl.</p><p>Als u tijdens uw bezoek aan de website persoonsgegevens tegenkomt, dient u zich te onthouden van het verzamelen ervan of enig ander ongeoorloofd gebruik, evenals van enige handeling die inbreuk maakt op de privacy van die persoon of personen. De beheerder is op geen enkele wijze verantwoordelijk voor de bovengenoemde situaties.</p><h5>Artikel 10 - Bewaartermijn van gegevens</h5><p>De door de beheerder van de website verzamelde gegevens worden gebruikt en opgeslagen voor de periode die wettelijk is voorgeschreven.</p><h5>Artikel 11 - Cookies</h5><ol><li>Een cookie is een klein tekstbestand dat op de harde schijf van uw computer wordt geplaatst wanneer u onze website bezoekt. Een cookie bevat gegevens zodat u bij elk bezoek aan onze website als bezoeker kunt worden herkend. Het stelt ons in staat om onze website specifiek voor u in te stellen en het inloggen gemakkelijker te maken. Wanneer u onze website bezoekt, verschijnt er een banner om u te informeren over het gebruik van cookies. Door onze website te blijven gebruiken, accepteert u het gebruik ervan. Uw toestemming is geldig voor een periode van dertien maanden.</li><li>We gebruiken de volgende soorten cookies op onze website: <br /><b>- Functionele cookies:</b> zoals sessie- en inlogcookies voor het bijhouden van sessie- en inloginformatie.<br /><b>- Anonieme analytische cookies:</b> om inzicht te krijgen in websitebezoeken op basis van informatie over bezoekersaantallen, populaire pagina's en onderwerpen. Hierdoor kunnen we de communicatie en informatievoorziening beter afstemmen op de behoeften van websitebezoekers. We kunnen niet zien wie onze sites bezoekt of vanaf welk persoonlijk apparaat het bezoek plaatsvindt.<br /><b>- Niet-anonieme analytische cookies:</b> om inzicht te krijgen in websitebezoeken op basis van informatie over bezoekersaantallen, populaire pagina's en onderwerpen. Hierdoor kunnen we de communicatie en informatievoorziening beter afstemmen op de behoeften van websitebezoekers.<br /><b>- Tracking cookies:</b> zoals advertentiecookies die bedoeld zijn om relevante advertenties weer te geven. Persoonlijke interesses kunnen worden afgeleid uit de informatie over bezochte websites. Dit stelt organisaties bijvoorbeeld in staat om gerichte advertenties aan hun websitebezoekers te tonen. Tracking cookies maken het mogelijk om profielen van mensen op te bouwen, en ze worden verwerkt op een manier die persoonsgegevens verwerkt.</li></ol><p>Voor meer informatie over het gebruik, het beheer en het verwijderen van cookies voor elk besturingstype, nodigen wij u uit om de volgende link te raadplegen: <a href='https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies#faq' rel='noopener noreferrer' target='_blank'>https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies#faq</a></p><h5>Artikel 12 - Beeldmateriaal en aangeboden producten</h5><p>Aan het beeldmateriaal dat bij de aangeboden producten op de website hoort, kunnen geen rechten worden ontleend.</p><h5>Artikel 13 - Toepasselijk recht</h5><p>Op deze voorwaarden is Nederlands recht van toepassing. De rechtbank van de woonplaats van de beheerder heeft exclusieve jurisdictie in geschillen over deze voorwaarden, behalve waar een wettelijke uitzondering geldt.</p><h5>Artikel 14 - Contact</h5><p>Voor vragen, productinformatie of informatie over de website zelf kunt u contact opnemen met: Michael Fransman, <a href='mailto:michaelfransman@menefex.nl' rel='noopener noreferrer' target='_blank'>michaelfransman@menefex.nl</a>, <a href='tel:0611054318'>+31 6 11 05 43 18</a>.</p><br /><a href='/'>Ga terug naar de hoofdpagina!</a>",
 

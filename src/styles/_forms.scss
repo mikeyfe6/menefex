@@ -48,6 +48,10 @@ form {
         padding: rem-calc(8 0);
         border-bottom: 1px solid $lightgrey-color;
 
+        &::placeholder {
+            opacity: 0.5;
+        }
+
         &:focus {
             border-color: $link-color;
 
