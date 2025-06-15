@@ -71,7 +71,7 @@ export const Head = () => {
             description="Contacteer Menefex voor een offerte, samenwerking of algemene vragen. Wij staan klaar om samen iets geweldigs te creëren! Binnen één werkdag reactie."
             keywords="contact, offerte, samenwerking, algemene vragen, reactie, Menefex, webontwikkeling, digitalisering, SEO, technologie"
             pathname="/contact/"
-            schemaMarkup={[breadcrumbSchema, localBusinessSchema]}
+            schemaMarkup={[breadcrumbSchema]}
         />
     );
 };
