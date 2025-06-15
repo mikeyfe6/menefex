@@ -406,7 +406,7 @@ const SmartForm = () => {
                     title: t("smartform.advice.businessPlan.title"),
                     description: t("smartform.advice.businessPlan.description"),
                     cta: t("smartform.advice.cta.requestQuote"),
-                    price: "€1595",
+                    price: "€1575",
                     hourCosts,
                 };
             default:

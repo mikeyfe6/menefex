@@ -8,6 +8,7 @@ import SEO from "../components/seo";
 import Layout from "../components/layout";
 
 // TODO: klaar voor TS'en..
+// TODO: no index for SEO..
 
 const ThankYouPage = () => {
     const { t, isHydrated } = useTranslation();
