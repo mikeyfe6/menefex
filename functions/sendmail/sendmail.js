@@ -13,11 +13,11 @@ exports.handler = async (event) => {
             dynamic_template_data = {
                 mnfxForm: data.formId || "n.v.t.",
                 mnfxName: data.name || "n.v.t.",
-                mnfxSubject: data.subject || "n.v.t.",
 
                 mnfxCompany: data.company || "n.v.t.",
                 mnfxEmail: data.email || "n.v.t.",
                 mnfxPhone: data.phone || "n.v.t.",
+                mnfxSubject: data.subject || "n.v.t.",
                 mnfxMessage: data.message || "n.v.t.",
 
                 mnfxTime: data.time || "[LEADFORM]",
@@ -27,12 +27,12 @@ exports.handler = async (event) => {
             dynamic_template_data = {
                 mnfxForm: data.formId || "n.v.t.",
                 mnfxName: data.name || "n.v.t.",
-                mnfxSubject: data.subject || "Terugbelverzoek",
 
                 mnfxPhone: data.phone || "n.v.t.",
                 mnfxTime: data.time || "n.v.t.",
                 mnfxMessage: data.message || "n.v.t.",
 
+                mnfxSubject: data.subject || "[CALLFORM]",
                 mnfxCompany: data.company || "[CALLFORM]",
                 mnfxEmail: data.email || "[CALLFORM]",
             };
@@ -41,7 +41,6 @@ exports.handler = async (event) => {
             dynamic_template_data = {
                 mnfxForm: data.formId || "n.v.t.",
                 mnfxName: data.name || "n.v.t.",
-                mnfxSubject: data.subject || "Slimme formulier",
 
                 mnfxNeed: data.need || "n.v.t.",
                 mnfxHasWebsite: data.hasWebsite || "n.v.t.",
@@ -53,6 +52,7 @@ exports.handler = async (event) => {
                 mnfxPhone: data.phone || "n.v.t.",
                 mnfxMessage: data.message || "n.v.t.",
 
+                mnfxSubject: data.subject || "[SMARTFORM]",
                 mnfxCompany: data.company || "[SMARTFORM]",
                 mnfxTime: data.time || "[SMARTFORM]",
             };

@@ -19,8 +19,20 @@
 
             #{$smart-form}-content,
             #{$smart-form}-advice,
+            #{$smart-form}-success,
             > form {
                 @include box-padding;
+            }
+
+            #{$smart-form}-success {
+                h4 {
+                    margin-bottom: rem-calc(16);
+                }
+
+                button {
+                    margin-top: auto;
+                    color: $grey-color;
+                }
             }
 
             #{$smart-form}-content {
@@ -80,7 +92,8 @@
             }
 
             > form,
-            #{$smart-form}-advice {
+            #{$smart-form}-advice,
+            #{$smart-form}-success {
                 background-color: $smoke-color;
                 display: flex;
                 flex-direction: column;

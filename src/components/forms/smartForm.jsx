@@ -216,11 +216,11 @@ const SmartForm = () => {
     const { t, isHydrated } = useTranslation();
     const [answers, setAnswers] = useState({});
     const [currentStep, setCurrentStep] = useState(0);
+    const [success, setSuccess] = useState(false);
 
     const isVisible = (q) => {
         if (!q.dependsOn) return true;
         if (Array.isArray(q.dependsOn)) {
-            // At least one condition must match
             return q.dependsOn.some((dep) => {
                 const answer = answers[dep.id];
                 return dep.value.includes(answer);
@@ -421,7 +421,6 @@ const SmartForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         try {
             await axios({
                 url: "/.netlify/functions/sendmail",
@@ -431,7 +430,7 @@ const SmartForm = () => {
                     formId: "smartForm",
                 },
             });
-            alert("Bedankt! Je aanvraag is verstuurd.");
+            setSuccess(true);
             handleReset();
         } catch (error) {
             alert("Er ging iets mis bij het versturen. Probeer het opnieuw.");
@@ -442,6 +441,7 @@ const SmartForm = () => {
     const handleReset = () => {
         setAnswers({});
         setCurrentStep(0);
+        setSuccess(false);
     };
 
     return (
@@ -487,7 +487,19 @@ const SmartForm = () => {
                             </div>
                         )}
                     </div>
-                    {isAdviceStep ? (
+                    {success ? (
+                        <div className={smartFormStyles.smartFormSuccess}>
+                            <h4>Bedankt voor je aanvraag!</h4>
+                            <p>
+                                We hebben je gegevens ontvangen en nemen zo snel
+                                mogelijk contact met je op.
+                            </p>
+                            <button type="button" onClick={handleReset}>
+                                Opnieuw beginnen{" "}
+                                <i className="fa-solid fa-rotate-left fa-xs"></i>
+                            </button>
+                        </div>
+                    ) : isAdviceStep ? (
                         <div className={smartFormStyles.smartFormAdvice}>
                             {(() => {
                                 const advice = getAdvice(answers);
