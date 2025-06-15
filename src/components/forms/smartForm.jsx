@@ -438,7 +438,7 @@ const SmartForm = () => {
                 },
             });
             setSuccess(true);
-            handleReset();
+            // setTimeout(() => handleReset(), 7000);
         } catch (error) {
             alert("Er ging iets mis bij het versturen. Probeer het opnieuw.");
             console.error(error);
