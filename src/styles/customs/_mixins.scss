@@ -90,6 +90,12 @@
         @include phablet {
             padding: rem-calc(32);
         }
+    } @else if $type == "special" {
+        padding: rem-calc(32 24 24);
+
+        @include phablet {
+            padding: rem-calc(44 32 32);
+        }
     }
 }
 

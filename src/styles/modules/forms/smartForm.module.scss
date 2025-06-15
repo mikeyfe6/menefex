@@ -17,11 +17,14 @@
                 flex-direction: row;
             }
 
-            #{$smart-form}-content,
+            #{$smart-form}-content {
+                @include box-padding;
+            }
+
             #{$smart-form}-advice,
             #{$smart-form}-success,
             > form {
-                @include box-padding;
+                @include box-padding("special");
             }
 
             #{$smart-form}-success {
