@@ -78,7 +78,7 @@ const PriceTable = () => {
                         name="offerte"
                         onClick={() =>
                             handlePrice(
-                                "Hi Michael, ik wil graag een offerte aanvragen voor de Budget Plan...",
+                                t("prices.table.cta.budgetPlan"),
                                 "lead_name"
                             )
                         }
@@ -126,7 +126,7 @@ const PriceTable = () => {
                         type="button"
                         onClick={() =>
                             handlePrice(
-                                "Hi Michael, ik wil graag een offerte aanvragen voor de Starter Plan...",
+                                t("prices.table.cta.starterPlan"),
                                 "lead_name"
                             )
                         }
@@ -178,7 +178,7 @@ const PriceTable = () => {
                         name="offerte"
                         onClick={() =>
                             handlePrice(
-                                "Hi Michael, ik wil graag een offerte aanvragen voor de Established Plan...",
+                                t("prices.table.cta.establishedPlan"),
                                 "lead_name"
                             )
                         }
@@ -237,7 +237,7 @@ const PriceTable = () => {
                         name="offerte"
                         onClick={() =>
                             handlePrice(
-                                "Hi Michael, ik wil graag een offerte aanvragen voor de Business Plan...",
+                                t("prices.table.cta.businessPlan"),
                                 "lead_name"
                             )
                         }

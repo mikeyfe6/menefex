@@ -39,5 +39,6 @@ export const Head = () => (
         title="404"
         description="oepss.. Pagina niet gevonden!"
         pathname="/404/"
+        noindex
     />
 );

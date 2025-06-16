@@ -18,8 +18,20 @@
 
         @include container;
 
+        @include phablet {
+            gap: rem-calc(32);
+        }
+
         @include tablet {
             flex-direction: row;
+        }
+
+        @include laptop {
+            gap: rem-calc(48);
+        }
+
+        @include desktop {
+            gap: rem-calc(64);
         }
 
         > form {

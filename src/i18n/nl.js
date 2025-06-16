@@ -272,6 +272,16 @@ export default {
             sixMonths: "6 maanden gratis support",
             twelveMonths: "12 maanden gratis support",
             button: "Offerte aanvragen",
+            cta: {
+                budgetPlan:
+                    "Hi Michael, ik wil graag een offerte aanvragen voor de Budget Plan...",
+                starterPlan:
+                    "Hi Michael, ik wil graag een offerte aanvragen voor de Starter Plan...",
+                establishedPlan:
+                    "Hi Michael, ik wil graag een offerte aanvragen voor de Established Plan...",
+                businessPlan:
+                    "Hi Michael, ik wil graag een offerte aanvragen voor de Business Plan...",
+            },
         },
         notes: {
             title: "Aanvullende informatie",

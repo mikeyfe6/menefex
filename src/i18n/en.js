@@ -267,6 +267,16 @@ export default {
             sixMonths: "6 months free support",
             twelveMonths: "12 months free support",
             button: "Request a quote",
+            cta: {
+                budgetPlan:
+                    "Hi Michael, I want to request a quote for the Budget Plan...",
+                starterPlan:
+                    "Hi Michael, I want to request a quote for the Starter Plan...",
+                establishedPlan:
+                    "Hi Michael, I want to request a quote for the Established Plan...",
+                businessPlan:
+                    "Hi Michael, I want to request a quote for the Business Plan...",
+            },
         },
         notes: {
             title: "Additional information:",

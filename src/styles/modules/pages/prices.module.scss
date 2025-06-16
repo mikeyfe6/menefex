@@ -25,13 +25,18 @@
     @include container($mb: rem-calc(80));
 
     @include phablet {
+        gap: rem-calc(36);
         flex-direction: row;
         margin-bottom: rem-calc(120);
     }
 
     @include tablet {
-        gap: rem-calc(64);
+        gap: rem-calc(48);
         margin-bottom: rem-calc(160);
+    }
+
+    @include desktop {
+        gap: rem-calc(64);
     }
 
     > section {

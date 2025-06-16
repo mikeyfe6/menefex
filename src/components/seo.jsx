@@ -11,6 +11,7 @@ const SEO = ({
     pathname,
     ogimage,
     schemaMarkup,
+    noindex,
 }) => {
     const { site } = useStaticQuery(graphql`
         query {
@@ -72,13 +73,17 @@ const SEO = ({
                 <meta property="twitter:creator" content={socialHandle} />
             )}
 
-            {/* --- SchemaMarkup ! --- */}
+            {/* --- Schema Markup ! --- */}
 
             {schemaMarkup && (
                 <Script type="application/ld+json">
                     {JSON.stringify(schemaMarkup)}
                 </Script>
             )}
+
+            {/* Robots Meta Tag ! */}
+
+            {noindex && <meta name="robots" content="noindex" />}
 
             {children}
         </>

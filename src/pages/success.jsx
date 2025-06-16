@@ -39,5 +39,6 @@ export const Head = () => (
         title="Bedankt!"
         description="Success! Uw bericht is aangekomen."
         pathname="/success/"
+        noindex
     />
 );
