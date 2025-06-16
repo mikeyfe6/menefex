@@ -80,9 +80,6 @@
                 right: rem-calc(10);
                 width: rem-calc(36);
                 height: rem-calc(36);
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 background: $secondary-color;
                 border-radius: 50%;
 
@@ -206,9 +203,6 @@
             }
 
             svg {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: rem-calc(12);
                 color: $secondary-color;
                 outline: 2px solid $white-color;
