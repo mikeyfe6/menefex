@@ -194,15 +194,7 @@
                 background-color: $lightgrey-color;
             }
 
-            span {
-                display: block;
-                font-weight: 600;
-                white-space: nowrap;
-
-                @include fluid-typing(17, 17);
-            }
-
-            svg {
+            > svg {
                 padding: rem-calc(12);
                 color: $secondary-color;
                 outline: 2px solid $white-color;
@@ -210,6 +202,14 @@
                 width: rem-calc(22);
                 height: rem-calc(22);
                 background: $primary-color;
+            }
+
+            > span {
+                display: block;
+                font-weight: 600;
+                white-space: nowrap;
+
+                @include fluid-typing(17, 17);
             }
 
             &:hover {

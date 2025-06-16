@@ -130,7 +130,7 @@
                 .btn {
                     &-dark,
                     &-light {
-                        svg {
+                        > svg {
                             font-size: rem-calc(18);
                         }
                     }
