@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Disqus } from "gatsby-plugin-disqus";
 
@@ -222,7 +223,10 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <i className="fa-solid fa-rss fa-lg" />
+                                    <FontAwesomeIcon
+                                        icon={["fas", "rss"]}
+                                        size="lg"
+                                    />{" "}
                                     <span>{t("blog.feedburner")}</span>
                                 </a>
                             </div>
@@ -313,7 +317,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                     </ul>
 
                     <Link to="/blog/">
-                        <i className="fa-solid fa-angles-left" />{" "}
+                        <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
                         {t("blog.allPosts")}
                     </Link>
                 </div>

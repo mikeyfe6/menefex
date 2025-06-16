@@ -119,8 +119,6 @@
                 }
 
                 > a {
-                    gap: rem-calc(12);
-
                     @include primary-button;
 
                     &:nth-of-type(1) {

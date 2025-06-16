@@ -130,8 +130,7 @@
                 .btn {
                     &-dark,
                     &-light {
-                        i {
-                            margin-right: rem-calc(8);
+                        svg {
                             font-size: rem-calc(18);
                         }
                     }

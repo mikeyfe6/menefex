@@ -53,35 +53,24 @@ const SEO = ({
             <meta property="og:site_name" content={siteTitle} />
             {siteUrl && <meta property="og:url" content={siteUrl} />}
             <meta property="og:locale" content="nl_NL" />
-            {(article ? (
-                false
-            ) : (
-                <meta property="og:type" content="website" />
-            )) || <meta property="og:type" content="article" />}
+            <meta
+                property="og:type"
+                content={article ? "article" : "website"}
+            />
 
             {/* --- Twitter Meta Tags ! --- */}
 
+            <meta property="twitter:card" content="summary" />
             {title && <meta property="twitter:title" content={title} />}
             {description && (
                 <meta property="twitter:description" content={description} />
             )}
             {pageImage && <meta property="twitter:image" content={pageImage} />}
-            <meta property="twitter:card" content="summary" />
             {siteUrl && <meta property="twitter:url" content={siteUrl} />}
             <meta property="twitter:site" content={socialHandle} />
             {socialHandle && (
                 <meta property="twitter:creator" content={socialHandle} />
             )}
-
-            {/* --- Link Tags ! --- */}
-
-            <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-                integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-                crossOrigin="anonymous"
-                referrerPolicy="no-referrer"
-            />
 
             {/* --- SchemaMarkup ! --- */}
 

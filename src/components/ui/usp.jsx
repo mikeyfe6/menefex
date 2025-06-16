@@ -1,25 +1,12 @@
 import * as React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useTranslation from "../../hooks/use-translation";
 
 import * as uspStyles from "../../styles/modules/ui/usp.module.scss";
 
 const Usp = () => {
     const { t, isHydrated } = useTranslation();
-
-    // const containerRef = React.useRef(null);
-
-    // React.useEffect(() => {
-    //     const el = containerRef.current;
-    //     if (!el) return;
-    //     const onWheel = (e) => {
-    //         if (e.deltaY === 0) return;
-    //         e.preventDefault();
-    //         el.scrollLeft += e.deltaY;
-    //     };
-    //     el.addEventListener("wheel", onWheel, { passive: false });
-    //     return () => el.removeEventListener("wheel", onWheel);
-    // }, []);
 
     if (!isHydrated) return null;
 
@@ -28,44 +15,74 @@ const Usp = () => {
             <div className={uspStyles.uspContainer}>
                 <ul>
                     <li>
-                        <i className="fa-solid fa-1"></i>
+                        <FontAwesomeIcon icon={["fas", "1"]} />
                         <p>
-                            <i className="fa-solid fa-quote-left fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-left"]}
+                                size="xs"
+                            />
                             {t("usp.one")}
-                            <i className="fa-solid fa-quote-right fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-right"]}
+                                size="xs"
+                            />
                         </p>
                     </li>
                     <li>
-                        <i className="fa-solid fa-2"></i>
+                        <FontAwesomeIcon icon={["fas", "2"]} />
                         <p>
-                            <i className="fa-solid fa-quote-left fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-left"]}
+                                size="xs"
+                            />
                             {t("usp.two")}
-                            <i className="fa-solid fa-quote-right fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-right"]}
+                                size="xs"
+                            />
                         </p>
                     </li>
 
                     <li>
-                        <i className="fa-solid fa-3"></i>
+                        <FontAwesomeIcon icon={["fas", "3"]} />
                         <p>
-                            <i className="fa-solid fa-quote-left fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-left"]}
+                                size="xs"
+                            />
                             {t("usp.three")}
-                            <i className="fa-solid fa-quote-right fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-right"]}
+                                size="xs"
+                            />
                         </p>
                     </li>
                     <li>
-                        <i className="fa-solid fa-4"></i>
+                        <FontAwesomeIcon icon={["fas", "4"]} />
                         <p>
-                            <i className="fa-solid fa-quote-left fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-left"]}
+                                size="xs"
+                            />
                             {t("usp.four")}
-                            <i className="fa-solid fa-quote-right fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-right"]}
+                                size="xs"
+                            />
                         </p>
                     </li>
                     <li>
-                        <i className="fa-solid fa-5"></i>
+                        <FontAwesomeIcon icon={["fas", "5"]} />
                         <p>
-                            <i className="fa-solid fa-quote-left fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-left"]}
+                                size="xs"
+                            />
                             {t("usp.five")}
-                            <i className="fa-solid fa-quote-right fa-xs"></i>
+                            <FontAwesomeIcon
+                                icon={["fas", "quote-right"]}
+                                size="xs"
+                            />
                         </p>
                     </li>
                 </ul>

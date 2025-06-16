@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import useTranslation from "../../hooks/use-translation";
 
 import * as infoStyles from "../../styles/modules/ui/info.module.scss";
@@ -64,7 +66,7 @@ const Info = () => {
 
             <div className={infoStyles.infoCommunication}>
                 <a href="tel:0611054318" className={infoStyles.infoTel}>
-                    <i className="fa-solid fa-phone" /> ·{" "}
+                    <FontAwesomeIcon icon={["fas", "phone"]} /> ·{" "}
                     <span>+31 6 11 05 43 18</span>
                 </a>
 
@@ -74,7 +76,7 @@ const Info = () => {
                     target="_blank"
                     className={infoStyles.infoMail}
                 >
-                    <i className="fa-solid fa-envelope" /> ·{" "}
+                    <FontAwesomeIcon icon={["fas", "envelope"]} /> ·{" "}
                     <span>info@menefex.nl</span>
                 </a>
             </div>
@@ -93,7 +95,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.fb}
                         >
-                            <i className="fa-brands fa-facebook-f" />
+                            <FontAwesomeIcon icon={["fab", "facebook-f"]} />
                         </a>
                     </li>
 
@@ -104,7 +106,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.ig}
                         >
-                            <i className="fa-brands fa-instagram" />
+                            <FontAwesomeIcon icon={["fab", "instagram"]} />
                         </a>
                     </li>
 
@@ -115,7 +117,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.tw}
                         >
-                            <i className="fa-brands  fa-x-twitter" />
+                            <FontAwesomeIcon icon={["fab", "x-twitter"]} />
                         </a>
                     </li>
 
@@ -126,7 +128,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.li}
                         >
-                            <i className="fa-brands fa-linkedin" />
+                            <FontAwesomeIcon icon={["fab", "linkedin"]} />
                         </a>
                     </li>
 
@@ -137,7 +139,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.gh}
                         >
-                            <i className="fa-brands fa-github" />
+                            <FontAwesomeIcon icon={["fab", "github"]} />
                         </a>
                     </li>
 
@@ -148,7 +150,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.rss}
                         >
-                            <i className="fa-solid fa-rss" />
+                            <FontAwesomeIcon icon={["fas", "rss"]} />
                         </a>
                     </li>
 
@@ -159,7 +161,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.patr}
                         >
-                            <i className="fa-brands fa-patreon" />
+                            <FontAwesomeIcon icon={["fab", "patreon"]} />
                         </a>
                     </li>
 
@@ -170,7 +172,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.sp}
                         >
-                            <i className="fa-brands fa-spotify" />
+                            <FontAwesomeIcon icon={["fab", "spotify"]} />
                         </a>
                     </li>
 
@@ -181,7 +183,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.sky}
                         >
-                            <i className="fa-brands fa-skype" />
+                            <FontAwesomeIcon icon={["fab", "skype"]} />
                         </a>
                     </li>
 
@@ -192,7 +194,7 @@ const Info = () => {
                             target="_blank"
                             className={infoStyles.wa}
                         >
-                            <i className="fa-brands fa-whatsapp" />
+                            <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                         </a>
                     </li>
                 </ul>

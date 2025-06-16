@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import { Link } from "gatsby";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
 
@@ -484,7 +485,13 @@ const SmartForm = () => {
                                                         setCurrentStep(idx)
                                                     }
                                                 >
-                                                    <i className="fa-regular fa-pen-to-square fa-sm"></i>
+                                                    <FontAwesomeIcon
+                                                        icon={[
+                                                            "far",
+                                                            "pen-to-square",
+                                                        ]}
+                                                        size="sm"
+                                                    />
                                                 </button>
                                             )}
                                         </small>
@@ -509,7 +516,10 @@ const SmartForm = () => {
                                 <p>{t("smartform.success.subtitle")}</p>
                                 <button type="button" onClick={handleReset}>
                                     {t("smartform.restart")}{" "}
-                                    <i className="fa-solid fa-rotate-left fa-xs"></i>
+                                    <FontAwesomeIcon
+                                        icon={["fas", "rotate-left"]}
+                                        size="xs"
+                                    />
                                 </button>
                             </div>
                         ) : isAdviceStep ? (
@@ -533,7 +543,13 @@ const SmartForm = () => {
                                             )}
                                             <Link to="/prijzen/">
                                                 {t("smartform.prices")}{" "}
-                                                <i className="fa-solid fa-arrow-right-long fa-sm"></i>
+                                                <FontAwesomeIcon
+                                                    icon={[
+                                                        "fas",
+                                                        "arrow-right-long",
+                                                    ]}
+                                                    size="sm"
+                                                />
                                             </Link>
 
                                             <button
@@ -541,7 +557,13 @@ const SmartForm = () => {
                                                 onClick={handleReset}
                                             >
                                                 {t("smartform.restart")}{" "}
-                                                <i className="fa-solid fa-rotate-left fa-xs"></i>
+                                                <FontAwesomeIcon
+                                                    icon={[
+                                                        "fas",
+                                                        "rotate-left",
+                                                    ]}
+                                                    size="xs"
+                                                />
                                             </button>
                                             <div>
                                                 <button

@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Link } from "gatsby";
 import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Hamburger from "./hamburger";
 
@@ -119,7 +120,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             target="_blank"
                             className={desktopMenuStyles.whapp}
                         >
-                            <i className="fa-brands fa-whatsapp" />
+                            <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                         </a>
                     </li>
                     <li className={desktopMenuStyles.language}>

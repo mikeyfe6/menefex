@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Link, graphql, useStaticQuery } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../hooks/use-translation";
 import useSiteMetadata from "../hooks/use-site-metadata";
@@ -104,7 +105,7 @@ const TopicPage = () => {
 
                     <Link to="/blog/">
                         &apos;Blog&apos;{" "}
-                        <i className="fa-solid fa-angles-right" />
+                        <FontAwesomeIcon icon={["fas", "angles-right"]} />
                     </Link>
                 </div>
             </section>

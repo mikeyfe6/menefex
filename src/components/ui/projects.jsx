@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
     Navigation,
@@ -302,11 +303,15 @@ const Projects = () => {
                         </Swiper>
                         <div className={projectsStyles.projectsNavigation}>
                             <button ref={prevRef}>
-                                <i className="fas fa-chevron-left"></i>
+                                <FontAwesomeIcon
+                                    icon={["fas", "chevron-left"]}
+                                />
                             </button>
                             <div ref={paginationRef}></div>
                             <button ref={nextRef}>
-                                <i className="fas fa-chevron-right"></i>
+                                <FontAwesomeIcon
+                                    icon={["fas", "chevron-right"]}
+                                />
                             </button>
                         </div>
                     </div>

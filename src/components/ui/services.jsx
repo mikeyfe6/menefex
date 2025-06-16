@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import * as servicesStyles from "../../styles/modules/ui/services.module.scss";
 
@@ -16,7 +17,10 @@ const Services = () => {
     const services = {
         websites: {
             name: t("services.websites.name"),
-            icon: "fa-solid fa-globe",
+            icon: {
+                prefix: "fas",
+                name: "globe",
+            },
             excerpt: t("services.websites.excerpt"),
             focus: t("services.websites.focus", { returnObjects: true }),
             url: "/diensten/website-laten-maken/",
@@ -24,7 +28,10 @@ const Services = () => {
         },
         webapps: {
             name: t("services.webapps.name"),
-            icon: "fa-solid fa-mobile",
+            icon: {
+                prefix: "fas",
+                name: "mobile",
+            },
             excerpt: t("services.webapps.excerpt"),
             focus: t("services.webapps.focus", { returnObjects: true }),
             url: "/diensten/webapplicatie-laten-maken/",
@@ -32,7 +39,10 @@ const Services = () => {
         },
         webshops: {
             name: t("services.webshops.name"),
-            icon: "fa-solid fa-shopping-cart",
+            icon: {
+                prefix: "fas",
+                name: "shopping-cart",
+            },
             excerpt: t("services.webshops.excerpt"),
             focus: t("services.webshops.focus", { returnObjects: true }),
             url: "/diensten/webshop-laten-maken/",
@@ -40,7 +50,10 @@ const Services = () => {
         },
         seo: {
             name: t("services.seo.name"),
-            icon: "fa-brands fa-searchengin",
+            icon: {
+                prefix: "fab",
+                name: "searchengin",
+            },
             excerpt: t("services.seo.excerpt"),
             focus: t("services.seo.focus", { returnObjects: true }),
             url: "/diensten/zoekmachine-optimalisatie/",
@@ -48,7 +61,10 @@ const Services = () => {
         },
         maintenance: {
             name: t("services.maintenance.name"),
-            icon: "fa-solid fa-wrench",
+            icon: {
+                prefix: "fas",
+                name: "wrench",
+            },
             excerpt: t("services.maintenance.excerpt"),
             focus: t("services.maintenance.focus", { returnObjects: true }),
             url: "/diensten/onderhoud-en-support/",
@@ -56,7 +72,10 @@ const Services = () => {
         },
         optimizations: {
             name: t("services.optimizations.name"),
-            icon: "fa-solid fa-rocket",
+            icon: {
+                prefix: "fas",
+                name: "rocket",
+            },
             excerpt: t("services.optimizations.excerpt"),
             focus: t("services.optimizations.focus", { returnObjects: true }),
             url: "/diensten/optimalisaties-laten-uitvoeren/",
@@ -84,7 +103,12 @@ const Services = () => {
         <section className={servicesStyles.service} id="services">
             <div className={servicesStyles.serviceContainer}>
                 <div className={servicesStyles.serviceOverlay} ref={overlayRef}>
-                    <i className={services[selected].icon} />
+                    <FontAwesomeIcon
+                        icon={[
+                            services[selected].icon.prefix,
+                            services[selected].icon.name,
+                        ]}
+                    />
                     <h4>{services[selected].name}</h4>
                     <p>{services[selected].excerpt}</p>
                     <span>Focus:</span>
@@ -112,7 +136,12 @@ const Services = () => {
                         ].join(" ")}
                         onClick={() => handleSelect(key)}
                     >
-                        <i className={services[key].icon} />
+                        <FontAwesomeIcon
+                            icon={[
+                                services[key].icon.prefix,
+                                services[key].icon.name,
+                            ]}
+                        />
                         <span>{services[key].name}</span>
                     </button>
                 ))}

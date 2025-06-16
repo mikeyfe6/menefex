@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
 
@@ -32,7 +33,7 @@ const Biography = () => {
                             target="_blank"
                             aria-label="Luister naar onze #STAYVIBIN'-playlist op Spotify"
                         >
-                            <i className="fa-brands fa-spotify" />
+                            <FontAwesomeIcon icon={["fab", "spotify"]} />
                         </a>
                         <Link to="/over/" className={biographyStyles.meerover}>
                             {t("biography.more")}

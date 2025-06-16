@@ -177,6 +177,7 @@
     white-space: nowrap;
     font-weight: 600;
     letter-spacing: $high-spacing;
+    gap: rem-calc(8);
 
     @if $type == 1 {
         background-color: $primary-color;
@@ -212,6 +213,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: rem-calc(8);
     font-weight: 500;
 
     @include smooth-trans;

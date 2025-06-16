@@ -26,8 +26,8 @@
 
                     @include smooth-trans;
 
-                    > h4 {
-                        font-weight: 600;
+                    > h3 {
+                        @extend %as-h4;
 
                         span {
                             font-weight: bold;
@@ -51,7 +51,6 @@
         }
 
         > a {
-            gap: rem-calc(12);
             margin-top: rem-calc(64);
             margin-left: auto;
 

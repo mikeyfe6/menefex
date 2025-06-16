@@ -2,6 +2,87 @@ import React, { useState } from "react";
 
 import CookieConsent from "react-cookie-consent";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+    faWhatsapp,
+    faSpotify,
+    faFacebookF,
+    faInstagram,
+    faXTwitter,
+    faLinkedin,
+    faGithub,
+    faPatreon,
+    faSkype,
+    faSearchengin,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+    faRotateLeft,
+    faArrowRightLong,
+    faRightLong,
+    faPhone,
+    faEnvelope,
+    faRss,
+    faChevronLeft,
+    faChevronRight,
+    faGlobe,
+    faMobile,
+    faShoppingCart,
+    faWrench,
+    faRocket,
+    fa1,
+    fa2,
+    fa3,
+    fa4,
+    fa5,
+    faQuoteLeft,
+    faQuoteRight,
+    faCalendarDays,
+    faFeatherPointed,
+    faAnglesRight,
+    faAnglesLeft,
+    faEye,
+} from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+
+library.add(
+    faPenToSquare,
+    faRotateLeft,
+    faArrowRightLong,
+    faWhatsapp,
+    faSpotify,
+    faRightLong,
+    faPhone,
+    faEnvelope,
+    faFacebookF,
+    faInstagram,
+    faXTwitter,
+    faLinkedin,
+    faGithub,
+    faRss,
+    faPatreon,
+    faSkype,
+    faChevronLeft,
+    faChevronRight,
+    faGlobe,
+    faMobile,
+    faShoppingCart,
+    faSearchengin,
+    faWrench,
+    faRocket,
+    fa1,
+    fa2,
+    fa3,
+    fa4,
+    fa5,
+    faQuoteLeft,
+    faQuoteRight,
+    faCalendarDays,
+    faFeatherPointed,
+    faAnglesRight,
+    faAnglesLeft,
+    faEye
+);
+
 import useTranslation from "../hooks/use-translation";
 
 import DesktopMenu from "./navbar/desktopMenu";

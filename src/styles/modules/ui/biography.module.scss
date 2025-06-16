@@ -19,8 +19,10 @@
                 padding: rem-calc(36 48);
             }
 
-            a {
-                @include text-link;
+            > p {
+                a {
+                    @include text-link;
+                }
             }
 
             > div {
@@ -28,19 +30,19 @@
                 justify-content: space-between;
                 align-items: center;
 
-                i {
-                    color: $primary-color;
-                    font-size: rem-calc(32);
+                a {
+                    &:first-of-type {
+                        color: $primary-color;
+                        font-size: rem-calc(32);
 
-                    @include smooth-trans;
-
-                    &:hover {
-                        color: $link-color;
+                        &:hover {
+                            color: $link-color;
+                        }
                     }
-                }
 
-                .meerover {
-                    @include primary-button;
+                    &.meerover {
+                        @include primary-button;
+                    }
                 }
             }
 

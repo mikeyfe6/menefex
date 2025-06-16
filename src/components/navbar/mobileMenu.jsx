@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
 
@@ -107,7 +108,7 @@ const MobileMenu = ({ show }) => {
                         target="_blank"
                         className={mobileMenuStyles.whapp}
                     >
-                        <i className="fa-brands fa-whatsapp" />
+                        <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                         {t("menu.whatsapp")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </a>

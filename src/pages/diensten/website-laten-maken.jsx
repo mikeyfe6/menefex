@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
 import useSiteMetadata from "../../hooks/use-site-metadata";
@@ -40,12 +41,12 @@ const WebsitePage = () => {
 
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
-                            <i className="fa-solid fa-angles-left" />{" "}
+                            <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
                             {t("services.showAllServices")}
                         </Link>
                         <Link to="/prijzen/">
                             {t("services.goToPrices")}{" "}
-                            <i className="fa-solid fa-angles-right" />
+                            <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
                 </div>

@@ -28,7 +28,7 @@
                 width: rem-calc(225);
                 scroll-snap-align: start;
 
-                > i {
+                > svg {
                     color: $primary-color;
                     font-size: xx-large;
                     background: $secondary-color;
@@ -55,7 +55,7 @@
 
                     @include fluid-typing(17, 19);
 
-                    > i {
+                    > svg {
                         color: $snow-color;
 
                         &:first-child {

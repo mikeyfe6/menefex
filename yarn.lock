@@ -1029,20 +1029,20 @@
   resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.6.tgz#697acea6b552167a4dd43ddd4827018aa42e0364"
   integrity sha512-snXIGNiZpqjno3XYQN2lbBB+05hsQR/LSttbtIW1c0gmZ7Kh/DIo0YrxlDxCDulAMFPFM8J+4voLwvYepSj3sw==
 
-"@contentful/content-source-maps@^0.11.19", "@contentful/content-source-maps@^0.11.8":
-  version "0.11.19"
-  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.19.tgz#f18caf7c61fb220aca9cd51666d8177dacc757cd"
-  integrity sha512-hSkGrktJWqJYHnMjXSdFNNp5eaICJidAJmBHN5kaUvqa7o5femSbFRoEi3Zh+sxmDbEhv+kWOOpsz8Dz3D/NSg==
+"@contentful/content-source-maps@^0.11.20", "@contentful/content-source-maps@^0.11.8":
+  version "0.11.20"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.20.tgz#01957a2ccb3f3583c3916934012325eddb16a62d"
+  integrity sha512-q1Zp1TZcQEVvJ7qxSnkmhe7JWFXH8EBhIGvtWu8pmAkea9ET5rTM5m2/fiu3nIcKc18pX+iv+Pb1K3UgeHRl8w==
   dependencies:
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
 
 "@contentful/live-preview@^4.6.21":
-  version "4.6.21"
-  resolved "https://registry.yarnpkg.com/@contentful/live-preview/-/live-preview-4.6.21.tgz#ef5fe77754f340557f8bc2fbb71ae1b766e94545"
-  integrity sha512-OMQJZ8KezS/2JXVh/DQ3k7wTXJ6rAAT3iBPJUip9YzRB0b+vEIF9KcwrP+P87m9IBdnEPefPV/l1SQ6y86J1Lw==
+  version "4.6.22"
+  resolved "https://registry.yarnpkg.com/@contentful/live-preview/-/live-preview-4.6.22.tgz#7faf5a39597cd15a485d4a5fb99580e5435e0a92"
+  integrity sha512-ax3PU/T/cGnkf9Xg2Lm7ml3S0hk+99Ib/PnrsVLG29/ooqFr94WvQjPnJMPb/7/6g+55mBSA4DM0B1a4QbPclQ==
   dependencies:
-    "@contentful/content-source-maps" "^0.11.19"
+    "@contentful/content-source-maps" "^0.11.20"
     "@contentful/rich-text-types" "^17.0.0"
     flatted "^3.2.9"
     graphql-tag "^2.12.6"
@@ -1050,11 +1050,11 @@
     lodash.isequal "^4.5.0"
 
 "@contentful/rich-text-html-renderer@^17.0.0":
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-17.0.0.tgz#812e881ee700e1b648988fe7755e8f2e1b9ed9cc"
-  integrity sha512-mJXZALvCbc9T4vVUN288xdWraio1n4dPZEkFbRjef3yXbVZBDALL/Ld3WY3saaNmn9AR9XOhnt4sOU8UxXy1AQ==
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-17.0.1.tgz#31311203e00831ed6e99f721b678f40f8e000759"
+  integrity sha512-/IB90QKyMyJBA8UsSyngN3jbWZcVUNAXH9YwwT03ObJuFju3+l5ZQ17LridHWfX2qp9cBj1cH2WOzws7oFtEFQ==
   dependencies:
-    "@contentful/rich-text-types" "^17.0.0"
+    "@contentful/rich-text-types" "^17.0.1"
     escape-html "^1.0.3"
 
 "@contentful/rich-text-react-renderer@^15.22.11":
@@ -1069,10 +1069,10 @@
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.8.5.tgz#832c8b428612f5181908bc1033c6ef9f48f1ce83"
   integrity sha512-q18RJuJCOuYveGiCIjE5xLCQc5lZ3L2Qgxrlg/H2YEobDFqdtmklazRi1XwEWaK3tMg6yVXBzKKkQfLB4qW14A==
 
-"@contentful/rich-text-types@^17.0.0":
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.0.0.tgz#f58badfe01fa10860e065c02fd584f428a70ecc6"
-  integrity sha512-x50t6sILzFHBdFpAo0foJRnH8fHWyidheWhAv3uwt9aOnNqTh893gxyoc3Q0RVEZxXfHpTi+O9gmakHcdlRdTA==
+"@contentful/rich-text-types@^17.0.0", "@contentful/rich-text-types@^17.0.1":
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.0.1.tgz#9b5d8520decc0630756231415e6f4f2d6776b166"
+  integrity sha512-T+btHJY9mdLeZ1Sn2GcWLiG93gwBvovBxR73/tjUeIYsosBM3dkOdMRKXzBV9ghcuE1q+QP0TbyxA77hYIF9Jw==
   dependencies:
     is-plain-obj "^3.0.0"
 
@@ -1205,6 +1205,13 @@
   version "6.7.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.7.2.tgz#4ebee8098f31da5446dda81edc344025eb59b27e"
   integrity sha512-zu0evbcRTgjKfrr77/2XX+bU+kuGfjm0LbajJHVIgBWNIDzrhpRxiCPNT8DW5AdmSsq7Mcf9D1bH0aSeSUSM+Q==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.7.2"
+
+"@fortawesome/free-regular-svg-icons@^6.7.2":
+  version "6.7.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-6.7.2.tgz#f1651e55e6651a15589b0569516208f9c65f96db"
+  integrity sha512-7Z/ur0gvCMW8G93dXIQOkQqHo2M5HLhYrRVC0//fakJXxcF1VmMPsxnG6Ee8qEylA8b8Q3peQXWMNZ62lYF28g==
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.7.2"
 
@@ -4195,9 +4202,9 @@ contentful-sdk-core@^9.0.1:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
 contentful@^11.2.5:
-  version "11.7.1"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.1.tgz#f1c8b8928f1033acdc43d85a3e3d1cd01add9f82"
-  integrity sha512-wcn8ZO4njFRtjkoLSSIMvj5AwW7bKRbtMDTT1IGfCEGVSOndNgIuZU4DmSrYVcUez059pw0G/ACXFa1S3NGk7Q==
+  version "11.7.2"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.2.tgz#0120f07e2b964d19e9fd0717eabcc4eb4b0a0e02"
+  integrity sha512-M6TtN457HI1huPXyWixtiyrmN3n/wMsu1iR1ses+YG8Y6PRLwAljUTaaFq66eTCGqHQ9M047M5sdsHOWfuBFNw==
   dependencies:
     "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"

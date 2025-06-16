@@ -113,7 +113,7 @@
 
                     @include smooth-trans;
 
-                    > i {
+                    > svg {
                         font-size: rem-calc(26);
                     }
 
@@ -122,43 +122,43 @@
                         transform: scale(1.125);
                     }
 
-                    &.fb:hover i {
+                    &.fb:hover svg {
                         color: #4064ad;
                     }
 
-                    &.ig:hover i {
+                    &.ig:hover svg {
                         color: #dd2a7b;
                     }
 
-                    &.tw:hover i {
+                    &.tw:hover svg {
                         color: #55acee;
                     }
 
-                    &.li:hover i {
+                    &.li:hover svg {
                         color: #0177b5;
                     }
 
-                    &.gh:hover i {
+                    &.gh:hover svg {
                         color: #24292e;
                     }
 
-                    &.rss:hover i {
+                    &.rss:hover svg {
                         color: #fa9b3b;
                     }
 
-                    &.patr:hover i {
+                    &.patr:hover svg {
                         color: #f26451;
                     }
 
-                    &.sky:hover i {
+                    &.sky:hover svg {
                         color: #05aae8;
                     }
 
-                    &.sp:hover i {
+                    &.sp:hover svg {
                         color: #1db954;
                     }
 
-                    &.wa:hover i {
+                    &.wa:hover svg {
                         color: #1ca111;
                     }
                 }

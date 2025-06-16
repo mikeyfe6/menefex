@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { format, parseISO } from "date-fns";
 import { nl, enUS } from "date-fns/locale";
@@ -89,7 +90,12 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                                     <p>{subtitle}</p>
                                                     <small>
                                                         <span>
-                                                            <i class="fa-solid fa-calendar-days"></i>
+                                                            <FontAwesomeIcon
+                                                                icon={[
+                                                                    "fas",
+                                                                    "calendar-days",
+                                                                ]}
+                                                            />
                                                             <strong>
                                                                 <time
                                                                     dateTime={
@@ -103,7 +109,12 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                                             </strong>
                                                         </span>
                                                         <span>
-                                                            <i class="fa-solid fa-feather-pointed"></i>
+                                                            <FontAwesomeIcon
+                                                                icon={[
+                                                                    "fas",
+                                                                    "feather-pointed",
+                                                                ]}
+                                                            />
                                                             <strong>
                                                                 {author}
                                                             </strong>
@@ -125,7 +136,7 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                     </ul>
 
                     <Link to="/topics/">
-                        <i className="fa-solid fa-angles-left" />{" "}
+                        <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
                         {t("topics.allTopics")}
                     </Link>
                 </div>

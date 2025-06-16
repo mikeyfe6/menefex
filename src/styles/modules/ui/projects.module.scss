@@ -137,17 +137,8 @@
 
                         @include smooth-trans;
 
-                        > i {
-                            color: $primary-color;
-                            font-size: rem-calc(18);
-                        }
-
                         &:hover {
                             background: $lightgrey-color;
-
-                            > i {
-                                color: $link-color;
-                            }
                         }
                     }
                 }

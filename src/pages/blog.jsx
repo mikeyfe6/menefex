@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../hooks/use-translation";
 import useSiteMetadata from "../hooks/use-site-metadata";
@@ -101,13 +102,23 @@ const BlogPage = () => {
                                             <p>{edge.node.subtitle}</p>
                                             <small>
                                                 <span>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <FontAwesomeIcon
+                                                        icon={[
+                                                            "fas",
+                                                            "calendar-days",
+                                                        ]}
+                                                    />
                                                     <strong>
                                                         {edge.node.createdAt}
                                                     </strong>{" "}
                                                 </span>
                                                 <span>
-                                                    <i class="fa-solid fa-feather-pointed"></i>
+                                                    <FontAwesomeIcon
+                                                        icon={[
+                                                            "fas",
+                                                            "feather-pointed",
+                                                        ]}
+                                                    />
                                                     <strong>
                                                         {edge.node.author}
                                                     </strong>
@@ -129,7 +140,7 @@ const BlogPage = () => {
 
                     <Link to="/topics/">
                         &apos;Topics&apos;{" "}
-                        <i className="fa-solid fa-angles-right" />
+                        <FontAwesomeIcon icon={["fas", "angles-right"]} />
                     </Link>
                 </div>
             </section>

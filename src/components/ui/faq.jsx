@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
 
@@ -91,7 +92,10 @@ const Faq = () => {
                                         openIndex === idx ? faqStyles.open : ""
                                     }`}
                                 >
-                                    <i className="fa-solid fa-right-long fa-lg"></i>
+                                    <FontAwesomeIcon
+                                        icon={["fas", "right-long"]}
+                                        size="lg"
+                                    />
                                     <p>
                                         {item.answer}{" "}
                                         {item.link && (

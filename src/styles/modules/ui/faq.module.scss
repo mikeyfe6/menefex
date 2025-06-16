@@ -68,11 +68,15 @@
                         transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                             opacity 0.4s;
                         display: flex;
-                        align-items: baseline;
                         gap: rem-calc(12);
 
-                        > i {
+                        > svg {
                             color: $secondary-color;
+                            padding-top: rem-calc(2);
+
+                            @include mobile {
+                                padding-top: rem-calc(3);
+                            }
                         }
 
                         > p {
