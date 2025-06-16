@@ -57,11 +57,11 @@
 
             @include smooth-trans;
 
-            i {
+            > svg {
                 font-size: rem-calc(18);
             }
 
-            span {
+            > span {
                 @include fluid-typing(16, 18);
             }
         }

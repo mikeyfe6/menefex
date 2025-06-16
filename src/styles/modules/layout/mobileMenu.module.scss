@@ -63,7 +63,7 @@
                 &.whapp {
                     @extend %as-h6;
 
-                    > i {
+                    > svg {
                         margin-right: 0.5em;
                         font-size: rem-calc(20);
                         color: $whapp-color;

@@ -408,10 +408,6 @@
                 margin-left: auto;
 
                 @include primary-button;
-
-                > i {
-                    margin-right: rem-calc(8);
-                }
             }
         }
 
