@@ -65,10 +65,10 @@
                     gap: rem-calc(12);
                     flex: 1;
 
-                    > h5 {
+                    > h4 {
                         color: $lightgrey-color;
 
-                        @include fluid-typing(22, 24);
+                        @extend %as-h5;
                     }
 
                     a {

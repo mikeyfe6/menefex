@@ -53,7 +53,7 @@ const Footer = () => {
                 <div className={footerStyles.footerContainer}>
                     <div className={footerStyles.footerInfo}>
                         <div className={footerStyles.personal}>
-                            <h5>connect with us</h5>
+                            <h4>connect with us</h4>
 
                             <div>
                                 <a
@@ -75,7 +75,7 @@ const Footer = () => {
                         </div>
 
                         <div className={footerStyles.media}>
-                            <h5>follow us on</h5>
+                            <h4>follow us on</h4>
 
                             <ul>
                                 <li className={footerStyles.fb}>
@@ -127,7 +127,7 @@ const Footer = () => {
                         </div>
 
                         <div className={footerStyles.address}>
-                            <h5>straight from</h5>
+                            <h4>straight from</h4>
                             <p>
                                 <span className={footerStyles.amsterdam}>
                                     x x x

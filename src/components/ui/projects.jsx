@@ -302,13 +302,13 @@ const Projects = () => {
                             })}
                         </Swiper>
                         <div className={projectsStyles.projectsNavigation}>
-                            <button ref={prevRef}>
+                            <button ref={prevRef} aria-label="Vorige project">
                                 <FontAwesomeIcon
                                     icon={["fas", "chevron-left"]}
                                 />
                             </button>
                             <div ref={paginationRef}></div>
-                            <button ref={nextRef}>
+                            <button ref={nextRef} aria-label="Volgende project">
                                 <FontAwesomeIcon
                                     icon={["fas", "chevron-right"]}
                                 />

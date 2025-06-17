@@ -45,6 +45,8 @@ const Hero = () => {
                         <StaticImage
                             src="../../images/ghibli-mf.png"
                             alt="Edutain U Productions"
+                            width={360}
+                            height={540}
                         />
                     </div>
                 </div>
@@ -54,6 +56,7 @@ const Hero = () => {
                         href="#cta"
                         className={heroStyles.heroScroll}
                         type="button"
+                        aria-label="Naar de CTA sectie"
                     />
 
                     <div className={heroStyles.heroButtons} id="cta">

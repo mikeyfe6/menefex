@@ -35,7 +35,12 @@ const DesktopMenu = ({ drawerClickHandler }) => {
         <div className={desktopMenuStyles.desktopMenu}>
             <nav>
                 <Link to="/" className={desktopMenuStyles.logo}>
-                    <img src={logo} alt="Menefex Logo" width={225} />
+                    <img
+                        src={logo}
+                        alt="Menefex Logo"
+                        width={225}
+                        height={56}
+                    />
                 </Link>
 
                 <ul>
@@ -119,6 +124,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                             rel="noopener noreferrer"
                             target="_blank"
                             className={desktopMenuStyles.whapp}
+                            aria-label="Stuur een WhatsApp bericht"
                         >
                             <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                         </a>
