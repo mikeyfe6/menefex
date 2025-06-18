@@ -63,7 +63,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            scroll-margin-top: rem-calc(150);
+            scroll-margin-top: rem-calc(175);
             margin-top: rem-calc(32);
 
             @include box-padding("spaced");
@@ -221,10 +221,12 @@
                 @include fluid-typing(17, 17);
             }
 
-            &:hover {
-                border-color: $link-color;
-                background: $primary-color;
-                color: $white-color;
+            &:not(.is-active) {
+                &:hover {
+                    border-color: $link-color;
+                    background: $primary-color;
+                    color: $white-color;
+                }
             }
         }
     }
