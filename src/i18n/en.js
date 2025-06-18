@@ -42,7 +42,7 @@ export default {
         subtitle:
             "At Menefex, we offer a complete package of digital services to strengthen your online presence. Whether you're looking for a custom-built website, a powerful web application, a high-converting webshop, better visibility on Google, technical support, or performance optimization — we make sure your digital platform works, performs, and grows.",
         intro: "Here you will find an overview of the different services we offer. These services are designed to help businesses with their online presence and efficiency.",
-        showAllServices: "Show all services",
+        allServices: "Show all services",
         goToPrices: "Go to prices",
         websites: {
             name: "Websites",
@@ -206,7 +206,7 @@ export default {
         dsmelodies: "Steelpan player Derek Simpey from Amsterdam",
         knacdig:
             "Knowledge Network Afro Caribbean Diaspora Community Foundation from The Hague",
-        keeptreal: "Regalness.nl Foundation from Amsterdam",
+        keeptreal: "Keep It Real Foundation from Amsterdam",
         priozorg: "Aid organization Prio Zorg from Amsterdam",
         edutainuproductions: "Edutain U Productions from Amsterdam",
     },

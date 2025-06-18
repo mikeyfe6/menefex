@@ -42,7 +42,7 @@ const WebappPage = () => {
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                            {t("services.showAllServices")}
+                            {t("services.allServices")}
                         </Link>
                         <Link to="/prijzen/">
                             {t("services.goToPrices")}{" "}

@@ -42,7 +42,7 @@ export default {
         subtitle:
             "Bij Menefex bieden we een compleet pakket aan digitale diensten om jouw online aanwezigheid te versterken. Of je nu op zoek bent naar een op maat gemaakte website, krachtige webapplicatie, converterende webshop, betere vindbaarheid in Google, technische ondersteuning of performance-optimalisatie — wij zorgen dat jouw digitale platform werkt, scoort én groeit.",
         intro: "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
-        showAllServices: "Bekijk alle diensten",
+        allServices: "Alle diensten",
         goToPrices: "Ga naar prijzen",
         websites: {
             // component
@@ -211,7 +211,7 @@ export default {
         dsmelodies: "Steelpannist Derek Simpey uit Amsterdam",
         knacdig:
             "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
-        keeptreal: "Stichting Regalness.nl uit Amsterdam",
+        keeptreal: "Stichting Keep It Real uit Amsterdam",
         priozorg: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
         edutainuproductions: "Edutain U Productions uit Amsterdam",
     },
