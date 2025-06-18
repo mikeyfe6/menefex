@@ -17,7 +17,6 @@ import SmartForm from "../components/forms/smartForm";
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
 // TODO: klaar voor TS'en..
-// TODO: FAQ schema maken
 
 const IndexPage = () => {
     return (

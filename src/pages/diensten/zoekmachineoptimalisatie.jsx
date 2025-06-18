@@ -12,7 +12,6 @@ import SEO from "../../components/seo";
 import * as servicesStyles from "../../styles/modules/pages/services.module.scss";
 
 // TODO: klaar voor TS'en..
-// TODO: 'zoekmachineoptimalisatie' is vast aan elkaar..
 
 const SeoPage = () => {
     const { t, isHydrated } = useTranslation();
@@ -32,13 +31,6 @@ const SeoPage = () => {
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: t("services.seo.content"),
-                        }}
-                        className={servicesStyles.servicesContent}
-                    />
-
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
@@ -80,20 +72,20 @@ export const Head = () => {
             {
                 "@type": "ListItem",
                 position: 3,
-                name: "Zoekmachine Optimalisatie (SEO)",
-                item: siteUrl + "/diensten/zoekmachine-optimalisatie/",
+                name: "Zoekmachineoptimalisatie (SEO)",
+                item: siteUrl + "/diensten/zoekmachineoptimalisatie/",
             },
         ],
     };
 
     return (
         <SEO
-            title="Zoekmachine Optimalisatie (SEO)"
+            title="Zoekmachineoptimalisatie (SEO)"
             description="Verbeter de vindbaarheid van je website in zoekmachines met gerichte
         SEO-strategieën. Wij optimaliseren je website om hogere posities te
         behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt."
             keywords=""
-            pathname="/diensten/zoekmachine-optimalisatie/"
+            pathname="/diensten/zoekmachineoptimalisatie/"
             schemaMarkup={breadcrumbSchema}
         />
     );

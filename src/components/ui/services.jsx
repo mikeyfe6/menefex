@@ -56,7 +56,7 @@ const Services = () => {
             },
             excerpt: t("services.seo.excerpt"),
             focus: t("services.seo.focus", { returnObjects: true }),
-            url: "/diensten/zoekmachine-optimalisatie/",
+            url: "/diensten/zoekmachineoptimalisatie/",
             cta: t("services.seo.cta"),
         },
         maintenance: {

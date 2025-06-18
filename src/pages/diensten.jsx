@@ -82,7 +82,7 @@ const ServicesPage = () => {
                         <hr />
                         <p>{t("services.seo.snippet")}</p>
                         <Link
-                            to="/diensten/zoekmachine-optimalisatie/"
+                            to="/diensten/zoekmachineoptimalisatie/"
                             name="service"
                         >
                             {t("services.seo.cta")}

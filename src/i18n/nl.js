@@ -115,9 +115,9 @@ export default {
         },
         seo: {
             // component
-            name: "Zoekmachine Optimalisatie",
+            name: "Zoekmachineoptimalisatie",
             excerpt:
-                "Met zoekmachine optimalisatie zorgen wij ervoor dat uw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt uw bedrijf sneller gevonden door potentiële klanten.",
+                "Met zoekmachineoptimalisatie zorgen wij ervoor dat uw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt uw bedrijf sneller gevonden door potentiële klanten.",
             focus: [
                 "Verbeterde vindbaarheid in populaire zoekmachines",
                 "Aanzienlijk meer directe en indirecte webbezoekers",
@@ -126,12 +126,12 @@ export default {
             cta: "Meer over onze SEO diensten",
 
             // overview
-            caption: `Zoekmachine Optimalisatie <small>(SEO)</small>`,
+            caption: `Zoekmachineoptimalisatie <small>(SEO)</small>`,
             snippet:
                 "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.",
 
             // detail
-            title: "Zoekmachine Optimalisatie (SEO)",
+            title: "Zoekmachineoptimalisatie (SEO)",
             intro: "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.",
             // content: "",
         },
@@ -471,7 +471,7 @@ export default {
             website: "Website laten maken",
             webapp: "Webapplicatie laten maken",
             webshop: "Webshop laten maken",
-            seo: "Zoekmachine optimalisatie (SEO)",
+            seo: "Zoekmachineoptimalisatie (SEO)",
             other: "Andere diensten",
         },
         placeholder: {
