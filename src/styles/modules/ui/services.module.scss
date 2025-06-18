@@ -73,29 +73,32 @@
                 margin-top: unset;
             }
 
-            > svg {
+            > div {
                 position: absolute;
-                padding: rem-calc(18);
                 top: rem-calc(-40);
                 right: rem-calc(10);
-                width: rem-calc(36);
-                height: rem-calc(36);
+                width: rem-calc(67.5);
+                height: rem-calc(67.5);
                 background: $secondary-color;
                 border-radius: 50%;
-
-                @include fluid-typing(36, 48);
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 @include phablet {
-                    padding: rem-calc(24);
-                    width: rem-calc(37.5);
-                    height: rem-calc(37.5);
+                    width: rem-calc(87.5);
+                    height: rem-calc(87.5);
                 }
 
                 @include desktop {
                     top: rem-calc(-45);
                     right: rem-calc(-45);
-                    width: rem-calc(50);
-                    height: rem-calc(50);
+                    width: rem-calc(100);
+                    height: rem-calc(100);
+                }
+
+                > svg {
+                    @include fluid-typing(36, 48);
                 }
             }
 
@@ -194,14 +197,20 @@
                 background-color: $lightgrey-color;
             }
 
-            > svg {
-                padding: rem-calc(12);
+            > div {
                 color: $secondary-color;
                 outline: 2px solid $white-color;
                 border-radius: 50%;
-                width: rem-calc(22);
-                height: rem-calc(22);
+                width: rem-calc(45);
+                height: rem-calc(45);
                 background: $primary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    font-size: rem-calc(24);
+                }
             }
 
             > span {

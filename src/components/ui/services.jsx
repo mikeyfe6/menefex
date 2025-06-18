@@ -103,12 +103,14 @@ const Services = () => {
         <section className={servicesStyles.service} id="services">
             <div className={servicesStyles.serviceContainer}>
                 <div className={servicesStyles.serviceOverlay} ref={overlayRef}>
-                    <FontAwesomeIcon
-                        icon={[
-                            services[selected].icon.prefix,
-                            services[selected].icon.name,
-                        ]}
-                    />
+                    <div>
+                        <FontAwesomeIcon
+                            icon={[
+                                services[selected].icon.prefix,
+                                services[selected].icon.name,
+                            ]}
+                        />
+                    </div>
                     <h4>{services[selected].name}</h4>
                     <p>{services[selected].excerpt}</p>
                     <span>Focus:</span>
@@ -136,12 +138,14 @@ const Services = () => {
                         ].join(" ")}
                         onClick={() => handleSelect(key)}
                     >
-                        <FontAwesomeIcon
-                            icon={[
-                                services[key].icon.prefix,
-                                services[key].icon.name,
-                            ]}
-                        />
+                        <div>
+                            <FontAwesomeIcon
+                                icon={[
+                                    services[key].icon.prefix,
+                                    services[key].icon.name,
+                                ]}
+                            />
+                        </div>
                         <span>{services[key].name}</span>
                     </button>
                 ))}
