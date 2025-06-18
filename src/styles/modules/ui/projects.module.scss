@@ -28,7 +28,7 @@
                 flex: 1 1 32.5%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 min-height: rem-calc(400);
                 height: fit-content;
                 border-left: 5px solid $smoke-color;

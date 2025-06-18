@@ -63,14 +63,27 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            scroll-margin-top: rem-calc(175);
+            scroll-margin-top: rem-calc(130);
             margin-top: rem-calc(32);
 
             @include box-padding("spaced");
 
+            @include mobile {
+                scroll-margin-top: rem-calc(140);
+            }
+
             @include phablet {
+                scroll-margin-top: rem-calc(155);
                 min-height: rem-calc(700);
                 margin-top: unset;
+            }
+
+            @include laptop {
+                scroll-margin-top: rem-calc(165);
+            }
+
+            @include desktop {
+                scroll-margin-top: rem-calc(175);
             }
 
             > div {
