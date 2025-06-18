@@ -113,19 +113,19 @@ module.exports = {
             resolve: "gatsby-plugin-feed",
             options: {
                 query: `
-          {
-            site {
-              siteMetadata {
-                title
-                author
-                description
-                bizEmail
-                authorEmail
-                siteUrl
-              }
-            }
-          }
-        `,
+                {
+                    site {
+                    siteMetadata {
+                        title
+                        author
+                        description
+                        bizEmail
+                        authorEmail
+                        siteUrl
+                    }
+                    }
+                }
+                `,
                 setup: ({ query: { site } }, options) => ({
                     ...options,
                     title: "Menefex WMB: RSS Feeds",
@@ -220,41 +220,41 @@ module.exports = {
                                 };
                             }),
                         query: `
-              {
-                allContentfulBlogPost(sort: {createdAt: DESC}) {
-                  edges {
-                    node {
-                      contentful_id
-                      title
-                      subtitle
-                      slug
-                      createdAt
-                      body {
-                        rssHtml
-                        references {
-                          ... on ContentfulAsset {
-                            contentful_id
-                            __typename
-                          }
-                          ... on ContentfulBlogPost {
-                            contentful_id
-                            __typename
-                          }
+                        {
+                            allContentfulBlogPost(sort: {createdAt: DESC} filter: { node_locale: { eq: "nl" } }) {
+                            edges {
+                                node {
+                                contentful_id
+                                title
+                                subtitle
+                                slug
+                                createdAt
+                                body {
+                                    rssHtml
+                                    references {
+                                    ... on ContentfulAsset {
+                                        contentful_id
+                                        __typename
+                                    }
+                                    ... on ContentfulBlogPost {
+                                        contentful_id
+                                        __typename
+                                    }
+                                    }
+                                }
+                                image {
+                                    file {
+                                    url
+                                    }
+                                }
+                                topics {
+                                    name
+                                }
+                                }
+                            }
+                            }
                         }
-                      }
-                      image {
-                        file {
-                          url
-                        }
-                      }
-                      topics {
-                        name
-                      }
-                    }
-                  }
-                }
-              }
-            `,
+                        `,
                         output: "/rss.xml",
                         title: "Menefex WMB: RSS Feeds",
                         link: "https://feeds.feedburner.com/MenefexWMB",
@@ -277,34 +277,34 @@ module.exports = {
             options: {
                 excludes: ["/success/"],
                 query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-    
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-    
-            allContentfulBlogPost {
-              nodes {
-                slug
-                updatedAt
-              }
-            }
-    
-            allContentfulTopic {
-              nodes {
-                slug
-                updatedAt
-              }
-            }
-          }
-        `,
+                {
+                    site {
+                    siteMetadata {
+                        siteUrl
+                    }
+                    }
+            
+                    allSitePage {
+                    nodes {
+                        path
+                    }
+                    }
+            
+                    allContentfulBlogPost {
+                    nodes {
+                        slug
+                        updatedAt
+                    }
+                    }
+            
+                    allContentfulTopic {
+                    nodes {
+                        slug
+                        updatedAt
+                    }
+                    }
+                }
+                `,
                 resolveSiteUrl: () => superSiteUrl,
                 resolvePages: async ({
                     allSitePage,

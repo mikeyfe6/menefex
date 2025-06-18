@@ -7,6 +7,21 @@ const { BLOCKS, INLINES } = require("@contentful/rich-text-types");
 
 const fetchLastCommitDate = require("./src/utils/fetchLastCommitDate");
 
+const menefexImages = {
+    "7mV6EvJJrv9UThjCKcOuou": {
+        url: "//images.ctfassets.net/nn38kx5zm1zj/7mV6EvJJrv9UThjCKcOuou/c0b7c7088bcb4a2a0b47eff242d6c9f0/calltoactionmnfx.jpeg",
+        alt: "Call to action",
+    },
+    "2iIqFM7QetWndzLPyglJlu": {
+        url: "//images.ctfassets.net/nn38kx5zm1zj/2iIqFM7QetWndzLPyglJlu/ba6d761b45ea9cadb0408f686cb0c5f4/seomnfx.jpeg",
+        alt: "SEO Beschrijving",
+    },
+    "7AnjWCrI6e85kwDRPEIi8l": {
+        url: "//images.ctfassets.net/nn38kx5zm1zj/7AnjWCrI6e85kwDRPEIi8l/93811f33d083916a530e892e81574e66/Digital_Transformation.jpg",
+        alt: "SEO The Road 2 Digital Success",
+    },
+};
+
 exports.createResolvers = ({ createResolvers }) => {
     createResolvers({
         ContentfulBlogPostBody: {
@@ -18,38 +33,17 @@ exports.createResolvers = ({ createResolvers }) => {
                         preserveWhitespace: false,
                         renderNode: {
                             [BLOCKS.EMBEDDED_ASSET]: (node) => {
-                                const entryId = node.data.target.sys.id;
-
-                                const menefexImages = [
-                                    {
-                                        id: "7mV6EvJJrv9UThjCKcOuou",
-                                        url: "//images.ctfassets.net/nn38kx5zm1zj/2iIqFM7QetWndzLPyglJlu/ba6d761b45ea9cadb0408f686cb0c5f4/seomnfx.jpeg",
-                                        alt: "Call to action",
-                                    },
-                                    {
-                                        id: "2iIqFM7QetWndzLPyglJlu",
-                                        url: "//images.ctfassets.net/nn38kx5zm1zj/2iIqFM7QetWndzLPyglJlu/ba6d761b45ea9cadb0408f686cb0c5f4/seomnfx.jpeg",
-                                        alt: "SEO Beschrijving",
-                                    },
-                                    {
-                                        id: "7AnjWCrI6e85kwDRPEIi8l",
-                                        url: "//images.ctfassets.net/nn38kx5zm1zj/7AnjWCrI6e85kwDRPEIi8l/93811f33d083916a530e892e81574e66/Digital_Transformation.jpg",
-                                        alt: "SEO The Road 2 Digital Success",
-                                    },
-                                ];
-
-                                const matchedAsset = menefexImages.find(
-                                    (asset) => asset.id === entryId
+                                console.log(
+                                    "Processing embedded asset node:",
+                                    node
                                 );
-
-                                if (matchedAsset) {
-                                    const url = matchedAsset.url;
-                                    const alt = matchedAsset.alt;
-
-                                    return `<img src="https:${url}" alt="${alt}" style="height: 100%; width: 100%;">`;
-                                } else {
-                                    return "";
+                                const entryId = node.data.target.sys.id;
+                                const asset = menefexImages?.[entryId];
+                                if (asset) {
+                                    return `<img src="https:${asset.url}" alt="${asset.alt}" style="height: 100%; width: 100%;">`;
                                 }
+
+                                return "";
                             },
                             [INLINES.ENTRY_HYPERLINK]: (node) => {
                                 const entryId = node.data.target.sys.id;
@@ -207,8 +201,6 @@ exports.onPostBuild = async () => {
     await captureScreenshot("https://dsmelodies.com", "dsmelodies", 0);
     await captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000);
 };
-
-exports.onPreBootstrap = exports.onPostBuild;
 
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
