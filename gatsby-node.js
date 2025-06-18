@@ -33,10 +33,10 @@ exports.createResolvers = ({ createResolvers }) => {
                         preserveWhitespace: false,
                         renderNode: {
                             [BLOCKS.EMBEDDED_ASSET]: (node) => {
-                                console.log(
-                                    "Processing embedded asset node:",
-                                    node
-                                );
+                                // console.log(
+                                //     "Processing embedded asset node:",
+                                //     node
+                                // );
                                 const entryId = node.data.target.sys.id;
                                 const asset = menefexImages?.[entryId];
                                 if (asset) {
