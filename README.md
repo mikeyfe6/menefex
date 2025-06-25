@@ -35,7 +35,7 @@ Die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van website
 
 ## Licence ✒️
 
-GNU AGPLv3, all rights reserved, Menefex WMB 2019 - 2024 ©
+GNU AGPLv3, all rights reserved, Menefex WMB 2019 - 2025 ©
 
 <br>
 
