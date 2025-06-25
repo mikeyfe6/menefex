@@ -51,9 +51,10 @@
                 display: flex;
                 justify-content: space-around;
                 flex-direction: column;
-                gap: rem-calc(48);
+                gap: rem-calc(36);
 
                 @include laptop {
+                    gap: rem-calc(48);
                     flex-direction: row;
                 }
 

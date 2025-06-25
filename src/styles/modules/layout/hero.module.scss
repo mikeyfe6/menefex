@@ -17,6 +17,7 @@
             justify-content: center;
             flex-direction: column;
             gap: rem-calc(50);
+            width: 100%;
 
             @include phablet {
                 flex-direction: row;
@@ -122,9 +123,12 @@
                     border-radius: 10px;
                     width: fit-content;
                     text-align: center;
-                    white-space: nowrap;
 
                     @include fluid-typing(20, 32);
+
+                    @include mini {
+                        white-space: nowrap;
+                    }
 
                     @include compact {
                         padding: rem-calc(0 24);
@@ -202,7 +206,11 @@
             #{$hero}-buttons {
                 display: flex;
                 align-items: center;
-                gap: rem-calc(16);
+                gap: rem-calc(8);
+
+                @include mini {
+                    gap: rem-calc(16);
+                }
 
                 > a {
                     font-weight: 600;

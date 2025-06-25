@@ -174,7 +174,6 @@
     min-height: rem-calc(44);
     padding: rem-calc(12 16);
     border: 3px solid $lightgrey-color;
-    white-space: nowrap;
     font-weight: 600;
     letter-spacing: $high-spacing;
     gap: rem-calc(8);
@@ -209,15 +208,19 @@
     width: 100%;
     min-height: rem-calc(44);
     border-radius: $low-radius;
-    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: rem-calc(8);
     font-weight: 500;
+    text-align: center;
 
     @include smooth-trans;
     @extend %as-small;
+
+    @include mini {
+        white-space: nowrap;
+    }
 
     &:not([href]) {
         pointer-events: none;
@@ -228,9 +231,7 @@
 @mixin dark-button {
     background: $primary-color;
     color: $smoke-color;
-    text-align: center;
     outline: 2px solid $grey-color;
-    white-space: nowrap;
 
     @include secondary-button;
 
@@ -244,9 +245,7 @@
 @mixin light-button {
     background: $snow-color;
     color: $primary-color;
-    text-align: center;
     outline: 2px solid $snow-color;
-    white-space: nowrap;
 
     @include secondary-button;
 
@@ -265,10 +264,13 @@
     font-weight: 500;
     background: $white-color;
     width: fit-content;
-    white-space: nowrap;
 
     @include smooth-trans;
     @extend %as-tiny;
+
+    @include mini {
+        white-space: nowrap;
+    }
 
     &:hover {
         background: $smoke-color;

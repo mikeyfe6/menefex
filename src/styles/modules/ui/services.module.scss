@@ -204,7 +204,10 @@
             gap: rem-calc(16);
             letter-spacing: $medium-spacing;
             padding: rem-calc(20 24);
-            min-width: max-content;
+
+            @include mini {
+                min-width: max-content;
+            }
 
             &.is-active {
                 background-color: $lightgrey-color;
@@ -220,6 +223,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                aspect-ratio: 1 / 1;
 
                 svg {
                     font-size: rem-calc(24);
@@ -229,9 +233,9 @@
             > span {
                 display: block;
                 font-weight: 600;
-                white-space: nowrap;
+                word-break: break-all;
 
-                @include fluid-typing(17, 17);
+                @include fluid-typing(16, 17);
             }
 
             &:not(.is-active) {
