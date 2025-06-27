@@ -212,6 +212,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             allContentfulBlogPost {
                 edges {
                     node {
+                        __typename
                         title
                         contentful_id
                         subtitle
@@ -259,6 +260,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                             }
                         }
                         topics {
+                            __typename
                             id
                             name
                             slug
@@ -352,6 +354,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     topics: nlContent ? nlContent.topics : [],
                     keywords: nlContent ? nlContent.keywords : [],
                     subtitle: nlContent ? nlContent.subtitle : "",
+                    typename: nlContent ? nlContent.__typename : "",
                 },
                 enContent: {
                     contentful_id: enContent ? enContent.contentful_id : "",
@@ -366,6 +369,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     topics: enContent ? enContent.topics : [],
                     keywords: enContent ? enContent.keywords : [],
                     subtitle: enContent ? enContent.subtitle : "",
+                    typename: enContent ? enContent.__typename : "",
                 },
             },
         });
@@ -410,6 +414,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                         : "",
                     slug: nlContent ? nlContent.slug : "",
                     title: nlContent ? nlContent.title : "",
+                    typename: nlContent ? nlContent.__typename : "",
                 },
                 enContent: {
                     topicPosts: enContent ? enContent.blog_post : [],
@@ -420,6 +425,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                         : "",
                     slug: enContent ? enContent.slug : "",
                     title: enContent ? enContent.title : "",
+                    typename: enContent ? enContent.__typename : "",
                 },
             },
         });
