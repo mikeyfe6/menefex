@@ -49,7 +49,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     useEffect(() => {
         async function fetchEntry() {
             const entryId = currentContent.contentful_id;
-            const locale = currentContent.node_locale || "nl";
+            const locale = currentLanguage || "nl";
             const url = `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/entries/${entryId}?locale=${locale}`;
             const res = await axios.get(url, {
                 headers: { Authorization: `Bearer ${PREVIEW_TOKEN}` },
