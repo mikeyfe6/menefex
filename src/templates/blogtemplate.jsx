@@ -32,8 +32,8 @@ import * as postStyle from "../styles/modules/templates/blog.module.scss";
 
 // TODO: klaar voor TS'en..
 
-const SPACE_ID = process.env.GATSBY_CONTENTFUL_SPACE_ID;
-const PREVIEW_TOKEN = process.env.GATSBY_CONTENTFUL_PREVIEW_API_KEY;
+const SPACE_ID = process.env.GATSBY_CONTENTFUL_PREVIEW_SPACE_ID;
+const PREVIEW_TOKEN = process.env.GATSBY_CONTENTFUL_PREVIEW_TOKEN;
 
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
