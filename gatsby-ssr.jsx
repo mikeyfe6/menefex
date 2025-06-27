@@ -1,6 +1,8 @@
-import React from "react";
+import * as React from "react";
 
-import RootElement from "./src/context/root-element";
+import { wrapRoot } from "./src/lib/wrapRoot";
+
+export const wrapRootElement = wrapRoot;
 
 const HtmlAttributes = {
     lang: "nl",
@@ -17,10 +19,6 @@ const HeadComponents = [
     <script key="mnfxDefer" defer={false} />,
 ];
 
-const BodyAttributes = {
-    // 'data-theme': 'dark',
-};
-
 export const onRenderBody = ({
     setHeadComponents,
     setHtmlAttributes,
@@ -28,7 +26,7 @@ export const onRenderBody = ({
 }) => {
     setHtmlAttributes(HtmlAttributes);
     setHeadComponents(HeadComponents);
-    setBodyAttributes(BodyAttributes);
+    setBodyAttributes({});
 };
 
 export const onPreRenderHTML = ({
@@ -37,8 +35,4 @@ export const onPreRenderHTML = ({
 }) => {
     const headComponents = getHeadComponents();
     replaceHeadComponents(headComponents);
-};
-
-export const wrapRootElement = ({ element }) => {
-    return <RootElement>{element}</RootElement>;
 };

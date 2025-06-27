@@ -1,16 +1,6 @@
-import React from "react";
-
-import { ContentfulLivePreviewProvider } from "@contentful/live-preview/react";
-
-import RootElement from "./src/context/root-element";
+export { wrapRoot as wrapRootElement } from "./src/lib/wrapRoot";
 
 import "./src/styles/resets.scss";
-
-export const wrapRootElement = ({ element }) => (
-    <ContentfulLivePreviewProvider locale="nl">
-        <RootElement>{element}</RootElement>
-    </ContentfulLivePreviewProvider>
-);
 
 export const onServiceWorkerUpdateReady = () => {
     window.location.reload();
