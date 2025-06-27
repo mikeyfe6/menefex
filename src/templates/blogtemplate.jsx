@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useContentfulInspectorMode } from "@contentful/live-preview/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Disqus } from "gatsby-plugin-disqus";
@@ -30,9 +31,10 @@ import * as postStyle from "../styles/modules/templates/blog.module.scss";
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
     const { siteUrl } = useSiteMetadata();
+    const inspectorProps = useContentfulInspectorMode();
 
     const currentLanguage = i18n.language;
-    const content = currentLanguage === "nl" ? nlContent : enContent;
+    const currentContent = currentLanguage === "nl" ? nlContent : enContent;
 
     const locale = currentLanguage === "nl" ? nl : enUS;
 
@@ -134,11 +136,11 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         },
     };
 
-    const postTopic = content.topics;
+    const postTopic = currentContent.topics;
     const relatedPostsSet = new Set();
     const relatedPosts = [];
 
-    const currentPostSlug = content.slug;
+    const currentPostSlug = currentContent.slug;
 
     postTopic.forEach((topic) => {
         topic.blog_post.forEach((post) => {
@@ -169,7 +171,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         }
     }, []);
 
-    const image = getImage(content.image.gatsbyImageData);
+    const image = getImage(currentContent.image.gatsbyImageData);
 
     if (!isHydrated) return null;
 
@@ -179,7 +181,14 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                 <div className={postStyle.postHeader}>
                     <img src={mini} alt="Menefex Icon" width={75} height={75} />
 
-                    <h1>{content.title}</h1>
+                    <h1
+                        {...inspectorProps({
+                            entryId: currentContent.contentful_id,
+                            fieldId: "title",
+                        })}
+                    >
+                        {currentContent.title}
+                    </h1>
                 </div>
 
                 <hr />
@@ -189,13 +198,13 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                         <div className={postStyle.postImage}>
                             <GatsbyImage
                                 image={image}
-                                alt={content.image.title}
+                                alt={currentContent.image.title}
                             />
                         </div>
 
-                        <h2>{content.subtitle}</h2>
+                        <h2>{currentContent.subtitle}</h2>
                         <div className={postStyle.postContent}>
-                            {renderRichText(content.body, options)}
+                            {renderRichText(currentContent.body, options)}
                         </div>
 
                         <div className={postStyle.postRss}>
@@ -235,10 +244,10 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                         <div>
                             <Disqus
                                 config={{
-                                    url: `https://menefex.nl/blog/${content.slug}/`,
-                                    identifier: content.contentful_id,
+                                    url: `https://menefex.nl/blog/${currentContent.slug}/`,
+                                    identifier: currentContent.contentful_id,
                                     language: currentLanguage,
-                                    title: content.title,
+                                    title: currentContent.title,
                                 }}
                             />
                         </div>
@@ -246,8 +255,8 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                     <aside>
                         <div className={postStyle.postDate}>
                             <span>{t("blog.postedOn")}</span>{" "}
-                            <time dateTime={content.publishedPost}>
-                                {formatDate(content.publishedPost)}
+                            <time dateTime={currentContent.publishedPost}>
+                                {formatDate(currentContent.publishedPost)}
                             </time>
                         </div>
                         <div className={postStyle.postSidebar}>
@@ -260,13 +269,13 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    {content.author}
+                                    {currentContent.author}
                                 </a>
                                 <span>
                                     <u>{t("blog.lastUpdated")}</u>
                                 </span>
-                                <time dateTime={content.updatedPost}>
-                                    {formatDate(content.updatedPost)}
+                                <time dateTime={currentContent.updatedPost}>
+                                    {formatDate(currentContent.updatedPost)}
                                 </time>
                             </div>
 
