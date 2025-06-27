@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
+import axios from "axios";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
@@ -31,6 +32,9 @@ import * as postStyle from "../styles/modules/templates/blog.module.scss";
 
 // TODO: klaar voor TS'en..
 
+const SPACE_ID = process.env.GATSBY_CONTENTFUL_SPACE_ID;
+const PREVIEW_TOKEN = process.env.GATSBY_CONTENTFUL_PREVIEW_API_KEY;
+
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
     const { siteUrl } = useSiteMetadata();
@@ -38,9 +42,30 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     const currentLanguage = i18n.language;
     const currentContent = currentLanguage === "nl" ? nlContent : enContent;
 
-    const liveContent = useContentfulLiveUpdates(currentContent);
+    // --- NEW: State for live preview entry ---
+    const [liveEntry, setLiveEntry] = useState(null);
+
+    // --- Fetch from Contentful Preview API on client ---
+    useEffect(() => {
+        async function fetchEntry() {
+            const entryId = currentContent.contentful_id;
+            const locale = currentContent.node_locale || "nl";
+            const url = `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/entries/${entryId}?locale=${locale}`;
+            const res = await axios.get(url, {
+                headers: { Authorization: `Bearer ${PREVIEW_TOKEN}` },
+            });
+            setLiveEntry(res.data);
+            console.log("MFNXWMB: Live entry fetched:", res.data);
+        }
+        if (typeof window !== "undefined") fetchEntry();
+    }, [currentContent]);
+
+    // --- Use live updates only for fields you want ---
+    const liveContent = useContentfulLiveUpdates(liveEntry);
+
+    // Inspector mode (use sys.id from liveEntry if available)
     const inspectorProps = useContentfulInspectorMode({
-        entryId: currentContent.contentful_id,
+        entryId: liveEntry?.sys?.id || currentContent.contentful_id,
     });
 
     const locale = currentLanguage === "nl" ? nl : enUS;
@@ -193,7 +218,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                             fieldId: "title",
                         })}
                     >
-                        {liveContent.title}
+                        {liveContent?.fields?.title || currentContent.title}
                     </h1>
                 </div>
 
