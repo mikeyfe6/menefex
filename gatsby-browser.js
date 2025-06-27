@@ -7,7 +7,7 @@ import RootElement from "./src/context/root-element";
 import "./src/styles/resets.scss";
 
 export const wrapRootElement = ({ element }) => (
-    <ContentfulLivePreviewProvider locale="nl-NL">
+    <ContentfulLivePreviewProvider locale="nl">
         <RootElement>{element}</RootElement>
     </ContentfulLivePreviewProvider>
 );
