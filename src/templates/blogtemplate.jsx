@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { useContentfulInspectorMode } from "@contentful/live-preview/react";
+import {
+    useContentfulLiveUpdates,
+    useContentfulInspectorMode,
+} from "@contentful/live-preview/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Disqus } from "gatsby-plugin-disqus";
@@ -31,10 +34,14 @@ import * as postStyle from "../styles/modules/templates/blog.module.scss";
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
     const { siteUrl } = useSiteMetadata();
-    const inspectorProps = useContentfulInspectorMode();
 
     const currentLanguage = i18n.language;
     const currentContent = currentLanguage === "nl" ? nlContent : enContent;
+
+    const liveContent = useContentfulLiveUpdates(currentContent);
+    const inspectorProps = useContentfulInspectorMode({
+        entryId: currentContent.contentful_id,
+    });
 
     const locale = currentLanguage === "nl" ? nl : enUS;
 
@@ -183,11 +190,10 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
                     <h1
                         {...inspectorProps({
-                            entryId: currentContent.contentful_id,
                             fieldId: "title",
                         })}
                     >
-                        {currentContent.title}
+                        {liveContent.title}
                     </h1>
                 </div>
 
