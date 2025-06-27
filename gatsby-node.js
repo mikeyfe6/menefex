@@ -284,6 +284,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             allContentfulTopic {
                 edges {
                     node {
+                        __typename
                         contentful_id
                         name
                         slug
@@ -292,6 +293,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                             description
                         }
                         blog_post {
+                            __typename
                             contentful_id
                             id
                             title
