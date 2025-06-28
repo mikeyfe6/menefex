@@ -614,6 +614,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
                 url: siteUrl + favicon,
             },
         },
+        url: siteUrl + "/blog/" + nlContent.slug + "/",
         datePublished: nlContent.publishedPost,
         dateModified: nlContent.updatedPost,
     };

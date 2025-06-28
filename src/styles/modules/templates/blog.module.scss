@@ -99,20 +99,15 @@
                     }
 
                     h3 {
-                        margin-bottom: rem-calc(4);
-
                         @include poppins-title;
                         @include fluid-typing(20, 22);
                     }
 
                     h4 {
-                        margin: rem-calc(24 0 8);
-
                         @extend %as-p;
                     }
 
                     h5 {
-                        margin-top: rem-calc(24);
                         font-weight: 700;
 
                         @extend %as-medium;
@@ -125,8 +120,26 @@
                     }
 
                     p {
-                        &:not(:last-of-type) {
-                            margin-bottom: rem-calc(24);
+                        + ul,
+                        + ol {
+                            margin-top: rem-calc(8);
+                        }
+
+                        + p {
+                            margin-top: rem-calc(20);
+                        }
+                    }
+
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        &:not(:first-child) {
+                            margin-top: rem-calc(32);
+                        }
+
+                        & + p {
+                            margin-top: rem-calc(4);
                         }
                     }
 
@@ -157,7 +170,7 @@
                     > ul,
                     > ol {
                         text-decoration-color: $secondary-color;
-                        margin: rem-calc(24 0 32);
+                        margin-bottom: rem-calc(24);
 
                         > li {
                             > * {
