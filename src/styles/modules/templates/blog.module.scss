@@ -55,12 +55,19 @@
 
                 #{$post}-image {
                     display: block;
-                    border-radius: $high-radius;
-                    border: 1px solid $smoke-color;
                     overflow: hidden;
 
-                    > [data-gatsby-image-wrapper] {
+                    > img {
+                        border-radius: $high-radius;
+                        border: 1px solid $smoke-color;
                         width: 100%;
+                    }
+
+                    > [data-gatsby-image-wrapper] {
+                        img {
+                            border-radius: $high-radius;
+                            border: 1px solid $smoke-color;
+                        }
                     }
                 }
 
@@ -192,10 +199,21 @@
                     }
 
                     .assets {
-                        border-radius: $medium-radius;
                         overflow: hidden;
-                        border: 1.5px solid $snow-color;
                         margin: rem-calc(40 0);
+
+                        > img {
+                            width: 100%;
+                            border-radius: $medium-radius;
+                            border: 1px solid $smoke-color;
+                        }
+
+                        > [data-gatsby-image-wrapper] {
+                            img {
+                                border-radius: $medium-radius;
+                                border: 1px solid $smoke-color;
+                            }
+                        }
                     }
                 }
 

@@ -1066,6 +1066,13 @@
   dependencies:
     "@contentful/rich-text-types" "^16.8.5"
 
+"@contentful/rich-text-react-renderer@^16.0.2":
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-16.0.2.tgz#8c82c983b31eb9b0506b1bec8e232863e7bcb1c3"
+  integrity sha512-rh1leRqndG3RzWQTKOXu7GrLGY2ijlrGkDi+df9sI14aaj6Tl2vCoHwEtmW5kjNS5XBwo+RSR86j1ro9fDTnfw==
+  dependencies:
+    "@contentful/rich-text-types" "^17.0.1"
+
 "@contentful/rich-text-types@^16.6.1", "@contentful/rich-text-types@^16.8.5":
   version "16.8.5"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.8.5.tgz#832c8b428612f5181908bc1033c6ef9f48f1ce83"

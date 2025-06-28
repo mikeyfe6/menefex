@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-import axios from "axios";
 import { Link } from "gatsby";
+import axios from "axios";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Disqus } from "gatsby-plugin-disqus";
+
 import {
     useContentfulLiveUpdates,
     useContentfulInspectorMode,
 } from "@contentful/live-preview/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { Disqus } from "gatsby-plugin-disqus";
-
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { format, parseISO } from "date-fns";
 import { nl, enUS } from "date-fns/locale";
@@ -35,6 +35,23 @@ import * as postStyle from "../styles/modules/templates/blog.module.scss";
 const SPACE_ID = process.env.GATSBY_CONTENTFUL_PREVIEW_SPACE_ID;
 const PREVIEW_TOKEN = process.env.GATSBY_CONTENTFUL_PREVIEW_TOKEN;
 
+function collectAssetIds(document) {
+    const ids = new Set();
+    function traverse(node) {
+        if (
+            node.nodeType === "embedded-asset-block" &&
+            node.data?.target?.sys?.id
+        ) {
+            ids.add(node.data.target.sys.id);
+        }
+        if (node.content) {
+            node.content.forEach(traverse);
+        }
+    }
+    traverse(document);
+    return Array.from(ids);
+}
+
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
     const { siteUrl } = useSiteMetadata();
@@ -42,10 +59,15 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     const currentLanguage = i18n.language;
     const currentContent = currentLanguage === "nl" ? nlContent : enContent;
 
-    const [liveEntry, setLiveEntry] = useState(null);
-    const [asset, setAsset] = useState(null);
+    const [previewEntry, setPreviewEntry] = useState(null);
+    const [previewImage, setPreviewImage] = useState(null);
+    const [previewAssets, setPreviewAssets] = useState({});
+
+    const previewContent = useContentfulLiveUpdates(previewEntry);
 
     useEffect(() => {
+        if (process.env.NODE_ENV === "development") return;
+
         async function fetchEntry() {
             const entryId = currentContent.contentful_id;
             const locale = currentLanguage || "nl";
@@ -53,29 +75,52 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
             const res = await axios.get(url, {
                 headers: { Authorization: `Bearer ${PREVIEW_TOKEN}` },
             });
-            setLiveEntry(res.data);
-            console.log("MFNXWMB: Live entry fetched:", res.data);
+            setPreviewEntry(res.data);
         }
-        if (typeof window !== "undefined") fetchEntry();
-    }, [currentContent]);
+        fetchEntry();
+    }, [currentContent, currentLanguage]);
 
     useEffect(() => {
-        const imageId = liveEntry?.fields?.image?.sys?.id;
+        if (process.env.NODE_ENV === "development") return;
+
+        const imageId = previewEntry?.fields?.image?.sys?.id;
         if (!imageId) return;
 
         async function fetchAsset() {
             const assetUrl = `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/assets/${imageId}?access_token=${PREVIEW_TOKEN}`;
             const res = await axios.get(assetUrl);
-            setAsset(res.data);
-            console.log("MFNXWMB: Live asset fetched:", res.data);
+            setPreviewImage(res.data);
         }
         fetchAsset();
-    }, [liveEntry]);
+    }, [previewEntry]);
 
-    const liveContent = useContentfulLiveUpdates(liveEntry);
+    useEffect(() => {
+        if (
+            process.env.NODE_ENV === "development" ||
+            !previewContent?.fields?.body
+        )
+            return;
+
+        const assetIds = collectAssetIds(previewContent.fields.body);
+        if (assetIds.length === 0) return;
+
+        async function fetchAssets() {
+            const promises = assetIds.map((id) =>
+                axios
+                    .get(
+                        `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/assets/${id}?access_token=${PREVIEW_TOKEN}`
+                    )
+                    .then((res) => [id, res.data])
+            );
+            const results = await Promise.all(promises);
+            const map = Object.fromEntries(results);
+            setPreviewAssets(map);
+        }
+        fetchAssets();
+    }, [previewContent]);
 
     const inspectorProps = useContentfulInspectorMode({
-        entryId: liveEntry?.sys?.id || currentContent.contentful_id,
+        entryId: previewEntry?.sys?.id || currentContent.contentful_id,
     });
 
     const locale = currentLanguage === "nl" ? nl : enUS;
@@ -84,7 +129,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         return format(parseISO(date), "eeee d MMMM yyyy", { locale });
     };
 
-    const options = {
+    const currentOptions = {
         preserveWhitespace: false,
         renderMark: {
             [MARKS.BOLD]: (text) => <b>{text}</b>,
@@ -109,16 +154,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                 );
             },
 
-            [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
-                // // const {
-                // //   data: {
-                // //     target: { title, file },
-                // //   },
-                // // } = node;
-                // console.log('huhhhh');
-                // console.log('MFNXWMB: EMBEDDED_ENTRY', node); // Changed comma to semicolon
-                // return <img alt="" src="" />;
-            },
+            [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {},
 
             [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
             [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
@@ -178,6 +214,80 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         },
     };
 
+    const previewOptions = {
+        renderNode: {
+            [BLOCKS.EMBEDDED_ASSET]: (node) => {
+                const assetId = node.data.target.sys.id;
+                const asset = previewAssets[assetId];
+                if (!asset) return null;
+                const { title, file } = asset.fields || {};
+                const url = file?.url?.startsWith("//")
+                    ? `https:${file.url}`
+                    : file?.url;
+                return url ? (
+                    <div className={postStyle.assets}>
+                        <img src={url} alt={title} />
+                    </div>
+                ) : null;
+            },
+            [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {},
+            [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+            [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
+            [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
+            [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
+            [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
+            [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
+            [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
+            [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+            [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+            [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+
+            [BLOCKS.HR]: () => <hr />,
+
+            [BLOCKS.QUOTE]: (node, children) => (
+                <blockquote>{children}</blockquote>
+            ),
+
+            [INLINES.HYPERLINK]: (node, children) => {
+                const { uri } = node.data;
+                const isInternal = uri && uri.startsWith(siteUrl);
+                const strippedUrl = isInternal ? uri.replace(siteUrl, "") : uri;
+                if (isInternal) {
+                    return <Link to={strippedUrl}>{children}</Link>;
+                } else {
+                    return (
+                        <a href={uri} target="_blank" rel="noopener noreferrer">
+                            {children}
+                        </a>
+                    );
+                }
+            },
+
+            [INLINES.ENTRY_HYPERLINK]: (node, children) => {
+                const { slug } = node.data.target.fields || {};
+                return slug ? (
+                    <Link to={`/blog/${slug}`}>{children}</Link>
+                ) : (
+                    children
+                );
+            },
+
+            [INLINES.ASSET_HYPERLINK]: (node, children) => {
+                const { slug } = node.data.target.fields || {};
+                return slug ? <Link to={slug}>{children}</Link> : children;
+            },
+
+            [INLINES.EMBEDDED_ENTRY]: (node, children) => {
+                const { slug } = node.data.target.fields || {};
+                return slug ? (
+                    <Link to={`/blog/${slug}`}>{children}</Link>
+                ) : (
+                    children
+                );
+            },
+        },
+    };
+
     const postTopic = currentContent.topics;
     const relatedPostsSet = new Set();
     const relatedPosts = [];
@@ -213,8 +323,6 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         }
     }, []);
 
-    const image = getImage(currentContent.image.gatsbyImageData);
-
     if (!isHydrated) return null;
 
     return (
@@ -228,7 +336,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                             fieldId: "title",
                         })}
                     >
-                        {liveContent?.fields?.title || currentContent.title}
+                        {previewContent?.fields?.title || currentContent.title}
                     </h1>
                 </div>
 
@@ -236,15 +344,22 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
                 <div className={postStyle.postMain}>
                     <section id="post">
-                        <div className={postStyle.postImage}>
-                            {asset ? (
+                        <div
+                            className={postStyle.postImage}
+                            {...inspectorProps({
+                                fieldId: "image",
+                            })}
+                        >
+                            {previewImage ? (
                                 <img
                                     src={
-                                        asset.fields.file.url.startsWith("//")
-                                            ? `https:${asset.fields.file.url}`
-                                            : asset.fields.file.url
+                                        previewImage.fields.file.url.startsWith(
+                                            "//"
+                                        )
+                                            ? `https:${previewImage.fields.file.url}`
+                                            : previewImage.fields.file.url
                                     }
-                                    alt={asset.fields.title}
+                                    alt={previewImage.fields.title}
                                 />
                             ) : (
                                 <GatsbyImage
@@ -256,9 +371,29 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                             )}
                         </div>
 
-                        <h2>{currentContent.subtitle}</h2>
-                        <div className={postStyle.postContent}>
-                            {renderRichText(currentContent.body, options)}
+                        <h2
+                            {...inspectorProps({
+                                fieldId: "subtitle",
+                            })}
+                        >
+                            {previewContent?.fields?.subtitle ||
+                                currentContent.subtitle}
+                        </h2>
+                        <div
+                            className={postStyle.postContent}
+                            {...inspectorProps({
+                                fieldId: "body",
+                            })}
+                        >
+                            {previewContent?.fields?.body
+                                ? documentToReactComponents(
+                                      previewContent.fields.body,
+                                      previewOptions
+                                  )
+                                : renderRichText(
+                                      currentContent.body,
+                                      currentOptions
+                                  )}
                         </div>
 
                         <div className={postStyle.postRss}>
