@@ -23,7 +23,7 @@ const Marker = ({ lat, lng }) => {
 
     return (
         <div data-lat={lat} data-lng={lng}>
-            <img src={mapsLogo} alt={title} width={37.5} height={37.5} />
+            <img src={mapsLogo} alt={title} width={25} height={25} />
         </div>
     );
 };
