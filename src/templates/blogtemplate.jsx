@@ -66,7 +66,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     const previewContent = useContentfulLiveUpdates(previewEntry);
 
     useEffect(() => {
-        if (process.env.NODE_ENV === "development") return;
+        if (process.env.NODE_ENV !== "development") return;
 
         async function fetchEntry() {
             const entryId = currentContent.contentful_id;
@@ -81,7 +81,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     }, [currentContent, currentLanguage]);
 
     useEffect(() => {
-        if (process.env.NODE_ENV === "development") return;
+        if (process.env.NODE_ENV !== "development") return;
 
         const imageId = previewEntry?.fields?.image?.sys?.id;
         if (!imageId) return;
@@ -96,7 +96,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
     useEffect(() => {
         if (
-            process.env.NODE_ENV === "development" ||
+            process.env.NODE_ENV !== "development" ||
             !previewContent?.fields?.body
         )
             return;
