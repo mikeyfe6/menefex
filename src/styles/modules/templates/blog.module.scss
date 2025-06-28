@@ -173,11 +173,6 @@
                         margin-bottom: rem-calc(24);
 
                         > li {
-                            > * {
-                                display: inline-block;
-                                text-indent: rem-calc(12);
-                            }
-
                             &::marker {
                                 font-size: rem-calc(20);
                                 font-weight: 600;
@@ -189,18 +184,25 @@
                     > ol {
                         padding-left: rem-calc(24);
                         list-style-type: decimal;
+
+                        > * {
+                            text-indent: rem-calc(12);
+                        }
                     }
 
                     > ul {
                         text-decoration-color: $secondary-color;
 
                         > li {
+                            display: flex;
+
                             &::before {
                                 content: "\203B";
                                 color: $secondary-color;
                                 font-weight: bold;
-                                font-size: rem-calc(20);
-                                margin-right: rem-calc(8);
+                                margin-right: rem-calc(16);
+
+                                @include fluid-typing(16, 18);
                             }
                         }
                     }
