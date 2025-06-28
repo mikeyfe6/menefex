@@ -519,5 +519,23 @@
                 }
             }
         }
+
+        > ins {
+            &:first-child {
+                margin-bottom: rem-calc(32);
+            }
+
+            &:last-child {
+                margin-bottom: rem-calc(80);
+
+                @include phablet {
+                    margin-bottom: rem-calc(120);
+                }
+
+                @include tablet {
+                    margin-bottom: rem-calc(160);
+                }
+            }
+        }
     }
 }
