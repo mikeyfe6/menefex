@@ -73,12 +73,18 @@
 
                 > h2 {
                     font-weight: 600;
-                    margin: rem-calc(32 0 24);
+                    margin: rem-calc(32 0 40);
                     font-family: $poppins-font;
                     line-height: rem-calc(32);
+                    padding: rem-calc(16 0 12);
+                    border-top: 5px solid $smoke-color;
+                    border-bottom: 5px solid $smoke-color;
+                    text-align: center;
 
                     @include poppins-title;
                     @extend %as-h5;
+
+                    @include fluid-typing(24, 28);
 
                     @include phablet {
                         line-height: rem-calc(38);
@@ -86,7 +92,7 @@
 
                     &::first-letter {
                         color: $secondary-color;
-                        margin-right: rem-calc(1);
+                        // margin-right: rem-calc(1);
 
                         @include fluid-typing(32, 42);
                     }
