@@ -529,11 +529,11 @@
         }
 
         > ins {
-            &:first-child {
+            &:first-of-type {
                 margin-bottom: rem-calc(32);
             }
 
-            &:last-child {
+            &:last-of-type {
                 margin-bottom: rem-calc(80);
 
                 @include phablet {
