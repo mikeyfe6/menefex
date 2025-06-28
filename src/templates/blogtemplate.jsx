@@ -42,10 +42,9 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     const currentLanguage = i18n.language;
     const currentContent = currentLanguage === "nl" ? nlContent : enContent;
 
-    // --- NEW: State for live preview entry ---
     const [liveEntry, setLiveEntry] = useState(null);
+    const [asset, setAsset] = useState(null);
 
-    // --- Fetch from Contentful Preview API on client ---
     useEffect(() => {
         async function fetchEntry() {
             const entryId = currentContent.contentful_id;
@@ -60,10 +59,21 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         if (typeof window !== "undefined") fetchEntry();
     }, [currentContent]);
 
-    // --- Use live updates only for fields you want ---
+    useEffect(() => {
+        const imageId = liveEntry?.fields?.image?.sys?.id;
+        if (!imageId) return;
+
+        async function fetchAsset() {
+            const assetUrl = `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/assets/${imageId}?access_token=${PREVIEW_TOKEN}`;
+            const res = await axios.get(assetUrl);
+            setAsset(res.data);
+            console.log("MFNXWMB: Live asset fetched:", res.data);
+        }
+        fetchAsset();
+    }, [liveEntry]);
+
     const liveContent = useContentfulLiveUpdates(liveEntry);
 
-    // Inspector mode (use sys.id from liveEntry if available)
     const inspectorProps = useContentfulInspectorMode({
         entryId: liveEntry?.sys?.id || currentContent.contentful_id,
     });
@@ -227,10 +237,23 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                 <div className={postStyle.postMain}>
                     <section id="post">
                         <div className={postStyle.postImage}>
-                            <GatsbyImage
-                                image={image}
-                                alt={currentContent.image.title}
-                            />
+                            {asset ? (
+                                <img
+                                    src={
+                                        asset.fields.file.url.startsWith("//")
+                                            ? `https:${asset.fields.file.url}`
+                                            : asset.fields.file.url
+                                    }
+                                    alt={asset.fields.title}
+                                />
+                            ) : (
+                                <GatsbyImage
+                                    image={getImage(
+                                        currentContent.image.gatsbyImageData
+                                    )}
+                                    alt={currentContent.title}
+                                />
+                            )}
                         </div>
 
                         <h2>{currentContent.subtitle}</h2>
