@@ -19,7 +19,7 @@
     "postinstall": "if [ \"$NETLIFY\" = \"true\" ]; then node node_modules/puppeteer/install.mjs; fi"
   },
   "dependencies": {
-    "@contentful/live-preview": "^4.6.23",
+    "@contentful/live-preview": "^4.6.25",
     "@contentful/rich-text-html-renderer": "^17.0.1",
     "@contentful/rich-text-react-renderer": "^16.0.2",
     "@contentful/rich-text-types": "^17.0.1",
