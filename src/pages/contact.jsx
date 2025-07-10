@@ -65,13 +65,32 @@ export const Head = () => {
         ],
     };
 
+    const contactPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "@id": siteUrl + "/contact/#contactpage",
+        url: siteUrl + "/contact/",
+        name: "Contact",
+        description:
+            "Contacteer Menefex voor een offerte, samenwerking of algemene vragen. Wij staan klaar om samen iets geweldigs te creëren! Binnen één werkdag reactie.",
+        about: {
+            "@id": siteUrl + "/#organization",
+        },
+        mainEntity: {
+            "@id": siteUrl + "/#organization",
+        },
+        isPartOf: {
+            "@id": siteUrl + "/#website",
+        },
+    };
+
     return (
         <SEO
             title="Contact"
             description="Contacteer Menefex voor een offerte, samenwerking of algemene vragen. Wij staan klaar om samen iets geweldigs te creëren! Binnen één werkdag reactie."
             keywords="contact, offerte, samenwerking, algemene vragen, reactie, Menefex, webontwikkeling, digitalisering, SEO, technologie"
             pathname="/contact/"
-            schemaMarkup={[breadcrumbSchema]}
+            schemaMarkup={[breadcrumbSchema, contactPageSchema]}
         />
     );
 };

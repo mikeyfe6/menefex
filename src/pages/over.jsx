@@ -40,8 +40,7 @@ const AboutPage = () => {
 export default AboutPage;
 
 export const Head = () => {
-    const { siteUrl, bizTel, image, title, favicon, authorImage, author } =
-        useSiteMetadata();
+    const { siteUrl, title, authorImage, author } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org/",
@@ -63,6 +62,24 @@ export const Head = () => {
         ],
     };
 
+    const aboutPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": siteUrl + "/over/#aboutpage",
+        url: siteUrl + "/over/",
+        name: "Over Ons",
+        description: "Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.",
+        about: {
+            "@id": siteUrl + "/#organization",
+        },
+        mainEntity: {
+            "@id": siteUrl + "/#person",
+        },
+        isPartOf: {
+            "@id": siteUrl + "/#website",
+        },
+    };
+
     const personSchema = {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -81,38 +98,8 @@ export const Head = () => {
         ],
         jobTitle: "Founder & Web Developer",
         worksFor: {
-            "@type": "Organization",
-            name: title,
+            "@id": siteUrl + "/#organization",
         },
-    };
-
-    const organizationSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": siteUrl + "/#organization",
-        name: title,
-        url: siteUrl,
-        image: siteUrl + image,
-        logo: siteUrl + favicon,
-        contactPoint: {
-            "@type": "ContactPoint",
-            telephone: bizTel,
-            areaServed: ["NL", "BE", "SR", "GB"],
-            contactOption: "TollFree",
-            contactType: "customer service",
-            availableLanguage: ["Dutch", "es", "en"],
-        },
-        sameAs: [
-            "https://www.facebook.com/MenefexWMB",
-            "https://www.twitter.com/MenefexWMB",
-            "https://www.instagram.com/menefexwmb/",
-            "https://www.linkedin.com/company/menefexwmb/",
-            "https://github.com/mikeyfe6",
-            "https://www.patreon.com/menefexWMB",
-            "https://feeds.feedburner.com/MenefexWMB",
-            "https://wa.me/31611054318",
-            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
-        ],
     };
 
     return (
@@ -121,7 +108,7 @@ export const Head = () => {
             description="Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling."
             keywords="Menefex, Michael Fransman, webmediabedrijf, webontwikkeling, digitale oplossingen, innovatie, missie, waarden, aanpak"
             pathname="/over/"
-            schemaMarkup={[breadcrumbSchema, personSchema, organizationSchema]}
+            schemaMarkup={[breadcrumbSchema, aboutPageSchema, personSchema]}
         />
     );
 };

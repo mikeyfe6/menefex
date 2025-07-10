@@ -127,68 +127,16 @@ export const Head = () => {
         ],
     };
 
-    const websiteSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": siteUrl + "/#website",
-        name: title,
-        url: siteUrl,
-    };
-
-    const organizationSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": siteUrl + "/#organization",
-        name: title,
-        alternateName: company,
-        url: siteUrl,
-        image: siteUrl + image,
-        logo: siteUrl + favicon,
-        contactPoint: [
-            {
-                "@type": "ContactPoint",
-                "@id": siteUrl + "/#customerService",
-                telephone: bizTel,
-                areaServed: ["NL", "BE", "SR", "GB"],
-                contactOption: "TollFree",
-                contactType: "customer service",
-                availableLanguage: ["Dutch", "es", "en", "German"],
-            },
-            {
-                "@type": "ContactPoint",
-                "@id": siteUrl + "/#technicalsupport",
-                telephone: bizTel,
-                areaServed: ["NL", "BE", "SR", "GB"],
-                contactOption: "TollFree",
-                contactType: "technical support",
-                availableLanguage: ["Dutch", "es", "en", "German"],
-            },
-        ],
-        sameAs: [
-            "https://www.facebook.com/MenefexWMB",
-            "https://www.twitter.com/MenefexWMB",
-            "https://www.instagram.com/menefexwmb/",
-            "https://www.linkedin.com/company/menefexwmb/",
-            "https://github.com/mikeyfe6",
-            "https://www.patreon.com/menefexWMB",
-            "https://feeds.feedburner.com/MenefexWMB",
-            "https://wa.me/31611054318",
-            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
-        ],
-    };
-
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": siteUrl + "/#localbusiness",
         name: title,
-        founder: {
-            "@type": "Person",
-            name: author,
+        parentOrganization: {
+            "@id": siteUrl + "/#organization",
         },
         image: siteUrl + image,
         logo: siteUrl + favicon,
-        "@id": siteUrl, // #localbusiness
         description: description,
         url: siteUrl,
         telephone: bizTel,
@@ -252,8 +200,6 @@ export const Head = () => {
                 keywords="website specialist, webmediabedrijf, webdesign, webdevelopment, webshop, webapplicatie, digitale ambities, contact"
                 schemaMarkup={[
                     breadcrumbSchema,
-                    websiteSchema,
-                    organizationSchema,
                     localBusinessSchema,
                     faqSchema,
                 ]}

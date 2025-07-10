@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import { useStaticQuery, graphql, Script } from "gatsby";
 
 const SEO = ({
@@ -22,17 +21,101 @@ const SEO = ({
                     url: siteUrl
                     image
                     socialHandle
+                    company
+                    favicon
+                    bizTel
                 }
             }
         }
     `);
 
-    const { url, socialHandle, image, defaultDescription, siteTitle } =
-        site.siteMetadata;
+    const {
+        url,
+        socialHandle,
+        image,
+        defaultDescription,
+        siteTitle,
+        company,
+        favicon,
+        bizTel,
+    } = site.siteMetadata;
 
     const pageDescription = description || defaultDescription;
     const pageImage = ogimage || `${url}${image}`;
     const siteUrl = `${url}${pathname || ""}`;
+
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": url + "/#organization",
+        name: siteTitle,
+        alternateName: company,
+        url: url,
+        image: url + image,
+        logo: url + favicon,
+        contactPoint: [
+            {
+                "@type": "ContactPoint",
+                "@id": url + "/#customerService",
+                telephone: bizTel,
+                areaServed: ["NL", "BE", "SR", "GB"],
+                contactOption: "TollFree",
+                contactType: "customer service",
+                availableLanguage: ["Dutch", "es", "en", "German"],
+            },
+            {
+                "@type": "ContactPoint",
+                "@id": url + "/#technicalsupport",
+                telephone: bizTel,
+                areaServed: ["NL", "BE", "SR", "GB"],
+                contactOption: "TollFree",
+                contactType: "technical support",
+                availableLanguage: ["Dutch", "es", "en", "German"],
+            },
+        ],
+        sameAs: [
+            "https://www.facebook.com/MenefexWMB",
+            "https://www.twitter.com/MenefexWMB",
+            "https://www.instagram.com/menefexwmb/",
+            "https://www.linkedin.com/company/menefexwmb/",
+            "https://github.com/mikeyfe6",
+            "https://www.patreon.com/menefexWMB",
+            "https://feeds.feedburner.com/MenefexWMB",
+            "https://wa.me/31611054318",
+            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
+        ],
+    };
+
+    const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${url}${pathname || ""}#webpage`,
+        url: `${url}${pathname || ""}`,
+        name: title,
+        description: pageDescription,
+        isPartOf: {
+            "@id": `${url}/#website`,
+        },
+    };
+
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": siteUrl + "/#website",
+        name: title,
+        url: siteUrl,
+    };
+
+    const combinedSchema = schemaMarkup
+        ? Array.isArray(schemaMarkup)
+            ? [
+                  ...schemaMarkup,
+                  organizationSchema,
+                  webPageSchema,
+                  websiteSchema,
+              ]
+            : [schemaMarkup, organizationSchema, webPageSchema, websiteSchema]
+        : [organizationSchema, webPageSchema, websiteSchema];
 
     return (
         <>
@@ -75,11 +158,9 @@ const SEO = ({
 
             {/* --- Schema Markup ! --- */}
 
-            {schemaMarkup && (
-                <Script type="application/ld+json">
-                    {JSON.stringify(schemaMarkup)}
-                </Script>
-            )}
+            <Script type="application/ld+json">
+                {JSON.stringify(combinedSchema)}
+            </Script>
 
             {/* Robots Meta Tag ! */}
 
