@@ -5,7 +5,7 @@ import { wrapRoot } from "./src/lib/wrapRoot";
 export const wrapRootElement = wrapRoot;
 
 const HtmlAttributes = {
-    lang: "nl-NL",
+    lang: "nl",
     prefix: "og: https://ogp.me/ns#",
 };
 
