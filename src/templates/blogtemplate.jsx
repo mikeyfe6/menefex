@@ -610,8 +610,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
             "@type": "Organization",
             name: siteTitle,
             logo: {
-                "@type": "ImageObject",
-                url: siteUrl + favicon,
+                "@id": siteUrl + "/#logo",
             },
         },
         url: siteUrl + "/blog/" + nlContent.slug + "/",

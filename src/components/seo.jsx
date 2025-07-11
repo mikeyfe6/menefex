@@ -52,7 +52,11 @@ const SEO = ({
         alternateName: company,
         url: url,
         image: url + image,
-        logo: url + favicon,
+        logo: {
+            "@type": "ImageObject",
+            "@id": url + "/#logo",
+            url: siteUrl + favicon,
+        },
         contactPoint: [
             {
                 "@type": "ContactPoint",

@@ -6,6 +6,7 @@ export const wrapRootElement = wrapRoot;
 
 const HtmlAttributes = {
     lang: "nl-NL",
+    "xml:lang": "nl-NL",
 };
 
 const HeadComponents = [

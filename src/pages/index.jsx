@@ -57,17 +57,8 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => {
-    const {
-        title,
-        company,
-        siteUrl,
-        image,
-        favicon,
-        bizTel,
-        author,
-        description,
-        bizEmail,
-    } = useSiteMetadata();
+    const { title, siteUrl, image, bizTel, description, bizEmail } =
+        useSiteMetadata();
 
     const faqData = [
         {
@@ -136,15 +127,20 @@ export const Head = () => {
             "@id": siteUrl + "/#organization",
         },
         image: siteUrl + image,
-        logo: siteUrl + favicon,
+        logo: {
+            "@id": siteUrl + "/#logo",
+        },
         description: description,
         url: siteUrl,
         telephone: bizTel,
         email: bizEmail,
         hasMap: "https://g.page/MenefexWMB?share",
         areaServed: {
-            "@type": "geoShape",
-            addressCountry: ["Netherlands", "Belgium", "Surinam"],
+            "@type": "GeoCircle",
+            geoMidPoint: {
+                "@id": siteUrl + "/#geo",
+            },
+            geoRadius: "1000",
         },
         priceRange: "$$",
         address: {
@@ -157,14 +153,15 @@ export const Head = () => {
         },
         geo: {
             "@type": "GeoCoordinates",
+            "@id": siteUrl + "/#geo",
             latitude: "52.31049600748774",
             longitude: "4.973736770446289",
         },
         openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            opens: "09:00",
-            closes: "19:00",
+            opens: "09:00:00",
+            closes: "19:00:00",
         },
         sameAs: [
             "https://www.facebook.com/MenefexWMB",
