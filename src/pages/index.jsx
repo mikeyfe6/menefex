@@ -137,7 +137,7 @@ export const Head = () => {
         hasMap: "https://g.page/MenefexWMB?share",
         areaServed: {
             "@type": "GeoCircle",
-            geoMidPoint: {
+            geoMidpoint: {
                 "@id": siteUrl + "/#geo",
             },
             geoRadius: "1000",

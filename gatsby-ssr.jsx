@@ -6,7 +6,7 @@ export const wrapRootElement = wrapRoot;
 
 const HtmlAttributes = {
     lang: "nl-NL",
-    "xml:lang": "nl-NL",
+    prefix: "og: https://ogp.me/ns#",
 };
 
 const HeadComponents = [
