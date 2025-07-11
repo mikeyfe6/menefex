@@ -566,7 +566,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
     const { title: siteTitle, siteUrl, favicon } = useSiteMetadata();
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": siteUrl + "/#breadcrumb",
         itemListElement: [

@@ -43,7 +43,7 @@ export const Head = () => {
     const { siteUrl, title, authorImage, author } = useSiteMetadata();
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
@@ -68,7 +68,8 @@ export const Head = () => {
         "@id": siteUrl + "/over/#aboutpage",
         url: siteUrl + "/over/",
         name: "Over Ons",
-        description: "Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.",
+        description:
+            "Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.",
         about: {
             "@id": siteUrl + "/#organization",
         },

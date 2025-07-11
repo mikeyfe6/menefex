@@ -82,7 +82,7 @@ export const Head = () => {
     const { title, siteUrl, priceImage } = useSiteMetadata();
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
@@ -102,7 +102,7 @@ export const Head = () => {
     };
 
     const budgetPlanSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "Product",
         "@id": siteUrl + "/#budgetplan",
         name: "Budget Plan",
@@ -181,7 +181,7 @@ export const Head = () => {
     };
 
     const starterPlanSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "Product",
         "@id": siteUrl + "/#starterplan",
         name: "Starter Plan",
@@ -260,7 +260,7 @@ export const Head = () => {
     };
 
     const establishedPlanSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "Product",
         "@id": siteUrl + "/#establishedplan",
         name: "Established Plan",
@@ -339,7 +339,7 @@ export const Head = () => {
     };
 
     const businessPlanSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "Product",
         "@id": siteUrl + "/#businessplan",
         name: "Business Plan",

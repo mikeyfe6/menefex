@@ -114,7 +114,7 @@ export const Head = () => {
     ];
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": siteUrl + "/#breadcrumb",
         itemListElement: [

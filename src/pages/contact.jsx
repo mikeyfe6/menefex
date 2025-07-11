@@ -46,9 +46,10 @@ export const Head = () => {
     const { title, siteUrl } = useSiteMetadata();
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": siteUrl + "/#breadcrumb",
+        name: title,
         itemListElement: [
             {
                 "@type": "ListItem",
