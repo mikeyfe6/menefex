@@ -5,7 +5,7 @@ import { wrapRoot } from "./src/lib/wrapRoot";
 export const wrapRootElement = wrapRoot;
 
 const HtmlAttributes = {
-    lang: "nl",
+    lang: "nl-NL",
 };
 
 const HeadComponents = [
@@ -16,7 +16,6 @@ const HeadComponents = [
         title="Menefex WMB: RSS Feeds"
         href="https://menefex.nl/rss.xml"
     />,
-    <script key="mnfxDefer" defer={false} />,
 ];
 
 export const onRenderBody = ({
