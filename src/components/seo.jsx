@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStaticQuery, graphql, Script } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"; // Remove Script import
 
 const SEO = ({
     title,
@@ -158,9 +158,12 @@ const SEO = ({
 
             {/* --- Schema Markup ! --- */}
 
-            <Script type="application/ld+json">
-                {JSON.stringify(combinedSchema)}
-            </Script>
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(combinedSchema)
+                }}
+            />
 
             {/* Robots Meta Tag ! */}
 
