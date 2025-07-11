@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStaticQuery, graphql, Script } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({
     title,
@@ -137,6 +137,7 @@ const SEO = ({
             <meta property="og:site_name" content={siteTitle} />
             {siteUrl && <meta property="og:url" content={siteUrl} />}
             <meta property="og:locale" content="nl_NL" />
+            <meta property="og:locale:alternate" content="en_US" />
             <meta
                 property="og:type"
                 content={article ? "article" : "website"}
@@ -158,9 +159,12 @@ const SEO = ({
 
             {/* --- Schema Markup ! --- */}
 
-            <Script type="application/ld+json">
-                {JSON.stringify(combinedSchema)}
-            </Script>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(combinedSchema),
+                }}
+            />
 
             {/* Robots Meta Tag ! */}
 
