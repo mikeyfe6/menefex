@@ -595,10 +595,8 @@ export const Head = ({ pageContext: { nlContent } }) => {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "@id": siteUrl + "/#blogpost",
-        mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": siteUrl + "/blog/" + nlContent.slug + "/",
-        },
+        mainEntityOfPage: siteUrl + "/blog/" + nlContent.slug + "/",
+
         headline: nlContent.title,
         description: nlContent.subtitle,
         image: "https:" + nlContent.image.file.url,
@@ -606,11 +604,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
             "@id": siteUrl + "/#person",
         },
         publisher: {
-            "@type": "Organization",
-            name: title,
-            logo: {
-                "@id": siteUrl + "/#logo",
-            },
+            "@id": siteUrl + "/#organization",
         },
         url: siteUrl + "/blog/" + nlContent.slug + "/",
         datePublished: nlContent.publishedPost,
