@@ -40,7 +40,7 @@ const AboutPage = () => {
 export default AboutPage;
 
 export const Head = () => {
-    const { siteUrl, title, authorImage, author } = useSiteMetadata();
+    const { siteUrl, title } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -81,35 +81,13 @@ export const Head = () => {
         },
     };
 
-    const personSchema = {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": siteUrl + "/#person",
-        name: author,
-        url: siteUrl,
-        image: siteUrl + authorImage,
-        sameAs: [
-            "https://www.facebook.com/michaelfransman",
-            "https://www.twitter.com/mikeyfe",
-            "https://www.instagram.com/mikeyfe6/",
-            "https://www.linkedin.com/in/michaelfransman/",
-            "https://github.com/mikeyfe6",
-            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
-            "https://menefex.nl",
-        ],
-        jobTitle: "Founder & Web Developer",
-        worksFor: {
-            "@id": siteUrl + "/#organization",
-        },
-    };
-
     return (
         <SEO
             title="Over Ons"
             description="Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling."
             keywords="Menefex, Michael Fransman, webmediabedrijf, webontwikkeling, digitale oplossingen, innovatie, missie, waarden, aanpak"
             pathname="/over/"
-            schemaMarkup={[breadcrumbSchema, aboutPageSchema, personSchema]}
+            schemaMarkup={[breadcrumbSchema, aboutPageSchema]}
         />
     );
 };

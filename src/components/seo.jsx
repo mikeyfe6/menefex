@@ -1,5 +1,6 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+
+import useSiteMetadata from "../hooks/use-site-metadata";
 
 const SEO = ({
     title,
@@ -12,33 +13,18 @@ const SEO = ({
     schemaMarkup,
     noindex,
 }) => {
-    const { site } = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    siteTitle: title
-                    defaultDescription: description
-                    url: siteUrl
-                    image
-                    socialHandle
-                    company
-                    favicon
-                    bizTel
-                }
-            }
-        }
-    `);
-
     const {
-        url,
-        socialHandle,
-        image,
-        defaultDescription,
         siteTitle,
+        defaultDescription,
+        url,
+        image,
+        socialHandle,
         company,
         favicon,
         bizTel,
-    } = site.siteMetadata;
+        author,
+        authorImage,
+    } = useSiteMetadata();
 
     const pageDescription = description || defaultDescription;
     const pageImage = ogimage || `${url}${image}`;
@@ -50,12 +36,15 @@ const SEO = ({
         "@id": url + "/#organization",
         name: siteTitle,
         alternateName: company,
+        founder: {
+            "@id": url + "/#person",
+        },
         url: url,
         image: url + image,
         logo: {
             "@type": "ImageObject",
             "@id": url + "/#logo",
-            url: siteUrl + favicon,
+            url: url + favicon,
         },
         contactPoint: [
             {
@@ -65,7 +54,7 @@ const SEO = ({
                 areaServed: ["NL", "BE", "SR", "GB"],
                 contactOption: "TollFree",
                 contactType: "customer service",
-                availableLanguage: ["Dutch", "es", "en", "German"],
+                availableLanguage: ["Dutch", "Spanish", "English", "German"],
             },
             {
                 "@type": "ContactPoint",
@@ -74,7 +63,7 @@ const SEO = ({
                 areaServed: ["NL", "BE", "SR", "GB"],
                 contactOption: "TollFree",
                 contactType: "technical support",
-                availableLanguage: ["Dutch", "es", "en", "German"],
+                availableLanguage: ["Dutch", "Spanish", "English", "German"],
             },
         ],
         sameAs: [
@@ -105,9 +94,30 @@ const SEO = ({
     const websiteSchema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "@id": siteUrl + "/#website",
+        "@id": url + "/#website",
         name: title,
-        url: siteUrl,
+        url: url,
+    };
+
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": url + "/#person",
+        name: author,
+        url: url + "/over/",
+        image: url + authorImage,
+        sameAs: [
+            "https://www.linkedin.com/in/michaelfransman/",
+            "https://www.facebook.com/michaelfransman",
+            "https://www.twitter.com/mikeyfe",
+            "https://www.instagram.com/mikeyfe6/",
+            "https://github.com/mikeyfe6",
+            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
+        ],
+        jobTitle: "Founder & Web Developer",
+        worksFor: {
+            "@id": url + "/#organization",
+        },
     };
 
     const combinedSchema = schemaMarkup
@@ -117,9 +127,16 @@ const SEO = ({
                   organizationSchema,
                   webPageSchema,
                   websiteSchema,
+                  personSchema,
               ]
-            : [schemaMarkup, organizationSchema, webPageSchema, websiteSchema]
-        : [organizationSchema, webPageSchema, websiteSchema];
+            : [
+                  schemaMarkup,
+                  organizationSchema,
+                  webPageSchema,
+                  websiteSchema,
+                  personSchema,
+              ]
+        : [organizationSchema, webPageSchema, websiteSchema, personSchema];
 
     return (
         <>

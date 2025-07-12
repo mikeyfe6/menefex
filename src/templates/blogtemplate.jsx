@@ -603,8 +603,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
         description: nlContent.subtitle,
         image: "https:" + nlContent.image.file.url,
         author: {
-            "@type": "Person",
-            name: nlContent.author,
+            "@id": siteUrl + "/#person",
         },
         publisher: {
             "@type": "Organization",
