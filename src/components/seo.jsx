@@ -16,7 +16,7 @@ const SEO = ({
     const {
         siteTitle,
         defaultDescription,
-        url,
+        siteUrl: url,
         image,
         socialHandle,
         company,

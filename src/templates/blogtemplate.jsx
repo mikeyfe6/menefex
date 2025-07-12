@@ -563,7 +563,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 export default Post;
 
 export const Head = ({ pageContext: { nlContent } }) => {
-    const { title: siteTitle, siteUrl, favicon } = useSiteMetadata();
+    const { title, siteUrl } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -573,7 +573,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
             {
                 "@type": "ListItem",
                 position: 1,
-                name: siteTitle,
+                name: title,
                 item: siteUrl,
             },
             {
@@ -607,7 +607,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
         },
         publisher: {
             "@type": "Organization",
-            name: siteTitle,
+            name: title,
             logo: {
                 "@id": siteUrl + "/#logo",
             },
