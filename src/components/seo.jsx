@@ -14,7 +14,7 @@ const SEO = ({
     noindex,
 }) => {
     const {
-        siteTitle,
+        title: siteTitle,
         defaultDescription,
         siteUrl: url,
         image,
@@ -95,7 +95,7 @@ const SEO = ({
         "@context": "https://schema.org",
         "@type": "WebSite",
         "@id": url + "/#website",
-        name: title,
+        name: siteTitle,
         url: url,
     };
 
@@ -120,23 +120,23 @@ const SEO = ({
         },
     };
 
-    const combinedSchema = schemaMarkup
-        ? Array.isArray(schemaMarkup)
-            ? [
-                  ...schemaMarkup,
-                  organizationSchema,
-                  webPageSchema,
-                  websiteSchema,
-                  personSchema,
-              ]
-            : [
-                  schemaMarkup,
-                  organizationSchema,
-                  webPageSchema,
-                  websiteSchema,
-                  personSchema,
-              ]
-        : [organizationSchema, webPageSchema, websiteSchema, personSchema];
+    const createCombinedSchema = (customSchema, baseSchemas) => {
+        if (!customSchema) return baseSchemas;
+
+        const customSchemas = Array.isArray(customSchema)
+            ? customSchema
+            : [customSchema];
+        return [...customSchemas, ...baseSchemas];
+    };
+
+    const baseSchemas = [
+        organizationSchema,
+        webPageSchema,
+        websiteSchema,
+        personSchema,
+    ];
+
+    const combinedSchema = createCombinedSchema(schemaMarkup, baseSchemas);
 
     return (
         <>
