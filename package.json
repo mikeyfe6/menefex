@@ -19,10 +19,10 @@
     "postinstall": "if [ \"$NETLIFY\" = \"true\" ]; then node node_modules/puppeteer/install.mjs; fi"
   },
   "dependencies": {
-    "@contentful/live-preview": "^4.6.27",
-    "@contentful/rich-text-html-renderer": "^17.0.1",
-    "@contentful/rich-text-react-renderer": "^16.0.2",
-    "@contentful/rich-text-types": "^17.0.1",
+    "@contentful/live-preview": "^4.6.29",
+    "@contentful/rich-text-html-renderer": "^17.1.0",
+    "@contentful/rich-text-react-renderer": "^16.1.0",
+    "@contentful/rich-text-types": "^17.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
@@ -53,7 +53,7 @@
     "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
-    "puppeteer": "^24.12.1",
+    "puppeteer": "^24.13.0",
     "react": "^18.3.1",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.3.1",
