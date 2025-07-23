@@ -50,41 +50,55 @@ const OptimizationPage = () => {
 export default OptimizationPage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
+
+    const pageTitle = "Optimalisaties laten uitvoeren";
+    const pageDescription =
+        "Professioneel ontworpen optimalisaties die volledig zijn afgestemd op jouw bedrijfsprocessen en gebruikersbehoeften. Onze op maat gemaakte optimalisaties bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online succes te maximaliseren.";
+    const pageSlug = "/diensten/optimalisaties-laten-uitvoeren/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Diensten",
                 item: siteUrl + "/diensten/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
-                name: "Optimalisaties laten uitvoeren",
-                item: siteUrl + "/diensten/optimalisaties-laten-uitvoeren/",
+                position: 2,
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: pageTitle,
+        description: pageDescription,
+        provider: {
+            "@id": siteUrl + "/#organization",
+        },
+        serviceType: pageTitle,
+        category: "Web Development",
+        areaServed: {
+            "@type": "Country",
+            name: "Netherlands",
+        },
+    };
+
     return (
         <SEO
-            title="Optimalisaties laten uitvoeren"
-            description="Laat een e-mailtemplate maken die past bij jouw huisstijl en merkidentiteit. Perfect voor nieuwsbrieven, marketingcampagnes en meer."
+            title={pageTitle}
+            description={pageDescription}
             keywords=""
-            pathname="/diensten/optimalisaties-laten-uitvoeren/"
-            schemaMarkup={breadcrumbSchema}
+            pathname={pageSlug}
+            schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );
 };

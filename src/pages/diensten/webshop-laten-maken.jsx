@@ -50,44 +50,55 @@ const WebshopPage = () => {
 export default WebshopPage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
+
+    const pageTitle = "Webshop laten maken";
+    const pageDescription =
+        "Professioneel ontworpen webshops die volledig zijn afgestemd op jouw producten en doelgroep. Onze op maat gemaakte webshops bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online verkoop te maximaliseren.";
+    const pageSlug = "/diensten/webshop-laten-maken/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Diensten",
                 item: siteUrl + "/diensten/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
-                name: "Webshop laten maken",
-                item: siteUrl + "/diensten/webshop-laten-maken/",
+                position: 2,
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: pageTitle,
+        description: pageDescription,
+        provider: {
+            "@id": siteUrl + "/#organization",
+        },
+        serviceType: pageTitle,
+        category: "Web Development",
+        areaServed: {
+            "@type": "Country",
+            name: "Netherlands",
+        },
+    };
+
     return (
         <SEO
-            title="Webshop laten maken"
-            description="Professioneel ontworpen webshops die volledig zijn afgestemd op jouw
-        producten en doelgroep. Onze op maat gemaakte webshops bieden een
-        gebruiksvriendelijke interface en optimale functionaliteit om jouw
-        online verkoop te maximaliseren."
+            title={pageTitle}
+            description={pageDescription}
             keywords=""
-            pathname="/diensten/webshop-laten-maken/"
-            schemaMarkup={breadcrumbSchema}
+            pathname={pageSlug}
+            schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );
 };

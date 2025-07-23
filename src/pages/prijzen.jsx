@@ -84,7 +84,6 @@ export const Head = () => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
@@ -104,14 +103,12 @@ export const Head = () => {
     const budgetPlanSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": siteUrl + "/#budgetplan",
         name: "Budget Plan",
         image: siteUrl + priceImage,
         description:
             "Het Budget Plan biedt een betaalbare oplossing voor kleine projecten met ontwikkeling van website, webapplicatie of webshop, inclusief SEO-optimalisatie en een maand gratis ondersteuning.",
         brand: {
-            "@type": "Brand",
-            name: title,
+            "@id": siteUrl + "/#organization",
         },
 
         offers: {
@@ -120,77 +117,19 @@ export const Head = () => {
             priceCurrency: "EUR",
             price: "295.00",
             availability: "https://schema.org/OnlineOnly",
-            itemCondition: "https://schema.org/NewCondition",
             priceValidUntil: discountUntil,
-            hasMerchantReturnPolicy: {
-                "@type": "MerchantReturnPolicy",
-                returnPolicyCategory:
-                    "https://schema.org/MerchantReturnNotPermitted",
-                applicableCountry: "NL",
-            },
-            shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingRate: {
-                    "@type": "MonetaryAmount",
-                    value: "0.00",
-                    currency: "EUR",
-                },
-                shippingDestination: {
-                    "@type": "DefinedRegion",
-                    addressCountry: "NL",
-                },
-                deliveryTime: {
-                    "@type": "ShippingDeliveryTime",
-                    handlingTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 0,
-                        maxValue: 1,
-                        unitCode: "DAY",
-                    },
-                    transitTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 1,
-                        maxValue: 5,
-                        unitCode: "DAY",
-                    },
-                },
-            },
-        },
-
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.5",
-            reviewCount: "10",
-        },
-
-        review: {
-            "@type": "Review",
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5",
-                worstRating: "1",
-            },
-            author: {
-                "@type": "Person",
-                name: "John Doe",
-            },
-            datePublished: dateReview,
-            reviewBody: "Great product!",
         },
     };
 
     const starterPlanSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": siteUrl + "/#starterplan",
         name: "Starter Plan",
         image: siteUrl + priceImage,
         description:
             "Het Starter Plan is ideaal voor groeiende bedrijven, met meer pagina's en functies, inclusief een blog en drie maanden gratis ondersteuning.",
         brand: {
-            "@type": "Brand",
-            name: title,
+            "@id": siteUrl + "/#organization",
         },
 
         offers: {
@@ -199,77 +138,19 @@ export const Head = () => {
             priceCurrency: "EUR",
             price: "595.00",
             availability: "https://schema.org/OnlineOnly",
-            itemCondition: "https://schema.org/NewCondition",
             priceValidUntil: discountUntil,
-            hasMerchantReturnPolicy: {
-                "@type": "MerchantReturnPolicy",
-                returnPolicyCategory:
-                    "https://schema.org/MerchantReturnNotPermitted",
-                applicableCountry: "NL",
-            },
-            shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingRate: {
-                    "@type": "MonetaryAmount",
-                    value: "0.00",
-                    currency: "EUR",
-                },
-                shippingDestination: {
-                    "@type": "DefinedRegion",
-                    addressCountry: "NL",
-                },
-                deliveryTime: {
-                    "@type": "ShippingDeliveryTime",
-                    handlingTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 0,
-                        maxValue: 1,
-                        unitCode: "DAY",
-                    },
-                    transitTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 1,
-                        maxValue: 5,
-                        unitCode: "DAY",
-                    },
-                },
-            },
-        },
-
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.5",
-            reviewCount: "10",
-        },
-
-        review: {
-            "@type": "Review",
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5",
-                worstRating: "1",
-            },
-            author: {
-                "@type": "Person",
-                name: "Jane Smith",
-            },
-            datePublished: dateReview,
-            reviewBody: "Great product!",
         },
     };
 
     const establishedPlanSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": siteUrl + "/#establishedplan",
         name: "Established Plan",
         image: siteUrl + priceImage,
         description:
             "Het Established Plan is geschikt voor gevestigde bedrijven, met een uitgebreider pakket aan diensten en zes maanden gratis ondersteuning.",
         brand: {
-            "@type": "Brand",
-            name: title,
+            "@id": siteUrl + "/#organization",
         },
 
         offers: {
@@ -278,77 +159,19 @@ export const Head = () => {
             priceCurrency: "EUR",
             price: "1025.00",
             availability: "https://schema.org/OnlineOnly",
-            itemCondition: "https://schema.org/NewCondition",
             priceValidUntil: discountUntil,
-            hasMerchantReturnPolicy: {
-                "@type": "MerchantReturnPolicy",
-                returnPolicyCategory:
-                    "https://schema.org/MerchantReturnNotPermitted",
-                applicableCountry: "NL",
-            },
-            shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingRate: {
-                    "@type": "MonetaryAmount",
-                    value: "0.00",
-                    currency: "EUR",
-                },
-                shippingDestination: {
-                    "@type": "DefinedRegion",
-                    addressCountry: "NL",
-                },
-                deliveryTime: {
-                    "@type": "ShippingDeliveryTime",
-                    handlingTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 0,
-                        maxValue: 1,
-                        unitCode: "DAY",
-                    },
-                    transitTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 1,
-                        maxValue: 5,
-                        unitCode: "DAY",
-                    },
-                },
-            },
-        },
-
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.5",
-            reviewCount: "10",
-        },
-
-        review: {
-            "@type": "Review",
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5",
-                worstRating: "1",
-            },
-            author: {
-                "@type": "Person",
-                name: "Joe Blow",
-            },
-            datePublished: dateReview,
-            reviewBody: "Great product!",
         },
     };
 
     const businessPlanSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": siteUrl + "/#businessplan",
         name: "Business Plan",
         image: siteUrl + priceImage,
         description:
             "Het Business Plan is ontworpen voor grote bedrijven of e-commerce, met onbeperkte pagina's, e-commercefunctionaliteit en een jaar gratis ondersteuning.",
         brand: {
-            "@type": "Brand",
-            name: title,
+            "@id": siteUrl + "/#organization",
         },
 
         offers: {
@@ -357,63 +180,7 @@ export const Head = () => {
             priceCurrency: "EUR",
             price: "1575.00",
             availability: "https://schema.org/OnlineOnly",
-            itemCondition: "https://schema.org/NewCondition",
             priceValidUntil: discountUntil,
-            hasMerchantReturnPolicy: {
-                "@type": "MerchantReturnPolicy",
-                returnPolicyCategory:
-                    "https://schema.org/MerchantReturnNotPermitted",
-                applicableCountry: "NL",
-            },
-            shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingRate: {
-                    "@type": "MonetaryAmount",
-                    value: "0.00",
-                    currency: "EUR",
-                },
-                shippingDestination: {
-                    "@type": "DefinedRegion",
-                    addressCountry: "NL",
-                },
-                deliveryTime: {
-                    "@type": "ShippingDeliveryTime",
-                    handlingTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 0,
-                        maxValue: 1,
-                        unitCode: "DAY",
-                    },
-                    transitTime: {
-                        "@type": "QuantitativeValue",
-                        minValue: 1,
-                        maxValue: 5,
-                        unitCode: "DAY",
-                    },
-                },
-            },
-        },
-
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.5",
-            reviewCount: "10",
-        },
-
-        review: {
-            "@type": "Review",
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5",
-                worstRating: "1",
-            },
-            author: {
-                "@type": "Person",
-                name: "Joe Schmo",
-            },
-            datePublished: dateReview,
-            reviewBody: "Great product!",
         },
     };
 

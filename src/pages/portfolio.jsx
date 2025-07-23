@@ -519,17 +519,10 @@ export const Head = () => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Portfolio",
                 item: siteUrl + "/portfolio/",
             },

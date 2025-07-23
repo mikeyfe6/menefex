@@ -82,19 +82,18 @@ const SEO = ({
     const webPageSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "@id": `${url}${pathname || ""}#webpage`,
         url: `${url}${pathname || ""}`,
         name: title,
         description: pageDescription,
         isPartOf: {
-            "@id": `${url}/#website`,
+            "@id": url + "/#webSite",
         },
     };
 
     const websiteSchema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "@id": url + "/#website",
+        "@id": url + "/#webSite",
         name: siteTitle,
         url: url,
     };

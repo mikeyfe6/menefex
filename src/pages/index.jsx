@@ -104,20 +104,6 @@ export const Head = () => {
         },
     ];
 
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
-        itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: title,
-                item: siteUrl,
-            },
-        ],
-    };
-
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -195,11 +181,7 @@ export const Head = () => {
                 title="#1 Website Specialist"
                 description="Menefex is een vooraanstaand & innovatief webmediabedrijf in Amsterdam. Wij ontwerpen, ontwikkelen en optimaliseren op maat gemaakte websites, webshops en webapplicaties. Vanaf €295,- uw digitale ambities waarmaken. Neem vandaag nog contact op!"
                 keywords="website specialist, webmediabedrijf, webdesign, webdevelopment, webshop, webapplicatie, digitale ambities, contact"
-                schemaMarkup={[
-                    breadcrumbSchema,
-                    localBusinessSchema,
-                    faqSchema,
-                ]}
+                schemaMarkup={[localBusinessSchema, faqSchema]}
             />
         </>
     );

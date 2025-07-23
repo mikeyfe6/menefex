@@ -43,23 +43,15 @@ const ContactPage = () => {
 export default ContactPage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
-        name: title,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Contact",
                 item: siteUrl + "/contact/",
             },
@@ -69,7 +61,6 @@ export const Head = () => {
     const contactPageSchema = {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "@id": siteUrl + "/contact/#contactpage",
         url: siteUrl + "/contact/",
         name: "Contact",
         description:
@@ -81,7 +72,7 @@ export const Head = () => {
             "@id": siteUrl + "/#organization",
         },
         isPartOf: {
-            "@id": siteUrl + "/#website",
+            "@id": siteUrl + "/#webSite",
         },
     };
 

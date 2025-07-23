@@ -45,17 +45,10 @@ export const Head = () => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Over Ons",
                 item: siteUrl + "/over/",
             },
@@ -65,7 +58,6 @@ export const Head = () => {
     const aboutPageSchema = {
         "@context": "https://schema.org",
         "@type": "AboutPage",
-        "@id": siteUrl + "/over/#aboutpage",
         url: siteUrl + "/over/",
         name: "Over Ons",
         description:
@@ -77,7 +69,7 @@ export const Head = () => {
             "@id": siteUrl + "/#person",
         },
         isPartOf: {
-            "@id": siteUrl + "/#website",
+            "@id": siteUrl + "/#webSite",
         },
     };
 

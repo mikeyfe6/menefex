@@ -50,43 +50,55 @@ const SeoPage = () => {
 export default SeoPage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
+
+    const pageTitle = "Zoekmachineoptimalisatie (SEO)";
+    const pageDescription =
+        "Verbeter de vindbaarheid van je website in zoekmachines met gerichte SEO-strategieën. Wij optimaliseren je website om hogere posities te behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt.";
+    const pageSlug = "/diensten/zoekmachineoptimalisatie/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Diensten",
                 item: siteUrl + "/diensten/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
-                name: "Zoekmachineoptimalisatie (SEO)",
-                item: siteUrl + "/diensten/zoekmachineoptimalisatie/",
+                position: 2,
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: pageTitle,
+        description: pageDescription,
+        provider: {
+            "@id": siteUrl + "/#organization",
+        },
+        serviceType: pageTitle,
+        category: "Digital Marketing",
+        areaServed: {
+            "@type": "Country",
+            name: "Netherlands",
+        },
+    };
+
     return (
         <SEO
-            title="Zoekmachineoptimalisatie (SEO)"
-            description="Verbeter de vindbaarheid van je website in zoekmachines met gerichte
-        SEO-strategieën. Wij optimaliseren je website om hogere posities te
-        behalen in zoekresultaten, zodat je meer verkeer en klanten aantrekt."
-            keywords=""
+            title={pageTitle}
+            description={pageDescription}
+            keywords="SEO, zoekmachineoptimalisatie, Google, zoekresultaten, website optimalisatie, keyword research, technische SEO"
             pathname="/diensten/zoekmachineoptimalisatie/"
-            schemaMarkup={breadcrumbSchema}
+            schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );
 };

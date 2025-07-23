@@ -50,43 +50,55 @@ const MaintenancePage = () => {
 export default MaintenancePage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
+
+    const pageTitle = "Onderhoud en/of updates uitvoeren";
+    const pageDescription =
+        "Regelmatig onderhoud en updates om de optimale prestaties en veiligheid van je website of webapplicatie te garanderen. Wij zorgen ervoor dat alles up-to-date blijft en probleemloos werkt.";
+    const pageSlug = "/diensten/onderhoud-updates-uitvoeren/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Diensten",
                 item: siteUrl + "/diensten/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
-                name: "Onderhoud en/of updates uitvoeren",
-                item: siteUrl + "/diensten/onderhoud-updates-uitvoeren/",
+                position: 2,
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: pageTitle,
+        description: pageDescription,
+        provider: {
+            "@id": siteUrl + "/#organization",
+        },
+        serviceType: pageTitle,
+        category: "Web Development",
+        areaServed: {
+            "@type": "Country",
+            name: "Netherlands",
+        },
+    };
+
     return (
         <SEO
-            title="Onderhoud en/of updates uitvoeren"
-            description="Regelmatig onderhoud en updates om de optimale prestaties en veiligheid
-        van je website of webapplicatie te garanderen. Wij zorgen ervoor dat
-        alles up-to-date blijft en probleemloos"
+            title={pageTitle}
+            description={pageDescription}
             keywords=""
-            pathname="/diensten/onderhoud-updates-uitvoeren/"
-            schemaMarkup={breadcrumbSchema}
+            pathname={pageSlug}
+            schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );
 };

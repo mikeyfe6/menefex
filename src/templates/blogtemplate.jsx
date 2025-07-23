@@ -563,28 +563,21 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 export default Post;
 
 export const Head = ({ pageContext: { nlContent } }) => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Blog",
                 item: siteUrl + "/blog/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
+                position: 2,
                 name: nlContent.title,
                 item: siteUrl + "/blog/" + nlContent.slug + "/",
             },
@@ -594,9 +587,8 @@ export const Head = ({ pageContext: { nlContent } }) => {
     const blogPostingSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "@id": siteUrl + "/#blogpost",
+        "@id": siteUrl + "/blog/" + nlContent.slug + "/#blogPosting",
         mainEntityOfPage: siteUrl + "/blog/" + nlContent.slug + "/",
-
         headline: nlContent.title,
         description: nlContent.subtitle,
         image: "https:" + nlContent.image.file.url,

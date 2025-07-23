@@ -50,43 +50,55 @@ const EmailTemplatePage = () => {
 export default EmailTemplatePage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
+
+    const pageTitle = "E-mailtemplate laten maken";
+    const pageDescription =
+        "Op maat gemaakte e-mail templates die passen bij jouw branding en zorgen voor een consistente en professionele uitstraling in al je e-mailcommunicatie.";
+    const pageSlug = "/diensten/email-template-laten-maken/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Diensten",
                 item: siteUrl + "/diensten/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
-                name: "E-mailtemplate laten maken",
-                item: siteUrl + "/diensten/email-template-laten-maken/",
+                position: 2,
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: pageTitle,
+        description: pageDescription,
+        provider: {
+            "@id": siteUrl + "/#organization",
+        },
+        serviceType: pageTitle,
+        category: "Web Development",
+        areaServed: {
+            "@type": "Country",
+            name: "Netherlands",
+        },
+    };
+
     return (
         <SEO
-            title="E-mailtemplate laten maken"
-            description="Op maat gemaakte e-mail templates die passen bij jouw branding en zorgen
-        voor een consistente en professionele uitstraling in al je
-        e-mailcommunicatie."
+            title={pageTitle}
+            description={pageDescription}
             keywords=""
             pathname="/diensten/email-template-laten-maken/"
-            schemaMarkup={breadcrumbSchema}
+            schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );
 };

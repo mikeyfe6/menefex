@@ -58,44 +58,55 @@ const WebappPage = () => {
 export default WebappPage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
+
+    const pageTitle = "Webapplicatie laten maken";
+    const pageDescription =
+        "Professioneel ontworpen webapplicaties die volledig zijn afgestemd op jouw bedrijfsprocessen en gebruikersbehoeften. Onze op maat gemaakte webapplicaties bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online succes te maximaliseren.";
+    const pageSlug = "/diensten/webapplicatie-laten-maken/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": siteUrl + "/#breadcrumb",
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Diensten",
                 item: siteUrl + "/diensten/",
             },
             {
                 "@type": "ListItem",
-                position: 3,
-                name: "Webapplicatie laten maken",
-                item: siteUrl + "/diensten/webapplicatie-laten-maken/",
+                position: 2,
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: pageTitle,
+        description: pageDescription,
+        provider: {
+            "@id": siteUrl + "/#organization",
+        },
+        serviceType: pageTitle,
+        category: "Web Development",
+        areaServed: {
+            "@type": "Country",
+            name: "Netherlands",
+        },
+    };
+
     return (
         <SEO
-            title="Webapplicatie laten maken"
-            description="Op maat gemaakte websites die perfect aansluiten bij jouw branding en
-        doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke
-        websites die zorgen voor een sterke online aanwezigheid en optimale
-        gebruikerservaring."
+            title={pageTitle}
+            description={pageDescription}
             keywords=""
-            pathname="/diensten/webapplicatie-laten-maken/"
-            schemaMarkup={breadcrumbSchema}
+            pathname={pageSlug}
+            schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );
 };
