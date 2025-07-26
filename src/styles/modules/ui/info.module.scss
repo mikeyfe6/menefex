@@ -97,7 +97,7 @@
 
         > ul {
             display: flex;
-            gap: rem-calc(14);
+            gap: rem-calc(12);
             justify-content: center;
             flex-wrap: wrap;
             margin-top: rem-calc(20);
@@ -109,7 +109,8 @@
                     justify-content: center;
                     background: transparent;
                     border-radius: $medium-radius;
-                    padding: rem-calc(6);
+                    aspect-ratio: 1 / 1;
+                    padding: rem-calc(2);
 
                     @include smooth-trans;
 

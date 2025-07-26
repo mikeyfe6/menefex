@@ -161,10 +161,6 @@
                 max-width: rem-calc(400);
 
                 @extend %image;
-
-                img {
-                    border-radius: $low-radius;
-                }
             }
         }
 
