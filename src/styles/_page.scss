@@ -84,8 +84,20 @@
         }
     }
 
-    // &-offset {
-    //     display: block;
-    //     height: rem-calc(120);
-    // }
+    &-offset {
+        display: block;
+        height: rem-calc(85);
+
+        @include phablet {
+            height: rem-calc(100);
+        }
+
+        @include laptop {
+            height: rem-calc(110);
+        }
+
+        @include desktop {
+            height: rem-calc(115);
+        }
+    }
 }

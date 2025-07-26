@@ -127,7 +127,7 @@ const Layout = ({ children }) => {
                 </header>
 
                 <main>
-                    {/* <section className="page-offset" /> */}
+                    <div className="page-offset" />
                     {children}
                 </main>
 
