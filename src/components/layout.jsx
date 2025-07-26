@@ -126,7 +126,10 @@ const Layout = ({ children }) => {
                     <MobileMenu show={sideDrawerOpen} />
                 </header>
 
-                <main>{children}</main>
+                <main>
+                    {/* <section className="page-offset" /> */}
+                    {children}
+                </main>
 
                 <Footer />
 

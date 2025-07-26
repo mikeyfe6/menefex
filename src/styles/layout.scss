@@ -34,6 +34,8 @@ main {
     flex: 1;
     margin-top: rem-calc(85);
 
+    // TODO vervangen met page-offset die padding-tops
+
     @include phablet {
         margin-top: rem-calc(100);
     }

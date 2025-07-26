@@ -67,7 +67,7 @@ const Services = () => {
             },
             excerpt: t("services.maintenance.excerpt"),
             focus: t("services.maintenance.focus", { returnObjects: true }),
-            url: "/diensten/onderhoud-en-support/",
+            url: "/diensten/onderhoud-updates-uitvoeren/",
             cta: t("services.maintenance.cta"),
         },
         optimizations: {
