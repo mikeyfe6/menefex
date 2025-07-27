@@ -192,7 +192,7 @@ export const Head = () => {
     return (
         <SEO
             title="FAQ"
-            description=""
+            description="Heeft u een vraag? Wij hebben waarschijnlijk het antwoord! Hieronder vindt u de meest gestelde vragen over onze diensten, processen en meer. Staat uw vraag er niet bij? Neem dan gerust contact met ons op."
             keywords=""
             pathname="/faq/"
             schemaMarkup={[breadcrumbSchema, faqSchema]}
