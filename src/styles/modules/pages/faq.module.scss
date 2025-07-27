@@ -45,10 +45,10 @@
 
                     > svg {
                         color: $secondary-color;
-                        padding-top: rem-calc(2);
+                        padding-top: rem-calc(4);
 
                         @include mobile {
-                            padding-top: rem-calc(3);
+                            padding-top: rem-calc(5);
                         }
                     }
 
