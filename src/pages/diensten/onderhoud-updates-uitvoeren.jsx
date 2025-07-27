@@ -21,7 +21,7 @@ const MaintenancePage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1 className="page-title">
+                <h1>
                     {t("services.maintenance.title")}
                     <span>.</span>
                 </h1>

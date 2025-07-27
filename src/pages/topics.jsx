@@ -69,7 +69,7 @@ const TopicPage = () => {
                 <h1>
                     Topics<span>.</span>
                 </h1>
-                <h2 className="page-sub">{t("topics.intro")}</h2>
+                <h2>{t("topics.intro")}</h2>
             </section>
 
             <section id="topics">

@@ -1,0 +1,74 @@
+@use "../../customs" as *;
+
+.faq {
+    $faq: &;
+
+    &-overview {
+        #{$faq}-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem-calc(24);
+
+            @include container;
+
+            #{$faq}-item {
+                margin-bottom: rem-calc(8);
+
+                #{$faq}-question {
+                    padding-bottom: rem-calc(8);
+
+                    > h3 {
+                        font-family: $poppins-font;
+                        font-weight: 600;
+                        letter-spacing: $high-spacing;
+
+                        @extend %as-h5;
+                        @include smooth-trans;
+                        @include underline($color: $smoke-color);
+                    }
+
+                    &:hover {
+                        > h3 {
+                            text-decoration-color: $link-color;
+                        }
+                    }
+                }
+
+                #{$faq}-answer {
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.4s;
+                    display: flex;
+                    gap: rem-calc(12);
+
+                    > svg {
+                        color: $secondary-color;
+                        padding-top: rem-calc(2);
+
+                        @include mobile {
+                            padding-top: rem-calc(3);
+                        }
+                    }
+
+                    > p {
+                        padding-bottom: rem-calc(16);
+                        max-width: 75ch;
+
+                        a {
+                            @include text-link;
+                        }
+                    }
+
+                    &.open {
+                        max-height: rem-calc(200);
+                        opacity: 1;
+                        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                            opacity 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
