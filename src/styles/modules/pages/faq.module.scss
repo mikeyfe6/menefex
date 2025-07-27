@@ -7,7 +7,7 @@
         #{$faq}-container {
             display: flex;
             flex-wrap: wrap;
-            gap: rem-calc(24);
+            gap: rem-calc(18);
 
             @include container;
 
@@ -53,8 +53,8 @@
                     }
 
                     > p {
-                        padding-bottom: rem-calc(16);
-                        max-width: 75ch;
+                        padding-bottom: rem-calc(12);
+                        max-width: 60ch;
 
                         a {
                             @include text-link;
