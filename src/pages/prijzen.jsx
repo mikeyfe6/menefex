@@ -22,12 +22,6 @@ const discountUntil = new Date("2025-12-31").toLocaleDateString("nl-NL", {
     year: "numeric",
 });
 
-const dateReview = new Date("2024-04-16").toLocaleDateString("nl-NL", {
-    day: "numeric",
-    month: "numeric",
-    year: "numeric",
-});
-
 const Prices = () => {
     const { t, isHydrated } = useTranslation();
     const callRef = useRef(null);
