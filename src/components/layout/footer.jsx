@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { Link } from "gatsby";
+
+import useSiteMetadata from "../../hooks/use-site-metadata";
 
 import useTranslation from "../../hooks/use-translation";
 
@@ -13,22 +15,7 @@ import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 const Footer = () => {
     const { t, isHydrated } = useTranslation();
 
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                    bizEmail
-                }
-            }
-        }
-    `);
-
-    const {
-        site: {
-            siteMetadata: { title, bizEmail },
-        },
-    } = data;
+    const { title, bizEmail } = useSiteMetadata();
 
     const today = new Date().getFullYear();
 
