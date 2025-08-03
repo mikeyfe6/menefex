@@ -64,11 +64,7 @@ const FaqPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("faq.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("faq.title")}</h1>
                 <h2>{t("faq.intro")}</h2>
             </section>
             <section className={faqStyles.faqOverview}>

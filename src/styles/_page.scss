@@ -13,6 +13,11 @@
             &:not(:only-child) {
                 margin-bottom: rem-calc(20);
             }
+
+            &::after {
+                content: ".";
+                color: $secondary-color;
+            }
         }
 
         h2 {
@@ -86,6 +91,7 @@
 
     &-offset {
         display: block;
+        width: 100%;
         height: rem-calc(85);
 
         @include phablet {

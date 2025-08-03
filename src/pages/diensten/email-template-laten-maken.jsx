@@ -21,11 +21,7 @@ const EmailTemplatePage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("services.email.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("services.email.title")}</h1>
                 <h2>{t("services.email.intro")}</h2>
             </section>
 

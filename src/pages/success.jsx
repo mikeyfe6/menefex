@@ -16,11 +16,8 @@ const ThankYouPage = () => {
 
     return (
         <Layout>
-            <section className="page-intro">
-                <h1>
-                    {t("success.title")}
-                    <span>..</span>
-                </h1>
+            <section className="page-intro success">
+                <h1>{t("success.title")}</h1>
                 <h2>{t("success.text")}</h2>
                 <br />
                 <Link to="/" className="page-link">

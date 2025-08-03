@@ -21,11 +21,7 @@ const OptimizationPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("services.optimizations.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("services.optimizations.title")}</h1>
                 <h2>{t("services.optimizations.intro")}</h2>
             </section>
 

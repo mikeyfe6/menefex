@@ -21,11 +21,7 @@ const WebshopPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("services.webshops.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("services.webshops.title")}</h1>
                 <h2>{t("services.webshops.intro")}</h2>
             </section>
 

@@ -22,9 +22,7 @@ const ContactPage = () => {
     return (
         <Layout>
             <section className="page-intro contact">
-                <h1>
-                    Contact<span>.</span>
-                </h1>
+                <h1>Contact</h1>
                 <h2 dangerouslySetInnerHTML={{ __html: t("contact.intro") }} />
             </section>
 

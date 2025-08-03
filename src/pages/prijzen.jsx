@@ -38,11 +38,7 @@ const Prices = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("prices.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("prices.title")}</h1>
                 <h2>
                     {t("prices.intro.one")}{" "}
                     <Link to="/contact/" className={pricesStyles.contactUs}>

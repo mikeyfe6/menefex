@@ -20,10 +20,7 @@ const ServicesPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("services.title")}
-                    <span>.</span>
-                </h1>
+                <h1>{t("services.title")}</h1>
                 <h2>{t("services.intro")}</h2>
             </section>
             <section className={servicesStyles.servicesOverview}>

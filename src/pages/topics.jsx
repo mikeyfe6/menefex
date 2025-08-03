@@ -66,9 +66,7 @@ const TopicPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    Topics<span>.</span>
-                </h1>
+                <h1>Topics</h1>
                 <h2>{t("topics.intro")}</h2>
             </section>
 

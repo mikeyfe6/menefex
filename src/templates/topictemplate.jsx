@@ -46,11 +46,7 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    Topics
-                    <span>.</span>
-                </h1>
-
+                <h1>Topics</h1>
                 <h2>
                     <span
                         style={{ color: content.bdcolor, fontWeight: "bold" }}

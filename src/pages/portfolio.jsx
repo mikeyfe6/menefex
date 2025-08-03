@@ -40,10 +40,7 @@ const PortfolioPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("portfolio.title")}
-                    <span>.</span>
-                </h1>
+                <h1>{t("portfolio.title")}</h1>
                 <h2>{t("portfolio.intro")}</h2>
             </section>
 

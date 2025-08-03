@@ -21,11 +21,7 @@ const MaintenancePage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("services.maintenance.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("services.maintenance.title")}</h1>
                 <h2>{t("services.maintenance.intro")}</h2>
             </section>
 

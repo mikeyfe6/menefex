@@ -80,10 +80,7 @@ const BlogPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    Blog
-                    <span>.</span>
-                </h1>
+                <h1>Blog</h1>
                 <h2>What goes through our mind..</h2>
             </section>
 

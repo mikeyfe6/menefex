@@ -21,10 +21,7 @@ const AboutPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("about.title")}
-                    <span>.</span>
-                </h1>
+                <h1>{t("about.title")}</h1>
             </section>
 
             <div className={aboutStyles.aboutSpotify}>

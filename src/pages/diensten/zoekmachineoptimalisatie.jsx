@@ -21,11 +21,7 @@ const SeoPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>
-                    {t("services.seo.title")}
-                    <span>.</span>
-                </h1>
-
+                <h1>{t("services.seo.title")}</h1>
                 <h2>{t("services.seo.intro")}</h2>
             </section>
 
