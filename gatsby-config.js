@@ -110,14 +110,14 @@ module.exports = {
                 query: `
                 {
                     site {
-                    siteMetadata {
-                        title
-                        author
-                        description
-                        bizEmail
-                        authorEmail
-                        siteUrl
-                    }
+                        siteMetadata {
+                            title
+                            author
+                            description
+                            bizEmail
+                            authorEmail
+                            siteUrl
+                        }
                     }
                 }
                 `,

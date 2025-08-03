@@ -73,7 +73,7 @@ const Prices = () => {
 export default Prices;
 
 export const Head = () => {
-    const { title, siteUrl, priceImage } = useSiteMetadata();
+    const { siteUrl, priceImage } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -82,12 +82,6 @@ export const Head = () => {
             {
                 "@type": "ListItem",
                 position: 1,
-                name: title,
-                item: siteUrl,
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
                 name: "Prijzen & tarieven",
                 item: siteUrl + "/prijzen/",
             },
