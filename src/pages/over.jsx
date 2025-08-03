@@ -40,7 +40,7 @@ const AboutPage = () => {
 export default AboutPage;
 
 export const Head = () => {
-    const { siteUrl, title } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",

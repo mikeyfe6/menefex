@@ -514,7 +514,7 @@ const PortfolioPage = () => {
 export default PortfolioPage;
 
 export const Head = () => {
-    const { title, siteUrl } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
