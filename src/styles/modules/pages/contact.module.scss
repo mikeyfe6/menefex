@@ -13,21 +13,13 @@
 
     &-container {
         display: flex;
-        gap: rem-calc(64);
+        gap: rem-calc(48);
         flex-direction: column;
 
         @include container;
 
-        @include phablet {
-            gap: rem-calc(32);
-        }
-
         @include tablet {
             flex-direction: row;
-        }
-
-        @include laptop {
-            gap: rem-calc(48);
         }
 
         @include desktop {
