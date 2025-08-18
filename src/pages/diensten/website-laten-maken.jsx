@@ -26,7 +26,6 @@ const WebsitePage = () => {
                         __html: t("services.websites.title"),
                     }}
                 />
-
                 <h2>{t("services.websites.intro")}</h2>
             </section>
 

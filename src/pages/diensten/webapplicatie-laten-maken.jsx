@@ -26,7 +26,6 @@ const WebappPage = () => {
                         __html: t("services.webapps.title"),
                     }}
                 />
-
                 <h2>{t("services.webapps.intro")}</h2>
             </section>
 

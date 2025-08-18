@@ -21,12 +21,23 @@ const MaintenancePage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>{t("services.maintenance.title")}</h1>
+                <h1
+                    dangerouslySetInnerHTML={{
+                        __html: t("services.maintenance.title"),
+                    }}
+                />
                 <h2>{t("services.maintenance.intro")}</h2>
             </section>
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("services.maintenance.content"),
+                        }}
+                        className={servicesStyles.servicesContent}
+                    />
+
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}

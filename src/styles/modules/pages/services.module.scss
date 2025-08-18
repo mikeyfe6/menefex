@@ -78,7 +78,7 @@
                     @include fluid-typing(19, 22);
                 }
 
-                ol {
+                > ol {
                     text-decoration-color: $secondary-color;
                     list-style-type: decimal;
                     margin-inline-start: rem-calc(16);
@@ -89,7 +89,7 @@
                     }
                 }
 
-                ul {
+                > ul {
                     display: flex;
                     flex-direction: column;
                     gap: rem-calc(12);
@@ -105,6 +105,23 @@
                             margin-right: rem-calc(8);
                         }
                     }
+                }
+
+                > hr {
+                    margin: rem-calc(48 0);
+                    border: 0.5px solid $lightgrey-color;
+                }
+
+                > p {
+                    background: linear-gradient(
+                        145deg,
+                        $primary-color,
+                        $dark-color
+                    );
+                    color: $white-color;
+                    padding: rem-calc(12);
+                    outline: 2px solid $primary-color;
+                    border-radius: $medium-radius;
                 }
             }
 

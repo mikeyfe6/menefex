@@ -27,6 +27,13 @@ const EmailTemplatePage = () => {
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("services.email.content"),
+                        }}
+                        className={servicesStyles.servicesContent}
+                    />
+
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}

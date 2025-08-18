@@ -21,12 +21,23 @@ const WebshopPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>{t("services.webshops.title")}</h1>
+                <h1
+                    dangerouslySetInnerHTML={{
+                        __html: t("services.webshops.title"),
+                    }}
+                />
                 <h2>{t("services.webshops.intro")}</h2>
             </section>
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("services.webshops.content"),
+                        }}
+                        className={servicesStyles.servicesContent}
+                    />
+
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}

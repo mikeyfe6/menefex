@@ -21,12 +21,23 @@ const SeoPage = () => {
     return (
         <Layout>
             <section className="page-intro">
-                <h1>{t("services.seo.title")}</h1>
+                <h1
+                    dangerouslySetInnerHTML={{
+                        __html: t("services.seo.title"),
+                    }}
+                />
                 <h2>{t("services.seo.intro")}</h2>
             </section>
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("services.seo.content"),
+                        }}
+                        className={servicesStyles.servicesContent}
+                    />
+
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
                             <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
