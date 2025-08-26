@@ -50,7 +50,7 @@
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
     "google-map-react": "^2.2.5",
-    "i18next": "^25.3.6",
+    "i18next": "^25.4.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
     "puppeteer": "^24.16.2",
