@@ -1053,10 +1053,10 @@
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
 
-"@contentful/live-preview@^4.6.39":
-  version "4.6.39"
-  resolved "https://registry.yarnpkg.com/@contentful/live-preview/-/live-preview-4.6.39.tgz#289fab7f60f8b3ccc069410366e2817e2446aa5f"
-  integrity sha512-NhuDLIb/aQMPgxjwnQ8EihLknccytl7haOWcoAhOd8g7EEdzE1AW2IqMLFRPF+XIDdHqZjCYHG5qsreGle5DvQ==
+"@contentful/live-preview@^4.6.41":
+  version "4.6.41"
+  resolved "https://registry.yarnpkg.com/@contentful/live-preview/-/live-preview-4.6.41.tgz#0ba11655cc5150690a05592ecff30e2d134d103d"
+  integrity sha512-NuQ+4uG5zL5FgiELHly1RHb55BHnYQRtIguuucy4I9h/Z0b26bmTterSR416hZ/I1JU4257+62TKkbrey3jhCQ==
   dependencies:
     "@contentful/content-source-maps" "^0.11.31"
     "@contentful/rich-text-types" "^17.0.0"
