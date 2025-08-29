@@ -45,11 +45,21 @@
                 / auto 1fr 1fr;
         }
 
-        > h3 {
+        > span {
             grid-area: title;
             margin-top: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: rem-calc(12 16);
 
-            @include section-title($space: 0);
+            > h3 {
+                @include section-title($space: 0);
+            }
+
+            a {
+                @include more-button;
+            }
         }
 
         > p {

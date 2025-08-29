@@ -53,11 +53,11 @@
     "i18next": "^25.4.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
-    "puppeteer": "^24.17.0",
+    "puppeteer": "^24.17.1",
     "react": "^18.3.1",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.3.1",
-    "react-i18next": "^15.7.2",
+    "react-i18next": "^15.7.3",
     "sass": "^1.91.0",
     "swiper": "^11.2.10"
   },

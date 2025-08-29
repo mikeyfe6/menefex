@@ -278,6 +278,26 @@
     }
 }
 
+@mixin more-button {
+    display: block;
+    border-radius: $low-radius;
+    background: $secondary-color;
+    padding: rem-calc(6 12);
+    font-weight: 500;
+    width: fit-content;
+
+    @include smooth-trans;
+    @extend %as-tiny;
+
+    @include mini {
+        white-space: nowrap;
+    }
+
+    &:hover {
+        background: $snow-color;
+    }
+}
+
 // COMPONENTS --------------------------------------------
 
 @mixin blog-card {

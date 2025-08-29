@@ -35,7 +35,11 @@ export default {
         more: "More about Menefex",
     },
 
-    actual: { title: "Actual", readMore: "Read more..." },
+    actual: {
+        title: "Actual",
+        readMore: "Read more...",
+        seeAll: "See all articles",
+    },
 
     services: {
         title: "Our Services",
@@ -44,6 +48,7 @@ export default {
         intro: "Here you will find an overview of the different services we offer. These services are designed to help businesses with their online presence and efficiency.",
         allServices: "Show all services",
         goToPrices: "Go to prices",
+        seeAll: "See all services",
         websites: {
             // component
             name: "Websites",
@@ -221,6 +226,7 @@ export default {
         keeptreal: "Keep It Real Foundation from Amsterdam",
         priozorg: "Aid organization Prio Zorg from Amsterdam",
         edutainuproductions: "Edutain U Productions from Amsterdam",
+        seeAll: "See all projects",
     },
 
     portfolio: {
@@ -402,6 +408,7 @@ export default {
         intro: "Have a question? We probably have the answer! Below you will find the most frequently asked questions about our services, processes, and more. If your question is not listed, feel free to contact us.",
         priceText: "View our",
         priceLink: "price overview",
+        seeAll: "See all questions",
         itemOne: {
             question: "What do I need to get a website made?",
             answer: "Nothing complicated at all. During a free introductory meeting, we'll discuss your goals, ideas, and needs. After that, we’ll take care of everything.",

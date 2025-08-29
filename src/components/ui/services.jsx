@@ -123,7 +123,11 @@ const Services = () => {
                         {services[selected].cta}
                     </Link>
                 </div>
-                <h3>{t("services.title")}</h3>
+                <span>
+                    <h3>{t("services.title")}</h3>
+                    <Link to="/diensten/">{t("services.seeAll")}</Link>
+                </span>
+
                 <p>{t("services.subtitle")}</p>
                 {serviceKeys.map((key) => (
                     <button

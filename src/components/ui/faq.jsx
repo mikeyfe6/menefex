@@ -73,7 +73,10 @@ const Faq = () => {
                         />
                     </div>
                     <div className={faqStyles.faqContent}>
-                        <h3>{t("faq.title")}</h3>
+                        <span>
+                            <h3>{t("faq.title")}</h3>
+                            <Link to="/faq/">{t("faq.seeAll")}</Link>
+                        </span>
                         {faqData.map((item, idx) => (
                             <div key={idx} className={faqStyles.faqItem}>
                                 <button

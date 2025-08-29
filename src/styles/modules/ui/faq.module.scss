@@ -36,10 +36,22 @@
             }
 
             #{$faq}-content {
-                > h3 {
-                    @include section-title;
+                > span {
+                    margin-bottom: rem-calc(36);
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: rem-calc(12 16);
 
-                    @extend %as-h2;
+                    > h3 {
+                        @include section-title($space: rem-calc(0));
+
+                        @extend %as-h2;
+                    }
+
+                    > a {
+                        @include more-button;
+                    }
                 }
 
                 #{$faq}-item {

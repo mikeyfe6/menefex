@@ -35,7 +35,11 @@ export default {
         more: "Meer over Menefex",
     },
 
-    actual: { title: "Actueel", readMore: "Lees meer..." },
+    actual: {
+        title: "Actueel",
+        readMore: "Lees meer...",
+        seeAll: "Zie alle artikelen",
+    },
 
     services: {
         title: "Onze Diensten",
@@ -44,6 +48,7 @@ export default {
         intro: "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
         allServices: "Alle diensten",
         goToPrices: "Ga naar prijzen",
+        seeAll: "Zie alle diensten",
         websites: {
             // component
             name: "Websites",
@@ -212,6 +217,7 @@ export default {
         keeptreal: "Stichting Keep It Real uit Amsterdam",
         priozorg: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
         edutainuproductions: "Edutain U Productions uit Amsterdam",
+        seeAll: "Zie alle projecten",
     },
 
     portfolio: {
@@ -402,6 +408,7 @@ export default {
         intro: "Heeft u een vraag? Wij hebben waarschijnlijk het antwoord! Hieronder vindt u de meest gestelde vragen over onze diensten, processen en meer. Staat uw vraag er niet bij? Neem dan gerust contact met ons op.",
         priceText: "Bekijk hier ons",
         priceLink: "prijsoverzicht",
+        seeAll: "Zie alle vragen",
         itemOne: {
             question: "Wat heb ik nodig om een website te laten maken?",
             answer: "Helemaal niks ingewikkelds. Tijdens een gratis kennismaking bespreken we samen je wensen, doelen en ideeën. Daarna regelen wij de rest.",

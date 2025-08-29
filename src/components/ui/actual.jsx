@@ -78,7 +78,10 @@ const Actual = () => {
 
     return (
         <section className={actualStyles.actual} id="actual">
-            <h3>{t("actual.title")}</h3>
+            <span>
+                <h3>{t("actual.title")}</h3>
+                <Link to="/blog/">{t("actual.seeAll")}</Link>
+            </span>
             <div className={actualStyles.actualContainer}>
                 {posts.map(({ node }) => (
                     <div className={actualStyles.actualWrapper} key={node.slug}>

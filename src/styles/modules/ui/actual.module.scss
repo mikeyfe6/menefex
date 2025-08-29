@@ -3,8 +3,23 @@
 .actual {
     $actual: &;
 
-    > h3 {
-        @include section-title(center, $space: rem-calc(36));
+    text-align: center;
+
+    > span {
+        margin-bottom: rem-calc(36);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem-calc(12 16);
+
+        > h3 {
+            @include section-title(center, $space: rem-calc(0));
+        }
+
+        > a {
+            @include more-button;
+        }
     }
 
     &-container {

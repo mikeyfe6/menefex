@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -182,7 +182,10 @@ const Projects = () => {
     return (
         <section id="projects">
             <div className={projectsStyles.projectsContainer}>
-                <h3>{t("projects.title")}</h3>
+                <span>
+                    <h3>{t("projects.title")}</h3>
+                    <Link to="/portfolio/">{t("projects.seeAll")}</Link>
+                </span>
                 <div className={projectsStyles.projectsWrapper}>
                     <div className={projectsStyles.projectsContent}>
                         {logoImg && (
