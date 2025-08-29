@@ -396,11 +396,11 @@ export default {
     successGoBack: "Go back to the homepage!",
 
     usp: {
-        one: "Simple and custom-made websites that grow with your business",
-        two: "Tailor-made web solutions, no templates — just results",
-        three: "From idea to launch — websites & web apps that convert",
-        four: "Fast, optimized & future-proof development",
-        five: "One partner for all your digital needs — design, code & SEO",
+        one: "Simple and <b>custom-made web solutions</b> that grow with you",
+        two: "We build what you envision — and what <b>your customers want to experience</b>",
+        three: "From idea to launch — <b>web solutions that convert</b>",
+        four: "Faster, smarter, scalable — <b>ready for the future</b>",
+        five: "<b>One partner</b> for all your digital needs — design, code & SEO",
     },
 
     faq: {

@@ -396,11 +396,11 @@ export default {
     },
 
     usp: {
-        one: "Eenvoudige en op maat gemaakte websites die meegroeien met jouw bedrijf",
-        two: "Op maat gemaakte weboplossingen, geen sjablonen — alleen resultaten",
-        three: "Van idee tot lancering — websites & webapps die converteren",
-        four: "Snel, geoptimaliseerd & toekomstbestendig gebouwd",
-        five: "Eén partner voor al je digitale behoeften — design, code & SEO",
+        one: "Eenvoudige en <b>op maat gemaakte weboplossingen</b> die meegroeien",
+        two: "Wij bouwen wat jij voor ogen hebt - en wat <b>je klanten willen ervaren</b>",
+        three: "Van idee tot lancering — <b>weboplossingen die converteren</b>",
+        four: "Sneller, slimmer, schaalbaar — <b>klaar voor de toekomst</b>",
+        five: "<b>Eén partner</b> voor al je digitale behoeften — design, code & SEO",
     },
 
     faq: {
