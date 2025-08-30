@@ -337,7 +337,7 @@
                 gap: rem-calc(8);
                 margin-top: rem-calc(8);
 
-                @include fluid-typing(11, 13);
+                @include fluid-typing(10, 13);
 
                 @include phablet {
                     gap: rem-calc(12);
