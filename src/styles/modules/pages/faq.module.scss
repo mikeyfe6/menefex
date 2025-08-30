@@ -113,11 +113,15 @@
             @include container($mb: rem-calc(48));
 
             > button {
-                padding: rem-calc(10 20);
+                padding: rem-calc(8 16);
                 border: 2px solid $snow-color;
                 border-radius: $medium-radius;
                 transition: all 0.3s ease;
                 font-weight: 500;
+
+                @include mobile {
+                    padding: rem-calc(10 20);
+                }
 
                 &:hover {
                     border-color: $link-color;
