@@ -249,14 +249,6 @@ const FaqPage = () => {
                                                     }
                                                 >
                                                     <h3>{item.question}</h3>
-                                                    <FontAwesomeIcon
-                                                        icon={[
-                                                            "fas",
-                                                            isOpen
-                                                                ? "chevron-up"
-                                                                : "chevron-down",
-                                                        ]}
-                                                    />
                                                 </button>
                                                 <div
                                                     className={`${
@@ -267,6 +259,13 @@ const FaqPage = () => {
                                                             : ""
                                                     }`}
                                                 >
+                                                    <FontAwesomeIcon
+                                                        icon={[
+                                                            "fas",
+                                                            "right-long",
+                                                        ]}
+                                                        size="lg"
+                                                    />
                                                     <p>
                                                         {item.answer}
                                                         {item.link && (
