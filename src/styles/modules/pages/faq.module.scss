@@ -44,7 +44,7 @@
                         @include smooth-trans;
                         @include underline($color: $smoke-color);
 
-                        @include fluid-typing(19, 21);
+                         @include fluid-typing(18, 21);
                     }
 
                     &[aria-expanded="true"] {
