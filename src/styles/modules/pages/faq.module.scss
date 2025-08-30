@@ -84,7 +84,9 @@
                     > p {
                         padding-bottom: rem-calc(12);
                         max-width: 70ch;
-                        opacity: 0.9;
+                        opacity: 0.95;
+
+                        @include fluid-typing(17, 19);
 
                         a {
                             @include text-link;
