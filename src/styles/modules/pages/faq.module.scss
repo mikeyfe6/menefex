@@ -19,6 +19,10 @@
                     padding-bottom: rem-calc(8);
                     border-bottom: 2px solid rgba($lemon-color, 0.75);
 
+                    > h2 {
+                        @extend %as-h3;
+                    }
+
                     &-items {
                         display: flex;
                         flex-direction: column;
