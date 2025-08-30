@@ -20,6 +20,7 @@
                 border-radius: $low-radius;
                 outline: 2px solid $primary-color;
                 background: linear-gradient(145deg, $white-color, $smoke-color);
+                position: relative;
 
                 @include mobile {
                     min-width: rem-calc(375);
@@ -48,12 +49,24 @@
 
                 > p {
                     margin-bottom: rem-calc(48);
+                    z-index: 1;
                 }
 
                 > a {
                     margin-top: auto;
 
                     @include primary-button($width: 100%);
+                }
+
+                > svg {
+                    position: absolute;
+                    height: 10em;
+                    width: 10em;
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    opacity: 0.1375;
+                    color: $secondary-color;
                 }
             }
         }

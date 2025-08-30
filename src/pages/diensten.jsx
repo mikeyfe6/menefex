@@ -2,6 +2,8 @@ import * as React from "react";
 
 import { Link } from "gatsby";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import useTranslation from "../hooks/use-translation";
 import useSiteMetadata from "../hooks/use-site-metadata";
 
@@ -39,6 +41,7 @@ const ServicesPage = () => {
                         >
                             {t("services.websites.cta")}
                         </Link>
+                        <FontAwesomeIcon icon={["fas", "globe"]} />
                     </div>
                     <div>
                         <h3
@@ -54,6 +57,7 @@ const ServicesPage = () => {
                         >
                             {t("services.webapps.cta")}
                         </Link>
+                        <FontAwesomeIcon icon={["fas", "mobile"]} />
                     </div>
                     <div>
                         <h3
@@ -69,6 +73,7 @@ const ServicesPage = () => {
                         >
                             {t("services.webshops.cta")}
                         </Link>
+                        <FontAwesomeIcon icon={["fas", "shopping-cart"]} />
                     </div>
                     <div>
                         <h3
@@ -84,6 +89,7 @@ const ServicesPage = () => {
                         >
                             {t("services.seo.cta")}
                         </Link>
+                        <FontAwesomeIcon icon={["fab", "searchengin"]} />
                     </div>
                     <div>
                         <h3
@@ -99,6 +105,7 @@ const ServicesPage = () => {
                         >
                             {t("services.maintenance.cta")}
                         </Link>
+                        <FontAwesomeIcon icon={["fas", "wrench"]} />
                     </div>
                     <div>
                         <h3
@@ -114,6 +121,7 @@ const ServicesPage = () => {
                         >
                             {t("services.optimizations.cta")}
                         </Link>
+                        <FontAwesomeIcon icon={["fas", "rocket"]} />
                     </div>
                     <div>
                         <h3
@@ -129,6 +137,9 @@ const ServicesPage = () => {
                         >
                             {t("services.email.cta")}
                         </Link>
+                        <FontAwesomeIcon
+                            icon={["fas", "envelope-circle-check"]}
+                        />
                     </div>
                 </div>
             </section>

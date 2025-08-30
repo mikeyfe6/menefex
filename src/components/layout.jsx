@@ -41,6 +41,7 @@ import {
     faAnglesRight,
     faAnglesLeft,
     faEye,
+    faEnvelopeCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 
@@ -80,7 +81,8 @@ library.add(
     faFeatherPointed,
     faAnglesRight,
     faAnglesLeft,
-    faEye
+    faEye,
+    faEnvelopeCircleCheck
 );
 
 import useTranslation from "../hooks/use-translation";
