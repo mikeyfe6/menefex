@@ -6,10 +6,26 @@
     &-overview {
         #{$faq}-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: rem-calc(18);
+            flex-direction: column;
+            gap: rem-calc(48);
 
             @include container;
+
+            > div {
+                scroll-margin-top: rem-calc(120);
+
+                #{$faq}-category {
+                    margin-bottom: rem-calc(24);
+                    padding-bottom: rem-calc(8);
+                    border-bottom: 2px solid rgba($lemon-color, 0.75);
+
+                    &-items {
+                        display: flex;
+                        flex-direction: column;
+                        gap: rem-calc(16);
+                    }
+                }
+            }
 
             #{$faq}-item {
                 margin-bottom: rem-calc(8);
@@ -20,16 +36,25 @@
                     > h3 {
                         font-family: $poppins-font;
                         font-weight: 600;
-                        letter-spacing: $high-spacing;
+                        letter-spacing: $medium-spacing;
+                        opacity: 0.75;
 
-                        @extend %as-h5;
                         @include smooth-trans;
                         @include underline($color: $smoke-color);
+
+                        @include fluid-typing(20, 22);
+                    }
+
+                    &[aria-expanded="true"] {
+                        > h3 {
+                            opacity: 1;
+                        }
                     }
 
                     &:hover {
                         > h3 {
                             text-decoration-color: $link-color;
+                            opacity: 1;
                         }
                     }
                 }
@@ -54,7 +79,7 @@
 
                     > p {
                         padding-bottom: rem-calc(12);
-                        max-width: 60ch;
+                        max-width: 70ch;
 
                         a {
                             @include text-link;
@@ -67,6 +92,30 @@
                         transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
                             opacity 0.5s;
                     }
+                }
+            }
+        }
+
+        #{$faq}-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem-calc(12);
+            margin-bottom: rem-calc(32);
+            padding-bottom: rem-calc(16);
+
+            @include container($mb: rem-calc(48));
+
+            > button {
+                padding: rem-calc(10 20);
+                border: 2px solid $snow-color;
+                border-radius: $medium-radius;
+                transition: all 0.3s ease;
+                font-weight: 500;
+
+                &:hover {
+                    border-color: $link-color;
+                    background-color: $smoke-color;
+                    transform: translateY(-2px);
                 }
             }
         }

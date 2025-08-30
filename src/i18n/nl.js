@@ -409,6 +409,203 @@ export default {
         priceText: "Bekijk hier ons",
         priceLink: "prijsoverzicht",
         seeAll: "Zie alle vragen",
+
+        categories: {
+            websites: "Website laten maken",
+            webapps: "Webapplicatie laten maken",
+            webshops: "Webshop laten maken",
+            seo: "SEO (Zoekmachineoptimalisatie)",
+            maintenance: "Onderhoud & Updates",
+            optimizations: "Optimalisaties",
+            emailTemplates: "E-mail templates",
+        },
+
+        websites: {
+            itemOne: {
+                question:
+                    "Wat is het verschil tussen een template-website en een maatwerk-website?",
+                answer: "Een template-website is gebaseerd op bestaande designs en functionaliteiten, terwijl een maatwerk-website volledig op maat wordt ontworpen en gebouwd voor jouw specifieke behoeften en branding. Bij Menefex werken we uitsluitend met maatwerk voor een unieke online aanwezigheid.",
+            },
+            itemTwo: {
+                question: "Hoe bepalen jullie het design van mijn website?",
+                answer: "We beginnen met een uitgebreid intakegesprek waarin we jouw wensen, doelgroep en merkidentiteit bespreken. Op basis daarvan maken we ontwerpen die perfect bij jouw bedrijf passen en zorgen voor een sterke visuele identiteit.",
+            },
+            itemThree: {
+                question:
+                    "Kan mijn website later uitgebreid worden met extra functies?",
+                answer: "Absoluut! We bouwen onze websites flexibel en schaalbaar, zodat ze kunnen meegroeien met je bedrijf. Of je nu een webshop, blog, boekingssysteem of andere functionaliteiten wilt toevoegen - alles is mogelijk.",
+            },
+            itemFour: {
+                question: "Hoe zorgen jullie dat mijn website snel laadt?",
+                answer: "We optimaliseren elke website voor snelle laadtijden door gebruik te maken van moderne technieken zoals code-optimalisatie, beeldcompressie, efficiënte hosting en CDN's. Snelheid is cruciaal voor zowel gebruikerservaring als SEO.",
+            },
+            itemFive: {
+                question:
+                    "Wat gebeurt er als ik na oplevering nog aanpassingen wil doen?",
+                answer: "Je krijgt een gebruiksvriendelijk CMS waarmee je zelf eenvoudig content kunt aanpassen. Voor technische wijzigingen of uitbreidingen kunnen we dat voor je regelen tegen ons uurtarief van €45 per uur.",
+            },
+        },
+
+        webapps: {
+            itemOne: {
+                question:
+                    "Wat is een webapplicatie precies en hoe verschilt het van een gewone website?",
+                answer: "Een webapplicatie is interactief en biedt specifieke functionaliteiten zoals gegevensinvoer, berekeningen, processen en gebruikersaccounts. Een website toont voornamelijk informatie, terwijl een webapp een tool is waarmee gebruikers taken kunnen uitvoeren.",
+            },
+            itemTwo: {
+                question:
+                    "Hoe bepalen jullie welke functionaliteiten mijn bedrijf nodig heeft?",
+                answer: "We analyseren je bedrijfsprocessen en workflows tijdens een uitgebreide consultatie. We identificeren knelpunten en kansen voor automatisering, en ontwerpen een webapp die je processen optimaliseert en tijd bespaart.",
+            },
+            itemThree: {
+                question: "Kan mijn webapp ook offline gebruikt worden?",
+                answer: "Ja, we kunnen Progressive Web App (PWA) functionaliteiten implementeren waardoor je webapp ook offline beschikbaar is. Data wordt gesynchroniseerd zodra er weer internetverbinding is.",
+            },
+            itemFour: {
+                question:
+                    "Hoe zit het met de beveiliging van mijn webapplicatie?",
+                answer: "Veiligheid staat voorop. We implementeren de nieuwste beveiligingsprotocollen, SSL-certificaten, secure databases, gebruikersauthenticatie en regelmatige security updates om je data optimaal te beschermen.",
+            },
+            itemFive: {
+                question: "Wordt de applicatie ook mobielvriendelijk gebouwd?",
+                answer: "Zeker! Alle webapplicaties zijn volledig responsive en geoptimaliseerd voor desktop, tablet en mobiel. We kunnen ook native app-achtige functionaliteiten toevoegen zoals push-notificaties en toegang tot camera/microfoon.",
+            },
+        },
+
+        webshops: {
+            itemOne: {
+                question:
+                    "Werken jullie met WooCommerce, Shopify of maatwerk oplossingen?",
+                answer: "We werken bij voorkeur met maatwerk oplossingen die volledig op jouw behoeften zijn afgestemd. Voor snellere implementatie kunnen we ook WooCommerce of andere platforms gebruiken, afhankelijk van je wensen en budget.",
+            },
+            itemTwo: {
+                question:
+                    "Kan mijn webshop meerdere betaalmethoden (iDEAL, PayPal, Klarna, etc.) ondersteunen?",
+                answer: "Ja, we integreren alle populaire betaalmethoden zoals iDEAL, PayPal, Klarna, creditcards en bankoverschrijvingen. We zorgen voor een soepele en veilige checkout-ervaring voor je klanten.",
+            },
+            itemThree: {
+                question:
+                    "Hoe zorgen jullie dat mijn webshop goed gevonden wordt in Google?",
+                answer: "We bouwen elke webshop SEO-vriendelijk met geoptimaliseerde productpagina's, categoriestructuur, snelle laadtijden en technische SEO. Ook kunnen we doorlopende SEO-optimalisatie verzorgen voor betere rankings.",
+            },
+            itemFour: {
+                question:
+                    "Is het mogelijk om voorraadbeheer en facturatie te koppelen aan de webshop?",
+                answer: "Absoluut! We kunnen koppelingen maken met populaire boekhoud- en voorraadsystemen, of een eigen voorraad- en facturatiesysteem ontwikkelen dat naadloos integreert met je webshop.",
+            },
+            itemFive: {
+                question: "Hoe veilig zijn de betaalprocessen?",
+                answer: "Alle betaalprocessen voldoen aan de hoogste beveiligingsstandaarden (PCI DSS), gebruik maken van SSL-encryptie en werken samen met gecertificeerde payment providers voor maximale veiligheid van klantgegevens.",
+            },
+        },
+
+        seo: {
+            itemOne: {
+                question:
+                    "Hoe lang duurt het voordat ik resultaat zie met SEO?",
+                answer: "Eerste resultaten zijn vaak zichtbaar binnen 2-3 maanden, maar significante verbetering in rankings duurt meestal 4-6 maanden. SEO is een langetermijnstrategie die continue aandacht en geduld vereist.",
+            },
+            itemTwo: {
+                question:
+                    "Werken jullie met eenmalige SEO of ook doorlopende optimalisatie?",
+                answer: "We bieden beide opties. Eenmalige technische SEO-optimalisatie voor een goede basis, maar voor de beste resultaten adviseren we doorlopende optimalisatie met maandelijkse analyses en verbeteringen.",
+            },
+            itemThree: {
+                question:
+                    "Doen jullie ook contentcreatie (blogs, landingspagina's) voor SEO?",
+                answer: "We adviseren over content-strategie en SEO-geoptimaliseerde structuren. Voor contentcreatie werken we samen met copywriters of kunnen we dit uitbesteden aan gespecialiseerde partners.",
+            },
+            itemFour: {
+                question: "Hoe meten jullie het succes van SEO?",
+                answer: "We gebruiken Google Analytics, Search Console en professionele SEO-tools voor ranking-monitoring, traffic-analyse, conversie-tracking en rapportage. Je ontvangt maandelijkse overzichten van alle belangrijke metrics.",
+            },
+            itemFive: {
+                question:
+                    "Kan mijn bestaande website ook geoptimaliseerd worden of moet ik een nieuwe site laten bouwen?",
+                answer: "In de meeste gevallen kunnen we je bestaande website optimaliseren. Soms is een rebuild nodig als de technische basis niet toereikend is, maar dit bepalen we na een grondige analyse.",
+            },
+        },
+
+        maintenance: {
+            itemOne: {
+                question:
+                    "Waarom is onderhoud belangrijk voor een website of webapp?",
+                answer: "Regelmatig onderhoud zorgt voor veiligheid tegen hackers, optimale prestaties, compatibiliteit met nieuwe browsers, backup-beveiliging en voorkomt grote technische problemen die duur zijn om te repareren.",
+            },
+            itemTwo: {
+                question: "Wat zit er in jullie onderhoudspakketten?",
+                answer: "Onze pakketten bevatten updates van software en plugins, beveiligingsmonitoring, automatische backups, performance-optimalisatie, uptime-monitoring en prioritaire technische support.",
+            },
+            itemThree: {
+                question:
+                    "Wat gebeurt er als ik geen onderhoud laat uitvoeren?",
+                answer: "Zonder onderhoud loop je risico op beveiligingslekken, langzamere prestaties, incompatibiliteit met nieuwe browsers, dataverlies en hogere reparatiekosten bij eventuele problemen.",
+            },
+            itemFour: {
+                question:
+                    "Kunnen jullie ook alleen losse updates uitvoeren zonder abonnement?",
+                answer: "Ja, we bieden ook ad-hoc onderhoud en updates aan tegen ons uurtarief van €45 per uur. Voor regelmatige behoeften zijn onze abonnementen echter kosteneffectiever.",
+            },
+            itemFive: {
+                question: "Hoe snel lossen jullie technische problemen op?",
+                answer: "Voor kritieke problemen streven we naar een reactietijd binnen 4 uur op werkdagen. Minder urgente zaken worden binnen 24-48 uur opgepakt, afhankelijk van je onderhoudsabonnement.",
+            },
+        },
+
+        optimizations: {
+            itemOne: {
+                question:
+                    "Wat voor soort optimalisaties voeren jullie uit? (technisch, visueel, UX)",
+                answer: "We voeren technische optimalisaties uit (snelheid, code), visuele verbeteringen (design updates), UX-optimalisaties (navigatie, conversie) en SEO-verbeteringen voor betere prestaties en gebruikerservaring.",
+            },
+            itemTwo: {
+                question:
+                    "Hoe bepalen jullie waar mijn website of webapp verbeterd kan worden?",
+                answer: "We doen een uitgebreide analyse van prestaties, gebruikersgedrag (analytics), technische aspecten, SEO-scores en conversie-funnels. Op basis daarvan stellen we een prioriteitenlijst van verbeteringen op.",
+            },
+            itemThree: {
+                question:
+                    "Levert een optimalisatie altijd betere conversie op?",
+                answer: "Optimalisaties zijn gericht op verbetering, maar resultaten kunnen variëren per situatie. We monitoren alle wijzigingen en kunnen indien nodig aanpassingen terugdraaien of bijstellen voor optimale resultaten.",
+            },
+            itemFour: {
+                question: "Kunnen jullie ook A/B-testen uitvoeren?",
+                answer: "Ja, we kunnen A/B-tests opzetten voor verschillende elementen zoals call-to-actions, layouts, formulieren en content om data-gedreven beslissingen te nemen over optimalisaties.",
+            },
+            itemFive: {
+                question:
+                    "Zijn optimalisaties eenmalig of doorlopend mogelijk?",
+                answer: "We bieden beide opties. Eenmalige optimalisatie-projecten voor specifieke verbeteringen, maar ook doorlopende optimalisatie-programma's voor continue verbetering van prestaties en conversies.",
+            },
+        },
+
+        emailTemplates: {
+            itemOne: {
+                question:
+                    "In welke systemen (Mailchimp, ActiveCampaign, etc.) kunnen jullie e-mailtemplates bouwen?",
+                answer: "We bouwen templates voor alle populaire e-mailplatforms zoals Mailchimp, ActiveCampaign, HubSpot, Campaign Monitor, en kunnen ook custom HTML-templates maken die in elk systeem werken.",
+            },
+            itemTwo: {
+                question: "Worden de templates responsive gemaakt voor mobiel?",
+                answer: "Ja, alle e-mailtemplates zijn volledig responsive en geoptimaliseerd voor desktop, tablet en mobiel. We testen zorgvuldig in verschillende e-mailclients en apparaten.",
+            },
+            itemThree: {
+                question:
+                    "Kunnen jullie e-mails ook personaliseren (bijv. met klantnamen of data)?",
+                answer: "Zeker! We integreren personalisatie-mogelijkheden zoals namen, locaties, aankoophistorie en andere dynamische content om je e-mailcampagnes persoonlijker en effectiever te maken.",
+            },
+            itemFour: {
+                question:
+                    "Zorgen jullie dat de e-mails in alle mailclients (Outlook, Gmail, Apple Mail) goed werken?",
+                answer: "Ja, we testen alle templates uitgebreid in verschillende e-mailclients en apparaten om consistente weergave te garanderen. We gebruiken best practices voor maximale compatibiliteit.",
+            },
+            itemFive: {
+                question:
+                    "Helpen jullie ook met het opzetten van complete e-mailcampagnes?",
+                answer: "We focussen op de technische realisatie van templates. Voor campagne-strategie en copywriting werken we samen met gespecialiseerde marketing-partners of kunnen we doorverwijzen naar betrouwbare specialisten.",
+            },
+        },
+
         itemOne: {
             question: "Wat heb ik nodig om een website te laten maken?",
             answer: "Helemaal niks ingewikkelds. Tijdens een gratis kennismaking bespreken we samen je wensen, doelen en ideeën. Daarna regelen wij de rest.",
