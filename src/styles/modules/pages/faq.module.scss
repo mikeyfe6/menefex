@@ -32,10 +32,8 @@
             }
 
             #{$faq}-item {
-                margin-bottom: rem-calc(8);
-
                 #{$faq}-question {
-                    padding-bottom: rem-calc(8);
+                    padding-bottom: rem-calc(12);
 
                     > h3 {
                         font-family: $poppins-font;
@@ -46,7 +44,7 @@
                         @include smooth-trans;
                         @include underline($color: $smoke-color);
 
-                        @include fluid-typing(20, 22);
+                        @include fluid-typing(19, 21);
                     }
 
                     &[aria-expanded="true"] {
@@ -107,8 +105,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: rem-calc(12);
-            margin-bottom: rem-calc(32);
-            padding-bottom: rem-calc(16);
 
             @include container($mb: rem-calc(48));
 
