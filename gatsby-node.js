@@ -155,7 +155,7 @@ const captureScreenshot = async (url, filename, delay) => {
                 );
                 await page.waitForSelector(iframeSelector, {
                     visible: true,
-                    timeout: 5000, // 5 seconds
+                    timeout: 5000,
                 });
                 console.log("🍿 Vimeo iframe loaded successfully.");
             } catch (error) {
@@ -187,8 +187,20 @@ const captureScreenshot = async (url, filename, delay) => {
     }
 };
 
-exports.onPostBuild = async () => {
-    if (process.env.NODE_ENV === "production") {
+let screenshotsAlreadyCaptured = false;
+
+const runScreenshots = async () => {
+    if (screenshotsAlreadyCaptured) {
+        console.log("💤 Screenshots already captured, skipping...");
+        return;
+    }
+
+    screenshotsAlreadyCaptured = true;
+
+    if (
+        process.env.NODE_ENV === "production" ||
+        process.env.NODE_ENV === "development"
+    ) {
         await captureScreenshot(
             "https://edutainuproductions.nl",
             "edutainuproductions",
@@ -208,7 +220,8 @@ exports.onPostBuild = async () => {
     }
 };
 
-exports.onPreBootstrap = exports.onPostBuild;
+exports.onPostBuild = runScreenshots;
+exports.onPreBootstrap = runScreenshots;
 
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
