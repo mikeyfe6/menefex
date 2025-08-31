@@ -188,19 +188,27 @@ const captureScreenshot = async (url, filename, delay) => {
 };
 
 exports.onPostBuild = async () => {
-    await captureScreenshot(
-        "https://edutainuproductions.nl",
-        "edutainuproductions",
-        0
-    );
-    await captureScreenshot("https://prio-zorg.nl", "priozorg", 2000);
-    await captureScreenshot("https://keeptreal.nl", "keeptreal", 2000);
-    await captureScreenshot("https://blackharmony.nl", "blackharmony", 0);
-    await captureScreenshot("https://eternitydrum.com", "eternitydrum", 0);
-    // await captureScreenshot("https://kn-acdig.com", "kn-acdig", 0);
-    await captureScreenshot("https://dsmelodies.com", "dsmelodies", 0);
-    await captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000);
+    if (process.env.NODE_ENV === "production") {
+        await captureScreenshot(
+            "https://edutainuproductions.nl",
+            "edutainuproductions",
+            0
+        );
+        await captureScreenshot("https://prio-zorg.nl", "priozorg", 2000);
+        await captureScreenshot("https://keeptreal.nl", "keeptreal", 2000);
+        await captureScreenshot("https://blackharmony.nl", "blackharmony", 0);
+        await captureScreenshot("https://eternitydrum.com", "eternitydrum", 0);
+        // await captureScreenshot("https://kn-acdig.com", "kn-acdig", 0);
+        await captureScreenshot("https://dsmelodies.com", "dsmelodies", 0);
+        await captureScreenshot(
+            "https://afrodiasphere.com",
+            "afrodiasphere",
+            2000
+        );
+    }
 };
+
+exports.onPreBootstrap = exports.onPostBuild;
 
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
