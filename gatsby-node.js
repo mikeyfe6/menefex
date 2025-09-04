@@ -198,8 +198,8 @@ const runScreenshots = async () => {
     screenshotsAlreadyCaptured = true;
 
     if (
-        process.env.NODE_ENV === "production" ||
-        process.env.NODE_ENV === "development"
+        process.env.NODE_ENV === "production"
+        // || process.env.NODE_ENV === "development"
     ) {
         await captureScreenshot(
             "https://edutainuproductions.nl",
