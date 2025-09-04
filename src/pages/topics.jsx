@@ -116,25 +116,29 @@ export default TopicPage;
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
+    const pageTitle = "Topics";
+    const pageSlug = "/topics/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Topics",
-                item: siteUrl + "/topics/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
     return (
         <SEO
-            title="Topics"
+            title={pageTitle}
             description="Ontdek onze diverse blogcategorieën van doe-het-zelf tips tot SEO-gidsen, informatieve artikelen, nieuws, en meer. Vind hier het volledige overzicht van onderwerpen!"
             keywords="onderwerpen, posts, topics, views, nieuws, stories, content, news, mind, actualiteiten, artikelen, blog, blogposts, categorieën, categorie, categorieën, categorie, doe-het-zelf, DIY, SEO, gidsen, informatief"
-            pathname="/topics/"
+            pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}
         />
     );

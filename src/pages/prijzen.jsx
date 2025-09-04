@@ -71,15 +71,19 @@ export default Prices;
 export const Head = () => {
     const { siteUrl, priceImage } = useSiteMetadata();
 
+    const pageTitle = "Prijzen & tarieven";
+    const pageSlug = "/prijzen/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Prijzen & tarieven",
-                item: siteUrl + "/prijzen/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
@@ -170,10 +174,10 @@ export const Head = () => {
 
     return (
         <SEO
-            title="Prijzen & Tarieven"
+            title={pageTitle}
             description="Bekijk de scherpe tarieven van Menefex voor webdesign, webontwikkeling en op maat gemaakte digitale oplossingen. Kies uit onze flexibele pakketten vanaf €265,50 (excl btw) en realiseer uw online ambities. Vraag een offerte of terugbelverzoek aan!"
             keywords="prijzen, tarieven, webdesign, webontwikkeling, digitale oplossingen, online ambities, offerte, terugbelverzoek"
-            pathname="/prijzen/"
+            pathname={pageSlug}
             schemaMarkup={[
                 breadcrumbSchema,
                 budgetPlanSchema,

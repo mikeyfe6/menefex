@@ -67,6 +67,7 @@ export const Head = () => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
@@ -104,7 +105,7 @@ export const Head = () => {
             title={pageTitle}
             description={pageDescription}
             keywords="SEO, zoekmachineoptimalisatie, Google, zoekresultaten, website optimalisatie, keyword research, technische SEO"
-            pathname="/diensten/zoekmachineoptimalisatie/"
+            pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );

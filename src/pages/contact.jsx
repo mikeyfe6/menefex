@@ -43,15 +43,21 @@ export default ContactPage;
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
+    const pageTitle = "Contact";
+    const pageDescription =
+        "Contacteer Menefex voor een offerte, samenwerking of algemene vragen. Wij staan klaar om samen iets geweldigs te creëren! Binnen één werkdag reactie.";
+    const pageSlug = "/contact/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Contact",
-                item: siteUrl + "/contact/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
@@ -59,10 +65,9 @@ export const Head = () => {
     const contactPageSchema = {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        url: siteUrl + "/contact/",
-        name: "Contact",
-        description:
-            "Contacteer Menefex voor een offerte, samenwerking of algemene vragen. Wij staan klaar om samen iets geweldigs te creëren! Binnen één werkdag reactie.",
+        url: siteUrl + pageSlug,
+        name: pageTitle,
+        description: pageDescription,
         about: {
             "@id": siteUrl + "/#organization",
         },
@@ -76,10 +81,10 @@ export const Head = () => {
 
     return (
         <SEO
-            title="Contact"
-            description="Contacteer Menefex voor een offerte, samenwerking of algemene vragen. Wij staan klaar om samen iets geweldigs te creëren! Binnen één werkdag reactie."
+            title={pageTitle}
+            description={pageDescription}
             keywords="contact, offerte, samenwerking, algemene vragen, reactie, Menefex, webontwikkeling, digitalisering, SEO, technologie"
-            pathname="/contact/"
+            pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, contactPageSchema]}
         />
     );

@@ -150,25 +150,29 @@ export default BlogPage;
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
+    const pageTitle = "Blog";
+    const pageSlug = "/blog/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Blog",
-                item: siteUrl + "/blog/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
     return (
         <SEO
-            title="Blog"
+            title={pageTitle}
             description="Lees de nieuwste inzichten van Menefex over webontwikkeling, digitalisering, SEO, technologie, en meer. Ontdek tips, trends en verhalen die jouw digitale strategie versterken!"
             keywords="blog, webontwikkeling, digitalisering, SEO, technologie, tips, trends, verhalen, digitale strategie"
-            pathname="/blog/"
+            pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}
         />
     );

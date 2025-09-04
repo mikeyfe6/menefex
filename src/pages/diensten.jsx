@@ -152,25 +152,29 @@ export default ServicesPage;
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
+    const pageTitle = "Diensten";
+    const pageSlug = "/diensten/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Diensten",
-                item: siteUrl + "/diensten/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
     return (
         <SEO
-            title="Diensten"
+            title={pageTitle}
             description="Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie."
-            keywords=""
-            pathname="/diensten/"
+            keywords="diensten, website laten maken, webapplicatie laten maken, webshop laten maken, zoekmachineoptimalisatie, onderhoud en updates, optimalisaties, email template laten maken"
+            pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}
         />
     );

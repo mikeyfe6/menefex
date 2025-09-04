@@ -1,6 +1,6 @@
 export default {
     cookie: {
-        text: "Deze site plaatst cookies op je computer om je websitebezoek te optimaliseren en gepersonaliseerde diensten aan te bieden, zowel hier als via andere media. Raadpleeg ons <a href='/privacy-policy/'>privacybeleid</a> voor meer informatie over de gebruikte cookies. <span>We volgen je gegevens <b>niet</b> bij sitebezoeken, maar om aan je voorkeuren te voldoen, gebruiken we enkele cookies zodat je deze keuze niet herhaaldelijk hoeft te maken.</span>",
+        text: "Deze site plaatst cookies op je computer om je websitebezoek te optimaliseren en gepersonaliseerde diensten aan te bieden, zowel hier als via andere media. Raadpleeg ons <a href='/privacybeleid/'>privacybeleid</a> voor meer informatie over de gebruikte cookies. <span>We volgen je gegevens <b>niet</b> bij sitebezoeken, maar om aan je voorkeuren te voldoen, gebruiken we enkele cookies zodat je deze keuze niet herhaaldelijk hoeft te maken.</span>",
         accept: "Accepteer",
         decline: "Weiger",
     },
@@ -26,7 +26,7 @@ export default {
     },
 
     footer: {
-        text: '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacy-policy/">privacybeleid</a> <span>|</span> <a href="/terms-conditions/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94',
+        text: '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacybeleid/">privacybeleid</a> <span>|</span> <a href="/algemene-voorwaarden/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94',
     },
 
     biography: {

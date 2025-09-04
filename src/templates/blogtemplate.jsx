@@ -568,6 +568,7 @@ export const Head = ({ pageContext: { nlContent } }) => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: nlContent.title,
         itemListElement: [
             {
                 "@type": "ListItem",

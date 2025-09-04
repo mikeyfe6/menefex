@@ -513,25 +513,29 @@ export default PortfolioPage;
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
+    const pageTitle = "Portfolio";
+    const pageSlug = "/portfolio/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Portfolio",
-                item: siteUrl + "/portfolio/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
 
     return (
         <SEO
-            title="Portfolio"
+            title={pageTitle}
             description="Ontdek de recente projecten van Menefex: van webdesign en webontwikkeling tot op maat gemaakte digitale oplossingen voor klanten. Bekijk ons portfolio en laat u inspireren door onze succesvolle samenwerkingen!"
             keywords="portfolio, projecten, webdesign, webontwikkeling, digitale oplossingen, inspiratie, samenwerkingen"
-            pathname="/portfolio/"
+            pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}
         />
     );

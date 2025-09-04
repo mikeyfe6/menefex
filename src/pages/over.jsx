@@ -39,15 +39,21 @@ export default AboutPage;
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
+    const pageTitle = "Over Ons";
+    const pageDescription =
+        "Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.";
+    const pageSlug = "/over/";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
                 position: 1,
-                name: "Over Ons",
-                item: siteUrl + "/over/",
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
@@ -55,10 +61,9 @@ export const Head = () => {
     const aboutPageSchema = {
         "@context": "https://schema.org",
         "@type": "AboutPage",
-        url: siteUrl + "/over/",
-        name: "Over Ons",
-        description:
-            "Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.",
+        url: siteUrl + pageSlug,
+        name: pageTitle,
+        description: pageDescription,
         about: {
             "@id": siteUrl + "/#organization",
         },
@@ -72,10 +77,10 @@ export const Head = () => {
 
     return (
         <SEO
-            title="Over Ons"
-            description="Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling."
+            title={pageTitle}
+            description={pageDescription}
             keywords="Menefex, Michael Fransman, webmediabedrijf, webontwikkeling, digitale oplossingen, innovatie, missie, waarden, aanpak"
-            pathname="/over/"
+            pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, aboutPageSchema]}
         />
     );

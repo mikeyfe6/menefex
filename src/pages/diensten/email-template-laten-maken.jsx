@@ -63,6 +63,7 @@ export const Head = () => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
@@ -99,8 +100,8 @@ export const Head = () => {
         <SEO
             title={pageTitle}
             description={pageDescription}
-            keywords=""
-            pathname="/diensten/email-template-laten-maken/"
+            keywords="e-mail template laten maken, email template laten maken, professionele e-mail templates, op maat gemaakte e-mail templates"
+            pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
     );

@@ -1,6 +1,6 @@
 export default {
     cookie: {
-        text: "This site places cookies on your computer to optimize your website visit and offer personalized services, both here and through other media. Consult our <a href='/privacy-policy/'>privacy policy</a> for more information about the cookies used. <span>We do not track your data <b>not</b> during site visits, but to meet your preferences, we use some cookies so that you do not have to make this choice repeatedly.</span>",
+        text: "This site places cookies on your computer to optimize your website visit and offer personalized services, both here and through other media. Consult our <a href='/privacybeleid/'>privacy policy</a> for more information about the cookies used. <span>We do not track your data <b>not</b> during site visits, but to meet your preferences, we use some cookies so that you do not have to make this choice repeatedly.</span>",
         accept: "Accept",
         decline: "Decline",
     },
@@ -26,7 +26,7 @@ export default {
     },
 
     footer: {
-        text: `<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacy-policy/">privacy policy</a> <span>|</span> <a href="/terms-conditions/">terms & conditions</a> <span>|</span> all rights reserved <span>|</span> CoC <span>#</span> 76045315 <span>|</span> VAT <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94`,
+        text: `<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacybeleid/">privacy policy</a> <span>|</span> <a href="/algemene-voorwaarden/">terms & conditions</a> <span>|</span> all rights reserved <span>|</span> CoC <span>#</span> 76045315 <span>|</span> VAT <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94`,
     },
 
     biography: {
