@@ -344,6 +344,7 @@ export const Head = () => {
     const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        name: pageTitle,
         mainEntity: generateFaqSchema().map((faq) => ({
             "@type": "Question",
             name: faq.question,
@@ -357,7 +358,7 @@ export const Head = () => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        name: "FAQ",
+        name: pageTitle,
         itemListElement: [
             {
                 "@type": "ListItem",
@@ -377,8 +378,6 @@ export const Head = () => {
             },
         ],
     };
-
-    console.log(faqSchema);
 
     return (
         <SEO
