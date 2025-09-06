@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@contentful/live-preview": "^4.6.41",
-    "@contentful/rich-text-html-renderer": "^17.1.1",
-    "@contentful/rich-text-react-renderer": "^16.1.1",
-    "@contentful/rich-text-types": "^17.2.0",
+    "@contentful/rich-text-html-renderer": "^17.1.0",
+    "@contentful/rich-text-react-renderer": "^16.1.0",
+    "@contentful/rich-text-types": "^17.1.0",
     "@fortawesome/fontawesome-svg-core": "^7.0.1",
     "@fortawesome/free-brands-svg-icons": "^7.0.1",
     "@fortawesome/free-regular-svg-icons": "^7.0.1",
