@@ -363,18 +363,8 @@ export const Head = () => {
             {
                 "@type": "ListItem",
                 position: 1,
-                item: {
-                    "@id": siteUrl + "/",
-                    name: "Home",
-                },
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
-                item: {
-                    "@id": siteUrl + pageSlug,
-                    name: pageTitle,
-                },
+                name: pageTitle,
+                item: siteUrl + pageSlug,
             },
         ],
     };
