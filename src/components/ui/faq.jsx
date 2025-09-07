@@ -88,7 +88,9 @@ const Faq = () => {
                                     aria-expanded={openIndex === idx}
                                     className={faqStyles.faqQuestion}
                                 >
-                                    <h4 data-faq-question>{item.question}</h4>
+                                    <h4 id={`faq-question-${idx}`}>
+                                        {item.question}
+                                    </h4>
                                 </button>
                                 <div
                                     className={`${faqStyles.faqAnswer} ${
