@@ -10,12 +10,33 @@ import * as mapsStyles from "../../styles/modules/ui/maps.module.scss";
 
 // TODO: klaar voor TS'en..
 
+const useScreenSize = () => {
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth < 480);
+        };
+
+        checkScreenSize();
+
+        window.addEventListener("resize", checkScreenSize);
+
+        return () => window.removeEventListener("resize", checkScreenSize);
+    }, []);
+
+    return isMobile;
+};
+
 const defaultProps = {
     center: {
-        lat: 52.30994007862562,
-        lng: 4.974422834381031,
+        lat: 52.31049600748774,
+        lng: 4.973736770446289,
     },
-    zoom: 12,
+};
+
+const mapOptions = {
+    disableDefaultUI: true,
 };
 
 const Marker = ({ lat, lng }) => {
@@ -28,24 +49,34 @@ const Marker = ({ lat, lng }) => {
     );
 };
 
-const SimpleMap = () => (
-    <section id="maps">
-        <div className={mapsStyles.mapsContainer}>
-            <div className={mapsStyles.mapsContent}>
-                <GoogleMapReact
-                    bootstrapURLKeys={{
-                        key: process.env.GATSBY_GOOGLE_MAPS_KEY,
-                        language: "nl",
-                        region: "NL",
-                    }}
-                    defaultCenter={defaultProps.center}
-                    defaultZoom={defaultProps.zoom}
-                >
-                    <Marker lat={52.31049600748774} lng={4.973736770446289} />
-                </GoogleMapReact>
+const SimpleMap = () => {
+    const isMobile = useScreenSize();
+
+    const responsiveZoom = isMobile ? 15.25 : 16;
+
+    return (
+        <section id="maps">
+            <div className={mapsStyles.mapsContainer}>
+                <div className={mapsStyles.mapsContent}>
+                    <GoogleMapReact
+                        bootstrapURLKeys={{
+                            key: process.env.GATSBY_GOOGLE_MAPS_KEY,
+                            language: "nl",
+                            region: "NL",
+                        }}
+                        defaultCenter={defaultProps.center}
+                        defaultZoom={responsiveZoom}
+                        options={mapOptions}
+                    >
+                        <Marker
+                            lat={52.31049600748774}
+                            lng={4.973736770446289}
+                        />
+                    </GoogleMapReact>
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export default SimpleMap;
