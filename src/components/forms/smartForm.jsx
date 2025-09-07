@@ -601,6 +601,7 @@ const SmartForm = () => {
                                         <button
                                             type="button"
                                             onClick={handleBack}
+                                            id="smartform-tracking"
                                         >
                                             {t("smartform.back")}
                                         </button>
