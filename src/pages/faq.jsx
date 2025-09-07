@@ -250,7 +250,11 @@ const FaqPage = () => {
                                                         faqStyles.faqQuestion
                                                     }
                                                 >
-                                                    <h3>{item.question}</h3>
+                                                    <h3
+                                                        id={`faq-question-${idx}`}
+                                                    >
+                                                        {item.question}
+                                                    </h3>
                                                 </button>
                                                 <div
                                                     className={`${
