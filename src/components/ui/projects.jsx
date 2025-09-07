@@ -136,7 +136,7 @@ const Projects = () => {
             name: "priozorg",
             title: "Prio Zorg",
             description: t("projects.priozorg"),
-            url: "https://prio-zorg.nl",
+            // url: "https://prio-zorg.nl",
             type: "site",
             stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful"],
         },

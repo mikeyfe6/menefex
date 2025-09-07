@@ -19,6 +19,10 @@
             flex-direction: column;
 
             &:has(img) {
+                img {
+                    aspect-ratio: 16/9;
+                }
+
                 #{$portfolio}-btns {
                     margin-top: auto;
                 }

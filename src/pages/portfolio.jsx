@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
@@ -111,17 +111,24 @@ const PortfolioPage = () => {
 
                     <div id="#PZ">
                         <a
-                            href="https://prio-zorg.nl"
-                            rel="noopener noreferrer"
-                            target="_blank"
+                            href="#!"
+                            // href="https://prio-zorg.nl"
+                            // rel="noopener noreferrer"
+                            // target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("priozorg") && (
+                            {/* {getProjectImage("priozorg") && (
                                 <GatsbyImage
                                     image={getProjectImage("priozorg")}
                                     alt="Prio Zorg"
                                 />
-                            )}
+                            )} */}
+
+                            <StaticImage
+                                src="../images/mnfx-screens.jpeg"
+                                width={600}
+                                alt="Prio Zorg"
+                            />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -144,13 +151,13 @@ const PortfolioPage = () => {
                         </div>
                         <div className={portfolioStyles.portfolioBtns}>
                             <a
-                                href="https://prio-zorg.nl"
-                                rel="noopener noreferrer"
-                                target="_blank"
+                                // href="https://prio-zorg.nl"
+                                // rel="noopener noreferrer"
+                                // target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "eye"]} />
-                                {t("portfolio.goToProject")}
+                                <strike>{t("portfolio.goToProject")}</strike>
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/prio-zorg"
@@ -161,6 +168,10 @@ const PortfolioPage = () => {
                                 <FontAwesomeIcon icon={["fab", "github"]} />
                                 {t("portfolio.goToRepo")}
                             </a>
+                            {/* <a className={portfolioStyles.btnDark} disabled>
+                                <FontAwesomeIcon icon={["fab", "github"]} />
+                                <strike>{t("portfolio.noRepo")}</strike>
+                            </a> */}
                         </div>
                     </div>
 
@@ -348,18 +359,25 @@ const PortfolioPage = () => {
           */}
 
                     <div id="#KNA">
-                        {/* <a
-                            href="https://kn-acdig.com"
-                            // href="#!"
-                            rel="noopener noreferrer"
-                            target="_blank"
+                        <a
+                            href="#!"
+                            // href="https://kn-acdig.com"
+                            // rel="noopener noreferrer"
+                            // target="_blank"
+                            className={portfolioStyles.portfolioImg}
                         >
-                            <StaticImage
+                            {/* <StaticImage
                                 src="../../public/project-images/kn-acdig.png"
                                 alt="KN-ACDiG"
                                 className={portfolioStyles.portfolioImg}
+                            /> */}
+
+                            <StaticImage
+                                src="../images/mnfx-screens.jpeg"
+                                width={600}
+                                alt="KN-ACDiG"
                             />
-                        </a> */}
+                        </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
                                 <span>Client:</span>KennisNetwerk ACDiG
