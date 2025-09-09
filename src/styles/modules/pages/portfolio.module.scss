@@ -28,6 +28,10 @@
                 }
             }
 
+            &:has(img[alt*="404"]) {
+                pointer-events: none;
+            }
+
             #{$portfolio}-img {
                 display: block;
                 border: 2px $snow-color solid;

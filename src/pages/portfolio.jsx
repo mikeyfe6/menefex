@@ -127,7 +127,7 @@ const PortfolioPage = () => {
                             <StaticImage
                                 src="../images/mnfx-screens.jpeg"
                                 width={600}
-                                alt="Prio Zorg"
+                                alt="Prio Zorg (404)"
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -375,7 +375,7 @@ const PortfolioPage = () => {
                             <StaticImage
                                 src="../images/mnfx-screens.jpeg"
                                 width={600}
-                                alt="KN-ACDiG"
+                                alt="KN-ACDiG (404)"
                             />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
