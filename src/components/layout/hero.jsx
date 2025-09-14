@@ -44,7 +44,7 @@ const Hero = () => {
                     <div className={heroStyles.heroImage}>
                         <StaticImage
                             src="../../images/ghibli-mf.png"
-                            alt="Edutain U Productions"
+                            alt="Michael Fransman"
                             width={360}
                             height={540}
                         />
