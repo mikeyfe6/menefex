@@ -79,6 +79,16 @@ const Info = () => {
                     <FontAwesomeIcon icon={["fas", "envelope"]} /> ·{" "}
                     <span>info@menefex.nl</span>
                 </a>
+
+                <a
+                    href="https://wa.me/31611054318"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className={infoStyles.infoWhapp}
+                >
+                    <FontAwesomeIcon icon={["fab", "whatsapp"]} /> ·{" "}
+                    <span>WhatsApp</span>
+                </a>
             </div>
 
             <div className={infoStyles.infoSocials}>
@@ -184,17 +194,6 @@ const Info = () => {
                             className={infoStyles.sky}
                         >
                             <FontAwesomeIcon icon={["fab", "skype"]} />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://wa.me/31611054318"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className={infoStyles.wa}
-                        >
-                            <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                         </a>
                     </li>
                 </ul>

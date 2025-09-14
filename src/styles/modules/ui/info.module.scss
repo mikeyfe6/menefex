@@ -44,25 +44,40 @@
         margin-bottom: rem-calc(48);
 
         #{$info}-tel,
-        #{$info}-mail {
+        #{$info}-mail,
+        #{$info}-whapp {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: rem-calc(8);
-            padding: rem-calc(10 20);
+            padding: rem-calc(9 18);
             border-radius: $low-radius;
             font-weight: 500;
             border: 2px solid $primary-color;
             color: $white-color;
+            width: 100%;
+
+            @include mobile {
+                width: fit-content;
+            }
 
             @include smooth-trans;
 
+            > span {
+                @include fluid-typing(16, 18);
+            }
+        }
+
+        #{$info}-tel,
+        #{$info}-mail {
             > svg {
                 font-size: rem-calc(18);
             }
+        }
 
-            > span {
-                @include fluid-typing(16, 18);
+        #{$info}-whapp {
+            > svg {
+                font-size: rem-calc(24);
             }
         }
 
@@ -79,6 +94,15 @@
 
             &:hover {
                 background-color: color.adjust($mail-color, $lightness: -10%);
+            }
+        }
+
+        #{$info}-whapp {
+            background-color: $smoke-color;
+            color: color.adjust($whapp-color, $lightness: -2.5%);
+
+            &:hover {
+                background-color: color.adjust($smoke-color, $lightness: -10%);
             }
         }
     }
@@ -157,10 +181,6 @@
 
                     &.sp:hover svg {
                         color: #1db954;
-                    }
-
-                    &.wa:hover svg {
-                        color: #1ca111;
                     }
                 }
             }
