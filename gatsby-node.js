@@ -120,8 +120,13 @@ const captureScreenshot = async (url, filename, delay) => {
         const page = await browser.newPage();
 
         await page.setUserAgent(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
         );
+
+        await page.setExtraHTTPHeaders({
+            "accept-language": "en-US,en;q=0.9",
+            "upgrade-insecure-requests": "1",
+        });
 
         await page.setCacheEnabled(false);
         await page.setViewport({
