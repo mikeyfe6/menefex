@@ -173,7 +173,7 @@ const Call = ({ callRef }) => {
             </label>
             <textarea
                 type="text"
-                name="text"
+                name="message"
                 id="call_text"
                 rows="6"
                 value={inputs.message}
