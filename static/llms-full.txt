@@ -1,0 +1,567 @@
+# #1 Website Specialist · Menefex - Complete Knowledge Base
+
+## Company Overview
+
+Menefex is een vooraanstaand & innovatief webmediabedrijf in Amsterdam, opgericht door Michael Fransman. Wij ontwerpen, ontwikkelen en optimaliseren op maat gemaakte websites, webshops en webapplicaties. Vanaf €295,- uw digitale ambities waarmaken.
+
+### About Menefex & Michael Fransman
+
+**Founder & Vision**: Michael Fransman heeft Menefex opgericht vanuit de passie voor webdesign en digitale innovatie. Als moderne webmedia specialist combineert hij technische expertise met creatieve visie om unieke digitale oplossingen te creëren.
+
+**Mission**: Menefex richt zich op het waarmaken van digitale ambities voor bedrijven van elke grootte. Onze aanpak is persoonlijk, professioneel en gericht op langdurige partnerships.
+
+**Company Culture**: Wij geloven in maatwerk boven sjablonen, persoonlijke begeleiding en open communicatie. Elk project wordt behandeld als een unieke uitdaging met specifieke doelstellingen.
+
+**Personal Touch**: Michael Fransman deelt zijn inspiratie via een persoonlijke Spotify playlist en houdt van directe, toegankelijke communicatie met klanten.
+
+## Complete Service Portfolio
+
+### Website Development (Website laten maken)
+
+**Service Description**: Op maat gemaakte websites die perfect aansluiten bij jouw branding en doelstellingen. Wij ontwerpen professionele, gebruiksvriendelijke websites die zorgen voor een sterke online aanwezigheid en optimale gebruikerservaring.
+
+**What's Included**:
+- Uniek, op maat gemaakt design
+- Responsive design voor alle apparaten
+- Content Management Systeem (CMS)
+- SEO-optimalisatie vanaf de basis
+- Snelle laadtijden en prestatie-optimalisatie
+- SSL-certificaat voor veiligheid
+- Integratie met social media
+- Contactformulieren en functionaliteiten
+- Google Analytics en statistieken
+- Browser compatibiliteit
+- Persoonlijke begeleiding en training
+
+**Target Audience**: Bedrijven die een professionele online aanwezigheid willen opbouwen, van startups tot gevestigde ondernemingen.
+
+**Technology Approach**: Gebruik van moderne technologieën zoals GatsbyJS, ReactJS, en Netlify voor optimale prestaties en schaalbaarheid.
+
+### Web Application Development (Webapplicatie laten maken)
+
+**Service Description**: Professioneel ontworpen webapplicaties die volledig zijn afgestemd op jouw bedrijfsprocessen en gebruikersbehoeften. Onze op maat gemaakte webapplicaties bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online succes te maximaliseren.
+
+**Key Features**:
+- Custom functionaliteiten voor specifieke bedrijfsprocessen
+- User management en authenticatie systemen
+- Database integraties
+- API ontwikkeling en koppelingen
+- Real-time functionaliteiten
+- Schaalbaarheid voor groeiende bedrijven
+- Mobile-first responsive design
+- Veiligheid en data-bescherming
+- Performance optimalisatie
+- Cloud hosting en deployment
+
+**Applications**: CRM systemen, projectmanagement tools, e-learning platforms, dashboards, interne bedrijfsapplicaties.
+
+### E-commerce Solutions (Webshop laten maken)
+
+**Service Description**: Professioneel ontworpen webshops die volledig zijn afgestemd op jouw producten en doelgroep. Onze op maat gemaakte webshops bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online verkoop te maximaliseren.
+
+**E-commerce Features**:
+- Complete productcatalogus met categorieën
+- Winkelwagen en checkout proces
+- Betaalintegraties (iDEAL, creditcards, PayPal)
+- Voorraadbeheersysteem
+- Orderverwerking en administratie
+- Verzendopties en tracking
+- Klantaccounts en ordergeschiedenis
+- Review en rating systemen
+- Coupon en promotie systemen
+- Multi-language en multi-currency support
+- SEO-optimalisatie voor producten
+- Analytics en conversie tracking
+
+**Suitable For**: Retailers, groothandel, services, B2B en B2C verkoop.
+
+### Search Engine Optimization (Zoekmachineoptimalisatie - SEO)
+
+**Service Description**: Verhoog je online zichtbaarheid en trek meer bezoekers aan met onze professionele SEO-diensten. Wij optimaliseren je website voor betere posities in Google en andere zoekmachines.
+
+**SEO Services Include**:
+- Technische SEO audit en optimalisatie
+- Keyword research en content strategie
+- On-page optimalisatie (titels, meta descriptions, headers)
+- Content optimalisatie en copywriting
+- Local SEO voor lokale bedrijven
+- Link building strategieën
+- Google My Business optimalisatie
+- Schema markup implementatie
+- Website snelheid optimalisatie
+- Mobile-first indexing optimalisatie
+- Competitor analyse
+- Maandelijkse rapportages en monitoring
+
+**Pricing**: €45 per uur (excl. BTW) met transparante rapportage.
+
+### Maintenance & Updates (Onderhoud & Updates)
+
+**Service Description**: Houd je website up-to-date, veilig en optimaal presterende met onze professionele onderhoudsservice.
+
+**Maintenance Services**:
+- Regelmatige backups en beveiligingsupdates
+- Content updates en wijzigingen
+- Plugin en software updates
+- Performance monitoring en optimalisatie
+- Bug fixes en troubleshooting
+- Security monitoring en malware scanning
+- Database optimalisatie
+- SSL certificaat beheer
+- Hosting monitoring
+- 24/7 uptime monitoring
+- Prioriteitsondersteuning
+- Maandelijkse rapportages
+
+### Website Optimization (Website Optimalisaties)
+
+**Service Description**: Verbeter de prestaties, snelheid en conversie van je bestaande website met gerichte optimalisaties.
+
+**Optimization Areas**:
+- Pagina snelheid en laadtijden
+- Conversie optimalisatie (CRO)
+- User experience (UX) verbeteringen
+- Mobile responsiveness
+- Core Web Vitals optimalisatie
+- Database query optimalisatie
+- Image compression en lazy loading
+- CDN implementatie
+- Cache strategieën
+- Code minification
+- A/B testing en analyse
+- Analytics implementatie
+
+### Email Template Design (E-mail Templates)
+
+**Service Description**: Professionele e-mail templates die perfect passen bij je branding en zorgen voor effectieve communicatie met je doelgroep.
+
+**Email Template Features**:
+- Responsive design voor alle email clients
+- Branding consistentie met website
+- Newsletter templates
+- Transactionele email templates
+- Marketing campagne templates
+- HTML en plain text versies
+- Outlook, Gmail, Apple Mail compatibiliteit
+- A/B testing mogelijkheden
+- Integration met email marketing platforms
+- Analytics tracking setup
+
+## Detailed Pricing Structure
+
+### Budget Plan - €295 (excl. BTW)
+
+**Perfect for**: Kleine projecten, startups, persoonlijke websites, landing pages
+
+**Included Features**:
+- 1-2 pagina's ontwikkeling
+- Op maat gemaakt design
+- Responsive design (desktop, tablet, mobiel)
+- Basic Content Management Systeem
+- Media galerij functionaliteit
+- Contactformulier
+- Social media integratie
+- Basis statistieken en analytics
+- SSL certificaat
+- 1 maand gratis ondersteuning
+
+**Process Timeline**: 1-2 weken
+**Ideal For**: Kleine bedrijven, freelancers, portfolios, event pages
+
+### Starter Plan - €595 (excl. BTW)
+
+**Perfect for**: Groeiende bedrijven, bedrijven met meer content behoeften
+
+**Included Features**:
+- 3-5 pagina's ontwikkeling
+- Op maat gemaakt design
+- Responsive design voor alle apparaten
+- Geavanceerd Content Management Systeem
+- Blog functionaliteit met categorieën
+- Media galerij en afbeelding optimalisatie
+- Multiple contactformulieren
+- Social media feeds integratie
+- Review en testimonial sectie
+- Geavanceerde statistieken
+- SSL certificaat en beveiliging
+- 3 maanden gratis ondersteuning
+
+**Process Timeline**: 2-3 weken
+**Ideal For**: Kleine tot middelgrote bedrijven, consultants, service providers
+
+### Established Plan - €1025 (excl. BTW)
+
+**Perfect for**: Gevestigde bedrijven met uitgebreide online behoeften
+
+**Included Features**:
+- Ongeveer 10 pagina's ontwikkeling
+- Premium op maat design
+- Volledig responsive voor alle apparaten
+- Geavanceerd CMS met gebruikersrollen
+- Blog met geavanceerde functies
+- Media bibliotheek en gallerijen
+- Multiple formulieren en contact opties
+- Zoekfunctionaliteit op de website
+- Social media integratie en feeds
+- Review systeem en ratings
+- Uitgebreide analytics en statistieken
+- SSL certificaat en beveiligingsmaatregelen
+- Extra functionaliteiten op maat
+- 6 maanden gratis ondersteuning
+
+**Process Timeline**: 3-4 weken
+**Ideal For**: Middelgrote bedrijven, agencies, consultancy firms
+
+### Business Plan - €1575 (excl. BTW)
+
+**Perfect for**: Grote bedrijven, e-commerce, complexe websites
+
+**Included Features**:
+- Onbeperkt aantal pagina's
+- Premium enterprise design
+- Volledig responsive en mobile-first
+- Enterprise CMS met geavanceerde rollen
+- Blog met multi-author ondersteuning
+- Uitgebreide media bibliotheek
+- User login en registratie systeem
+- Geavanceerde formulieren en workflows
+- Interne zoekfunctie met filters
+- Volledige social media integratie
+- E-commerce functionaliteit (webshop features)
+- Review en rating systemen
+- Geavanceerde analytics en dashboards
+- Premium SSL en beveiligingsmaatregelen
+- Maatwerk extra functionaliteiten
+- Priority support en monitoring
+- 12 maanden gratis ondersteuning
+
+**Process Timeline**: 4-6 weken
+**Ideal For**: Grote bedrijven, e-commerce, complexe business requirements
+
+### Hourly Rate Services
+
+**Rate**: €45 per uur (excl. BTW)
+
+**Hourly Services Include**:
+- Kleine wijzigingen en updates
+- Content updates
+- Bug fixes en troubleshooting
+- SEO optimalisaties
+- Performance optimalisaties
+- Custom functionality development
+- Consultancy en advies
+- Training en ondersteuning
+- Code reviews
+- Third-party integraties
+
+## Technology Stack & Methodology
+
+### Core Technologies
+
+**Frontend Development**:
+- GatsbyJS - Static site generator voor optimale performance
+- ReactJS - Modern JavaScript framework
+- HTML5 & CSS3 - Web standards compliant
+- SCSS/Sass - Advanced styling capabilities
+- JavaScript ES6+ - Modern programming standards
+
+**Backend & Infrastructure**:
+- Netlify - Modern hosting en deployment
+- Contentful - Headless CMS oplossingen
+- WordPress - Traditional CMS waar gewenst
+- Node.js - Server-side development
+- GraphQL - Efficient data querying
+
+**Development Approach**:
+- Mobile-first responsive design
+- Progressive Web App (PWA) principles
+- SEO-first development
+- Performance optimalisatie vanaf dag 1
+- Accessibility compliance (WCAG)
+- Cross-browser compatibility
+- Version control met Git
+
+### Quality Assurance
+
+**Testing Procedures**:
+- Cross-browser testing (Chrome, Firefox, Safari, Edge)
+- Mobile responsiveness testing
+- Performance testing (PageSpeed, GTMetrix)
+- SEO compliance testing
+- Accessibility testing
+- User experience testing
+- Security testing
+
+**Development Standards**:
+- Clean, maintainable code
+- Documentation en comments
+- Version control best practices
+- Backup strategieën
+- Security best practices
+- Performance optimization
+
+## Portfolio Showcase
+
+### Recent Projects
+
+**Edutain U Productions** (Cultureel Bedrijf)
+- Custom website voor culturele evenementen
+- Event management systeem
+- Multimedia galerijen
+- Ticket integratie
+- Multi-language ondersteuning
+
+**Prio Zorg** (Hulpverlening voor Jongeren)
+- Informatieve website voor zorgverlening
+- Secure client portals
+- Appointment booking systeem
+- GDPR compliant privacy implementatie
+- Toegankelijkheidsoptimalisatie
+
+**Keep It Real** (Jongeren Programma)
+- Interactive website voor jongeren
+- Social media integratie
+- Event calendar functionaliteit
+- User-generated content systeem
+- Mobile-first design approach
+
+**Afrodiasphere** (Sociaal Platform - Eigen Initiatief)
+- Community platform ontwikkeling
+- User profiles en social features
+- Content sharing systemen
+- Advanced search functionality
+- Scalable architecture design
+
+**Eternity Percussion** (Culturele Instelling)
+- Muziek portfolio website
+- Audio/video integraties
+- Event management
+- Merchandise webshop integratie
+- Artist showcase systems
+
+**DS Melodies** (Steeldrum Artiest)
+- Artist portfolio en booking website
+- Music streaming integraties
+- Photo en video galleries
+- Contact en booking forms
+- Social media synchronization
+
+**Black Harmony** (Zanggroep)
+- Band website met multimedia content
+- Performance calendar
+- Fan interaction features
+- Music player integraties
+- Newsletter management system
+
+## Business Information & Legal
+
+### Company Registration
+
+**Kamer van Koophandel (KvK)**: 76045315
+**BTW Nummer**: NL003040579B17
+**Vestigingsplaats**: Amsterdam-Zuidoost, Nederland
+**Rechtsvorm**: Eenmanszaak
+**Oprichtingsjaar**: 2019
+
+### Service Areas
+
+**Primary Markets**:
+- Nederland (NL) - Volledige service coverage
+- België (BE) - Cross-border digital services
+- Suriname (SR) - Cultural connection en expertise
+- Groot-Brittannië (GB) - International business development
+
+### Language Capabilities
+
+**Supported Languages**:
+- Nederlands - Native fluency
+- Engels - Professional working proficiency
+- Spaans - Conversational proficiency
+- Duits - Basic business proficiency
+
+### Contact Information
+
+**Primary Contact**: Michael Fransman
+**Phone**: +31 6 11 05 43 18
+**Email**: michaelfransman@menefex.nl
+**Website**: https://menefex.nl
+**Business Hours**: Maandag-Vrijdag 9:00-18:00
+
+## Privacy & Terms
+
+### Privacy Policy (GDPR Compliant)
+
+**Data Protection Commitment**:
+- GDPR compliance voor alle EU klanten
+- Transparante cookie policy
+- Secure data handling procedures
+- Right to deletion en data portability
+- Privacy by design in alle projecten
+
+**Cookie Management**:
+- Essential cookies voor website functionaliteit
+- Analytics cookies voor website verbetering
+- Marketing cookies (opt-in only)
+- Third-party cookie management
+- Clear consent mechanisms
+
+### Terms & Conditions
+
+**Service Agreement Terms**:
+- Intellectual property ownership
+- Liability en aansprakelijkheid
+- Payment terms en conditions
+- Project scope en wijzigingen
+- Cancellation en refund policies
+- Warranty en ondersteuning
+- Dispute resolution procedures
+
+## Frequently Asked Questions
+
+### Project Process
+
+**Q: Hoe verloopt het ontwikkelproces?**
+A: Ons proces bestaat uit 5 fasen: 1) Intake en briefing, 2) Design en wireframes, 3) Ontwikkeling en programmering, 4) Testing en optimalisatie, 5) Launch en overdracht. Elke fase includeert client feedback en approval.
+
+**Q: Hoelang duurt een gemiddeld project?**
+A: Budget Plan: 1-2 weken, Starter Plan: 2-3 weken, Established Plan: 3-4 weken, Business Plan: 4-6 weken. Timeline hangt af van content aanlevering en feedback snelheid.
+
+**Q: Wat gebeurt er na de launch?**
+A: Na launch krijg je training voor het CMS, technische documentatie, en gratis ondersteuning volgens je gekozen pakket. Daarna bieden we onderhoudscontracten aan.
+
+### Technical Questions
+
+**Q: Welke Content Management Systemen gebruiken jullie?**
+A: Wij werken voornamelijk met moderne headless CMS oplossingen zoals Contentful, en traditionele CMS zoals WordPress waar gewenst. De keuze hangt af van project requirements.
+
+**Q: Hoe zit het met SEO?**
+A: SEO is standaard onderdeel van alle pakketten. Dit includeert technische SEO, content optimalisatie, en basistraining. Voor uitgebreide SEO campanges hanteren we ons uurtarief.
+
+**Q: Zijn websites responsive?**
+A: Ja, alle websites zijn volledig responsive en geoptimaliseerd voor desktop, tablet en mobiele apparaten. We hanteren een mobile-first development approach.
+
+### Pricing Questions
+
+**Q: Zijn er extra kosten na het project?**
+A: Hosting kosten zijn apart (vanaf €10/maand), evenals domeinregistratie. Onderhoud na de gratis periode is optioneel tegen ons uurtarief.
+
+**Q: Kan ik het pakket aanpassen?**
+A: Ja, alle pakketten zijn aanpasbaar. Extra functionaliteiten berekenen we tegen ons uurtarief van €45 excl. BTW.
+
+**Q: Hoe werkt de betaling?**
+A: 50% vooruitbetaling bij projectstart, 50% bij oplevering. Voor grotere projecten kunnen we een 3-deel betalingsschema hanteren.
+
+## Support & Communication
+
+### Customer Support
+
+**Support Channels**:
+- Email: michaelfransman@menefex.nl
+- Phone: +31 6 11 05 43 18
+- WhatsApp Business: Available during business hours
+- Project management portals voor grotere projecten
+
+**Response Times**:
+- Email inquiries: Within 24 hours
+- Phone support: During business hours
+- Emergency support: Within 4 hours
+- Project updates: Weekly status reports
+
+**Support Included**:
+- Technical troubleshooting
+- CMS training en ondersteuning
+- Minor content updates
+- Bug fixes binnen warranty period
+- Performance monitoring
+- Security updates en patches
+
+### Communication Philosophy
+
+**Client Relationship Approach**:
+- Open en transparante communicatie
+- Regular project updates en milestones
+- Direct access to Michael Fransman
+- No complicated account management layers
+- Personal involvement in elk project
+- Long-term partnership focus
+
+## Content Strategy & Blog
+
+### Blog Topics Coverage
+
+**Web Development & Design**:
+- Latest trends in web development
+- Best practices voor user experience
+- Mobile-first design principles
+- Performance optimization techniques
+- Accessibility in web design
+
+**Digital Marketing & SEO**:
+- Search engine optimization tips
+- Content marketing strategies
+- Social media integration
+- Local SEO voor Nederlandse bedrijven
+- Google algorithm updates en impact
+
+**Business Digital Transformation**:
+- E-commerce trends en strategies
+- Digital tools voor small businesses
+- Website ROI measurement
+- Online marketing automation
+- Customer journey optimization
+
+**Technical Insights**:
+- GatsbyJS en ReactJS tutorials
+- Headless CMS vergelijkingen
+- Website security best practices
+- GDPR compliance guides
+- Performance monitoring tools
+
+### Content Update Schedule
+
+**Regular Content Types**:
+- Weekly blog posts over web development
+- Monthly case studies van recente projecten
+- Quarterly technology trend analyses
+- Annual industry reports en insights
+- Project updates en bedrijfsnieuws
+
+## Future Vision & Innovation
+
+### Technology Roadmap
+
+**Emerging Technologies**:
+- Progressive Web Apps (PWAs)
+- Artificial Intelligence integraties
+- Voice search optimization
+- Blockchain applications voor websites
+- Extended Reality (AR/VR) web experiences
+
+**Service Evolution**:
+- Advanced analytics en AI-driven insights
+- Automated testing en deployment
+- Sustainability-focused web development
+- Advanced personalization features
+- Integration met IoT devices
+
+### Market Expansion
+
+**Growth Areas**:
+- International market expansion
+- Partnership met design agencies
+- Enterprise service offerings
+- Training en consultancy services
+- White-label services voor agencies
+
+**Innovation Focus**:
+- Sustainable web development practices
+- Accessibility-first design approach
+- Performance-optimized architectures
+- Security-by-design implementations
+- User-centric development methodologies
+
+---
+
+**Last Updated**: Oktober 2025
+**Version**: 2.0
+**Contact**: michaelfransman@menefex.nl | +31 6 11 05 43 18
