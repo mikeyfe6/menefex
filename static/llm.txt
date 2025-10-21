@@ -1,0 +1,68 @@
+# #1 Website Specialist · Menefex
+
+Menefex is een vooraanstaand & innovatief webmediabedrijf in Amsterdam, opgericht door Michael Fransman. Wij ontwerpen, ontwikkelen en optimaliseren op maat gemaakte websites, webshops en webapplicaties. Vanaf €295,- uw digitale ambities waarmaken. Neem vandaag nog contact op!
+
+## About
+
+- [Over Menefex](https://menefex.nl/over/): Informatie over de oprichter Michael Fransman en de missie van Menefex als modern webmediabedrijf. Inclusief persoonlijke Spotify playlist en bedrijfsdoelen.
+
+## Services
+
+- [Diensten](https://menefex.nl/diensten/): Overzicht van alle diensten die Menefex aanbiedt
+- [Website laten maken](https://menefex.nl/diensten/website-laten-maken/): Op maat gemaakte websites met uniek design, snelle laadtijden en SEO-optimalisatie
+- [Webapplicatie laten maken](https://menefex.nl/diensten/webapplicatie-laten-maken/): Professionele webapplicaties voor bedrijfsprocessen en efficiëntie
+- [Webshop laten maken](https://menefex.nl/diensten/webshop-laten-maken/): Complete e-commerce oplossingen voor online verkoop
+- [Zoekmachineoptimalisatie (SEO)](https://menefex.nl/diensten/zoekmachineoptimalisatie/): Verbeter je vindbaarheid in Google en andere zoekmachines
+- [Onderhoud & Updates](https://menefex.nl/diensten/onderhoud-updates-uitvoeren/): Regelmatig onderhoud voor optimale prestaties en veiligheid
+- [Website Optimalisaties](https://menefex.nl/diensten/optimalisaties-laten-uitvoeren/): Prestaties, snelheid en conversie verbeteren
+- [E-mail Templates](https://menefex.nl/diensten/email-template-laten-maken/): Professionele e-mail templates die passen bij je branding
+
+## Pricing Packages
+
+- [Prijzen & tarieven](https://menefex.nl/prijzen/): Transparante prijsstructuur met vier vaste pakketten:
+  - **Budget Plan** (€295): Voor kleine projecten, 3-5 pagina's, maatwerk design, 1 maand gratis support
+  - **Starter Plan** (€595): Voor groeiende bedrijven, meer pagina's, blog functie, 3 maanden gratis support  
+  - **Established Plan** (€1025): Voor gevestigde bedrijven, uitgebreid pakket, 6 maanden gratis support
+  - **Business Plan** (€1575): Voor grote bedrijven/e-commerce, onbeperkte pagina's, 12 maanden gratis support
+  - Uurtarief: €45 per uur (excl. BTW) voor maatwerk en kleinere taken
+
+## Technology & Approach
+
+- **Tech Stack**: GatsbyJS, ReactJS, Netlify, Contentful, WordPress waar nodig
+- **Focus**: Functionaliteit in balans met moderne design
+- **Methodiek**: Maatwerk in plaats van templates, persoonlijke begeleiding
+- **Service**: Hulp en communicatie vóór, tijdens en ná het project
+
+## Portfolio
+
+- [Portfolio](https://menefex.nl/portfolio/): Recente projecten inclusief:
+  - Edutain U Productions (cultureel bedrijf)
+  - Prio Zorg (hulpverlening voor jongeren) 
+  - Keep It Real (jongeren programma)
+  - Afrodiasphere (eigen initiatief, sociale platform)
+  - Eternity Percussion (culturele instelling)
+  - DS Melodies (steeldrum artiest)
+  - Black Harmony (zanggroep)
+
+## Business Information
+
+- **KvK nummer**: 76045315
+- **BTW nummer**: NL003040579B17  
+- **Locatie**: Amsterdam-Zuidoost, Nederland
+- **Servicegebied**: Nederland (NL), België (BE), Suriname (SR), Groot-Brittannië (GB)
+- **Talen**: Nederlands, Engels, Spaans, Duits
+- **Contact**: +31 6 11 05 43 18, michaelfransman@menefex.nl
+
+## Privacy and Terms
+
+- [Privacybeleid](https://menefex.nl/privacybeleid/): GDPR-compliant privacybeleid met uitleg over cookies en gegevensbescherming
+- [Algemene Voorwaarden](https://menefex.nl/algemene-voorwaarden/): Uitgebreide voorwaarden voor dienstverlening, aansprakelijkheid en intellectueel eigendom
+
+## Support
+
+- [Contact](https://menefex.nl/contact/): Contactformulier, bedrijfsinformatie en directe communicatielijnen
+- [FAQ](https://menefex.nl/faq/): Veelgestelde vragen over proces, prijzen, onderhoud en meer
+
+## Content & Updates
+
+- [Blog](https://menefex.nl/blog/): Artikelen over webdesign, ontwikkeling, digitale trends en bedrijfsupdates
