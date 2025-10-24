@@ -200,7 +200,7 @@ h6 {
 
 p,
 li {
-    letter-spacing: $low-spacing;
+    letter-spacing: $less-spacing;
 
     @extend %as-p;
 }
@@ -227,6 +227,7 @@ u {
     text-decoration-color: $secondary-color;
 }
 
-em {
+em,
+i {
     font-style: italic;
 }

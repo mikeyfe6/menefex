@@ -92,7 +92,6 @@
 
                     &::first-letter {
                         color: $secondary-color;
-                        // margin-right: rem-calc(1);
 
                         @include fluid-typing(32, 42);
                     }
@@ -125,7 +124,11 @@
                         @extend %as-tiny;
                     }
 
-                    p {
+                    p,
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
                         + ul,
                         + ol {
                             margin-top: rem-calc(8);

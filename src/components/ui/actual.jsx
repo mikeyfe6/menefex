@@ -85,14 +85,16 @@ const Actual = () => {
             <div className={actualStyles.actualContainer}>
                 {posts.map(({ node }) => (
                     <div className={actualStyles.actualWrapper} key={node.slug}>
-                        <div className={actualStyles.actualImage}>
-                            <Link to={`/blog/${node.slug}/`}>
-                                <GatsbyImage
-                                    image={getImage(node.image)}
-                                    alt={node.image.title}
-                                />
-                            </Link>
-                        </div>
+                        {node.image && (
+                            <div className={actualStyles.actualImage}>
+                                <Link to={`/blog/${node.slug}/`}>
+                                    <GatsbyImage
+                                        image={getImage(node.image)}
+                                        alt={node.image.title}
+                                    />
+                                </Link>
+                            </div>
+                        )}
                         <div className={actualStyles.actualContent}>
                             <h4>{node.title}</h4>
 
@@ -118,18 +120,19 @@ const Actual = () => {
                             </div>
                         </div>
                         <ul>
-                            {node.topics.map((topic) => (
-                                <li key={topic.slug}>
-                                    <Link
-                                        to={`/topics/${topic.slug}/`}
-                                        style={{
-                                            borderColor: topic.bdcolor,
-                                        }}
-                                    >
-                                        {topic.name}
-                                    </Link>
-                                </li>
-                            ))}
+                            {node.topics &&
+                                node.topics.map((topic) => (
+                                    <li key={topic.slug}>
+                                        <Link
+                                            to={`/topics/${topic.slug}/`}
+                                            style={{
+                                                borderColor: topic.bdcolor,
+                                            }}
+                                        >
+                                            {topic.name}
+                                        </Link>
+                                    </li>
+                                ))}
                         </ul>
                     </div>
                 ))}
