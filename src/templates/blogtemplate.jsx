@@ -129,6 +129,10 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         return format(parseISO(date), "eeee d MMMM yyyy", { locale });
     };
 
+    const formatTime = (date) => {
+        return format(parseISO(date), "p", { locale });
+    };
+
     const currentOptions = {
         preserveWhitespace: false,
         renderMark: {
@@ -464,7 +468,8 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     <u>{t("blog.lastUpdated")}</u>
                                 </span>
                                 <time dateTime={currentContent.updatedPost}>
-                                    {formatDate(currentContent.updatedPost)}
+                                    {formatDate(currentContent.updatedPost)},{" "}
+                                    {formatTime(currentContent.updatedPost)}
                                 </time>
                             </div>
 
