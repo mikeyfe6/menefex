@@ -129,6 +129,10 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         return format(parseISO(date), "eeee d MMMM yyyy", { locale });
     };
 
+    const formatShortDate = (date) => {
+        return format(parseISO(date), "d MMM yyyy", { locale });
+    };
+
     const formatTime = (date) => {
         return format(parseISO(date), "p", { locale });
     };
@@ -485,17 +489,26 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                 )}
 
                                 <ul>
-                                    {relatedPosts?.slice(0, 3).map((post) => (
-                                        <li key={post.contentful_id}>
-                                            <Link to={`/blog/${post.slug}/`}>
-                                                <h5>{post.title}</h5>
-                                                <p>{post.subtitle}</p>
-                                                <span>
-                                                    {t("blog.readMore")}
-                                                </span>
-                                            </Link>
-                                        </li>
-                                    ))}
+                                    {relatedPosts
+                                        ?.sort(
+                                            (a, b) =>
+                                                new Date(b.createdAt) -
+                                                new Date(a.createdAt)
+                                        )
+                                        .slice(0, 3)
+                                        .map((post) => (
+                                            <li key={post.contentful_id}>
+                                                <Link
+                                                    to={`/blog/${post.slug}/`}
+                                                >
+                                                    <h5>{post.title}</h5>
+                                                    <p>{post.subtitle}</p>
+                                                    <span>
+                                                        {t("blog.readMore")}
+                                                    </span>
+                                                </Link>
+                                            </li>
+                                        ))}
                                 </ul>
                             </div>
                         </div>
@@ -531,25 +544,47 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                     )}
 
                     <ul>
-                        {relatedPosts?.slice(0, 3).map((post) => {
-                            const projectImg = getImage(
-                                post?.image?.gatsbyImageData
-                            );
+                        {relatedPosts
+                            ?.sort(
+                                (a, b) =>
+                                    new Date(b.createdAt) -
+                                    new Date(a.createdAt)
+                            )
+                            .slice(0, 3)
+                            .map((post) => {
+                                const projectImg = getImage(
+                                    post?.image?.gatsbyImageData
+                                );
 
-                            return (
-                                <li key={post?.contentful_id}>
-                                    <Link to={`/blog/${post?.slug}/`}>
-                                        <GatsbyImage
-                                            image={projectImg}
-                                            alt={post?.image?.title}
-                                        />
-                                        <h5>{post?.title}</h5>
-                                        <p>{post?.subtitle}</p>
-                                        <span>{t("blog.readMore")}</span>
-                                    </Link>
-                                </li>
-                            );
-                        })}
+                                return (
+                                    <li key={post?.contentful_id}>
+                                        <Link to={`/blog/${post?.slug}/`}>
+                                            <GatsbyImage
+                                                image={projectImg}
+                                                alt={post?.image?.title}
+                                            />
+                                            <h5>{post?.title}</h5>
+                                            <p>{post?.subtitle}</p>
+                                            <div>
+                                                <span>
+                                                    {t("blog.readMore")}
+                                                </span>
+                                                {post?.createdAt && (
+                                                    <time
+                                                        datetime={
+                                                            post?.createdAt
+                                                        }
+                                                    >
+                                                        {formatShortDate(
+                                                            post?.createdAt
+                                                        )}
+                                                    </time>
+                                                )}
+                                            </div>
+                                        </Link>
+                                    </li>
+                                );
+                            })}
                     </ul>
                 </section>
 

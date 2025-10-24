@@ -296,6 +296,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                                 title
                                 subtitle
                                 slug
+                                createdAt
                                 image {
                                     title
                                     gatsbyImageData

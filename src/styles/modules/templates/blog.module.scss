@@ -124,15 +124,11 @@
                         @extend %as-tiny;
                     }
 
-                    p,
-                    h3,
-                    h4,
-                    h5,
-                    h6 {
-                        + ul,
-                        + ol {
-                            margin-top: rem-calc(8);
-                        }
+                    p {
+                        // + ul,
+                        // + ol {
+                        //     margin-top: rem-calc(0);
+                        // }
 
                         + p {
                             margin-top: rem-calc(20);
@@ -145,6 +141,11 @@
                     h6 {
                         &:not(:first-child) {
                             margin-top: rem-calc(32);
+                        }
+
+                        + ul,
+                        + ol {
+                            margin-top: rem-calc(12);
                         }
 
                         & + p {
@@ -194,8 +195,8 @@
                         padding-left: rem-calc(24);
                         list-style-type: decimal;
 
-                        > * {
-                            text-indent: rem-calc(12);
+                        > li {
+                            padding-left: rem-calc(12);
                         }
                     }
 
@@ -507,12 +508,29 @@
                             @extend %as-small;
                         }
 
-                        > span {
-                            margin: rem-calc(0 16 16);
-                            font-weight: 500;
+                        > div:last-child {
+                            display: flex;
+                            justify-content: space-between;
                             margin-top: auto;
+                            padding: rem-calc(16 16 24);
 
-                            @extend %as-small;
+                            > span,
+                            time {
+                                font-weight: 500;
+                            }
+
+                            > span {
+                                @extend %as-small;
+                            }
+
+                            > time {
+                                background-color: $primary-color;
+                                color: $white-color;
+                                border-radius: $low-radius;
+                                padding: rem-calc(2 8);
+
+                                @extend %as-tiny;
+                            }
                         }
 
                         &:hover {
@@ -520,10 +538,12 @@
                             outline-color: $link-color;
                             transform: scale(1.0125);
 
-                            > span {
-                                text-decoration-line: underline;
-                                text-decoration-thickness: 1px;
-                                text-underline-offset: rem-calc(2.5);
+                            > div {
+                                > span {
+                                    text-decoration-line: underline;
+                                    text-decoration-thickness: 1px;
+                                    text-underline-offset: rem-calc(2.5);
+                                }
                             }
                         }
                     }

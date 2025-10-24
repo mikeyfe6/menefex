@@ -121,18 +121,23 @@ const Actual = () => {
                         </div>
                         <ul>
                             {node.topics &&
-                                node.topics.map((topic) => (
-                                    <li key={topic.slug}>
-                                        <Link
-                                            to={`/topics/${topic.slug}/`}
-                                            style={{
-                                                borderColor: topic.bdcolor,
-                                            }}
-                                        >
-                                            {topic.name}
-                                        </Link>
-                                    </li>
-                                ))}
+                                node.topics
+                                    .slice()
+                                    .sort((a, b) =>
+                                        a.name.localeCompare(b.name)
+                                    )
+                                    .map((topic) => (
+                                        <li key={topic.slug}>
+                                            <Link
+                                                to={`/topics/${topic.slug}/`}
+                                                style={{
+                                                    borderColor: topic.bdcolor,
+                                                }}
+                                            >
+                                                {topic.name}
+                                            </Link>
+                                        </li>
+                                    ))}
                         </ul>
                     </div>
                 ))}

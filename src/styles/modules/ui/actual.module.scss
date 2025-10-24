@@ -47,6 +47,10 @@
                         width: 100%;
                         height: 100%;
                         border-radius: $low-radius;
+
+                        img {
+                            @include smooth-trans;
+                        }
                     }
                 }
             }
@@ -81,6 +85,14 @@
 
                 > li > a {
                     @include topic-button;
+                }
+            }
+
+            &:hover {
+                #{$actual}-image {
+                    img {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
