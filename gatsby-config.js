@@ -6,29 +6,34 @@ require("dotenv").config({
     path: ".env",
 });
 
+const siteMetadata = {
+    siteUrl: "https://menefex.nl",
+
+    title: "Menefex",
+    company: "Menefex Webmediabedrijf",
+    description:
+        "Bij Menefex bouwen wij websites, webshops & webapplicaties met oog voor detail.",
+
+    telephone: "31611054318",
+    email: "info@menefex.nl",
+
+    author: "Michael Fransman",
+    authorImage: "/michaelFransman.jpeg",
+    authorEmail: "michaelfransman@menefex.nl",
+
+    handle: "MenefexWMB",
+
+    image: "/mnfx-scl.png",
+    favicon: "/mnfx-favi.png",
+
+    screens: "/mnfx-screens.jpeg",
+
+    primary: "#FFCC00",
+    secondary: "#a9a9a9",
+};
+
 module.exports = {
-    siteMetadata: {
-        siteUrl: "https://menefex.nl",
-
-        title: "Menefex",
-        company: "Menefex Webmediabedrijf",
-        description:
-            "Bij Menefex bouwen wij websites, webshops & webapplicaties met oog voor detail.",
-
-        bizTel: "+31611054318",
-        bizEmail: "info@menefex.nl",
-
-        author: "Michael Fransman",
-        authorImage: "/michaelFransman.jpeg",
-        authorEmail: "michaelfransman@menefex.nl",
-
-        socialHandle: "@MenefexWMB",
-
-        image: "/mnfx-scl.png",
-        favicon: "/mnfx-favi.png",
-
-        priceImage: "/mnfx-screens.jpeg",
-    },
+    siteMetadata: siteMetadata,
     plugins: [
         {
             resolve: "gatsby-plugin-google-tagmanager",
@@ -45,7 +50,7 @@ module.exports = {
         {
             resolve: "gatsby-plugin-canonical-urls",
             options: {
-                siteUrl: "https://menefex.nl",
+                siteUrl: siteMetadata.siteUrl,
             },
         },
         {
@@ -94,7 +99,7 @@ module.exports = {
         {
             resolve: "gatsby-plugin-disqus",
             options: {
-                shortname: "menefex",
+                shortname: siteMetadata.title.toLowerCase(),
             },
         },
         {
@@ -114,7 +119,7 @@ module.exports = {
                             title
                             author
                             description
-                            bizEmail
+                            email
                             authorEmail
                             siteUrl
                         }
@@ -127,8 +132,8 @@ module.exports = {
                     description: site.siteMetadata.description,
                     site_url: site.siteMetadata.siteUrl,
                     feed_url: `${site.siteMetadata.siteUrl}/rss.xml`,
-                    image_url: `${site.siteMetadata.siteUrl}/mnfx-favi.png`,
-                    webMaster: `${site.siteMetadata.bizEmail} (${site.siteMetadata.title})`,
+                    image_url: `${site.siteMetadata.siteUrl} + ${site.siteMetadata.favicon}`,
+                    webMaster: `${site.siteMetadata.email} (${site.siteMetadata.title})`,
                     managingEditor: `${site.siteMetadata.authorEmail} (${site.siteMetadata.author})`,
                     copyright: `© 2019 - ${new Date().getFullYear()} ${
                         site.siteMetadata.title
@@ -143,15 +148,15 @@ module.exports = {
                         {
                             "webfeeds:cover": {
                                 _attr: {
-                                    image: `${site.siteMetadata.siteUrl}/mnfx-scl.png`,
+                                    image: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
                                 },
                             },
                         },
                         {
-                            "webfeeds:icon": `${site.siteMetadata.siteUrl}/mnfx-favi.png`,
+                            "webfeeds:icon": `${site.siteMetadata.siteUrl}${site.siteMetadata.favicon}`,
                         },
                         {
-                            "webfeeds:logo": `${site.siteMetadata.siteUrl}/mnfx-favi.png`,
+                            "webfeeds:logo": `${site.siteMetadata.siteUrl}${site.siteMetadata.favicon}`,
                         },
                         { "webfeeds:accentColor": "FFCC00" },
                         {
@@ -217,42 +222,42 @@ module.exports = {
                         query: `
                         {
                             allContentfulBlogPost(sort: {createdAt: DESC} filter: { node_locale: { eq: "nl" } }) {
-                            edges {
-                                node {
-                                contentful_id
-                                title
-                                subtitle
-                                slug
-                                createdAt
-                                body {
-                                    rssHtml
-                                    references {
-                                    ... on ContentfulAsset {
-                                        contentful_id
-                                        __typename
+                                edges {
+                                    node {
+                                    contentful_id
+                                    title
+                                    subtitle
+                                    slug
+                                    createdAt
+                                    body {
+                                        rssHtml
+                                        references {
+                                            ... on ContentfulAsset {
+                                                contentful_id
+                                                __typename
+                                            }
+                                            ... on ContentfulBlogPost {
+                                                contentful_id
+                                                __typename
+                                            }
+                                        }
                                     }
-                                    ... on ContentfulBlogPost {
-                                        contentful_id
-                                        __typename
+                                    image {
+                                        file {
+                                        url
+                                        }
                                     }
+                                    topics {
+                                        name
+                                        }
                                     }
                                 }
-                                image {
-                                    file {
-                                    url
-                                    }
-                                }
-                                topics {
-                                    name
-                                }
-                                }
-                            }
                             }
                         }
                         `,
                         output: "/rss.xml",
                         title: "Menefex WMB: RSS Feeds",
-                        link: "https://feeds.feedburner.com/MenefexWMB",
+                        link: `https://feeds.feedburner.com/${siteMetadata.handle}`,
                         match: "^/blog/",
                         language: "nl-NL",
                     },
@@ -263,7 +268,7 @@ module.exports = {
             resolve: "gatsby-plugin-robots-txt",
             options: {
                 host: "menefex.nl",
-                sitemap: "https://menefex.nl/sitemap-index.xml",
+                sitemap: `${siteMetadata.siteUrl}/sitemap-index.xml`,
                 policy: [{ userAgent: "*", allow: "/" }],
             },
         },
@@ -274,29 +279,29 @@ module.exports = {
                 query: `
                 {
                     site {
-                    siteMetadata {
-                        siteUrl
-                    }
+                        siteMetadata {
+                            siteUrl
+                        }
                     }
             
                     allSitePage {
-                    nodes {
-                        path
-                    }
+                        nodes {
+                            path
+                        }
                     }
             
                     allContentfulBlogPost {
-                    nodes {
-                        slug
-                        updatedAt
-                    }
+                        nodes {
+                            slug
+                            updatedAt
+                        }
                     }
             
                     allContentfulTopic {
-                    nodes {
-                        slug
-                        updatedAt
-                    }
+                        nodes {
+                            slug
+                            updatedAt
+                        }
                     }
                 }
                 `,
@@ -362,14 +367,13 @@ module.exports = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                name: "Menefex Webmediabedrijf",
-                short_name: "Menefex",
-                description:
-                    "Wij bouwen websites & webapps met oog voor detail.",
+                name: siteMetadata.company,
+                short_name: siteMetadata.title,
+                description: siteMetadata.description,
                 start_url: "/",
-                background_color: "#a9a9a9",
                 lang: "nl",
-                theme_color: "#FFCC00",
+                theme_color: siteMetadata.primary,
+                background_color: siteMetadata.secondary,
                 display: "standalone",
                 icon: "src/images/favicon/mnfx-icon.png",
                 icon_options: {

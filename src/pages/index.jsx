@@ -57,7 +57,7 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => {
-    const { title, siteUrl, image, bizTel, description, bizEmail } =
+    const { title, siteUrl, image, telephone, description, email, handle } =
         useSiteMetadata();
 
     const localBusinessSchema = {
@@ -74,9 +74,9 @@ export const Head = () => {
         },
         description: description,
         url: siteUrl,
-        telephone: bizTel,
-        email: bizEmail,
-        hasMap: "https://g.page/MenefexWMB?share",
+        telephone: telephone,
+        email: email,
+        hasMap: `https://g.page/${handle}?share`,
         areaServed: {
             "@type": "GeoCircle",
             geoMidpoint: {
@@ -106,15 +106,15 @@ export const Head = () => {
             closes: "19:00:00",
         },
         sameAs: [
-            "https://www.facebook.com/MenefexWMB",
-            "https://www.twitter.com/MenefexWMB",
-            "https://www.instagram.com/menefexwmb/",
-            "https://www.linkedin.com/company/menefexwmb/",
-            "https://github.com/mikeyfe6",
-            "https://www.patreon.com/menefexWMB",
-            "https://feeds.feedburner.com/MenefexWMB",
-            "https://wa.me/31611054318",
-            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
+            `https://www.facebook.com/${handle}`,
+            `https://www.twitter.com/${handle}`,
+            `https://www.instagram.com/${handle}/`,
+            `https://www.linkedin.com/company/${handle}/`,
+            `https://github.com/mikeyfe6`,
+            `https://www.patreon.com/${handle}`,
+            `https://feeds.feedburner.com/${handle}`,
+            `https://wa.me/${telephone}`,
+            `https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300`,
         ],
     };
 

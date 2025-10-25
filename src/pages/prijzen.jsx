@@ -69,7 +69,7 @@ const Prices = () => {
 export default Prices;
 
 export const Head = () => {
-    const { siteUrl, priceImage } = useSiteMetadata();
+    const { siteUrl, screens } = useSiteMetadata();
 
     const pageTitle = "Prijzen & tarieven";
     const pageSlug = "/prijzen/";
@@ -92,7 +92,7 @@ export const Head = () => {
         "@context": "https://schema.org",
         "@type": "Product",
         name: "Budget Plan",
-        image: siteUrl + priceImage,
+        image: siteUrl + screens,
         description:
             "Het Budget Plan biedt een betaalbare oplossing voor kleine projecten met ontwikkeling van website, webapplicatie of webshop, inclusief SEO-optimalisatie en een maand gratis ondersteuning.",
         brand: {
@@ -113,7 +113,7 @@ export const Head = () => {
         "@context": "https://schema.org",
         "@type": "Product",
         name: "Starter Plan",
-        image: siteUrl + priceImage,
+        image: siteUrl + screens,
         description:
             "Het Starter Plan is ideaal voor groeiende bedrijven, met meer pagina's en functies, inclusief een blog en drie maanden gratis ondersteuning.",
         brand: {
@@ -134,7 +134,7 @@ export const Head = () => {
         "@context": "https://schema.org",
         "@type": "Product",
         name: "Established Plan",
-        image: siteUrl + priceImage,
+        image: siteUrl + screens,
         description:
             "Het Established Plan is geschikt voor gevestigde bedrijven, met een uitgebreider pakket aan diensten en zes maanden gratis ondersteuning.",
         brand: {
@@ -155,7 +155,7 @@ export const Head = () => {
         "@context": "https://schema.org",
         "@type": "Product",
         name: "Business Plan",
-        image: siteUrl + priceImage,
+        image: siteUrl + screens,
         description:
             "Het Business Plan is ontworpen voor grote bedrijven of e-commerce, met onbeperkte pagina's, e-commercefunctionaliteit en een jaar gratis ondersteuning.",
         brand: {

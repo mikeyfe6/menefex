@@ -26,7 +26,21 @@ export default {
     },
 
     footer: {
-        text: '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacybeleid/">privacybeleid</a> <span>|</span> <a href="/algemene-voorwaarden/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94',
+        services: {
+            title: "Onze Diensten",
+            email: "E-mail template laten maken",
+            maintenance: "Onderhoud en updates uitvoeren",
+            optimizations: "Optimalisaties laten uitvoeren",
+            webapp: "Webapplicatie laten maken",
+            webshop: "Webshop laten maken",
+            website: "Website laten maken",
+            seo: "Zoekmachineoptimalisatie",
+        },
+        about: "Over ons",
+        prices: "Prijzen",
+        faq: "Veelgestelde vragen",
+        credits:
+            '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacybeleid/">privacybeleid</a> <span>|</span> <a href="/algemene-voorwaarden/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17',
     },
 
     biography: {

@@ -424,7 +424,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                             </div>
                             <div className={postStyle.feedburner}>
                                 <a
-                                    href="https://feeds.feedburner.com/MenefexWMB"
+                                    href={`https://feeds.feedburner.com/${siteMetadata.handle}`}
                                     type="application/rss+xml"
                                     rel="noopener noreferrer"
                                     target="_blank"
@@ -441,7 +441,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                         <div>
                             <Disqus
                                 config={{
-                                    url: `https://menefex.nl/blog/${currentContent.slug}/`,
+                                    url: `${siteUrl}/blog/${currentContent.slug}/`,
                                     identifier: currentContent.contentful_id,
                                     language: currentLanguage,
                                     title: currentContent.title,

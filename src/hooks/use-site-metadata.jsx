@@ -9,19 +9,19 @@ const useSiteMetadata = () => {
                     title
                     company
 
-                    bizTel
-                    bizEmail
+                    telephone
+                    email
 
                     author
                     authorImage
                     authorEmail
 
-                    socialHandle
+                    handle
 
                     image
                     favicon
 
-                    priceImage
+                    screens
                 }
             }
         }

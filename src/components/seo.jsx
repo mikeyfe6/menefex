@@ -18,10 +18,10 @@ const SEO = ({
         defaultDescription,
         siteUrl: url,
         image,
-        socialHandle,
+        handle,
         company,
         favicon,
-        bizTel,
+        telephone,
         author,
         authorImage,
     } = useSiteMetadata();
@@ -50,7 +50,7 @@ const SEO = ({
             {
                 "@type": "ContactPoint",
                 "@id": url + "/#customerService",
-                telephone: bizTel,
+                telephone: telephone,
                 areaServed: ["NL", "BE", "SR", "GB"],
                 contactOption: "TollFree",
                 contactType: "customer service",
@@ -59,7 +59,7 @@ const SEO = ({
             {
                 "@type": "ContactPoint",
                 "@id": url + "/#technicalsupport",
-                telephone: bizTel,
+                telephone: telephone,
                 areaServed: ["NL", "BE", "SR", "GB"],
                 contactOption: "TollFree",
                 contactType: "technical support",
@@ -67,15 +67,15 @@ const SEO = ({
             },
         ],
         sameAs: [
-            "https://www.facebook.com/MenefexWMB",
-            "https://www.twitter.com/MenefexWMB",
-            "https://www.instagram.com/menefexwmb/",
-            "https://www.linkedin.com/company/menefexwmb/",
-            "https://github.com/mikeyfe6",
-            "https://www.patreon.com/menefexWMB",
-            "https://feeds.feedburner.com/MenefexWMB",
-            "https://wa.me/31611054318",
-            "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
+            `https://www.facebook.com/${handle}`,
+            `https://www.twitter.com/${handle}`,
+            `https://www.instagram.com/${handle}/`,
+            `https://www.linkedin.com/company/${handle}/`,
+            `https://github.com/mikeyfe6`,
+            `https://www.patreon.com/${handle}`,
+            `https://feeds.feedburner.com/${handle}`,
+            `https://wa.me/${telephone}`,
+            `https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300`,
         ],
     };
 
@@ -172,9 +172,9 @@ const SEO = ({
             )}
             {pageImage && <meta property="twitter:image" content={pageImage} />}
             {siteUrl && <meta property="twitter:url" content={siteUrl} />}
-            <meta property="twitter:site" content={socialHandle} />
-            {socialHandle && (
-                <meta property="twitter:creator" content={socialHandle} />
+            <meta property="twitter:site" content={`@${handle}`} />
+            {handle && (
+                <meta property="twitter:creator" content={`@${handle}`} />
             )}
 
             {/* --- Schema Markup ! --- */}

@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import useSiteMetadata from "../../hooks/use-site-metadata";
+
 import Hamburger from "./hamburger";
 
 import logo from "../../images/logo/mnfx-logo.svg";
@@ -14,6 +16,7 @@ import * as desktopMenuStyles from "../../styles/modules/layout/desktopMenu.modu
 
 const DesktopMenu = ({ drawerClickHandler }) => {
     const { t, i18n } = useTranslation();
+    const { telephone } = useSiteMetadata();
 
     const currentLanguage = i18n.language;
 
@@ -120,7 +123,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
                     </li>
                     <li>
                         <a
-                            href="https://wa.me/31611054318"
+                            href={`https://wa.me/${telephone}`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={desktopMenuStyles.whapp}

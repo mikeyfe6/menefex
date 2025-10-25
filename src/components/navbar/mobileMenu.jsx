@@ -4,11 +4,13 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
+import useSiteMetadata from "../../hooks/use-site-metadata";
 
 import * as mobileMenuStyles from "../../styles/modules/layout/mobileMenu.module.scss";
 
 const MobileMenu = ({ show }) => {
     const { t, isHydrated } = useTranslation();
+    const { telephone } = useSiteMetadata();
 
     let drawerClasses = mobileMenuStyles.mobileMenu;
     if (show) {
@@ -103,7 +105,7 @@ const MobileMenu = ({ show }) => {
                 </li>
                 <li>
                     <a
-                        href="https://wa.me/31611054318"
+                        href={`https://wa.me/${telephone}`}
                         rel="noopener noreferrer"
                         target="_blank"
                         className={mobileMenuStyles.whapp}

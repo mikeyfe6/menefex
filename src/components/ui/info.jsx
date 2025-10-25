@@ -3,6 +3,7 @@ import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useTranslation from "../../hooks/use-translation";
+import useSiteMetadata from "../../hooks/use-site-metadata";
 
 import * as infoStyles from "../../styles/modules/ui/info.module.scss";
 
@@ -10,6 +11,7 @@ import * as infoStyles from "../../styles/modules/ui/info.module.scss";
 
 const Info = () => {
     const { t, isHydrated } = useTranslation();
+    const { email, telephone, handle } = useSiteMetadata();
 
     if (!isHydrated) return null;
 
@@ -71,17 +73,17 @@ const Info = () => {
                 </a>
 
                 <a
-                    href="mailto:info@menefex.nl"
+                    href={`mailto:${email}`}
                     rel="noopener noreferrer"
                     target="_blank"
                     className={infoStyles.infoMail}
                 >
                     <FontAwesomeIcon icon={["fas", "envelope"]} /> ·{" "}
-                    <span>info@menefex.nl</span>
+                    <span>{email}</span>
                 </a>
 
                 <a
-                    href="https://wa.me/31611054318"
+                    href={`https://wa.me/${telephone}`}
                     rel="noopener noreferrer"
                     target="_blank"
                     className={infoStyles.infoWhapp}
@@ -100,7 +102,7 @@ const Info = () => {
                 <ul>
                     <li>
                         <a
-                            href="https://www.facebook.com/MenefexWMB"
+                            href={`https://www.facebook.com/${handle}`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={infoStyles.fb}
@@ -111,7 +113,7 @@ const Info = () => {
 
                     <li>
                         <a
-                            href="https://www.instagram.com/menefexwmb/"
+                            href={`https://www.instagram.com/${handle}/`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={infoStyles.ig}
@@ -122,7 +124,7 @@ const Info = () => {
 
                     <li>
                         <a
-                            href="https://www.twitter.com/MenefexWMB"
+                            href={`https://www.twitter.com/${handle}`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={infoStyles.tw}
@@ -133,7 +135,7 @@ const Info = () => {
 
                     <li>
                         <a
-                            href="https://www.linkedin.com/company/menefexwmb/"
+                            href={`https://www.linkedin.com/company/${handle}/`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={infoStyles.li}
@@ -166,7 +168,7 @@ const Info = () => {
 
                     <li>
                         <a
-                            href="https://www.patreon.com/menefexWMB"
+                            href={`https://www.patreon.com/${handle}`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={infoStyles.patr}

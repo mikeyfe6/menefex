@@ -49,25 +49,45 @@
 
             #{$footer}-info {
                 display: flex;
-                justify-content: space-around;
-                flex-direction: column;
+                justify-content: space-between;
+                flex-flow: column wrap;
                 gap: rem-calc(36);
+
+                @include phablet {
+                    flex-direction: row;
+
+                    &__contact,
+                    &__services,
+                    &__about,
+                    &__socials {
+                        flex: 1 1 calc(50% - #{rem-calc(18)});
+                        min-width: calc(50% - #{rem-calc(18)});
+                    }
+                }
 
                 @include laptop {
                     gap: rem-calc(48);
-                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    &__contact,
+                    &__services,
+                    &__about,
+                    &__socials {
+                        flex: 1 1 auto;
+                        min-width: auto;
+                    }
                 }
 
-                .personal,
-                .media,
-                .address {
+                &__contact,
+                &__services,
+                &__about,
+                &__socials {
                     display: flex;
                     flex-direction: column;
-                    gap: rem-calc(12);
-                    flex: 1;
 
-                    > h4 {
-                        color: $lightgrey-color;
+                    h4 {
+                        color: $grey-color;
+                        margin-bottom: rem-calc(12);
 
                         @extend %as-h5;
                     }
@@ -84,36 +104,54 @@
                     p {
                         color: $white-color;
 
-                        @include fluid-typing(17, 19);
+                        @include fluid-typing(16, 17);
                     }
                 }
 
-                .personal {
-                    justify-content: flex-start;
-                    align-items: flex-start;
+                &__contact {
+                    gap: rem-calc(36);
 
-                    .mail {
-                        color: $mail-color;
+                    > div {
+                        > div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: rem-calc(12);
+
+                            .mail {
+                                color: $mail-color;
+                            }
+
+                            .tel {
+                                color: $tel-color;
+                            }
+                        }
                     }
 
-                    .tel {
-                        color: $tel-color;
+                    .amsterdam {
+                        color: #d4121a;
+                        font-weight: 700;
                     }
                 }
 
-                .media {
-                    justify-content: center;
-                    align-items: center;
-
-                    ul {
+                &__services,
+                &__about {
+                    > ul {
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: rem-calc(24);
+                        flex-direction: column;
+                        gap: rem-calc(12);
+                        width: max-content;
+                    }
+                }
+
+                &__socials {
+                    > ul {
+                        display: flex;
+                        gap: rem-calc(16);
+                        margin-bottom: rem-calc(36);
+                        margin-left: rem-calc(8);
 
                         li {
                             display: flex;
-                            justify-content: center;
                             align-items: center;
                             gap: 1px;
 
@@ -148,15 +186,17 @@
                             }
                         }
                     }
-                }
 
-                .address {
-                    justify-content: flex-end;
-                    align-items: flex-end;
+                    > div {
+                        width: rem-calc(340);
+                        height: rem-calc(130);
+                        border-radius: $less-radius;
+                        overflow: hidden;
+                        align-self: center;
 
-                    .amsterdam {
-                        color: #d4121a;
-                        font-weight: 700;
+                        @include mobile {
+                            align-self: flex-start;
+                        }
                     }
                 }
             }
