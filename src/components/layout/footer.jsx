@@ -189,6 +189,7 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         className={footerStyles.fb}
+                                        aria-label="Facebook"
                                     >
                                         <FontAwesomeIcon
                                             icon={["fab", "facebook-f"]}
@@ -202,6 +203,7 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         className={footerStyles.ig}
+                                        aria-label="Instagram"
                                     >
                                         <FontAwesomeIcon
                                             icon={["fab", "instagram"]}
@@ -215,6 +217,7 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         className={footerStyles.tw}
+                                        aria-label="Twitter"
                                     >
                                         <FontAwesomeIcon
                                             icon={["fab", "x-twitter"]}
@@ -228,6 +231,7 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         className={footerStyles.li}
+                                        aria-label="LinkedIn"
                                     >
                                         <FontAwesomeIcon
                                             icon={["fab", "linkedin"]}
@@ -241,6 +245,7 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         className={footerStyles.gh}
+                                        aria-label="GitHub"
                                     >
                                         <FontAwesomeIcon
                                             icon={["fab", "github"]}
