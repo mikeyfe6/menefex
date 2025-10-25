@@ -283,6 +283,8 @@ const Footer = () => {
                                 <img
                                     src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png"
                                     alt="Buy Me A Coffee"
+                                    width={175}
+                                    height={50}
                                 />
                             </a>
 
