@@ -166,7 +166,7 @@ const Info = () => {
                         </a>
                     </li>
 
-                    <li>
+                    {/* <li>
                         <a
                             href={`https://www.patreon.com/${handle}`}
                             rel="noopener noreferrer"
@@ -175,7 +175,7 @@ const Info = () => {
                         >
                             <FontAwesomeIcon icon={["fab", "patreon"]} />
                         </a>
-                    </li>
+                    </li> */}
 
                     <li>
                         <a
@@ -188,7 +188,7 @@ const Info = () => {
                         </a>
                     </li>
 
-                    <li>
+                    {/* <li>
                         <a
                             href="https://join.skype.com/invite/lpx2blVirPUn"
                             rel="noopener noreferrer"
@@ -197,7 +197,7 @@ const Info = () => {
                         >
                             <FontAwesomeIcon icon={["fab", "skype"]} />
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </section>

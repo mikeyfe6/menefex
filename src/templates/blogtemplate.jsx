@@ -54,7 +54,7 @@ function collectAssetIds(document) {
 
 const Post = ({ pageContext: { nlContent, enContent } }) => {
     const { t, i18n, isHydrated } = useTranslation();
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, handle } = useSiteMetadata();
 
     const currentLanguage = i18n.language;
     const currentContent = currentLanguage === "nl" ? nlContent : enContent;
@@ -424,7 +424,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                             </div>
                             <div className={postStyle.feedburner}>
                                 <a
-                                    href={`https://feeds.feedburner.com/${siteMetadata.handle}`}
+                                    href={`https://feeds.feedburner.com/${handle}`}
                                     type="application/rss+xml"
                                     rel="noopener noreferrer"
                                     target="_blank"

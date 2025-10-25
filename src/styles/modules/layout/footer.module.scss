@@ -95,15 +95,20 @@
                     a {
                         @include smooth-trans;
 
-                        &:hover {
-                            color: $link-color;
+                        &:not(:has(> svg)) {
+                            &:hover {
+                                color: $link-color;
+                            }
                         }
                     }
 
                     a,
                     p {
                         color: $white-color;
+                    }
 
+                    a:not(:has(> svg)),
+                    p {
                         @include fluid-typing(16, 17);
                     }
                 }
@@ -143,45 +148,61 @@
                 }
 
                 &__socials {
+                    align-items: center;
+
+                    @include mobile {
+                        align-items: flex-start;
+                    }
+
                     > ul {
                         display: flex;
                         gap: rem-calc(16);
                         margin-bottom: rem-calc(36);
-                        margin-left: rem-calc(8);
 
                         li {
-                            display: flex;
-                            align-items: center;
-                            gap: 1px;
+                            font-size: unset;
 
-                            &::before {
-                                content: "";
-                                display: block;
-                                border-radius: 100%;
-                                height: rem-calc(6);
-                                width: rem-calc(6);
-                                margin-right: rem-calc(5);
-                                outline: 2px solid $white-color;
-                            }
+                            a {
+                                width: rem-calc(32);
+                                height: rem-calc(32);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: $medium-radius;
 
-                            &.fb::before {
-                                background: $fb-color;
-                            }
+                                &:hover {
+                                    background: $white-color;
+                                }
 
-                            &.ig::before {
-                                background: $ig-color;
-                            }
+                                &.fb:hover {
+                                    svg {
+                                        color: $fb-color;
+                                    }
+                                }
 
-                            &.tw::before {
-                                background: $tw-color;
-                            }
+                                &.ig:hover {
+                                    svg {
+                                        color: $ig-color;
+                                    }
+                                }
 
-                            &.li::before {
-                                background: $li-color;
-                            }
+                                &.tw:hover {
+                                    svg {
+                                        color: $tw-color;
+                                    }
+                                }
 
-                            &.gh::before {
-                                background: $gh-color;
+                                &.li:hover {
+                                    svg {
+                                        color: $li-color;
+                                    }
+                                }
+
+                                &.gh:hover {
+                                    svg {
+                                        color: $gh-color;
+                                    }
+                                }
                             }
                         }
                     }
@@ -192,10 +213,38 @@
                         border-radius: $less-radius;
                         overflow: hidden;
                         align-self: center;
+                        margin-bottom: rem-calc(36);
 
                         @include mobile {
                             align-self: flex-start;
                         }
+                    }
+
+                    > a {
+                        max-width: rem-calc(175);
+                        display: block;
+
+                        img {
+                            outline: 2px solid transparent;
+                            border-radius: $medium-radius;
+                        }
+
+                        &:hover {
+                            img {
+                                outline-color: $link-color;
+                            }
+                        }
+                    }
+                }
+
+                > hr {
+                    height: 2px;
+                    width: 100%;
+                    margin: 0 auto;
+                    background: $dark-color;
+
+                    @include mobile {
+                        display: none;
                     }
                 }
             }

@@ -11,8 +11,8 @@ import {
     faXTwitter,
     faLinkedin,
     faGithub,
-    faPatreon,
-    faSkype,
+    // faPatreon,
+    // faSkype,
     faSearchengin,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -60,8 +60,8 @@ library.add(
     faLinkedin,
     faGithub,
     faRss,
-    faPatreon,
-    faSkype,
+    // faPatreon,
+    // faSkype,
     faChevronLeft,
     faChevronRight,
     faGlobe,

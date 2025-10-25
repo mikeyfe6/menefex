@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 
 import { Link } from "gatsby";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
 import useTranslation from "../../hooks/use-translation";
@@ -103,7 +105,7 @@ const Footer = () => {
                                     <span className={footerStyles.amsterdam}>
                                         x x x
                                     </span>{" "}
-                                    amsterdam, netherlands
+                                    amsterdam, {t("footer.nederland")}
                                 </p>
                             </div>
                         </div>
@@ -175,53 +177,75 @@ const Footer = () => {
                             </ul>
                         </div>
 
+                        <hr />
+
                         <div className={footerStyles.footerInfo__socials}>
-                            <h4>Volg ons</h4>
+                            <h4>{t("footer.followUs")}</h4>
 
                             <ul>
-                                <li className={footerStyles.fb}>
+                                <li>
                                     <a
                                         href={`https://www.facebook.com/${handle}`}
                                         rel="noopener noreferrer"
                                         target="_blank"
+                                        className={footerStyles.fb}
                                     >
-                                        fb
+                                        <FontAwesomeIcon
+                                            icon={["fab", "facebook-f"]}
+                                            size="xl"
+                                        />
                                     </a>
                                 </li>
-                                <li className={footerStyles.ig}>
+                                <li>
                                     <a
                                         href={`https://www.instagram.com/${handle}/`}
                                         rel="noopener noreferrer"
                                         target="_blank"
+                                        className={footerStyles.ig}
                                     >
-                                        ig
+                                        <FontAwesomeIcon
+                                            icon={["fab", "instagram"]}
+                                            size="xl"
+                                        />
                                     </a>
                                 </li>
-                                <li className={footerStyles.tw}>
+                                <li>
                                     <a
                                         href={`https://www.twitter.com/${handle}`}
                                         rel="noopener noreferrer"
                                         target="_blank"
+                                        className={footerStyles.tw}
                                     >
-                                        tw
+                                        <FontAwesomeIcon
+                                            icon={["fab", "x-twitter"]}
+                                            size="xl"
+                                        />
                                     </a>
                                 </li>
-                                <li className={footerStyles.li}>
+                                <li>
                                     <a
                                         href={`https://www.linkedin.com/company/${handle}/`}
                                         rel="noopener noreferrer"
                                         target="_blank"
+                                        className={footerStyles.li}
                                     >
-                                        li
+                                        <FontAwesomeIcon
+                                            icon={["fab", "linkedin"]}
+                                            size="xl"
+                                        />
                                     </a>
                                 </li>
-                                <li className={footerStyles.gh}>
+                                <li>
                                     <a
                                         href="https://github.com/mikeyfe6"
                                         rel="noopener noreferrer"
                                         target="_blank"
+                                        className={footerStyles.gh}
                                     >
-                                        gh
+                                        <FontAwesomeIcon
+                                            icon={["fab", "github"]}
+                                            size="xl"
+                                        />
                                     </a>
                                 </li>
                             </ul>
@@ -251,6 +275,20 @@ const Footer = () => {
                                     </blockquote>
                                 </div>
                             </div>
+                            <a
+                                href="https://www.buymeacoffee.com/menefex"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png"
+                                    alt="Buy Me A Coffee"
+                                />
+                            </a>
+
+                            {/* <a href="https://www.buymeacoffee.com/menefex">
+                                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=menefex&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
+                            </a> */}
                         </div>
                     </div>
 
