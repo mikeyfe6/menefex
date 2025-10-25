@@ -149,6 +149,8 @@ const SEO = ({
 
             <meta property="fb:app_id" content={process.env.GATSBY_FB_APP_ID} />
 
+            <meta property="fb:domains" content="menefex.nl" />
+
             {title && <meta property="og:title" content={title} />}
             {description && (
                 <meta property="og:description" content={description} />

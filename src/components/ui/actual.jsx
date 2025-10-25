@@ -114,7 +114,10 @@ const Actual = () => {
                                     )}
                                 </time>
                                 <span> · </span>
-                                <Link to={`/blog/${node.slug}/`}>
+                                <Link
+                                    to={`/blog/${node.slug}/`}
+                                    aria-label={`Lees meer: ${node.title}`}
+                                >
                                     <b>{t("actual.readMore")}</b>
                                 </Link>
                             </div>
