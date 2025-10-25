@@ -61,15 +61,27 @@ const Hero = () => {
 
                     <div className={heroStyles.heroButtons} id="cta">
                         <span>-</span>
-                        <a href="#biography" type="button" name="cta">
+                        <a
+                            href="#biography"
+                            name="cta"
+                            aria-label="Scroll naar biografie sectie"
+                        >
                             {t("hero.biography")}
                         </a>
                         <span>|</span>
-                        <a href="#services" name="cta">
+                        <a
+                            href="#services"
+                            name="cta"
+                            aria-label="Scroll naar diensten sectie"
+                        >
                             {t("hero.services")}
                         </a>
                         <span>|</span>
-                        <a href="#projects" name="cta">
+                        <a
+                            href="#projects"
+                            name="cta"
+                            aria-label="Scroll naar portfolio sectie"
+                        >
                             {t("hero.portfolio")}
                         </a>
                         <span>-</span>
