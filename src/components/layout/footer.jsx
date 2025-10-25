@@ -172,7 +172,7 @@ const Footer = () => {
                                     <Link to="/faq/">FAQ</Link>
                                 </li>
                                 <li>
-                                    <Link to="/sitemap-0.xml">Sitemap</Link>
+                                    <a href="/sitemap-0.xml">Sitemap</a>
                                 </li>
                             </ul>
                         </div>
