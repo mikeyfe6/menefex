@@ -39,7 +39,6 @@ export default {
         },
         about: "Over ons",
         prices: "Prijzen",
-        faq: "Veelgestelde vragen",
         followUs: "Volg ons",
         credits:
             '<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacybeleid/">privacybeleid</a> <span>|</span> <a href="/algemene-voorwaarden/">algemene voorwaarden</a> <span>|</span> alle rechten voorbehouden <span>|</span> KvK <span>#</span> 76045315 <span>|</span> Btw <span>#</span> NL003040579B17',

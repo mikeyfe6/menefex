@@ -39,7 +39,6 @@ export default {
         },
         about: "About us",
         prices: "Prices",
-        faq: "Frequently asked questions",
         followUs: "Follow us",
         credits: `<span>&copy;</span> 2019 - {{today}} · {{title}} <span>|</span> <a href="/privacybeleid/">privacy policy</a> <span>|</span> <a href="/algemene-voorwaarden/">terms & conditions</a> <span>|</span> all rights reserved <span>|</span> CoC <span>#</span> 76045315 <span>|</span> VAT <span>#</span> NL003040579B17 <span>|</span> Bank <span>#</span> NL10 BUNQ 2038 8619 94`,
     },

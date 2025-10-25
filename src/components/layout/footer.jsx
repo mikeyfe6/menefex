@@ -169,7 +169,7 @@ const Footer = () => {
                                     <Link to="/blog/">Blog</Link>
                                 </li>
                                 <li>
-                                    <Link to="/faq/">{t("footer.faq")}</Link>
+                                    <Link to="/faq/">FAQ</Link>
                                 </li>
                                 <li>
                                     <Link to="/sitemap-0.xml">Sitemap</Link>
