@@ -245,8 +245,6 @@ const SmartForm = () => {
         setInputValue(answers[currentQuestion?.id] || "");
     }, [currentQuestion?.id, answers]);
 
-    if (!isHydrated) return null;
-
     const handleNext = () => {
         setAnswers((prevAnswers) => {
             const newAnswers = {
@@ -450,6 +448,8 @@ const SmartForm = () => {
         setCurrentStep(0);
         setSuccess(false);
     };
+
+    if (!isHydrated) return null;
 
     return (
         <section>

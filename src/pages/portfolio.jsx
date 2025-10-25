@@ -551,7 +551,7 @@ export const Head = () => {
     return (
         <SEO
             title={pageTitle}
-            description="Ontdek de recente projecten van Menefex: van webdesign en webontwikkeling tot op maat gemaakte digitale oplossingen voor klanten. Bekijk ons portfolio en laat u inspireren door onze succesvolle samenwerkingen!"
+            description="Ontdek de recente projecten van Menefex: van webdesign en webontwikkeling tot op maat gemaakte digitale oplossingen voor klanten. Bekijk ons portfolio en laat je inspireren door onze succesvolle samenwerkingen!"
             keywords="portfolio, projecten, webdesign, webontwikkeling, digitale oplossingen, inspiratie, samenwerkingen"
             pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}

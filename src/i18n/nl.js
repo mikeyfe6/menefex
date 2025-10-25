@@ -46,7 +46,7 @@ export default {
 
     biography: {
         title: "Biografie",
-        intro: "<b>Menefex</b> is een modern webmediabedrijf, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij uw bedrijfsdoelen. Met <b>Menefex</b> haalt u een betrouwbare partner in huis die uw online aanwezigheid naar een hoger niveau tilt.",
+        intro: "<b>Menefex</b> is een modern webmediabedrijf, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij uw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die uw online aanwezigheid naar een hoger niveau tilt.",
         more: "Meer over Menefex",
     },
 
@@ -68,7 +68,7 @@ export default {
             // component
             name: "Websites",
             excerpt:
-                "Wij bouwen functionele en efficiënte websites die volledig op maat zijn gemaakt. Onze websites voldoen aan alle moderne technische eisen en voorwaarden, zodat u verzekerd bent van een toekomstbestendige online aanwezigheid.",
+                "Wij bouwen functionele en efficiënte websites die volledig op maat zijn gemaakt. Onze websites voldoen aan alle moderne technische eisen en voorwaarden, zodat je verzekerd bent van een toekomstbestendige online aanwezigheid.",
             focus: [
                 "Snelle laadtijden",
                 "Uniek maatwerkdesign",
@@ -263,7 +263,7 @@ export default {
     prices: {
         title: "Prijzen & Tarieven",
         intro: {
-            one: "Hier ziet u een indicatie van onze scherpe prijzen. Heeft u liever een georiënteerd gesprek,",
+            one: "Hier zie je een indicatie van onze scherpe prijzen. Heb je liever een georiënteerd gesprek,",
             contactUs: "neem contact",
             two: "met ons op of vraag om een",
             callBack: "terugbelverzoek",
@@ -304,7 +304,7 @@ export default {
         },
         notes: {
             title: "Aanvullende informatie",
-            content: `<p>U bent uiteraard ook voor de <b><u>kleinere taken</u></b> bij het juiste adres, denk bijvoorbeeld aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra toevoegingen</b> of <b>toepassingen</b> op uw website, webapp of webshop, beter <b>zichtbaarheid</b> via de zoekresultaten <b>(SEO)</b> op bijv. Google, Bing, Yahoo... Noem maar op, maak het zo gek als u wilt. <u>Wij fixen het!</u></p><p>Ook de <b>grotere projecten</b> die meer tijd vergen, zoals het vernieuwen van een bestaande website pakken we met beide handen aan. Alle genoemde services & diensten vallen onder een prijs van <b>€ 45,- per uur (excl. BTW).</b></p><p>Mocht u er niet uitkomen welk <b>pakket</b> u het beste schikt... Geen probleem! Wij helpen u graag verder. Vraag een <b>terugbelverzoek</b> aan, <b>bel</b> of <b>mail</b> ons en alles wordt u uitgebreid geïnformeerd. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / bekijk</b></a> een <u>overzicht</u> van onze prijzen in <b>pdf</b>-vorm.</p>`,
+            content: `<p>Je bent uiteraard ook voor de <b><u>kleinere taken</u></b> bij het juiste adres, denk bijvoorbeeld aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra toevoegingen</b> of <b>toepassingen</b> op uw website, webapp of webshop, beter <b>zichtbaarheid</b> via de zoekresultaten <b>(SEO)</b> op bijv. Google, Bing, Yahoo... Noem maar op, maak het zo gek als je wilt. <u>Wij fixen het!</u></p><p>Ook de <b>grotere projecten</b> die meer tijd vergen, zoals het vernieuwen van een bestaande website pakken we met beide handen aan. Alle genoemde services & diensten vallen onder een prijs van <b>€ 45,- per uur (excl. BTW).</b></p><p>Mocht je er niet uitkomen welk <b>pakket</b> je het beste schikt... Geen probleem! Wij helpen je graag verder. Vraag een <b>terugbelverzoek</b> aan, <b>bel</b> of <b>mail</b> ons en alles wordt je uitgebreid geïnformeerd. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / bekijk</b></a> een <u>overzicht</u> van onze prijzen in <b>pdf</b>-vorm.</p>`,
         },
         form: {
             title: "Terugbelverzoek",
@@ -314,7 +314,7 @@ export default {
             tomorrow: "Morgen tussen",
             today: "Vandaag tussen",
             chooseDay: "Kies een dag en tijd",
-            comments: "Heeft u nog opmerkingen? (optioneel)",
+            comments: "Heb je nog opmerkingen? (optioneel)",
             callMeBack: "Bel mij terug",
         },
     },
@@ -331,7 +331,7 @@ export default {
         },
         unique: {
             title: "Wat maakt Menefex zo uniek?",
-            text: "<b>Menefex</b> biedt de nodige hulp, service en communicatie vóór, tijdens en ná het bouwproces van uw product en heeft deze op een hoog plateau staan. Wij denken sterk mee met de klant. Wij werken met de nieuwste en meest stabiele software, zodat u product veilig en duurzaam blijft. Bij Menefex respecteren we essentiële details en is niks onmogelijk. Er wordt bij het bouwen tot over de laatste pixel nagedacht.",
+            text: "<b>Menefex</b> biedt de nodige hulp, service en communicatie vóór, tijdens en ná het bouwproces van jouw product en heeft deze op een hoog plateau staan. Wij denken sterk mee met de klant. Wij werken met de nieuwste en meest stabiele software, zodat jouw product veilig en duurzaam blijft. Bij Menefex respecteren we essentiële details en is niks onmogelijk. Er wordt bij het bouwen tot over de laatste pixel nagedacht.",
         },
         goals: {
             title: "Onze doelen, streven en motivatie?",
@@ -399,7 +399,7 @@ export default {
 
     success: {
         title: "Bedankt voor uw bericht",
-        text: "Wij nemen zo spoeding mogelijk contact met u op!",
+        text: "Wij nemen zo spoeding mogelijk contact met je op!",
         home: "Ga terug naar de hoofdpagina!",
     },
 
@@ -420,7 +420,7 @@ export default {
 
     faq: {
         title: "FAQ (Veelgestelde vragen)",
-        intro: "Heeft u een vraag? Wij hebben waarschijnlijk het antwoord! Hieronder vindt u de meest gestelde vragen over onze diensten, processen en meer. Staat uw vraag er niet bij? Neem dan gerust contact met ons op.",
+        intro: "Heb je een vraag? Wij hebben waarschijnlijk het antwoord! Hieronder vindt je de meest gestelde vragen over onze diensten, processen en meer. Staat je vraag er niet bij? Neem dan gerust contact met ons op.",
         priceText: "Bekijk hier ons",
         priceLink: "prijsoverzicht",
         seeAll: "Zie alle vragen",
@@ -680,11 +680,11 @@ export default {
         submit: "Versturen",
         options: {
             choose: "Kies een optie",
-            website: "Website laten maken",
-            webapp: "Webapplicatie laten maken",
-            webshop: "Webshop laten maken",
+            website: "Website ontwikkeling",
+            webapp: "Webapplicatie ontwikkeling",
+            webshop: "Webshop ontwikkeling",
             seo: "Zoekmachineoptimalisatie (SEO)",
-            other: "Andere diensten",
+            other: "Andere dienst",
         },
         placeholder: {
             websiteUrl: "bijv. https://www.jouwwebsite.nl",
@@ -701,7 +701,7 @@ export default {
             need: "Wat heb je nodig?",
             hasWebsite: {
                 default: "Heb je al een website/webshop/webapp?",
-                website: "Heb je al een website?",
+                website: "Heb je al een website/domein?",
                 webshop: "Heb je al een webshop?",
                 webapp: "Heb je al een webapplicatie?",
             },

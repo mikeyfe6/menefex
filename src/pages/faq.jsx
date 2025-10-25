@@ -374,7 +374,7 @@ export const Head = () => {
     return (
         <SEO
             title={pageTitle}
-            description="Heeft u een vraag? Wij hebben waarschijnlijk het antwoord! Hieronder vindt u de meest gestelde vragen over onze diensten, processen en meer. Staat uw vraag er niet bij? Neem dan gerust contact met ons op."
+            description="Heb je een vraag? Wij hebben waarschijnlijk het antwoord! Hieronder vind je de meest gestelde vragen over onze diensten, processen en meer. Staat je vraag er niet bij? Neem dan gerust contact met ons op."
             keywords="FAQ, veelgestelde vragen, diensten, processen, contact"
             pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, faqSchema]}
