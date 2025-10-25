@@ -29,7 +29,7 @@ export default {
         services: {
             title: "Our Services",
             email: "E-mail template creation",
-            maintenance: "Maintenance and updates",
+            maintenance: "Maintenance/updates",
             optimizations: "Optimizations",
             webapp: "Web application development",
             webshop: "Webshop development",

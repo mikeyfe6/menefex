@@ -170,7 +170,7 @@ const Footer = () => {
                                     <Link to="/faq/">{t("footer.faq")}</Link>
                                 </li>
                                 <li>
-                                    <Link to="/sitemap-index.xml">Sitemap</Link>
+                                    <Link to="/sitemap-0.xml">Sitemap</Link>
                                 </li>
                             </ul>
                         </div>

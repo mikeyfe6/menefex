@@ -29,7 +29,7 @@ export default {
         services: {
             title: "Onze Diensten",
             email: "E-mail template laten maken",
-            maintenance: "Onderhoud en updates uitvoeren",
+            maintenance: "Onderhoud/updates uitvoeren",
             optimizations: "Optimalisaties laten uitvoeren",
             webapp: "Webapplicatie laten maken",
             webshop: "Webshop laten maken",
