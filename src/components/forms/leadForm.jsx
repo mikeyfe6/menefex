@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 
 import { navigate } from "gatsby";
+
 import axios from "axios";
 
 import useTranslation from "../../hooks/use-translation";

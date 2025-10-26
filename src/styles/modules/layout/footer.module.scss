@@ -225,13 +225,14 @@
                         display: block;
 
                         img {
-                            outline: 2px solid transparent;
+                            border: 2px solid transparent;
                             border-radius: $medium-radius;
+                            overflow: hidden;
                         }
 
                         &:hover {
                             img {
-                                outline-color: $link-color;
+                                border-color: $link-color;
                             }
                         }
                     }

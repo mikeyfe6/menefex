@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import useSiteMetadata from "../../hooks/use-site-metadata";
-
 import useTranslation from "../../hooks/use-translation";
+import useSiteMetadata from "../../hooks/use-site-metadata";
 
 import minilogo from "../../images/logo/mnfx-icon.svg";
 
@@ -285,11 +285,11 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
-                                    src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png"
+                                <StaticImage
+                                    src="../../images/bmc.png"
                                     alt="Buy Me A Coffee"
-                                    width={175}
-                                    height={50}
+                                    width={154}
+                                    height={44}
                                 />
                             </a>
 

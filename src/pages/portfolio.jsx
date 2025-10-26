@@ -2,10 +2,11 @@ import * as React from "react";
 
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import useSiteMetadata from "../hooks/use-site-metadata";
 import useTranslation from "../hooks/use-translation";
+import useSiteMetadata from "../hooks/use-site-metadata";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";

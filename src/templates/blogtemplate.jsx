@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 
 import { Link } from "gatsby";
-import axios from "axios";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Disqus } from "gatsby-plugin-disqus";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
+import axios from "axios";
 import {
     useContentfulLiveUpdates,
     useContentfulInspectorMode,
 } from "@contentful/live-preview/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { format, parseISO } from "date-fns";
 import { nl, enUS } from "date-fns/locale";

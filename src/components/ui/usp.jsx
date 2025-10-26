@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import useTranslation from "../../hooks/use-translation";
 
 import * as uspStyles from "../../styles/modules/ui/usp.module.scss";

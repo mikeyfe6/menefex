@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import useTranslation from "../../hooks/use-translation";
-
 import { StaticImage } from "gatsby-plugin-image";
+
+import useTranslation from "../../hooks/use-translation";
 
 import heroLogo from "../../images/logo/mnfx-icon.svg";
 
