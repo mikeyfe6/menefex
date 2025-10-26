@@ -54,7 +54,6 @@ const SmartForm = () => {
         {
             id: "budget",
             type: "select",
-            options: ["< €500", "€500 - €1000", "€1000 - €2500", "€2500 >"],
             options: [
                 { value: "< €500", label: "< €500" },
                 { value: "€500 - €1000", label: "€500 - €1000" },
