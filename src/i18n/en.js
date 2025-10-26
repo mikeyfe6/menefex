@@ -722,7 +722,16 @@ export default {
         },
         hourCosts:
             "* Outsourcing content management costs €45 per hour (excl. VAT).",
-
+        tooltip: {
+            hasWebsite:
+                "Let us know if you already have an existing website, webshop, or web application that we can improve or replace.",
+            websiteUrl:
+                "Share the URL of your current website, webshop, or web application so we can review and assess it.",
+            selfManage:
+                "Indicate whether you want to manage content yourself or have us take care of it. If you want to manage it yourself, this will increase development time, but you will receive a user-friendly CMS.",
+            budget: "Your budget helps us determine the right features and approach for your project.",
+            default: "Additional information about this question.",
+        },
         advice: {
             webshopLowBudget: {
                 description:
@@ -772,6 +781,8 @@ export default {
                     "Based on your answers, we recommend the following package or action.",
             },
         },
+        confirmation:
+            "I have checked the information and would like to receive a no-obligation quote.",
     },
 
     privacyPolicy:

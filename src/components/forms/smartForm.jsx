@@ -13,6 +13,8 @@ const SmartForm = () => {
     const [answers, setAnswers] = useState({});
     const [currentStep, setCurrentStep] = useState(0);
     const [success, setSuccess] = useState(false);
+    const [activeTooltip, setActiveTooltip] = useState(null);
+    const [confirmChecked, setConfirmChecked] = useState(false);
 
     const flow = [
         {
@@ -40,7 +42,6 @@ const SmartForm = () => {
             name: "website-url",
             autoComplete: "url",
             placeholder: t("smartform.placeholder.websiteUrl"),
-
             dependsOn: [
                 { id: "hasWebsite", value: ["yes"] },
                 { id: "need", value: ["seo"] },
@@ -74,7 +75,7 @@ const SmartForm = () => {
         },
         {
             id: "email",
-            type: "text",
+            type: "email",
             name: "email",
             autoComplete: "email",
             placeholder: t("smartform.placeholder.email"),
@@ -117,7 +118,50 @@ const SmartForm = () => {
             case "select":
                 return (
                     <>
-                        <label htmlFor={question.id}>{question.question}</label>
+                        <div className={smartFormStyles.smartFormHeader}>
+                            <label
+                                htmlFor={question.id}
+                                className={smartFormStyles.smartFormLabel}
+                            >
+                                {question.question}
+                            </label>
+
+                            {question.id === "budget" && (
+                                <>
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setActiveTooltip(
+                                                activeTooltip === question.id
+                                                    ? null
+                                                    : question.id
+                                            )
+                                        }
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={["fas", "circle-question"]}
+                                            size="lg"
+                                        />
+                                    </button>
+                                    {activeTooltip === question.id && (
+                                        <div>
+                                            <p>{getTooltipText(question.id)}</p>
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    setActiveTooltip(null)
+                                                }
+                                            >
+                                                <FontAwesomeIcon
+                                                    icon={["fas", "fa-xmark"]}
+                                                    size="sm"
+                                                />
+                                            </button>
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                        </div>
                         <select
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
@@ -137,9 +181,48 @@ const SmartForm = () => {
             case "radio":
                 return (
                     <>
-                        <p>{question.question}</p>
+                        <div className={smartFormStyles.smartFormHeader}>
+                            <p className={smartFormStyles.smartFormLabel}>
+                                {question.question}
+                            </p>
+
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    setActiveTooltip(
+                                        activeTooltip === question.id
+                                            ? null
+                                            : question.id
+                                    )
+                                }
+                            >
+                                <FontAwesomeIcon
+                                    icon={["fas", "circle-question"]}
+                                    size="lg"
+                                />
+                            </button>
+
+                            {activeTooltip === question.id && (
+                                <div>
+                                    <p>{getTooltipText(question.id)}</p>
+
+                                    <button
+                                        type="button"
+                                        onClick={() => setActiveTooltip(null)}
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={["fas", "fa-xmark"]}
+                                            size="sm"
+                                        />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                         {["yes", "no"].map((opt) => (
-                            <div key={opt}>
+                            <div
+                                key={opt}
+                                className={smartFormStyles.smartFormSelect}
+                            >
                                 <label htmlFor={`${question.id}-${opt}`}>
                                     <input
                                         type="radio"
@@ -160,7 +243,47 @@ const SmartForm = () => {
             case "url":
                 return (
                     <>
-                        <label htmlFor={question.id}>{question.question}</label>
+                        <div className={smartFormStyles.smartFormHeader}>
+                            <label
+                                htmlFor={question.id}
+                                className={smartFormStyles.smartFormLabel}
+                            >
+                                {question.question}
+                            </label>
+
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    setActiveTooltip(
+                                        activeTooltip === question.id
+                                            ? null
+                                            : question.id
+                                    )
+                                }
+                            >
+                                <FontAwesomeIcon
+                                    icon={["fas", "circle-question"]}
+                                    size="lg"
+                                />
+                            </button>
+
+                            {activeTooltip === question.id && (
+                                <div>
+                                    <p>{getTooltipText(question.id)}</p>
+
+                                    <button
+                                        type="button"
+                                        onClick={() => setActiveTooltip(null)}
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={["fas", "fa-xmark"]}
+                                            size="sm"
+                                        />
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+
                         <input
                             ref={inputRef}
                             type="url"
@@ -170,13 +293,19 @@ const SmartForm = () => {
                             name={question.name}
                             autoComplete={question.autoComplete}
                             placeholder={question.placeholder}
+                            required
                         />
                     </>
                 );
             case "text":
                 return (
                     <>
-                        <label htmlFor={question.id}>{question.question}</label>
+                        <label
+                            htmlFor={question.id}
+                            className={`${smartFormStyles.smartFormLabel} ${smartFormStyles.smartFormHeader}`}
+                        >
+                            {question.question}
+                        </label>
                         <input
                             ref={inputRef}
                             type="text"
@@ -189,10 +318,36 @@ const SmartForm = () => {
                         />
                     </>
                 );
+            case "email":
+                return (
+                    <>
+                        <label
+                            htmlFor={question.id}
+                            className={`${smartFormStyles.smartFormLabel} ${smartFormStyles.smartFormHeader}`}
+                        >
+                            {question.question}
+                        </label>
+                        <input
+                            ref={inputRef}
+                            type="email"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            id={question.id}
+                            name={question.name}
+                            autoComplete={question.autoComplete}
+                            placeholder={question.placeholder}
+                        />
+                    </>
+                );
             case "tel":
                 return (
                     <>
-                        <label htmlFor={question.id}>{question.question}</label>
+                        <label
+                            htmlFor={question.id}
+                            className={`${smartFormStyles.smartFormLabel} ${smartFormStyles.smartFormHeader}`}
+                        >
+                            {question.question}
+                        </label>
                         <input
                             ref={inputRef}
                             type="tel"
@@ -208,7 +363,12 @@ const SmartForm = () => {
             case "textarea":
                 return (
                     <>
-                        <label htmlFor={question.id}>{question.question}</label>
+                        <label
+                            htmlFor={question.id}
+                            className={`${smartFormStyles.smartFormLabel} ${smartFormStyles.smartFormHeader}`}
+                        >
+                            {question.question}
+                        </label>
                         <textarea
                             ref={inputRef}
                             value={inputValue}
@@ -319,6 +479,25 @@ const SmartForm = () => {
         if (id === "message") return t("smartform.questions.message");
         return "";
     };
+
+    const getTooltipText = (questionId) => {
+        switch (questionId) {
+            case "hasWebsite":
+                return t("smartform.tooltip.hasWebsite");
+            case "websiteUrl":
+                return t("smartform.tooltip.websiteUrl");
+            case "selfManage":
+                return t("smartform.tooltip.selfManage");
+            case "budget":
+                return t("smartform.tooltip.budget");
+            default:
+                return t("smartform.tooltip.default");
+        }
+    };
+
+    useEffect(() => {
+        setActiveTooltip(null);
+    }, [currentStep]);
 
     const getRadioLabel = (value) => t(`smartform.label.${value}`);
 
@@ -555,7 +734,6 @@ const SmartForm = () => {
                                                     size="sm"
                                                 />
                                             </Link>
-
                                             <button
                                                 type="button"
                                                 onClick={handleReset}
@@ -570,13 +748,33 @@ const SmartForm = () => {
                                                 />
                                             </button>
                                             <div>
+                                                <input
+                                                    type="checkbox"
+                                                    id="confirm"
+                                                    checked={confirmChecked}
+                                                    onChange={(e) =>
+                                                        setConfirmChecked(
+                                                            e.target.checked
+                                                        )
+                                                    }
+                                                />
+                                                <label htmlFor="confirm">
+                                                    {t(
+                                                        "smartform.confirmation"
+                                                    )}
+                                                </label>
+                                            </div>
+                                            <div>
                                                 <button
                                                     type="button"
                                                     onClick={handleBack}
                                                 >
                                                     {t("smartform.back")}
                                                 </button>
-                                                <button type="submit">
+                                                <button
+                                                    type="submit"
+                                                    disabled={!confirmChecked}
+                                                >
                                                     {getAdvice(answers).cta}
                                                 </button>
                                             </div>

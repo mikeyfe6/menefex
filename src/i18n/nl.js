@@ -701,21 +701,21 @@ export default {
             need: "Wat heb je nodig?",
             hasWebsite: {
                 default: "Heb je al een website/webshop/webapp?",
-                website: "Heb je al een website/domein?",
+                website: "Heb je al een website?",
                 webshop: "Heb je al een webshop?",
                 webapp: "Heb je al een webapplicatie?",
             },
             websiteUrl: {
-                default: "Wat is de URL?",
-                website: "Wat is de URL van je website?",
-                webshop: "Wat is de URL van je webshop?",
-                webapp: "Wat is de URL van je webapplicatie?",
+                default: "Wat is het domeinnaam/URL?",
+                website: "Wat is de domeinnaam/URL van je website?",
+                webshop: "Wat is de domeinnaam/URL van je webshop?",
+                webapp: "Wat is de domeinnaam/URL van je webapplicatie?",
             },
             selfManage: {
                 default: "Wil je het zelf beheren?",
-                website: "Wil je je website zelf beheren?",
-                webshop: "Wil je je webshop zelf beheren?",
-                webapp: "Wil je je webapplicatie zelf beheren?",
+                website: "Wil je de content van je website zelf beheren?",
+                webshop: "Wil je de content van je webshop zelf beheren?",
+                webapp: "Wil je de content van je webapplicatie zelf beheren?",
             },
             budget: "Heb je een idee van je budget?",
             name: "Wat is je naam?",
@@ -725,7 +725,16 @@ export default {
         },
         hourCosts:
             "* Het uitbesteden van contentbeheer kost €45 per uur (excl. BTW).",
-
+        tooltip: {
+            hasWebsite:
+                "Laat ons weten of je al een bestaande website, webshop of webapplicatie hebt die we kunnen verbeteren of vervangen.",
+            websiteUrl:
+                "Deel de URL van je huidige website, webshop of webapplicatie zodat we deze kunnen bekijken en beoordelen.",
+            selfManage:
+                "Geef aan of je zelf content wilt beheren of dat wij dit voor je regelen. Wil je deze zelf beheren; verhoogt dit wel de ontwikkelingstijd, maar dan krijg je wel een gebruiksvriendelijk CMS.",
+            budget: "Je budget helpt ons de juiste functies en aanpak voor je project te bepalen.",
+            default: "Aanvullende informatie over deze vraag.",
+        },
         advice: {
             webshopLowBudget: {
                 description:
@@ -747,7 +756,7 @@ export default {
             establishedPlan: {
                 title: "Ons advies: ESTABLISHED PLAN",
                 description:
-                    "Voor uitgebreide wensen adviseren we het 'Established Plan.",
+                    "Voor uitgebreide wensen adviseren we het 'Established Plan'.",
             },
             businessPlan: {
                 title: "Ons advies: BUSINESS PLAN",
@@ -775,6 +784,8 @@ export default {
                     "Op basis van je antwoorden adviseren we het volgende pakket of actie.",
             },
         },
+        confirmation:
+            "Ik heb de informatie gecontroleerd en wil graag een vrijblijvende offerte ontvangen",
     },
 
     privacyPolicy:

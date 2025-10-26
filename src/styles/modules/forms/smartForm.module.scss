@@ -20,12 +20,10 @@
             }
 
             #{$smart-form}-content {
-                @include box-padding;
-            }
-
-            #{$smart-form}-content {
                 flex: 50%;
                 background-color: $lemon-color;
+
+                @include box-padding;
 
                 @include laptop {
                     flex: 45%;
@@ -99,13 +97,78 @@
                 }
 
                 #{$smart-form}-question {
-                    > label,
-                    > p {
-                        font-weight: 600;
+                    position: relative;
+
+                    #{$smart-form}-header {
                         margin-bottom: rem-calc(12);
-                        display: block;
+
+                        &:has(svg) {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+                            gap: rem-calc(16);
+
+                            svg {
+                                @include smooth-trans;
+
+                                &:hover {
+                                    color: $link-color;
+                                }
+                            }
+
+                            > div {
+                                position: absolute;
+                                display: flex;
+                                justify-content: space-between;
+                                gap: rem-calc(16);
+                                align-items: baseline;
+                                background: $primary-color;
+                                color: $white-color;
+                                right: rem-calc(24);
+                                left: rem-calc(24);
+                                top: rem-calc(32);
+                                padding: rem-calc(16);
+                                border-radius: $low-radius;
+                                border: 3px solid $lightgrey-color;
+                                z-index: 1;
+
+                                > p {
+                                    @extend %as-small;
+                                }
+
+                                @include phablet {
+                                    right: rem-calc(32);
+                                    left: rem-calc(32);
+                                    top: rem-calc(44);
+                                }
+
+                                > button {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: $white-color;
+                                    color: $primary-color;
+                                    border-radius: $low-radius;
+                                    width: rem-calc(20);
+                                    height: rem-calc(20);
+                                    aspect-ratio: 1/1;
+                                }
+                            }
+                        }
+                    }
+
+                    #{$smart-form}-label {
+                        font-weight: 600;
 
                         @extend %as-h6;
+                    }
+
+                    #{$smart-form}-select {
+                        margin-top: rem-calc(8);
+
+                        > label {
+                            @extend %as-p;
+                        }
                     }
 
                     input {
@@ -122,14 +185,6 @@
                         display: block;
                         min-height: rem-calc(150);
                         height: 100%;
-                    }
-
-                    > div {
-                        margin-top: rem-calc(8);
-
-                        > label {
-                            @extend %as-p;
-                        }
                     }
 
                     #{$smart-form}-buttons {
@@ -164,6 +219,7 @@
                             border-radius: $low-radius;
                             padding: rem-calc(2 6);
                             vertical-align: super;
+                            white-space: nowrap;
 
                             @extend %as-tiny;
                         }
@@ -171,7 +227,6 @@
 
                     > p {
                         margin-bottom: rem-calc(16);
-                        font-weight: 500;
                     }
 
                     > em {
@@ -205,7 +260,21 @@
                         }
                     }
 
-                    > div {
+                    > div:has(input) {
+                        margin-top: rem-calc(24);
+                        min-height: rem-calc(25);
+                        position: relative;
+                        display: flex;
+                        border-top: 1px solid $snow-color;
+                        border-bottom: 1px solid $snow-color;
+                        padding: rem-calc(16 0);
+
+                        label {
+                            font-weight: 500;
+                        }
+                    }
+
+                    > div:has(button) {
                         display: flex;
                         justify-content: space-between;
                         padding-top: rem-calc(32);
@@ -219,6 +288,11 @@
                                 margin-left: auto;
 
                                 @include primary-button;
+                            }
+
+                            &:disabled {
+                                opacity: 0.5;
+                                pointer-events: none;
                             }
                         }
                     }

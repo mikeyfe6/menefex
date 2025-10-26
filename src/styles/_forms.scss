@@ -59,6 +59,73 @@ form {
         }
     }
 
+    input[type="checkbox"] {
+        width: rem-calc(25);
+        height: rem-calc(25);
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        z-index: 1;
+        cursor: pointer;
+
+        + label {
+            position: relative;
+            padding-left: rem-calc(40);
+            padding-right: rem-calc(20);
+            min-height: rem-calc(25);
+
+            span {
+                color: $secondary-color;
+            }
+
+            a {
+                @include link;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: rem-calc(25);
+                height: rem-calc(25);
+                border: 2px solid $grey-color;
+                background: $white-color;
+                border-radius: 4px;
+                transition: border-color 0.2s, background 0.2s;
+                cursor: pointer;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: rem-calc(4.5);
+                top: 50%;
+                transform: translateY(-50%) scale(0);
+                width: rem-calc(16);
+                height: rem-calc(16);
+                background: $secondary-color;
+                border-radius: 2px;
+                transition: transform 0.2s;
+                cursor: pointer;
+            }
+        }
+
+        &:hover {
+            + label::before {
+                border-color: $link-color;
+            }
+        }
+
+        &:checked + label::after {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
     &:not(#smart-form) {
         height: 100%;
 
@@ -143,6 +210,7 @@ form {
         box-sizing: border-box;
         border-radius: $low-radius;
         appearance: none;
+        font-weight: 500;
         background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23fc0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
             linear-gradient(145deg, $snow-color 0%, $tissue-color 100%);
         background-repeat: no-repeat, repeat;
