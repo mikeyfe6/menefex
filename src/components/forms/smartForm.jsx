@@ -103,6 +103,11 @@ const SmartForm = () => {
         useEffect(() => {
             if (inputRef.current) {
                 inputRef.current.focus();
+                if (question.type === "textarea") {
+                    const val = inputRef.current.value;
+                    inputRef.current.value = "";
+                    inputRef.current.value = val;
+                }
             }
         }, [question?.id]);
 
