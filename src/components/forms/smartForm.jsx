@@ -124,6 +124,7 @@ const SmartForm = () => {
                                 className={smartFormStyles.smartFormLabel}
                             >
                                 {question.question}
+                                <span>*</span>
                             </label>
 
                             {question.id === "budget" && (
@@ -184,6 +185,7 @@ const SmartForm = () => {
                         <div className={smartFormStyles.smartFormHeader}>
                             <p className={smartFormStyles.smartFormLabel}>
                                 {question.question}
+                                <span>*</span>
                             </p>
 
                             <button
@@ -249,6 +251,7 @@ const SmartForm = () => {
                                 className={smartFormStyles.smartFormLabel}
                             >
                                 {question.question}
+                                <span>*</span>
                             </label>
 
                             <button
@@ -305,6 +308,7 @@ const SmartForm = () => {
                             className={`${smartFormStyles.smartFormLabel} ${smartFormStyles.smartFormHeader}`}
                         >
                             {question.question}
+                            <span>*</span>
                         </label>
                         <input
                             ref={inputRef}
@@ -326,6 +330,7 @@ const SmartForm = () => {
                             className={`${smartFormStyles.smartFormLabel} ${smartFormStyles.smartFormHeader}`}
                         >
                             {question.question}
+                            <span>*</span>
                         </label>
                         <input
                             ref={inputRef}

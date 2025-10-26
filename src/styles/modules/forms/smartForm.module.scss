@@ -161,6 +161,11 @@
                         font-weight: 600;
 
                         @extend %as-h6;
+
+                        > span {
+                            color: $error-color;
+                            margin-left: rem-calc(4);
+                        }
                     }
 
                     #{$smart-form}-select {
