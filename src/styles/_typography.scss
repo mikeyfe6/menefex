@@ -211,7 +211,7 @@ a {
     #blogtemplate &,
     #terms-conditions &,
     #privacy-policy & {
-        word-break: break-all;
+        overflow-wrap: break-word;
     }
 
     @include smooth-trans;
