@@ -66,9 +66,13 @@
                     > [data-gatsby-image-wrapper] {
                         width: 100%;
 
-                        img {
-                            border-radius: $high-radius;
-                            border: 1px solid $smoke-color;
+                        > div {
+                            max-width: 100%;
+
+                            > img {
+                                border-radius: $high-radius;
+                                border: 1px solid $smoke-color;
+                            }
                         }
                     }
                 }
