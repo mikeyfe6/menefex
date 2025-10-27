@@ -51,7 +51,7 @@ section {
         }
     }
 
-    &:not(.page-intro, #notes, #about, #spotify, #info, #post) {
+    &:not(.page-intro, #notes, #about, #spotify, #info, #blogtemplate) {
         padding: rem-calc(48 0);
 
         @include phablet {
