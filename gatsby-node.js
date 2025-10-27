@@ -247,7 +247,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                         author
                         image {
                             title
-                            gatsbyImageData
+                            gatsbyImageData(layout: FULL_WIDTH)
                             file {
                                 url
                             }
