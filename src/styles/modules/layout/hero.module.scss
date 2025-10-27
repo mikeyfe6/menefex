@@ -161,6 +161,10 @@
                 max-width: rem-calc(400);
 
                 @extend %image;
+
+                img {
+                    border: 2px solid $primary-color;
+                }
             }
         }
 
