@@ -11,7 +11,8 @@ Content-Security-Policy = "default-src 'self' fonts.googleapis.com js-eu1.hsadsp
 
 Expect-CT = 'enforce, 0, report-uri="https://menefex.report-uri.com/r/d/ct/reportOnly"'
 
-Permissions-Policy = 'geolocation=(self "https://menefex.nl"), fullscreen=(self "https://menefex.nl")'
+Permissions-Policy = 'geolocation=(self "https://menefex.nl"), fullscreen=(self "https://menefex.nl" "https://connect.facebook.net" "https://www.facebook.com" "https://web.facebook.com"), unload=(self "https://menefex.nl" "https://connect.facebook.net" "https://www.facebook.com" "https://web.facebook.com")'
+
 
 Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://menefex.report-uri.com/a/d/g"}],"include_subdomains":true}'
 
