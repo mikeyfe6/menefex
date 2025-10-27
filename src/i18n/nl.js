@@ -379,6 +379,7 @@ export default {
     },
 
     blog: {
+        moreOf: "Meer van",
         feedly: "Lees op Feedly",
         feedburner: "Aboneer via Feedburner",
         postedOn: "Gepost:",

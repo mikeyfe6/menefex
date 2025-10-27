@@ -27,8 +27,8 @@ const DesktopMenu = ({ drawerClickHandler }) => {
     };
 
     const checkIfPartiallyActive = ({ isPartiallyCurrent, location }) => {
-        return location.pathname.includes("/blog") ||
-            location.pathname.includes("/topics")
+        return location.pathname.includes("/blog/") ||
+            location.pathname.includes("/topics/")
             ? { className: desktopMenuStyles.activePage }
             : isPartiallyCurrent
             ? { className: desktopMenuStyles.activePage }

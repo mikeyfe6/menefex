@@ -247,7 +247,7 @@
                     flex-wrap: wrap;
                     justify-content: center;
                     gap: rem-calc(32);
-                    margin: rem-calc(48 0);
+                    margin: rem-calc(32 0 48);
 
                     .feedly,
                     .feedburner {
@@ -260,14 +260,16 @@
                             align-items: center;
                             gap: rem-calc(8);
 
-                            @include smooth-trans;
+                            > span {
+                                @include smooth-trans;
+                            }
 
                             > img {
                                 width: rem-calc(20);
                             }
 
                             &:hover {
-                                span {
+                                > span {
                                     color: $link-color;
                                 }
                             }
@@ -283,6 +285,28 @@
                     .feedburner {
                         > a {
                             color: #fa9b3b;
+                        }
+                    }
+                }
+
+                #{$post}-topics {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: rem-calc(12);
+
+                    > p {
+                        @extend %as-small;
+                    }
+
+                    > ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: rem-calc(20 12);
+
+                        li > a {
+                            @include topic-button;
                         }
                     }
                 }
@@ -425,27 +449,7 @@
             }
         }
 
-        #{$post}-topics {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: rem-calc(32);
-
-            @include tablet {
-                margin-top: rem-calc(48);
-            }
-
-            > ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: rem-calc(20 12);
-
-                li > a {
-                    @include topic-button;
-                }
-            }
-
+        #{$post}-button {
             > a {
                 white-space: nowrap;
                 margin-left: auto;

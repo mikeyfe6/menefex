@@ -206,8 +206,13 @@ li {
 }
 
 a {
-    text-decoration: none;
     display: inline;
+
+    #blogtemplate &,
+    #terms-conditions &,
+    #privacy-policy & {
+        word-break: break-all;
+    }
 
     @include smooth-trans;
 }

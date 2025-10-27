@@ -351,7 +351,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                 <hr />
 
                 <div className={postStyle.postMain}>
-                    <section id="post">
+                    <section id="blogtemplate">
                         <div
                             className={postStyle.postImage}
                             {...inspectorProps({
@@ -404,6 +404,27 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                   )}
                         </div>
 
+                        <div className={postStyle.postTopics}>
+                            <p>
+                                <b>{t("blog.moreOf")}</b>
+                            </p>
+                            <ul>
+                                {postTopic.map((relTopic) => (
+                                    <li key={relTopic.id}>
+                                        <Link
+                                            to={`/topics/${relTopic.slug}/`}
+                                            key={relTopic.id}
+                                            style={{
+                                                borderColor: relTopic.bdcolor,
+                                            }}
+                                        >
+                                            {relTopic.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
                         <div className={postStyle.postRss}>
                             <div className={postStyle.feedly}>
                                 <a
@@ -413,7 +434,6 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     target="_blank"
                                 >
                                     <img
-                                        id="feedlyFollow"
                                         src="https://s3.feedly.com/img/follows/feedly-follow-circle-flat-green_2x.png"
                                         alt={t("blog.feedly")}
                                         width="18"
@@ -515,30 +535,14 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                     </aside>
                 </div>
 
-                <div className={postStyle.postTopics}>
-                    <ul>
-                        {postTopic.map((relTopic) => (
-                            <li key={relTopic.id}>
-                                <Link
-                                    to={`/topics/${relTopic.slug}/`}
-                                    key={relTopic.id}
-                                    style={{
-                                        borderColor: relTopic.bdcolor,
-                                    }}
-                                >
-                                    {relTopic.name}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-
+                <div className={postStyle.postButton}>
                     <Link to="/blog/">
                         <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
                         {t("blog.allPosts")}
                     </Link>
                 </div>
 
-                <section className={postStyle.postFamily}>
+                <section className={postStyle.postFamily} id="related-posts">
                     {relatedPosts?.length === 0 ? null : (
                         <h6>{t("blog.alsoInteresting")}</h6>
                     )}
@@ -571,7 +575,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                                 </span>
                                                 {post?.createdAt && (
                                                     <time
-                                                        datetime={
+                                                        dateTime={
                                                             post?.createdAt
                                                         }
                                                     >

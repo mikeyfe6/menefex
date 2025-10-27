@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
 
     return (
         <Layout>
-            <section>
+            <section id="privacy-policy">
                 <div
                     className="page-docs"
                     dangerouslySetInnerHTML={{ __html: t("privacyPolicy") }}
