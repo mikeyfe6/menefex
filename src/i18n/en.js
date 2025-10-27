@@ -379,7 +379,7 @@ export default {
     },
 
     blog: {
-        moreOf: "More from:",
+        moreOf: "More of:",
         feedly: "Read on Feedly",
         feedburner: "Subscribe via Feedburner",
         postedOn: "Posted on:",
