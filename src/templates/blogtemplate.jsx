@@ -521,8 +521,12 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                                 <Link
                                                     to={`/blog/${post.slug}/`}
                                                 >
-                                                    <h5>{post.title}</h5>
-                                                    <p>{post.subtitle}</p>
+                                                    <h5 title={post.title}>
+                                                        {post.title}
+                                                    </h5>
+                                                    <p title={post.subtitle}>
+                                                        {post.subtitle}
+                                                    </p>
                                                     <span>
                                                         {t("blog.readMore")}
                                                     </span>
@@ -568,8 +572,12 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                                 alt={post?.image?.title}
                                             />
                                             <div>
-                                                <h5>{post?.title}</h5>
-                                                <p>{post?.subtitle}</p>
+                                                <h5 title={post?.title}>
+                                                    {post?.title}
+                                                </h5>
+                                                <p title={post?.subtitle}>
+                                                    {post?.subtitle}
+                                                </p>
                                                 <div>
                                                     <span>
                                                         {t("blog.readMore")}

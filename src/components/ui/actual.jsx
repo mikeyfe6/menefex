@@ -96,7 +96,7 @@ const Actual = () => {
                             </div>
                         )}
                         <div className={actualStyles.actualContent}>
-                            <h4>{node.title}</h4>
+                            <h4 title={node.title}>{node.title}</h4>
 
                             <div>
                                 <time dateTime={node.publishedDate}>
