@@ -567,23 +567,25 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                                 image={projectImg}
                                                 alt={post?.image?.title}
                                             />
-                                            <h5>{post?.title}</h5>
-                                            <p>{post?.subtitle}</p>
                                             <div>
-                                                <span>
-                                                    {t("blog.readMore")}
-                                                </span>
-                                                {post?.createdAt && (
-                                                    <time
-                                                        dateTime={
-                                                            post?.createdAt
-                                                        }
-                                                    >
-                                                        {formatShortDate(
-                                                            post?.createdAt
-                                                        )}
-                                                    </time>
-                                                )}
+                                                <h5>{post?.title}</h5>
+                                                <p>{post?.subtitle}</p>
+                                                <div>
+                                                    <span>
+                                                        {t("blog.readMore")}
+                                                    </span>
+                                                    {post?.createdAt && (
+                                                        <time
+                                                            dateTime={
+                                                                post?.createdAt
+                                                            }
+                                                        >
+                                                            {formatShortDate(
+                                                                post?.createdAt
+                                                            )}
+                                                        </time>
+                                                    )}
+                                                </div>
                                             </div>
                                         </Link>
                                     </li>

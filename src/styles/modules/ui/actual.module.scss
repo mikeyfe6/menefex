@@ -62,6 +62,7 @@
                 gap: rem-calc(18);
 
                 > h4 {
+                    @include clamp(2);
                     @include fluid-typing(18, 21);
                 }
 

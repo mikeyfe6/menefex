@@ -477,6 +477,9 @@
                 gap: rem-calc(48);
 
                 > li {
+                    display: flex;
+                    flex-direction: column;
+
                     > a {
                         background: linear-gradient(
                             145deg,
@@ -486,9 +489,8 @@
                         outline: 2px solid $lightgrey-color;
                         border-radius: $high-radius;
                         max-width: rem-calc(320);
-                        min-height: rem-calc(400);
                         width: 100%;
-                        height: 100%;
+                        flex: 1 1 0;
                         overflow: hidden;
                         display: flex;
                         flex-direction: column;
@@ -496,43 +498,48 @@
                         @include smooth-trans;
 
                         > [data-gatsby-image-wrapper] {
-                            height: rem-calc(250);
-                        }
-
-                        > h5 {
-                            padding: rem-calc(16 16 0);
-
-                            @extend %as-medium;
-                        }
-
-                        > p {
-                            padding: rem-calc(16 16 24);
-
-                            @extend %as-small;
+                            height: rem-calc(200);
                         }
 
                         > div:last-child {
                             display: flex;
-                            justify-content: space-between;
-                            margin-top: auto;
+                            flex-direction: column;
                             padding: rem-calc(16 16 24);
+                            gap: rem-calc(16);
+                            min-height: rem-calc(300);
 
-                            > span,
-                            time {
-                                font-weight: 500;
+                            > h5 {
+                                @include clamp(2);
+                                @extend %as-medium;
                             }
 
-                            > span {
+                            > p {
+                                @include clamp(4);
                                 @extend %as-small;
                             }
 
-                            > time {
-                                background-color: $primary-color;
-                                color: $white-color;
-                                border-radius: $low-radius;
-                                padding: rem-calc(2 8);
+                            > div {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: auto;
 
-                                @extend %as-tiny;
+                                > span,
+                                time {
+                                    font-weight: 500;
+                                }
+
+                                > span {
+                                    @extend %as-small;
+                                }
+
+                                > time {
+                                    background-color: $primary-color;
+                                    color: $white-color;
+                                    border-radius: $low-radius;
+                                    padding: rem-calc(2 8);
+
+                                    @extend %as-tiny;
+                                }
                             }
                         }
 
