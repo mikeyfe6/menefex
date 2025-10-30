@@ -230,7 +230,7 @@
 }
 
 @mixin dark-button {
-    background: $primary-color;
+    background-color: $primary-color;
     color: $smoke-color;
     outline: 2px solid $grey-color;
 
@@ -238,20 +238,20 @@
 
     &:hover {
         color: $primary-color;
-        background: $secondary-color;
+        background-color: $secondary-color;
         outline-color: $primary-color;
     }
 }
 
 @mixin light-button {
-    background: $snow-color;
+    background-color: $snow-color;
     color: $primary-color;
     outline: 2px solid $snow-color;
 
     @include secondary-button;
 
     &:hover {
-        background: $secondary-color;
+        background-color: $secondary-color;
         outline-color: $primary-color;
     }
 }
@@ -263,7 +263,7 @@
     border-radius: $low-radius;
     padding: rem-calc(4 10);
     font-weight: 500;
-    background: $white-color;
+    background-color: $white-color;
     width: fit-content;
 
     @include smooth-trans;
@@ -274,14 +274,14 @@
     }
 
     &:hover {
-        background: $smoke-color;
+        background-color: $smoke-color;
     }
 }
 
 @mixin more-button {
     display: block;
     border-radius: $low-radius;
-    background: $secondary-color;
+    background-color: $secondary-color;
     padding: rem-calc(4 10);
     font-weight: 500;
     width: fit-content;
@@ -294,7 +294,7 @@
     }
 
     &:hover {
-        background: $snow-color;
+        background-color: $snow-color;
     }
 }
 

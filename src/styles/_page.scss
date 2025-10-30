@@ -55,6 +55,7 @@
     &-docs {
         @include container;
 
+        /* stylelint-disable-next-line no-descending-specificity */
         h1 {
             margin-bottom: rem-calc(24);
             line-height: rem-calc(48);

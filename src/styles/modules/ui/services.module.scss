@@ -3,7 +3,7 @@
 .service {
     $service: &;
 
-    background: $smoke-color;
+    background-color: $smoke-color;
 
     &-container {
         display: grid;
@@ -102,7 +102,7 @@
                 right: rem-calc(10);
                 width: rem-calc(67.5);
                 height: rem-calc(67.5);
-                background: $secondary-color;
+                background-color: $secondary-color;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -229,7 +229,7 @@
                 border-radius: 50%;
                 width: rem-calc(45);
                 height: rem-calc(45);
-                background: $primary-color;
+                background-color: $primary-color;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -251,7 +251,7 @@
             &:not(.is-active) {
                 &:hover {
                     border-color: $link-color;
-                    background: $primary-color;
+                    background-color: $primary-color;
                     color: $white-color;
                 }
             }

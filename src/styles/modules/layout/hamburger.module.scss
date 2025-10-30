@@ -6,7 +6,7 @@
     justify-content: space-around;
     height: rem-calc(35);
     width: rem-calc(37.5);
-    background: transparent;
+    background-color: transparent;
     border: none;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +19,7 @@
     > div {
         width: 100%;
         height: rem-calc(6);
-        background: $primary-color;
+        background-color: $primary-color;
         border-radius: $low-radius;
     }
 

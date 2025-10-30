@@ -122,11 +122,11 @@
             @extend %as-tiny;
 
             &:hover {
-                background: $lemon-color;
+                background-color: $lemon-color;
             }
 
             &.active {
-                background: $primary-color;
+                background-color: $primary-color;
                 color: $white-color;
                 pointer-events: none;
             }

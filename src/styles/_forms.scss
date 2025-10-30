@@ -94,7 +94,7 @@ form {
                 width: rem-calc(25);
                 height: rem-calc(25);
                 border: 2px solid $grey-color;
-                background: $white-color;
+                background-color: $white-color;
                 border-radius: 4px;
                 transition: border-color 0.2s, background 0.2s;
                 cursor: pointer;
@@ -108,7 +108,7 @@ form {
                 transform: translateY(-50%) scale(0);
                 width: rem-calc(16);
                 height: rem-calc(16);
-                background: $secondary-color;
+                background-color: $secondary-color;
                 border-radius: 2px;
                 transition: transform 0.2s;
                 cursor: pointer;
@@ -176,7 +176,7 @@ form {
                     height: rem-calc(20);
                     border: 2px solid $secondary-color;
                     border-radius: 50%;
-                    background: $white-color;
+                    background-color: $white-color;
                     display: inline-block;
                     position: relative;
                     transition: border-color 0.2s;
@@ -187,7 +187,7 @@ form {
                         width: rem-calc(12);
                         height: rem-calc(12);
                         border-radius: 50%;
-                        background: $primary-color;
+                        background-color: $primary-color;
                         position: absolute;
                         top: rem-calc(2);
                         left: rem-calc(2);
@@ -203,6 +203,7 @@ form {
         }
     }
 
+    /* stylelint-disable-next-line no-descending-specificity */
     select {
         display: block;
         color: $primary-color;
@@ -220,6 +221,7 @@ form {
 
         @include smooth-trans;
 
+        /* stylelint-disable-next-line no-descending-specificity */
         &:focus {
             box-shadow: 0 0 0 2px -moz-mac-focusring;
             outline: none;

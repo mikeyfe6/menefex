@@ -62,7 +62,7 @@
                 #{$smart-form}-progress {
                     height: rem-calc(5);
                     width: 100%;
-                    background: $lightgrey-color;
+                    background-color: $lightgrey-color;
                     margin-top: rem-calc(8);
                     border-radius: $low-radius;
                     overflow: hidden;
@@ -70,7 +70,7 @@
                     > div {
                         height: 100%;
                         width: 0%;
-                        background: $link-color;
+                        background-color: $link-color;
                         transition: width 0.3s ease-in-out;
                     }
                 }
@@ -122,7 +122,7 @@
                                 justify-content: space-between;
                                 gap: rem-calc(16);
                                 align-items: baseline;
-                                background: $primary-color;
+                                background-color: $primary-color;
                                 color: $white-color;
                                 right: rem-calc(24);
                                 left: rem-calc(24);
@@ -146,7 +146,7 @@
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                    background: $white-color;
+                                    background-color: $white-color;
                                     color: $primary-color;
                                     border-radius: $low-radius;
                                     width: rem-calc(20);

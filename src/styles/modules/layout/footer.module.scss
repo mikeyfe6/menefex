@@ -27,7 +27,7 @@
                 display: inline-block;
                 font-weight: 500;
                 font-style: italic;
-                background: $smoke-color;
+                background-color: $smoke-color;
                 padding: rem-calc(8 16);
                 border-radius: $low-radius;
                 text-align: end;
@@ -171,7 +171,7 @@
                                 border-radius: $medium-radius;
 
                                 &:hover {
-                                    background: $white-color;
+                                    background-color: $white-color;
                                 }
 
                                 &.fb:hover {
@@ -242,7 +242,7 @@
                     height: 2px;
                     width: 100%;
                     margin: 0 auto;
-                    background: $dark-color;
+                    background-color: $dark-color;
 
                     @include mobile {
                         display: none;
@@ -256,7 +256,7 @@
                 align-items: center;
                 margin: rem-calc(64) auto;
                 padding: rem-calc(4);
-                background: $smoke-color;
+                background-color: $smoke-color;
                 border-radius: 50%;
                 width: fit-content;
 

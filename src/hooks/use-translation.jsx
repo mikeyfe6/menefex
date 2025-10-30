@@ -15,6 +15,10 @@ const useTranslationSetup = () => {
         }
     }, [i18n, isHydrated]);
 
+    useEffect(() => {
+        document.documentElement.lang = i18n.language;
+    }, [i18n.language]);
+
     return { t, isHydrated, i18n };
 };
 

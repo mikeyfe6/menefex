@@ -135,7 +135,7 @@
                     }
 
                     > button {
-                        background: #00000020;
+                        background-color: #00000020;
                         border-radius: $low-radius;
                         width: rem-calc(32);
                         height: rem-calc(32);
@@ -146,7 +146,7 @@
                         @include smooth-trans;
 
                         &:hover {
-                            background: $lightgrey-color;
+                            background-color: $lightgrey-color;
                         }
                     }
                 }
