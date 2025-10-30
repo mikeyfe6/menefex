@@ -16,51 +16,50 @@ import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer = () => {
     const { t, i18n, isHydrated } = useTranslation();
-    const currentLanguage = i18n.language;
-
     const { title, email, company, handle } = useSiteMetadata();
+
+    const currentLanguage = i18n.language;
+    const lastLoadedLang = useRef(null);
+
+    useEffect(() => {
+        const fbLocale = currentLanguage === "nl" ? "nl_NL" : "en_US";
+        const scriptSrc = `https://connect.facebook.net/${fbLocale}/sdk.js#xfbml=1&version=v24.0&appId=${process.env.GATSBY_FB_APP_ID}`;
+
+        const existingScript = document.querySelector(
+            `script[src="${scriptSrc}"]`
+        );
+        if (existingScript) {
+            if (window.FB) window.FB.XFBML.parse();
+            return;
+        }
+
+        document
+            .querySelectorAll('script[src*="connect.facebook.net"]')
+            .forEach((el) => el.remove());
+
+        if (window.FB) delete window.FB;
+        const fbRoot = document.getElementById("fb-root");
+        if (fbRoot) fbRoot.innerHTML = "";
+
+        const script = document.createElement("script");
+        script.defer = true;
+        script.crossOrigin = "anonymous";
+        script.src = scriptSrc;
+        script.onload = () => {
+            if (window.FB) window.FB.XFBML.parse();
+        };
+        document.body.appendChild(script);
+
+        lastLoadedLang.current = currentLanguage;
+    }, [currentLanguage]);
+
+    if (!isHydrated) return null;
 
     const today = new Date().getFullYear();
 
     const footerCredits = t("footer.credits")
         .replace("{{today}}", today)
         .replace("{{title}}", title);
-
-    const lastLoadedLang = useRef(null);
-
-    useEffect(() => {
-        if (lastLoadedLang.current === currentLanguage) return;
-
-        const loadFacebookSDK = () => {
-            const fbLocale = currentLanguage === "nl" ? "nl_NL" : "en_US";
-
-            const existingScript = document.querySelector(
-                'script[src*="connect.facebook.net"]'
-            );
-            if (existingScript) existingScript.remove();
-
-            if (window.FB) delete window.FB;
-            const fbRoot = document.getElementById("fb-root");
-            if (fbRoot) fbRoot.innerHTML = "";
-
-            const script = document.createElement("script");
-            script.defer = true;
-            script.crossOrigin = "anonymous";
-            script.src = `https://connect.facebook.net/${fbLocale}/sdk.js#xfbml=1&version=v24.0&appId=${process.env.GATSBY_FB_APP_ID}`;
-            script.onload = () => {
-                if (window.FB) {
-                    window.FB.XFBML.parse();
-                }
-            };
-
-            document.body.appendChild(script);
-            lastLoadedLang.current = currentLanguage;
-        };
-
-        loadFacebookSDK();
-    }, [currentLanguage]);
-
-    if (!isHydrated) return null;
 
     return (
         <footer>
