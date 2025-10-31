@@ -24,8 +24,6 @@
                     border-style: solid;
                     border-radius: $medium-radius;
 
-                    @include smooth-trans;
-
                     > h3 {
                         @extend %as-h4;
 

@@ -55,8 +55,6 @@
                 &:hover {
                     opacity: 0.7;
                     border-color: $link-color;
-
-                    @include smooth-trans;
                 }
             }
 

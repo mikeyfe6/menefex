@@ -213,7 +213,10 @@ a {
     #privacy-policy & {
         overflow-wrap: break-word;
     }
+}
 
+a,
+button {
     @include smooth-trans;
 }
 

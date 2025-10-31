@@ -60,8 +60,6 @@
                 &-decline {
                     border-radius: $low-radius;
                     padding: rem-calc(8 16);
-
-                    @include smooth-trans;
                 }
 
                 &-accept {

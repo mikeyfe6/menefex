@@ -6,8 +6,6 @@
     color: $tel-color;
     font-weight: 500;
 
-    @include smooth-trans;
-
     &:hover {
         color: color.adjust($tel-color, $lightness: -5%);
     }

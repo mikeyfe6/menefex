@@ -143,8 +143,6 @@
                         justify-content: center;
                         align-items: center;
 
-                        @include smooth-trans;
-
                         &:hover {
                             background-color: $lightgrey-color;
                         }

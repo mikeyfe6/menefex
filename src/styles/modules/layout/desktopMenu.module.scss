@@ -68,14 +68,10 @@
                     font-family: $wdxl-font;
                     text-transform: lowercase;
 
-                    @include smooth-trans;
-
                     @extend %as-h5;
 
                     &:hover {
                         color: $dark-color;
-
-                        @include smooth-trans;
                     }
 
                     > span {
@@ -85,8 +81,6 @@
                     &.whapp {
                         font-size: rem-calc(28);
 
-                        @include smooth-trans;
-
                         &:hover {
                             color: $whapp-color;
                         }
@@ -94,8 +88,6 @@
 
                     &.active-page {
                         color: $dark-color;
-
-                        @include smooth-trans;
                     }
                 }
             }
@@ -118,7 +110,6 @@
             border: 2px solid rgba($lightgrey-color, 1);
             aspect-ratio: 1;
 
-            @include smooth-trans;
             @extend %as-tiny;
 
             &:hover {

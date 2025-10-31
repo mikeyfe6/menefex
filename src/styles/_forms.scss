@@ -54,8 +54,6 @@ form {
 
         &:focus {
             border-color: $link-color;
-
-            @include smooth-trans;
         }
     }
 
@@ -218,8 +216,6 @@ form {
         background-position: right 0.7em top 50%, 0 0;
         background-size: 0.65em auto, 100%;
         cursor: pointer;
-
-        @include smooth-trans;
 
         /* stylelint-disable-next-line no-descending-specificity */
         &:focus {

@@ -69,18 +69,17 @@
                         color: $whapp-color;
                     }
                 }
-            }
 
-            .active-page {
-                text-shadow: -10px 0 $secondary-color, 0 10px $secondary-color,
-                    10px 0 $secondary-color, 0 -10px $secondary-color;
+                &.active-page {
+                    text-shadow: -10px 0 $secondary-color,
+                        0 10px $secondary-color, 10px 0 $secondary-color,
+                        0 -10px $secondary-color;
 
-                @include smooth-trans;
+                    @extend %as-h4;
 
-                @extend %as-h4;
-
-                .dots {
-                    color: $lightgrey-color;
+                    .dots {
+                        color: $lightgrey-color;
+                    }
                 }
             }
         }

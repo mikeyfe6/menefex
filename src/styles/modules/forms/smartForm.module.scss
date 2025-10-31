@@ -258,8 +258,6 @@
                         color: $grey-color;
                         margin-top: rem-calc(12);
 
-                        @include smooth-trans;
-
                         &:hover {
                             color: color.adjust($grey-color, $lightness: -15%);
                         }

@@ -405,8 +405,6 @@
                                     display: block;
                                     padding: rem-calc(2);
 
-                                    @include smooth-trans;
-
                                     &:hover {
                                         opacity: 0.9;
 
@@ -495,8 +493,6 @@
                         display: flex;
                         flex-direction: column;
 
-                        @include smooth-trans;
-
                         > [data-gatsby-image-wrapper] {
                             height: rem-calc(200);
                         }
@@ -544,15 +540,21 @@
                         }
 
                         &:hover {
-                            color: $link-color;
                             outline-color: $link-color;
                             transform: scale(1.0125);
 
-                            > div {
-                                > span {
-                                    text-decoration-line: underline;
-                                    text-decoration-thickness: 1px;
-                                    text-underline-offset: rem-calc(2.5);
+                            > div:last-child {
+                                > h5 {
+                                    color: $link-color;
+                                }
+
+                                > div {
+                                    > span {
+                                        text-decoration-line: underline;
+                                        text-decoration-thickness: 1px;
+                                        text-underline-offset: rem-calc(2.5);
+                                        color: $link-color;
+                                    }
                                 }
                             }
                         }

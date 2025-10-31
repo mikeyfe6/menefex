@@ -14,13 +14,13 @@
     position: inherit;
     cursor: pointer;
 
-    @include smooth-trans;
-
     > div {
         width: 100%;
         height: rem-calc(6);
         background-color: $primary-color;
         border-radius: $low-radius;
+
+        @include smooth-trans;
     }
 
     &:hover {
