@@ -25,16 +25,12 @@ const Footer = () => {
         const fbLocale = currentLanguage === "nl" ? "nl_NL" : "en_US";
         const scriptSrc = `https://connect.facebook.net/${fbLocale}/sdk.js#xfbml=1&version=v24.0&appId=${process.env.GATSBY_FB_APP_ID}`;
 
-        const existingScript = document.querySelector(
-            `script[src="${scriptSrc}"]`
-        );
-        if (existingScript) {
-            if (window.FB) window.FB.XFBML.parse();
-            return;
-        }
-
         document
             .querySelectorAll('script[src*="connect.facebook.net"]')
+            .forEach((el) => el.remove());
+
+        document
+            .querySelectorAll("style[data-fbcssmodules]")
             .forEach((el) => el.remove());
 
         if (window.FB) delete window.FB;
