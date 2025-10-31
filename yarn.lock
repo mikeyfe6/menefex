@@ -1662,17 +1662,17 @@
     "@lezer/common" "^1.0.0"
 
 "@lingui/core@^5.4.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-5.5.1.tgz#3d5a8d1bed841074e97ee97f0efbe1a727e812d5"
-  integrity sha512-jxmeLTnKKbnVaLUllHpnM3XolFipHqgr0hQkuAj5+SGTGimaHx6RyGm/YL5FxWeYMt7wRRoH86SIJ3sn44pxAw==
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-5.5.2.tgz#90d4097addec2ccff2b82bfaf9a6057d945b6162"
+  integrity sha512-YhKdfXOSEr64mEsPL7DbgGhoXJhI+DSysZHA43K9ZuG322JEql+luvRZpH/NobLBMiM1SjoLVWazEsqIkGuPDQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@lingui/message-utils" "5.5.1"
+    "@lingui/message-utils" "5.5.2"
 
-"@lingui/message-utils@5.5.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/message-utils/-/message-utils-5.5.1.tgz#200ad17fa8954b49c41bcc0dab6ef478025662f6"
-  integrity sha512-RV3WjkSDTYIhNQwAj5MUHjpfOgPJFBXDuBW3aFZZmPqAkFrSJJbrKxVmBoja59b3CEX5QuCGOHnijrCehBpU+w==
+"@lingui/message-utils@5.5.2":
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/@lingui/message-utils/-/message-utils-5.5.2.tgz#c96af29bf6522c4bf48b63e8b80e5b7fc8b2aeda"
+  integrity sha512-0/xu0nAzYm4ZLUHAdowkTLcP2iM+UOuFEpIsJ40iOIYgHeub1idtn8EFnliCiN83rfrcMaPK63MgGKmyTI4Umg==
   dependencies:
     "@messageformat/parser" "^5.0.0"
     js-sha256 "^0.10.1"
@@ -1852,9 +1852,9 @@
     path-exists "^5.0.0"
 
 "@netlify/open-api@^2.37.0":
-  version "2.41.0"
-  resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.41.0.tgz#bae867e009e34ebb34f00aad801e9191f0cefbce"
-  integrity sha512-e9eGmWs0AAJF5jxRlr6FJyfyftY3sj5IXyT26QF6vHXK5rzZNpJHhFenszKtuVFhUgScJeOfCOucvodqfKAzeg==
+  version "2.42.0"
+  resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.42.0.tgz#66a8adae446138a8942e7b14203b8afe5c80a9e3"
+  integrity sha512-oHFCCo5FigIZcni/IioNKPwL9jC2++RUnHHfHFOhXKyLDGB8x93cU03N15RuZhG92+VM6dOzhM4WDEDeG6hXcQ==
 
 "@netlify/redirect-parser@^14.5.0":
   version "14.5.1"
@@ -3524,9 +3524,9 @@ bare-stream@^2.6.4:
     streamx "^2.21.0"
 
 bare-url@^2.2.2:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/bare-url/-/bare-url-2.3.1.tgz#95e33e99bdc768766ca94246fdc397e88675ec9c"
-  integrity sha512-v2yl0TnaZTdEnelkKtXZGnotiV6qATBlnNuUMrHl6v9Lmmrh9mw9RYyImPU7/4RahumSwQS1k2oKXcRfXcbjJw==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/bare-url/-/bare-url-2.3.2.tgz#4aef382efa662b2180a6fe4ca07a71b39bdf7ca3"
+  integrity sha512-ZMq4gd9ngV5aTMa5p9+UfY0b3skwhHELaDkhEHetMdX0LRkW9kzaym4oo/Eh+Ghm0CCDuMTsRIGM/ytUc1ZYmw==
   dependencies:
     bare-path "^3.0.0"
 
@@ -3836,9 +3836,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001751:
-  version "1.0.30001751"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001751.tgz#dacd5d9f4baeea841641640139d2b2a4df4226ad"
-  integrity sha512-A0QJhug0Ly64Ii3eIqHu5X51ebln3k4yTUkY1j8drqpWHVreg/VLijN48cZ1bYPiqOQuqpkIKnzr/Ul8V+p6Cw==
+  version "1.0.30001752"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001752.tgz#afa28d0830709507162bc6ed3f7cb23b00926a99"
+  integrity sha512-vKUk7beoukxE47P5gcVNKkDRzXdVofotshHwfR9vmpeFKxmI5PBpgOMC18LUJUA/DvJ70Y7RveasIBraqsyO/g==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -4983,9 +4983,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.238:
-  version "1.5.243"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.243.tgz#b13b4a046f49f46574d643d4e2ec2ea33ce8cfe7"
-  integrity sha512-ZCphxFW3Q1TVhcgS9blfut1PX8lusVi2SvXQgmEEnK4TCmE1JhH2JkjJN+DNt0pJJwfBri5AROBnz2b/C+YU9g==
+  version "1.5.244"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.244.tgz#b9b61e3d24ef4203489951468614f2a360763820"
+  integrity sha512-OszpBN7xZX4vWMPJwB9illkN/znA8M36GQqQxi6MNy9axWxhOfJyZZJtSLQCpEFLHP2xK33BiWx9aIuIEXVCcw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -8527,9 +8527,9 @@ mdn-data@2.12.2:
   integrity sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==
 
 mdn-data@^2.21.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.24.0.tgz#e51beee564113d8fa1b0813260d9cc920f11885a"
-  integrity sha512-i97fklrJl03tL1tdRVw0ZfLLvuDsdb6wxL+TrJ+PKkCbLrp2PCu2+OYdCKychIUm19nSM/35S6qz7pJpnXttoA==
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.25.0.tgz#d45610fae17b222d600bbef3136bd6155ac9cc16"
+  integrity sha512-T2LPsjgUE/tgMmRXREVmwsux89DwWfNjiynOeXuLd2mX6jphGQ2YE3Ukz7LQ2VOFKiVZU/Ee1GqzHiipZCjymw==
 
 meant@^1.0.3:
   version "1.0.3"
@@ -8896,9 +8896,9 @@ no-case@^3.0.4:
     tslib "^2.0.3"
 
 node-abi@^3.3.0:
-  version "3.79.0"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.79.0.tgz#a5d9129828898f99366ee39c1d9c6ef74f2f1076"
-  integrity sha512-Pr/5KdBQGG8TirdkS0qN3B+f3eo8zTOfZQWAxHoJqopMz2/uvRnG+S4fWu/6AZxKei2CP2p/psdQ5HFC2Ap5BA==
+  version "3.80.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.80.0.tgz#d7390951f27caa129cceeec01e1c20fc9f07581c"
+  integrity sha512-LyPuZJcI9HVwzXK1GPxWNzrr+vr8Hp/3UqlmWxxh8p54U1ZbclOqbSog9lWHaCX+dBaiGi6n/hIX+mKu74GmPA==
   dependencies:
     semver "^7.3.5"
 
@@ -10183,10 +10183,10 @@ react-error-overlay@^6.0.11:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.1.0.tgz#22b86256beb1c5856f08a9a228adb8121dd985f2"
   integrity sha512-SN/U6Ytxf1QGkw/9ve5Y+NxBbZM6Ht95tuXNMKs8EJyFa/Vy/+Co3stop3KBHARfn/giv+Lj1uUnTfOJ3moFEQ==
 
-react-i18next@^16.2.1:
-  version "16.2.1"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-16.2.1.tgz#ebb85957df7f22042442247aa418df3bf615aab1"
-  integrity sha512-z7TVwd8q4AjFo2n7oOwzNusY7xVL4uHykwX1zZRvasUQnmnXlp7Z1FZqXvhK/6hQaCvWTZmZW1bMaUWKowtvVw==
+react-i18next@^16.2.3:
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-16.2.3.tgz#079e3c54c85334ce9ab9732be3553516a7b7b42d"
+  integrity sha512-O0t2zvmIz7nHWKNfIL+O/NTIbpTaOPY0vZov779hegbep3IZ+xcqkeVPKWBSXwzdkiv77q8zmq9toKIUys1x3A==
   dependencies:
     "@babel/runtime" "^7.27.6"
     html-parse-stringify "^3.0.1"
