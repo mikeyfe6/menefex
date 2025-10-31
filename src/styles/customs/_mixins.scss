@@ -315,6 +315,8 @@
             > h3 {
                 @include poppins-title;
                 @include fluid-typing(18, 22);
+
+                @include smooth-trans;
             }
 
             > p {
@@ -389,11 +391,11 @@
     &:hover {
         border-color: $link-color;
 
-        h3 {
-            color: $link-color;
-        }
-
         &:first-of-type {
+            h3 {
+                color: $link-color;
+            }
+
             small {
                 span {
                     color: $white-color;

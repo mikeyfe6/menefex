@@ -136,6 +136,8 @@
 
                     > svg {
                         font-size: rem-calc(26);
+
+                        @include smooth-trans;
                     }
 
                     &:hover {
