@@ -196,7 +196,7 @@ const SEO = ({
 
             {/* --- Twitter Meta Tags ! --- */}
 
-            <meta property="twitter:card" content="summary" />
+            <meta property="twitter:card" content="summary_large_image" />
             {title && <meta property="twitter:title" content={title} />}
             {description && (
                 <meta property="twitter:description" content={description} />
