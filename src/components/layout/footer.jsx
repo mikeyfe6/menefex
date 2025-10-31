@@ -208,7 +208,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href={`https://www.twitter.com/${handle}`}
+                                        href={`https://www.x.com/${handle}`}
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         className={footerStyles.tw}

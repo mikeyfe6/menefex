@@ -124,7 +124,7 @@ const Info = () => {
 
                     <li>
                         <a
-                            href={`https://www.twitter.com/${handle}`}
+                            href={`https://www.x.com/${handle}`}
                             rel="noopener noreferrer"
                             target="_blank"
                             className={infoStyles.tw}

@@ -75,7 +75,7 @@ const SEO = ({
         ],
         sameAs: [
             `https://www.facebook.com/${handle}`,
-            `https://www.twitter.com/${handle}`,
+            `https://www.x.com/${handle}`,
             `https://www.instagram.com/${handle}/`,
             `https://www.linkedin.com/company/${handle}/`,
             `https://github.com/mikeyfe6`,
@@ -115,7 +115,7 @@ const SEO = ({
         sameAs: [
             "https://www.linkedin.com/in/michaelfransman/",
             "https://www.facebook.com/michaelfransman",
-            "https://www.twitter.com/mikeyfe",
+            "https://www.x.com/mikeyfe6",
             "https://www.instagram.com/mikeyfe6/",
             "https://github.com/mikeyfe6",
             "https://open.spotify.com/playlist/08UGoWTjvpuooABCWyPx0m?si=5a3ca09f8cba4300",
@@ -151,11 +151,11 @@ const SEO = ({
             <meta name="description" content={pageDescription} />
             <meta name="image" content={pageImage} />
             <meta name="keywords" content={keywords} />
+            <meta property="author" content={author} />
 
             {/* --- OG / Facebook etc. Meta Tags ! --- */}
 
             <meta property="fb:app_id" content={process.env.GATSBY_FB_APP_ID} />
-
             <meta property="fb:domains" content="menefex.nl" />
 
             {title && <meta property="og:title" content={title} />}
@@ -174,8 +174,6 @@ const SEO = ({
                 property="og:type"
                 content={article ? "article" : "website"}
             />
-
-            <meta property="author" content={author} />
 
             {article && (
                 <>

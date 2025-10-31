@@ -107,7 +107,7 @@ export const Head = () => {
         },
         sameAs: [
             `https://www.facebook.com/${handle}`,
-            `https://www.twitter.com/${handle}`,
+            `https://www.x.com/${handle}`,
             `https://www.instagram.com/${handle}/`,
             `https://www.linkedin.com/company/${handle}/`,
             `https://github.com/mikeyfe6`,
