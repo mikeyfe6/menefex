@@ -9,8 +9,11 @@ const SEO = ({
     keywords,
     article,
     pathname,
-    ogimage,
+    ogImage,
+    ogImageAlt,
     schemaMarkup,
+    publishedDate,
+    modifiedDate,
     noindex,
 }) => {
     const {
@@ -26,9 +29,13 @@ const SEO = ({
         authorImage,
     } = useSiteMetadata();
 
-    const pageDescription = description || defaultDescription;
-    const pageImage = ogimage || `${url}${image}`;
     const siteUrl = `${url}${pathname || ""}`;
+
+    const pageDescription = description || defaultDescription;
+
+    const pageImage = ogImage || `${url}${image}`;
+    const pageImageAlt =
+        ogImageAlt || (title ? `${title} | ${siteTitle}` : siteTitle);
 
     const organizationSchema = {
         "@context": "https://schema.org",
@@ -156,6 +163,9 @@ const SEO = ({
                 <meta property="og:description" content={description} />
             )}
             {pageImage && <meta property="og:image" content={pageImage} />}
+            {pageImageAlt && (
+                <meta property="og:image:alt" content={pageImageAlt} />
+            )}
             <meta property="og:site_name" content={siteTitle} />
             {siteUrl && <meta property="og:url" content={siteUrl} />}
             <meta property="og:locale" content="nl_NL" />
@@ -164,6 +174,25 @@ const SEO = ({
                 property="og:type"
                 content={article ? "article" : "website"}
             />
+
+            <meta property="author" content={author} />
+
+            {article && (
+                <>
+                    <meta
+                        property="article:published_time"
+                        content={publishedDate}
+                    />
+                    <meta
+                        property="article:modified_time"
+                        content={modifiedDate}
+                    />
+                    <meta
+                        property="article:author"
+                        content={`https://www.facebook.com/${handle}`}
+                    />
+                </>
+            )}
 
             {/* --- Twitter Meta Tags ! --- */}
 

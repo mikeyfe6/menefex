@@ -664,7 +664,10 @@ export const Head = ({ pageContext: { nlContent } }) => {
             description={nlContent.subtitle}
             keywords={nlContent.keywords.join(", ")}
             pathname={`/blog/${nlContent.slug}/`}
-            ogimage={`https:${nlContent.image.file.url}`}
+            ogImage={`https:${nlContent.image.file.url}`}
+            ogImageAlt={nlContent.image.title}
+            publishedDate={nlContent.publishedPost}
+            modifiedDate={nlContent.updatedPost}
             schemaMarkup={[breadcrumbSchema, blogPostingSchema]}
             article
         />
