@@ -57,11 +57,11 @@
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.3.1",
     "react-i18next": "^16.2.3",
-    "sass": "^1.93.2",
+    "sass": "^1.93.3",
     "swiper": "^12.0.3"
   },
   "devDependencies": {
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
