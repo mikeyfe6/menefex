@@ -29,7 +29,9 @@
             }
 
             &:has(img[alt*="404"]) {
-                pointer-events: none;
+                #{$portfolio}-img {
+                    pointer-events: none;
+                }
             }
 
             #{$portfolio}-img {
