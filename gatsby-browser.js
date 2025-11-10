@@ -6,10 +6,16 @@ export const onServiceWorkerUpdateReady = () => {
     window.location.reload();
 };
 
-export const onRouteUpdate = () => {
-    window.scrollTo(0, 0);
-};
-
-export const shouldUpdateScroll = () => {
-    return false;
+export const shouldUpdateScroll = ({
+    routerProps: { location },
+    getSavedScrollPosition,
+}) => {
+    // Allow default behavior for hash links
+    if (location.hash) {
+        return false; // Let browser handle anchor scrolling
+    }
+    
+    // Restore scroll position on back/forward navigation
+    const savedPosition = getSavedScrollPosition(location);
+    return savedPosition || [0, 0];
 };
