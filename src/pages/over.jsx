@@ -41,7 +41,7 @@ export const Head = () => {
 
     const pageTitle = "Over Ons";
     const pageDescription =
-        "Ontdek Menefex, het innovatieve webmediabedrijf onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.";
+        "Ontdek Menefex, het innovatieve webmediabureau onder leiding van Michael Fransman. Leer meer over onze missie, waarden, en unieke aanpak voor op maat gemaakte digitale oplossingen en webontwikkeling.";
     const pageSlug = "/over/";
 
     const breadcrumbSchema = {
@@ -79,7 +79,7 @@ export const Head = () => {
         <SEO
             title={pageTitle}
             description={pageDescription}
-            keywords="Menefex, Michael Fransman, webmediabedrijf, webontwikkeling, digitale oplossingen, innovatie, missie, waarden, aanpak"
+            keywords="Menefex, Michael Fransman, webmediabureau, webontwikkeling, digitale oplossingen, innovatie, missie, waarden, aanpak"
             pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, aboutPageSchema]}
         />

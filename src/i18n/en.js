@@ -18,7 +18,7 @@ export default {
     },
 
     hero: {
-        menefex: "Menefex Webmediacompany",
+        menefex: "Menefex Web Media Agency",
         slogan: "<span>・</span>Web<span>sites</span>, web<span>applications</span> & SE<span>O</span>・",
         biography: "Biography",
         services: "Services",

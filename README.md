@@ -11,15 +11,15 @@
 
 &nbsp;&nbsp;
 
-# Menefex Webmediabedrijf
+# Menefex Webmediabureau
 
 <br>
 
-Menefex is een jong en modern webmediabedrijf, opgericht door [Michael Fransman](https://www.linkedin.com/in/michaelfransman/).
+Menefex is een jong en modern webmediabureau, opgericht door [Michael Fransman](https://www.linkedin.com/in/michaelfransman/).
 
 Die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van websites en webapplicaties. Wij zorgen dat de ambities van de klant en het eindproduct tot één komen.
 
--   _Bekijk ook onze website / Also check our website: [Menefex Webmediabedrijf](https://menefex.nl)_ ✨
+-   _Bekijk ook onze website / Also check our website: [Menefex Webmediabureau](https://menefex.nl)_ ✨
 
 <br>
 

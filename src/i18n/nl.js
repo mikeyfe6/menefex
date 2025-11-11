@@ -18,7 +18,7 @@ export default {
     },
 
     hero: {
-        menefex: "Menefex Webmediabedrijf",
+        menefex: "Menefex Webmediabureau",
         slogan: "<span>・</span>Web<span>sites</span>, web<span>applicaties</span> & SE<span>O</span>・",
         biography: "Biografie",
         services: "Diensten",
@@ -46,7 +46,7 @@ export default {
 
     biography: {
         title: "Biografie",
-        intro: "<b>Menefex</b> is een modern webmediabedrijf, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij uw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die uw online aanwezigheid naar een hoger niveau tilt.",
+        intro: "<b>Menefex</b> is een webmediabureau, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij uw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die uw online aanwezigheid naar een hoger niveau tilt.",
         more: "Meer over Menefex",
     },
 
@@ -323,7 +323,7 @@ export default {
         title: "Over Menefex",
         whoAreWe: {
             title: "Wie zijn wij?",
-            text: '<p><b>Menefex</b> is een jong en modern webmediabedrijf, opgericht door <a href="https://www.linkedin.com/in/michaelfransman/" rel="noopener noreferrer" target="_blank">Michael Fransman</a>, die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van websites en webapplicaties. Wij zorgen dat de ambities van de klant en het eindproduct tot één komen.</p>',
+            text: '<p><b>Menefex</b> is een jong en modern webmediabureau, opgericht door <a href="https://www.linkedin.com/in/michaelfransman/" rel="noopener noreferrer" target="_blank">Michael Fransman</a>, die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van websites en webapplicaties. Wij zorgen dat de ambities van de klant en het eindproduct tot één komen.</p>',
         },
         whatWeStandFor: {
             title: "Waar staan wij voor?",
@@ -360,7 +360,7 @@ export default {
             send: "Versturen",
         },
         info: {
-            title: "Menefex Webmediabedrijf",
+            title: "Menefex Webmediabureau",
             location: "gevestigd in <b>Amsterdam-Zuidoost</b>",
             availability: "Wij zijn bereikbaar van:",
             monday: "maandag",
@@ -413,10 +413,10 @@ export default {
 
     usp: {
         one: "Eenvoudige en <b>op maat gemaakte weboplossingen</b> die meegroeien",
-        two: "Wij bouwen wat jij voor ogen hebt - en wat <b>je klanten willen ervaren</b>",
+        two: "Wij bouwen wat jij voor ogen hebt en wat <b>je klanten willen ervaren</b>",
         three: "Van idee tot lancering — <b>weboplossingen die converteren</b>",
         four: "Sneller, slimmer, schaalbaar — <b>klaar voor de toekomst</b>",
-        five: "<b>Eén partner</b> voor al je digitale behoeften — design, code & SEO",
+        five: "<b>Eén partner</b> voor al je digitale behoeften; design, code & SEO",
     },
 
     faq: {
