@@ -343,7 +343,8 @@ export default {
     },
 
     contact: {
-        intro: "<span>Jouw website, webshop of webapplicatie laten bouwen door <b>Menefex</b>?</span><span>Vul het contactformulier hieronder in en vraag een offerte aan! Heb je anders een <u>vraag of opmerking</u>, aarzel niet een bericht achter te laten.</span><span><b>Binnen één werkdag nemen wij contact met je op.</b></span>",
+        intro: "<span>Klaar om jouw website, webshop of webapplicatie te laten bouwen door <b>Menefex</b>?</span><span>Vul het formulier hieronder in voor een vrijblijvende offerte of laat een bericht achter als je een <u>vraag of opmerking</u> hebt.</span><span><b>Binnen één werkdag nemen wij contact met je op.</b></span>",
+
         form: {
             name: "Naam",
             company: "Bedrijfsnaam (optioneel)",
