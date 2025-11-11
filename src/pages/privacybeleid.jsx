@@ -48,7 +48,7 @@ export const Head = () => {
     return (
         <SEO
             title={pageTitle}
-            description="Ontdek hoe Menefex uw gegevens beschermt en verwerkt. Bekijk ons privacybeleid voor volledige informatie over ons gebruik van cookies, gegevensbeheer en uw rechten."
+            description="Ontdek hoe Menefex jouw gegevens beschermt en verwerkt. Bekijk ons privacybeleid voor volledige informatie over ons gebruik van cookies, gegevensbeheer en jouw rechten."
             keywords="privacy policy, privacybeleid, cookies, gegevensbeheer, gegevensbescherming, GDPR, AVG"
             pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}

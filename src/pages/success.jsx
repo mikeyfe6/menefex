@@ -33,7 +33,7 @@ export default ThankYouPage;
 export const Head = () => (
     <SEO
         title="Bedankt!"
-        description="Success! Uw bericht is aangekomen."
+        description="Success! Jouw bericht is aangekomen."
         pathname="/success/"
         noindex
     />

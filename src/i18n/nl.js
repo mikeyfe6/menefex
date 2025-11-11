@@ -46,7 +46,7 @@ export default {
 
     biography: {
         title: "Biografie",
-        intro: "<b>Menefex</b> is een webmediabureau, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij uw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die uw online aanwezigheid naar een hoger niveau tilt.",
+        intro: "<b>Menefex</b> is een webmediabureau, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij jouw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die jouw online aanwezigheid naar een hoger niveau tilt.",
         more: "Meer over Menefex",
     },
 
@@ -59,7 +59,7 @@ export default {
     services: {
         title: "Onze Diensten",
         subtitle:
-            "Bij Menefex bieden we een compleet pakket aan digitale diensten om jouw online aanwezigheid te versterken. Of je nu op zoek bent naar een op maat gemaakte website, krachtige webapplicatie, converterende webshop, betere vindbaarheid in Google, technische ondersteuning of performance-optimalisatie — wij zorgen dat jouw digitale platform werkt, scoort én groeit.",
+            "Bij Menefex bieden we een compleet pakket aan digitale diensten om jouw online aanwezigheid te versterken. Of je nu op zoek bent naar een op maat gemaakte website, krachtige webapplicatie, converterende webshop, betere vindbaarheid in Google, technische ondersteuning of performance-optimalisatie. Wij zorgen dat jouw digitale platform werkt, scoort én groeit.",
         intro: "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
         allServices: "Alle diensten",
         goToPrices: "Ga naar prijzen",
@@ -113,7 +113,7 @@ export default {
             // component
             name: "Webshops",
             excerpt:
-                "In deze tijd zijn webshops onmisbaar voor lokale ondernemingen. Ze bieden toegang tot een breder netwerk, een hogere beschikbaarheid en verhogen de conversie en zichtbaarheid van uw producten.",
+                "In deze tijd zijn webshops onmisbaar voor lokale ondernemingen. Ze bieden toegang tot een breder netwerk, een hogere beschikbaarheid en verhogen de conversie en zichtbaarheid van jouw producten.",
             focus: [
                 "Duidelijk overzicht van het assortiment",
                 "Meer leads genereren",
@@ -136,7 +136,7 @@ export default {
             // component
             name: "Zoekmachineoptimalisatie",
             excerpt:
-                "Met zoekmachineoptimalisatie zorgen wij ervoor dat uw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt uw bedrijf sneller gevonden door potentiële klanten.",
+                "Met zoekmachineoptimalisatie zorgen wij ervoor dat jouw website hoog scoort in zoekmachines zoals Google, Bing en Yahoo. Zo wordt jouw bedrijf sneller gevonden door potentiële klanten.",
             focus: [
                 "Verbeterde vindbaarheid in populaire zoekmachines",
                 "Aanzienlijk meer directe en indirecte webbezoekers",
@@ -159,7 +159,7 @@ export default {
             // component
             name: "Onderhoud en support",
             excerpt:
-                "Wij bieden onderhoud en support voor uw website of webapplicatie, zodat deze altijd optimaal functioneert. Dit omvat regelmatige updates, beveiliging en technische ondersteuning.",
+                "Wij bieden onderhoud en support voor jouw website of webapplicatie, zodat deze altijd optimaal functioneert. Dit omvat regelmatige updates, beveiliging en technische ondersteuning.",
             focus: [
                 "Regelmatig onderhoud en updates",
                 "Probleemoplossing en technische ondersteuning",
@@ -182,7 +182,7 @@ export default {
             // component
             name: "Optimalisaties",
             excerpt:
-                "Wij optimaliseren uw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
+                "Wij optimaliseren jouw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
             focus: [
                 "Verbeterde laadtijden en prestaties",
                 "Gebruiksvriendelijke interface en ervaring",
@@ -193,7 +193,7 @@ export default {
             // overview
             caption: `Optimalisaties <small>laten uitvoeren</small>`,
             snippet:
-                "Wij optimaliseren uw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
+                "Wij optimaliseren jouw website of webapplicatie voor betere prestaties, gebruiksvriendelijkheid en conversie. Dit omvat technische optimalisatie, gebruikerservaring en visuele aspecten.",
 
             // detail
             title: "Optimalisatie van Websites & Webapplicaties; <small>sneller, beter, effectiever</small>",
@@ -304,7 +304,7 @@ export default {
         },
         notes: {
             title: "Aanvullende informatie",
-            content: `<p>Je bent uiteraard ook voor de <b><u>kleinere taken</u></b> bij het juiste adres, denk bijvoorbeeld aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra toevoegingen</b> of <b>toepassingen</b> op uw website, webapp of webshop, beter <b>zichtbaarheid</b> via de zoekresultaten <b>(SEO)</b> op bijv. Google, Bing, Yahoo... Noem maar op, maak het zo gek als je wilt. <u>Wij fixen het!</u></p><p>Ook de <b>grotere projecten</b> die meer tijd vergen, zoals het vernieuwen van een bestaande website pakken we met beide handen aan. Alle genoemde services & diensten vallen onder een prijs van <b>€ 45,- per uur (excl. BTW).</b></p><p>Mocht je er niet uitkomen welk <b>pakket</b> je het beste schikt... Geen probleem! Wij helpen je graag verder. Vraag een <b>terugbelverzoek</b> aan, <b>bel</b> of <b>mail</b> ons en alles wordt je uitgebreid geïnformeerd. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / bekijk</b></a> een <u>overzicht</u> van onze prijzen in <b>pdf</b>-vorm.</p>`,
+            content: `<p>Je bent uiteraard ook voor de <b><u>kleinere taken</u></b> bij het juiste adres, denk bijvoorbeeld aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra toevoegingen</b> of <b>toepassingen</b> op jouw website, webapp of webshop, beter <b>zichtbaarheid</b> via de zoekresultaten <b>(SEO)</b> op bijv. Google, Bing, Yahoo... Noem maar op, maak het zo gek als je wilt. <u>Wij fixen het!</u></p><p>Ook de <b>grotere projecten</b> die meer tijd vergen, zoals het vernieuwen van een bestaande website pakken we met beide handen aan. Alle genoemde services & diensten vallen onder een prijs van <b>€ 45,- per uur (excl. BTW).</b></p><p>Mocht je er niet uitkomen welk <b>pakket</b> je het beste schikt... Geen probleem! Wij helpen je graag verder. Vraag een <b>terugbelverzoek</b> aan, <b>bel</b> of <b>mail</b> ons en alles wordt je uitgebreid geïnformeerd. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / bekijk</b></a> een <u>overzicht</u> van onze prijzen in <b>pdf</b>-vorm.</p>`,
         },
         form: {
             title: "Terugbelverzoek",
@@ -356,7 +356,7 @@ export default {
                 complaint: "Klacht / Feedback",
                 help: "Hulp & Probleemoplossing",
             },
-            message: "Type uw bericht hieronder",
+            message: "Type jouw bericht hieronder",
             send: "Versturen",
         },
         info: {
@@ -399,7 +399,7 @@ export default {
     },
 
     success: {
-        title: "Bedankt voor uw bericht",
+        title: "Bedankt voor jouw bericht",
         text: "Wij nemen zo spoeding mogelijk contact met je op!",
         home: "Ga terug naar de hoofdpagina!",
     },
@@ -415,7 +415,7 @@ export default {
         one: "Eenvoudige en <b>op maat gemaakte weboplossingen</b> die meegroeien",
         two: "Wij bouwen wat jij voor ogen hebt en wat <b>je klanten willen ervaren</b>",
         three: "Van idee tot lancering — <b>weboplossingen die converteren</b>",
-        four: "Sneller, slimmer, schaalbaar — <b>klaar voor de toekomst</b>",
+        four: "Sneller, slimmer, schaalbaar en <b>klaar voor de toekomst</b>",
         five: "<b>Eén partner</b> voor al je digitale behoeften; design, code & SEO",
     },
 
