@@ -237,7 +237,7 @@ export default {
 
     portfolio: {
         title: "Recente Projecten",
-        intro: "Wij zijn trots op ons werk en showcasen dat ook graag! Neem een kijk in ons archief van recente projecten..",
+        intro: "We laten graag zien waar we goed in zijn. Ontdek een selectie van onze recente projecten..",
         goToProject: "Ga naar project",
         goToRepo: "Github Repo",
         noRepo: "Niet op Github",
@@ -257,14 +257,14 @@ export default {
         dsmelodies:
             "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit méér dan 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
         blackharmony:
-            "<strong>Black Harmony</strong> is een populaire en getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina én wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
+            "<strong>Black Harmony</strong> is een getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina én wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
     },
 
     prices: {
         title: "Prijzen & Tarieven",
         intro: {
-            one: "Hier zie je een indicatie van onze scherpe prijzen. Heb je liever een georiënteerd gesprek,",
-            contactUs: "neem contact",
+            one: "Hier zie je een overzicht van onze prijzen. Heb je liever een georiënteerd gesprek?",
+            contactUs: "Neem contact",
             two: "met ons op of vraag om een",
             callBack: "terugbelverzoek",
         },
@@ -343,7 +343,7 @@ export default {
     },
 
     contact: {
-        intro: "<span>Jouw website, webshop of webapp laten bouwen door <b>Menefex</b>?</span><span>Vraag een offerte aan! Heb je anders een <u>vraag of opmerking</u>, aarzel niet een bericht achter te laten.</span><span><b>Binnen één werkdag nemen wij contact met je op.</b></span>",
+        intro: "<span>Jouw website, webshop of webapplciatie laten bouwen door <b>Menefex</b>?</span><span>Vul het contactformulier hieronder in en vraag een offerte aan! Heb je anders een <u>vraag of opmerking</u>, aarzel niet een bericht achter te laten.</span><span><b>Binnen één werkdag nemen wij contact met je op.</b></span>",
         form: {
             name: "Naam",
             company: "Bedrijfsnaam (optioneel)",
@@ -636,7 +636,7 @@ export default {
         },
         itemFour: {
             question: "Moet ik zelf teksten en afbeeldingen aanleveren?",
-            answer: "Ja, je levert zelf de teksten en afbeeldingen aan. Wij focussen op de technische realisatie van de website – je eigen content en tevens design zijn dus nodig om te kunnen starten.",
+            answer: "Ja, je levert zelf de teksten en afbeeldingen aan. Wij focussen op de technische realisatie van de website. Je eigen content en tevens design zijn dus nodig om te kunnen starten.",
         },
         itemFive: {
             question: "Wordt mijn website goed vindbaar in Google?",
