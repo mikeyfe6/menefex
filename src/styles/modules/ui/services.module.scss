@@ -220,7 +220,7 @@
             }
 
             &.is-active {
-                background-color: $lightgrey-color;
+                background-color: $snow-color;
             }
 
             > div {
@@ -234,6 +234,8 @@
                 align-items: center;
                 justify-content: center;
                 aspect-ratio: 1 / 1;
+
+                @include smooth-trans;
 
                 svg {
                     font-size: rem-calc(24);
@@ -251,8 +253,13 @@
             &:not(.is-active) {
                 &:hover {
                     border-color: $link-color;
-                    background-color: $primary-color;
+                    background-color: rgba($primary-color, 0.95);
                     color: $white-color;
+
+                    > div {
+                        background-color: $white-color;
+                        outline-color: $snow-color;
+                    }
                 }
             }
         }

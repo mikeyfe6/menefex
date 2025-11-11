@@ -216,6 +216,21 @@ export default {
             content:
                 "<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Huisstijl &amp; branding</h4><p>Templates die perfect aansluiten bij jouw merkidentiteit voor een consistente uitstraling.</p></li><li><h4>Responsief ontwerp</h4><p>Volledig geoptimaliseerd voor alle schermgroottes: van desktop tot mobiel.</p></li><li><h4>Technische compatibiliteit</h4><p>Correcte weergave in alle grote e-mailclients (Gmail, Outlook, Apple Mail, etc.).</p></li><li><h4>Gebruiksvriendelijk in CMS/ESP</h4><p>Templates die eenvoudig te bewerken en hergebruiken zijn in jouw e-mailsoftware (bijv. Mailchimp, HubSpot of custom systemen).</p></li><li><h4>Conversiegericht design</h4><p>Slimme indeling, duidelijke CTA’s en visuele hiërarchie voor maximaal resultaat.</p></li></ol><br /><h3><strong>Voordelen van professionele e-mail templates:</strong></h3><ul><li><p><strong>Tijdswinst:</strong> herbruikbare templates maken het versturen van campagnes sneller en efficiënter.</p></li><li><p><strong>Betrouwbaarheid:</strong> consistente en foutloze weergave bij al je ontvangers.</p></li><li><p><strong>Hogere conversie:</strong> een strak design met slimme CTA’s leidt tot meer kliks en interactie.</p></li><li><p><strong>Sterkere branding:</strong> jouw merk wordt herkenbaarder en professioneler bij elk contactmoment.</p></li><li><p><strong>Flexibiliteit:</strong> eenvoudig zelf aan te passen zonder technische kennis.</p></li></ul><hr /><p>Wil je professionele e-mail templates die écht werken? Laat ons jouw e-mailcommunicatie naar een hoger niveau tillen. Neem vandaag nog contact op en ontdek wat wij voor jou kunnen ontwerpen.</p>",
         },
+        analyse: {
+            // component
+            cta: "Meer over onze analyse diensten",
+
+            // overview
+            caption: `Analyse(s) <small>laten uitvoeren</small>`,
+            snippet:
+                "Op maat gemaakte SEO, GEO of WCAG analyses die inzicht geven in jouw online prestaties en kansen bieden voor verbetering.",
+
+            // detail
+            title: "Analyse(s) laten uitvoeren",
+            intro: "Op maat gemaakte SEO, GEO of WCAG analyses die inzicht geven in jouw online prestaties en kansen bieden voor verbetering.",
+            content:
+                "<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Diepgaande SEO-analyse</h4><p>We onderzoeken jouw website op technische SEO, contentkwaliteit, backlinks en concurrentiepositie om verbeterpunten te identificeren.</p></li><li><h4>GEO-analyse</h4><p>Voor lokale bedrijven analyseren we jouw zichtbaarheid in lokale zoekresultaten en optimaliseren we voor lokale SEO.</p></li><li><h4>WCAG-analyse</h4><p>We beoordelen jouw website op toegankelijkheid volgens de WCAG-richtlijnen, zodat iedereen jouw site probleemloos kan gebruiken.</p></li><li><h4>Gedetailleerd rapport &amp; aanbevelingen</h4><p>Je ontvangt een overzichtelijk rapport met bevindingen en concrete aanbevelingen voor verbetering.</p></li></ol><br /><h3><strong>Voordelen van een professionele analyse:</strong></h3><ul><li><p><strong>Inzicht in prestaties:</strong> begrijp waar je staat en wat er beter kan.</p></li><li><p><strong>Gerichte verbeteringen:</strong> focus op de belangrijkste punten voor maximale impact.</p></li><li><p><strong>Concurrentievoordeel:</strong> blijf voorop lopen door continu te optimaliseren.</p></li><li><p><strong>Toegankelijkheid:</strong> zorg dat jouw website voor iedereen bruikbaar is.</p></li></ul><hr /><p>Wil je weten hoe jouw website presteert en waar kansen liggen? Laat een professionele analyse uitvoeren door Menefex en ontdek de mogelijkheden voor groei en verbetering.</p>",
+        },
     },
 
     projects: {

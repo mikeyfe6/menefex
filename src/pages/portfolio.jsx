@@ -91,7 +91,7 @@ const PortfolioPage = () => {
                                 target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 {t("portfolio.goToProject")}
                             </a>
                             <a
@@ -157,7 +157,7 @@ const PortfolioPage = () => {
                                 // target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 <strike>{t("portfolio.goToProject")}</strike>
                             </a>
                             <a
@@ -220,7 +220,7 @@ const PortfolioPage = () => {
                                 target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 {t("portfolio.goToProject")}
                             </a>
                             <a
@@ -281,7 +281,7 @@ const PortfolioPage = () => {
                                 target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 {t("portfolio.goToProject")}
                             </a>
                             <a
@@ -340,7 +340,7 @@ const PortfolioPage = () => {
                                 target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 {t("portfolio.goToProject")}
                             </a>
                             <a
@@ -404,7 +404,7 @@ const PortfolioPage = () => {
                                 // target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 <strike>{t("portfolio.goToProject")}</strike>
                             </a>
                             <a className={portfolioStyles.btnDark} disabled>
@@ -457,7 +457,7 @@ const PortfolioPage = () => {
                                 target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 {t("portfolio.goToProject")}
                                 {/* Komt Binnenkort */}
                             </a>
@@ -512,7 +512,7 @@ const PortfolioPage = () => {
                                 target="_blank"
                                 className={portfolioStyles.btnLight}
                             >
-                                <FontAwesomeIcon icon={["fas", "eye"]} />
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
                                 {t("portfolio.goToProject")}
                             </a>
                             <a className={portfolioStyles.btnDark} disabled>

@@ -141,6 +141,22 @@ const ServicesPage = () => {
                             icon={["fas", "envelope-circle-check"]}
                         />
                     </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("services.analyse.caption"),
+                            }}
+                        />
+                        <hr />
+                        <p>{t("services.analyse.snippet")}</p>
+                        <Link
+                            to="/diensten/analyse-laten-uitvoeren/"
+                            name="service"
+                        >
+                            {t("services.analyse.cta")}
+                        </Link>
+                        <FontAwesomeIcon icon={["fas", "eye"]} />
+                    </div>
                 </div>
             </section>
         </Layout>
