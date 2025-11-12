@@ -143,6 +143,11 @@ const Footer = () => {
                                         {t("footer.services.seo")}
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link to="/diensten/analyse-laten-uitvoeren/">
+                                        {t("footer.services.analyse")}
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 

@@ -11,9 +11,11 @@ const useTranslationSetup = () => {
     useEffect(() => {
         if (isHydrated) {
             const storedLanguage = window.localStorage.getItem("i18nextLng");
-            i18n.changeLanguage(storedLanguage);
+            if (storedLanguage && i18n.language !== storedLanguage) {
+                i18n.changeLanguage(storedLanguage);
+            }
         }
-    }, [i18n, isHydrated]);
+    }, [isHydrated]);
 
     useEffect(() => {
         document.documentElement.lang = i18n.language;
