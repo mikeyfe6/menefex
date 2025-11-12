@@ -109,6 +109,11 @@ const Footer = () => {
                             <h4>{t("footer.services.title")}</h4>
                             <ul>
                                 <li>
+                                    <Link to="/diensten/analyse-laten-uitvoeren/">
+                                        {t("footer.services.analyse")}
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link to="/diensten/email-template-laten-maken/">
                                         {t("footer.services.email")}
                                     </Link>
@@ -141,11 +146,6 @@ const Footer = () => {
                                 <li>
                                     <Link to="/diensten/zoekmachineoptimalisatie/">
                                         {t("footer.services.seo")}
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/diensten/analyse-laten-uitvoeren/">
-                                        {t("footer.services.analyse")}
                                     </Link>
                                 </li>
                             </ul>
