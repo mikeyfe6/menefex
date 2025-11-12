@@ -36,6 +36,7 @@ export default {
             webshop: "Webshop development",
             website: "Website development",
             seo: "Search engine optimization",
+            analyse: "Analysis & reporting",
         },
         about: "About us",
         prices: "Prices",
@@ -215,6 +216,21 @@ export default {
             intro: "Tailor-made email templates that fully align with your brand and objectives. Whether it’s newsletters, campaigns, or transactional emails, we ensure your message comes across professionally, recognizably, and effectively.",
             content:
                 "<h3><strong>What You Can Expect from Us:</strong></h3><ol><li><h4>Branding & Identity</h4><p>Templates that perfectly reflect your brand identity for a consistent look and feel.</p></li><li><h4>Responsive Design</h4><p>Fully optimized for all screen sizes, from desktop to mobile.</p></li><li><h4>Technical Compatibility</h4><p>Correct display in all major email clients (Gmail, Outlook, Apple Mail, etc.).</p></li><li><h4>User-Friendly in CMS/ESP</h4><p>Templates that are easy to edit and reuse in your email software (e.g., Mailchimp, HubSpot, or custom systems).</p></li><li><h4>Conversion-Focused Design</h4><p>Smart layout, clear CTAs, and visual hierarchy for maximum results.</p></li></ol><br /><h3><strong>Benefits of Professional Email Templates:</strong></h3><ul><li><p><strong>Time-Saving:</strong> reusable templates make sending campaigns faster and more efficient.</p></li><li><p><strong>Reliability:</strong> consistent and error-free display for all your recipients.</p></li><li><p><strong>Higher Conversions:</strong> a sleek design with smart CTAs leads to more clicks and engagement.</p></li><li><p><strong>Stronger Branding:</strong> your brand becomes more recognizable and professional with every interaction.</p></li><li><p><strong>Flexibility:</strong> easy to adjust yourself without technical knowledge.</p></li></ul><hr /><p>Do you want professional email templates that really work? Let us elevate your email communications. Contact us today and discover what we can design for you.</p>",
+        },
+        analyse: {
+            // component
+            cta: "More about our analysis services",
+
+            // overview
+            caption: `<small>Have an</small> analysis <small>carried out</small>`,
+            snippet:
+                "Custom SEO, GEO, or WCAG analyses that provide insights into your online performance and offer opportunities for improvement.",
+
+            // detail
+            title: "Have an analysis carried out",
+            intro: "Custom SEO, GEO, or WCAG analyses that provide insights into your online performance and offer opportunities for improvement.",
+            content:
+                "<h3><strong>What you can expect from us:</strong></h3><ol><li><h4>In-depth SEO analysis</h4><p>We examine your website for technical SEO, content quality, backlinks, and competitive positioning to identify areas for improvement.</p></li><li><h4>GEO analysis (Generative Engine Optimization)</h4><p>We analyze how your website performs in AI-powered search engines and optimize for better visibility in future search technologies.</p></li><li><h4>WCAG analysis</h4><p>We assess your website's accessibility according to WCAG guidelines, ensuring everyone can use your site without issues.</p></li><li><h4>Detailed report &amp; recommendations</h4><p>You'll receive a clear report with findings and concrete recommendations for improvement.</p></li></ol><br /><h3><strong>Benefits of a professional analysis:</strong></h3><ul><li><p><strong>Performance insights:</strong> understand where you stand and what can be improved.</p></li><li><p><strong>Targeted improvements:</strong> focus on the most important points for maximum impact.</p></li><li><p><strong>Competitive advantage:</strong> stay ahead by continuously optimizing.</p></li><li><p><strong>Accessibility:</strong> ensure your website is usable for everyone.</p></li></ul><hr /><p>Want to know how your website performs and where opportunities lie? Have a professional analysis conducted by Menefex and discover the possibilities for growth and improvement.</p>",
         },
     },
 
