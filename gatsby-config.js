@@ -10,7 +10,7 @@ const siteMetadata = {
     siteUrl: "https://menefex.nl",
 
     title: "Menefex",
-    company: "Menefex Webmediabedrijf",
+    company: "Menefex Webmediabureau",
     description:
         "Bij Menefex bouwen wij websites, webshops & webapplicaties met oog voor detail.",
 
