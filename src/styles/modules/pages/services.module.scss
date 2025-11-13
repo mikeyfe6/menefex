@@ -158,7 +158,7 @@
             #{$services}-watermark {
                 > svg {
                     position: fixed;
-                    width: 100%;
+                    width: fit-content;
                     height: fit-content;
                     max-height: 15em;
                     max-width: 15em;
