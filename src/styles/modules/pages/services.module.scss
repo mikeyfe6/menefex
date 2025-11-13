@@ -154,6 +154,27 @@
                     }
                 }
             }
+
+            #{$services}-watermark {
+                > svg {
+                    position: fixed;
+                    height: 15em;
+                    width: fit-content;
+                    right: max(24px, calc((100vw - #{rem-calc($layout)}) / 2));
+                    top: 25%;
+                    opacity: 0.375;
+                    z-index: -1;
+                    color: rgba($snow-color, 0.625);
+
+                    @include phablet {
+                        height: 20em;
+                    }
+
+                    @include desktop {
+                        height: 25em;
+                    }
+                }
+            }
         }
     }
 }
