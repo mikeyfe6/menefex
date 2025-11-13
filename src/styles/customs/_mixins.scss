@@ -190,6 +190,14 @@
         &:hover {
             border-color: $link-color;
         }
+    } @else if $type == 3 {
+        background-color: $smoke-color;
+        border-color: $secondary-color;
+        color: $primary-color;
+
+        &:hover {
+            border-color: $link-color;
+        }
     }
 
     @include fluid-typing(13, 15);

@@ -135,6 +135,14 @@
                     padding: rem-calc(12);
                     outline: 2px solid $primary-color;
                     border-radius: $medium-radius;
+
+                    a {
+                        display: block;
+                        margin-top: rem-calc(24);
+                        margin-left: auto;
+
+                        @include primary-button(3, 100%);
+                    }
                 }
             }
 
