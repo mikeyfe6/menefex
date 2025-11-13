@@ -6,9 +6,10 @@
     &-container {
         @include container;
 
-        > span {
+        > div:first-child {
             margin-bottom: rem-calc(36);
             display: flex;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: rem-calc(12 16);

@@ -64,8 +64,8 @@ const SimpleMap = () => {
                             language: "nl",
                             region: "NL",
                         }}
-                        defaultCenter={defaultProps.center}
-                        defaultZoom={responsiveZoom}
+                        center={defaultProps.center}
+                        zoom={responsiveZoom}
                         options={mapOptions}
                     >
                         <Marker

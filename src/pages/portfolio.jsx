@@ -81,6 +81,7 @@ const PortfolioPage = () => {
                                     <li>GatsbyJS</li>
                                     <li>ReactJS</li>
                                     <li>Netlify</li>
+                                    <li>GraphQl</li>
                                 </ul>
                             </div>
                         </div>
@@ -147,6 +148,7 @@ const PortfolioPage = () => {
                                     <li>ReactJS</li>
                                     <li>Netlify</li>
                                     <li>Contentful</li>
+                                    <li>GraphQl</li>
                                 </ul>
                             </div>
                         </div>
@@ -210,6 +212,7 @@ const PortfolioPage = () => {
                                     <li>ReactJS</li>
                                     <li>Netlify</li>
                                     <li>Contentful</li>
+                                    <li>GraphQl</li>
                                 </ul>
                             </div>
                         </div>
@@ -269,8 +272,8 @@ const PortfolioPage = () => {
                                     <li>ReactJS</li>
                                     <li>Strapi</li>
                                     <li>Netlify</li>
-                                    <li>RESTful API</li>
                                     <li>Heroku</li>
+                                    <li>GraphQl</li>
                                 </ul>
                             </div>
                         </div>
@@ -330,6 +333,7 @@ const PortfolioPage = () => {
                                     <li>ReactJS</li>
                                     <li>Netlify</li>
                                     <li>Contentful</li>
+                                    <li>GraphQl</li>
                                 </ul>
                             </div>
                         </div>

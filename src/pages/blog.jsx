@@ -22,7 +22,7 @@ const BlogPage = () => {
     const data = useStaticQuery(graphql`
         query BlogQuery {
             nlContent: allContentfulBlogPost(
-                sort: { createdAt: DESC }
+                sort: { publishedDate: DESC }
                 filter: { node_locale: { eq: "nl" } }
             ) {
                 edges {
@@ -36,7 +36,7 @@ const BlogPage = () => {
                             title
                             gatsbyImageData
                         }
-                        createdAt(
+                        publishedDate(
                             formatString: "dddd D MMMM YYYY"
                             locale: "nl"
                         )
@@ -45,7 +45,7 @@ const BlogPage = () => {
             }
 
             enContent: allContentfulBlogPost(
-                sort: { createdAt: DESC }
+                sort: { publishedDate: DESC }
                 filter: { node_locale: { eq: "en" } }
             ) {
                 edges {
@@ -59,7 +59,7 @@ const BlogPage = () => {
                             title
                             gatsbyImageData
                         }
-                        createdAt(
+                        publishedDate(
                             formatString: "dddd D MMMM YYYY"
                             locale: "en"
                         )
@@ -107,7 +107,10 @@ const BlogPage = () => {
                                                         ]}
                                                     />
                                                     <strong>
-                                                        {edge.node.createdAt}
+                                                        {
+                                                            edge.node
+                                                                .publishedDate
+                                                        }
                                                     </strong>{" "}
                                                 </span>
                                                 <span>

@@ -80,7 +80,7 @@ const Projects = () => {
             description: t("projects.eternitydrum"),
             url: "https://eternitydrum.com",
             type: "site",
-            stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful"],
+            stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful", "GraphQl"],
         },
         {
             logo: "bh-logo",
@@ -102,8 +102,15 @@ const Projects = () => {
             title: "Afrodiasphere",
             description: t("projects.afrodiasphere"),
             url: "https://afrodiasphere.com",
-            type: "app",
-            stack: ["GatsbyJS", "Strapi", "Netlify", "GraphQl", "RESTful API"],
+            type: "webapp",
+            stack: [
+                "GatsbyJS",
+                "ReactJS",
+                "Strapi",
+                "Netlify",
+                "Heroku",
+                "GraphQl",
+            ],
         },
         {
             logo: "dsm-logo",
@@ -130,7 +137,7 @@ const Projects = () => {
             description: t("projects.keeptreal"),
             url: "https://keeptreal.nl",
             type: "site",
-            stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful"],
+            stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful", "GraphQl"],
         },
         {
             logo: "pz-logo",
@@ -139,7 +146,7 @@ const Projects = () => {
             description: t("projects.priozorg"),
             // url: "https://prio-zorg.nl",
             type: "site",
-            stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful"],
+            stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful", "GraphQl"],
         },
         {
             logo: "eup-logo",
@@ -148,7 +155,7 @@ const Projects = () => {
             description: t("projects.edutainuproductions"),
             url: "https://edutainuproductions.nl",
             type: "site",
-            stack: ["GatsbyJS", "ReactJS", "Netlify"],
+            stack: ["GatsbyJS", "ReactJS", "Netlify", "GraphQl"],
         },
     ];
 
@@ -183,10 +190,10 @@ const Projects = () => {
     return (
         <section id="projects">
             <div className={projectsStyles.projectsContainer}>
-                <span>
+                <div>
                     <h3>{t("projects.title")}</h3>
                     <Link to="/portfolio/">{t("projects.seeAll")}</Link>
-                </span>
+                </div>
                 <div className={projectsStyles.projectsWrapper}>
                     <div className={projectsStyles.projectsContent}>
                         {logoImg && (
@@ -215,7 +222,7 @@ const Projects = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {currentProject.type === "app"
+                                {currentProject.type === "webapp"
                                     ? t("projects.viewWebapp")
                                     : t("projects.viewWebsite")}
                             </a>
