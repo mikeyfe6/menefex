@@ -158,8 +158,10 @@
             #{$services}-watermark {
                 > svg {
                     position: fixed;
-                    height: 15em;
-                    width: fit-content;
+                    width: 100%;
+                    height: fit-content;
+                    max-height: 15em;
+                    max-width: 15em;
                     right: max(24px, calc((100vw - #{rem-calc($layout)}) / 2));
                     top: 25%;
                     opacity: 0.375;
@@ -167,11 +169,13 @@
                     color: rgba($snow-color, 0.625);
 
                     @include phablet {
-                        height: 20em;
+                        max-height: 20em;
+                        max-width: 20em;
                     }
 
                     @include desktop {
-                        height: 25em;
+                        max-height: 25em;
+                        max-width: 25em;
                     }
                 }
             }
