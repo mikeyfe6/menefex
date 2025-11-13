@@ -141,12 +141,10 @@
             #{$services}-buttons {
                 display: flex;
                 flex-wrap: wrap;
-                margin-top: rem-calc(60);
+                justify-content: space-between;
+                max-width: 80ch;
+                margin-top: rem-calc(48);
                 gap: rem-calc(24);
-
-                @include phablet {
-                    margin-top: rem-calc(80);
-                }
 
                 > a {
                     @include primary-button;

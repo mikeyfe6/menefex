@@ -44,6 +44,10 @@ const AnalysePage = () => {
                             <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
+
+                    <div className={servicesStyles.servicesWatermark}>
+                        <FontAwesomeIcon icon={["fas", "eye"]} />
+                    </div>
                 </div>
             </section>
         </Layout>

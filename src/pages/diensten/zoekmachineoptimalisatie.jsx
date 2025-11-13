@@ -48,6 +48,10 @@ const SeoPage = () => {
                             <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
+
+                    <div className={servicesStyles.servicesWatermark}>
+                        <FontAwesomeIcon icon={["fab", "searchengin"]} />
+                    </div>
                 </div>
             </section>
         </Layout>

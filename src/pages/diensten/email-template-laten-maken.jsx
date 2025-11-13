@@ -44,6 +44,12 @@ const EmailTemplatePage = () => {
                             <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
+
+                    <div className={servicesStyles.servicesWatermark}>
+                        <FontAwesomeIcon
+                            icon={["fas", "envelope-circle-check"]}
+                        />
+                    </div>
                 </div>
             </section>
         </Layout>

@@ -48,6 +48,10 @@ const WebshopPage = () => {
                             <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
+
+                    <div className={servicesStyles.servicesWatermark}>
+                        <FontAwesomeIcon icon={["fas", "shopping-cart"]} />
+                    </div>
                 </div>
             </section>
         </Layout>
