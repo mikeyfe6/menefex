@@ -189,7 +189,7 @@ module.exports = {
                                     title,
                                     subtitle,
                                     slug,
-                                    createdAt,
+                                    publishedDate,
                                     body,
                                     image,
                                     topics,
@@ -201,7 +201,7 @@ module.exports = {
                                     categories: topics.map(
                                         (topic) => topic.name
                                     ),
-                                    date: createdAt,
+                                    date: publishedDate,
                                     url: `${siteUrl}/blog/${slug}`,
                                     guid: contentful_id,
                                     lat: 52.30994007862562,
@@ -221,14 +221,14 @@ module.exports = {
                             }),
                         query: `
                         {
-                            allContentfulBlogPost(sort: {createdAt: DESC} filter: { node_locale: { eq: "nl" } }) {
+                            allContentfulBlogPost(sort: {publishedDate: DESC} filter: { node_locale: { eq: "nl" } }) {
                                 edges {
                                     node {
                                     contentful_id
                                     title
                                     subtitle
                                     slug
-                                    createdAt
+                                    publishedDate
                                     body {
                                         rssHtml
                                         references {

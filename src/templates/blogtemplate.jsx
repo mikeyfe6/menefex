@@ -512,8 +512,8 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     {relatedPosts
                                         ?.sort(
                                             (a, b) =>
-                                                new Date(b.createdAt) -
-                                                new Date(a.createdAt)
+                                                new Date(b.publishedDate) -
+                                                new Date(a.publishedDate)
                                         )
                                         .slice(0, 3)
                                         .map((post) => (
@@ -555,8 +555,8 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                         {relatedPosts
                             ?.sort(
                                 (a, b) =>
-                                    new Date(b.createdAt) -
-                                    new Date(a.createdAt)
+                                    new Date(b.publishedDate) -
+                                    new Date(a.publishedDate)
                             )
                             .slice(0, 3)
                             .map((post) => {
@@ -582,14 +582,14 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                                     <span>
                                                         {t("blog.readMore")}
                                                     </span>
-                                                    {post?.createdAt && (
+                                                    {post?.publishedDate && (
                                                         <time
                                                             dateTime={
-                                                                post?.createdAt
+                                                                post?.publishedDate
                                                             }
                                                         >
                                                             {formatShortDate(
-                                                                post?.createdAt
+                                                                post?.publishedDate
                                                             )}
                                                         </time>
                                                     )}

@@ -71,7 +71,7 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                     contentful_id,
                                     title,
                                     subtitle,
-                                    createdAt,
+                                    publishedDate,
                                     author,
                                     image,
                                 }) => {
@@ -96,11 +96,11 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                                             <strong>
                                                                 <time
                                                                     dateTime={
-                                                                        createdAt
+                                                                        publishedDate
                                                                     }
                                                                 >
                                                                     {formatDate(
-                                                                        createdAt
+                                                                        publishedDate
                                                                     )}
                                                                 </time>
                                                             </strong>

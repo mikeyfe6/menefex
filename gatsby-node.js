@@ -252,7 +252,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                                 url
                             }
                         }
-                        createdAt
+                        publishedDate
                         updatedAt
                         body {
                             raw
@@ -296,7 +296,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                                 title
                                 subtitle
                                 slug
-                                createdAt
+                                publishedDate
                                 image {
                                     title
                                     gatsbyImageData
@@ -331,7 +331,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                                 title
                                 gatsbyImageData
                             }
-                            createdAt
+                            publishedDate
                         }
                         node_locale
                     }
@@ -378,7 +378,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     body: nlContent ? nlContent.body : {},
                     slug: nlContent ? nlContent.slug : "",
                     updatedPost: nlContent ? nlContent.updatedAt : "",
-                    publishedPost: nlContent ? nlContent.createdAt : "",
+                    publishedPost: nlContent ? nlContent.publishedDate : "",
                     author: nlContent ? nlContent.author : "",
                     topics: nlContent ? nlContent.topics : [],
                     keywords: nlContent ? nlContent.keywords : [],
@@ -393,7 +393,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     body: enContent ? enContent.body : {},
                     slug: enContent ? enContent.slug : "",
                     updatedPost: enContent ? enContent.updatedAt : "",
-                    publishedPost: enContent ? enContent.createdAt : "",
+                    publishedPost: enContent ? enContent.publishedDate : "",
                     author: enContent ? enContent.author : "",
                     topics: enContent ? enContent.topics : [],
                     keywords: enContent ? enContent.keywords : [],
