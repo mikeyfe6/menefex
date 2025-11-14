@@ -176,7 +176,7 @@
                     z-index: -1;
                     color: rgba($snow-color, 0.625);
 
-                    @include phablet {
+                    @include mobile {
                         max-height: 20em;
                         max-width: 20em;
                     }
