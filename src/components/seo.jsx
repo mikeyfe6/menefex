@@ -151,7 +151,7 @@ const SEO = ({
             <meta name="description" content={pageDescription} />
             <meta name="image" content={pageImage} />
             <meta name="keywords" content={keywords} />
-            <meta property="author" content={author} />
+            <meta name="author" content={author} />
 
             {/* --- OG / Facebook etc. Meta Tags ! --- */}
 
