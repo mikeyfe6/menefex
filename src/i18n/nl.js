@@ -238,16 +238,23 @@ export default {
         title: "Recente Projecten",
         viewWebsite: "Bekijk website",
         viewWebapp: "Bekijk webapp",
-        eternitydrum: "Stichting Eternity Percussion uit Amsterdam",
-        blackharmony: "Zanggroep Black Harmony uit Amsterdam",
+        eternitydrum:
+            "Culturele instelling die jongeren ondersteunt via muziekeducatie en talentontwikkeling",
+        blackharmony:
+            "Zanggroep met focus op traditionele Afro-Surinaamse muziek",
+
         afrodiasphere:
-            "Ons eigen initiatief opgezet, vooral gericht op sociale interacties",
-        dsmelodies: "Steelpannist Derek Simpey uit Amsterdam",
+            "Eigen initiatief voor verbinding en informatiedeling binnen de diaspora gemeenschap",
+        dsmelodies:
+            "Professioneel steeldrum-artiest Derek Simpey uit Amsterdam Zuidoost",
         knacdig:
-            "Stichting Kennis Netwerk Afro Caribische Diaspora Gemeenschap uit Den-Haag",
-        keeptreal: "Stichting Keep It Real uit Amsterdam",
-        priozorg: "Hulpverleningsorganisatie Prio Zorg uit Amsterdam",
-        edutainuproductions: "Edutain U Productions uit Amsterdam",
+            "Stichting voor identiteitsversterking en zichtbaarheid van de Afro-Caribische diaspora",
+        keeptreal:
+            "Programma onder leiding van Wenner Regales dat jongeren perspectief biedt",
+        priozorg:
+            "Dynamische hulpverlening met coaching en mentoring voor jongvolwassenen",
+        edutainuproductions:
+            "Freelancebedrijf van Otmar Watson voor culturele projecten met impact",
         seeAll: "Zie alle projecten",
     },
 
