@@ -9,6 +9,10 @@ import useTranslation from "../../hooks/use-translation";
 
 import * as smartFormStyles from "../../styles/modules/forms/smartForm.module.scss";
 
+// TODO: klaar voor TS'en..
+
+const RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY;
+
 const SmartForm = () => {
     const { t, isHydrated } = useTranslation();
     const [answers, setAnswers] = useState({});
@@ -16,6 +20,50 @@ const SmartForm = () => {
     const [success, setSuccess] = useState(false);
     const [activeTooltip, setActiveTooltip] = useState(null);
     const [confirmChecked, setConfirmChecked] = useState(false);
+    const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
+
+    useEffect(() => {
+        if (typeof window === "undefined" || recaptchaLoaded) return;
+
+        const script = document.createElement("script");
+        script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+        script.addEventListener("load", () => {
+            setRecaptchaLoaded(true);
+        });
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, [recaptchaLoaded]);
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            if (!recaptchaLoaded || !window.grecaptcha) {
+                console.error("reCAPTCHA not loaded");
+                return;
+            }
+
+            const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+                action: "smartFormSubmit",
+            });
+
+            await axios({
+                url: "/.netlify/functions/sendmail",
+                method: "POST",
+                data: {
+                    ...answers,
+                    formId: "smartForm",
+                    recaptchaToken: token,
+                },
+            });
+            setSuccess(true);
+        } catch (error) {
+            alert("Er ging iets mis bij het versturen. Probeer het opnieuw.");
+            console.error(error);
+        }
+    };
 
     const flow = [
         {
@@ -70,7 +118,7 @@ const SmartForm = () => {
         {
             id: "name",
             type: "text",
-            name: "full-name",
+            name: "name",
             autoComplete: "name",
             placeholder: t("smartform.placeholder.name"),
         },
@@ -82,9 +130,9 @@ const SmartForm = () => {
             placeholder: t("smartform.placeholder.email"),
         },
         {
-            id: "phone",
+            id: "tel",
             type: "tel",
-            name: "phone",
+            name: "tel",
             autoComplete: "tel",
             placeholder: t("smartform.placeholder.phone"),
             optional: true,
@@ -481,7 +529,7 @@ const SmartForm = () => {
         if (id === "budget") return t("smartform.questions.budget");
         if (id === "name") return t("smartform.questions.name");
         if (id === "email") return t("smartform.questions.email");
-        if (id === "phone") return t("smartform.questions.phone");
+        if (id === "tel") return t("smartform.questions.phone");
         if (id === "message") return t("smartform.questions.message");
         return "";
     };
@@ -614,28 +662,11 @@ const SmartForm = () => {
             ? Math.min(currentStep / visibleFlow.length, 1)
             : 0;
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            await axios({
-                url: "/.netlify/functions/sendmail",
-                method: "POST",
-                data: {
-                    ...answers,
-                    formId: "smartForm",
-                },
-            });
-            setSuccess(true);
-        } catch (error) {
-            alert("Er ging iets mis bij het versturen. Probeer het opnieuw.");
-            console.error(error);
-        }
-    };
-
     const handleReset = () => {
         setAnswers({});
         setCurrentStep(0);
         setSuccess(false);
+        setConfirmChecked(false);
     };
 
     if (!isHydrated) return null;
@@ -770,6 +801,11 @@ const SmartForm = () => {
                                                     )}
                                                 </label>
                                             </div>
+                                            <small
+                                                dangerouslySetInnerHTML={{
+                                                    __html: t("recaptcha.info"),
+                                                }}
+                                            />
                                             <div>
                                                 <button
                                                     type="button"

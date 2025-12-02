@@ -732,9 +732,9 @@ export default {
             },
             websiteUrl: {
                 default: "Wat is het domeinnaam/URL?",
-                website: "Wat is de domeinnaam/URL van je website?",
-                webshop: "Wat is de domeinnaam/URL van je webshop?",
-                webapp: "Wat is de domeinnaam/URL van je webapplicatie?",
+                website: "Wat is de URL van je website?",
+                webshop: "Wat is de URL van je webshop?",
+                webapp: "Wat is de URL van je webapplicatie?",
             },
             selfManage: {
                 default: "Wil je het zelf beheren?",
@@ -811,6 +811,10 @@ export default {
         },
         confirmation:
             "Ik heb de informatie gecontroleerd en wil graag een vrijblijvende offerte ontvangen",
+    },
+
+    recaptcha: {
+        info: `Deze site is beschermd door reCAPTCHA en de Google <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Privacyverklaring</a> en de <a href="https://policies.google.com/terms" rel="noopener noreferrer" target="_blank">Servicevoorwaarden</a> zijn van toepassing.`,
     },
 
     privacyPolicy:

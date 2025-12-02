@@ -79,10 +79,6 @@ form {
                 color: $secondary-color;
             }
 
-            a {
-                @include link;
-            }
-
             &::before {
                 content: "";
                 position: absolute;
@@ -222,6 +218,10 @@ form {
             box-shadow: 0 0 0 2px -moz-mac-focusring;
             outline: none;
         }
+    }
+
+    > small {
+        @extend %recaptcha;
     }
 
     > button {

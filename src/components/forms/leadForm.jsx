@@ -8,8 +8,11 @@ import useTranslation from "../../hooks/use-translation";
 
 // TODO: klaar voor TS'en..
 
+const RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY;
+
 const Form = () => {
     const { t, isHydrated } = useTranslation();
+    const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
     const [inputs, setInputs] = useState({
         name: "",
@@ -17,14 +20,29 @@ const Form = () => {
         email: "",
         tel: "",
         subject: "Ik wil een offerte aanvragen",
-        text: "",
+        message: "",
     });
+
+    useEffect(() => {
+        if (typeof window === "undefined" || recaptchaLoaded) return;
+
+        const script = document.createElement("script");
+        script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+        script.addEventListener("load", () => {
+            setRecaptchaLoaded(true);
+        });
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, [recaptchaLoaded]);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
             if (sessionStorage.getItem("mnfx") !== null) {
                 const mnfxPrice = sessionStorage.getItem("mnfx");
-                setInputs({ text: mnfxPrice });
+                setInputs({ message: mnfxPrice });
 
                 const removeStorage = () => {
                     setTimeout(() => sessionStorage.removeItem("mnfx"), 3000);
@@ -45,24 +63,40 @@ const Form = () => {
     );
 
     const handleSubmit = useCallback(
-        (event) => {
+        async (event) => {
             const form = event.currentTarget;
             event.preventDefault();
             event.stopPropagation();
 
-            axios({
-                url: "/.netlify/functions/sendmail",
-                method: "POST",
-                data: {
-                    ...inputs,
-                    formId: "leadForm",
-                },
-            })
-                .then(() => navigate(form.getAttribute("action")))
-                .catch((error) => console.log("POST ERROR", error));
-        },
+            if (!recaptchaLoaded || !window.grecaptcha) {
+                console.error("reCAPTCHA not loaded");
+                return;
+            }
 
-        [inputs]
+            try {
+                const token = await window.grecaptcha.execute(
+                    RECAPTCHA_SITE_KEY,
+                    {
+                        action: "leadFormSubmit",
+                    }
+                );
+
+                await axios({
+                    url: "/.netlify/functions/sendmail",
+                    method: "POST",
+                    data: {
+                        ...inputs,
+                        formId: "leadForm",
+                        recaptchaToken: token,
+                    },
+                });
+
+                navigate(form.getAttribute("action"));
+            } catch (error) {
+                console.error("POST ERROR", error);
+            }
+        },
+        [inputs, recaptchaLoaded]
     );
 
     if (!isHydrated) return null;
@@ -78,6 +112,7 @@ const Form = () => {
                 id="lead_name"
                 value={inputs.name}
                 onChange={handleChange}
+                autoComplete="name"
                 required
             />
 
@@ -89,6 +124,7 @@ const Form = () => {
                 name="company"
                 id="lead_company"
                 value={inputs.company}
+                autoComplete="organization"
                 onChange={handleChange}
             />
 
@@ -100,6 +136,7 @@ const Form = () => {
                 name="email"
                 id="lead_email"
                 value={inputs.email}
+                autoComplete="email"
                 onChange={handleChange}
                 required
             />
@@ -112,6 +149,7 @@ const Form = () => {
                 name="tel"
                 id="lead_tel"
                 value={inputs.tel}
+                autoComplete="tel"
                 onChange={handleChange}
                 required
             />
@@ -148,15 +186,23 @@ const Form = () => {
             </label>
             <textarea
                 type="text"
-                name="text"
+                name="message"
                 id="lead_text"
                 rows="6"
-                value={inputs.text}
+                value={inputs.message}
                 onChange={handleChange}
                 required
             />
 
-            <button type="submit">{t("contact.form.send")}</button>
+            <small
+                dangerouslySetInnerHTML={{
+                    __html: t("recaptcha.info"),
+                }}
+            />
+
+            <button type="submit" disabled={!recaptchaLoaded}>
+                {t("contact.form.send")}
+            </button>
         </form>
     );
 };

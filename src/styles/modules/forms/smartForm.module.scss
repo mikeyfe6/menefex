@@ -277,6 +277,10 @@
                         }
                     }
 
+                    > small {
+                        @extend %recaptcha;
+                    }
+
                     > div:has(button) {
                         display: flex;
                         justify-content: space-between;
@@ -306,6 +310,10 @@
                         margin-bottom: rem-calc(16);
 
                         @extend %as-h5;
+                    }
+
+                    p {
+                        margin-bottom: rem-calc(24);
                     }
 
                     button {

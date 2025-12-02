@@ -50,6 +50,10 @@
         #{$page}-link {
             @include text-link;
         }
+
+        &.success {
+            @include container($mt: rem-calc(32), $mb: rem-calc(64));
+        }
     }
 
     &-docs {

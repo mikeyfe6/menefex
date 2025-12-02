@@ -137,7 +137,7 @@
 
 // LINKS --------------------------------------------
 
-@mixin link($color: $link-color, $thickness: 2px, $offset: 3px) {
+@mixin underline-link($color: $link-color, $thickness: 2px, $offset: 3px) {
     text-decoration-line: underline;
     text-decoration-color: $color;
     text-decoration-thickness: $thickness;

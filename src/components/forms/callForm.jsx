@@ -10,8 +10,11 @@ import * as callStyles from "../../styles/modules/forms/callForm.module.scss";
 
 // TODO: klaar voor TS'en..
 
+const RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY;
+
 const Call = ({ callRef }) => {
     const { t, isHydrated } = useTranslation();
+    const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
     const [options, setOptions] = useState([
         {
@@ -50,10 +53,25 @@ const Call = ({ callRef }) => {
 
     const [inputs, setInputs] = useState({
         name: "",
-        phone: "",
+        tel: "",
         time: "",
         message: "",
     });
+
+    useEffect(() => {
+        if (typeof window === "undefined" || recaptchaLoaded) return;
+
+        const script = document.createElement("script");
+        script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+        script.addEventListener("load", () => {
+            setRecaptchaLoaded(true);
+        });
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, [recaptchaLoaded]);
 
     useEffect(() => {
         if (!isHydrated) return;
@@ -92,23 +110,40 @@ const Call = ({ callRef }) => {
     );
 
     const handleSubmit = useCallback(
-        (event) => {
+        async (event) => {
             const form = event.currentTarget;
             event.preventDefault();
             event.stopPropagation();
 
-            axios({
-                url: "/.netlify/functions/sendmail",
-                method: "POST",
-                data: {
-                    ...inputs,
-                    formId: "callForm",
-                },
-            })
-                .then(() => navigate(form.getAttribute("action")))
-                .catch((error) => console.log("POST ERROR", error));
+            if (!recaptchaLoaded || !window.grecaptcha) {
+                console.error("reCAPTCHA not loaded");
+                return;
+            }
+
+            try {
+                const token = await window.grecaptcha.execute(
+                    RECAPTCHA_SITE_KEY,
+                    {
+                        action: "callFormSubmit",
+                    }
+                );
+
+                await axios({
+                    url: "/.netlify/functions/sendmail",
+                    method: "POST",
+                    data: {
+                        ...inputs,
+                        formId: "callForm",
+                        recaptchaToken: token,
+                    },
+                });
+
+                navigate(form.getAttribute("action"));
+            } catch (error) {
+                console.error("POST ERROR", error);
+            }
         },
-        [inputs]
+        [inputs, recaptchaLoaded]
     );
 
     if (!isHydrated) return null;
@@ -131,6 +166,7 @@ const Call = ({ callRef }) => {
                 name="name"
                 id="call_name"
                 value={inputs.name}
+                autoComplete="name"
                 onChange={handleChange}
                 ref={callRef}
                 required
@@ -141,9 +177,10 @@ const Call = ({ callRef }) => {
             </label>
             <input
                 type="tel"
-                name="phone"
+                name="tel"
                 id="call_tel"
-                value={inputs.phone}
+                value={inputs.tel}
+                autoComplete="tel"
                 onChange={handleChange}
                 required
             />
@@ -181,7 +218,15 @@ const Call = ({ callRef }) => {
                 onChange={handleChange}
             />
 
-            <button type="submit">{t("prices.form.callMeBack")}</button>
+            <small
+                dangerouslySetInnerHTML={{
+                    __html: t("recaptcha.info"),
+                }}
+            />
+
+            <button type="submit" disabled={!recaptchaLoaded}>
+                {t("prices.form.callMeBack")}
+            </button>
         </form>
     );
 };

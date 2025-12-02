@@ -146,6 +146,10 @@ section {
     background-color: $secondary-color;
 }
 
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
 .responsive-tag {
     position: fixed;
     top: 1%;
