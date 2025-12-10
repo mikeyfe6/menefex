@@ -5,6 +5,10 @@ export default {
         decline: "Weiger",
     },
 
+    banner: {
+        text: `LET OP! <b>5% korting</b> op jouw nieuwe website, webapplicatie of webshop. De aanbieding geldt tot 31 december 2025! Zie onze <a href="/prijzen/">prijzenpagina</a> voor meer informatie..`,
+    },
+
     menu: {
         home: "Home",
         services: "Diensten",

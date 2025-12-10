@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useRef, useEffect } from "react";
 
 import { useTranslation } from "react-i18next";
 import { Link } from "gatsby";
@@ -15,11 +15,33 @@ import * as desktopMenuStyles from "../../styles/modules/layout/desktopMenu.modu
 
 // TODO: klaar voor TS'en..
 
-const DesktopMenu = ({ drawerClickHandler }) => {
+const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
     const { t, i18n } = useTranslation();
     const { telephone } = useSiteMetadata();
+    const menuRef = useRef(null);
 
     const currentLanguage = i18n.language;
+
+    useEffect(() => {
+        const banner = bannerRef?.current;
+        const menu = menuRef.current;
+        if (!banner || !menu) return;
+
+        const observer = new window.IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    menu.dataset.scrolled = "false";
+                } else {
+                    menu.dataset.scrolled = "true";
+                }
+            },
+            { threshold: 0, rootMargin: "-50px" }
+        );
+
+        observer.observe(banner);
+
+        return () => observer.disconnect();
+    }, [bannerRef]);
 
     const switchLanguage = (lang) => {
         i18n.changeLanguage(lang);
@@ -36,7 +58,7 @@ const DesktopMenu = ({ drawerClickHandler }) => {
     };
 
     return (
-        <div className={desktopMenuStyles.desktopMenu}>
+        <div className={desktopMenuStyles.desktopMenu} ref={menuRef}>
             <nav>
                 <Link to="/" className={desktopMenuStyles.logo}>
                     <img

@@ -131,8 +131,8 @@
     text-overflow: ellipsis;
 }
 
-@mixin smooth-trans($prop: all) {
-    transition: $prop 0.2s ease-in-out;
+@mixin smooth-trans($prop: all, $duration: 0.2s) {
+    transition: $prop $duration ease-in-out;
 }
 
 // LINKS --------------------------------------------

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import CookieConsent from "react-cookie-consent";
 
@@ -105,6 +105,7 @@ import "../styles/layout.scss";
 const Layout = ({ children }) => {
     const { t, isHydrated } = useTranslation();
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+    const bannerRef = useRef(null);
 
     const drawerToggleClickHandler = () => {
         setSideDrawerOpen((prevState) => !prevState);
@@ -125,9 +126,27 @@ const Layout = ({ children }) => {
     return (
         <>
             <div className="menefex">
+                <div className="page-banner" ref={bannerRef}>
+                    <div className="banner">
+                        <div className="banner-text">
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("banner.text"),
+                                }}
+                            />
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("banner.text"),
+                                }}
+                                aria-hidden="true"
+                            />
+                        </div>
+                    </div>
+                </div>
                 <header>
                     <DesktopMenu
                         drawerClickHandler={drawerToggleClickHandler}
+                        bannerRef={bannerRef}
                     />
                     <MobileMenu show={sideDrawerOpen} />
                 </header>

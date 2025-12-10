@@ -71,7 +71,8 @@
                         height: 100%;
                         width: 0%;
                         background-color: $link-color;
-                        transition: width 0.3s ease-in-out;
+
+                        @include smooth-trans(width, 0.3s);
                     }
                 }
             }

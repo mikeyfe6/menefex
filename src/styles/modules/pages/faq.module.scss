@@ -44,7 +44,7 @@
                         @include smooth-trans;
                         @include underline($color: $smoke-color);
 
-                         @include fluid-typing(18, 21);
+                        @include fluid-typing(18, 21);
                     }
 
                     &[aria-expanded="true"] {
@@ -112,8 +112,9 @@
                 padding: rem-calc(8 16);
                 border: 2px solid $snow-color;
                 border-radius: $medium-radius;
-                transition: all 0.3s ease;
                 font-weight: 500;
+
+                @include smooth-trans(all, 0.3s);
 
                 @include mobile {
                     padding: rem-calc(10 20);

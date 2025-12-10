@@ -2,7 +2,7 @@
 
 .desktop-menu {
     width: 100%;
-    top: 0;
+    top: rem-calc($banner);
     left: 0;
     position: fixed;
     background: linear-gradient(
@@ -14,6 +14,14 @@
     z-index: 7;
     border-top: 7.5px solid $secondary-color;
     border-bottom: 1px solid rgba($white-color, 100%);
+
+    @include smooth-trans(top, 0.1s);
+
+    &[data-scrolled="true"] {
+        top: 0 !important;
+
+        @include smooth-trans(top, 0.1s);
+    }
 
     @include phablet {
         padding: rem-calc(20 0);

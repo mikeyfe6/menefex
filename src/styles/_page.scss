@@ -3,6 +3,53 @@
 .page {
     $page: &;
 
+    &-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark-color;
+        color: $white-color;
+        height: rem-calc($banner);
+
+        .banner {
+            overflow: clip;
+            mask-image: linear-gradient(
+                to right,
+                transparent 0%,
+                black 10%,
+                black 90%,
+                transparent 100%
+            );
+
+            @include container;
+
+            &-text {
+                display: flex;
+                gap: rem-calc(12);
+                padding-left: rem-calc(12);
+                animation: scroll-left 20s linear infinite;
+                width: max-content;
+
+                p {
+                    @include fluid-typing(14, 16);
+
+                    a {
+                        @include text-link;
+                    }
+
+                    &::after {
+                        content: "✨";
+                        margin-left: rem-calc(12);
+                    }
+                }
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+
     &-intro {
         @include container($mt: rem-calc(32));
 

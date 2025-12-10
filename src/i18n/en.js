@@ -5,6 +5,10 @@ export default {
         decline: "Decline",
     },
 
+    banner: {
+        text: `ATTENTION! <b>5% discount</b> on your new website, web application or webshop. The offer is valid until December 31, 2025! See our <a href="/prijzen/">prices page</a> for more information..`,
+    },
+
     menu: {
         home: "Home",
         services: "Services",
