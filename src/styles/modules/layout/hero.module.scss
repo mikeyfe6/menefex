@@ -7,14 +7,14 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: rem-calc(60);
+        gap: rem-calc(100);
 
         @include container;
 
         #{$hero}-visual {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             flex-direction: column;
             gap: rem-calc(50);
             width: 100%;
@@ -28,17 +28,22 @@
                 gap: rem-calc(75);
             }
 
-            h1 {
-                margin-top: rem-calc(4);
-
-                @include fluid-typing(21, 28);
-            }
-
             #{$hero}-content {
                 text-align: right;
                 display: flex;
                 flex-direction: column;
+                align-items: flex-end;
                 gap: rem-calc(16);
+                max-width: rem-calc(750);
+                color: $smoke-color;
+                background: linear-gradient(145deg, #787777, $dark-color);
+                border: 3px solid $primary-color;
+                padding: rem-calc(18);
+                border-radius: 10px;
+
+                @include phablet {
+                    padding: rem-calc(28 32);
+                }
 
                 #{$hero}-logo {
                     position: relative;
@@ -51,6 +56,9 @@
                         animation: hero-roll 60s infinite;
                         transform: rotate(180deg);
                         margin-bottom: rem-calc(24);
+                        padding: rem-calc(4);
+                        background-color: $smoke-color;
+                        border-radius: 50%;
 
                         @include smooth-trans;
 
@@ -89,31 +97,68 @@
                     }
                 }
 
-                #{$hero}-slogan {
-                    color: $secondary-color;
-                    background: linear-gradient(
-                        145deg,
-                        $primary-color,
-                        $dark-color
-                    );
-                    border: 3px solid $primary-color;
-                    padding: rem-calc(0 12);
-                    border-radius: 10px;
-                    width: fit-content;
-                    text-align: center;
+                > h1 {
+                    margin-top: rem-calc(4);
 
-                    @include fluid-typing(20, 32);
+                    @include fluid-typing(21, 28);
+                }
 
-                    @include mini {
-                        white-space: nowrap;
-                    }
+                > h2 {
+                    color: $snow-color;
+                    max-width: rem-calc(600);
+                    text-align: right;
 
-                    @include compact {
-                        padding: rem-calc(0 24);
-                    }
+                    @include fluid-typing(19, 26);
 
                     > span {
-                        color: $smoke-color;
+                        color: $secondary-color;
+                    }
+                }
+
+                > div:has(> a) {
+                    display: flex;
+                    gap: rem-calc(16);
+                    margin-top: rem-calc(20);
+
+                    > a {
+                        &:nth-child(1) {
+                            @include primary-button(2);
+                        }
+
+                        &:nth-child(2) {
+                            @include primary-button(1);
+                        }
+                    }
+                }
+            }
+
+            > div > ul {
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                margin-top: rem-calc(16);
+                margin-right: rem-calc(6);
+                gap: rem-calc(8);
+
+                @include phablet {
+                    gap: rem-calc(16);
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: rem-calc(4);
+
+                    svg {
+                        path {
+                            fill: $secondary-color;
+                        }
+                    }
+
+                    span {
+                        font-weight: 500;
+
+                        @include fluid-typing(12, 17);
                     }
                 }
             }

@@ -16,7 +16,7 @@ import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer = () => {
     const { t, i18n, isHydrated } = useTranslation();
-    const { title, email, company, handle } = useSiteMetadata();
+    const { title, email, company, handle, telephone } = useSiteMetadata();
 
     const currentLanguage = i18n.language;
     const lastLoadedLang = useRef(null);
@@ -86,7 +86,7 @@ const Footer = () => {
                                         </span>{" "}
                                         {email}
                                     </a>{" "}
-                                    <a href="tel:0611054318">
+                                    <a href={`tel:+${telephone}`}>
                                         <span className={footerStyles.tel}>
                                             t:
                                         </span>{" "}

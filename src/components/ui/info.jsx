@@ -67,7 +67,7 @@ const Info = () => {
             />
 
             <div className={infoStyles.infoCommunication}>
-                <a href="tel:0611054318" className={infoStyles.infoTel}>
+                <a href={`tel:+${telephone}`} className={infoStyles.infoTel}>
                     <FontAwesomeIcon icon={["fas", "phone"]} /> ·{" "}
                     <span>+31 6 11 05 43 18</span>
                 </a>
