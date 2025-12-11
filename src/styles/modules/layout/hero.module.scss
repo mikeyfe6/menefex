@@ -39,7 +39,7 @@
                 background: linear-gradient(145deg, $grey-color, $dark-color);
                 border: 3px solid $primary-color;
                 padding: rem-calc(18);
-                border-radius: 10px;
+                border-radius: $high-radius;
 
                 @include phablet {
                     padding: rem-calc(28 32);
