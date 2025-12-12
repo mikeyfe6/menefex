@@ -34,16 +34,6 @@
                 flex-direction: column;
                 align-items: flex-end;
                 gap: rem-calc(16);
-                max-width: rem-calc(750);
-                color: $smoke-color;
-                background: linear-gradient(145deg, $grey-color, $dark-color);
-                border: 3px solid $primary-color;
-                padding: rem-calc(18);
-                border-radius: $high-radius;
-
-                @include phablet {
-                    padding: rem-calc(28 32);
-                }
 
                 #{$hero}-logo {
                     position: relative;
@@ -104,10 +94,23 @@
                 }
 
                 > h2 {
-                    color: $snow-color;
                     text-align: right;
+                    max-width: rem-calc(750);
+                    color: $smoke-color;
+                    background: linear-gradient(
+                        145deg,
+                        $grey-color,
+                        $dark-color
+                    );
+                    border: 3px solid $primary-color;
+                    padding: rem-calc(18);
+                    border-radius: $high-radius;
 
                     @include fluid-typing(19, 26);
+
+                    @include phablet {
+                        padding: rem-calc(28 32);
+                    }
 
                     > span {
                         color: $secondary-color;
@@ -121,7 +124,7 @@
 
                     > a {
                         &:nth-child(1) {
-                            @include primary-button(2);
+                            @include primary-button(3);
                         }
 
                         &:nth-child(2) {
@@ -129,35 +132,34 @@
                         }
                     }
                 }
-            }
 
-            > div > ul {
-                display: flex;
-                justify-content: flex-end;
-                flex-wrap: wrap;
-                margin-top: rem-calc(16);
-                margin-right: rem-calc(6);
-                gap: rem-calc(8);
-
-                @include phablet {
-                    gap: rem-calc(16);
-                }
-
-                li {
+                > ul {
                     display: flex;
-                    align-items: center;
-                    gap: rem-calc(4);
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    margin-right: rem-calc(6);
+                    gap: rem-calc(8);
 
-                    svg {
-                        path {
-                            fill: $secondary-color;
-                        }
+                    @include phablet {
+                        gap: rem-calc(16);
                     }
 
-                    span {
-                        font-weight: 500;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: rem-calc(4);
 
-                        @include fluid-typing(12, 17);
+                        svg {
+                            path {
+                                fill: $secondary-color;
+                            }
+                        }
+
+                        span {
+                            font-weight: 500;
+
+                            @include fluid-typing(12, 17);
+                        }
                     }
                 }
             }

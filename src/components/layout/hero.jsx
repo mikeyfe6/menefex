@@ -43,6 +43,31 @@ const Hero = () => {
                                     __html: t("hero.slogan"),
                                 }}
                             />
+
+                            <ul>
+                                <li>
+                                    <FontAwesomeIcon
+                                        icon={["fas", "caret-right"]}
+                                        size="xs"
+                                    />
+                                    <span>{t("hero.experience")}</span>
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon
+                                        icon={["fas", "caret-right"]}
+                                        size="xs"
+                                    />
+                                    <span>{t("hero.affordable")}</span>
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon
+                                        icon={["fas", "caret-right"]}
+                                        size="xs"
+                                    />
+                                    <span>{t("hero.fast")}</span>
+                                </li>
+                            </ul>
+
                             <div>
                                 <Link to="/contact/">
                                     {t("hero.cta.start")}
@@ -52,29 +77,6 @@ const Hero = () => {
                                 </a>
                             </div>
                         </div>
-                        <ul>
-                            <li>
-                                <FontAwesomeIcon
-                                    icon={["fas", "caret-right"]}
-                                    size="xs"
-                                />
-                                <span>{t("hero.experience")}</span>
-                            </li>
-                            <li>
-                                <FontAwesomeIcon
-                                    icon={["fas", "caret-right"]}
-                                    size="xs"
-                                />
-                                <span>{t("hero.affordable")}</span>
-                            </li>
-                            <li>
-                                <FontAwesomeIcon
-                                    icon={["fas", "caret-right"]}
-                                    size="xs"
-                                />
-                                <span>{t("hero.fast")}</span>
-                            </li>
-                        </ul>
                     </div>
 
                     <hr />
