@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
@@ -36,6 +36,14 @@ const PortfolioPage = () => {
         return node ? getImage(node.childImageSharp.gatsbyImageData) : null;
     };
 
+    useEffect(() => {
+        if (!isHydrated) return;
+        const hash = window.location.hash?.slice(1);
+        if (!hash) return;
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, [isHydrated]);
+
     if (!isHydrated) return null;
 
     return (
@@ -50,7 +58,7 @@ const PortfolioPage = () => {
                     {/*
           // * EDUTAIN U PRODOCTIONS !
           */}
-                    <div id="#EUP">
+                    <div id="eup">
                         <a
                             href="https://edutainuproductions.nl"
                             rel="noopener noreferrer"
@@ -111,7 +119,7 @@ const PortfolioPage = () => {
           // * PRIO ZORG !
           */}
 
-                    <div id="#PZ">
+                    <div id="pz">
                         <a
                             href="#!"
                             // href="https://prio-zorg.nl"
@@ -182,7 +190,7 @@ const PortfolioPage = () => {
           // * KEEP IT REAL !
           */}
 
-                    <div id="#KIR">
+                    <div id="kir">
                         <a
                             href="https://keeptreal.nl"
                             rel="noopener noreferrer"
@@ -242,7 +250,7 @@ const PortfolioPage = () => {
           // * AFRODIASPHERE!
           */}
 
-                    <div id="#ADS">
+                    <div id="ads">
                         <a
                             href="https://afrodiasphere.com"
                             rel="noopener noreferrer"
@@ -303,7 +311,7 @@ const PortfolioPage = () => {
           // * ETERNITY PERCUSSION !
           */}
 
-                    <div id="#EP">
+                    <div id="ep">
                         <a
                             href="https://eternitydrum.com"
                             rel="noopener noreferrer"
@@ -363,7 +371,7 @@ const PortfolioPage = () => {
           // * KN-ACDiG!
           */}
 
-                    <div id="#KNA">
+                    <div id="knacdig">
                         <a
                             href="#!"
                             // href="https://kn-acdig.com"
@@ -422,7 +430,7 @@ const PortfolioPage = () => {
           // * DS MELODIES !
           */}
 
-                    <div id="#DSM">
+                    <div id="dsm">
                         <a
                             href="https://dsmelodies.com"
                             rel="noopener noreferrer"
@@ -476,7 +484,7 @@ const PortfolioPage = () => {
           // * BLACK HARMONY !
           */}
 
-                    <div id="#BH">
+                    <div id="bh">
                         <a
                             href="https://blackharmony.nl"
                             rel="noopener noreferrer"

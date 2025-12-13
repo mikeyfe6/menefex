@@ -94,8 +94,19 @@
                     }
                 }
 
-                > a {
-                    @include primary-button(2);
+                #{$projects}-buttons {
+                    display: flex;
+                    gap: rem-calc(16);
+
+                    > a {
+                        &[target="_blank"] {
+                            @include primary-button(2);
+                        }
+
+                        &:not([target="_blank"]) {
+                            @include primary-button(1);
+                        }
+                    }
                 }
             }
 

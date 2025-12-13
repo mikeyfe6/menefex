@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
@@ -19,7 +19,7 @@ const Hero = () => {
 
     const { telephone } = useSiteMetadata();
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             const bg = document.querySelector("[data-hero-bg]");
             if (bg) {

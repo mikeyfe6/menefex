@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import { Link } from "gatsby";
 
@@ -13,7 +13,7 @@ import useTranslation from "../../hooks/use-translation";
 const Services = () => {
     const { t, isHydrated } = useTranslation();
     const [selected, setSelected] = useState("websites");
-    const overlayRef = React.useRef(null);
+    const overlayRef = useRef(null);
 
     const services = {
         websites: {

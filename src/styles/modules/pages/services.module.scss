@@ -155,9 +155,11 @@
                 gap: rem-calc(24);
 
                 > a {
-                    @include primary-button;
+                    &:nth-child(1) {
+                        @include primary-button;
+                    }
 
-                    &:nth-of-type(1) {
+                    &:nth-child(2) {
                         @include primary-button(2);
                     }
                 }

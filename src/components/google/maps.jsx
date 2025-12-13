@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 
 import GoogleMapReact from "google-map-react";
 
@@ -11,9 +11,9 @@ import * as mapsStyles from "../../styles/modules/ui/maps.module.scss";
 // TODO: klaar voor TS'en..
 
 const useScreenSize = () => {
-    const [isMobile, setIsMobile] = React.useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const checkScreenSize = () => {
             setIsMobile(window.innerWidth < 480);
         };

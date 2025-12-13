@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 
 import { Link } from "gatsby";
 
@@ -12,7 +12,7 @@ import * as faqStyles from "../../styles/modules/ui/faq.module.scss";
 
 const Faq = () => {
     const { t, isHydrated } = useTranslation();
-    const [openIndex, setOpenIndex] = React.useState(null);
+    const [openIndex, setOpenIndex] = useState(null);
 
     const faqData = [
         {

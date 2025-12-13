@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useMemo } from "react";
 
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
@@ -79,6 +79,7 @@ const Projects = () => {
             title: "Eternity Percussion",
             description: t("projects.eternitydrum"),
             url: "https://eternitydrum.com",
+            hash: "#ep",
             type: "site",
             stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful", "GraphQl"],
         },
@@ -88,6 +89,7 @@ const Projects = () => {
             title: "Black Harmony",
             description: t("projects.blackharmony"),
             url: "https://blackharmony.nl",
+            hash: "#bh",
             type: "site",
             stack: [
                 "Wordpress",
@@ -103,6 +105,7 @@ const Projects = () => {
             description: t("projects.afrodiasphere"),
             url: "https://afrodiasphere.com",
             type: "webapp",
+            hash: "#ads",
             stack: [
                 "GatsbyJS",
                 "ReactJS",
@@ -118,6 +121,7 @@ const Projects = () => {
             title: "DS Melodies",
             description: t("projects.dsmelodies"),
             url: "https://dsmelodies.com",
+            hash: "#dsm",
             type: "site",
             stack: ["Wordpress", "Custom CSS", "Elementor"],
         },
@@ -127,6 +131,7 @@ const Projects = () => {
             title: "KN-ACDiG",
             description: t("projects.knacdig"),
             // url: "https://kn-acdig.com",
+            hash: "#knacdig",
             type: "site",
             stack: ["Wordpress", "Custom CSS", "Elementor"],
         },
@@ -136,6 +141,7 @@ const Projects = () => {
             title: "Keep It Real",
             description: t("projects.keeptreal"),
             url: "https://keeptreal.nl",
+            hash: "#kir",
             type: "site",
             stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful", "GraphQl"],
         },
@@ -145,6 +151,7 @@ const Projects = () => {
             title: "Prio Zorg",
             description: t("projects.priozorg"),
             // url: "https://prio-zorg.nl",
+            hash: "#pz",
             type: "site",
             stack: ["GatsbyJS", "ReactJS", "Netlify", "Contentful", "GraphQl"],
         },
@@ -154,12 +161,13 @@ const Projects = () => {
             title: "Edutain U Productions",
             description: t("projects.edutainuproductions"),
             url: "https://edutainuproductions.nl",
+            hash: "#eup",
             type: "site",
             stack: ["GatsbyJS", "ReactJS", "Netlify", "GraphQl"],
         },
     ];
 
-    const [activeIndex, setActiveIndex] = React.useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const currentProject = projectData[activeIndex] || projectData[0];
 
@@ -177,7 +185,7 @@ const Projects = () => {
 
     const logoImg = getLogoImage(currentProject.name, currentProject.logo);
 
-    const slideShowImages = React.useMemo(() => {
+    const slideShowImages = useMemo(() => {
         const map = {};
         data.slideShow.edges.forEach(({ node }) => {
             map[node.name] = node;
@@ -216,17 +224,22 @@ const Projects = () => {
                             ))}
                         </ul>
 
-                        {currentProject.url && (
-                            <a
-                                href={currentProject.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {currentProject.type === "webapp"
-                                    ? t("projects.viewWebapp")
-                                    : t("projects.viewWebsite")}
-                            </a>
-                        )}
+                        <div className={projectsStyles.projectsButtons}>
+                            {currentProject.url && (
+                                <a
+                                    href={currentProject.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {currentProject.type === "webapp"
+                                        ? t("projects.viewWebapp")
+                                        : t("projects.viewWebsite")}
+                                </a>
+                            )}
+                            <Link to={`/portfolio/${currentProject.hash}`}>
+                                Details
+                            </Link>
+                        </div>
                     </div>
                     <div className={projectsStyles.projectsSlider}>
                         <Swiper

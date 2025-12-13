@@ -17,6 +17,11 @@
         > div {
             display: flex;
             flex-direction: column;
+            scroll-margin-top: rem-calc(100);
+
+            @include phablet {
+                scroll-margin-top: rem-calc(130);
+            }
 
             &:has(img) {
                 img {

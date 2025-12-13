@@ -333,7 +333,7 @@
     }
 
     > div {
-        &:first-of-type {
+        &:nth-child(1) {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -380,7 +380,7 @@
             }
         }
 
-        &:nth-of-type(2) {
+        &:nth-child(2) {
             outline: 2px solid $snow-color;
             border-radius: $low-radius;
             overflow: hidden;
@@ -417,23 +417,23 @@
     }
 
     &:hover {
-        border-color: $link-color;
+        > div {
+            &:nth-child(1) {
+                h3 {
+                    color: $link-color;
+                }
 
-        &:first-of-type {
-            h3 {
-                color: $link-color;
-            }
-
-            small {
-                span {
-                    color: $white-color;
-                    background-color: $primary-color;
+                small {
+                    span {
+                        color: $white-color;
+                        background-color: $primary-color;
+                    }
                 }
             }
-        }
 
-        > div:nth-of-type(2) {
-            outline-color: $link-color;
+            &:nth-child(2) {
+                outline-color: $link-color;
+            }
         }
     }
 }
