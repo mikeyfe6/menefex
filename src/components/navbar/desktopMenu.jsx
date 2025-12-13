@@ -25,6 +25,7 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
     useEffect(() => {
         const banner = bannerRef?.current;
         const menu = menuRef.current;
+
         if (!banner || !menu) return;
 
         const observer = new window.IntersectionObserver(
@@ -41,7 +42,7 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
         observer.observe(banner);
 
         return () => observer.disconnect();
-    }, [bannerRef]);
+    }, [bannerRef?.current]);
 
     const switchLanguage = (lang) => {
         i18n.changeLanguage(lang);

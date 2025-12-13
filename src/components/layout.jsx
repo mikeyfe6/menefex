@@ -93,6 +93,7 @@ library.add(
 
 import useTranslation from "../hooks/use-translation";
 
+import Banner from "./layout/banner";
 import DesktopMenu from "./navbar/desktopMenu";
 import MobileMenu from "./navbar/mobileMenu";
 import MenuOverlay from "./navbar/menuOverlay";
@@ -107,6 +108,7 @@ import "../styles/layout.scss";
 const Layout = ({ children }) => {
     const { t, isHydrated } = useTranslation();
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+
     const bannerRef = useRef(null);
 
     const drawerToggleClickHandler = () => {
@@ -128,23 +130,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <div className="menefex">
-                <div className="page-banner" ref={bannerRef}>
-                    <div className="banner">
-                        <div className="banner-text">
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t("banner.text"),
-                                }}
-                            />
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t("banner.text"),
-                                }}
-                                aria-hidden="true"
-                            />
-                        </div>
-                    </div>
-                </div>
+                <Banner ref={bannerRef} />
                 <header>
                     <DesktopMenu
                         drawerClickHandler={drawerToggleClickHandler}
