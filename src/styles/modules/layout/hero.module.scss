@@ -196,6 +196,7 @@
 
                 #{$hero}-image {
                     max-width: rem-calc(400);
+                    opacity: 0.95;
 
                     @extend %image;
 
@@ -287,6 +288,7 @@
             );
         }
 
+        // Disable parallax on mobile/tablet devices (background-attachment: fixed issues)
         @media only screen and (device-width <= 1366px) {
             background-attachment: scroll;
         }
