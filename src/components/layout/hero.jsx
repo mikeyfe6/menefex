@@ -23,71 +23,69 @@ const Hero = () => {
         <section className={heroStyles.hero} id="hero">
             <div className={heroStyles.heroContainer}>
                 <div className={heroStyles.heroVisual}>
-                    <div>
-                        <div className={heroStyles.heroContent}>
-                            <div className={heroStyles.heroLogo}>
-                                <img
-                                    src={heroLogo}
-                                    alt="Menefex Logo"
-                                    width={320}
-                                    height={320}
-                                />
-                            </div>
-
-                            <h1>
-                                {t("hero.menefex")}
-                                <span>.</span>{" "}
-                            </h1>
-                            <h2
-                                dangerouslySetInnerHTML={{
-                                    __html: t("hero.slogan"),
-                                }}
+                    <div className={heroStyles.heroContent}>
+                        <div className={heroStyles.heroLogo}>
+                            <img
+                                src={heroLogo}
+                                alt="Menefex Logo"
+                                width={320}
+                                height={320}
                             />
+                        </div>
 
-                            <ul>
-                                <li>
-                                    <FontAwesomeIcon
-                                        icon={["fas", "caret-right"]}
-                                        size="xs"
-                                    />
-                                    <span>{t("hero.experience")}</span>
-                                </li>
-                                <li>
-                                    <FontAwesomeIcon
-                                        icon={["fas", "caret-right"]}
-                                        size="xs"
-                                    />
-                                    <span>{t("hero.affordable")}</span>
-                                </li>
-                                <li>
-                                    <FontAwesomeIcon
-                                        icon={["fas", "caret-right"]}
-                                        size="xs"
-                                    />
-                                    <span>{t("hero.fast")}</span>
-                                </li>
-                            </ul>
+                        <h1>
+                            {t("hero.menefex")}
+                            <span>.</span>{" "}
+                        </h1>
+                        <h2
+                            dangerouslySetInnerHTML={{
+                                __html: t("hero.slogan"),
+                            }}
+                        />
 
-                            <div>
-                                <Link to="/contact/">
-                                    {t("hero.cta.start")}
-                                </Link>
-                                <a href={`tel:+${telephone}`}>
-                                    {t("hero.cta.call")}
-                                </a>
-                            </div>
+                        <ul>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={["fas", "caret-right"]}
+                                    size="xs"
+                                />
+                                <span>{t("hero.experience")}</span>
+                            </li>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={["fas", "caret-right"]}
+                                    size="xs"
+                                />
+                                <span>{t("hero.affordable")}</span>
+                            </li>
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={["fas", "caret-right"]}
+                                    size="xs"
+                                />
+                                <span>{t("hero.fast")}</span>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <Link to="/contact/">{t("hero.cta.start")}</Link>
+                            <a href={`tel:+${telephone}`}>
+                                {t("hero.cta.call")}
+                            </a>
                         </div>
                     </div>
 
                     <hr />
 
-                    <div className={heroStyles.heroImage}>
-                        <StaticImage
-                            src="../../images/ghibli-mf.png"
-                            alt="Michael Fransman"
-                            width={360}
-                            height={540}
-                        />
+                    <div>
+                        <div className={heroStyles.heroImage}>
+                            <StaticImage
+                                src="../../images/mf.jpeg"
+                                alt="Michael Fransman"
+                                width={360}
+                                height={540}
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -127,6 +125,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+            <div className={heroStyles.heroBg} />
         </section>
     );
 };

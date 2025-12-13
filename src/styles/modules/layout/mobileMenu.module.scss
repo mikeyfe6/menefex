@@ -1,11 +1,11 @@
 @use "../../customs" as *;
 
 .mobile-menu {
-    height: 100%;
+    height: calc(100% - #{rem-calc($banner)});
     opacity: 0.95;
     background: linear-gradient(145deg, white, $lightgrey-color);
     position: fixed;
-    top: 0;
+    top: rem-calc($banner);
     left: 0;
     width: 100%;
     z-index: 3;

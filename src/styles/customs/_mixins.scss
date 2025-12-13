@@ -68,13 +68,33 @@
     }
 }
 
-@mixin full-width {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+@mixin full-width($type: "hero") {
+    @if $type == "hero" {
+        width: 100vw;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding: rem-calc(48 16);
+
+        @include phablet {
+            width: fit-content;
+            position: static;
+            left: 0;
+            right: 0;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;
+        }
+    } @else {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
 }
 
 @mixin box-padding($type: "normal") {
