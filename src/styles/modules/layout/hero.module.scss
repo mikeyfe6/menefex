@@ -107,6 +107,7 @@
                     border: 3px solid $primary-color;
                     padding: rem-calc(18);
                     border-radius: $high-radius;
+                    opacity: 0.95;
 
                     @include fluid-typing(19, 26);
 
@@ -265,6 +266,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        will-change: transform;
 
         @include phablet {
             display: none;
@@ -285,7 +287,6 @@
             );
         }
 
-        // Disable parallax on mobile/tablet devices (background-attachment: fixed issues)
         @media only screen and (device-width <= 1366px) {
             background-attachment: scroll;
         }

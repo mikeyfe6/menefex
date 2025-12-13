@@ -19,6 +19,17 @@ const Hero = () => {
 
     const { telephone } = useSiteMetadata();
 
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const bg = document.querySelector("[data-hero-bg]");
+            if (bg) {
+                bg.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <section className={heroStyles.hero} id="hero">
             <div className={heroStyles.heroContainer}>
@@ -125,7 +136,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className={heroStyles.heroBg} />
+            <div className={heroStyles.heroBg} data-hero-bg />
         </section>
     );
 };
