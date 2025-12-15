@@ -189,7 +189,7 @@
     width: $width;
     height: fit-content;
     min-height: rem-calc(44);
-    padding: rem-calc(12 16);
+    padding: rem-calc(10 16);
     border: 3px solid $lightgrey-color;
     font-weight: 600;
     letter-spacing: $high-spacing;
@@ -223,7 +223,7 @@
     @include fluid-typing(13, 15);
 
     @include phablet {
-        padding: rem-calc(14 24);
+        padding: rem-calc(12 24);
     }
 }
 

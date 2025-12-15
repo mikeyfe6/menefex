@@ -451,9 +451,9 @@ export default {
     },
 
     usp: {
-        one: "Eenvoudige en <b>op maat gemaakte weboplossingen</b> die meegroeien",
-        two: "Wij bouwen wat jij voor ogen hebt en wat <b>je klanten willen ervaren</b>",
-        three: "Van idee tot lancering — <b>weboplossingen die converteren</b>",
+        one: "Eenvoudig en <b>op maat gemaakte weboplossingen</b> die meegroeien",
+        two: "Wij bouwen wat jij voor ogen hebt en wat <b>jouw klanten willen ervaren</b>",
+        three: "Van idee tot lancering; <b>weboplossingen die converteren</b>",
         four: "Sneller, slimmer, schaalbaar en <b>klaar voor de toekomst</b>",
         five: "<b>Eén partner</b> voor al je digitale behoeften; design, code & SEO",
     },
