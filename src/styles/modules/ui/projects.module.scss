@@ -39,13 +39,25 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 min-width: rem-calc(360);
-                min-height: rem-calc(400);
+                min-height: rem-calc(430);
                 height: fit-content;
                 border-left: 5px solid $smoke-color;
                 padding-left: rem-calc(36);
 
-                @include mobile {
+                @include compact {
                     min-height: rem-calc(440);
+                }
+
+                @include mobile {
+                    min-height: rem-calc(390);
+                }
+
+                @include phablet {
+                    min-height: rem-calc(370);
+                }
+
+                @include tablet {
+                    min-height: rem-calc(460);
                 }
 
                 #{$projects}-logo {
@@ -77,7 +89,7 @@
                     display: flex;
                     gap: rem-calc(6);
                     flex-wrap: wrap;
-                    margin-bottom: rem-calc(48);
+                    margin-bottom: rem-calc(36);
 
                     > li {
                         background: linear-gradient(
