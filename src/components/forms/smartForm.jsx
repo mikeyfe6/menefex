@@ -25,16 +25,27 @@ const SmartForm = () => {
     useEffect(() => {
         if (typeof window === "undefined" || recaptchaLoaded) return;
 
+        if (window.grecaptcha) {
+            setRecaptchaLoaded(true);
+            return;
+        }
+
+        const existingScript = document.querySelector(
+            `script[src*="google.com/recaptcha/api.js"]`
+        );
+        if (existingScript) {
+            existingScript.addEventListener("load", () => {
+                setRecaptchaLoaded(true);
+            });
+            return;
+        }
+
         const script = document.createElement("script");
         script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
         script.addEventListener("load", () => {
             setRecaptchaLoaded(true);
         });
         document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        };
     }, [recaptchaLoaded]);
 
     const handleSubmit = async (event) => {

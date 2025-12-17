@@ -16,7 +16,7 @@ import * as blogStyles from "../styles/modules/pages/blog.module.scss";
 // TODO: klaar voor TS'en..
 
 const BlogPage = () => {
-    const { i18n, isHydrated } = useTranslation();
+    const { t, i18n, isHydrated } = useTranslation();
     const currentLanguage = i18n.language;
 
     const data = useStaticQuery(graphql`
@@ -82,7 +82,7 @@ const BlogPage = () => {
         <Layout>
             <section className="page-intro">
                 <h1>Blog</h1>
-                <h2>What goes through our mind..</h2>
+                <h2>{t("blog.intro")}</h2>
             </section>
 
             <section id="blog">

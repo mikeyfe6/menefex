@@ -301,8 +301,8 @@ export default {
     prices: {
         title: "Prijzen & Tarieven",
         intro: {
-            one: "Hier zie je een overzicht van onze prijzen. Heb je liever een georiënteerd gesprek?",
-            contactUs: "Neem contact",
+            one: "Hier zie je een overzicht van onze prijzen. Heb je liever een georiënteerd gesprek? Neem",
+            contactUs: "contact",
             two: "met ons op of vraag om een",
             callBack: "terugbelverzoek",
         },
@@ -418,6 +418,7 @@ export default {
     },
 
     blog: {
+        intro: "Onze insights, tips en praktijkervaring over webontwikkeling, SEO en digitale groei..",
         moreOf: "Meer van:",
         feedly: "Lees op Feedly",
         feedburner: "Aboneer via Feedburner",

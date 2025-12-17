@@ -414,6 +414,7 @@ export default {
     },
 
     blog: {
+        intro: "Our insights, tips and practical experience on web development, SEO and digital growth..",
         moreOf: "More of:",
         feedly: "Read on Feedly",
         feedburner: "Subscribe via Feedburner",
