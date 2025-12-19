@@ -190,10 +190,11 @@
     height: fit-content;
     min-height: rem-calc(44);
     padding: rem-calc(10 16);
-    border: 3px solid $lightgrey-color;
     font-weight: 600;
     letter-spacing: $high-spacing;
     gap: rem-calc(8);
+
+    @include border($snow-color);
 
     @if $type == 1 {
         background-color: $primary-color;

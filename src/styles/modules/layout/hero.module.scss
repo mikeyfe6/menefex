@@ -105,10 +105,11 @@
                         rgba($grey-color, 0.825),
                         rgba($dark-color, 0.825)
                     );
-                    border: 3px solid $primary-color;
                     padding: rem-calc(18);
                     border-radius: $high-radius;
                     opacity: 0.95;
+
+                    @include border($primary-color);
 
                     @include fluid-typing(19, 26);
 
