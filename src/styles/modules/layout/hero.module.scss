@@ -23,10 +23,13 @@
 
             @include tablet {
                 flex-direction: row;
-                gap: rem-calc(62.5);
             }
 
             @include laptop {
+                gap: rem-calc(62.5);
+            }
+
+            @include desktop {
                 gap: rem-calc(75);
             }
 
@@ -113,6 +116,14 @@
                         padding: rem-calc(28 32);
                     }
 
+                    @include tablet {
+                        background: linear-gradient(
+                            145deg,
+                            $grey-color,
+                            $dark-color
+                        );
+                    }
+
                     > span {
                         color: $secondary-color;
                     }
@@ -165,31 +176,33 @@
                 }
             }
 
-            > hr {
-                display: none;
-                height: rem-calc(3);
-                width: 100%;
-                border-radius: 5px;
-                background: linear-gradient(
-                    145deg,
-                    $primary-color,
-                    $secondary-color
-                );
+            // > hr {
+            //     display: none;
+            //     width: rem-calc(3);
+            //     height: rem-calc(150);
+            //     border-radius: 5px;
+            //     opacity: 0.25;
+            //     background: linear-gradient(
+            //         145deg,
+            //         $primary-color,
+            //         $secondary-color
+            //     );
 
-                @include tablet {
-                    display: block;
-                    width: rem-calc(3);
-                    height: rem-calc(200);
-                }
-            }
+            //     @include tablet {
+            //         display: block;
+            //     }
+            // }
 
             > div:has([data-gatsby-image-wrapper]) {
                 display: none;
+                background-color: $smoke-color;
+                border-radius: $low-radius;
 
                 @include full-width("hero");
 
                 @include tablet {
                     display: block;
+                    padding: rem-calc(20);
                 }
 
                 #{$hero}-image {

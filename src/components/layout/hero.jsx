@@ -86,7 +86,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <hr />
+                    {/* <hr /> */}
 
                     <div>
                         <div className={heroStyles.heroImage}>
