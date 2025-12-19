@@ -84,11 +84,11 @@
 
                     @include poppins-title;
                     @include underline;
-                    @include fluid-typing(23, 28);
+                    @include fluid-typing(19, 24);
                 }
 
                 h4 {
-                    @include fluid-typing(19, 22);
+                    @include fluid-typing(18, 22);
                 }
 
                 > ol {
