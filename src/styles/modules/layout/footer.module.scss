@@ -214,7 +214,6 @@
                     }
 
                     > div {
-                        width: rem-calc(340);
                         height: rem-calc(130);
                         border-radius: $less-radius;
                         overflow: hidden;
@@ -222,6 +221,7 @@
                         margin-bottom: rem-calc(36);
 
                         @include mobile {
+                            width: rem-calc(340);
                             align-self: flex-start;
                         }
                     }

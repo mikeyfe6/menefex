@@ -16,7 +16,6 @@
             }
 
             #{$faq}-image {
-                min-width: rem-calc(300);
                 max-width: rem-calc(450);
                 width: 100%;
                 margin: 0 auto;
@@ -24,6 +23,7 @@
                 border-radius: $high-radius;
 
                 @include phablet {
+                    min-width: rem-calc(300);
                     margin: unset;
                 }
 

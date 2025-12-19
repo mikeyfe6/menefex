@@ -320,8 +320,7 @@ export default {
             ecommerce: "E-commerce (+ Bank Integratie)",
             search: "Zoekmodule",
             reviews: "Testimonials / Reviews",
-            statistics:
-                "Statistieken; Google Analytics, Tagmanager en Zoekconsole",
+            statistics: "Google Analytics, Tagmanager en Search Console",
             ssl: "SSL Certificaat",
             extra: "extra features: € 45,- per uur",
             oneMonth: "1 maand gratis support",
@@ -826,7 +825,7 @@ export default {
             },
         },
         confirmation:
-            "Ik heb de informatie gecontroleerd en wil graag een vrijblijvende offerte ontvangen",
+            "Ik heb mijn invoer gecontroleerd en wil graag een vrijblijvende offerte ontvangen",
     },
 
     recaptcha: {

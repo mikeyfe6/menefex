@@ -61,14 +61,14 @@ section {
         }
 
         &:last-child {
-            padding-bottom: rem-calc(80);
+            padding-bottom: rem-calc(120);
 
             @include phablet {
-                padding-bottom: rem-calc(120);
+                padding-bottom: rem-calc(180);
             }
 
             @include tablet {
-                padding-bottom: rem-calc(160);
+                padding-bottom: rem-calc(220);
             }
         }
     }
@@ -108,14 +108,14 @@ section {
     }
 
     &#services {
-        margin: rem-calc(48 0);
+        margin: rem-calc(96 0);
 
         @include phablet {
-            margin: rem-calc(60 0);
+            margin: rem-calc(120 0);
         }
 
         @include tablet {
-            margin: rem-calc(96 0);
+            margin: rem-calc(120 0 192);
         }
     }
 }

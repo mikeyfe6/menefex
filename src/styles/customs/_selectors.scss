@@ -5,8 +5,8 @@
 @use "mixins" as *;
 
 %image {
-    --border: 6px; /* border thickness */
-    --size: 60px; /* size of the corner */
+    --border: 5px; /* border thickness */
+    --size: 24px; /* size of the corner */
     --gap: 14px; /* the gap */
     --color: #{$secondary-color}; /* color of the border */
     --color-two: #{$primary-color}; /* color of the border */

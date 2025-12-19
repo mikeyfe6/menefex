@@ -38,7 +38,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                min-width: rem-calc(360);
                 min-height: rem-calc(430);
                 height: fit-content;
                 border-left: 5px solid $smoke-color;
@@ -57,6 +56,7 @@
                 }
 
                 @include tablet {
+                    min-width: rem-calc(360);
                     min-height: rem-calc(460);
                 }
 
@@ -109,9 +109,12 @@
 
                 #{$projects}-buttons {
                     display: flex;
+                    flex-wrap: wrap;
                     gap: rem-calc(16);
 
                     > a {
+                        white-space: nowrap;
+
                         &[target="_blank"] {
                             @include primary-button(2);
                         }

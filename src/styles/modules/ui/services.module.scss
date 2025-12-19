@@ -66,11 +66,11 @@
         > p {
             grid-area: intro;
             margin-bottom: rem-calc(24);
+            max-width: 75ch;
         }
 
         #{$service}-overlay {
             grid-area: overlay;
-            height: 100%;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -215,6 +215,8 @@
             gap: rem-calc(16);
             letter-spacing: $medium-spacing;
             padding: rem-calc(20 24);
+            overflow-wrap: break-word;
+            min-width: 0;
 
             @include mini {
                 min-width: max-content;
@@ -247,6 +249,7 @@
                 display: block;
                 font-weight: 600;
                 overflow-wrap: break-word;
+                min-width: 0;
 
                 @include fluid-typing(16, 17);
             }

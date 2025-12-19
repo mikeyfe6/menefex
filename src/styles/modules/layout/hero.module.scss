@@ -48,8 +48,6 @@
                         animation: hero-roll 60s infinite;
                         transform: rotate(180deg);
                         margin-bottom: rem-calc(24);
-                        padding: rem-calc(4);
-                        background-color: $smoke-color;
                         border-radius: 50%;
 
                         @include smooth-trans;
@@ -201,7 +199,10 @@
                     @extend %image;
 
                     img {
-                        border: 2px solid $primary-color;
+                        border-radius: $high-radius;
+                        filter: opacity(0.9) brightness(1.1);
+
+                        @include border(rgba($lightgrey-color, 0.5), 4px);
                     }
                 }
             }

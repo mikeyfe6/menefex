@@ -46,15 +46,20 @@
                     border-radius: $low-radius;
                     display: flex;
                     flex-direction: column;
-                    gap: rem-calc(4);
+                    gap: rem-calc(6);
 
                     li {
-                        line-height: 1.2;
+                        line-height: rem-calc(25.6);
 
                         > small > button {
                             margin-left: rem-calc(6);
 
                             @include text-link;
+                        }
+
+                        &:not(:last-of-type) {
+                            border-bottom: 1px solid $snow-color;
+                            padding-bottom: rem-calc(8);
                         }
                     }
                 }

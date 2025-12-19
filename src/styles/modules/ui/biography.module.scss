@@ -20,6 +20,8 @@
             }
 
             > p {
+                @include fluid-typing(17, 20);
+
                 a {
                     @include text-link;
                 }
