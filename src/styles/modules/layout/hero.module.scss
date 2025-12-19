@@ -202,7 +202,7 @@
                         border-radius: $high-radius;
                         filter: opacity(0.9) brightness(1.1);
 
-                        @include border(rgba($lightgrey-color, 0.5), 4px);
+                        @include border(rgba($lightgrey-color, 1), 4px);
                     }
                 }
             }
