@@ -21,12 +21,12 @@
             gap: rem-calc(50);
             width: 100%;
 
-            @include phablet {
+            @include tablet {
                 flex-direction: row;
-                gap: rem-calc(37.5);
+                gap: rem-calc(62.5);
             }
 
-            @include tablet {
+            @include laptop {
                 gap: rem-calc(75);
             }
 
@@ -99,8 +99,8 @@
                     color: $smoke-color;
                     background: linear-gradient(
                         145deg,
-                        $grey-color,
-                        $dark-color
+                        rgba($grey-color, 0.825),
+                        rgba($dark-color, 0.825)
                     );
                     border: 3px solid $primary-color;
                     padding: rem-calc(18);
@@ -176,7 +176,7 @@
                     $secondary-color
                 );
 
-                @include phablet {
+                @include tablet {
                     display: block;
                     width: rem-calc(3);
                     height: rem-calc(200);
@@ -188,7 +188,7 @@
 
                 @include full-width("hero");
 
-                @include phablet {
+                @include tablet {
                     display: block;
                 }
 
@@ -197,6 +197,10 @@
                     opacity: 0.95;
 
                     @extend %image;
+
+                    @include phablet {
+                        min-width: rem-calc(350);
+                    }
 
                     img {
                         border-radius: $high-radius;
@@ -271,7 +275,7 @@
         background-size: cover;
         will-change: transform;
 
-        @include phablet {
+        @include tablet {
             display: none;
         }
 
