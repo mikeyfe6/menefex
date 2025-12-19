@@ -1,12 +1,9 @@
 @use "./customs/" as *;
 
 .swiper {
-    &-pagination-bullet-active {
-        background-color: $secondary-color !important;
-    }
-
     &-pagination-bullet {
-        width: rem-calc(10) !important;
-        height: rem-calc(10) !important;
+        &:hover {
+            background-color: $primary-color;
+        }
     }
 }

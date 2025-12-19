@@ -6,6 +6,11 @@
 @use "swiper";
 @use "typography";
 
+:root {
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-theme-color: #{$secondary-color} !important;
+}
+
 html {
     scroll-behavior: smooth;
 }

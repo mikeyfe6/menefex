@@ -214,7 +214,7 @@
             align-items: center;
             gap: rem-calc(16);
             letter-spacing: $medium-spacing;
-            padding: rem-calc(20 24);
+            padding: rem-calc(16 24);
             overflow-wrap: break-word;
             min-width: 0;
 
@@ -249,6 +249,7 @@
                 display: block;
                 font-weight: 600;
                 overflow-wrap: break-word;
+                padding-right: rem-calc(6);
                 min-width: 0;
 
                 @include fluid-typing(16, 17);
@@ -257,13 +258,7 @@
             &:not(.is-active) {
                 &:hover {
                     border-color: $link-color;
-                    background-color: rgba($primary-color, 0.95);
-                    color: $white-color;
-
-                    > div {
-                        background-color: $white-color;
-                        outline-color: $snow-color;
-                    }
+                    background-color: rgba($snow-color, 0.5);
                 }
             }
         }
