@@ -16,7 +16,6 @@
                 flex-direction: column;
                 flex: 1;
                 min-width: rem-calc(300);
-                padding: rem-calc(20);
                 border-radius: $low-radius;
                 outline: 2px solid $primary-color;
                 background: linear-gradient(145deg, $white-color, $smoke-color);
@@ -28,6 +27,14 @@
 
                 > h3 {
                     font-weight: 900;
+                    padding: rem-calc(16 20);
+                    border-bottom: 4px solid $lightgrey-color;
+                    color: $white-color;
+                    background: linear-gradient(
+                        145deg,
+                        rgba($primary-color, 0.825),
+                        rgba($dark-color, 0.825)
+                    );
 
                     @include fluid-typing(19, 22);
 
@@ -36,26 +43,35 @@
                     }
                 }
 
-                > hr {
-                    border: 2px solid $lightgrey-color;
-                    border-radius: 5px;
-                    width: 100%;
-                    margin: rem-calc(16 0);
-
-                    @include phablet {
-                        margin: rem-calc(24 0);
-                    }
-                }
-
-                > p {
-                    margin-bottom: rem-calc(48);
+                > div {
+                    padding: rem-calc(20);
+                    height: 100%;
                     z-index: 1;
-                }
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
 
-                > a {
-                    margin-top: auto;
+                    > hr {
+                        border: 2px solid $lightgrey-color;
+                        border-radius: 5px;
+                        width: 100%;
+                        margin: rem-calc(16 0);
 
-                    @include primary-button($width: 100%);
+                        @include phablet {
+                            margin: rem-calc(24 0);
+                        }
+                    }
+
+                    > p {
+                        margin-bottom: rem-calc(48);
+                        z-index: 1;
+                    }
+
+                    > a {
+                        margin-top: auto;
+
+                        @include primary-button($width: 100%);
+                    }
                 }
 
                 > svg {
@@ -67,6 +83,7 @@
                     transform: translate(-50%, 50%);
                     opacity: 0.375;
                     color: $snow-color;
+                    z-index: 0;
                 }
             }
         }

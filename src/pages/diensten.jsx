@@ -33,14 +33,15 @@ const ServicesPage = () => {
                                 __html: t("services.websites.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.websites.snippet")}</p>
-                        <Link
-                            to="/diensten/website-laten-maken/"
-                            name="service"
-                        >
-                            {t("services.websites.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.websites.snippet")}</p>
+                            <Link
+                                to="/diensten/website-laten-maken/"
+                                name="service"
+                            >
+                                {t("services.websites.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fas", "globe"]} />
                     </div>
                     <div>
@@ -49,14 +50,15 @@ const ServicesPage = () => {
                                 __html: t("services.webapps.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.webapps.snippet")}</p>
-                        <Link
-                            to="/diensten/webapplicatie-laten-maken/"
-                            name="service"
-                        >
-                            {t("services.webapps.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.webapps.snippet")}</p>
+                            <Link
+                                to="/diensten/webapplicatie-laten-maken/"
+                                name="service"
+                            >
+                                {t("services.webapps.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fas", "mobile"]} />
                     </div>
                     <div>
@@ -65,14 +67,15 @@ const ServicesPage = () => {
                                 __html: t("services.webshops.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.webshops.snippet")}</p>
-                        <Link
-                            to="/diensten/webshop-laten-maken/"
-                            name="service"
-                        >
-                            {t("services.webshops.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.webshops.snippet")}</p>
+                            <Link
+                                to="/diensten/webshop-laten-maken/"
+                                name="service"
+                            >
+                                {t("services.webshops.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fas", "shopping-cart"]} />
                     </div>
                     <div>
@@ -81,14 +84,15 @@ const ServicesPage = () => {
                                 __html: t("services.seo.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.seo.snippet")}</p>
-                        <Link
-                            to="/diensten/zoekmachineoptimalisatie/"
-                            name="service"
-                        >
-                            {t("services.seo.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.seo.snippet")}</p>
+                            <Link
+                                to="/diensten/zoekmachineoptimalisatie/"
+                                name="service"
+                            >
+                                {t("services.seo.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fab", "searchengin"]} />
                     </div>
                     <div>
@@ -97,14 +101,15 @@ const ServicesPage = () => {
                                 __html: t("services.maintenance.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.maintenance.snippet")}</p>
-                        <Link
-                            to="/diensten/onderhoud-updates-uitvoeren/"
-                            name="service"
-                        >
-                            {t("services.maintenance.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.maintenance.snippet")}</p>
+                            <Link
+                                to="/diensten/onderhoud-updates-uitvoeren/"
+                                name="service"
+                            >
+                                {t("services.maintenance.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fas", "wrench"]} />
                     </div>
                     <div>
@@ -113,14 +118,15 @@ const ServicesPage = () => {
                                 __html: t("services.optimizations.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.optimizations.snippet")}</p>
-                        <Link
-                            to="/diensten/optimalisaties-laten-uitvoeren/"
-                            name="service"
-                        >
-                            {t("services.optimizations.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.optimizations.snippet")}</p>
+                            <Link
+                                to="/diensten/optimalisaties-laten-uitvoeren/"
+                                name="service"
+                            >
+                                {t("services.optimizations.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fas", "rocket"]} />
                     </div>
                     <div>
@@ -129,14 +135,15 @@ const ServicesPage = () => {
                                 __html: t("services.email.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.email.snippet")}</p>
-                        <Link
-                            to="/diensten/email-template-laten-maken/"
-                            name="service"
-                        >
-                            {t("services.email.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.email.snippet")}</p>
+                            <Link
+                                to="/diensten/email-template-laten-maken/"
+                                name="service"
+                            >
+                                {t("services.email.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon
                             icon={["fas", "envelope-circle-check"]}
                         />
@@ -147,14 +154,15 @@ const ServicesPage = () => {
                                 __html: t("services.analyse.caption"),
                             }}
                         />
-                        <hr />
-                        <p>{t("services.analyse.snippet")}</p>
-                        <Link
-                            to="/diensten/analyse-laten-uitvoeren/"
-                            name="service"
-                        >
-                            {t("services.analyse.cta")}
-                        </Link>
+                        <div>
+                            <p>{t("services.analyse.snippet")}</p>
+                            <Link
+                                to="/diensten/analyse-laten-uitvoeren/"
+                                name="service"
+                            >
+                                {t("services.analyse.cta")}
+                            </Link>
+                        </div>
                         <FontAwesomeIcon icon={["fas", "eye"]} />
                     </div>
                 </div>

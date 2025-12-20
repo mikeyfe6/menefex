@@ -20,6 +20,13 @@ const About = () => {
                 }}
             />
 
+            <h3>{t("about.howWeCameAbout.title")}</h3>
+            <p
+                dangerouslySetInnerHTML={{
+                    __html: t("about.howWeCameAbout.text"),
+                }}
+            />
+
             <h3>{t("about.whatWeStandFor.title")}</h3>
             <p
                 dangerouslySetInnerHTML={{

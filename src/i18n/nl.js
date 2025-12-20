@@ -360,23 +360,27 @@ export default {
         title: "Over Menefex",
         whoAreWe: {
             title: "Wie zijn wij?",
-            text: '<p><b>Menefex</b> is een jong en modern webmediabureau, opgericht door <a href="https://www.linkedin.com/in/michaelfransman/" rel="noopener noreferrer" target="_blank">Michael Fransman</a>, die zich inzet en gespecialiseerd is in het uitdenken en ontwikkelen van websites en webapplicaties. Wij zorgen dat de ambities van de klant en het eindproduct tot één komen.</p>',
+            text: '<p><b>Menefex</b> is een professioneel webbureau, opgericht door <a href="https://www.linkedin.com/in/michaelfransman/" rel="noopener noreferrer" target="_blank">Michael Fransman</a>, die gespecialiseerd is in het ontwikkelen van websites, webapplicaties en webshops. Wij zorgen dat de ambities van onze klanten en het eindproduct tot één geheel komen.</p>',
+        },
+        howWeCameAbout: {
+            title: "Hoe zijn wij ontstaan?",
+            text: "<b>Menefex</b> is ontstaan vanuit mijn persoonlijke ambities en interesses in de webwereld. Ik heb jarenlang als busschauffeur gewerkt — wat ik één van de leukste banen ter wereld vind — maar merkte dat ik steeds meer behoefte kreeg aan uitdaging, creativiteit en het bouwen van iets met blijvende waarde. <br/><br/> Wat begon als een nevenactiviteit, groeide al snel uit tot een serieuze passie. Tijdens het werken aan verschillende projecten zag ik veel websites voorbij komen waarvan ik dacht: 'dit kan beter!'. Niet alleen visueel, maar vooral op het gebied van functionaliteit, gebruiksvriendelijkheid en toekomstbestendigheid. <br/><br/> Ik geloof sterk in de kracht van robuuste weboplossingen als verlengstuk van een bedrijf of nevenactiviteit. De mogelijkheden die een goed digitaal product kan bieden — van efficiëntie tot groei — zijn enorm. Vanuit die overtuiging heb ik de stap gezet om <b>Menefex</b> op te richten.",
         },
         whatWeStandFor: {
             title: "Waar staan wij voor?",
-            text: "<b>Menefex</b> staat voor efficiëntie, innovatie, gebruiksvriendelijkheid en misschien wel twee van onze belangrijkste aspecten; de functionaliteit en de moderne design. Wij bouwen onze softwareproducten op maatwerk en zorgen dat de klant zich zoveel mogelijk kan relativeren met het eindproduct. Wij zijn van mening dat de functionaliteit in balans moet zijn met de visuele aspecten van de website / webapplicatie voor een ultieme ervaring.",
+            text: "<b>Menefex</b> staat voor efficiëntie, innovatie, gebruiksvriendelijkheid en misschien wel twee van onze belangrijkste aspecten; de functionaliteit en de moderne design. Wij bouwen onze softwareproducten op maatwerk en zorgen dat de klant zich zoveel mogelijk kan relativeren met het eindproduct. Wij zijn van mening dat de functionaliteit in balans moet zijn met de visuele aspecten voor een ultieme ervaring.",
         },
         unique: {
             title: "Wat maakt Menefex zo uniek?",
-            text: "<b>Menefex</b> biedt de nodige hulp, service en communicatie vóór, tijdens en ná het bouwproces van jouw product en heeft deze op een hoog plateau staan. Wij denken sterk mee met de klant. Wij werken met de nieuwste en meest stabiele software, zodat jouw product veilig en duurzaam blijft. Bij Menefex respecteren we essentiële details en is niks onmogelijk. Er wordt bij het bouwen tot over de laatste pixel nagedacht.",
+            text: "<b>Menefex</b> biedt de nodige hulp, service en communicatie vóór, tijdens en ná het bouwproces van jouw product en stelt dit op een hoog niveau centraal. Wij denken actief mee met onze klanten. Wij werken met de nieuwste en meest stabiele software, zodat jouw product veilig,  duurzaam en toekomstbestendig blijft. Bij Menefex worden essentiële details gerespecteerd en is niets onmogelijk; er wordt tot over de laatste pixel nagedacht.",
         },
         goals: {
             title: "Onze doelen, streven en motivatie?",
-            text: "<b>Menefex</b> heeft als drijfveren de interesse in de diversiteit van software en de oneindige mogelijkheden die technologie deze tijd biedt. Bovendien motiveert het ons als we onze tevreden klanten een digitale brug kunnen bieden en hun ambities verpakt een digitaal product wereldwijd op de kaart kunnen zetten door middel van een website of webapplicatie.",
+            text: "<b>Menefex</b> heeft als drijfveren de interesse in de diversiteit van software en de oneindige mogelijkheden die technologie deze tijd biedt. Bovendien motiveert het ons als we onze tevreden klanten een digitale brug kunnen bieden en hun ambities verpakt een digitaal product wereldwijd op de kaart kunnen zetten door middel van een website, webapplicatie of webshop.",
         },
 
         spotify:
-            "<b>WE ❤︎ MUSIC !</b> Daarom delen we ons <u>work, chill & vibe</u> - playlist. Geniet ervan en blijf ons volgen voor updates.",
+            "<b>WE ❤︎ MUSIC !</b> Daarom delen we ons <u>work, chill & vibe</u> - playlist. Geniet ervan en blijf ons volgen op Spotify voor updates!",
     },
 
     contact: {
