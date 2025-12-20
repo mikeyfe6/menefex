@@ -203,7 +203,7 @@
 
                 @include tablet {
                     display: block;
-                    padding: rem-calc(16);
+                    padding: rem-calc(6);
                 }
 
                 #{$hero}-image {
@@ -213,7 +213,7 @@
                     @extend %image;
 
                     @include phablet {
-                        min-width: rem-calc(350);
+                        min-width: rem-calc(325);
                     }
 
                     img {
