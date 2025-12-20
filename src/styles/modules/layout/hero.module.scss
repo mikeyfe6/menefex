@@ -230,7 +230,11 @@
             display: flex;
             flex-direction: column;
             gap: rem-calc(75);
-            margin-top: rem-calc(48);
+            margin-top: rem-calc(24);
+
+            @include mobile {
+                margin-top: rem-calc(48);
+            }
 
             #{$hero}-scroll {
                 position: relative;
