@@ -5,11 +5,11 @@
 @use "mixins" as *;
 
 %image {
-    --border: 5px; /* border thickness */
+    --border: 4px; /* border thickness */
     --size: 24px; /* size of the corner */
     --gap: 14px; /* the gap */
-    --color: #{$secondary-color}; /* color of the border */
-    --color-two: #{$primary-color}; /* color of the border */
+    --color: #{rgba($secondary-color, 0.9)}; /* color of the border */
+    --color-two: #{rgba($primary-color, 0.9)}; /* color of the border */
 
     padding: calc(var(--border) + var(--gap));
     background-image: conic-gradient(

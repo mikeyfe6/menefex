@@ -203,11 +203,11 @@
 
                 @include tablet {
                     display: block;
-                    padding: rem-calc(20);
+                    padding: rem-calc(16);
                 }
 
                 #{$hero}-image {
-                    max-width: rem-calc(400);
+                    max-width: rem-calc(375);
                     opacity: 0.95;
 
                     @extend %image;
@@ -217,10 +217,10 @@
                     }
 
                     img {
-                        border-radius: $high-radius;
+                        border-radius: $medium-radius;
                         filter: opacity(0.9) brightness(1.1);
 
-                        @include border(rgba($lightgrey-color, 1), 4px);
+                        @include border($smoke-color, 7px);
                     }
                 }
             }
