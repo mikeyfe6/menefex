@@ -360,6 +360,10 @@ export default {
             title: "Who are we?",
             text: "<p><b>Menefex</b> is a young and modern web media company, founded by <a href='https://www.linkedin.com/in/michaelfransman/' rel='noopener noreferrer' target='_blank'>Michael Fransman</a>, who is committed and specialized in designing and developing websites and web applications. We ensure that the customer's ambitions and the end product come together.</p>",
         },
+        howWeCameAbout: {
+            title: "How did we come about?",
+            text: "<p><b>Menefex</b> originated from my personal ambitions and interests in the web world. I worked for many years as a bus driver — which I consider one of the most enjoyable jobs in the world — but I noticed that I increasingly needed more challenge, creativity, and the opportunity to build something with lasting value.</p><p>What started as a side activity quickly grew into a serious passion. While working on various projects, I saw many websites passing by that I thought: 'this can be better!'. Not only visually, but especially in terms of functionality, user-friendliness, and future-proofing.</p><p>I strongly believe in the power of robust web solutions as an extension of a company or side activity. The possibilities that a good digital product can offer — from efficiency to growth — are enormous. From that conviction, I took the step to establish <b>Menefex</b>.</p>",
+        },
         whatWeStandFor: {
             title: "What do we stand for?",
             text: "<b>Menefex</b> stands for efficiency, innovation, user-friendliness and perhaps two of our most important aspects; the functionality and the modern design. We build our software products on a custom basis and ensure that the customer can relate to the end product as much as possible. We believe that functionality should be balanced with the visual aspects of the website/web application for an ultimate experience.",

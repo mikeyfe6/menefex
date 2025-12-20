@@ -17,6 +17,10 @@
         a {
             @include text-link;
         }
+
+        div p:not(:last-child) {
+            margin-bottom: rem-calc(16);
+        }
     }
 
     &-spotify {

@@ -21,7 +21,7 @@ const About = () => {
             />
 
             <h3>{t("about.howWeCameAbout.title")}</h3>
-            <p
+            <div
                 dangerouslySetInnerHTML={{
                     __html: t("about.howWeCameAbout.text"),
                 }}
