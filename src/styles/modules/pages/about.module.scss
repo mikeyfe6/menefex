@@ -3,7 +3,7 @@
 .about {
     &-content {
         h3 {
-            margin-bottom: rem-calc(4);
+            margin-bottom: rem-calc(8);
 
             @include poppins-title;
             @include underline;
