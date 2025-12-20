@@ -91,12 +91,7 @@ const Projects = () => {
             url: "https://blackharmony.nl",
             hash: "#bh",
             type: "site",
-            stack: [
-                "Wordpress",
-                "Advanced Custom Field Types",
-                "Custom CSS",
-                "Elementor",
-            ],
+            stack: ["Wordpress", "Custom CSS", "Elementor"],
         },
         {
             logo: "ads-logo",

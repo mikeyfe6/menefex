@@ -511,7 +511,6 @@ const PortfolioPage = () => {
                                 <span>Tools:</span>
                                 <ul>
                                     <li>Wordpress</li>
-                                    <li>Advanced Custom Field Types</li>
                                     <li>Custom CSS</li>
                                     <li>Elementor</li>
                                 </ul>
