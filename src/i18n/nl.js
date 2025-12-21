@@ -368,7 +368,7 @@ export default {
         },
         whatWeStandFor: {
             title: "Waar staan wij voor?",
-            text: "<b>Menefex</b> staat voor efficiëntie, innovatie, gebruiksvriendelijkheid en misschien wel twee van onze belangrijkste aspecten; de functionaliteit en de moderne design. Wij bouwen onze softwareproducten op maatwerk en zorgen dat de klant zich zoveel mogelijk kan relativeren met het eindproduct. Wij zijn van mening dat de functionaliteit in balans moet zijn met de visuele aspecten voor een ultieme ervaring.",
+            text: "<b>Menefex</b> staat voor efficiëntie, innovatie, gebruiksvriendelijkheid en misschien wel twee van onze belangrijkste aspecten; de functionaliteit en de moderne design. Wij bouwen softwareproducten op maat en zorgen ervoor dat onze klanten zich zoveel mogelijk kunnen identificeren met het eindproduct. Wij zijn van mening dat de functionaliteit in balans moet zijn met de visuele aspecten voor een ultieme ervaring.",
         },
         unique: {
             title: "Wat maakt Menefex zo uniek?",
