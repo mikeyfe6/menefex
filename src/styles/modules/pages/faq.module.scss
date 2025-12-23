@@ -19,10 +19,6 @@
                     padding-bottom: rem-calc(8);
                     border-bottom: 2px solid rgba($lemon-color, 0.75);
 
-                    > h2 {
-                        @extend %as-h4;
-                    }
-
                     &-items {
                         display: flex;
                         flex-direction: column;
@@ -35,10 +31,10 @@
                 #{$faq}-question {
                     padding-bottom: rem-calc(12);
 
-                    > h3 {
+                    > h4 {
                         font-family: $poppins-font;
                         font-weight: 600;
-                        letter-spacing: $medium-spacing;
+                        letter-spacing: $low-spacing;
                         opacity: 0.75;
 
                         @include smooth-trans;
@@ -48,13 +44,13 @@
                     }
 
                     &[aria-expanded="true"] {
-                        > h3 {
+                        > h4 {
                             opacity: 1;
                         }
                     }
 
                     &:hover {
-                        > h3 {
+                        > h4 {
                             text-decoration-color: $link-color;
                             opacity: 1;
                         }

@@ -70,7 +70,7 @@
         h2 {
             font-weight: 500;
             font-family: $poppins-font;
-            letter-spacing: $low-spacing;
+            letter-spacing: $less-spacing;
             max-width: 70ch;
 
             @include fluid-typing(19, 21);
@@ -98,7 +98,8 @@
             @include text-link;
         }
 
-        &.success {
+        &.success,
+        &.notfound {
             @include container($mt: rem-calc(32), $mb: rem-calc(64));
         }
     }

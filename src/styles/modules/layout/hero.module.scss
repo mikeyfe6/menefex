@@ -108,6 +108,7 @@
                     padding: rem-calc(18);
                     border-radius: $high-radius;
                     opacity: 0.95;
+                    letter-spacing: $extreme-spacing;
 
                     @include border($primary-color);
 

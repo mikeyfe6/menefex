@@ -16,7 +16,7 @@ const NotFound = () => {
 
     return (
         <Layout>
-            <section className="page-intro">
+            <section className="page-intro notfound">
                 <h1>
                     {t("notfound.sigh")}
                     <span>..</span> {t("notfound.page")}

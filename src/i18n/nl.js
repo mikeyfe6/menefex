@@ -250,7 +250,7 @@ export default {
     },
 
     projects: {
-        title: "Recente Projecten",
+        title: "Recente projecten",
         viewWebsite: "Bekijk website",
         viewWebapp: "Bekijk webapp",
         eternitydrum:

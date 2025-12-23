@@ -224,9 +224,9 @@ const FaqPage = () => {
                                 id={`category-${categoryKey}`}
                             >
                                 <div className={faqStyles.faqCategory}>
-                                    <h2>
+                                    <h3>
                                         {t(`faq.categories.${categoryKey}`)}
-                                    </h2>
+                                    </h3>
                                 </div>
 
                                 <div className={faqStyles.faqCategoryItems}>
@@ -251,9 +251,9 @@ const FaqPage = () => {
                                                         faqStyles.faqQuestion
                                                     }
                                                 >
-                                                    <h3 className="faq-tracking">
+                                                    <h4 className="faq-tracking">
                                                         {item.question}
-                                                    </h3>
+                                                    </h4>
                                                 </button>
                                                 <div
                                                     className={`${

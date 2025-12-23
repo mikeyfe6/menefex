@@ -154,7 +154,6 @@
 
 h1 {
     font-weight: 600;
-    letter-spacing: $high-spacing;
 
     @extend %as-h1;
 
@@ -164,6 +163,8 @@ h1 {
 }
 
 h2 {
+    letter-spacing: $extreme-spacing;
+
     @extend %as-h2;
 }
 
@@ -183,9 +184,13 @@ h6 {
     @extend %as-h6;
 }
 
+h1,
+h3 {
+    letter-spacing: $high-spacing;
+}
+
 h2,
 h3 {
-    letter-spacing: $extreme-spacing;
     font-family: $wdxl-font;
     font-weight: 900;
 }

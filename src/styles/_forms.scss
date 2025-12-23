@@ -227,6 +227,6 @@ form {
     > button {
         margin: rem-calc(48 0 0) auto;
 
-        @include primary-button;
+        @include primary-button($flexed: true);
     }
 }

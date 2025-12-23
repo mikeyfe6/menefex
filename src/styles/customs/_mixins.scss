@@ -22,7 +22,7 @@
     margin-bottom: $space;
     color: $color;
 
-    @extend %as-h1;
+    @include fluid-typing(32, 40);
 }
 
 @mixin poppins-title {
@@ -179,10 +179,7 @@
 
 // BUTTONS --------------------------------------------
 
-@mixin primary-button($type: 1, $width: fit-content) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin primary-button($type: 1, $width: fit-content, $flexed: false) {
     text-align: center;
     text-transform: uppercase;
     border-radius: $low-radius;
@@ -195,6 +192,13 @@
     gap: rem-calc(8);
 
     @include border($snow-color);
+    @include ellipsis;
+
+    @if $flexed {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     @if $type == 1 {
         background-color: $primary-color;

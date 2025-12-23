@@ -449,9 +449,9 @@
         #{$post}-button {
             > a {
                 white-space: nowrap;
-                margin-left: auto;
+                justify-self: end;
 
-                @include primary-button;
+                @include primary-button($flexed: true);
             }
         }
 
