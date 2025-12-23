@@ -274,8 +274,8 @@ export default {
     },
 
     portfolio: {
-        title: "Recente Projecten",
-        intro: "We laten graag zien waar we goed in zijn. Ontdek een selectie van onze recente projecten..",
+        title: "Recente projecten",
+        intro: "We laten graag zien waar we goed in zijn! Ontdek een selectie van onze recente projecten..",
         goToProject: "Ga naar project",
         goToRepo: "Github Repo",
         noRepo: "Niet op Github",
