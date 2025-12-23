@@ -30,7 +30,9 @@
                 }
 
                 > h3 {
-                    @include underline($thickness: 3px, $color: $white-color);
+                    @include underline($thickness: 4px, $color: $white-color);
+
+                    @include fluid-typing(20, 30);
                 }
 
                 > p {

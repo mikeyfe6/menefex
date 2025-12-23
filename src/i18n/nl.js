@@ -67,13 +67,13 @@ export default {
     },
 
     actual: {
-        title: "Actueel",
+        title: "Blog",
         readMore: "Lees meer...",
         seeAll: "Zie alle artikelen",
     },
 
     services: {
-        title: "Onze Diensten",
+        title: "Onze diensten",
         subtitle:
             "Bij Menefex bieden we een compleet pakket aan digitale diensten om jouw online aanwezigheid te versterken. Of je nu op zoek bent naar een op maat gemaakte website, krachtige webapplicatie, converterende webshop, betere vindbaarheid in Google, technische ondersteuning of performance-optimalisatie. Wij zorgen dat jouw digitale platform werkt, scoort én groeit.",
         intro: "Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie.",
@@ -709,7 +709,7 @@ export default {
     },
 
     smartform: {
-        title: "Benieuwd wat wij kunnen betekenen!",
+        title: "Benieuwd wat wij kunnen betekenen?",
         subtitle:
             "Vertel ons kort wat je zoekt door een aantal vragen te beantwoorden, dan helpen we je snel verder.",
         restart: "Opnieuw beginnen",
