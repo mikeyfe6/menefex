@@ -380,7 +380,7 @@ export default {
         },
 
         spotify:
-            "<b>WE ❤︎ MUSIC !</b> Daarom delen we ons <u>work, chill & vibe</u> - playlist. Geniet ervan en blijf ons volgen op Spotify voor updates!",
+            "<b>WE ❤︎ MUSIC !</b> Daarom delen we ons <u>work, chill & vibe</u> - playlist. Geniet ervan en blijf ons volgen op <b>Spotify</b> voor updates!",
     },
 
     contact: {
