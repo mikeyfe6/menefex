@@ -189,7 +189,6 @@
     padding: rem-calc(10 16);
     font-weight: 600;
     letter-spacing: $high-spacing;
-    gap: rem-calc(8);
 
     @include border($snow-color);
     @include ellipsis;
@@ -198,6 +197,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: rem-calc(8);
+    } @else {
+        display: inline-block;
     }
 
     @if $type == 1 {

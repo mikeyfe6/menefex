@@ -448,7 +448,6 @@
 
         #{$post}-button {
             > a {
-                white-space: nowrap;
                 justify-self: end;
 
                 @include primary-button($flexed: true);

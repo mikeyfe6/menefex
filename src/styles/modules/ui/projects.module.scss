@@ -113,8 +113,6 @@
                     gap: rem-calc(16);
 
                     > a {
-                        white-space: nowrap;
-
                         &[target="_blank"] {
                             @include primary-button(2);
                         }
