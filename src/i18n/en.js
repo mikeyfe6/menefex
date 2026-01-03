@@ -6,7 +6,7 @@ export default {
     },
 
     banner: {
-        text: `HAPPY NEW YEAR! 🎇 To start the year off right; <b>5% discount</b> on your new website, web application or webshop. The offer is valid until December 31, 2025! See our <a href="/prijzen/">prices page</a> for more information..`,
+        text: `HAPPY NEW YEAR! To start the year off right; <b>5% discount</b> on your new website, web application or webshop. The offer is valid until December 31, 2025! See our <a href="/prijzen/">prices page</a> for more information..`,
     },
 
     menu: {
