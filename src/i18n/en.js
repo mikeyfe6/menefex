@@ -6,7 +6,7 @@ export default {
     },
 
     banner: {
-        text: `ATTENTION! <b>5% discount</b> on your new website, web application or webshop. The offer is valid until December 31, 2025! See our <a href="/prijzen/">prices page</a> for more information..`,
+        text: `HAPPY NEW YEAR! 🎇 To start the year off right; <b>5% discount</b> on your new website, web application or webshop. The offer is valid until December 31, 2025! See our <a href="/prijzen/">prices page</a> for more information..`,
     },
 
     menu: {
@@ -251,22 +251,14 @@ export default {
         title: "Recent Projects",
         viewWebsite: "View website",
         viewWebapp: "View webapp",
-        eternitydrum:
-            "Cultural institution supporting youth through music education and talent development",
-        blackharmony:
-            "Vocal group focused on traditional Afro-Surinamese music",
-        afrodiasphere:
-            "Own initiative for connection and information sharing within the diaspora community",
-        dsmelodies:
-            "Professional steeldrum artist Derek Simpey from Amsterdam Southeast",
-        knacdig:
-            "Foundation for identity strengthening and visibility of the Afro-Caribbean diaspora",
-        keeptreal:
-            "Program led by Wenner Regales offering perspective to young people",
-        priozorg:
-            "Dynamic care services with coaching and mentoring for young adults",
-        edutainuproductions:
-            "Freelance company by Otmar Watson for impactful cultural projects",
+        eternitydrum: "Cultural institution supporting youth through music education and talent development",
+        blackharmony: "Vocal group focused on traditional Afro-Surinamese music",
+        afrodiasphere: "Own initiative for connection and information sharing within the diaspora community",
+        dsmelodies: "Professional steeldrum artist Derek Simpey from Amsterdam Southeast",
+        knacdig: "Foundation for identity strengthening and visibility of the Afro-Caribbean diaspora",
+        keeptreal: "Program led by Wenner Regales offering perspective to young people",
+        priozorg: "Dynamic care services with coaching and mentoring for young adults",
+        edutainuproductions: "Freelance company by Otmar Watson for impactful cultural projects",
         seeAll: "See all projects",
     },
 
@@ -317,8 +309,7 @@ export default {
             ecommerce: "E-commerce (+ Bank Integration)",
             search: "Search module",
             reviews: "Testimonials / Reviews",
-            statistics:
-                "Statistics; Google Analytics, Tag Manager and Search Console",
+            statistics: "Statistics; Google Analytics, Tag Manager and Search Console",
             ssl: "SSL Certificate",
             extra: "extra features: €45 per hour",
             oneMonth: "1 month free support",
@@ -327,14 +318,10 @@ export default {
             twelveMonths: "12 months free support",
             button: "Request a quote",
             cta: {
-                budgetPlan:
-                    "Hi Michael, I want to request a quote for the Budget Plan...",
-                starterPlan:
-                    "Hi Michael, I want to request a quote for the Starter Plan...",
-                establishedPlan:
-                    "Hi Michael, I want to request a quote for the Established Plan...",
-                businessPlan:
-                    "Hi Michael, I want to request a quote for the Business Plan...",
+                budgetPlan: "Hi Michael, I want to request a quote for the Budget Plan...",
+                starterPlan: "Hi Michael, I want to request a quote for the Starter Plan...",
+                establishedPlan: "Hi Michael, I want to request a quote for the Established Plan...",
+                businessPlan: "Hi Michael, I want to request a quote for the Business Plan...",
             },
         },
         notes: {
@@ -412,8 +399,7 @@ export default {
             closed: "closed",
             details:
                 "<u>Chamber of Commerce-number</u><br /><b>76045315</b><br /><br /><u>VAT-number</u><br /><b>NL 003040579B17</b><br /><br /><u>BANK-number</u><br /><b>NL10 BUNQ 2038 8619 94</b>",
-            socials:
-                "<u><b>Follow</b><span><b> / </b></span><b>support</b> our socials</u>",
+            socials: "<u><b>Follow</b><span><b> / </b></span><b>support</b> our socials</u>",
         },
     },
 
@@ -478,8 +464,7 @@ export default {
 
         websites: {
             itemOne: {
-                question:
-                    "What is the difference between a template website and a custom website?",
+                question: "What is the difference between a template website and a custom website?",
                 answer: "A template website is based on existing designs and functionalities, while a custom website is fully designed and built to your specific needs and branding. At Menefex, we work exclusively with custom solutions for a unique online presence.",
             },
             itemTwo: {
@@ -487,8 +472,7 @@ export default {
                 answer: "We start with an extensive intake interview where we discuss your needs, target audience, and brand identity. Based on this, we create designs that perfectly fit your business and ensure a strong visual identity.",
             },
             itemThree: {
-                question:
-                    "Can my website be expanded with additional features later?",
+                question: "Can my website be expanded with additional features later?",
                 answer: "Absolutely! We build our websites flexible and scalable, so they can grow with your business. Whether you want to add a webshop, blog, booking system, or other functionalities - everything is possible.",
             },
             itemFour: {
@@ -496,21 +480,18 @@ export default {
                 answer: "We optimize every website for fast loading times by using modern techniques such as code optimization, image compression, efficient hosting, and CDNs. Speed is crucial for both user experience and SEO.",
             },
             itemFive: {
-                question:
-                    "What happens if I want to make changes after delivery?",
+                question: "What happens if I want to make changes after delivery?",
                 answer: "You'll get a user-friendly CMS that allows you to easily update content yourself. For technical changes or extensions, we can handle that for you at our hourly rate of €45 per hour.",
             },
         },
 
         webapps: {
             itemOne: {
-                question:
-                    "What exactly is a web application and how does it differ from a regular website?",
+                question: "What exactly is a web application and how does it differ from a regular website?",
                 answer: "A web application is interactive and offers specific functionalities such as data input, calculations, processes, and user accounts. A website mainly displays information, while a web app is a tool that allows users to perform tasks.",
             },
             itemTwo: {
-                question:
-                    "How do you determine which functionalities my business needs?",
+                question: "How do you determine which functionalities my business needs?",
                 answer: "We analyze your business processes and workflows during an extensive consultation. We identify bottlenecks and automation opportunities, and design a web app that optimizes your processes and saves time.",
             },
             itemThree: {
@@ -529,23 +510,19 @@ export default {
 
         webshops: {
             itemOne: {
-                question:
-                    "Do you work with WooCommerce, Shopify, or custom solutions?",
+                question: "Do you work with WooCommerce, Shopify, or custom solutions?",
                 answer: "We preferably work with custom solutions that are fully tailored to your needs. For faster implementation, we can also use WooCommerce or other platforms, depending on your preferences and budget.",
             },
             itemTwo: {
-                question:
-                    "Can my webshop support multiple payment methods (iDEAL, PayPal, Klarna, etc.)?",
+                question: "Can my webshop support multiple payment methods (iDEAL, PayPal, Klarna, etc.)?",
                 answer: "Yes, we integrate all popular payment methods such as iDEAL, PayPal, Klarna, credit cards, and bank transfers. We ensure a smooth and secure checkout experience for your customers.",
             },
             itemThree: {
-                question:
-                    "How do you ensure my webshop is easily found on Google?",
+                question: "How do you ensure my webshop is easily found on Google?",
                 answer: "We build every webshop SEO-friendly with optimized product pages, category structure, fast loading times, and technical SEO. We can also provide ongoing SEO optimization for better rankings.",
             },
             itemFour: {
-                question:
-                    "Is it possible to connect inventory management and invoicing to the webshop?",
+                question: "Is it possible to connect inventory management and invoicing to the webshop?",
                 answer: "Absolutely! We can create connections with popular accounting and inventory systems, or develop our own inventory and invoicing system that seamlessly integrates with your webshop.",
             },
             itemFive: {
@@ -556,18 +533,15 @@ export default {
 
         seo: {
             itemOne: {
-                question:
-                    "How long does it take before I see results with SEO?",
+                question: "How long does it take before I see results with SEO?",
                 answer: "First results are often visible within 2-3 months, but significant improvement in rankings usually takes 4-6 months. SEO is a long-term strategy that requires continuous attention and patience.",
             },
             itemTwo: {
-                question:
-                    "Do you work with one-time SEO or also ongoing optimization?",
+                question: "Do you work with one-time SEO or also ongoing optimization?",
                 answer: "We offer both options. One-time technical SEO optimization for a good foundation, but for the best results we recommend ongoing optimization with monthly analyses and improvements.",
             },
             itemThree: {
-                question:
-                    "Do you also do content creation (blogs, landing pages) for SEO?",
+                question: "Do you also do content creation (blogs, landing pages) for SEO?",
                 answer: "We advise on content strategy and SEO-optimized structures. For content creation, we work with copywriters or can outsource this to specialized partners.",
             },
             itemFour: {
@@ -575,16 +549,14 @@ export default {
                 answer: "We use Google Analytics, Search Console, and professional SEO tools for ranking monitoring, traffic analysis, conversion tracking, and reporting. You receive monthly overviews of all important metrics.",
             },
             itemFive: {
-                question:
-                    "Can my existing website be optimized or do I need to have a new site built?",
+                question: "Can my existing website be optimized or do I need to have a new site built?",
                 answer: "In most cases, we can optimize your existing website. Sometimes a rebuild is necessary if the technical foundation is insufficient, but we determine this after a thorough analysis.",
             },
         },
 
         maintenance: {
             itemOne: {
-                question:
-                    "Why is maintenance important for a website or web app?",
+                question: "Why is maintenance important for a website or web app?",
                 answer: "Regular maintenance ensures security against hackers, optimal performance, compatibility with new browsers, backup security, and prevents major technical problems that are expensive to repair.",
             },
             itemTwo: {
@@ -596,8 +568,7 @@ export default {
                 answer: "Without maintenance, you risk security vulnerabilities, slower performance, incompatibility with new browsers, data loss, and higher repair costs for any problems.",
             },
             itemFour: {
-                question:
-                    "Can you also perform individual updates without a subscription?",
+                question: "Can you also perform individual updates without a subscription?",
                 answer: "Yes, we also offer ad-hoc maintenance and updates at our hourly rate of €45 per hour. For regular needs, however, our subscriptions are more cost-effective.",
             },
             itemFive: {
@@ -608,18 +579,15 @@ export default {
 
         optimizations: {
             itemOne: {
-                question:
-                    "What kind of optimizations do you perform? (technical, visual, UX)",
+                question: "What kind of optimizations do you perform? (technical, visual, UX)",
                 answer: "We perform technical optimizations (speed, code), visual improvements (design updates), UX optimizations (navigation, conversion), and SEO improvements for better performance and user experience.",
             },
             itemTwo: {
-                question:
-                    "How do you determine where my website or web app can be improved?",
+                question: "How do you determine where my website or web app can be improved?",
                 answer: "We conduct an extensive analysis of performance, user behavior (analytics), technical aspects, SEO scores, and conversion funnels. Based on this, we create a priority list of improvements.",
             },
             itemThree: {
-                question:
-                    "Does an optimization always deliver better conversion?",
+                question: "Does an optimization always deliver better conversion?",
                 answer: "Optimizations are aimed at improvement, but results can vary per situation. We monitor all changes and can reverse or adjust changes if necessary for optimal results.",
             },
             itemFour: {
@@ -634,8 +602,7 @@ export default {
 
         emailTemplates: {
             itemOne: {
-                question:
-                    "In which systems (Mailchimp, ActiveCampaign, etc.) can you build email templates?",
+                question: "In which systems (Mailchimp, ActiveCampaign, etc.) can you build email templates?",
                 answer: "We build templates for all popular email platforms such as Mailchimp, ActiveCampaign, HubSpot, Campaign Monitor, and can also create custom HTML templates that work in any system.",
             },
             itemTwo: {
@@ -643,18 +610,15 @@ export default {
                 answer: "Yes, all email templates are fully responsive and optimized for desktop, tablet, and mobile. We carefully test in different email clients and devices.",
             },
             itemThree: {
-                question:
-                    "Can you also personalize emails (e.g., with customer names or data)?",
+                question: "Can you also personalize emails (e.g., with customer names or data)?",
                 answer: "Certainly! We integrate personalization options such as names, locations, purchase history, and other dynamic content to make your email campaigns more personal and effective.",
             },
             itemFour: {
-                question:
-                    "Do you ensure that emails work properly in all email clients (Outlook, Gmail, Apple Mail)?",
+                question: "Do you ensure that emails work properly in all email clients (Outlook, Gmail, Apple Mail)?",
                 answer: "Yes, we extensively test all templates in different email clients and devices to guarantee consistent display. We use best practices for maximum compatibility.",
             },
             itemFive: {
-                question:
-                    "Do you also help with setting up complete email campaigns?",
+                question: "Do you also help with setting up complete email campaigns?",
                 answer: "We focus on the technical realization of templates. For campaign strategy and copywriting, we work with specialized marketing partners or can refer you to reliable specialists.",
             },
         },
@@ -703,13 +667,11 @@ export default {
 
     smartform: {
         title: "Curious about what we can do for you!",
-        subtitle:
-            "Briefly tell us what you're looking for by answering a few questions, and we'll help you quickly.",
+        subtitle: "Briefly tell us what you're looking for by answering a few questions, and we'll help you quickly.",
         restart: "Start over",
         success: {
             title: "Thanks for your request!",
-            subtitle:
-                "We've received your information and will contact you as soon as possible.",
+            subtitle: "We've received your information and will contact you as soon as possible.",
         },
         prices: "See our pricing packages",
         back: "Back",
@@ -758,11 +720,9 @@ export default {
             name: "What is your name?",
             email: "What is your email address?",
             phone: "What is your phone number? (optional)",
-            message:
-                "Do you have any additional information or questions? (optional)",
+            message: "Do you have any additional information or questions? (optional)",
         },
-        hourCosts:
-            "* Outsourcing content management costs €45 per hour (excl. VAT).",
+        hourCosts: "* Outsourcing content management costs €45 per hour (excl. VAT).",
         tooltip: {
             hasWebsite:
                 "Let us know if you already have an existing website, webshop, or web application that we can improve or replace.",
@@ -783,34 +743,28 @@ export default {
                 "For a webshop, we always recommend our Business Plan for maximum scalability and support.",
             budgetPlan: {
                 title: "Our advice: BUDGET PLAN",
-                description:
-                    "Based on your input, our 'Budget Plan' best fits your needs.",
+                description: "Based on your input, our 'Budget Plan' best fits your needs.",
             },
             starterPlan: {
                 title: "Our advice: STARTER PLAN",
-                description:
-                    "The 'Starter Plan' offers more features and flexibility.",
+                description: "The 'Starter Plan' offers more features and flexibility.",
             },
             establishedPlan: {
                 title: "Our advice: ESTABLISHED PLAN",
-                description:
-                    "For more extensive needs, we recommend the 'Established Plan'.",
+                description: "For more extensive needs, we recommend the 'Established Plan'.",
             },
             businessPlan: {
                 title: "Our advice: BUSINESS PLAN",
-                description:
-                    "For large projects, we offer a tailor-made solution.",
+                description: "For large projects, we offer a tailor-made solution.",
             },
             seo: {
                 title: "Our advice: standard hourly rate",
-                description:
-                    "For SEO and other related services, we charge an hourly rate of €45 (excl. VAT).",
+                description: "For SEO and other related services, we charge an hourly rate of €45 (excl. VAT).",
                 price: "€45/hr",
             },
             other: {
                 title: "Our advice: CONTACT US",
-                description:
-                    "For other services or custom solutions, we recommend contacting us for a quote.",
+                description: "For other services or custom solutions, we recommend contacting us for a quote.",
             },
             cta: {
                 requestQuote: "Request a quote",
@@ -818,12 +772,10 @@ export default {
             },
             default: {
                 title: "Advice",
-                description:
-                    "Based on your answers, we recommend the following package or action.",
+                description: "Based on your answers, we recommend the following package or action.",
             },
         },
-        confirmation:
-            "I have checked the information and would like to receive a no-obligation quote.",
+        confirmation: "I have checked the information and would like to receive a no-obligation quote.",
     },
 
     recaptcha: {

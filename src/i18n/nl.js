@@ -8,7 +8,7 @@ export default {
     },
 
     banner: {
-        text: `LET OP! <b>5% korting</b> op jouw nieuwe website, webapplicatie of webshop. De aanbieding geldt tot 31 december 2025! Zie onze <a href="/prijzen/">prijzenpagina</a> voor meer informatie..`,
+        text: `GELUKKIG NIEUWJAAR! 🎇 Om het jaar goed te starten; <b>5% korting</b> op jouw nieuwe website, webapplicatie of webshop. De aanbieding geldt tot 1 januari 2026! Zie onze <a href="/prijzen/">prijzenpagina</a> voor meer informatie..`,
     },
 
     menu: {
@@ -253,23 +253,15 @@ export default {
         title: "Recente projecten",
         viewWebsite: "Bekijk website",
         viewWebapp: "Bekijk webapp",
-        eternitydrum:
-            "Culturele instelling die jongeren ondersteunt via muziekeducatie en talentontwikkeling",
-        blackharmony:
-            "Zanggroep met focus op traditionele Afro-Surinaamse muziek",
+        eternitydrum: "Culturele instelling die jongeren ondersteunt via muziekeducatie en talentontwikkeling",
+        blackharmony: "Zanggroep met focus op traditionele Afro-Surinaamse muziek",
 
-        afrodiasphere:
-            "Eigen initiatief voor verbinding en informatiedeling binnen de diaspora gemeenschap",
-        dsmelodies:
-            "Professioneel steeldrum-artiest Derek Simpey uit Amsterdam Zuidoost",
-        knacdig:
-            "Stichting voor identiteitsversterking en zichtbaarheid van de Afro-Caribische diaspora",
-        keeptreal:
-            "Programma onder leiding van Wenner Regales dat jongeren perspectief biedt",
-        priozorg:
-            "Dynamische hulpverlening met coaching en mentoring voor jongvolwassenen",
-        edutainuproductions:
-            "Freelancebedrijf van Otmar Watson voor culturele projecten met impact",
+        afrodiasphere: "Eigen initiatief voor verbinding en informatiedeling binnen de diaspora gemeenschap",
+        dsmelodies: "Professioneel steeldrum-artiest Derek Simpey uit Amsterdam Zuidoost",
+        knacdig: "Stichting voor identiteitsversterking en zichtbaarheid van de Afro-Caribische diaspora",
+        keeptreal: "Programma onder leiding van Wenner Regales dat jongeren perspectief biedt",
+        priozorg: "Dynamische hulpverlening met coaching en mentoring voor jongvolwassenen",
+        edutainuproductions: "Freelancebedrijf van Otmar Watson voor culturele projecten met impact",
         seeAll: "Zie alle projecten",
     },
 
@@ -329,14 +321,10 @@ export default {
             twelveMonths: "12 maanden gratis support",
             button: "Offerte aanvragen",
             cta: {
-                budgetPlan:
-                    "Hi Michael, ik wil graag een offerte aanvragen voor de Budget Plan...",
-                starterPlan:
-                    "Hi Michael, ik wil graag een offerte aanvragen voor de Starter Plan...",
-                establishedPlan:
-                    "Hi Michael, ik wil graag een offerte aanvragen voor de Established Plan...",
-                businessPlan:
-                    "Hi Michael, ik wil graag een offerte aanvragen voor de Business Plan...",
+                budgetPlan: "Hi Michael, ik wil graag een offerte aanvragen voor de Budget Plan...",
+                starterPlan: "Hi Michael, ik wil graag een offerte aanvragen voor de Starter Plan...",
+                establishedPlan: "Hi Michael, ik wil graag een offerte aanvragen voor de Established Plan...",
+                businessPlan: "Hi Michael, ik wil graag een offerte aanvragen voor de Business Plan...",
             },
         },
         notes: {
@@ -415,8 +403,7 @@ export default {
             closed: "gesloten",
             details:
                 "<u>Kamer van koophandel-nummer</u><br /><b>76045315</b><br /><br /><u>BTW-nummer</u><br /><b>NL 003040579B17</b><br /><br /><u>BANK-nummer</u><br /><b>NL10 BUNQ 2038 8619 94</b>",
-            socials:
-                "<u><b>Volg</b><span><b> / </b></span><b>support</b> onze socials</u>",
+            socials: "<u><b>Volg</b><span><b> / </b></span><b>support</b> onze socials</u>",
         },
     },
 
@@ -481,8 +468,7 @@ export default {
 
         websites: {
             itemOne: {
-                question:
-                    "Wat is het verschil tussen een template-website en een maatwerk-website?",
+                question: "Wat is het verschil tussen een template-website en een maatwerk-website?",
                 answer: "Een template-website is gebaseerd op bestaande designs en functionaliteiten, terwijl een maatwerk-website volledig op maat wordt ontworpen en gebouwd voor jouw specifieke behoeften en branding. Bij Menefex werken we uitsluitend met maatwerk voor een unieke online aanwezigheid.",
             },
             itemTwo: {
@@ -490,8 +476,7 @@ export default {
                 answer: "We beginnen met een uitgebreid intakegesprek waarin we jouw wensen, doelgroep en merkidentiteit bespreken. Op basis daarvan maken we ontwerpen die perfect bij jouw bedrijf passen en zorgen voor een sterke visuele identiteit.",
             },
             itemThree: {
-                question:
-                    "Kan mijn website later uitgebreid worden met extra functies?",
+                question: "Kan mijn website later uitgebreid worden met extra functies?",
                 answer: "Absoluut! We bouwen onze websites flexibel en schaalbaar, zodat ze kunnen meegroeien met je bedrijf. Of je nu een webshop, blog, boekingssysteem of andere functionaliteiten wilt toevoegen - alles is mogelijk.",
             },
             itemFour: {
@@ -499,21 +484,18 @@ export default {
                 answer: "We optimaliseren elke website voor snelle laadtijden door gebruik te maken van moderne technieken zoals code-optimalisatie, beeldcompressie, efficiënte hosting en CDN's. Snelheid is cruciaal voor zowel gebruikerservaring als SEO.",
             },
             itemFive: {
-                question:
-                    "Wat gebeurt er als ik na oplevering nog aanpassingen wil doen?",
+                question: "Wat gebeurt er als ik na oplevering nog aanpassingen wil doen?",
                 answer: "Je krijgt een gebruiksvriendelijk CMS waarmee je zelf eenvoudig content kunt aanpassen. Voor technische wijzigingen of uitbreidingen kunnen we dat voor je regelen tegen ons uurtarief van €45 per uur.",
             },
         },
 
         webapps: {
             itemOne: {
-                question:
-                    "Wat is een webapplicatie precies en hoe verschilt het van een gewone website?",
+                question: "Wat is een webapplicatie precies en hoe verschilt het van een gewone website?",
                 answer: "Een webapplicatie is interactief en biedt specifieke functionaliteiten zoals gegevensinvoer, berekeningen, processen en gebruikersaccounts. Een website toont voornamelijk informatie, terwijl een webapp een tool is waarmee gebruikers taken kunnen uitvoeren.",
             },
             itemTwo: {
-                question:
-                    "Hoe bepalen jullie welke functionaliteiten mijn bedrijf nodig heeft?",
+                question: "Hoe bepalen jullie welke functionaliteiten mijn bedrijf nodig heeft?",
                 answer: "We analyseren je bedrijfsprocessen en workflows tijdens een uitgebreide consultatie. We identificeren knelpunten en kansen voor automatisering, en ontwerpen een webapp die je processen optimaliseert en tijd bespaart.",
             },
             itemThree: {
@@ -521,8 +503,7 @@ export default {
                 answer: "Ja, we kunnen Progressive Web App (PWA) functionaliteiten implementeren waardoor je webapp ook offline beschikbaar is. Data wordt gesynchroniseerd zodra er weer internetverbinding is.",
             },
             itemFour: {
-                question:
-                    "Hoe zit het met de beveiliging van mijn webapplicatie?",
+                question: "Hoe zit het met de beveiliging van mijn webapplicatie?",
                 answer: "Veiligheid staat voorop. We implementeren de nieuwste beveiligingsprotocollen, SSL-certificaten, secure databases, gebruikersauthenticatie en regelmatige security updates om je data optimaal te beschermen.",
             },
             itemFive: {
@@ -533,23 +514,19 @@ export default {
 
         webshops: {
             itemOne: {
-                question:
-                    "Werken jullie met WooCommerce, Shopify of maatwerk oplossingen?",
+                question: "Werken jullie met WooCommerce, Shopify of maatwerk oplossingen?",
                 answer: "We werken bij voorkeur met maatwerk oplossingen die volledig op jouw behoeften zijn afgestemd. Voor snellere implementatie kunnen we ook WooCommerce of andere platforms gebruiken, afhankelijk van je wensen en budget.",
             },
             itemTwo: {
-                question:
-                    "Kan mijn webshop meerdere betaalmethoden (iDEAL, PayPal, Klarna, etc.) ondersteunen?",
+                question: "Kan mijn webshop meerdere betaalmethoden (iDEAL, PayPal, Klarna, etc.) ondersteunen?",
                 answer: "Ja, we integreren alle populaire betaalmethoden zoals iDEAL, PayPal, Klarna, creditcards en bankoverschrijvingen. We zorgen voor een soepele en veilige checkout-ervaring voor je klanten.",
             },
             itemThree: {
-                question:
-                    "Hoe zorgen jullie dat mijn webshop goed gevonden wordt in Google?",
+                question: "Hoe zorgen jullie dat mijn webshop goed gevonden wordt in Google?",
                 answer: "We bouwen elke webshop SEO-vriendelijk met geoptimaliseerde productpagina's, categoriestructuur, snelle laadtijden en technische SEO. Ook kunnen we doorlopende SEO-optimalisatie verzorgen voor betere rankings.",
             },
             itemFour: {
-                question:
-                    "Is het mogelijk om voorraadbeheer en facturatie te koppelen aan de webshop?",
+                question: "Is het mogelijk om voorraadbeheer en facturatie te koppelen aan de webshop?",
                 answer: "Absoluut! We kunnen koppelingen maken met populaire boekhoud- en voorraadsystemen, of een eigen voorraad- en facturatiesysteem ontwikkelen dat naadloos integreert met je webshop.",
             },
             itemFive: {
@@ -560,18 +537,15 @@ export default {
 
         seo: {
             itemOne: {
-                question:
-                    "Hoe lang duurt het voordat ik resultaat zie met SEO?",
+                question: "Hoe lang duurt het voordat ik resultaat zie met SEO?",
                 answer: "Eerste resultaten zijn vaak zichtbaar binnen 2-3 maanden, maar significante verbetering in rankings duurt meestal 4-6 maanden. SEO is een langetermijnstrategie die continue aandacht en geduld vereist.",
             },
             itemTwo: {
-                question:
-                    "Werken jullie met eenmalige SEO of ook doorlopende optimalisatie?",
+                question: "Werken jullie met eenmalige SEO of ook doorlopende optimalisatie?",
                 answer: "We bieden beide opties. Eenmalige technische SEO-optimalisatie voor een goede basis, maar voor de beste resultaten adviseren we doorlopende optimalisatie met maandelijkse analyses en verbeteringen.",
             },
             itemThree: {
-                question:
-                    "Doen jullie ook contentcreatie (blogs, landingspagina's) voor SEO?",
+                question: "Doen jullie ook contentcreatie (blogs, landingspagina's) voor SEO?",
                 answer: "We adviseren over content-strategie en SEO-geoptimaliseerde structuren. Voor contentcreatie werken we samen met copywriters of kunnen we dit uitbesteden aan gespecialiseerde partners.",
             },
             itemFour: {
@@ -587,8 +561,7 @@ export default {
 
         maintenance: {
             itemOne: {
-                question:
-                    "Waarom is onderhoud belangrijk voor een website of webapp?",
+                question: "Waarom is onderhoud belangrijk voor een website of webapp?",
                 answer: "Regelmatig onderhoud zorgt voor veiligheid tegen hackers, optimale prestaties, compatibiliteit met nieuwe browsers, backup-beveiliging en voorkomt grote technische problemen die duur zijn om te repareren.",
             },
             itemTwo: {
@@ -596,13 +569,11 @@ export default {
                 answer: "Onze pakketten bevatten updates van software en plugins, beveiligingsmonitoring, automatische backups, performance-optimalisatie, uptime-monitoring en prioritaire technische support.",
             },
             itemThree: {
-                question:
-                    "Wat gebeurt er als ik geen onderhoud laat uitvoeren?",
+                question: "Wat gebeurt er als ik geen onderhoud laat uitvoeren?",
                 answer: "Zonder onderhoud loop je risico op beveiligingslekken, langzamere prestaties, incompatibiliteit met nieuwe browsers, dataverlies en hogere reparatiekosten bij eventuele problemen.",
             },
             itemFour: {
-                question:
-                    "Kunnen jullie ook alleen losse updates uitvoeren zonder abonnement?",
+                question: "Kunnen jullie ook alleen losse updates uitvoeren zonder abonnement?",
                 answer: "Ja, we bieden ook ad-hoc onderhoud en updates aan tegen ons uurtarief van €45 per uur. Voor regelmatige behoeften zijn onze abonnementen echter kosteneffectiever.",
             },
             itemFive: {
@@ -613,18 +584,15 @@ export default {
 
         optimizations: {
             itemOne: {
-                question:
-                    "Wat voor soort optimalisaties voeren jullie uit? (technisch, visueel, UX)",
+                question: "Wat voor soort optimalisaties voeren jullie uit? (technisch, visueel, UX)",
                 answer: "We voeren technische optimalisaties uit (snelheid, code), visuele verbeteringen (design updates), UX-optimalisaties (navigatie, conversie) en SEO-verbeteringen voor betere prestaties en gebruikerservaring.",
             },
             itemTwo: {
-                question:
-                    "Hoe bepalen jullie waar mijn website of webapp verbeterd kan worden?",
+                question: "Hoe bepalen jullie waar mijn website of webapp verbeterd kan worden?",
                 answer: "We doen een uitgebreide analyse van prestaties, gebruikersgedrag (analytics), technische aspecten, SEO-scores en conversie-funnels. Op basis daarvan stellen we een prioriteitenlijst van verbeteringen op.",
             },
             itemThree: {
-                question:
-                    "Levert een optimalisatie altijd betere conversie op?",
+                question: "Levert een optimalisatie altijd betere conversie op?",
                 answer: "Optimalisaties zijn gericht op verbetering, maar resultaten kunnen variëren per situatie. We monitoren alle wijzigingen en kunnen indien nodig aanpassingen terugdraaien of bijstellen voor optimale resultaten.",
             },
             itemFour: {
@@ -632,16 +600,14 @@ export default {
                 answer: "Ja, we kunnen A/B-tests opzetten voor verschillende elementen zoals call-to-actions, layouts, formulieren en content om data-gedreven beslissingen te nemen over optimalisaties.",
             },
             itemFive: {
-                question:
-                    "Zijn optimalisaties eenmalig of doorlopend mogelijk?",
+                question: "Zijn optimalisaties eenmalig of doorlopend mogelijk?",
                 answer: "We bieden beide opties. Eenmalige optimalisatie-projecten voor specifieke verbeteringen, maar ook doorlopende optimalisatie-programma's voor continue verbetering van prestaties en conversies.",
             },
         },
 
         emailTemplates: {
             itemOne: {
-                question:
-                    "In welke systemen (Mailchimp, ActiveCampaign, etc.) kunnen jullie e-mailtemplates bouwen?",
+                question: "In welke systemen (Mailchimp, ActiveCampaign, etc.) kunnen jullie e-mailtemplates bouwen?",
                 answer: "We bouwen templates voor alle populaire e-mailplatforms zoals Mailchimp, ActiveCampaign, HubSpot, Campaign Monitor, en kunnen ook custom HTML-templates maken die in elk systeem werken.",
             },
             itemTwo: {
@@ -649,18 +615,15 @@ export default {
                 answer: "Ja, alle e-mailtemplates zijn volledig responsive en geoptimaliseerd voor desktop, tablet en mobiel. We testen zorgvuldig in verschillende e-mailclients en apparaten.",
             },
             itemThree: {
-                question:
-                    "Kunnen jullie e-mails ook personaliseren (bijv. met klantnamen of data)?",
+                question: "Kunnen jullie e-mails ook personaliseren (bijv. met klantnamen of data)?",
                 answer: "Zeker! We integreren personalisatie-mogelijkheden zoals namen, locaties, aankoophistorie en andere dynamische content om je e-mailcampagnes persoonlijker en effectiever te maken.",
             },
             itemFour: {
-                question:
-                    "Zorgen jullie dat de e-mails in alle mailclients (Outlook, Gmail, Apple Mail) goed werken?",
+                question: "Zorgen jullie dat de e-mails in alle mailclients (Outlook, Gmail, Apple Mail) goed werken?",
                 answer: "Ja, we testen alle templates uitgebreid in verschillende e-mailclients en apparaten om consistente weergave te garanderen. We gebruiken best practices voor maximale compatibiliteit.",
             },
             itemFive: {
-                question:
-                    "Helpen jullie ook met het opzetten van complete e-mailcampagnes?",
+                question: "Helpen jullie ook met het opzetten van complete e-mailcampagnes?",
                 answer: "We focussen op de technische realisatie van templates. Voor campagne-strategie en copywriting werken we samen met gespecialiseerde marketing-partners of kunnen we doorverwijzen naar betrouwbare specialisten.",
             },
         },
@@ -690,8 +653,7 @@ export default {
             answer: "Ja. Je krijgt toegang tot een gebruiksvriendelijk CMS waarmee je zelf eenvoudig teksten en afbeeldingen kunt aanpassen. Liever uitbesteden? Dan kunnen wij het contentbeheer ook voor je verzorgen.",
         },
         itemSeven: {
-            question:
-                "Bieden jullie ook onderhoud en support aan na oplevering?",
+            question: "Bieden jullie ook onderhoud en support aan na oplevering?",
             answer: "Absoluut. We bieden onderhoudspakketten aan, of je kunt losse support afnemen wanneer nodig.",
         },
         itemEight: {
@@ -710,13 +672,11 @@ export default {
 
     smartform: {
         title: "Benieuwd wat wij kunnen betekenen?",
-        subtitle:
-            "Vertel ons kort wat je zoekt door een aantal vragen te beantwoorden, dan helpen we je snel verder.",
+        subtitle: "Vertel ons kort wat je zoekt door een aantal vragen te beantwoorden, dan helpen we je snel verder.",
         restart: "Opnieuw beginnen",
         success: {
             title: "Bedankt voor je aanvraag!",
-            subtitle:
-                "We hebben je gegevens ontvangen en nemen zo snel mogelijk contact met je op.",
+            subtitle: "We hebben je gegevens ontvangen en nemen zo snel mogelijk contact met je op.",
         },
         prices: "Zie onze prijspakketten",
         back: "Terug",
@@ -767,8 +727,7 @@ export default {
             phone: "Wat is je telefoonnummer? (optioneel)",
             message: "Heb je nog aanvullende informatie of vragen? (optioneel)",
         },
-        hourCosts:
-            "* Het uitbesteden van contentbeheer kost €45 per uur (excl. BTW).",
+        hourCosts: "* Het uitbesteden van contentbeheer kost €45 per uur (excl. BTW).",
         tooltip: {
             hasWebsite:
                 "Laat ons weten of je al een bestaande website, webshop of webapplicatie hebt die we kunnen verbeteren of vervangen.",
@@ -789,23 +748,19 @@ export default {
                 "Voor een webshop adviseren we altijd ons Business Plan voor maximale schaalbaarheid en ondersteuning.",
             budgetPlan: {
                 title: "Ons advies: BUDGET PLAN",
-                description:
-                    "Op basis van je input past ons 'Budget Plan' het beste bij jouw wensen.",
+                description: "Op basis van je input past ons 'Budget Plan' het beste bij jouw wensen.",
             },
             starterPlan: {
                 title: "Ons advies: STARTER PLAN",
-                description:
-                    "Het 'Starter Plan' biedt meer mogelijkheden en flexibiliteit.",
+                description: "Het 'Starter Plan' biedt meer mogelijkheden en flexibiliteit.",
             },
             establishedPlan: {
                 title: "Ons advies: ESTABLISHED PLAN",
-                description:
-                    "Voor uitgebreide wensen adviseren we het 'Established Plan'.",
+                description: "Voor uitgebreide wensen adviseren we het 'Established Plan'.",
             },
             businessPlan: {
                 title: "Ons advies: BUSINESS PLAN",
-                description:
-                    "Voor grote projecten bieden we een maatwerkoplossing.",
+                description: "Voor grote projecten bieden we een maatwerkoplossing.",
             },
             seo: {
                 title: "Ons advies: gebruikelijke uurtarief",
@@ -824,12 +779,10 @@ export default {
             },
             default: {
                 title: "Advies",
-                description:
-                    "Op basis van je antwoorden adviseren we het volgende pakket of actie.",
+                description: "Op basis van je antwoorden adviseren we het volgende pakket of actie.",
             },
         },
-        confirmation:
-            "Ik heb mijn invoer gecontroleerd en wil graag een vrijblijvende offerte ontvangen",
+        confirmation: "Ik heb mijn invoer gecontroleerd en wil graag een vrijblijvende offerte ontvangen",
     },
 
     recaptcha: {
