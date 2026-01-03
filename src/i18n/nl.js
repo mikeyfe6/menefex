@@ -8,7 +8,7 @@ export default {
     },
 
     banner: {
-        text: `GELUKKIG NIEUWJAAR! Om het jaar goed te starten; <b>5% korting</b> op jouw nieuwe website, webapplicatie of webshop. De aanbieding geldt tot 1 januari 2026! Zie onze <a href="/prijzen/">prijzenpagina</a> voor meer informatie..`,
+        text: `GELUKKIG NIEUWJAAR! Om het jaar goed te starten; <b>5% korting</b> op jouw nieuwe website, webapplicatie of webshop. De aanbieding geldt tot 31 januari 2026! Zie onze <a href="/prijzen/">prijzenpagina</a> voor meer informatie..`,
     },
 
     menu: {
