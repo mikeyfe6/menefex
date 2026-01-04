@@ -259,6 +259,7 @@ export default {
         keeptreal: "Program led by Wenner Regales offering perspective to young people",
         priozorg: "Dynamic care services with coaching and mentoring for young adults",
         edutainuproductions: "Freelance company by Otmar Watson for impactful cultural projects",
+        huzl: "Own build no-nonsense money management app for budgeting and cash control",
         seeAll: "See all projects",
     },
 
@@ -269,22 +270,23 @@ export default {
         goToRepo: "Github Repo",
         noRepo: "Not on Github",
 
-        edutainuproductions:
-            "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment. Based on years of experience in the cultural sector, Edutain U Productions realizes projects that connect, deepen and strengthen. Always with a focus on inclusivity, heritage and social involvement.",
-        priozorg:
-            "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Prio Zorg offers expert support in the form of coaching, mentoring and educational guidance.",
-        keeptreal:
-            "<strong>Keep It Real</strong> is a program led by cultural professional Wenner Regales, which helps young people grow beyond the boundaries of traditional education. It provides a platform for making positive choices and seizing opportunities, rooted in Wenner's experience and network.",
-        afrodiasphere:
-            "<strong>Afrodiasphere</strong> is a project set up entirely on our own initiative, mainly aimed at making it easier to share information among private individuals/companies that want to develop themselves. Create your profile & join the MOVEMENT!",
         eternitydrum:
             "<strong>Eternity Percussion</strong> is a cultural institution that contributes to talent development, cultural participation and broadening the vision of young people. By means of including music education and the deployment of young people in their own organization, Eternity offers young people the opportunity to undertake cultural activities and participate within Dutch society.",
-        knacdig:
-            "<strong>KN-ACDiG</strong> or Knowledge Network African-Caribbean Diaspora Community is a foundation that focuses on working on strengthening the identity, increasing visibility and knowledge management (advice to monitoring) of the African-Caribbean Diaspora Community.",
-        dsmelodies:
-            "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, shaped by more than 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
         blackharmony:
             "<strong>Black Harmony</strong> is a popular and talented singing group from Amsterdam. This music organization wants to contribute to the positioning of traditional music called Apinti Kawina ánd wants to act as an ambassador when it comes to traditional Afro-Surinamese music.",
+        afrodiasphere:
+            "<strong>Afrodiasphere</strong> is a project set up entirely on our own initiative, mainly aimed at making it easier to share information among private individuals/companies that want to develop themselves. Create your profile & join the MOVEMENT!",
+        dsmelodies:
+            "<strong>DS Melodies</strong> alias Derek Simpey is a professional Steeldrum artist from Amsterdam South East. With his unique sound, shaped by more than 18 years of experience, he and his steelpan instrument create a worthy spectacle wherever he is.",
+        knacdig:
+            "<strong>KN-ACDiG</strong> or Knowledge Network African-Caribbean Diaspora Community is a foundation that focuses on working on strengthening the identity, increasing visibility and knowledge management (advice to monitoring) of the African-Caribbean Diaspora Community.",
+        keeptreal:
+            "<strong>Keep It Real</strong> is a program led by cultural professional Wenner Regales, which helps young people grow beyond the boundaries of traditional education. It provides a platform for making positive choices and seizing opportunities, rooted in Wenner's experience and network.",
+        priozorg:
+            "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Prio Zorg offers expert support in the form of coaching, mentoring and educational guidance.",
+        edutainuproductions:
+            "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment. Based on years of experience in the cultural sector, Edutain U Productions realizes projects that connect, deepen and strengthen. Always with a focus on inclusivity, heritage and social involvement.",
+        huzl: "<strong>Huzl</strong> is an in-house, no-nonsense money management app: quick budgets, clear overviews, and smart alerts without any fluff. Stay focused, keep control of your cash, and avoid surprises.",
     },
 
     prices: {

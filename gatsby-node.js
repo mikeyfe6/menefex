@@ -60,15 +60,11 @@ exports.createResolvers = ({ createResolvers }) => {
                                     },
                                 ];
 
-                                const matchedFeed = menefexFeeds.find(
-                                    (feed) => feed.id === entryId
-                                );
+                                const matchedFeed = menefexFeeds.find((feed) => feed.id === entryId);
 
                                 if (matchedFeed) {
                                     const slug = matchedFeed.slug;
-                                    const content = node.content
-                                        .map((content) => content.value)
-                                        .join("");
+                                    const content = node.content.map((content) => content.value).join("");
                                     return `<a href="${siteUrl}/blog/${slug}">${content}</a>`;
                                 } else {
                                     return "";
@@ -155,18 +151,14 @@ const captureScreenshot = async (url, filename, delay) => {
             const iframeSelector = 'iframe[src*="player.vimeo.com"]';
 
             try {
-                console.log(
-                    "📲 Waiting for Vimeo iframe to appear and initialize..."
-                );
+                console.log("📲 Waiting for Vimeo iframe to appear and initialize...");
                 await page.waitForSelector(iframeSelector, {
                     visible: true,
                     timeout: 5000,
                 });
                 console.log("🍿 Vimeo iframe loaded successfully.");
             } catch (error) {
-                console.warn(
-                    "⚠️ Vimeo iframe failed to load. Proceeding with screenshot capture."
-                );
+                console.warn("⚠️ Vimeo iframe failed to load. Proceeding with screenshot capture.", error.message);
             }
         }
 
@@ -175,7 +167,7 @@ const captureScreenshot = async (url, filename, delay) => {
 
         try {
             await fs.access(screenshotDir);
-        } catch {
+        } catch (error) {
             await fs.mkdir(screenshotDir, { recursive: true });
             console.log(`📂 Created screenshot directory: ${screenshotDir}`);
         }
@@ -185,10 +177,7 @@ const captureScreenshot = async (url, filename, delay) => {
 
         await browser.close();
     } catch (error) {
-        console.error(
-            `❌ Error capturing screenshot for ${url}:`,
-            error.message
-        );
+        console.error(`❌ Error capturing screenshot for ${url}:`, error.message);
     }
 };
 
@@ -206,22 +195,15 @@ const runScreenshots = async () => {
         process.env.NODE_ENV === "production"
         // || process.env.NODE_ENV === "development"
     ) {
-        await captureScreenshot(
-            "https://edutainuproductions.nl",
-            "edutainuproductions",
-            0
-        );
-        // await captureScreenshot("https://prio-zorg.nl", "priozorg", 2000);
-        await captureScreenshot("https://keeptreal.nl", "keeptreal", 2000);
-        await captureScreenshot("https://blackharmony.nl", "blackharmony", 0);
         await captureScreenshot("https://eternitydrum.com", "eternitydrum", 0);
-        // await captureScreenshot("https://kn-acdig.com", "kn-acdig", 0);
+        await captureScreenshot("https://blackharmony.nl", "blackharmony", 0);
+        await captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000);
         await captureScreenshot("https://dsmelodies.com", "dsmelodies", 0);
-        await captureScreenshot(
-            "https://afrodiasphere.com",
-            "afrodiasphere",
-            2000
-        );
+        // await captureScreenshot("https://kn-acdig.com", "kn-acdig", 0);
+        await captureScreenshot("https://keeptreal.nl", "keeptreal", 2000);
+        // await captureScreenshot("https://prio-zorg.nl", "priozorg", 2000);
+        await captureScreenshot("https://edutainuproductions.nl", "edutainuproductions", 0);
+        await captureScreenshot("https://huzl.expo.app", "huzl", 0);
     }
 };
 
@@ -340,28 +322,25 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
     `);
 
-    const blogPostsByLanguage = res.data.allContentfulBlogPost.edges.reduce(
-        (acc, edge) => {
-            const { node } = edge;
-            const lang = node.node_locale;
+    const blogPostsByLanguage = res.data.allContentfulBlogPost.edges.reduce((acc, edge) => {
+        const { node } = edge;
+        const lang = node.node_locale;
 
-            if (!acc[node.slug]) {
-                acc[node.slug] = {
-                    nlContent: null,
-                    enContent: null,
-                };
-            }
+        if (!acc[node.slug]) {
+            acc[node.slug] = {
+                nlContent: null,
+                enContent: null,
+            };
+        }
 
-            if (lang === "nl") {
-                acc[node.slug].nlContent = node;
-            } else if (lang === "en") {
-                acc[node.slug].enContent = node;
-            }
+        if (lang === "nl") {
+            acc[node.slug].nlContent = node;
+        } else if (lang === "en") {
+            acc[node.slug].enContent = node;
+        }
 
-            return acc;
-        },
-        {}
-    );
+        return acc;
+    }, {});
 
     Object.keys(blogPostsByLanguage).forEach((slug) => {
         const { nlContent, enContent } = blogPostsByLanguage[slug];
@@ -404,28 +383,25 @@ module.exports.createPages = async ({ graphql, actions }) => {
         });
     });
 
-    const topicsByLanguage = res.data.allContentfulTopic.edges.reduce(
-        (acc, edge) => {
-            const { node } = edge;
-            const lang = node.node_locale;
+    const topicsByLanguage = res.data.allContentfulTopic.edges.reduce((acc, edge) => {
+        const { node } = edge;
+        const lang = node.node_locale;
 
-            if (!acc[node.slug]) {
-                acc[node.slug] = {
-                    nlContent: null,
-                    enContent: null,
-                };
-            }
+        if (!acc[node.slug]) {
+            acc[node.slug] = {
+                nlContent: null,
+                enContent: null,
+            };
+        }
 
-            if (lang === "nl") {
-                acc[node.slug].nlContent = node;
-            } else if (lang === "en") {
-                acc[node.slug].enContent = node;
-            }
+        if (lang === "nl") {
+            acc[node.slug].nlContent = node;
+        } else if (lang === "en") {
+            acc[node.slug].enContent = node;
+        }
 
-            return acc;
-        },
-        {}
-    );
+        return acc;
+    }, {});
 
     Object.keys(topicsByLanguage).forEach((slug) => {
         const { nlContent, enContent } = topicsByLanguage[slug];
@@ -438,9 +414,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     topicPosts: nlContent ? nlContent.blog_post : [],
                     name: nlContent ? nlContent.name : "",
                     bdcolor: nlContent ? nlContent.bdcolor : "",
-                    description: nlContent
-                        ? nlContent.description.description
-                        : "",
+                    description: nlContent ? nlContent.description.description : "",
                     slug: nlContent ? nlContent.slug : "",
                     title: nlContent ? nlContent.title : "",
                     typename: nlContent ? nlContent.__typename : "",
@@ -449,9 +423,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     topicPosts: enContent ? enContent.blog_post : [],
                     name: enContent ? enContent.name : "",
                     bdcolor: enContent ? enContent.bdcolor : "",
-                    description: enContent
-                        ? enContent.description.description
-                        : "",
+                    description: enContent ? enContent.description.description : "",
                     slug: enContent ? enContent.slug : "",
                     title: enContent ? enContent.title : "",
                     typename: enContent ? enContent.__typename : "",

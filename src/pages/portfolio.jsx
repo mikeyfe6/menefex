@@ -55,9 +55,57 @@ const PortfolioPage = () => {
 
             <section id="portfolio">
                 <div className={portfolioStyles.portfolioContainer}>
-                    {/*
-          // * EDUTAIN U PRODOCTIONS !
-          */}
+                    {/*  HUZL ! */}
+                    <div id="hzl">
+                        <a
+                            href="https://huzl.expo.app"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={portfolioStyles.portfolioImg}
+                        >
+                            {getProjectImage("huzl") && <GatsbyImage image={getProjectImage("huzl")} alt="Huzl" />}
+                        </a>
+                        <div className={portfolioStyles.portfolioInfo}>
+                            <h3>
+                                <span>Client:</span>Huzl
+                            </h3>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("portfolio.huzl"),
+                                }}
+                            />
+                            <div className={portfolioStyles.tools}>
+                                <span>Tools:</span>
+                                <ul>
+                                    <li>React Native</li>
+                                    <li>Expo</li>
+                                    <li>Supabase</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={portfolioStyles.portfolioBtns}>
+                            <a
+                                href="https://huzl.expo.app"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnLight}
+                            >
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
+                                {t("portfolio.goToProject")}
+                            </a>
+                            <a
+                                href="https://github.com/mikeyfe6/huzl"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnDark}
+                            >
+                                <FontAwesomeIcon icon={["fab", "github"]} />
+                                {t("portfolio.goToRepo")}
+                            </a>
+                        </div>
+                    </div>
+
+                    {/*  EDUTAIN U PRODUCTIONS ! */}
                     <div id="eup">
                         <a
                             href="https://edutainuproductions.nl"
@@ -67,9 +115,7 @@ const PortfolioPage = () => {
                         >
                             {getProjectImage("edutainuproductions") && (
                                 <GatsbyImage
-                                    image={getProjectImage(
-                                        "edutainuproductions"
-                                    )}
+                                    image={getProjectImage("edutainuproductions")}
                                     alt="Edutain U Productions"
                                 />
                             )}
@@ -115,10 +161,7 @@ const PortfolioPage = () => {
                         </div>
                     </div>
 
-                    {/*
-          // * PRIO ZORG !
-          */}
-
+                    {/* PRIO ZORG ! */}
                     <div id="pz">
                         <a
                             href="#!"
@@ -134,11 +177,7 @@ const PortfolioPage = () => {
                                 />
                             )} */}
 
-                            <StaticImage
-                                src="../images/mnfx-screens.jpeg"
-                                width={600}
-                                alt="Prio Zorg (404)"
-                            />
+                            <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt="Prio Zorg (404)" />
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -186,10 +225,7 @@ const PortfolioPage = () => {
                         </div>
                     </div>
 
-                    {/*
-          // * KEEP IT REAL !
-          */}
-
+                    {/* KEEP IT REAL ! */}
                     <div id="kir">
                         <a
                             href="https://keeptreal.nl"
@@ -198,10 +234,7 @@ const PortfolioPage = () => {
                             className={portfolioStyles.portfolioImg}
                         >
                             {getProjectImage("keeptreal") && (
-                                <GatsbyImage
-                                    image={getProjectImage("keeptreal")}
-                                    alt="Keep It Real"
-                                />
+                                <GatsbyImage image={getProjectImage("keeptreal")} alt="Keep It Real" />
                             )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -246,10 +279,107 @@ const PortfolioPage = () => {
                         </div>
                     </div>
 
-                    {/*
-          // * AFRODIASPHERE!
-          */}
+                    {/* KN-ACDiG! */}
+                    <div id="knacdig">
+                        <a
+                            href="#!"
+                            // href="https://kn-acdig.com"
+                            // rel="noopener noreferrer"
+                            // target="_blank"
+                            className={portfolioStyles.portfolioImg}
+                        >
+                            {/* <StaticImage
+                                src="../../public/project-images/kn-acdig.png"
+                                alt="KN-ACDiG"
+                                className={portfolioStyles.portfolioImg}
+                            /> */}
 
+                            <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt="KN-ACDiG (404)" />
+                        </a>
+                        <div className={portfolioStyles.portfolioInfo}>
+                            <h3>
+                                <span>Client:</span>KennisNetwerk ACDiG
+                            </h3>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("portfolio.knacdig"),
+                                }}
+                            />
+                            <div className={portfolioStyles.tools}>
+                                <span>Tools:</span>
+                                <ul>
+                                    <li>Wordpress</li>
+                                    <li>Custom CSS</li>
+                                    <li>Elementor</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={portfolioStyles.portfolioBtns}>
+                            <a
+                                // href="https://kn-acdig.com"
+                                // rel="noopener noreferrer"
+                                // target="_blank"
+                                className={portfolioStyles.btnLight}
+                            >
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
+                                <strike>{t("portfolio.goToProject")}</strike>
+                            </a>
+                            <a className={portfolioStyles.btnDark} disabled>
+                                <FontAwesomeIcon icon={["fab", "github"]} />
+                                <strike>{t("portfolio.noRepo")}</strike>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* DS MELODIES ! */}
+                    <div id="dsm">
+                        <a
+                            href="https://dsmelodies.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={portfolioStyles.portfolioImg}
+                        >
+                            {getProjectImage("dsmelodies") && (
+                                <GatsbyImage image={getProjectImage("dsmelodies")} alt="DS Melodies" />
+                            )}
+                        </a>
+                        <div className={portfolioStyles.portfolioInfo}>
+                            <h3>
+                                <span>Client:</span>DS Melodies
+                            </h3>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("portfolio.dsmelodies"),
+                                }}
+                            />
+                            <div className={portfolioStyles.tools}>
+                                <span>Tools:</span>
+                                <ul>
+                                    <li>Wordpress</li>
+                                    <li>Custom CSS</li>
+                                    <li>Elementor</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={portfolioStyles.portfolioBtns}>
+                            <a
+                                href="https://dsmelodies.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnLight}
+                            >
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
+                                {t("portfolio.goToProject")}
+                                {/* Komt Binnenkort */}
+                            </a>
+                            <a className={portfolioStyles.btnDark} disabled>
+                                <FontAwesomeIcon icon={["fab", "github"]} />
+                                <strike>{t("portfolio.noRepo")}</strike>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* AFRODIASPHERE! */}
                     <div id="ads">
                         <a
                             href="https://afrodiasphere.com"
@@ -258,10 +388,7 @@ const PortfolioPage = () => {
                             className={portfolioStyles.portfolioImg}
                         >
                             {getProjectImage("afrodiasphere") && (
-                                <GatsbyImage
-                                    image={getProjectImage("afrodiasphere")}
-                                    alt="Afrodiasphere"
-                                />
+                                <GatsbyImage image={getProjectImage("afrodiasphere")} alt="Afrodiasphere" />
                             )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -307,10 +434,54 @@ const PortfolioPage = () => {
                         </div>
                     </div>
 
-                    {/*
-          // * ETERNITY PERCUSSION !
-          */}
+                    {/* BLACK HARMONY ! */}
+                    <div id="bh">
+                        <a
+                            href="https://blackharmony.nl"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={portfolioStyles.portfolioImg}
+                        >
+                            {getProjectImage("blackharmony") && (
+                                <GatsbyImage image={getProjectImage("blackharmony")} alt="Black Harmony" />
+                            )}
+                        </a>
+                        <div className={portfolioStyles.portfolioInfo}>
+                            <h3>
+                                <span>Client:</span>Black Harmony
+                            </h3>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: t("portfolio.blackharmony"),
+                                }}
+                            />
+                            <div className={portfolioStyles.tools}>
+                                <span>Tools:</span>
+                                <ul>
+                                    <li>Wordpress</li>
+                                    <li>Custom CSS</li>
+                                    <li>Elementor</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={portfolioStyles.portfolioBtns}>
+                            <a
+                                href="https://blackharmony.nl"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnLight}
+                            >
+                                <FontAwesomeIcon icon={["fas", "globe"]} />
+                                {t("portfolio.goToProject")}
+                            </a>
+                            <a className={portfolioStyles.btnDark} disabled>
+                                <FontAwesomeIcon icon={["fab", "github"]} />
+                                <strike>{t("portfolio.noRepo")}</strike>
+                            </a>
+                        </div>
+                    </div>
 
+                    {/* ETERNITY PERCUSSION ! */}
                     <div id="ep">
                         <a
                             href="https://eternitydrum.com"
@@ -319,10 +490,7 @@ const PortfolioPage = () => {
                             className={portfolioStyles.portfolioImg}
                         >
                             {getProjectImage("eternitydrum") && (
-                                <GatsbyImage
-                                    image={getProjectImage("eternitydrum")}
-                                    alt="Eternity Percussion"
-                                />
+                                <GatsbyImage image={getProjectImage("eternitydrum")} alt="Eternity Percussion" />
                             )}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
@@ -363,172 +531,6 @@ const PortfolioPage = () => {
                             >
                                 <FontAwesomeIcon icon={["fab", "github"]} />
                                 {t("portfolio.goToRepo")}
-                            </a>
-                        </div>
-                    </div>
-
-                    {/*
-          // * KN-ACDiG!
-          */}
-
-                    <div id="knacdig">
-                        <a
-                            href="#!"
-                            // href="https://kn-acdig.com"
-                            // rel="noopener noreferrer"
-                            // target="_blank"
-                            className={portfolioStyles.portfolioImg}
-                        >
-                            {/* <StaticImage
-                                src="../../public/project-images/kn-acdig.png"
-                                alt="KN-ACDiG"
-                                className={portfolioStyles.portfolioImg}
-                            /> */}
-
-                            <StaticImage
-                                src="../images/mnfx-screens.jpeg"
-                                width={600}
-                                alt="KN-ACDiG (404)"
-                            />
-                        </a>
-                        <div className={portfolioStyles.portfolioInfo}>
-                            <h3>
-                                <span>Client:</span>KennisNetwerk ACDiG
-                            </h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t("portfolio.knacdig"),
-                                }}
-                            />
-                            <div className={portfolioStyles.tools}>
-                                <span>Tools:</span>
-                                <ul>
-                                    <li>Wordpress</li>
-                                    <li>Custom CSS</li>
-                                    <li>Elementor</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={portfolioStyles.portfolioBtns}>
-                            <a
-                                // href="https://kn-acdig.com"
-                                // rel="noopener noreferrer"
-                                // target="_blank"
-                                className={portfolioStyles.btnLight}
-                            >
-                                <FontAwesomeIcon icon={["fas", "globe"]} />
-                                <strike>{t("portfolio.goToProject")}</strike>
-                            </a>
-                            <a className={portfolioStyles.btnDark} disabled>
-                                <FontAwesomeIcon icon={["fab", "github"]} />
-                                <strike>{t("portfolio.noRepo")}</strike>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/*
-          // * DS MELODIES !
-          */}
-
-                    <div id="dsm">
-                        <a
-                            href="https://dsmelodies.com"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className={portfolioStyles.portfolioImg}
-                        >
-                            {getProjectImage("dsmelodies") && (
-                                <GatsbyImage
-                                    image={getProjectImage("dsmelodies")}
-                                    alt="DS Melodies"
-                                />
-                            )}
-                        </a>
-                        <div className={portfolioStyles.portfolioInfo}>
-                            <h3>
-                                <span>Client:</span>DS Melodies
-                            </h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t("portfolio.dsmelodies"),
-                                }}
-                            />
-                            <div className={portfolioStyles.tools}>
-                                <span>Tools:</span>
-                                <ul>
-                                    <li>Wordpress</li>
-                                    <li>Custom CSS</li>
-                                    <li>Elementor</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={portfolioStyles.portfolioBtns}>
-                            <a
-                                href="https://dsmelodies.com"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className={portfolioStyles.btnLight}
-                            >
-                                <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
-                                {/* Komt Binnenkort */}
-                            </a>
-                            <a className={portfolioStyles.btnDark} disabled>
-                                <FontAwesomeIcon icon={["fab", "github"]} />
-                                <strike>{t("portfolio.noRepo")}</strike>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/*
-          // * BLACK HARMONY !
-          */}
-
-                    <div id="bh">
-                        <a
-                            href="https://blackharmony.nl"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className={portfolioStyles.portfolioImg}
-                        >
-                            {getProjectImage("blackharmony") && (
-                                <GatsbyImage
-                                    image={getProjectImage("blackharmony")}
-                                    alt="Black Harmony"
-                                />
-                            )}
-                        </a>
-                        <div className={portfolioStyles.portfolioInfo}>
-                            <h3>
-                                <span>Client:</span>Black Harmony
-                            </h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t("portfolio.blackharmony"),
-                                }}
-                            />
-                            <div className={portfolioStyles.tools}>
-                                <span>Tools:</span>
-                                <ul>
-                                    <li>Wordpress</li>
-                                    <li>Custom CSS</li>
-                                    <li>Elementor</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={portfolioStyles.portfolioBtns}>
-                            <a
-                                href="https://blackharmony.nl"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className={portfolioStyles.btnLight}
-                            >
-                                <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
-                            </a>
-                            <a className={portfolioStyles.btnDark} disabled>
-                                <FontAwesomeIcon icon={["fab", "github"]} />
-                                <strike>{t("portfolio.noRepo")}</strike>
                             </a>
                         </div>
                     </div>

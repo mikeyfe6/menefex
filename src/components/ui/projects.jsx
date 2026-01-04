@@ -5,14 +5,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-    Navigation,
-    Pagination,
-    Scrollbar,
-    A11y,
-    Parallax,
-    Autoplay,
-} from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Parallax, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -38,10 +31,7 @@ const Projects = () => {
     const data = useStaticQuery(graphql`
         query {
             slideShow: allFile(
-                filter: {
-                    sourceInstanceName: { eq: "project-images" }
-                    name: { regex: "/^(?!.*-backup).*$/i" }
-                }
+                filter: { sourceInstanceName: { eq: "project-images" }, name: { regex: "/^(?!.*-backup).*$/i" } }
                 sort: { base: ASC }
             ) {
                 edges {
@@ -56,12 +46,7 @@ const Projects = () => {
                 }
             }
 
-            logos: allFile(
-                filter: {
-                    sourceInstanceName: { eq: "images" }
-                    relativeDirectory: { eq: "projects" }
-                }
-            ) {
+            logos: allFile(filter: { sourceInstanceName: { eq: "images" }, relativeDirectory: { eq: "projects" } }) {
                 nodes {
                     name
                     childImageSharp {
@@ -101,14 +86,7 @@ const Projects = () => {
             url: "https://afrodiasphere.com",
             type: "webapp",
             hash: "#ads",
-            stack: [
-                "GatsbyJS",
-                "ReactJS",
-                "Strapi",
-                "Netlify",
-                "Heroku",
-                "GraphQl",
-            ],
+            stack: ["GatsbyJS", "ReactJS", "Strapi", "Netlify", "Heroku", "GraphQl"],
         },
         {
             logo: "dsm-logo",
@@ -160,22 +138,29 @@ const Projects = () => {
             type: "site",
             stack: ["GatsbyJS", "ReactJS", "Netlify", "GraphQl"],
         },
+        {
+            logo: "hzl-logo",
+            name: "huzl",
+            title: "Huzl",
+            description: t("projects.huzl"),
+            url: "https://huzl.com",
+            hash: "#hzl",
+            type: "site",
+            stack: ["React Native", "Expo", "Supabase"],
+        },
     ];
+
+    const projects = [...projectData].reverse();
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const currentProject = projectData[activeIndex] || projectData[0];
+    const currentProject = projects[activeIndex] || projects[0];
 
     const getLogoImage = (name, logo) => {
         const logoNode = data.logos.nodes.find(
-            (node) =>
-                node.name === logo ||
-                node.name === name ||
-                node.name === `${name}-logo`
+            (node) => node.name === logo || node.name === name || node.name === `${name}-logo`
         );
-        return logoNode
-            ? getImage(logoNode.childImageSharp.gatsbyImageData)
-            : null;
+        return logoNode ? getImage(logoNode.childImageSharp.gatsbyImageData) : null;
     };
 
     const logoImg = getLogoImage(currentProject.name, currentProject.logo);
@@ -200,12 +185,14 @@ const Projects = () => {
                 <div className={projectsStyles.projectsWrapper}>
                     <div className={projectsStyles.projectsContent}>
                         {logoImg && (
-                            <div className={projectsStyles.projectsLogo}>
-                                <GatsbyImage
-                                    image={logoImg}
-                                    alt={currentProject.title + " logo"}
-                                />
-                            </div>
+                            <a
+                                href={currentProject.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={projectsStyles.projectsLogo}
+                            >
+                                <GatsbyImage image={logoImg} alt={currentProject.title + " logo"} />
+                            </a>
                         )}
 
                         <h4>{currentProject.title}</h4>
@@ -221,31 +208,18 @@ const Projects = () => {
 
                         <div className={projectsStyles.projectsButtons}>
                             {currentProject.url && (
-                                <a
-                                    href={currentProject.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <a href={currentProject.url} target="_blank" rel="noopener noreferrer">
                                     {currentProject.type === "webapp"
                                         ? t("projects.viewWebapp")
                                         : t("projects.viewWebsite")}
                                 </a>
                             )}
-                            <Link to={`/portfolio/${currentProject.hash}`}>
-                                Details
-                            </Link>
+                            <Link to={`/portfolio/${currentProject.hash}`}>Details</Link>
                         </div>
                     </div>
                     <div className={projectsStyles.projectsSlider}>
                         <Swiper
-                            modules={[
-                                Navigation,
-                                Pagination,
-                                Scrollbar,
-                                A11y,
-                                Parallax,
-                                Autoplay,
-                            ]}
+                            modules={[Navigation, Pagination, Scrollbar, A11y, Parallax, Autoplay]}
                             spaceBetween={10}
                             slidesPerView={1.1}
                             breakpoints={{
@@ -256,17 +230,12 @@ const Projects = () => {
                             autoplay={{
                                 delay: 10000,
                             }}
-                            onSlideChange={(swiper) =>
-                                setActiveIndex(swiper.realIndex)
-                            }
+                            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                             onInit={(swiper) => {
                                 setActiveIndex(swiper.realIndex);
-                                swiper.params.navigation.prevEl =
-                                    prevRef.current;
-                                swiper.params.navigation.nextEl =
-                                    nextRef.current;
-                                swiper.params.pagination.el =
-                                    paginationRef.current;
+                                swiper.params.navigation.prevEl = prevRef.current;
+                                swiper.params.navigation.nextEl = nextRef.current;
+                                swiper.params.pagination.el = paginationRef.current;
                                 swiper.navigation.init();
                                 swiper.navigation.update();
                                 swiper.pagination.init();
@@ -283,37 +252,20 @@ const Projects = () => {
                             loop
                             parallax
                         >
-                            {projectData.map((project, idx) => {
+                            {projects.map((project, idx) => {
                                 const imageNode = slideShowImages[project.name];
                                 const projectImg = imageNode
-                                    ? getImage(
-                                          imageNode.childImageSharp
-                                              .gatsbyImageData
-                                      )
+                                    ? getImage(imageNode.childImageSharp.gatsbyImageData)
                                     : null;
                                 return (
                                     <SwiperSlide key={project.name}>
                                         {projectImg ? (
-                                            <a
-                                                href={project.url}
-                                                rel="noopener noreferrer"
-                                                target="_blank"
-                                            >
-                                                <GatsbyImage
-                                                    image={projectImg}
-                                                    alt={project.title}
-                                                />
+                                            <a href={project.url} rel="noopener noreferrer" target="_blank">
+                                                <GatsbyImage image={projectImg} alt={project.title} />
                                             </a>
                                         ) : (
-                                            <div
-                                                className={
-                                                    projectsStyles.projectsNoImage
-                                                }
-                                            >
-                                                <StaticImage
-                                                    src="../../images/mnfx-screens.jpeg"
-                                                    alt={project.title}
-                                                />
+                                            <div className={projectsStyles.projectsNoImage}>
+                                                <StaticImage src="../../images/mnfx-screens.jpeg" alt={project.title} />
                                             </div>
                                         )}
                                     </SwiperSlide>
@@ -322,15 +274,11 @@ const Projects = () => {
                         </Swiper>
                         <div className={projectsStyles.projectsNavigation}>
                             <button ref={prevRef} aria-label="Vorige project">
-                                <FontAwesomeIcon
-                                    icon={["fas", "chevron-left"]}
-                                />
+                                <FontAwesomeIcon icon={["fas", "chevron-left"]} />
                             </button>
                             <div ref={paginationRef}></div>
                             <button ref={nextRef} aria-label="Volgende project">
-                                <FontAwesomeIcon
-                                    icon={["fas", "chevron-right"]}
-                                />
+                                <FontAwesomeIcon icon={["fas", "chevron-right"]} />
                             </button>
                         </div>
                     </div>

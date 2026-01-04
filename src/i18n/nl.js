@@ -255,13 +255,13 @@ export default {
         viewWebapp: "Bekijk webapp",
         eternitydrum: "Culturele instelling die jongeren ondersteunt via muziekeducatie en talentontwikkeling",
         blackharmony: "Zanggroep met focus op traditionele Afro-Surinaamse muziek",
-
         afrodiasphere: "Eigen initiatief voor verbinding en informatiedeling binnen de diaspora gemeenschap",
         dsmelodies: "Professioneel steeldrum-artiest Derek Simpey uit Amsterdam Zuidoost",
         knacdig: "Stichting voor identiteitsversterking en zichtbaarheid van de Afro-Caribische diaspora",
         keeptreal: "Programma onder leiding van Wenner Regales dat jongeren perspectief biedt",
         priozorg: "Dynamische hulpverlening met coaching en mentoring voor jongvolwassenen",
         edutainuproductions: "Freelancebedrijf van Otmar Watson voor culturele projecten met impact",
+        huzl: "Eigengebouwde no-nonsense app voor geldbeheer met budgetten, overzichten en notificaties",
         seeAll: "Zie alle projecten",
     },
 
@@ -272,22 +272,23 @@ export default {
         goToRepo: "Github Repo",
         noRepo: "Niet op Github",
 
-        edutainuproductions:
-            "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
-        priozorg:
-            "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Prio Zorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
-        keeptreal:
-            "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
-        afrodiasphere:
-            "<strong>Afrodiasphere</strong> is een project geheel op eigen initiatief opgezet, voornamelijk gericht op het makkelijker maken van het delen van informatie onder particulieren / bedrijven die zich willen voortmanifesteren. Maak je profiel aan & join the MOVEMENT!",
         eternitydrum:
             "<strong>Eternity Percussion</strong> is een culturele instelling die bijdrage levert aan talentontwikkeling, cultuurparticipatie en visieverbreding van jongeren. D.m.v. o.a. muziekeducatie en inzet van jongeren in eigen organisatie biedt Eternity jongeren de gelegenheid om cultureel te ondernemen en participeren binnen de Nederlandse samenleving.",
-        knacdig:
-            "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
-        dsmelodies:
-            "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit méér dan 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
         blackharmony:
             "<strong>Black Harmony</strong> is een getalenteerde zanggroep uit Amsterdam. Deze muziekorganisatie wilt een bijdrage leveren aan de positionering van de traditionele muziek genaamd Apinti Kawina én wilt fungeren als ambassadeur als het gaat om traditionele Afro-Surinaamse muziek.",
+        afrodiasphere:
+            "<strong>Afrodiasphere</strong> is een project geheel op eigen initiatief opgezet, voornamelijk gericht op het makkelijker maken van het delen van informatie onder particulieren / bedrijven die zich willen voortmanifesteren. Maak je profiel aan & join the MOVEMENT!",
+        dsmelodies:
+            "<strong>DS Melodies</strong> alias Derek Simpey is een professioneel Steeldrum-artiest uit Amsterdam Zuidoost. Met zijn unieke sound die gevormd is uit méér dan 18 jaar ervaring, creeeren hij en zijn steelpan-instrument, waar ie ook is, een waardig spectakel.",
+        knacdig:
+            "<strong>KN-ACDiG</strong> oftewel Kennis Netwerk Afrikaanse-Caribische Diaspora Gemeenschap is een stichting die zich richt op het werken aan de identiteitsversterking, het vergroten van de zichtbaarheid en het kennismanagement (advies tot monitoring) van de Afrikaanse-Caribische Diaspora Gemeenschap.",
+        keeptreal:
+            "<strong>Keep It Real</strong> is een programma onder leiding van cultureel professional Wenner Regales, dat jongeren helpt groeien buiten de grenzen van traditioneel onderwijs. Het biedt een platform voor het maken van positieve keuzes en het grijpen van kansen, geworteld in Wenner's ervaring en netwerk.",
+        priozorg:
+            "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Prio Zorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
+        edutainuproductions:
+            "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
+        huzl: "<strong>Huzl</strong> is een door Menefex eigengebouwde no-nonsense app voor geldbeheer: snelle budgetten, duidelijke overzichten en slimme notificaties zonder franje. Richt je op wat telt, houd grip op je geld en voorkom verrassingen. Huzl maakt geldbeheer simpel en effectief.",
     },
 
     prices: {

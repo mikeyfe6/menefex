@@ -73,6 +73,7 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: rem-calc(24);
+                flex: 1;
 
                 @include phablet {
                     margin-bottom: rem-calc(32);
@@ -119,11 +120,7 @@
                         gap: rem-calc(4);
 
                         > li {
-                            background: linear-gradient(
-                                145deg,
-                                $primary-color,
-                                $dark-color
-                            );
+                            background: linear-gradient(145deg, $primary-color, $dark-color);
                             border-radius: $low-radius;
                             padding: rem-calc(2 12);
                             width: fit-content;
