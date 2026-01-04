@@ -286,7 +286,7 @@ export default {
             "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Prio Zorg offers expert support in the form of coaching, mentoring and educational guidance.",
         edutainuproductions:
             "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment. Based on years of experience in the cultural sector, Edutain U Productions realizes projects that connect, deepen and strengthen. Always with a focus on inclusivity, heritage and social involvement.",
-        huzl: "<strong>Huzl</strong> is an in-house, no-nonsense money management app: quick budgets, clear overviews, and smart alerts without any fluff. Stay focused, keep control of your cash, and avoid surprises.",
+        huzl: "<strong>Huzl</strong> is an build by Menefex, no-nonsense money management app: quick budgets, clear overviews, and smart alerts without any fluff. Stay focused, keep control of your cash, and avoid surprises. Huzl makes money management simple and effective. <br /><br /> <b>Coming soon to all app stores!</b>",
     },
 
     prices: {

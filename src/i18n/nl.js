@@ -288,7 +288,7 @@ export default {
             "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Prio Zorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
         edutainuproductions:
             "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
-        huzl: "<strong>Huzl</strong> is een door Menefex eigengebouwde no-nonsense app voor geldbeheer: snelle budgetten, duidelijke overzichten en slimme notificaties zonder franje. Richt je op wat telt, houd grip op je geld en voorkom verrassingen. Huzl maakt geldbeheer simpel en effectief.",
+        huzl: "<strong>Huzl</strong> is een Menefex eigen no-nonsense app voor geldbeheer: snelle budgetten, duidelijke overzichten en slimme notificaties zonder franje. Richt je op wat telt, houd grip op je geld en voorkom verrassingen. Huzl maakt geldbeheer simpel en effectief. <br /><br /> <b>Binnenkort beschikbaar in alle app stores!</b>",
     },
 
     prices: {
