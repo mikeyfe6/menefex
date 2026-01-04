@@ -23,22 +23,6 @@
                 scroll-margin-top: rem-calc(130);
             }
 
-            &:has(img) {
-                img {
-                    aspect-ratio: 16/9;
-                }
-
-                #{$portfolio}-btns {
-                    margin-top: auto;
-                }
-            }
-
-            &:has(img[alt*="404"]) {
-                #{$portfolio}-img {
-                    pointer-events: none;
-                }
-            }
-
             #{$portfolio}-img {
                 display: block;
                 border: 2px $snow-color solid;
@@ -57,6 +41,20 @@
 
                 @include phablet {
                     margin-bottom: rem-calc(32);
+                }
+
+                img {
+                    aspect-ratio: 16 / 9;
+                }
+
+                &:has(img[alt*="404"]) {
+                    pointer-events: none;
+                }
+
+                &:not(:has(img[alt*="404"])) {
+                    img {
+                        object-position: top;
+                    }
                 }
 
                 &:hover {
