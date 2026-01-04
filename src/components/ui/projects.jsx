@@ -143,7 +143,7 @@ const Projects = () => {
             name: "huzl",
             title: "Huzl",
             description: t("projects.huzl"),
-            url: "https://huzl.com",
+            url: "https://huzl.expo.app",
             hash: "#hzl",
             type: "site",
             stack: ["React Native", "Expo", "Supabase"],
