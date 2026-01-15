@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState, useMemo } from "react";
 
 export const HydrationContext = createContext();
 
@@ -9,9 +9,7 @@ export const HydrationProvider = ({ children }) => {
         setIsHydrated(true);
     }, []);
 
-    return (
-        <HydrationContext.Provider value={{ isHydrated }}>
-            {children}
-        </HydrationContext.Provider>
-    );
+    const contextValue = useMemo(() => ({ isHydrated }), [isHydrated]);
+
+    return <HydrationContext.Provider value={contextValue}>{children}</HydrationContext.Provider>;
 };

@@ -38,7 +38,7 @@ const PortfolioPage = () => {
 
     useEffect(() => {
         if (!isHydrated) return;
-        const hash = window.location.hash?.slice(1);
+        const hash = globalThis.location.hash?.slice(1);
         if (!hash) return;
         const el = document.getElementById(hash);
         if (el) el.scrollIntoView({ behavior: "smooth" });

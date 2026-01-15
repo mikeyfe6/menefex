@@ -10,7 +10,7 @@ const useTranslationSetup = () => {
 
     useEffect(() => {
         if (isHydrated) {
-            const storedLanguage = window.localStorage.getItem("i18nextLng");
+            const storedLanguage = globalThis.localStorage.getItem("i18nextLng");
             if (storedLanguage && i18n.language !== storedLanguage) {
                 i18n.changeLanguage(storedLanguage);
             }

@@ -25,15 +25,11 @@ const Footer = () => {
         const fbLocale = currentLanguage === "nl" ? "nl_NL" : "en_US";
         const scriptSrc = `https://connect.facebook.net/${fbLocale}/sdk.js#xfbml=1&version=v24.0&appId=${process.env.GATSBY_FB_APP_ID}`;
 
-        document
-            .querySelectorAll('script[src*="connect.facebook.net"]')
-            .forEach((el) => el.remove());
+        document.querySelectorAll('script[src*="connect.facebook.net"]').forEach((el) => el.remove());
 
-        document
-            .querySelectorAll("style[data-fbcssmodules]")
-            .forEach((el) => el.remove());
+        document.querySelectorAll("style[data-fbcssmodules]").forEach((el) => el.remove());
 
-        if (window.FB) delete window.FB;
+        if (globalThis.FB) delete globalThis.FB;
         const fbRoot = document.getElementById("fb-root");
         if (fbRoot) fbRoot.innerHTML = "";
 
@@ -42,7 +38,7 @@ const Footer = () => {
         script.crossOrigin = "anonymous";
         script.src = scriptSrc;
         script.onload = () => {
-            if (window.FB) window.FB.XFBML.parse();
+            if (globalThis.FB) globalThis.FB.XFBML.parse();
         };
         document.body.appendChild(script);
 
@@ -53,19 +49,13 @@ const Footer = () => {
 
     const today = new Date().getFullYear();
 
-    const footerCredits = t("footer.credits")
-        .replace("{{today}}", today)
-        .replace("{{title}}", title);
+    const footerCredits = t("footer.credits").replace("{{today}}", today).replace("{{title}}", title);
 
     return (
         <footer>
             <div className={footerStyles.footerQuote}>
                 <blockquote>
-                    <cite>
-                        &quot;Instead of thinking outside of the box, get rid of
-                        the box&quot;
-                    </cite>{" "}
-                    - Deepak Chopra
+                    <cite>&quot;Instead of thinking outside of the box, get rid of the box&quot;</cite> - Deepak Chopra
                 </blockquote>
             </div>
             <div className={footerStyles.footerMain}>
@@ -76,31 +66,19 @@ const Footer = () => {
                                 <h4>Connect with us</h4>
 
                                 <div>
-                                    <a
-                                        href={`mailto:${email}`}
-                                        rel="noopener noreferrer"
-                                        target="_blank"
-                                    >
-                                        <span className={footerStyles.mail}>
-                                            e:
-                                        </span>{" "}
-                                        {email}
+                                    <a href={`mailto:${email}`} rel="noopener noreferrer" target="_blank">
+                                        <span className={footerStyles.mail}>e:</span> {email}
                                     </a>{" "}
                                     <a href={`tel:+${telephone}`}>
-                                        <span className={footerStyles.tel}>
-                                            t:
-                                        </span>{" "}
-                                        +31 6 11 05 43 18
+                                        <span className={footerStyles.tel}>t:</span> +31 6 11 05 43 18
                                     </a>
                                 </div>
                             </div>
                             <div>
                                 <h4>Straight from</h4>
                                 <p>
-                                    <span className={footerStyles.amsterdam}>
-                                        x x x
-                                    </span>{" "}
-                                    amsterdam, {t("footer.nederland")}
+                                    <span className={footerStyles.amsterdam}>x x x</span> amsterdam,{" "}
+                                    {t("footer.nederland")}
                                 </p>
                             </div>
                         </div>
@@ -109,14 +87,10 @@ const Footer = () => {
                             <h4>{t("footer.services.title")}</h4>
                             <ul>
                                 <li>
-                                    <Link to="/diensten/analyse-laten-uitvoeren/">
-                                        {t("footer.services.analyse")}
-                                    </Link>
+                                    <Link to="/diensten/analyse-laten-uitvoeren/">{t("footer.services.analyse")}</Link>
                                 </li>
                                 <li>
-                                    <Link to="/diensten/email-template-laten-maken/">
-                                        {t("footer.services.email")}
-                                    </Link>
+                                    <Link to="/diensten/email-template-laten-maken/">{t("footer.services.email")}</Link>
                                 </li>
                                 <li>
                                     <Link to="/diensten/onderhoud-updates-uitvoeren/">
@@ -129,24 +103,16 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/diensten/webapplicatie-laten-maken/">
-                                        {t("footer.services.webapp")}
-                                    </Link>
+                                    <Link to="/diensten/webapplicatie-laten-maken/">{t("footer.services.webapp")}</Link>
                                 </li>
                                 <li>
-                                    <Link to="/diensten/webshop-laten-maken/">
-                                        {t("footer.services.webshop")}
-                                    </Link>
+                                    <Link to="/diensten/webshop-laten-maken/">{t("footer.services.webshop")}</Link>
                                 </li>
                                 <li>
-                                    <Link to="/diensten/website-laten-maken/">
-                                        {t("footer.services.website")}
-                                    </Link>
+                                    <Link to="/diensten/website-laten-maken/">{t("footer.services.website")}</Link>
                                 </li>
                                 <li>
-                                    <Link to="/diensten/zoekmachineoptimalisatie/">
-                                        {t("footer.services.seo")}
-                                    </Link>
+                                    <Link to="/diensten/zoekmachineoptimalisatie/">{t("footer.services.seo")}</Link>
                                 </li>
                             </ul>
                         </div>
@@ -161,9 +127,7 @@ const Footer = () => {
                                     <Link to="/portfolio/">Portfolio</Link>
                                 </li>
                                 <li>
-                                    <Link to="/prijzen/">
-                                        {t("footer.prices")}
-                                    </Link>
+                                    <Link to="/prijzen/">{t("footer.prices")}</Link>
                                 </li>
                                 <li>
                                     <Link to="/blog/">Blog</Link>
@@ -172,11 +136,7 @@ const Footer = () => {
                                     <Link to="/faq/">FAQ</Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="/sitemap-0.xml"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
+                                    <a href="/sitemap-0.xml" target="_blank" rel="noopener noreferrer">
                                         Sitemap
                                     </a>
                                 </li>
@@ -197,10 +157,7 @@ const Footer = () => {
                                         className={footerStyles.fb}
                                         aria-label="Facebook"
                                     >
-                                        <FontAwesomeIcon
-                                            icon={["fab", "facebook-f"]}
-                                            size="xl"
-                                        />
+                                        <FontAwesomeIcon icon={["fab", "facebook-f"]} size="xl" />
                                     </a>
                                 </li>
                                 <li>
@@ -211,10 +168,7 @@ const Footer = () => {
                                         className={footerStyles.ig}
                                         aria-label="Instagram"
                                     >
-                                        <FontAwesomeIcon
-                                            icon={["fab", "instagram"]}
-                                            size="xl"
-                                        />
+                                        <FontAwesomeIcon icon={["fab", "instagram"]} size="xl" />
                                     </a>
                                 </li>
                                 <li>
@@ -225,10 +179,7 @@ const Footer = () => {
                                         className={footerStyles.tw}
                                         aria-label="Twitter"
                                     >
-                                        <FontAwesomeIcon
-                                            icon={["fab", "x-twitter"]}
-                                            size="xl"
-                                        />
+                                        <FontAwesomeIcon icon={["fab", "x-twitter"]} size="xl" />
                                     </a>
                                 </li>
                                 <li>
@@ -239,10 +190,7 @@ const Footer = () => {
                                         className={footerStyles.li}
                                         aria-label="LinkedIn"
                                     >
-                                        <FontAwesomeIcon
-                                            icon={["fab", "linkedin"]}
-                                            size="xl"
-                                        />
+                                        <FontAwesomeIcon icon={["fab", "linkedin"]} size="xl" />
                                     </a>
                                 </li>
                                 <li>
@@ -253,10 +201,7 @@ const Footer = () => {
                                         className={footerStyles.gh}
                                         aria-label="GitHub"
                                     >
-                                        <FontAwesomeIcon
-                                            icon={["fab", "github"]}
-                                            size="xl"
-                                        />
+                                        <FontAwesomeIcon icon={["fab", "github"]} size="xl" />
                                     </a>
                                 </li>
                             </ul>
@@ -278,25 +223,12 @@ const Footer = () => {
                                         cite={`https://www.facebook.com/${handle}`}
                                         className="fb-xfbml-parse-ignore"
                                     >
-                                        <a
-                                            href={`https://www.facebook.com/${handle}`}
-                                        >
-                                            {company}
-                                        </a>
+                                        <a href={`https://www.facebook.com/${handle}`}>{company}</a>
                                     </blockquote>
                                 </div>
                             </div>
-                            <a
-                                href="https://www.buymeacoffee.com/menefex"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <StaticImage
-                                    src="../../images/bmc.png"
-                                    alt="Buy Me A Coffee"
-                                    width={154}
-                                    height={44}
-                                />
+                            <a href="https://www.buymeacoffee.com/menefex" target="_blank" rel="noopener noreferrer">
+                                <StaticImage src="../../images/bmc.png" alt="Buy Me A Coffee" width={154} height={44} />
                             </a>
 
                             {/* <a href="https://www.buymeacoffee.com/menefex">
@@ -306,18 +238,10 @@ const Footer = () => {
                     </div>
 
                     <Link to="/" className={footerStyles.footerLogo}>
-                        <img
-                            src={minilogo}
-                            alt="Menefex Mini Logo"
-                            width={110}
-                            height={110}
-                        />
+                        <img src={minilogo} alt="Menefex Mini Logo" width={110} height={110} />
                     </Link>
 
-                    <small
-                        className={footerStyles.footerCredits}
-                        dangerouslySetInnerHTML={{ __html: footerCredits }}
-                    />
+                    <small className={footerStyles.footerCredits} dangerouslySetInnerHTML={{ __html: footerCredits }} />
                 </div>
             </div>
         </footer>

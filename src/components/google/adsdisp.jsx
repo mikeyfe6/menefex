@@ -4,7 +4,8 @@ import React, { useEffect } from "react";
 
 const GoogleAdsDisplay = ({ slot }) => {
     useEffect(() => {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        globalThis.adsbygoogle = globalThis.adsbygoogle || [];
+        globalThis.adsbygoogle.push({});
         return () => {};
     }, []);
 

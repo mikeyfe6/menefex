@@ -24,16 +24,14 @@ const Form = () => {
     });
 
     useEffect(() => {
-        if (typeof window === "undefined" || recaptchaLoaded) return;
+        if (globalThis.window === undefined || recaptchaLoaded) return;
 
-        if (window.grecaptcha) {
+        if (globalThis.grecaptcha) {
             setRecaptchaLoaded(true);
             return;
         }
 
-        const existingScript = document.querySelector(
-            `script[src*="google.com/recaptcha/api.js"]`
-        );
+        const existingScript = document.querySelector(`script[src*="google.com/recaptcha/api.js"]`);
         if (existingScript) {
             existingScript.addEventListener("load", () => {
                 setRecaptchaLoaded(true);
@@ -50,7 +48,7 @@ const Form = () => {
     }, [recaptchaLoaded]);
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
+        if (typeof globalThis.window !== "undefined") {
             if (sessionStorage.getItem("mnfx") !== null) {
                 const mnfxPrice = sessionStorage.getItem("mnfx");
                 setInputs({ message: mnfxPrice });
@@ -79,18 +77,15 @@ const Form = () => {
             event.preventDefault();
             event.stopPropagation();
 
-            if (!recaptchaLoaded || !window.grecaptcha) {
+            if (!recaptchaLoaded || !globalThis.grecaptcha) {
                 console.error("reCAPTCHA not loaded");
                 return;
             }
 
             try {
-                const token = await window.grecaptcha.execute(
-                    RECAPTCHA_SITE_KEY,
-                    {
-                        action: "leadFormSubmit",
-                    }
-                );
+                const token = await globalThis.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+                    action: "leadFormSubmit",
+                });
 
                 await axios({
                     url: "/.netlify/functions/sendmail",
@@ -168,28 +163,12 @@ const Form = () => {
             <label htmlFor="lead_subject">
                 <span>*</span> {t("contact.form.subject.default")}
             </label>
-            <select
-                name="subject"
-                id="lead_subject"
-                value={inputs.subject}
-                onChange={handleChange}
-                required
-            >
-                <option value="Ik wil een offerte aanvragen">
-                    {t("contact.form.subject.quote")}
-                </option>
-                <option value="Ik wil een samenwerking aangaan">
-                    {t("contact.form.subject.collab")}
-                </option>
-                <option value="Ik heb een vraag of opmerking">
-                    {t("contact.form.subject.question")}
-                </option>
-                <option value="Ik wil graag feedback geven">
-                    {t("contact.form.subject.complaint")}
-                </option>
-                <option value="Ik wil graag hulp of ondersteuning">
-                    {t("contact.form.subject.help")}
-                </option>
+            <select name="subject" id="lead_subject" value={inputs.subject} onChange={handleChange} required>
+                <option value="Ik wil een offerte aanvragen">{t("contact.form.subject.quote")}</option>
+                <option value="Ik wil een samenwerking aangaan">{t("contact.form.subject.collab")}</option>
+                <option value="Ik heb een vraag of opmerking">{t("contact.form.subject.question")}</option>
+                <option value="Ik wil graag feedback geven">{t("contact.form.subject.complaint")}</option>
+                <option value="Ik wil graag hulp of ondersteuning">{t("contact.form.subject.help")}</option>
             </select>
 
             <label htmlFor="lead_text">

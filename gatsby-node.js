@@ -1,5 +1,5 @@
-const path = require("path");
-const fs = require("fs").promises;
+const path = require("node:path");
+const fs = require("node:fs").promises;
 const puppeteer = require("puppeteer");
 
 const { documentToHtmlString } = require("@contentful/rich-text-html-renderer");
@@ -361,7 +361,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     author: nlContent ? nlContent.author : "",
                     topics: nlContent ? nlContent.topics : [],
                     keywords: nlContent ? nlContent.keywords : [],
-                    subtitle: nlContent ? nlContent.subtitle : "",
                     typename: nlContent ? nlContent.__typename : "",
                 },
                 enContent: {
@@ -376,7 +375,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
                     author: enContent ? enContent.author : "",
                     topics: enContent ? enContent.topics : [],
                     keywords: enContent ? enContent.keywords : [],
-                    subtitle: enContent ? enContent.subtitle : "",
                     typename: enContent ? enContent.__typename : "",
                 },
             },

@@ -59,16 +59,14 @@ const Call = ({ callRef }) => {
     });
 
     useEffect(() => {
-        if (typeof window === "undefined" || recaptchaLoaded) return;
+        if (globalThis.window === undefined || recaptchaLoaded) return;
 
-        if (window.grecaptcha) {
+        if (globalThis.grecaptcha) {
             setRecaptchaLoaded(true);
             return;
         }
 
-        const existingScript = document.querySelector(
-            `script[src*="google.com/recaptcha/api.js"]`
-        );
+        const existingScript = document.querySelector(`script[src*="google.com/recaptcha/api.js"]`);
         if (existingScript) {
             existingScript.addEventListener("load", () => {
                 setRecaptchaLoaded(true);
@@ -96,10 +94,7 @@ const Call = ({ callRef }) => {
                 ""
             );
 
-            const dayPrefix =
-                currentHour >= slot.hour
-                    ? t("prices.form.tomorrow")
-                    : t("prices.form.today");
+            const dayPrefix = currentHour >= slot.hour ? t("prices.form.tomorrow") : t("prices.form.today");
 
             return {
                 ...slot,
@@ -126,18 +121,15 @@ const Call = ({ callRef }) => {
             event.preventDefault();
             event.stopPropagation();
 
-            if (!recaptchaLoaded || !window.grecaptcha) {
+            if (!recaptchaLoaded || !globalThis.grecaptcha) {
                 console.error("reCAPTCHA not loaded");
                 return;
             }
 
             try {
-                const token = await window.grecaptcha.execute(
-                    RECAPTCHA_SITE_KEY,
-                    {
-                        action: "callFormSubmit",
-                    }
-                );
+                const token = await globalThis.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+                    action: "callFormSubmit",
+                });
 
                 await axios({
                     url: "/.netlify/functions/sendmail",
@@ -160,12 +152,7 @@ const Call = ({ callRef }) => {
     if (!isHydrated) return null;
 
     return (
-        <form
-            onSubmit={handleSubmit}
-            className={callStyles.callForm}
-            action="/success/"
-            id="call-form"
-        >
+        <form onSubmit={handleSubmit} className={callStyles.callForm} action="/success/" id="call-form">
             <h3>{t("prices.form.title")}</h3>
             <hr />
 
@@ -199,14 +186,7 @@ const Call = ({ callRef }) => {
             <label htmlFor="call_time">
                 <span>*</span> {t("prices.form.selectTime")}
             </label>
-            <select
-                required
-                name="time"
-                id="call_time"
-                value={inputs.time}
-                onChange={handleChange}
-                multiple={false}
-            >
+            <select required name="time" id="call_time" value={inputs.time} onChange={handleChange} multiple={false}>
                 <option value="" disabled>
                     {t("prices.form.chooseDay")}
                 </option>

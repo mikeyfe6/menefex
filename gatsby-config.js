@@ -11,8 +11,7 @@ const siteMetadata = {
 
     title: "Menefex",
     company: "Menefex Webmediabureau",
-    description:
-        "Bij Menefex bouwen wij websites, webshops & webapplicaties met oog voor detail.",
+    description: "Bij Menefex bouwen wij websites, webshops & webapplicaties met oog voor detail.",
 
     telephone: "31611054318",
     email: "info@menefex.nl",
@@ -179,28 +178,16 @@ module.exports = {
                 }),
                 feeds: [
                     {
-                        serialize: ({
-                            query: { site, allContentfulBlogPost },
-                        }) =>
+                        serialize: ({ query: { site, allContentfulBlogPost } }) =>
                             allContentfulBlogPost.edges.map((edge) => {
                                 const { siteUrl } = site.siteMetadata;
-                                const {
-                                    contentful_id,
-                                    title,
-                                    subtitle,
-                                    slug,
-                                    publishedDate,
-                                    body,
-                                    image,
-                                    topics,
-                                } = edge.node;
+                                const { contentful_id, title, subtitle, slug, publishedDate, body, image, topics } =
+                                    edge.node;
 
                                 return {
                                     title: title,
                                     description: subtitle,
-                                    categories: topics.map(
-                                        (topic) => topic.name
-                                    ),
+                                    categories: topics.map((topic) => topic.name),
                                     date: publishedDate,
                                     url: `${siteUrl}/blog/${slug}`,
                                     guid: contentful_id,
@@ -306,42 +293,30 @@ module.exports = {
                 }
                 `,
                 resolveSiteUrl: () => superSiteUrl,
-                resolvePages: async ({
-                    allSitePage,
-                    allContentfulBlogPost,
-                    allContentfulTopic,
-                }) => {
-                    const blogPostsMap = allContentfulBlogPost.nodes.reduce(
-                        (acc, post) => {
-                            const { slug, updatedAt } = post;
-                            acc[`/blog/${slug}/`] = {
-                                path: `/blog/${slug}/`,
-                                updatedAt,
-                            };
-                            return acc;
-                        },
-                        {}
-                    );
+                resolvePages: async ({ allSitePage, allContentfulBlogPost, allContentfulTopic }) => {
+                    const blogPostsMap = allContentfulBlogPost.nodes.reduce((acc, post) => {
+                        const { slug, updatedAt } = post;
+                        acc[`/blog/${slug}/`] = {
+                            path: `/blog/${slug}/`,
+                            updatedAt,
+                        };
+                        return acc;
+                    }, {});
 
-                    const topicsMap = allContentfulTopic.nodes.reduce(
-                        (acc, post) => {
-                            const { slug, updatedAt } = post;
-                            acc[`/topics/${slug}/`] = {
-                                path: `/topics/${slug}/`,
-                                updatedAt,
-                            };
-                            return acc;
-                        },
-                        {}
-                    );
+                    const topicsMap = allContentfulTopic.nodes.reduce((acc, post) => {
+                        const { slug, updatedAt } = post;
+                        acc[`/topics/${slug}/`] = {
+                            path: `/topics/${slug}/`,
+                            updatedAt,
+                        };
+                        return acc;
+                    }, {});
 
                     const sitePagesMap = {};
                     for (const page of allSitePage.nodes) {
                         const { path } = page;
 
-                        const filePath = `src/pages${
-                            path === "/" ? "/index" : path.replace(/\/$/, "")
-                        }.jsx`;
+                        const filePath = `src/pages${path === "/" ? "/index" : path.replace(/\/$/, "")}.jsx`;
 
                         const lastmod = await fetchLastCommitDate(filePath);
                         sitePagesMap[path] = { path, updatedAt: lastmod };
@@ -382,6 +357,6 @@ module.exports = {
                 crossOrigin: "use-credentials",
             },
         },
-        "gatsby-plugin-offline",
+        // "gatsby-plugin-offline",
     ],
 };

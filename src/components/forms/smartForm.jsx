@@ -23,16 +23,14 @@ const SmartForm = () => {
     const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
     useEffect(() => {
-        if (typeof window === "undefined" || recaptchaLoaded) return;
+        if (globalThis.window === undefined || recaptchaLoaded) return;
 
-        if (window.grecaptcha) {
+        if (globalThis.grecaptcha) {
             setRecaptchaLoaded(true);
             return;
         }
 
-        const existingScript = document.querySelector(
-            `script[src*="google.com/recaptcha/api.js"]`
-        );
+        const existingScript = document.querySelector(`script[src*="google.com/recaptcha/api.js"]`);
         if (existingScript) {
             existingScript.addEventListener("load", () => {
                 setRecaptchaLoaded(true);
@@ -51,12 +49,12 @@ const SmartForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            if (!recaptchaLoaded || !window.grecaptcha) {
+            if (!recaptchaLoaded || !globalThis.grecaptcha) {
                 console.error("reCAPTCHA not loaded");
                 return;
             }
 
-            const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+            const token = await globalThis.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
                 action: "smartFormSubmit",
             });
 
@@ -179,10 +177,7 @@ const SmartForm = () => {
                 return (
                     <>
                         <div className={smartFormStyles.smartFormHeader}>
-                            <label
-                                htmlFor={question.id}
-                                className={smartFormStyles.smartFormLabel}
-                            >
+                            <label htmlFor={question.id} className={smartFormStyles.smartFormLabel}>
                                 {question.question}
                                 <span>*</span>
                             </label>
@@ -192,45 +187,24 @@ const SmartForm = () => {
                                     <button
                                         type="button"
                                         onClick={() =>
-                                            setActiveTooltip(
-                                                activeTooltip === question.id
-                                                    ? null
-                                                    : question.id
-                                            )
+                                            setActiveTooltip(activeTooltip === question.id ? null : question.id)
                                         }
                                     >
-                                        <FontAwesomeIcon
-                                            icon={["fas", "circle-question"]}
-                                            size="lg"
-                                        />
+                                        <FontAwesomeIcon icon={["fas", "circle-question"]} size="lg" />
                                     </button>
                                     {activeTooltip === question.id && (
                                         <div>
                                             <p>{getTooltipText(question.id)}</p>
-                                            <button
-                                                type="button"
-                                                onClick={() =>
-                                                    setActiveTooltip(null)
-                                                }
-                                            >
-                                                <FontAwesomeIcon
-                                                    icon={["fas", "fa-xmark"]}
-                                                    size="sm"
-                                                />
+                                            <button type="button" onClick={() => setActiveTooltip(null)}>
+                                                <FontAwesomeIcon icon={["fas", "fa-xmark"]} size="sm" />
                                             </button>
                                         </div>
                                     )}
                                 </>
                             )}
                         </div>
-                        <select
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
-                            id={question.id}
-                        >
-                            <option value="">
-                                {t("smartform.options.choose")}
-                            </option>
+                        <select value={inputValue} onChange={(e) => setInputValue(e.target.value)} id={question.id}>
+                            <option value="">{t("smartform.options.choose")}</option>
                             {question.options.map((opt, idx) => (
                                 <option key={idx} value={opt.value}>
                                     {opt.label}
@@ -250,50 +224,30 @@ const SmartForm = () => {
 
                             <button
                                 type="button"
-                                onClick={() =>
-                                    setActiveTooltip(
-                                        activeTooltip === question.id
-                                            ? null
-                                            : question.id
-                                    )
-                                }
+                                onClick={() => setActiveTooltip(activeTooltip === question.id ? null : question.id)}
                             >
-                                <FontAwesomeIcon
-                                    icon={["fas", "circle-question"]}
-                                    size="lg"
-                                />
+                                <FontAwesomeIcon icon={["fas", "circle-question"]} size="lg" />
                             </button>
 
                             {activeTooltip === question.id && (
                                 <div>
                                     <p>{getTooltipText(question.id)}</p>
 
-                                    <button
-                                        type="button"
-                                        onClick={() => setActiveTooltip(null)}
-                                    >
-                                        <FontAwesomeIcon
-                                            icon={["fas", "fa-xmark"]}
-                                            size="sm"
-                                        />
+                                    <button type="button" onClick={() => setActiveTooltip(null)}>
+                                        <FontAwesomeIcon icon={["fas", "fa-xmark"]} size="sm" />
                                     </button>
                                 </div>
                             )}
                         </div>
                         {["yes", "no"].map((opt) => (
-                            <div
-                                key={opt}
-                                className={smartFormStyles.smartFormSelect}
-                            >
+                            <div key={opt} className={smartFormStyles.smartFormSelect}>
                                 <label htmlFor={`${question.id}-${opt}`}>
                                     <input
                                         type="radio"
                                         value={opt}
                                         checked={inputValue === opt}
                                         id={`${question.id}-${opt}`}
-                                        onChange={(e) =>
-                                            setInputValue(e.target.value)
-                                        }
+                                        onChange={(e) => setInputValue(e.target.value)}
                                     />
                                     <span />
                                     {t(`smartform.label.${opt}`)}
@@ -306,42 +260,24 @@ const SmartForm = () => {
                 return (
                     <>
                         <div className={smartFormStyles.smartFormHeader}>
-                            <label
-                                htmlFor={question.id}
-                                className={smartFormStyles.smartFormLabel}
-                            >
+                            <label htmlFor={question.id} className={smartFormStyles.smartFormLabel}>
                                 {question.question}
                                 <span>*</span>
                             </label>
 
                             <button
                                 type="button"
-                                onClick={() =>
-                                    setActiveTooltip(
-                                        activeTooltip === question.id
-                                            ? null
-                                            : question.id
-                                    )
-                                }
+                                onClick={() => setActiveTooltip(activeTooltip === question.id ? null : question.id)}
                             >
-                                <FontAwesomeIcon
-                                    icon={["fas", "circle-question"]}
-                                    size="lg"
-                                />
+                                <FontAwesomeIcon icon={["fas", "circle-question"]} size="lg" />
                             </button>
 
                             {activeTooltip === question.id && (
                                 <div>
                                     <p>{getTooltipText(question.id)}</p>
 
-                                    <button
-                                        type="button"
-                                        onClick={() => setActiveTooltip(null)}
-                                    >
-                                        <FontAwesomeIcon
-                                            icon={["fas", "fa-xmark"]}
-                                            size="sm"
-                                        />
+                                    <button type="button" onClick={() => setActiveTooltip(null)}>
+                                        <FontAwesomeIcon icon={["fas", "fa-xmark"]} size="sm" />
                                     </button>
                                 </div>
                             )}
@@ -466,9 +402,7 @@ const SmartForm = () => {
     const visibleFlow = flow.filter((q) => isVisible(q));
     const currentQuestion = visibleFlow[currentStep];
 
-    const [inputValue, setInputValue] = useState(
-        answers[currentQuestion?.id] || ""
-    );
+    const [inputValue, setInputValue] = useState(answers[currentQuestion?.id] || "");
 
     useEffect(() => {
         setInputValue(answers[currentQuestion?.id] || "");
@@ -511,31 +445,22 @@ const SmartForm = () => {
         if (id === "need") return t("smartform.questions.need");
         if (id === "hasWebsite") {
             if (!need) return t("smartform.questions.hasWebsite.default");
-            if (need === "website" || need === "SEO")
-                return t("smartform.questions.hasWebsite.website");
-            if (need === "webshop")
-                return t("smartform.questions.hasWebsite.webshop");
-            if (need === "webapp")
-                return t("smartform.questions.hasWebsite.webapp");
+            if (need === "website" || need === "SEO") return t("smartform.questions.hasWebsite.website");
+            if (need === "webshop") return t("smartform.questions.hasWebsite.webshop");
+            if (need === "webapp") return t("smartform.questions.hasWebsite.webapp");
         }
         if (id === "websiteUrl") {
             if (!need) return t("smartform.questions.websiteUrl.default");
-            if (need === "website" || need === "SEO")
-                return t("smartform.questions.websiteUrl.website");
-            if (need === "webshop")
-                return t("smartform.questions.websiteUrl.webshop");
-            if (need === "webapp")
-                return t("smartform.questions.websiteUrl.webapp");
+            if (need === "website" || need === "SEO") return t("smartform.questions.websiteUrl.website");
+            if (need === "webshop") return t("smartform.questions.websiteUrl.webshop");
+            if (need === "webapp") return t("smartform.questions.websiteUrl.webapp");
             return t("smartform.questions.websiteUrl.default");
         }
         if (id === "selfManage") {
             if (!need) return t("smartform.questions.selfManage.default");
-            if (need === "website")
-                return t("smartform.questions.selfManage.website");
-            if (need === "webshop")
-                return t("smartform.questions.selfManage.webshop");
-            if (need === "webapp")
-                return t("smartform.questions.selfManage.webapp");
+            if (need === "website") return t("smartform.questions.selfManage.website");
+            if (need === "webshop") return t("smartform.questions.selfManage.webshop");
+            if (need === "webapp") return t("smartform.questions.selfManage.webapp");
         }
         if (id === "budget") return t("smartform.questions.budget");
         if (id === "name") return t("smartform.questions.name");
@@ -578,10 +503,7 @@ const SmartForm = () => {
         }
 
         // Special case: Webshop + low budget
-        if (
-            answers.need === "webshop" &&
-            (answers.budget === "< €500" || answers.budget === "€500 - €1000")
-        ) {
+        if (answers.need === "webshop" && (answers.budget === "< €500" || answers.budget === "€500 - €1000")) {
             return {
                 title: t("smartform.advice.businessPlan.title"),
                 description: t("smartform.advice.webshopLowBudget.description"),
@@ -641,9 +563,7 @@ const SmartForm = () => {
             case "€1000 - €2500":
                 return {
                     title: t("smartform.advice.establishedPlan.title"),
-                    description: t(
-                        "smartform.advice.establishedPlan.description"
-                    ),
+                    description: t("smartform.advice.establishedPlan.description"),
                     cta: t("smartform.advice.cta.requestQuote"),
                     price: "€1025",
                     hourCosts,
@@ -668,10 +588,7 @@ const SmartForm = () => {
 
     const isAdviceStep = currentStep >= visibleFlow.length;
 
-    const progress =
-        visibleFlow.length > 0
-            ? Math.min(currentStep / visibleFlow.length, 1)
-            : 0;
+    const progress = visibleFlow.length > 0 ? Math.min(currentStep / visibleFlow.length, 1) : 0;
 
     const handleReset = () => {
         setAnswers({});
@@ -694,35 +611,15 @@ const SmartForm = () => {
                                 answers[q.id] ? (
                                     <li key={q.id}>
                                         <small>
-                                            {getDynamicQuestion(
-                                                q.id,
-                                                answers["need"]
-                                            )}
-                                            :{" "}
+                                            {getDynamicQuestion(q.id, answers["need"])}:{" "}
                                             <strong>
                                                 {q.type === "radio"
-                                                    ? getRadioLabel(
-                                                          answers[q.id]
-                                                      )
-                                                    : getOptionLabel(
-                                                          q,
-                                                          answers[q.id]
-                                                      )}
+                                                    ? getRadioLabel(answers[q.id])
+                                                    : getOptionLabel(q, answers[q.id])}
                                             </strong>
                                             {!success && (
-                                                <button
-                                                    type="button"
-                                                    onClick={() =>
-                                                        setCurrentStep(idx)
-                                                    }
-                                                >
-                                                    <FontAwesomeIcon
-                                                        icon={[
-                                                            "far",
-                                                            "pen-to-square",
-                                                        ]}
-                                                        size="sm"
-                                                    />
+                                                <button type="button" onClick={() => setCurrentStep(idx)}>
+                                                    <FontAwesomeIcon icon={["far", "pen-to-square"]} size="sm" />
                                                 </button>
                                             )}
                                         </small>
@@ -746,11 +643,7 @@ const SmartForm = () => {
                                 <h4>{t("smartform.success.title")}</h4>
                                 <p>{t("smartform.success.subtitle")}</p>
                                 <button type="button" onClick={handleReset}>
-                                    {t("smartform.restart")}{" "}
-                                    <FontAwesomeIcon
-                                        icon={["fas", "rotate-left"]}
-                                        size="xs"
-                                    />
+                                    {t("smartform.restart")} <FontAwesomeIcon icon={["fas", "rotate-left"]} size="xs" />
                                 </button>
                             </div>
                         ) : isAdviceStep ? (
@@ -760,57 +653,27 @@ const SmartForm = () => {
                                     return (
                                         <>
                                             <h4>
-                                                {advice.title}{" "}
-                                                {advice.price && (
-                                                    <span>{advice.price}</span>
-                                                )}
+                                                {advice.title} {advice.price && <span>{advice.price}</span>}
                                             </h4>
                                             <p>{advice.description}</p>
-                                            {advice.hourCosts && (
-                                                <em>{advice.hourCosts}</em>
-                                            )}
-                                            {advice.extra && (
-                                                <span>{advice.extra}</span>
-                                            )}
+                                            {advice.hourCosts && <em>{advice.hourCosts}</em>}
+                                            {advice.extra && <span>{advice.extra}</span>}
                                             <Link to="/prijzen/">
                                                 {t("smartform.prices")}{" "}
-                                                <FontAwesomeIcon
-                                                    icon={[
-                                                        "fas",
-                                                        "arrow-right-long",
-                                                    ]}
-                                                    size="sm"
-                                                />
+                                                <FontAwesomeIcon icon={["fas", "arrow-right-long"]} size="sm" />
                                             </Link>
-                                            <button
-                                                type="button"
-                                                onClick={handleReset}
-                                            >
+                                            <button type="button" onClick={handleReset}>
                                                 {t("smartform.restart")}{" "}
-                                                <FontAwesomeIcon
-                                                    icon={[
-                                                        "fas",
-                                                        "rotate-left",
-                                                    ]}
-                                                    size="xs"
-                                                />
+                                                <FontAwesomeIcon icon={["fas", "rotate-left"]} size="xs" />
                                             </button>
                                             <div>
                                                 <input
                                                     type="checkbox"
                                                     id="confirm"
                                                     checked={confirmChecked}
-                                                    onChange={(e) =>
-                                                        setConfirmChecked(
-                                                            e.target.checked
-                                                        )
-                                                    }
+                                                    onChange={(e) => setConfirmChecked(e.target.checked)}
                                                 />
-                                                <label htmlFor="confirm">
-                                                    {t(
-                                                        "smartform.confirmation"
-                                                    )}
-                                                </label>
+                                                <label htmlFor="confirm">{t("smartform.confirmation")}</label>
                                             </div>
                                             <small
                                                 dangerouslySetInnerHTML={{
@@ -818,16 +681,10 @@ const SmartForm = () => {
                                                 }}
                                             />
                                             <div>
-                                                <button
-                                                    type="button"
-                                                    onClick={handleBack}
-                                                >
+                                                <button type="button" onClick={handleBack}>
                                                     {t("smartform.back")}
                                                 </button>
-                                                <button
-                                                    type="submit"
-                                                    disabled={!confirmChecked}
-                                                >
+                                                <button type="submit" disabled={!confirmChecked}>
                                                     {getAdvice(answers).cta}
                                                 </button>
                                             </div>
@@ -841,33 +698,22 @@ const SmartForm = () => {
                                     question={{
                                         ...currentQuestion,
                                         question:
-                                            getDynamicQuestion(
-                                                currentQuestion.id,
-                                                answers["need"]
-                                            ) || currentQuestion.question,
+                                            getDynamicQuestion(currentQuestion.id, answers["need"]) ||
+                                            currentQuestion.question,
                                     }}
                                     inputValue={inputValue}
                                     setInputValue={setInputValue}
                                 />
-                                <div
-                                    className={smartFormStyles.smartFormButtons}
-                                >
+                                <div className={smartFormStyles.smartFormButtons}>
                                     {currentStep > 0 && (
-                                        <button
-                                            type="button"
-                                            onClick={handleBack}
-                                            id="smartform-tracking"
-                                        >
+                                        <button type="button" onClick={handleBack} id="smartform-tracking">
                                             {t("smartform.back")}
                                         </button>
                                     )}
                                     <button
                                         type="button"
                                         onClick={() => {
-                                            if (
-                                                inputValue ||
-                                                currentQuestion.optional
-                                            ) {
+                                            if (inputValue || currentQuestion.optional) {
                                                 handleNext();
                                             }
                                         }}

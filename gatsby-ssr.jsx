@@ -1,8 +1,6 @@
 import * as React from "react";
 
-import { wrapRoot } from "./src/lib/wrapRoot";
-
-export const wrapRootElement = wrapRoot;
+export { wrapRoot as wrapRootElement } from "./src/lib/wrapRoot";
 
 const HtmlAttributes = {
     lang: "nl",
@@ -19,20 +17,13 @@ const HeadComponents = [
     />,
 ];
 
-export const onRenderBody = ({
-    setHeadComponents,
-    setHtmlAttributes,
-    setBodyAttributes,
-}) => {
+export const onRenderBody = ({ setHeadComponents, setHtmlAttributes, setBodyAttributes }) => {
     setHtmlAttributes(HtmlAttributes);
     setHeadComponents(HeadComponents);
     setBodyAttributes({});
 };
 
-export const onPreRenderHTML = ({
-    getHeadComponents,
-    replaceHeadComponents,
-}) => {
+export const onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
     const headComponents = getHeadComponents();
     replaceHeadComponents(headComponents);
 };

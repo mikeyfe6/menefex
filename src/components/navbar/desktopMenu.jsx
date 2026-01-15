@@ -28,7 +28,7 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
 
         if (!banner || !menu) return;
 
-        const observer = new window.IntersectionObserver(
+        const observer = new globalThis.IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     menu.dataset.scrolled = "false";
@@ -46,12 +46,11 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
 
     const switchLanguage = (lang) => {
         i18n.changeLanguage(lang);
-        window.localStorage.setItem("i18nextLng", lang);
+        globalThis.localStorage.setItem("i18nextLng", lang);
     };
 
     const checkIfPartiallyActive = ({ isPartiallyCurrent, location }) => {
-        return location.pathname.includes("/blog/") ||
-            location.pathname.includes("/topics/")
+        return location.pathname.includes("/blog/") || location.pathname.includes("/topics/")
             ? { className: desktopMenuStyles.activePage }
             : isPartiallyCurrent
             ? { className: desktopMenuStyles.activePage }
@@ -62,48 +61,30 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
         <div className={desktopMenuStyles.desktopMenu} ref={menuRef}>
             <nav>
                 <Link to="/" className={desktopMenuStyles.logo}>
-                    <img
-                        src={logo}
-                        alt="Menefex Logo"
-                        width={225}
-                        height={56}
-                    />
+                    <img src={logo} alt="Menefex Logo" width={225} height={56} />
                 </Link>
 
                 <ul>
                     <li>
-                        <Link
-                            to="/"
-                            activeClassName={desktopMenuStyles.activePage}
-                        >
+                        <Link to="/" activeClassName={desktopMenuStyles.activePage}>
                             {t("menu.home")}
                             <span>.</span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/diensten/"
-                            activeClassName={desktopMenuStyles.activePage}
-                            partiallyActive
-                        >
+                        <Link to="/diensten/" activeClassName={desktopMenuStyles.activePage} partiallyActive>
                             {t("menu.services")}
                             <span>.</span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/portfolio/"
-                            activeClassName={desktopMenuStyles.activePage}
-                        >
+                        <Link to="/portfolio/" activeClassName={desktopMenuStyles.activePage}>
                             {t("menu.portfolio")}
                             <span>.</span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/prijzen/"
-                            activeClassName={desktopMenuStyles.activePage}
-                        >
+                        <Link to="/prijzen/" activeClassName={desktopMenuStyles.activePage}>
                             {t("menu.prices")}
                             <span>.</span>
                         </Link>
@@ -119,28 +100,19 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/faq/"
-                            activeClassName={desktopMenuStyles.activePage}
-                        >
+                        <Link to="/faq/" activeClassName={desktopMenuStyles.activePage}>
                             {t("menu.faq")}
                             <span>.</span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/over/"
-                            activeClassName={desktopMenuStyles.activePage}
-                        >
+                        <Link to="/over/" activeClassName={desktopMenuStyles.activePage}>
                             {t("menu.about")}
                             <span>.</span>
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            to="/contact/"
-                            activeClassName={desktopMenuStyles.activePage}
-                        >
+                        <Link to="/contact/" activeClassName={desktopMenuStyles.activePage}>
                             {t("menu.contact")}
                             <span>.</span>
                         </Link>
@@ -159,22 +131,14 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
                     <li className={desktopMenuStyles.language}>
                         <button
                             onClick={() => switchLanguage("nl")}
-                            className={
-                                currentLanguage === "nl"
-                                    ? desktopMenuStyles.active
-                                    : ""
-                            }
+                            className={currentLanguage === "nl" ? desktopMenuStyles.active : ""}
                         >
                             nl
                         </button>
                         <span>·</span>
                         <button
                             onClick={() => switchLanguage("en")}
-                            className={
-                                currentLanguage === "en"
-                                    ? desktopMenuStyles.active
-                                    : ""
-                            }
+                            className={currentLanguage === "en" ? desktopMenuStyles.active : ""}
                         >
                             en
                         </button>
@@ -185,22 +149,14 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
                     <div className={desktopMenuStyles.language}>
                         <button
                             onClick={() => switchLanguage("nl")}
-                            className={
-                                currentLanguage === "nl"
-                                    ? desktopMenuStyles.active
-                                    : ""
-                            }
+                            className={currentLanguage === "nl" ? desktopMenuStyles.active : ""}
                         >
                             nl
                         </button>
                         <span>|</span>
                         <button
                             onClick={() => switchLanguage("en")}
-                            className={
-                                currentLanguage === "en"
-                                    ? desktopMenuStyles.active
-                                    : ""
-                            }
+                            className={currentLanguage === "en" ? desktopMenuStyles.active : ""}
                         >
                             en
                         </button>
