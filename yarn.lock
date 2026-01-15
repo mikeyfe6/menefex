@@ -7992,10 +7992,10 @@ joi@^17.11.0, joi@^17.9.2:
     "@sideway/formula" "^3.0.1"
     "@sideway/pinpoint" "^2.0.0"
 
-js-cookie@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-3.0.5.tgz#0b7e2fd0c01552c58ba86e0841f94dc2557dcdbc"
-  integrity sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 js-sha256@^0.10.1:
   version "0.10.1"
@@ -10085,12 +10085,12 @@ rc@1.2.8, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-cookie-consent@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-10.0.0.tgz#5f75189bcdf41f6b5f12d835b0d25d84e794e61d"
-  integrity sha512-VHbS1phMZ+r898KH7aJY/CfWKOXsHYr9W7Z+GuksH90K72iY9HJBMMYPcNNo32BwPOQBJV/dj34bPy2oBlfQWA==
+react-cookie-consent@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-9.0.0.tgz#26dc3a3387cc8524275864a4ed4584af881435f0"
+  integrity sha512-Blyj+m+Zz7SFHYqT18p16EANgnSg2sIyU6Yp3vk83AnOnSW7qnehPkUe4+8+qxztJrNmCH5GP+VHsWzAKVOoZA==
   dependencies:
-    js-cookie "^3.0.5"
+    js-cookie "^2.2.1"
 
 react-dev-utils@^12.0.1:
   version "12.0.1"
@@ -11623,9 +11623,9 @@ terser-webpack-plugin@^5.3.11, terser-webpack-plugin@^5.3.9:
     terser "^5.31.1"
 
 terser@^5.2.0, terser@^5.31.1:
-  version "5.45.0"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.45.0.tgz#5d2f1e6f1ae4ebbcf589823303e5b7311b45945f"
-  integrity sha512-hQ9c+JZEnMug8eqzuU48sCeq95f00lLDAaJ5gWhRkFXsfy3+SUkZXiF/Z66ZO6EomSmgqXnkhVrWXKaQ8K41Ug==
+  version "5.46.0"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.46.0.tgz#1b81e560d584bbdd74a8ede87b4d9477b0ff9695"
+  integrity sha512-jTwoImyr/QbOWFFso3YoU3ik0jBBDJ6JTOQiy/J2YxVJdZCc+5u7skhNwiOR3FQIygFqVUPHl7qbbxtjW2K3Qg==
   dependencies:
     "@jridgewell/source-map" "^0.3.3"
     acorn "^8.15.0"
