@@ -7992,10 +7992,10 @@ joi@^17.11.0, joi@^17.9.2:
     "@sideway/formula" "^3.0.1"
     "@sideway/pinpoint" "^2.0.0"
 
-js-cookie@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
-  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
+js-cookie@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-3.0.5.tgz#0b7e2fd0c01552c58ba86e0841f94dc2557dcdbc"
+  integrity sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==
 
 js-sha256@^0.10.1:
   version "0.10.1"
@@ -10085,12 +10085,12 @@ rc@1.2.8, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-cookie-consent@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-9.0.0.tgz#26dc3a3387cc8524275864a4ed4584af881435f0"
-  integrity sha512-Blyj+m+Zz7SFHYqT18p16EANgnSg2sIyU6Yp3vk83AnOnSW7qnehPkUe4+8+qxztJrNmCH5GP+VHsWzAKVOoZA==
+react-cookie-consent@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-10.0.1.tgz#d2f41197f4df36cbfeb16130565a661e375d420f"
+  integrity sha512-qgU7Kr+x9/feKZxaIJbMT+R/xD1lnAQy9MzD4yLooVrkhoUR7XFc8Xv8M+GDQYcjoYh6uszslLGo1k+eU2VLtw==
   dependencies:
-    js-cookie "^2.2.1"
+    js-cookie "^3.0.5"
 
 react-dev-utils@^12.0.1:
   version "12.0.1"
