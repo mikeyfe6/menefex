@@ -215,6 +215,7 @@
 
                     > div {
                         height: rem-calc(130);
+                        max-width: rem-calc(340);
                         border-radius: $less-radius;
                         overflow: hidden;
                         align-self: center;

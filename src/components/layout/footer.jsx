@@ -230,10 +230,6 @@ const Footer = () => {
                             <a href="https://www.buymeacoffee.com/menefex" target="_blank" rel="noopener noreferrer">
                                 <StaticImage src="../../images/bmc.png" alt="Buy Me A Coffee" width={154} height={44} />
                             </a>
-
-                            {/* <a href="https://www.buymeacoffee.com/menefex">
-                                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=menefex&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
-                            </a> */}
                         </div>
                     </div>
 
