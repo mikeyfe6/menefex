@@ -16,10 +16,10 @@
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "prebuild": "yarn install --frozen-lockfile",
-    "postinstall": "if [ \"$NETLIFY\" = \"true\" ]; then node node_modules/puppeteer/install.mjs; fi"
+    "postinstall": "[ \"$NETLIFY\" = \"true\" ] && node node_modules/puppeteer/install.mjs || exit 0"
   },
   "dependencies": {
-    "@contentful/live-preview": "^4.9.9",
+    "@contentful/live-preview": "^4.9.10",
     "@contentful/rich-text-html-renderer": "17.1.6",
     "@contentful/rich-text-react-renderer": "16.1.6",
     "@contentful/rich-text-types": "17.2.5",
@@ -49,15 +49,15 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
     "google-map-react": "^2.2.5",
-    "i18next": "^25.8.14",
+    "i18next": "^25.8.18",
     "i18next-browser-languagedetector": "^8.2.1",
     "i18next-http-backend": "^3.0.2",
-    "puppeteer": "^24.38.0",
-    "react": "^18.3.1",
+    "puppeteer": "^24.39.1",
+    "react": "^19.2.4",
     "react-cookie-consent": "^10.0.1",
-    "react-dom": "^18.3.1",
-    "react-i18next": "^16.5.6",
-    "sass": "^1.97.3",
+    "react-dom": "^19.2.4",
+    "react-i18next": "^16.5.8",
+    "sass": "^1.98.0",
     "swiper": "^12.1.2"
   },
   "devDependencies": {
@@ -82,7 +82,7 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "yarn@4.13.0",
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 Firefox versions",
