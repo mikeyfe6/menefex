@@ -6,7 +6,7 @@ export default {
     },
 
     banner: {
-        text: `HAPPY NEW YEAR! To start the year off right; <b>10% discount</b> on your new website, web application or webshop. The offer is valid until January 31, 2026! See our <a href="/prijzen/">prices page</a> for more information..`,
+        text: `As of January 1, 2026, our hourly rate has increased to €55 per hour (excluding VAT). This adjustment allows us to maintain the quality of our services and continue investing in innovation and customer satisfaction. We appreciate your understanding and look forward to continuing to work on your digital projects.`,
     },
 
     menu: {
@@ -313,7 +313,7 @@ export default {
             reviews: "Testimonials / Reviews",
             statistics: "Statistics; Google Analytics, Tag Manager and Search Console",
             ssl: "SSL Certificate",
-            extra: "extra features: €45 per hour",
+            extra: "extra features: €55 per hour",
             oneMonth: "1 month free support",
             threeMonths: "3 months free support",
             sixMonths: "6 months free support",
@@ -328,7 +328,7 @@ export default {
         },
         notes: {
             title: "Additional information:",
-            content: `<p>You have clearly also come to the right place for <b><u>smaller tasks</u></b>, for example <b>maintenance</b>, a <b>new logo</b>, <b>extra additions</b> of <b>applications</b> on your website, web app or webshop, better <b>visibility</b> via the search results <b>(SEO)</b> on e.g. Google, Bing, Yahoo... You name it, make it as crazy as you want. <u>We fix it!</u></p><p>We also tackle <b>larger projects</b> that require more time, such as updating an existing website. All important services are priced at <b>€45 per hour (excl. VAT).</b></p><p>If you are unable to decide which <b>package</b> best suited to you... No problem! We are happy to help you. Request a <b>callback</b> request, <b>call</b> or <b>email</b> us and everything will be discussed in detail. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / view</b></a> an <u>overview</u> of our prices in <b>pdf</b> form.</p>`,
+            content: `<p>You have clearly also come to the right place for <b><u>smaller tasks</u></b>, for example <b>maintenance</b>, a <b>new logo</b>, <b>extra additions</b> of <b>applications</b> on your website, web app or webshop, better <b>visibility</b> via the search results <b>(SEO)</b> on e.g. Google, Bing, Yahoo... You name it, make it as crazy as you want. <u>We fix it!</u></p><p>We also tackle <b>larger projects</b> that require more time, such as updating an existing website. All important services are priced at <b>€55 per hour (excl. VAT).</b></p><p>If you are unable to decide which <b>package</b> best suited to you... No problem! We are happy to help you. Request a <b>callback</b> request, <b>call</b> or <b>email</b> us and everything will be discussed in detail. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / view</b></a> an <u>overview</u> of our prices in <b>pdf</b> form.</p>`,
         },
         form: {
             title: "Callback request",
@@ -483,7 +483,7 @@ export default {
             },
             itemFive: {
                 question: "What happens if I want to make changes after delivery?",
-                answer: "You'll get a user-friendly CMS that allows you to easily update content yourself. For technical changes or extensions, we can handle that for you at our hourly rate of €45 per hour.",
+                answer: "You'll get a user-friendly CMS that allows you to easily update content yourself. For technical changes or extensions, we can handle that for you at our hourly rate of €55 per hour.",
             },
         },
 
@@ -571,7 +571,7 @@ export default {
             },
             itemFour: {
                 question: "Can you also perform individual updates without a subscription?",
-                answer: "Yes, we also offer ad-hoc maintenance and updates at our hourly rate of €45 per hour. For regular needs, however, our subscriptions are more cost-effective.",
+                answer: "Yes, we also offer ad-hoc maintenance and updates at our hourly rate of €55 per hour. For regular needs, however, our subscriptions are more cost-effective.",
             },
             itemFive: {
                 question: "How quickly do you resolve technical problems?",
@@ -724,7 +724,7 @@ export default {
             phone: "What is your phone number? (optional)",
             message: "Do you have any additional information or questions? (optional)",
         },
-        hourCosts: "* Outsourcing content management costs €45 per hour (excl. VAT).",
+        hourCosts: "* Outsourcing content management costs €55 per hour (excl. VAT).",
         tooltip: {
             hasWebsite:
                 "Let us know if you already have an existing website, webshop, or web application that we can improve or replace.",
@@ -761,8 +761,8 @@ export default {
             },
             seo: {
                 title: "Our advice: standard hourly rate",
-                description: "For SEO and other related services, we charge an hourly rate of €45 (excl. VAT).",
-                price: "€45/hr",
+                description: "For SEO and other related services, we charge an hourly rate of €55 (excl. VAT).",
+                price: "€55/hr",
             },
             other: {
                 title: "Our advice: CONTACT US",

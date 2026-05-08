@@ -8,7 +8,7 @@ export default {
     },
 
     banner: {
-        text: `GELUKKIG NIEUWJAAR! Om het jaar goed te starten; <b>10% korting</b> op jouw nieuwe website, webapplicatie of webshop. De aanbieding geldt tot 31 januari 2026! Zie onze <a href="/prijzen/">prijzenpagina</a> voor meer informatie..`,
+        text: `Vanaf 1 januari 2026 is ons uurtarief verhoogd naar €55 per uur (excl. BTW). Deze aanpassing stelt ons in staat om de kwaliteit van onze diensten te waarborgen en te blijven investeren in innovatie en klanttevredenheid. We waarderen je begrip en kijken ernaar uit om samen aan jouw digitale projecten te blijven werken.`,
     },
 
     menu: {
@@ -315,7 +315,7 @@ export default {
             reviews: "Testimonials / Reviews",
             statistics: "Google Analytics, Tagmanager en Search Console",
             ssl: "SSL Certificaat",
-            extra: "extra features: € 45,- per uur",
+            extra: "extra features: €55,- per uur",
             oneMonth: "1 maand gratis support",
             threeMonths: "3 maanden gratis support",
             sixMonths: "6 maanden gratis support",
@@ -330,7 +330,7 @@ export default {
         },
         notes: {
             title: "Aanvullende informatie",
-            content: `<p>Ook voor kleinere taken kun je bij ons terecht — denk aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra functionaliteiten</b> of <b>SEO-optimalisaties</b>. Wat je ook nodig hebt, wij regelen het.</p><p>Grotere projecten, zoals het vernieuwen van een bestaande website, pakken we natuurlijk ook met beide handen aan. Alle aanvullende diensten en losse werkzaamheden vallen onder een tarief van <b>€ 45,- per uur (excl. btw)</b>.</p><p>Weet je nog niet precies welk pakket het beste past bij jouw wensen? Geen probleem — we denken graag met je mee. Bel of mail ons, of vraag een <b>terugbelverzoek</b> aan. We leggen alles rustig uit.</p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank">Download het volledige prijsoverzicht als PDF.</a></p>`,
+            content: `<p>Ook voor kleinere taken kun je bij ons terecht — denk aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra functionaliteiten</b> of <b>SEO-optimalisaties</b>. Wat je ook nodig hebt, wij regelen het.</p><p>Grotere projecten, zoals het vernieuwen van een bestaande website, pakken we natuurlijk ook met beide handen aan. Alle aanvullende diensten en losse werkzaamheden vallen onder een tarief van <b>€55,- per uur (excl. btw)</b>.</p><p>Weet je nog niet precies welk pakket het beste past bij jouw wensen? Geen probleem — we denken graag met je mee. Bel of mail ons, of vraag een <b>terugbelverzoek</b> aan. We leggen alles rustig uit.</p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank">Download het volledige prijsoverzicht als PDF.</a></p>`,
         },
         form: {
             title: "Terugbelverzoek",
@@ -486,7 +486,7 @@ export default {
             },
             itemFive: {
                 question: "Wat gebeurt er als ik na oplevering nog aanpassingen wil doen?",
-                answer: "Je krijgt een gebruiksvriendelijk CMS waarmee je zelf eenvoudig content kunt aanpassen. Voor technische wijzigingen of uitbreidingen kunnen we dat voor je regelen tegen ons uurtarief van €45 per uur.",
+                answer: "Je krijgt een gebruiksvriendelijk CMS waarmee je zelf eenvoudig content kunt aanpassen. Voor technische wijzigingen of uitbreidingen kunnen we dat voor je regelen tegen ons uurtarief van €55 per uur.",
             },
         },
 
@@ -575,7 +575,7 @@ export default {
             },
             itemFour: {
                 question: "Kunnen jullie ook alleen losse updates uitvoeren zonder abonnement?",
-                answer: "Ja, we bieden ook ad-hoc onderhoud en updates aan tegen ons uurtarief van €45 per uur. Voor regelmatige behoeften zijn onze abonnementen echter kosteneffectiever.",
+                answer: "Ja, we bieden ook ad-hoc onderhoud en updates aan tegen ons uurtarief van €55 per uur. Voor regelmatige behoeften zijn onze abonnementen echter kosteneffectiever.",
             },
             itemFive: {
                 question: "Hoe snel lossen jullie technische problemen op?",
@@ -728,7 +728,7 @@ export default {
             phone: "Wat is je telefoonnummer? (optioneel)",
             message: "Heb je nog aanvullende informatie of vragen? (optioneel)",
         },
-        hourCosts: "* Het uitbesteden van contentbeheer kost €45 per uur (excl. BTW).",
+        hourCosts: "* Het uitbesteden van contentbeheer kost €55 per uur (excl. BTW).",
         tooltip: {
             hasWebsite:
                 "Laat ons weten of je al een bestaande website, webshop of webapplicatie hebt die we kunnen verbeteren of vervangen.",
@@ -766,8 +766,8 @@ export default {
             seo: {
                 title: "Ons advies: gebruikelijke uurtarief",
                 description:
-                    "Voor SEO en andere gerelateerde diensten hanteren we een uurtarief van €45 per uur (exclusief BTW).",
-                price: "€45 p/u",
+                    "Voor SEO en andere gerelateerde diensten hanteren we een uurtarief van €55 per uur (exclusief BTW).",
+                price: "€55 p/u",
             },
             other: {
                 title: "Ons advies: NEEM CONTACT OP",
