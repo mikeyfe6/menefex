@@ -23,7 +23,7 @@ const Footer = () => {
 
     useEffect(() => {
         const fbLocale = currentLanguage === "nl" ? "nl_NL" : "en_US";
-        const scriptSrc = `https://connect.facebook.net/${fbLocale}/sdk.js#xfbml=1&version=v24.0&appId=${process.env.GATSBY_FB_APP_ID}`;
+        const scriptSrc = `https://connect.facebook.net/${fbLocale}/sdk.js#xfbml=1&version=v25.0&appId=${process.env.GATSBY_FB_APP_ID}`;
 
         document.querySelectorAll('script[src*="connect.facebook.net"]').forEach((el) => el.remove());
 
