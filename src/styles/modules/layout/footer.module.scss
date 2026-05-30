@@ -214,10 +214,9 @@
                     }
 
                     > div {
-                        height: rem-calc(130);
                         max-width: rem-calc(340);
-                        border-radius: $less-radius;
                         overflow: hidden;
+                        border-radius: $high-radius;
                         align-self: center;
                         margin-bottom: rem-calc(36);
 
