@@ -19,7 +19,7 @@
     "postinstall": "[ \"$NETLIFY\" = \"true\" ] && node node_modules/puppeteer/install.mjs || exit 0"
   },
   "dependencies": {
-    "@contentful/live-preview": "^4.10.4",
+    "@contentful/live-preview": "^4.10.6",
     "@contentful/rich-text-html-renderer": "17.2.2",
     "@contentful/rich-text-react-renderer": "16.2.1",
     "@contentful/rich-text-types": "17.2.7",
@@ -29,7 +29,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.1",
     "@sendgrid/mail": "^8.1.6",
-    "axios": "^1.16.0",
+    "axios": "^1.16.1",
     "gatsby": "^5.16.1",
     "gatsby-adapter-netlify": "^1.4.0",
     "gatsby-plugin-canonical-urls": "^5.16.0",
@@ -49,17 +49,17 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
     "google-map-react": "^2.2.5",
-    "i18next": "^26.0.10",
+    "i18next": "^26.3.0",
     "i18next-browser-languagedetector": "^8.2.1",
     "i18next-http-backend": "^4.0.0",
-    "puppeteer": "^24.43.0",
+    "puppeteer": "^25.1.0",
     "react": "18",
     "react-cookie-consent": "^10.0.1",
     "react-dom": "18",
-    "react-i18next": "^17.0.7",
-    "sass": "^1.99.0",
+    "react-i18next": "^17.0.8",
+    "sass": "^1.100.0",
     "sharp": "0.32.6",
-    "swiper": "^12.1.4"
+    "swiper": "^12.2.0"
   },
   "devDependencies": {
     "eslint": "^10.3.0",
@@ -68,7 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "stylelint": "^17.11.0",
+    "stylelint": "^17.12.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^17.0.0"
   },
@@ -83,7 +83,7 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "packageManager": "yarn@4.14.1",
+  "packageManager": "yarn@4.15.0",
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 Firefox versions",
