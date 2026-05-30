@@ -212,6 +212,7 @@ const Footer = () => {
                                     className="fb-page"
                                     data-href={`https://www.facebook.com/${handle}`}
                                     data-tabs=""
+                                    data-width="340"
                                     data-small-header="false"
                                     data-adapt-container-width="true"
                                     data-hide-cover="false"

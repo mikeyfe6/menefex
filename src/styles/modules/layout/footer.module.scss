@@ -214,6 +214,7 @@
                     }
 
                     > div {
+                        width: rem-calc(340);
                         max-width: rem-calc(340);
                         overflow: hidden;
                         border-radius: $high-radius;
