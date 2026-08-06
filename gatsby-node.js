@@ -168,12 +168,8 @@ const captureScreenshot = async (url, filename, delay) => {
         console.log(`📸 Capturing screenshot for ${url}...`);
         await new Promise((resolve) => setTimeout(resolve, delay));
 
-        try {
-            await fs.access(screenshotDir);
-        } catch (error) {
-            await fs.mkdir(screenshotDir, { recursive: true });
-            console.log(`📂 Created screenshot directory: ${screenshotDir}`);
-        }
+        await fs.mkdir(screenshotDir, { recursive: true });
+        console.log(`📂 Ensured screenshot directory exists: ${screenshotDir}`);
 
         await page.screenshot({ path: screenshotPath });
         console.log(`✅ Screenshot successfully captured for ${url}`);
@@ -190,26 +186,21 @@ const captureScreenshot = async (url, filename, delay) => {
 let screenshotsAlreadyCaptured = false;
 
 const runScreenshots = async () => {
-    if (screenshotsAlreadyCaptured) {
-        console.log("💤 Screenshots already captured, skipping...");
-        return;
-    }
-
+    if (screenshotsAlreadyCaptured) return;
     screenshotsAlreadyCaptured = true;
 
-    if (
-        process.env.NODE_ENV === "production"
-        // || process.env.NODE_ENV === "development"
-    ) {
-        await captureScreenshot("https://eternitydrum.com", "eternitydrum", 0);
-        await captureScreenshot("https://blackharmony.nl", "blackharmony", 0);
-        await captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000);
-        await captureScreenshot("https://dsmelodies.com", "dsmelodies", 0);
-        // await captureScreenshot("https://kn-acdig.com", "kn-acdig", 0);
-        await captureScreenshot("https://keeptreal.nl", "keeptreal", 2000);
-        // await captureScreenshot("https://prio-zorg.nl", "priozorg", 2000);
-        await captureScreenshot("https://edutainuproductions.nl", "edutainuproductions", 0);
-        await captureScreenshot("https://huzl.expo.app", "huzl", 0);
+    if (process.env.NODE_ENV === "production") {
+        await Promise.all([
+            captureScreenshot("https://eternitydrum.com", "eternitydrum", 0),
+            captureScreenshot("https://blackharmony.nl", "blackharmony", 0),
+            captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000),
+            captureScreenshot("https://dsmelodies.com", "dsmelodies", 0),
+            // captureScreenshot("https://kn-acdig.com", "kn-acdig", 0),
+            captureScreenshot("https://keeptreal.nl", "keeptreal", 2000),
+            // captureScreenshot("https://prio-zorg.nl", "priozorg", 2000),
+            captureScreenshot("https://edutainuproductions.nl", "edutainuproductions", 0),
+            captureScreenshot("https://huzl.expo.app", "huzl", 0),
+        ]);
     }
 };
 
