@@ -99,9 +99,12 @@ const captureScreenshot = async (url, filename, delay) => {
     const screenshotDir = path.resolve(__dirname, "static/project-images");
     const screenshotPath = `${screenshotDir}/${filename}.png`;
 
+    let browser = null;
+
     try {
         console.log(`🌐 Navigating to URL: ${url}`);
-        const browser = await puppeteer.launch({
+
+        browser = await puppeteer.launch({
             args: [
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
@@ -115,9 +118,10 @@ const captureScreenshot = async (url, filename, delay) => {
 
         const page = await browser.newPage();
 
-        await page.setUserAgent(
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-        );
+        await page.setUserAgent({
+            userAgent:
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        });
 
         await page.setExtraHTTPHeaders({
             "accept-language": "en-US,en;q=0.9",
@@ -149,7 +153,6 @@ const captureScreenshot = async (url, filename, delay) => {
 
         if (url.includes("keeptreal.nl")) {
             const iframeSelector = 'iframe[src*="player.vimeo.com"]';
-
             try {
                 console.log("📲 Waiting for Vimeo iframe to appear and initialize...");
                 await page.waitForSelector(iframeSelector, {
@@ -174,10 +177,13 @@ const captureScreenshot = async (url, filename, delay) => {
 
         await page.screenshot({ path: screenshotPath });
         console.log(`✅ Screenshot successfully captured for ${url}`);
-
-        await browser.close();
     } catch (error) {
         console.error(`❌ Error capturing screenshot for ${url}:`, error.message);
+    } finally {
+        if (browser) {
+            console.log(`🔒 Closing browser instance for ${url}`);
+            await browser.close();
+        }
     }
 };
 
