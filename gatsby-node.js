@@ -149,12 +149,12 @@ const captureScreenshot = async (url, filename, delay) => {
             });
         }
 
-        await page.goto(url, { waitUntil: "networkidle2" });
+        // await page.goto(url, { waitUntil: "networkidle2" });
 
-        // await page.goto(url, {
-        //     waitUntil: "domcontentloaded",
-        //     timeout: 0,
-        // });
+        await page.goto(url, {
+            waitUntil: "domcontentloaded",
+            timeout: 0,
+        });
 
         // if (url.includes("keeptreal.nl")) {
         //     const iframeSelector = 'iframe[src*="player.vimeo.com"]';
@@ -196,15 +196,15 @@ const runScreenshots = async () => {
 
     if (process.env.NODE_ENV === "production") {
         const screenshots = [
-            ["https://eternitydrum.com", "eternitydrum", 0],
-            ["https://blackharmony.nl", "blackharmony", 0],
+            ["https://eternitydrum.com", "eternitydrum", 2000],
+            ["https://blackharmony.nl", "blackharmony", 2000],
             ["https://afrodiasphere.com", "afrodiasphere", 2000],
             ["https://dsmelodies.com", "dsmelodies", 0],
             // ["https://kn-acdig.com", "kn-acdig", 0],
             ["https://keeptreal.nl", "keeptreal", 2000],
             // ["https://prio-zorg.nl", "priozorg", 2000],
             ["https://edutainuproductions.nl", "edutainuproductions", 0],
-            ["https://huzl.expo.app", "huzl", 0],
+            ["https://huzl.expo.app", "huzl", 2000],
         ];
 
         for (const [url, filename, delay] of screenshots) {
