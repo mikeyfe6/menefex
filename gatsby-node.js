@@ -201,7 +201,7 @@ const runScreenshots = async () => {
             ["https://afrodiasphere.com", "afrodiasphere", 2000],
             ["https://dsmelodies.com", "dsmelodies", 0],
             // ["https://kn-acdig.com", "kn-acdig", 0],
-            ["https://keeptreal.nl", "keeptreal", 2000],
+            ["https://keeptreal.nl", "keeptreal", 5000],
             // ["https://prio-zorg.nl", "priozorg", 2000],
             ["https://edutainuproductions.nl", "edutainuproductions", 0],
             ["https://huzl.expo.app", "huzl", 2000],
