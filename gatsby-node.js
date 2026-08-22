@@ -149,21 +149,26 @@ const captureScreenshot = async (url, filename, delay) => {
             });
         }
 
-        await page.goto(url, { waitUntil: "networkidle2" });
+        // await page.goto(url, { waitUntil: "networkidle2" });
 
-        if (url.includes("keeptreal.nl")) {
-            const iframeSelector = 'iframe[src*="player.vimeo.com"]';
-            try {
-                console.log("📲 Waiting for Vimeo iframe to appear and initialize...");
-                await page.waitForSelector(iframeSelector, {
-                    visible: true,
-                    timeout: 5000,
-                });
-                console.log("🍿 Vimeo iframe loaded successfully.");
-            } catch (error) {
-                console.warn("⚠️ Vimeo iframe failed to load. Proceeding with screenshot capture.", error.message);
-            }
-        }
+        await page.goto(url, {
+            waitUntil: "domcontentloaded",
+            timeout: 0,
+        });
+
+        // if (url.includes("keeptreal.nl")) {
+        //     const iframeSelector = 'iframe[src*="player.vimeo.com"]';
+        //     try {
+        //         console.log("📲 Waiting for Vimeo iframe to appear and initialize...");
+        //         await page.waitForSelector(iframeSelector, {
+        //             visible: true,
+        //             timeout: 5000,
+        //         });
+        //         console.log("🍿 Vimeo iframe loaded successfully.");
+        //     } catch (error) {
+        //         console.warn("⚠️ Vimeo iframe failed to load. Proceeding with screenshot capture.", error.message);
+        //     }
+        // }
 
         console.log(`📸 Capturing screenshot for ${url}...`);
         await new Promise((resolve) => setTimeout(resolve, delay));
