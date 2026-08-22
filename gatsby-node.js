@@ -190,17 +190,21 @@ const runScreenshots = async () => {
     screenshotsAlreadyCaptured = true;
 
     if (process.env.NODE_ENV === "production") {
-        await Promise.all([
-            captureScreenshot("https://eternitydrum.com", "eternitydrum", 0),
-            captureScreenshot("https://blackharmony.nl", "blackharmony", 0),
-            captureScreenshot("https://afrodiasphere.com", "afrodiasphere", 2000),
-            captureScreenshot("https://dsmelodies.com", "dsmelodies", 0),
-            // captureScreenshot("https://kn-acdig.com", "kn-acdig", 0),
-            captureScreenshot("https://keeptreal.nl", "keeptreal", 2000),
-            // captureScreenshot("https://prio-zorg.nl", "priozorg", 2000),
-            captureScreenshot("https://edutainuproductions.nl", "edutainuproductions", 0),
-            captureScreenshot("https://huzl.expo.app", "huzl", 0),
-        ]);
+        const screenshots = [
+            ["https://eternitydrum.com", "eternitydrum", 0],
+            ["https://blackharmony.nl", "blackharmony", 0],
+            ["https://afrodiasphere.com", "afrodiasphere", 2000],
+            ["https://dsmelodies.com", "dsmelodies", 0],
+            // ["https://kn-acdig.com", "kn-acdig", 0],
+            ["https://keeptreal.nl", "keeptreal", 2000],
+            // ["https://prio-zorg.nl", "priozorg", 2000],
+            ["https://edutainuproductions.nl", "edutainuproductions", 0],
+            ["https://huzl.expo.app", "huzl", 0],
+        ];
+
+        for (const [url, filename, delay] of screenshots) {
+            await captureScreenshot(url, filename, delay);
+        }
     }
 };
 
