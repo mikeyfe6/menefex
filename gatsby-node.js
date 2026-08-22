@@ -149,12 +149,12 @@ const captureScreenshot = async (url, filename, delay) => {
             });
         }
 
-        // await page.goto(url, { waitUntil: "networkidle2" });
+        await page.goto(url, { waitUntil: "networkidle2" });
 
-        await page.goto(url, {
-            waitUntil: "domcontentloaded",
-            timeout: 0,
-        });
+        // await page.goto(url, {
+        //     waitUntil: "domcontentloaded",
+        //     timeout: 0,
+        // });
 
         // if (url.includes("keeptreal.nl")) {
         //     const iframeSelector = 'iframe[src*="player.vimeo.com"]';
