@@ -144,6 +144,7 @@ const Projects = () => {
             title: "Huzl",
             description: t("projects.huzl"),
             url: "https://huzl.expo.app",
+            app: "https://apps.apple.com/nl/app/huzl/id6757675910",
             hash: "#hzl",
             type: "site",
             stack: ["React Native", "Expo", "Supabase"],
@@ -158,7 +159,7 @@ const Projects = () => {
 
     const getLogoImage = (name, logo) => {
         const logoNode = data.logos.nodes.find(
-            (node) => node.name === logo || node.name === name || node.name === `${name}-logo`
+            (node) => node.name === logo || node.name === name || node.name === `${name}-logo`,
         );
         return logoNode ? getImage(logoNode.childImageSharp.gatsbyImageData) : null;
     };
@@ -199,6 +200,13 @@ const Projects = () => {
 
                         <p>{currentProject.description}</p>
 
+                        {currentProject.app && (
+                            <a href={currentProject.app} target="_blank" rel="noopener noreferrer" data-app>
+                                <FontAwesomeIcon icon={["fab", "app-store-ios"]} size="lg" />{" "}
+                                {t("projects.downloadApp")}
+                            </a>
+                        )}
+
                         <span>Tools:</span>
                         <ul>
                             {currentProject.stack.map((item, idx) => (
@@ -209,9 +217,9 @@ const Projects = () => {
                         <div className={projectsStyles.projectsButtons}>
                             {currentProject.url && (
                                 <a href={currentProject.url} target="_blank" rel="noopener noreferrer">
-                                    {currentProject.type === "webapp"
-                                        ? t("projects.viewWebapp")
-                                        : t("projects.viewWebsite")}
+                                    {currentProject.type === "webapp" ?
+                                        t("projects.viewWebapp")
+                                    :   t("projects.viewWebsite")}
                                 </a>
                             )}
                             <Link to={`/portfolio/${currentProject.hash}`}>Details</Link>
@@ -254,30 +262,28 @@ const Projects = () => {
                         >
                             {projects.map((project, idx) => {
                                 const imageNode = slideShowImages[project.name];
-                                const projectImg = imageNode
-                                    ? getImage(imageNode.childImageSharp.gatsbyImageData)
-                                    : null;
+                                const projectImg =
+                                    imageNode ? getImage(imageNode.childImageSharp.gatsbyImageData) : null;
                                 return (
                                     <SwiperSlide key={project.name}>
-                                        {projectImg ? (
+                                        {projectImg ?
                                             <a href={project.url} rel="noopener noreferrer" target="_blank">
                                                 <GatsbyImage image={projectImg} alt={project.title} />
                                             </a>
-                                        ) : (
-                                            <div className={projectsStyles.projectsNoImage}>
+                                        :   <div className={projectsStyles.projectsNoImage}>
                                                 <StaticImage src="../../images/mnfx-screens.jpeg" alt={project.title} />
                                             </div>
-                                        )}
+                                        }
                                     </SwiperSlide>
                                 );
                             })}
                         </Swiper>
                         <div className={projectsStyles.projectsNavigation}>
-                            <button ref={prevRef} aria-label="Vorige project">
+                            <button ref={prevRef} type="button" aria-label="Vorige project">
                                 <FontAwesomeIcon icon={["fas", "chevron-left"]} />
                             </button>
                             <div ref={paginationRef}></div>
-                            <button ref={nextRef} aria-label="Volgende project">
+                            <button ref={nextRef} type="button" aria-label="Volgende project">
                                 <FontAwesomeIcon icon={["fas", "chevron-right"]} />
                             </button>
                         </div>

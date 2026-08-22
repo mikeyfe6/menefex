@@ -134,6 +134,11 @@
             #{$portfolio}-btns {
                 display: flex;
                 gap: rem-calc(16);
+                min-height: rem-calc(46);
+
+                @include phablet {
+                    min-height: rem-calc(50);
+                }
 
                 .btn {
                     &-dark,
@@ -149,6 +154,31 @@
 
                     &-light {
                         @include light-button;
+                    }
+
+                    &-app {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: rem-calc(46);
+                        height: rem-calc(46);
+                        background-color: $snow-color;
+                        border-radius: $low-radius;
+                        outline: 2px solid $snow-color;
+
+                        @include phablet {
+                            min-width: rem-calc(50);
+                            height: rem-calc(50);
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+                            outline-color: $primary-color;
+                        }
+
+                        > svg {
+                            font-size: rem-calc(60);
+                        }
                     }
                 }
             }

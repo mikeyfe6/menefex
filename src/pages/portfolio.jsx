@@ -91,7 +91,15 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebsite")}
+                            </a>
+                            <a
+                                href="https://apps.apple.com/nl/app/huzl/id6757675910"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnApp}
+                            >
+                                <FontAwesomeIcon icon={["fab", "app-store-ios"]} color="#1C92EF" />
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/huzl"
@@ -147,7 +155,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebsite")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/edutainuproductions"
@@ -207,7 +215,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                <strike>{t("portfolio.goToProject")}</strike>
+                                <strike>{t("portfolio.goToWebsite")}</strike>
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/prio-zorg"
@@ -265,7 +273,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebsite")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/keepitreal"
@@ -322,7 +330,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                <strike>{t("portfolio.goToProject")}</strike>
+                                <strike>{t("portfolio.goToWebsite")}</strike>
                             </a>
                             <a className={portfolioStyles.btnDark} disabled>
                                 <FontAwesomeIcon icon={["fab", "github"]} />
@@ -369,7 +377,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebsite")}
                                 {/* Komt Binnenkort */}
                             </a>
                             <a className={portfolioStyles.btnDark} disabled>
@@ -420,7 +428,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebapp")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/Afrodiasphere"
@@ -472,7 +480,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebsite")}
                             </a>
                             <a className={portfolioStyles.btnDark} disabled>
                                 <FontAwesomeIcon icon={["fab", "github"]} />
@@ -521,7 +529,7 @@ const PortfolioPage = () => {
                                 className={portfolioStyles.btnLight}
                             >
                                 <FontAwesomeIcon icon={["fas", "globe"]} />
-                                {t("portfolio.goToProject")}
+                                {t("portfolio.goToWebsite")}
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/eternity-drum"

@@ -261,15 +261,17 @@ export default {
         keeptreal: "Programma onder leiding van Wenner Regales dat jongeren perspectief biedt",
         priozorg: "Dynamische hulpverlening met coaching en mentoring voor jongvolwassenen",
         edutainuproductions: "Freelancebedrijf van Otmar Watson voor culturele projecten met impact",
-        huzl: "Eigengebouwde no-nonsense app voor geldbeheer met budgetten, overzichten en notificaties",
+        huzl: "Ons eigen no-nonsense app/website voor geldbeheer met budgetten, overzichten en notificaties",
+        downloadApp: "Download in de App Store",
         seeAll: "Zie alle projecten",
     },
 
     portfolio: {
         title: "Recente projecten",
         intro: "We laten graag zien waar we goed in zijn! Ontdek een selectie van onze recente projecten..",
-        goToProject: "Ga naar project",
-        goToRepo: "Github Repo",
+        goToWebsite: "Website",
+        goToWebapp: "Webapp",
+        goToRepo: "Github",
         noRepo: "Niet op Github",
 
         eternitydrum:
@@ -288,7 +290,7 @@ export default {
             "<strong>Prio Zorg</strong> is een dynamische hulpverleningsorganisatie die jongeren begeleidt op weg naar zelfredzaamheid en een betekenisvol leven. Voor jongvolwassenen die vastlopen en de controle over hun leven verliezen, biedt Prio Zorg deskundige ondersteuning in de vorm van coaching, mentoring, en opvoedkundige begeleiding.",
         edutainuproductions:
             "<strong>Edutain U Productions</strong> is het creatieve freelancebedrijf van Otmar Watson, actief op het snijvlak van kunst, cultuur, erfgoed en empowerment. Vanuit jarenlange ervaring binnen de culturele sector realiseert Edutain U Productions projecten die verbinden, verdiepen en versterken. Altijd met een focus op inclusiviteit, erfgoed en maatschappelijke betrokkenheid.",
-        huzl: "<strong>Huzl</strong> is een Menefex eigen no-nonsense app voor geldbeheer: snelle budgetten, duidelijke overzichten en slimme notificaties zonder franje. Richt je op wat telt, houd grip op je geld en voorkom verrassingen. Huzl maakt geldbeheer simpel en effectief. <br /><br /> <b>Binnenkort beschikbaar in alle app stores!</b>",
+        huzl: "<strong>Huzl</strong> is een Menefex eigen no-nonsense app voor geldbeheer: snelle budgetten, duidelijke overzichten en slimme notificaties zonder franje. Richt je op wat telt, houd grip op je geld en voorkom verrassingen. Huzl maakt geldbeheer simpel en effectief. <br /><br /> <b>Binnenkort ook beschikbaar in de Google Play Store!</b>",
     },
 
     prices: {
@@ -330,7 +332,7 @@ export default {
         },
         notes: {
             title: "Aanvullende informatie",
-            content: `<p>Ook voor kleinere taken kun je bij ons terecht — denk aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra functionaliteiten</b> of <b>SEO-optimalisaties</b>. Wat je ook nodig hebt, wij regelen het.</p><p>Grotere projecten, zoals het vernieuwen van een bestaande website, pakken we natuurlijk ook met beide handen aan. Alle aanvullende diensten en losse werkzaamheden vallen onder een tarief van <b>€55,- per uur (excl. btw)</b>.</p><p>Weet je nog niet precies welk pakket het beste past bij jouw wensen? Geen probleem — we denken graag met je mee. Bel of mail ons, of vraag een <b>terugbelverzoek</b> aan. We leggen alles rustig uit.</p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank">Download het volledige prijsoverzicht als PDF.</a></p>`,
+            content: `<p>Ook voor kleinere taken kun je bij ons terecht — denk aan <b>onderhoud</b>, een <b>nieuw logo</b>, <b>extra functionaliteiten</b> of <b>SEO-optimalisaties</b>. Wat je ook nodig hebt, wij regelen het.</p><p>Grotere projecten, zoals het vernieuwen van een bestaande website, pakken we natuurlijk ook met beide handen aan. Alle aanvullende diensten en losse werkzaamheden vallen onder een tarief van <b>€55,- per uur (excl. btw)</b>.</p><p>Weet je nog niet precies welk pakket het beste past bij jouw wensen? Geen probleem — we denken graag met je mee. Bel of mail ons, of vraag een <b>terugbelverzoek</b> aan. We leggen alles rustig uit.</p><p>* <a href="/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank">Download het volledige prijsoverzicht als PDF.</a></p>`,
         },
         form: {
             title: "Terugbelverzoek",

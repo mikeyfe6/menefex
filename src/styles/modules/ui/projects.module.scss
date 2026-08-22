@@ -80,10 +80,19 @@
                     @include fluid-typing(22, 26);
                 }
 
-                > p {
+                > p,
+                > a[data-app] {
                     margin-bottom: rem-calc(16);
 
                     @extend %as-medium;
+                }
+
+                > a[data-app] {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: rem-calc(8);
+
+                    @include text-link;
                 }
 
                 > span {

@@ -259,15 +259,17 @@ export default {
         keeptreal: "Program led by Wenner Regales offering perspective to young people",
         priozorg: "Dynamic care services with coaching and mentoring for young adults",
         edutainuproductions: "Freelance company by Otmar Watson for impactful cultural projects",
-        huzl: "Own build no-nonsense money management app for budgeting and cash control",
+        huzl: "Own build no-nonsense money management app (and also website) for budgeting and cash control",
+        downloadApp: "Download in the App Store",
         seeAll: "See all projects",
     },
 
     portfolio: {
         title: "Recent Projects",
         intro: "We are proud of our work and like to show it! Take a look at our archive of recent projects..",
-        goToProject: "View project",
-        goToRepo: "Github Repo",
+        goToWebsite: "Website",
+        goToWebapp: "Webapp",
+        goToRepo: "Github",
         noRepo: "Not on Github",
 
         eternitydrum:
@@ -286,7 +288,7 @@ export default {
             "<strong>Prio Zorg</strong> is a dynamic care organization that guides young people on their way to self-reliance and a meaningful life. For young adults who get stuck and lose control of their lives, Prio Zorg offers expert support in the form of coaching, mentoring and educational guidance.",
         edutainuproductions:
             "<strong>Edutain U Productions</strong> is the creative freelance company of Otmar Watson, active at the intersection of art, culture, heritage and empowerment. Based on years of experience in the cultural sector, Edutain U Productions realizes projects that connect, deepen and strengthen. Always with a focus on inclusivity, heritage and social involvement.",
-        huzl: "<strong>Huzl</strong> is an build by Menefex, no-nonsense money management app: quick budgets, clear overviews, and smart alerts without any fluff. Stay focused, keep control of your cash, and avoid surprises. Huzl makes money management simple and effective. <br /><br /> <b>Coming soon to all app stores!</b>",
+        huzl: "<strong>Huzl</strong> is an build by Menefex, no-nonsense money management app: quick budgets, clear overviews, and smart alerts without any fluff. Stay focused, keep control of your cash, and avoid surprises. Huzl makes money management simple and effective. <br /><br /> <b>Soon available in the Google Play Store as well!</b>",
     },
 
     prices: {
@@ -328,7 +330,7 @@ export default {
         },
         notes: {
             title: "Additional information:",
-            content: `<p>You have clearly also come to the right place for <b><u>smaller tasks</u></b>, for example <b>maintenance</b>, a <b>new logo</b>, <b>extra additions</b> of <b>applications</b> on your website, web app or webshop, better <b>visibility</b> via the search results <b>(SEO)</b> on e.g. Google, Bing, Yahoo... You name it, make it as crazy as you want. <u>We fix it!</u></p><p>We also tackle <b>larger projects</b> that require more time, such as updating an existing website. All important services are priced at <b>€55 per hour (excl. VAT).</b></p><p>If you are unable to decide which <b>package</b> best suited to you... No problem! We are happy to help you. Request a <b>callback</b> request, <b>call</b> or <b>email</b> us and everything will be discussed in detail. </p><p>* <a href="https://menefex.nl/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / view</b></a> an <u>overview</u> of our prices in <b>pdf</b> form.</p>`,
+            content: `<p>You have clearly also come to the right place for <b><u>smaller tasks</u></b>, for example <b>maintenance</b>, a <b>new logo</b>, <b>extra additions</b> of <b>applications</b> on your website, web app or webshop, better <b>visibility</b> via the search results <b>(SEO)</b> on e.g. Google, Bing, Yahoo... You name it, make it as crazy as you want. <u>We fix it!</u></p><p>We also tackle <b>larger projects</b> that require more time, such as updating an existing website. All important services are priced at <b>€55 per hour (excl. VAT).</b></p><p>If you are unable to decide which <b>package</b> best suited to you... No problem! We are happy to help you. Request a <b>callback</b> request, <b>call</b> or <b>email</b> us and everything will be discussed in detail. </p><p>* <a href="/mnfx-prijslijst.pdf" rel="noopener noreferrer" target="_blank"><b>Download / view</b></a> an <u>overview</u> of our prices in <b>pdf</b> form.</p>`,
         },
         form: {
             title: "Callback request",

@@ -14,6 +14,7 @@ import {
     // faPatreon,
     // faSkype,
     faSearchengin,
+    faAppStoreIos,
 } from "@fortawesome/free-brands-svg-icons";
 import {
     faRotateLeft,
@@ -88,7 +89,8 @@ library.add(
     faEnvelopeCircleCheck,
     faCircleQuestion,
     faXmark,
-    faCaretRight
+    faCaretRight,
+    faAppStoreIos,
 );
 
 import useTranslation from "../hooks/use-translation";
@@ -132,10 +134,7 @@ const Layout = ({ children }) => {
             <div className="menefex">
                 <Banner ref={bannerRef} />
                 <header>
-                    <DesktopMenu
-                        drawerClickHandler={drawerToggleClickHandler}
-                        bannerRef={bannerRef}
-                    />
+                    <DesktopMenu drawerClickHandler={drawerToggleClickHandler} bannerRef={bannerRef} />
                     <MobileMenu show={sideDrawerOpen} />
                 </header>
 
