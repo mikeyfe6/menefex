@@ -18,5 +18,7 @@
 
     a {
         @include text-link;
+
+        @include fluid-typing(17, 19);
     }
 }
