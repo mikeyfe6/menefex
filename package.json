@@ -61,6 +61,9 @@
     "sharp": "0.32.6",
     "swiper": "^14.2.0"
   },
+  "resolutions": {
+    "immutable": "^5.1.5"
+  },
   "devDependencies": {
     "eslint": "^10.9.1",
     "eslint-config-airbnb": "^19.0.4",
