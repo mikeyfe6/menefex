@@ -62,7 +62,7 @@
     "swiper": "^14.2.0"
   },
   "resolutions": {
-    "immutable": "^5.1.5"
+    "immutable": "^5.1.9"
   },
   "devDependencies": {
     "eslint": "^10.9.1",
