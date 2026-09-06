@@ -23,7 +23,7 @@ export default {
 
     hero: {
         menefex: "Menefex Web Media Agency",
-        slogan: "<span>By Michael Fransman</span> — Freelance web development for custom solutions, fast <u>websites</u>, smart <u>applications</u>, and converting <u>webshops</u>.",
+        slogan: "<span>By Michael Fransman</span> — Freelance web development for custom solutions; fast <u>websites</u>, smart <u>applications</u>, and converting <u>webshops</u>.",
 
         cta: {
             start: "Start your project",

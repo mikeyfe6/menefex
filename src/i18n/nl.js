@@ -25,7 +25,7 @@ export default {
 
     hero: {
         menefex: "Menefex Webmediabureau",
-        slogan: "<span>Door Michael Fransman</span> — Freelance webdevelopment voor maatwerk oplossingen, snelle <u>websites</u>, slimme <u>applicaties</u> en converterende <u>webshops</u>.",
+        slogan: "<span>Door Michael Fransman</span> — Freelance webdevelopment voor maatwerk oplossingen; snelle <u>websites</u>, slimme <u>applicaties</u> en converterende <u>webshops</u>.",
 
         cta: {
             start: "Start jouw project",
