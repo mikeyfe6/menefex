@@ -18,12 +18,15 @@ const MobileMenu = ({ show }) => {
     }
 
     const checkIfPartiallyActive = ({ isPartiallyCurrent, location }) => {
-        return location.pathname.includes("/blog") ||
-            location.pathname.includes("/topics")
-            ? { className: mobileMenuStyles.activePage }
-            : isPartiallyCurrent
-            ? { className: mobileMenuStyles.activePage }
-            : null;
+        if (location.pathname.includes("/blog/") || location.pathname.includes("/topics/")) {
+            return { className: mobileMenuStyles.activePage };
+        }
+
+        if (isPartiallyCurrent) {
+            return { className: mobileMenuStyles.activePage };
+        }
+
+        return null;
     };
 
     if (!isHydrated) return null;
@@ -38,67 +41,44 @@ const MobileMenu = ({ show }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/diensten/"
-                        activeClassName={mobileMenuStyles.activePage}
-                        partiallyActive
-                    >
+                    <Link to="/diensten/" activeClassName={mobileMenuStyles.activePage} partiallyActive>
                         {t("menu.services")}
 
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/portfolio/"
-                        activeClassName={mobileMenuStyles.activePage}
-                    >
+                    <Link to="/portfolio/" activeClassName={mobileMenuStyles.activePage}>
                         {t("menu.portfolio")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/prijzen/"
-                        activeClassName={mobileMenuStyles.activePage}
-                    >
+                    <Link to="/prijzen/" activeClassName={mobileMenuStyles.activePage}>
                         {t("menu.prices")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/blog/"
-                        activeClassName={mobileMenuStyles.activePage}
-                        getProps={checkIfPartiallyActive}
-                    >
+                    <Link to="/blog/" activeClassName={mobileMenuStyles.activePage} getProps={checkIfPartiallyActive}>
                         {t("menu.blog")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/faq/"
-                        activeClassName={mobileMenuStyles.activePage}
-                    >
+                    <Link to="/faq/" activeClassName={mobileMenuStyles.activePage}>
                         {t("menu.faq")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/over/"
-                        activeClassName={mobileMenuStyles.activePage}
-                    >
+                    <Link to="/over/" activeClassName={mobileMenuStyles.activePage}>
                         {t("menu.about")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        to="/contact/"
-                        activeClassName={mobileMenuStyles.activePage}
-                    >
+                    <Link to="/contact/" activeClassName={mobileMenuStyles.activePage}>
                         {t("menu.contact")}
                         <span className={mobileMenuStyles.dots}>.</span>
                     </Link>
