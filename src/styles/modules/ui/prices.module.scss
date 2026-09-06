@@ -36,11 +36,7 @@
                 text-decoration-thickness: 2px;
                 text-decoration-color: $ivory-color;
                 padding: rem-calc(8 0);
-                background: linear-gradient(
-                    to bottom,
-                    $secondary-color,
-                    $secondary-color
-                );
+                background: linear-gradient(to bottom, $secondary-color, $secondary-color);
 
                 @include fluid-typing(28, 28);
             }

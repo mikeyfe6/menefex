@@ -44,15 +44,21 @@
 
             a {
                 color: $primary-color;
-                text-shadow: -5px 0 #ccc, 0 5px #ccc, 5px 0 #ccc, 0 -5px #ccc;
+                text-shadow:
+                    -5px 0 #ccc,
+                    0 5px #ccc,
+                    5px 0 #ccc,
+                    0 -5px #ccc;
                 font-weight: 600;
                 text-transform: lowercase;
 
                 @extend %as-h5;
 
                 &:hover:not(.active-page) {
-                    text-shadow: -15px 0 $lightgrey-color,
-                        0 15px $lightgrey-color, 15px 0 $lightgrey-color,
+                    text-shadow:
+                        -15px 0 $lightgrey-color,
+                        0 15px $lightgrey-color,
+                        15px 0 $lightgrey-color,
                         0 -15px $lightgrey-color;
                 }
 
@@ -72,8 +78,10 @@
                 }
 
                 &.active-page {
-                    text-shadow: -10px 0 $secondary-color,
-                        0 10px $secondary-color, 10px 0 $secondary-color,
+                    text-shadow:
+                        -10px 0 $secondary-color,
+                        0 10px $secondary-color,
+                        10px 0 $secondary-color,
                         0 -10px $secondary-color;
 
                     @extend %as-h4;

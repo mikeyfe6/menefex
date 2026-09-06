@@ -11,16 +11,12 @@ exports.handler = async (event) => {
     const { recaptchaToken, formId, ...formData } = JSON.parse(event.body);
 
     try {
-        const verifyResponse = await axios.post(
-            "https://www.google.com/recaptcha/api/siteverify",
-            null,
-            {
-                params: {
-                    secret: process.env.RECAPTCHA_SECRET_KEY,
-                    response: recaptchaToken,
-                },
-            }
-        );
+        const verifyResponse = await axios.post("https://www.google.com/recaptcha/api/siteverify", null, {
+            params: {
+                secret: process.env.RECAPTCHA_SECRET_KEY,
+                response: recaptchaToken,
+            },
+        });
 
         const { success, score, action } = verifyResponse.data;
 

@@ -36,19 +36,15 @@ const EmailTemplatePage = () => {
 
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
-                            <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                            {t("services.allServices")}
+                            <FontAwesomeIcon icon={["fas", "angles-left"]} /> {t("services.allServices")}
                         </Link>
                         <Link to="/prijzen/">
-                            {t("services.goToPrices")}{" "}
-                            <FontAwesomeIcon icon={["fas", "angles-right"]} />
+                            {t("services.goToPrices")} <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
 
                     <div className={servicesStyles.servicesWatermark}>
-                        <FontAwesomeIcon
-                            icon={["fas", "envelope-circle-check"]}
-                        />
+                        <FontAwesomeIcon icon={["fas", "envelope-circle-check"]} />
                     </div>
                 </div>
             </section>

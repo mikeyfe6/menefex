@@ -91,7 +91,7 @@ const Call = ({ callRef }) => {
         const updatedOptions = options.map((slot) => {
             const timePart = slot.display.replace(
                 /^(Vandaag tussen|Morgen tussen|Today between|Tomorrow between)\s*/,
-                ""
+                "",
             );
 
             const dayPrefix = currentHour >= slot.hour ? t("prices.form.tomorrow") : t("prices.form.today");
@@ -112,7 +112,7 @@ const Call = ({ callRef }) => {
                 [event.target.name]: event.target.value,
             });
         },
-        [inputs]
+        [inputs],
     );
 
     const handleSubmit = useCallback(
@@ -146,7 +146,7 @@ const Call = ({ callRef }) => {
                 console.error("POST ERROR", error);
             }
         },
-        [inputs, recaptchaLoaded]
+        [inputs, recaptchaLoaded],
     );
 
     if (!isHydrated) return null;

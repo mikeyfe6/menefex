@@ -36,7 +36,7 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
                     menu.dataset.scrolled = "true";
                 }
             },
-            { threshold: 0, rootMargin: "-50px" }
+            { threshold: 0, rootMargin: "-50px" },
         );
 
         observer.observe(banner);
@@ -50,11 +50,12 @@ const DesktopMenu = ({ drawerClickHandler, bannerRef }) => {
     };
 
     const checkIfPartiallyActive = ({ isPartiallyCurrent, location }) => {
-        return location.pathname.includes("/blog/") || location.pathname.includes("/topics/")
-            ? { className: desktopMenuStyles.activePage }
-            : isPartiallyCurrent
-            ? { className: desktopMenuStyles.activePage }
-            : null;
+        return (
+            location.pathname.includes("/blog/") || location.pathname.includes("/topics/") ?
+                { className: desktopMenuStyles.activePage }
+            : isPartiallyCurrent ? { className: desktopMenuStyles.activePage }
+            : null
+        );
     };
 
     return (

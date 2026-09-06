@@ -5,11 +5,7 @@
     top: rem-calc($banner);
     left: 0;
     position: fixed;
-    background: linear-gradient(
-        to bottom,
-        $white-color,
-        rgba($white-color, 90%)
-    );
+    background: linear-gradient(to bottom, $white-color, rgba($white-color, 90%));
     padding: rem-calc(16 0);
     z-index: 7;
     border-top: 7.5px solid $secondary-color;

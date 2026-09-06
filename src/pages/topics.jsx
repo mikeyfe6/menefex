@@ -19,10 +19,7 @@ const TopicPage = () => {
 
     const data = useStaticQuery(graphql`
         query TopicQuery {
-            nlContent: allContentfulTopic(
-                sort: { name: ASC }
-                filter: { node_locale: { eq: "nl" } }
-            ) {
+            nlContent: allContentfulTopic(sort: { name: ASC }, filter: { node_locale: { eq: "nl" } }) {
                 edges {
                     node {
                         contentful_id
@@ -35,10 +32,7 @@ const TopicPage = () => {
                     }
                 }
             }
-            enContent: allContentfulTopic(
-                sort: { name: ASC }
-                filter: { node_locale: { eq: "en" } }
-            ) {
+            enContent: allContentfulTopic(sort: { name: ASC }, filter: { node_locale: { eq: "en" } }) {
                 edges {
                     node {
                         contentful_id
@@ -54,8 +48,7 @@ const TopicPage = () => {
         }
     `);
 
-    const currentContent =
-        currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
+    const currentContent = currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
 
     if (!currentContent) {
         return <p>Geen content beschikbaar / No content available.</p>;
@@ -73,37 +66,20 @@ const TopicPage = () => {
             <section id="topics">
                 <div className={topicStyles.topicsContainer}>
                     <ul>
-                        {currentContent.map(
-                            ({
-                                node: {
-                                    contentful_id,
-                                    slug,
-                                    bdcolor,
-                                    name,
-                                    description,
-                                },
-                            }) => (
-                                <li key={contentful_id}>
-                                    <Link
-                                        to={`/topics/${slug}/`}
-                                        style={{ borderColor: bdcolor }}
-                                    >
-                                        <h3>
-                                            <span style={{ color: bdcolor }}>
-                                                #
-                                            </span>{" "}
-                                            {name}
-                                        </h3>
-                                        <p>{description.description}</p>
-                                    </Link>
-                                </li>
-                            )
-                        )}
+                        {currentContent.map(({ node: { contentful_id, slug, bdcolor, name, description } }) => (
+                            <li key={contentful_id}>
+                                <Link to={`/topics/${slug}/`} style={{ borderColor: bdcolor }}>
+                                    <h3>
+                                        <span style={{ color: bdcolor }}>#</span> {name}
+                                    </h3>
+                                    <p>{description.description}</p>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
 
                     <Link to="/blog/">
-                        &apos;Blog&apos;{" "}
-                        <FontAwesomeIcon icon={["fas", "angles-right"]} />
+                        &apos;Blog&apos; <FontAwesomeIcon icon={["fas", "angles-right"]} />
                     </Link>
                 </div>
             </section>

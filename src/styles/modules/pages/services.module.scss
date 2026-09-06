@@ -30,11 +30,7 @@
                     padding: rem-calc(16 20);
                     border-bottom: 4px solid $lightgrey-color;
                     color: $white-color;
-                    background: linear-gradient(
-                        145deg,
-                        rgba($primary-color, 0.825),
-                        rgba($dark-color, 0.825)
-                    );
+                    background: linear-gradient(145deg, rgba($primary-color, 0.825), rgba($dark-color, 0.825));
 
                     @include fluid-typing(21, 23);
 
@@ -143,11 +139,7 @@
                 }
 
                 > p {
-                    background: linear-gradient(
-                        145deg,
-                        $primary-color,
-                        $dark-color
-                    );
+                    background: linear-gradient(145deg, $primary-color, $dark-color);
                     color: $white-color;
                     padding: rem-calc(12);
                     outline: 2px solid $primary-color;

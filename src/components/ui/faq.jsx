@@ -81,36 +81,19 @@ const Faq = () => {
                         {faqData.map((item, idx) => (
                             <div key={idx} className={faqStyles.faqItem}>
                                 <button
-                                    onClick={() =>
-                                        setOpenIndex(
-                                            openIndex === idx ? null : idx
-                                        )
-                                    }
+                                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                                     aria-expanded={openIndex === idx}
                                     className={faqStyles.faqQuestion}
                                 >
-                                    <h4 className="faq-tracking">
-                                        {item.question}
-                                    </h4>
+                                    <h4 className="faq-tracking">{item.question}</h4>
                                 </button>
-                                <div
-                                    className={`${faqStyles.faqAnswer} ${
-                                        openIndex === idx ? faqStyles.open : ""
-                                    }`}
-                                >
-                                    <FontAwesomeIcon
-                                        icon={["fas", "right-long"]}
-                                        size="lg"
-                                    />
+                                <div className={`${faqStyles.faqAnswer} ${openIndex === idx ? faqStyles.open : ""}`}>
+                                    <FontAwesomeIcon icon={["fas", "right-long"]} size="lg" />
                                     <p>
                                         {item.answer}{" "}
                                         {item.link && (
                                             <>
-                                                {t("faq.priceText")}{" "}
-                                                <Link to={item.link}>
-                                                    {t("faq.priceLink")}
-                                                </Link>
-                                                .
+                                                {t("faq.priceText")} <Link to={item.link}>{t("faq.priceLink")}</Link>.
                                             </>
                                         )}
                                     </p>

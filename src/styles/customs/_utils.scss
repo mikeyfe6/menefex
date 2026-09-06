@@ -1,18 +1,12 @@
 @use "variables" as *;
 
-@mixin fluid-typing(
-    $font-min,
-    $font-max,
-    $screen-min: 320,
-    $screen-max: $layout
-) {
+@mixin fluid-typing($font-min, $font-max, $screen-min: 320, $screen-max: $layout) {
     font-size: #{$font-min}px;
 
     @media only screen and (min-width: #{$screen-min}px) {
         /* stylelint-disable-next-line no-invalid-position-declaration */
         font-size: calc(
-            #{$font-min}px + #{($font-max - $font-min)} *
-                (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
+            #{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
         );
     }
 

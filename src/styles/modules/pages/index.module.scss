@@ -16,10 +16,5 @@
     display: table;
     opacity: 0.5;
     width: rem-calc(4);
-    background: linear-gradient(
-        145deg,
-        transparent,
-        $secondary-color,
-        transparent
-    );
+    background: linear-gradient(145deg, transparent, $secondary-color, transparent);
 }

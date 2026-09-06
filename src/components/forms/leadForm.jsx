@@ -68,7 +68,7 @@ const Form = () => {
                 [event.target.name]: event.target.value,
             });
         },
-        [inputs]
+        [inputs],
     );
 
     const handleSubmit = useCallback(
@@ -102,7 +102,7 @@ const Form = () => {
                 console.error("POST ERROR", error);
             }
         },
-        [inputs, recaptchaLoaded]
+        [inputs, recaptchaLoaded],
     );
 
     if (!isHydrated) return null;

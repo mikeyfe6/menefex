@@ -156,7 +156,7 @@
                         border-left: 10px solid $secondary-color;
                         margin: rem-calc(36 0);
                         padding: rem-calc(12 32 12 16);
-                        quotes: "\201C""\201D""\2018""\2019";
+                        quotes: "\201C" "\201D" "\2018" "\2019";
                         border-top-right-radius: $low-radius;
                         border-bottom-right-radius: $low-radius;
                         width: fit-content;
@@ -411,9 +411,7 @@
                                         span {
                                             text-decoration-line: underline;
                                             text-decoration-thickness: 1px;
-                                            text-underline-offset: rem-calc(
-                                                2.5
-                                            );
+                                            text-underline-offset: rem-calc(2.5);
                                         }
                                     }
 
@@ -478,11 +476,7 @@
                     flex-direction: column;
 
                     > a {
-                        background: linear-gradient(
-                            145deg,
-                            $smoke-color,
-                            $tissue-color
-                        );
+                        background: linear-gradient(145deg, $smoke-color, $tissue-color);
                         outline: 2px solid $lightgrey-color;
                         border-radius: $high-radius;
                         max-width: rem-calc(320);

@@ -34,8 +34,7 @@ const SEO = ({
     const pageDescription = description || defaultDescription;
 
     const pageImage = ogImage || `${url}${image}`;
-    const pageImageAlt =
-        ogImageAlt || (title ? `${title} | ${siteTitle}` : siteTitle);
+    const pageImageAlt = ogImageAlt || (title ? `${title} | ${siteTitle}` : siteTitle);
 
     const organizationSchema = {
         "@context": "https://schema.org",
@@ -129,18 +128,11 @@ const SEO = ({
     const createCombinedSchema = (customSchema, baseSchemas) => {
         if (!customSchema) return baseSchemas;
 
-        const customSchemas = Array.isArray(customSchema)
-            ? customSchema
-            : [customSchema];
+        const customSchemas = Array.isArray(customSchema) ? customSchema : [customSchema];
         return [...customSchemas, ...baseSchemas];
     };
 
-    const baseSchemas = [
-        organizationSchema,
-        webPageSchema,
-        websiteSchema,
-        personSchema,
-    ];
+    const baseSchemas = [organizationSchema, webPageSchema, websiteSchema, personSchema];
 
     const combinedSchema = createCombinedSchema(schemaMarkup, baseSchemas);
 
@@ -159,36 +151,20 @@ const SEO = ({
             <meta property="fb:domains" content="menefex.nl" />
 
             {title && <meta property="og:title" content={title} />}
-            {description && (
-                <meta property="og:description" content={description} />
-            )}
+            {description && <meta property="og:description" content={description} />}
             {pageImage && <meta property="og:image" content={pageImage} />}
-            {pageImageAlt && (
-                <meta property="og:image:alt" content={pageImageAlt} />
-            )}
+            {pageImageAlt && <meta property="og:image:alt" content={pageImageAlt} />}
             <meta property="og:site_name" content={siteTitle} />
             {siteUrl && <meta property="og:url" content={siteUrl} />}
             <meta property="og:locale" content="nl_NL" />
             <meta property="og:locale:alternate" content="en_US" />
-            <meta
-                property="og:type"
-                content={article ? "article" : "website"}
-            />
+            <meta property="og:type" content={article ? "article" : "website"} />
 
             {article && (
                 <>
-                    <meta
-                        property="article:published_time"
-                        content={publishedDate}
-                    />
-                    <meta
-                        property="article:modified_time"
-                        content={modifiedDate}
-                    />
-                    <meta
-                        property="article:author"
-                        content={`https://www.facebook.com/${handle}`}
-                    />
+                    <meta property="article:published_time" content={publishedDate} />
+                    <meta property="article:modified_time" content={modifiedDate} />
+                    <meta property="article:author" content={`https://www.facebook.com/${handle}`} />
                 </>
             )}
 
@@ -196,15 +172,11 @@ const SEO = ({
 
             <meta property="twitter:card" content="summary_large_image" />
             {title && <meta property="twitter:title" content={title} />}
-            {description && (
-                <meta property="twitter:description" content={description} />
-            )}
+            {description && <meta property="twitter:description" content={description} />}
             {pageImage && <meta property="twitter:image" content={pageImage} />}
             {siteUrl && <meta property="twitter:url" content={siteUrl} />}
             <meta property="twitter:site" content={`@${handle}`} />
-            {handle && (
-                <meta property="twitter:creator" content={`@${handle}`} />
-            )}
+            {handle && <meta property="twitter:creator" content={`@${handle}`} />}
 
             {/* --- Schema Markup ! --- */}
 

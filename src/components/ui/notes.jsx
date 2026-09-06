@@ -14,9 +14,7 @@ const Notes = () => {
     return (
         <section className={notesStyles.notes} id="notes">
             <h3>{t("prices.notes.title")}</h3>
-            <p
-                dangerouslySetInnerHTML={{ __html: t("prices.notes.content") }}
-            />
+            <p dangerouslySetInnerHTML={{ __html: t("prices.notes.content") }} />
         </section>
     );
 };

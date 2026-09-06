@@ -21,10 +21,7 @@ const BlogPage = () => {
 
     const data = useStaticQuery(graphql`
         query BlogQuery {
-            nlContent: allContentfulBlogPost(
-                sort: { publishedDate: DESC }
-                filter: { node_locale: { eq: "nl" } }
-            ) {
+            nlContent: allContentfulBlogPost(sort: { publishedDate: DESC }, filter: { node_locale: { eq: "nl" } }) {
                 edges {
                     node {
                         id
@@ -36,18 +33,12 @@ const BlogPage = () => {
                             title
                             gatsbyImageData
                         }
-                        publishedDate(
-                            formatString: "dddd D MMMM YYYY"
-                            locale: "nl"
-                        )
+                        publishedDate(formatString: "dddd D MMMM YYYY", locale: "nl")
                     }
                 }
             }
 
-            enContent: allContentfulBlogPost(
-                sort: { publishedDate: DESC }
-                filter: { node_locale: { eq: "en" } }
-            ) {
+            enContent: allContentfulBlogPost(sort: { publishedDate: DESC }, filter: { node_locale: { eq: "en" } }) {
                 edges {
                     node {
                         id
@@ -59,18 +50,14 @@ const BlogPage = () => {
                             title
                             gatsbyImageData
                         }
-                        publishedDate(
-                            formatString: "dddd D MMMM YYYY"
-                            locale: "en"
-                        )
+                        publishedDate(formatString: "dddd D MMMM YYYY", locale: "en")
                     }
                 }
             }
         }
     `);
 
-    const currentContent =
-        currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
+    const currentContent = currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
 
     if (!currentContent) {
         return <p>Geen content beschikbaar / No content available.</p>;
@@ -89,9 +76,7 @@ const BlogPage = () => {
                 <div className={blogStyles.blogContainer}>
                     <ul>
                         {currentContent.map((edge) => {
-                            const image = getImage(
-                                edge.node.image.gatsbyImageData
-                            );
+                            const image = getImage(edge.node.image.gatsbyImageData);
                             return (
                                 <li key={edge.node.id}>
                                     <Link to={`/blog/${edge.node.slug}/`}>
@@ -100,38 +85,18 @@ const BlogPage = () => {
                                             <p>{edge.node.subtitle}</p>
                                             <small>
                                                 <span>
-                                                    <FontAwesomeIcon
-                                                        icon={[
-                                                            "fas",
-                                                            "calendar-days",
-                                                        ]}
-                                                    />
-                                                    <strong>
-                                                        {
-                                                            edge.node
-                                                                .publishedDate
-                                                        }
-                                                    </strong>{" "}
+                                                    <FontAwesomeIcon icon={["fas", "calendar-days"]} />
+                                                    <strong>{edge.node.publishedDate}</strong>{" "}
                                                 </span>
                                                 <span>
-                                                    <FontAwesomeIcon
-                                                        icon={[
-                                                            "fas",
-                                                            "feather-pointed",
-                                                        ]}
-                                                    />
-                                                    <strong>
-                                                        {edge.node.author}
-                                                    </strong>
+                                                    <FontAwesomeIcon icon={["fas", "feather-pointed"]} />
+                                                    <strong>{edge.node.author}</strong>
                                                 </span>
                                             </small>
                                         </div>
 
                                         <div>
-                                            <GatsbyImage
-                                                image={image}
-                                                alt={edge.node.image.title}
-                                            />
+                                            <GatsbyImage image={image} alt={edge.node.image.title} />
                                         </div>
                                     </Link>
                                 </li>
@@ -140,8 +105,7 @@ const BlogPage = () => {
                     </ul>
 
                     <Link to="/topics/">
-                        &apos;Topics&apos;{" "}
-                        <FontAwesomeIcon icon={["fas", "angles-right"]} />
+                        &apos;Topics&apos; <FontAwesomeIcon icon={["fas", "angles-right"]} />
                     </Link>
                 </div>
             </section>

@@ -24,9 +24,7 @@ const ResponsiveTag = () => {
 
     const handleResize = () => {
         const width = window.innerWidth / 16;
-        const breakpoint = breakpoints.find(
-            (breakpoint) => width <= breakpoint.size
-        );
+        const breakpoint = breakpoints.find((breakpoint) => width <= breakpoint.size);
         if (breakpoint) {
             setScreenSize(breakpoint.label);
         }

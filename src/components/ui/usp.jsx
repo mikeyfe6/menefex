@@ -18,92 +18,62 @@ const Usp = () => {
                     <li>
                         <FontAwesomeIcon icon={["fas", "1"]} />
                         <p>
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-left"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-left"]} size="xs" />
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("usp.one"),
                                 }}
                             />
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-right"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-right"]} size="xs" />
                         </p>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={["fas", "2"]} />
                         <p>
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-left"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-left"]} size="xs" />
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("usp.two"),
                                 }}
                             />
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-right"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-right"]} size="xs" />
                         </p>
                     </li>
 
                     <li>
                         <FontAwesomeIcon icon={["fas", "3"]} />
                         <p>
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-left"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-left"]} size="xs" />
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("usp.three"),
                                 }}
                             />
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-right"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-right"]} size="xs" />
                         </p>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={["fas", "4"]} />
                         <p>
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-left"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-left"]} size="xs" />
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("usp.four"),
                                 }}
                             />
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-right"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-right"]} size="xs" />
                         </p>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={["fas", "5"]} />
                         <p>
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-left"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-left"]} size="xs" />
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("usp.five"),
                                 }}
                             />
-                            <FontAwesomeIcon
-                                icon={["fas", "quote-right"]}
-                                size="xs"
-                            />
+                            <FontAwesomeIcon icon={["fas", "quote-right"]} size="xs" />
                         </p>
                     </li>
                 </ul>

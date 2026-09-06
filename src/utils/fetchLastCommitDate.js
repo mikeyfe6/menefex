@@ -7,8 +7,7 @@ const excludedPages = [
     "src/pages/404.html.jsx",
 ];
 
-const isExcluded = (filePath) =>
-    excludedPages.some((page) => filePath.startsWith(page));
+const isExcluded = (filePath) => excludedPages.some((page) => filePath.startsWith(page));
 
 const fetchLastCommitDate = async (filePath) => {
     const githubToken = process.env.GATSBY_GITHUB_TOKEN;
@@ -21,18 +20,15 @@ const fetchLastCommitDate = async (filePath) => {
     }
 
     try {
-        const response = await axios.get(
-            `https://api.github.com/repos/${repoOwner}/${repoName}/commits`,
-            {
-                params: {
-                    path: filePath,
-                    per_page: 1,
-                },
-                headers: {
-                    Authorization: `token ${githubToken}`,
-                },
-            }
-        );
+        const response = await axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`, {
+            params: {
+                path: filePath,
+                per_page: 1,
+            },
+            headers: {
+                Authorization: `token ${githubToken}`,
+            },
+        });
 
         if (response.data.length === 0) {
             console.warn(`No commits found for path: ${filePath}`);

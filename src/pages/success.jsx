@@ -31,10 +31,5 @@ const ThankYouPage = () => {
 export default ThankYouPage;
 
 export const Head = () => (
-    <SEO
-        title="Bedankt!"
-        description="Success! Jouw bericht is aangekomen."
-        pathname="/success/"
-        noindex
-    />
+    <SEO title="Bedankt!" description="Success! Jouw bericht is aangekomen." pathname="/success/" noindex />
 );

@@ -39,23 +39,19 @@ const Info = () => {
                     <span>{t("contact.info.tuesday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contact.info.wednesday")}</span>{" "}
-                    <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.wednesday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contact.info.thursday")}</span>{" "}
-                    <b>9:00 · 19:00</b>
+                    <span>{t("contact.info.thursday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
                     <span>{t("contact.info.friday")}</span> <b>9:00 · 19:00</b>
                 </li>
                 <li>
-                    <span>{t("contact.info.saturday")}</span>{" "}
-                    <b>{t("contact.info.closed")}</b>
+                    <span>{t("contact.info.saturday")}</span> <b>{t("contact.info.closed")}</b>
                 </li>
                 <li>
-                    <span>{t("contact.info.sunday")}</span>{" "}
-                    <b>{t("contact.info.closed")}</b>
+                    <span>{t("contact.info.sunday")}</span> <b>{t("contact.info.closed")}</b>
                 </li>
             </ul>
 
@@ -68,18 +64,11 @@ const Info = () => {
 
             <div className={infoStyles.infoCommunication}>
                 <a href={`tel:+${telephone}`} className={infoStyles.infoTel}>
-                    <FontAwesomeIcon icon={["fas", "phone"]} /> ·{" "}
-                    <span>+31 6 11 05 43 18</span>
+                    <FontAwesomeIcon icon={["fas", "phone"]} /> · <span>+31 6 11 05 43 18</span>
                 </a>
 
-                <a
-                    href={`mailto:${email}`}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className={infoStyles.infoMail}
-                >
-                    <FontAwesomeIcon icon={["fas", "envelope"]} /> ·{" "}
-                    <span>{email}</span>
+                <a href={`mailto:${email}`} rel="noopener noreferrer" target="_blank" className={infoStyles.infoMail}>
+                    <FontAwesomeIcon icon={["fas", "envelope"]} /> · <span>{email}</span>
                 </a>
 
                 <a
@@ -88,8 +77,7 @@ const Info = () => {
                     target="_blank"
                     className={infoStyles.infoWhapp}
                 >
-                    <FontAwesomeIcon icon={["fab", "whatsapp"]} /> ·{" "}
-                    <span>WhatsApp</span>
+                    <FontAwesomeIcon icon={["fab", "whatsapp"]} /> · <span>WhatsApp</span>
                 </a>
             </div>
 
