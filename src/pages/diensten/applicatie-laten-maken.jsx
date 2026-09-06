@@ -13,7 +13,7 @@ import * as servicesStyles from "../../styles/modules/pages/services.module.scss
 
 // TODO: klaar voor TS'en..
 
-const WebappPage = () => {
+const AppPage = () => {
     const { t, isHydrated } = useTranslation();
 
     if (!isHydrated) return null;
@@ -23,29 +23,27 @@ const WebappPage = () => {
             <section className="page-intro">
                 <h1
                     dangerouslySetInnerHTML={{
-                        __html: t("services.webapps.title"),
+                        __html: t("services.apps.title"),
                     }}
                 />
-                <h2>{t("services.webapps.intro")}</h2>
+                <h2>{t("services.apps.intro")}</h2>
             </section>
 
             <section className={servicesStyles.servicesDetail}>
                 <div className={servicesStyles.servicesContainer}>
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: t("services.webapps.content"),
+                            __html: t("services.apps.content"),
                         }}
                         className={servicesStyles.servicesContent}
                     />
 
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
-                            <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                            {t("services.allServices")}
+                            <FontAwesomeIcon icon={["fas", "angles-left"]} /> {t("services.allServices")}
                         </Link>
                         <Link to="/prijzen/">
-                            {t("services.goToPrices")}{" "}
-                            <FontAwesomeIcon icon={["fas", "angles-right"]} />
+                            {t("services.goToPrices")} <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
 
@@ -58,15 +56,15 @@ const WebappPage = () => {
     );
 };
 
-export default WebappPage;
+export default AppPage;
 
 export const Head = () => {
     const { siteUrl } = useSiteMetadata();
 
-    const pageTitle = "Webapplicatie laten maken";
+    const pageTitle = "Applicatie laten maken";
     const pageDescription =
-        "Professioneel ontworpen webapplicaties die volledig zijn afgestemd op jouw bedrijfsprocessen en gebruikersbehoeften. Onze op maat gemaakte webapplicaties bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online succes te maximaliseren.";
-    const pageSlug = "/diensten/webapplicatie-laten-maken/";
+        "Professioneel ontworpen applicaties die volledig zijn afgestemd op jouw bedrijfsprocessen en gebruikersbehoeften. Onze op maat gemaakte applicaties bieden een gebruiksvriendelijke interface en optimale functionaliteit om jouw online succes te maximaliseren.";
+    const pageSlug = "/diensten/applicatie-laten-maken/";
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -97,7 +95,7 @@ export const Head = () => {
             "@id": siteUrl + "/#organization",
         },
         serviceType: pageTitle,
-        category: "Web Development",
+        category: "Mobile App Development",
         areaServed: {
             "@type": "Country",
             name: "Netherlands",
@@ -108,7 +106,7 @@ export const Head = () => {
         <SEO
             title={pageTitle}
             description={pageDescription}
-            keywords="webapplicatie laten maken, webapp laten maken, professionele webapplicaties, op maat gemaakte webapplicaties"
+            keywords="(mobiele) applicatie laten maken, app laten maken, professionele applicaties, op maat gemaakte applicaties"
             pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />

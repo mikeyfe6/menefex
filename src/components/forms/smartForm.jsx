@@ -81,7 +81,7 @@ const SmartForm = () => {
             options: [
                 { value: "website", label: t("smartform.options.website") },
                 { value: "webshop", label: t("smartform.options.webshop") },
-                { value: "webapp", label: t("smartform.options.webapp") },
+                { value: "app", label: t("smartform.options.app") },
                 { value: "seo", label: t("smartform.options.seo") },
                 { value: "other", label: t("smartform.options.other") },
             ],
@@ -91,7 +91,7 @@ const SmartForm = () => {
             type: "radio",
             dependsOn: {
                 id: "need",
-                value: ["website", "webshop", "webapp"],
+                value: ["website", "webshop", "app"],
             },
         },
         {
@@ -108,7 +108,7 @@ const SmartForm = () => {
         {
             id: "selfManage",
             type: "radio",
-            dependsOn: { id: "need", value: ["website", "webshop", "webapp"] },
+            dependsOn: { id: "need", value: ["website", "webshop", "app"] },
         },
         {
             id: "budget",
@@ -121,7 +121,7 @@ const SmartForm = () => {
             ],
             dependsOn: {
                 id: "need",
-                value: ["website", "webshop", "webapp"],
+                value: ["website", "webshop", "app"],
             },
         },
         {
@@ -285,13 +285,13 @@ const SmartForm = () => {
 
                         <input
                             ref={inputRef}
-                            type="url"
+                            type={answers.need === "app" ? "text" : "url"}
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                             id={question.id}
                             name={question.name}
-                            autoComplete={question.autoComplete}
-                            placeholder={question.placeholder}
+                            autoComplete={answers.need === "app" ? "off" : question.autoComplete}
+                            placeholder={answers.need === "app" ? t("smartform.placeholder.app") : question.placeholder}
                             required
                         />
                     </>
@@ -447,20 +447,20 @@ const SmartForm = () => {
             if (!need) return t("smartform.questions.hasWebsite.default");
             if (need === "website" || need === "SEO") return t("smartform.questions.hasWebsite.website");
             if (need === "webshop") return t("smartform.questions.hasWebsite.webshop");
-            if (need === "webapp") return t("smartform.questions.hasWebsite.webapp");
+            if (need === "app") return t("smartform.questions.hasWebsite.app");
         }
         if (id === "websiteUrl") {
             if (!need) return t("smartform.questions.websiteUrl.default");
             if (need === "website" || need === "SEO") return t("smartform.questions.websiteUrl.website");
             if (need === "webshop") return t("smartform.questions.websiteUrl.webshop");
-            if (need === "webapp") return t("smartform.questions.websiteUrl.webapp");
+            if (need === "app") return t("smartform.questions.websiteUrl.app");
             return t("smartform.questions.websiteUrl.default");
         }
         if (id === "selfManage") {
             if (!need) return t("smartform.questions.selfManage.default");
             if (need === "website") return t("smartform.questions.selfManage.website");
             if (need === "webshop") return t("smartform.questions.selfManage.webshop");
-            if (need === "webapp") return t("smartform.questions.selfManage.webapp");
+            if (need === "app") return t("smartform.questions.selfManage.app");
         }
         if (id === "budget") return t("smartform.questions.budget");
         if (id === "name") return t("smartform.questions.name");
@@ -608,14 +608,14 @@ const SmartForm = () => {
                         <p>{t("smartform.subtitle")}</p>
                         <ul>
                             {visibleFlow.slice(0, currentStep).map((q, idx) =>
-                                answers[q.id] ? (
+                                answers[q.id] ?
                                     <li key={q.id}>
                                         <small>
                                             {getDynamicQuestion(q.id, answers["need"])}:{" "}
                                             <strong>
-                                                {q.type === "radio"
-                                                    ? getRadioLabel(answers[q.id])
-                                                    : getOptionLabel(q, answers[q.id])}
+                                                {q.type === "radio" ?
+                                                    getRadioLabel(answers[q.id])
+                                                :   getOptionLabel(q, answers[q.id])}
                                             </strong>
                                             {!success && (
                                                 <button type="button" onClick={() => setCurrentStep(idx)}>
@@ -624,7 +624,7 @@ const SmartForm = () => {
                                             )}
                                         </small>
                                     </li>
-                                ) : null
+                                :   null,
                             )}
                         </ul>
                         {progress > 0 && (
@@ -638,7 +638,7 @@ const SmartForm = () => {
                         )}
                     </div>
                     <form id="smart-form" onSubmit={handleSubmit}>
-                        {success ? (
+                        {success ?
                             <div className={smartFormStyles.smartFormSuccess}>
                                 <h4>{t("smartform.success.title")}</h4>
                                 <p>{t("smartform.success.subtitle")}</p>
@@ -646,7 +646,7 @@ const SmartForm = () => {
                                     {t("smartform.restart")} <FontAwesomeIcon icon={["fas", "rotate-left"]} size="xs" />
                                 </button>
                             </div>
-                        ) : isAdviceStep ? (
+                        : isAdviceStep ?
                             <div className={smartFormStyles.smartFormAdvice}>
                                 {(() => {
                                     const advice = getAdvice(answers);
@@ -692,8 +692,7 @@ const SmartForm = () => {
                                     );
                                 })()}
                             </div>
-                        ) : (
-                            <div className={smartFormStyles.smartFormQuestion}>
+                        :   <div className={smartFormStyles.smartFormQuestion}>
                                 <QuestionBlock
                                     question={{
                                         ...currentQuestion,
@@ -722,7 +721,7 @@ const SmartForm = () => {
                                     </button>
                                 </div>
                             </div>
-                        )}
+                        }
                     </form>
                 </div>
             </div>

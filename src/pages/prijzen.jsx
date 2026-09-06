@@ -45,11 +45,7 @@ const Prices = () => {
                         {t("prices.intro.contactUs")}
                     </Link>{" "}
                     {t("prices.intro.two")}{" "}
-                    <button
-                        className={pricesStyles.callBack}
-                        onClick={goToCallForm}
-                        tabIndex={0}
-                    >
+                    <button className={pricesStyles.callBack} onClick={goToCallForm} tabIndex={0}>
                         {t("prices.intro.callBack")}
                     </button>
                     .
@@ -94,7 +90,7 @@ export const Head = () => {
         name: "Budget Plan",
         image: siteUrl + screens,
         description:
-            "Het Budget Plan biedt een betaalbare oplossing voor kleine projecten met ontwikkeling van website, webapplicatie of webshop, inclusief SEO-optimalisatie en een maand gratis ondersteuning.",
+            "Het Budget Plan biedt een betaalbare oplossing voor kleine projecten met ontwikkeling van website, webshop of applicatie inclusief SEO-optimalisatie en een maand gratis ondersteuning.",
         brand: {
             "@id": siteUrl + "/#organization",
         },

@@ -23,7 +23,7 @@ export default {
 
     hero: {
         menefex: "Menefex Web Media Agency",
-        slogan: "<span>By Michael Fransman</span> — Freelance web development for custom solutions, fast <u>websites</u>, smart <u>webapps</u>, and converting <u>webshops</u>.",
+        slogan: "<span>By Michael Fransman</span> — Freelance web development for custom solutions, fast <u>websites</u>, smart <u>applications</u>, and converting <u>webshops</u>.",
 
         cta: {
             start: "Start your project",
@@ -45,7 +45,7 @@ export default {
             email: "E-mail template creation",
             maintenance: "Maintenance/updates",
             optimizations: "Optimizations",
-            webapp: "Web application development",
+            app: "Web application development",
             webshop: "Webshop development",
             website: "Website development",
             seo: "Search engine optimization",
@@ -59,7 +59,7 @@ export default {
 
     biography: {
         title: "Biography",
-        intro: "<b>Menefex</b> is a modern web media company founded by <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. We specialize in designing, developing, and optimizing websites and web applications for both startups and established companies. Our focus is on realizing digital ambitions and creating custom software solutions tailored to your business goals. With <b>Menefex</b>, you gain a reliable partner dedicated to elevating your online presence.",
+        intro: "<b>Menefex</b> is a modern web media company founded by <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. We specialize in designing, developing, and optimizing websites, webshops and applications for both startups and established companies. Our focus is on realizing digital ambitions and creating custom software solutions tailored to your business goals. With <b>Menefex</b>, you gain a reliable partner dedicated to elevating your online presence.",
         more: "More about Menefex",
     },
 
@@ -101,9 +101,9 @@ export default {
             content:
                 "<h3><strong>What you can expect from us:</strong></h3><ol><li><h4>Unique Custom Design</h4><p>Every website we design is one of a kind. We take your preferences and branding as a starting point to create a visually appealing design that stands out from the competition. No standard templates—just a website that tells your story.</p></li><li><h4>Fast Loading Times</h4><p>We understand the importance of speed for both users and search engines. That’s why we optimize your website for fast loading times, ensuring visitors don’t lose interest and search engines rank your site higher.</p></li><li><h4>User-Friendly Interface and Experience</h4><p>A good website is easy to navigate. We provide an intuitive user experience, where visitors can quickly and easily find the information they need. This not only enhances user satisfaction but also increases the chances of conversions.</p></li><li><h4>Future-Proof and Compatible</h4><p>Our websites meet all modern technical standards and are compatible with all popular browsers and devices. This ensures that your website is accessible anywhere, anytime, whether on desktop, tablet, or mobile.</p></li></ol><br /><h3><strong>Benefits of a custom-built website:</strong></h3><ul><li><p><strong>SEO-Friendly:</strong> Our websites are fully optimized for search engines, meaning you’ll be found more easily online.</p></li><li><p><strong>Flexibility:</strong> Your website can grow with your business. Whether you’re looking for an online store, blog, or portfolio, we seamlessly integrate all functionalities.</p></li><li><p><strong>Security:</strong> Your website is secure and meets all modern security standards, including SSL certificates.</p></li></ul><hr /><p>Do you want a professional website that truly fits your brand and performs at its best? Get in touch today and discover how Menefex can enhance your online presence.</p>",
         },
-        webapps: {
+        apps: {
             // component
-            name: "Webapplications",
+            name: "Applications",
             excerpt:
                 "As digitalization and mobility grow, the demand for web and mobile apps is rising. Web applications stand out from websites by incorporating complex interactions that offer a seamless user experience.",
             focus: [
@@ -114,13 +114,13 @@ export default {
             cta: "More about our web applications",
 
             // overview
-            caption: `<small>Have a</small> webapplication <small>created</small>`,
+            caption: `<small>Have a</small> application <small>created</small>`,
             snippet:
                 "Professionally customized web applications that fully meet your business needs. Our web applications are user-friendly and designed to optimize your processes and increase efficiency.",
 
             // detail
-            title: "Have a web Application created: <small>Efficiency and customized innovation</small>",
-            intro: "At Menefex we create professionally customized web applications that seamlessly meet the specific needs of your company. Our applications are designed for user-friendliness and efficiency, so that they optimize your daily processes and increase productivity within your organization. Whether you are a small business or a large enterprise, we develop web applications that perfectly fit your unique goals.",
+            title: "Have an application created: <small>Efficiency and customized innovation</small>",
+            intro: "At Menefex we create professionally customized applications that seamlessly meet the specific needs of your company. Our applications are designed for user-friendliness and efficiency, so that they optimize your daily processes and increase productivity within your organization. Whether you are a small business or a large enterprise, we develop applications that perfectly fit your unique goals.",
             content: `<h3><strong>What You Can Expect from Us:</strong></h3><ol><li><h4>Custom-Built Solutions and Functionality</h4><p>Every web application we develop is fully tailored to your business processes and specific needs. We don’t offer generic solutions, but instead, create a web app that is designed to streamline your workflows, save time, and make your business operations more efficient. From project management tools to client portals and accounting systems, we build it for you.</p></li><li><h4>User-Friendly and Intuitive Design</h4><p>A good web application should be easy to use without compromising functionality. We design an interface that feels intuitive for everyone, regardless of their technical expertise. This ensures a smooth user experience and boosts your team's productivity.</p></li><li><h4>Optimized Performance, Anytime, Anywhere</h4><p>Our web applications are optimized for use across all devices and in any situation. Whether your team is working from the office, from home, or on the go, the application will function flawlessly. Additionally, we provide offline capabilities, ensuring your app is always available, even without an internet connection.</p></li><li><h4>Integration of Advanced Features</h4><p>Modern web applications require more than just basic functionality. That’s why we integrate advanced features such as access to the camera, microphone, GPS, and other device hardware. This ensures your web app is not only functional but also innovative and future-proof.</p></li></ol><br /><h3><strong>Benefits of a Custom Web Application:</strong></h3><ul><li><p><strong>Process Optimization:</strong> By digitizing and automating your business processes, you save both time and money. Our web apps are designed to simplify your workflows and increase efficiency.</p></li><li><p><strong>Future-Proof:</strong> These applications are built using modern technologies, meaning they are easily scalable and can expand as your business grows.</p></li><li><p><strong>Security and Reliability:</strong> Security is our top priority. Our web applications come with the latest security protocols and comply with all relevant privacy and security standards, ensuring your data is always safe.</p></li><li><p><strong>SEO-Friendly:</strong> Although web applications are often designed for specific business processes, we ensure they are optimized for search engines if relevant, making them as visible as possible online.</p></li></ul><hr /><p>Do you want a web application that is efficient, user-friendly, and future-proof? Get in touch today and discover how Menefex can optimize your business processes.</p>`,
         },
         webshops: {
@@ -365,7 +365,7 @@ export default {
         },
         goals: {
             title: "Our goals, aspiration and motivation?",
-            text: "<b>Menefex's</b> driving force is its interest in the diversity of software and the endless possibilities that technology offers these days. Moreover, it motivates us if we can offer our satisfied customers a digital bridge and put their ambitions packaged in a digital product on the map worldwide through a website or web application.",
+            text: "<b>Menefex's</b> driving force is its interest in the diversity of software and the endless possibilities that technology offers these days. Moreover, it motivates us if we can offer our satisfied customers a digital bridge and put their ambitions packaged in a digital product on the map worldwide through a website, webshops or application.",
         },
 
         spotify:
@@ -442,9 +442,9 @@ export default {
     },
 
     usp: {
-        one: "Simple and <b>custom-made web solutions</b> that grow with you",
+        one: "Custom-made <b>software solutions that grow with you</b>",
         two: "We build what you envision — and what <b>your customers want to experience</b>",
-        three: "From idea to launch — <b>web solutions that convert</b>",
+        three: "From idea to launch — <b>software solutions that convert</b>",
         four: "Faster, smarter, scalable — <b>ready for the future</b>",
         five: "<b>One partner</b> for all your digital needs — design, code & SEO",
     },
@@ -460,6 +460,7 @@ export default {
             websites: "Website development",
             webapps: "Web application development",
             webshops: "Webshop development",
+            apps: "(Mobile) application development",
             seo: "SEO (Search Engine Optimization)",
             maintenance: "Maintenance & Updates",
             optimizations: "Optimizations",
@@ -532,6 +533,29 @@ export default {
             itemFive: {
                 question: "How secure are the payment processes?",
                 answer: "All payment processes comply with the highest security standards (PCI DSS), use SSL encryption, and work with certified payment providers for maximum security of customer data.",
+            },
+        },
+
+        apps: {
+            itemOne: {
+                question: "Can you help if I only have an idea for an app?",
+                answer: "Absolutely. During an initial meeting, we map out your idea, target audience, and main goals. We then translate that into a clear approach and a first version with the features that are truly necessary.",
+            },
+            itemTwo: {
+                question: "Do you build apps for iPhone, Android, or both?",
+                answer: "We determine together which platforms best suit your target audience. Where possible, we develop a solution that works well on both iPhone and Android, giving you a wider reach without unnecessary double development costs.",
+            },
+            itemThree: {
+                question: "Can you connect my app to existing systems?",
+                answer: "Yes. We can create connections with, for example, a website, CRM, calendar, accounting package, or external API. We first investigate which data needs to be exchanged and what the best technical solution is.",
+            },
+            itemFour: {
+                question: "How does the design and testing of my app proceed?",
+                answer: "We work step by step: first we determine the user experience and design, then we build and test the features. You remain involved in important decisions and can provide feedback along the way before the app is launched.",
+            },
+            itemFive: {
+                question: "Do you provide support after my app is launched?",
+                answer: "Yes. After the launch, we can provide support for updates, bug fixes, performance, and new features. This ensures your app remains secure, compatible with new versions of iOS and Android, and ready to grow with your organization.",
             },
         },
 
@@ -684,13 +708,14 @@ export default {
         options: {
             choose: "Choose an option",
             website: "Have a website made",
-            webapp: "Have a web application made",
+            app: "Have an application made",
             webshop: "Have a webshop made",
             seo: "Search engine optimization (SEO)",
             other: "Other services",
         },
         placeholder: {
             websiteUrl: "e.g. https://www.yourwebsite.com",
+            app: "e.g. Huzl",
             name: "e.g. John Johnson",
             email: "e.g. john.johnson@example.com",
             phone: "e.g. 0612345678",
@@ -706,19 +731,19 @@ export default {
                 default: "Do you already have a website/webshop/web app?",
                 website: "Do you already have a website?",
                 webshop: "Do you already have a webshop?",
-                webapp: "Do you already have a web application?",
+                app: "Do you already have an application?",
             },
             websiteUrl: {
                 default: "What is the URL?",
                 website: "What is the URL of your website?",
                 webshop: "What is the URL of your webshop?",
-                webapp: "What is the URL of your web application?",
+                app: "What is the name or URL of your application?",
             },
             selfManage: {
                 default: "Do you want to manage it yourself?",
                 website: "Do you want to manage your website yourself?",
                 webshop: "Do you want to manage your webshop yourself?",
-                webapp: "Do you want to manage your web application yourself?",
+                app: "Do you want to manage your application yourself?",
             },
             budget: "Do you have an idea of your budget?",
             name: "What is your name?",

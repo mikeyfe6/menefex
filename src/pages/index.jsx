@@ -57,8 +57,7 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => {
-    const { title, siteUrl, image, telephone, description, email, handle } =
-        useSiteMetadata();
+    const { title, siteUrl, image, telephone, description, email, handle } = useSiteMetadata();
 
     const localBusinessSchema = {
         "@context": "https://schema.org",
@@ -122,8 +121,8 @@ export const Head = () => {
         <>
             <SEO
                 title="#1 Website Specialist"
-                description="Menefex is een vooraanstaand & innovatief webmediabureau in Amsterdam. Wij ontwerpen, ontwikkelen en optimaliseren op maat gemaakte websites, webshops en webapplicaties. Vanaf €295,- jouw digitale ambities waarmaken.. Neem vandaag nog contact op!"
-                keywords="website specialist, webmediabureau, webdesign, webdevelopment, webshop, webapplicatie, digitale ambities, contact"
+                description="Menefex is een vooraanstaand & innovatief webmediabureau in Amsterdam. Wij ontwerpen, ontwikkelen en optimaliseren op maat gemaakte websites, webshops en (mobiele) applicaties. Vanaf €295,- jouw digitale ambities waarmaken.. Neem vandaag nog contact op!"
+                keywords="website specialist, webmediabureau, webdesign, webdevelopment, webshop, webapplicatie, (mobiele) applicaties, digitale ambities, contact"
                 schemaMarkup={localBusinessSchema}
             />
         </>

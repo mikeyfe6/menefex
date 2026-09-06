@@ -25,7 +25,7 @@ export default {
 
     hero: {
         menefex: "Menefex Webmediabureau",
-        slogan: "<span>Door Michael Fransman</span> — Freelance webdevelopment voor maatwerk oplossingen, snelle <u>websites</u>, slimme <u>webapps</u> en converterende <u>webshops</u>.",
+        slogan: "<span>Door Michael Fransman</span> — Freelance webdevelopment voor maatwerk oplossingen, snelle <u>websites</u>, slimme <u>applicaties</u> en converterende <u>webshops</u>.",
 
         cta: {
             start: "Start jouw project",
@@ -47,7 +47,7 @@ export default {
             email: "E-mail template laten maken",
             maintenance: "Onderhoud/updates uitvoeren",
             optimizations: "Optimalisaties laten uitvoeren",
-            webapp: "Webapplicatie laten maken",
+            app: "(Mobiele) applicatie laten maken",
             webshop: "Webshop laten maken",
             website: "Website laten maken",
             seo: "Zoekmachineoptimalisatie",
@@ -62,7 +62,7 @@ export default {
 
     biography: {
         title: "Biografie",
-        intro: "<b>Menefex</b> is een webmediabureau, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites en webapplicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij jouw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die jouw online aanwezigheid naar een hoger niveau tilt.",
+        intro: "<b>Menefex</b> is een webmediabureau, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites, webshops en applicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij jouw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die jouw online aanwezigheid naar een hoger niveau tilt.",
         more: "Meer over Menefex",
     },
 
@@ -103,27 +103,27 @@ export default {
             intro: "Bij Menefex bieden we op maat gemaakte websites die perfect aansluiten bij jouw merk, doelen en doelgroep. Onze focus ligt op het ontwerpen van websites die zowel visueel aantrekkelijk als functioneel zijn. Of je nu een start-up bent of een gevestigde onderneming, wij zorgen ervoor dat jouw online aanwezigheid krachtig, modern en gebruiksvriendelijk is.",
             content: `<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Uniek maatwerkdesign</h4><p>Elke website die wij ontwerpen, is uniek. We nemen jouw wensen en branding als uitgangspunt om een visueel aantrekkelijk ontwerp te creëren dat zich onderscheidt van de concurrentie. Geen standaardtemplates, maar een website die jouw verhaal vertelt.</p></li><li><h4>Snelle laadtijden</h4><p>Wij begrijpen hoe belangrijk snelheid is voor zowel gebruikers als zoekmachines. Daarom optimaliseren we jouw website voor snelle laadtijden, zodat bezoekers niet afhaken en zoekmachines jouw website hoger waarderen.</p></li><li><h4>Gebruiksvriendelijke interface en ervaring</h4><p>Een goede website is eenvoudig te navigeren. Wij zorgen voor een intuïtieve gebruikerservaring, waarbij bezoekers snel en gemakkelijk de informatie vinden die ze zoeken. Dit verbetert niet alleen de gebruikerstevredenheid, maar verhoogt ook de kans op conversies.</p></li><li><h4>Toekomstbestendig en compatibel</h4><p>Onze websites voldoen aan alle moderne technische eisen en zijn compatibel met alle populaire browsers en apparaten. Dit betekent dat jouw website overal en altijd toegankelijk is, of het nu op desktop, tablet of mobiel is.</p></li></ol><br /><h3><strong>Voordelen van een website op maat:</strong></h3><ul><li><p><strong>SEO-vriendelijk:</strong> Onze websites zijn volledig geoptimaliseerd voor zoekmachines, wat betekent dat je online beter gevonden wordt.</p></li><li><p><strong>Flexibiliteit:</strong> De website kan meegroeien met je bedrijf. Of je nu op zoek bent naar een webshop, blog of portfolio, wij integreren naadloos alle functionaliteiten.</p></li><li><p><strong>Beveiliging:</strong> Jouw website is veilig en voldoet aan alle moderne beveiligingsstandaarden, zoals SSL-certificaten.</p></li></ul></div><hr /><p>Wil je een <b>professionele website</b> laten maken die écht bij jouw merk past en optimaal presteert? <u>Neem vandaag nog contact op</u> en ontdek hoe Menefex jouw online aanwezigheid kan versterken.<a href="/contact/">Vraag offerte aan</a></p>`,
         },
-        webapps: {
+        apps: {
             // component
-            name: "Webapplicaties",
+            name: "Applicaties",
             excerpt:
-                "Met de groei van digitalisering en mobiliteit stijgt de vraag naar (web)apps. Webapplicaties onderscheiden zich van websites door de implementatie van complexe interacties die zorgen voor een naadloze gebruikerservaring.",
+                "Met de groei van digitalisering en mobiliteit stijgt de vraag naar applicaties. Applicaties onderscheiden zich van websites door de implementatie van complexe interacties die zorgen voor een naadloze gebruikerservaring.",
             focus: [
                 "Offline gebruiksmogelijkheden",
                 "Geoptimaliseerd voor alle apparaten",
                 "Integratie met ingebouwde functies (bijv. camera, microfoon, locatie)",
             ],
-            cta: "Meer over onze webapp diensten",
+            cta: "Meer over onze applicatie diensten",
 
             // overview
-            caption: `Webapplicatie <small>laten maken</small>`,
+            caption: `Applicatie <small>laten maken</small>`,
             snippet:
-                "Professioneel op maat gemaakte webapplicaties die volledig aansluiten op jouw bedrijfsbehoeften. Onze webapplicaties zijn gebruiksvriendelijk en ontworpen om jouw processen te optimaliseren en de efficiëntie te verhogen.",
+                "Professioneel op maat gemaakte applicaties die volledig aansluiten op jouw bedrijfsbehoeften. Onze applicaties zijn gebruiksvriendelijk en ontworpen om jouw processen te optimaliseren en de efficiëntie te verhogen.",
 
             // detail
-            title: "Webapplicatie Laten Maken",
-            intro: "Bij Menefex creëren we professioneel op maat gemaakte webapplicaties die naadloos aansluiten op de specifieke behoeften van jouw bedrijf. Onze applicaties zijn ontworpen met het oog op gebruiksvriendelijkheid en efficiëntie, zodat ze je dagelijkse processen optimaliseren en de productiviteit binnen je organisatie verhogen. Of je nu een klein bedrijf of een grote onderneming bent, wij ontwikkelen webapplicaties die perfect passen bij jouw unieke doelen.",
-            content: `<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Volledig maatwerk en functionaliteit</h4><p>Elke webapplicatie die we ontwikkelen, is volledig afgestemd op jouw bedrijfsprocessen en wensen. Geen generieke oplossingen, maar een webapp die is gebouwd om jouw workflows te stroomlijnen, tijd te besparen en de bedrijfsvoering efficiënter te maken. Van projectmanagementtools tot klantportalen en boekhoudsystemen: wij bouwen het voor je.</p></li><li><h4>Gebruiksvriendelijk en intuïtief ontwerp</h4><p>Een goede webapplicatie moet eenvoudig te gebruiken zijn, zonder in te leveren op functionaliteit. We ontwerpen een interface die voor iedereen intuïtief aanvoelt, ongeacht technische ervaring. Dit zorgt voor een soepele gebruikservaring en verhoogt de productiviteit van je team.</p></li><li><h4>Optimale prestaties, altijd en overal</h4><p>Onze webapplicaties zijn geoptimaliseerd voor gebruik op alle apparaten en in alle omstandigheden. Of je medewerkers nu op kantoor werken, thuis, of onderweg zijn: de applicatie functioneert overal even goed. Bovendien bieden we offline gebruiksmogelijkheden, zodat je applicatie altijd beschikbaar is, zelfs zonder internetverbinding.</p></li><li><h4>Integratie van geavanceerde functionaliteiten</h4><p>Moderne webapplicaties vragen om meer dan alleen basisfunctionaliteit. Daarom integreren we geavanceerde functies zoals toegang tot de camera, microfoon, GPS en andere hardware van apparaten. Dit zorgt ervoor dat je webapp niet alleen functioneel, maar ook innovatief en toekomstbestendig is.</p></li></ol><br /><h3><strong>Voordelen van een op maat gemaakte webapplicatie:</strong></h3><ul><li><p><strong>Procesoptimalisatie:</strong> Door je bedrijfsprocessen te digitaliseren en automatiseren, bespaar je tijd en geld. Onze webapps zijn erop gericht om je werkstromen te vereenvoudigen en de efficiëntie te verhogen.</p></li><li><p><strong>Toekomstbestendig:</strong> De applicaties zijn gebouwd met moderne technologieën, wat betekent dat ze gemakkelijk schaalbaar en uitbreidbaar zijn naarmate je bedrijf groeit.</p></li><li><p><strong>Veiligheid en betrouwbaarheid:</strong> Veiligheid staat voorop bij ons. Onze webapplicaties zijn voorzien van de laatste beveiligingsprotocollen en voldoen aan alle relevante privacy- en veiligheidsnormen, zodat je data altijd veilig is.</p></li><li><p><strong>SEO-vriendelijk:</strong> Hoewel webapplicaties vaak gericht zijn op specifieke processen binnen een bedrijf, zorgen wij ervoor dat ze, indien relevant, geoptimaliseerd zijn voor zoekmachines om zo zichtbaar mogelijk te zijn.</p></li></ul><hr /><p>Wil je een <b>webapplicatie</b> laten ontwikkelen die efficiënt, gebruiksvriendelijk en toekomstbestendig is? <u>Neem vandaag nog contact op</u> en ontdek hoe Menefex jouw bedrijfsprocessen kan optimaliseren.<a href="/contact/">Vraag offerte aan</a></p>`,
+            title: "Applicatie Laten Maken",
+            intro: "Bij Menefex creëren we professioneel op maat gemaakte applicaties die naadloos aansluiten op de specifieke behoeften van jouw bedrijf. Onze applicaties zijn ontworpen met het oog op gebruiksvriendelijkheid en efficiëntie, zodat ze je dagelijkse processen optimaliseren en de productiviteit binnen je organisatie verhogen. Of je nu een klein bedrijf of een grote onderneming bent, wij ontwikkelen applicaties die perfect passen bij jouw unieke doelen.",
+            content: `<h3><strong>Wat je van ons kunt verwachten:</strong></h3><ol><li><h4>Volledig maatwerk en functionaliteit</h4><p>Elke applicatie die we ontwikkelen, is volledig afgestemd op jouw bedrijfsprocessen en wensen. Geen generieke oplossingen, maar een applicatie die is gebouwd om jouw workflows te stroomlijnen, tijd te besparen en de bedrijfsvoering efficiënter te maken. Van projectmanagementtools tot klantportalen en boekhoudsystemen: wij bouwen het voor je.</p></li><li><h4>Gebruiksvriendelijk en intuïtief ontwerp</h4><p>Een goede applicatie moet eenvoudig te gebruiken zijn, zonder in te leveren op functionaliteit. We ontwerpen een interface die voor iedereen intuïtief aanvoelt, ongeacht technische ervaring. Dit zorgt voor een soepele gebruikservaring en verhoogt de productiviteit van je team.</p></li><li><h4>Optimale prestaties, altijd en overal</h4><p>Onze applicaties zijn geoptimaliseerd voor gebruik op alle apparaten en in alle omstandigheden. Of je medewerkers nu op kantoor werken, thuis, of onderweg zijn: de applicatie functioneert overal even goed. Bovendien bieden we offline gebruiksmogelijkheden, zodat je applicatie altijd beschikbaar is, zelfs zonder internetverbinding.</p></li><li><h4>Integratie van geavanceerde functionaliteiten</h4><p>Moderne applicaties vragen om meer dan alleen basisfunctionaliteit. Daarom integreren we geavanceerde functies zoals toegang tot de camera, microfoon, GPS en andere hardware van apparaten. Dit zorgt ervoor dat je applicatie niet alleen functioneel, maar ook innovatief en toekomstbestendig is.</p></li></ol><br /><h3><strong>Voordelen van een op maat gemaakte applicatie:</strong></h3><ul><li><p><strong>Procesoptimalisatie:</strong> Door je bedrijfsprocessen te digitaliseren en automatiseren, bespaar je tijd en geld. Onze applicaties zijn erop gericht om je werkstromen te vereenvoudigen en de efficiëntie te verhogen.</p></li><li><p><strong>Toekomstbestendig:</strong> De applicaties zijn gebouwd met moderne technologieën, wat betekent dat ze gemakkelijk schaalbaar en uitbreidbaar zijn naarmate je bedrijf groeit.</p></li><li><p><strong>Veiligheid en betrouwbaarheid:</strong> Veiligheid staat voorop bij ons. Onze applicaties zijn voorzien van de laatste beveiligingsprotocollen en voldoen aan alle relevante privacy- en veiligheidsnormen, zodat je data altijd veilig is.</p></li><li><p><strong>SEO-vriendelijk:</strong> Hoewel applicaties vaak gericht zijn op specifieke processen binnen een bedrijf, zorgen wij ervoor dat ze, indien relevant, geoptimaliseerd zijn voor zoekmachines om zo zichtbaar mogelijk te zijn.</p></li></ul><hr /><p>Wil je een <b>applicatie</b> laten ontwikkelen die efficiënt, gebruiksvriendelijk en toekomstbestendig is? <u>Neem vandaag nog contact op</u> en ontdek hoe Menefex jouw bedrijfsprocessen kan optimaliseren.<a href="/contact/">Vraag offerte aan</a></p>`,
         },
         webshops: {
             // component
@@ -367,7 +367,7 @@ export default {
         },
         goals: {
             title: "Onze doelen, streven en motivatie?",
-            text: "<b>Menefex</b> heeft als drijfveren de interesse in de diversiteit van software en de oneindige mogelijkheden die technologie deze tijd biedt. Bovendien motiveert het ons als we onze tevreden klanten een digitale brug kunnen bieden en hun ambities verpakt een digitaal product wereldwijd op de kaart kunnen zetten door middel van een website, webapplicatie of webshop.",
+            text: "<b>Menefex</b> heeft als drijfveren de interesse in de diversiteit van software en de oneindige mogelijkheden die technologie deze tijd biedt. Bovendien motiveert het ons als we onze tevreden klanten een digitale brug kunnen bieden en hun ambities verpakt een digitaal product wereldwijd op de kaart kunnen zetten door middel van een website, webshop of applicatie.",
         },
 
         spotify:
@@ -445,9 +445,9 @@ export default {
     },
 
     usp: {
-        one: "Eenvoudig en <b>op maat gemaakte weboplossingen</b> die meegroeien",
+        one: "Op maat gemaakte <b>software oplossingen die meegroeien</b>",
         two: "Wij bouwen wat jij voor ogen hebt en wat <b>jouw klanten willen ervaren</b>",
-        three: "Van idee tot lancering; <b>weboplossingen die converteren</b>",
+        three: "Van idee tot lancering; <b>software oplossingen die converteren</b>",
         four: "Sneller, slimmer, schaalbaar en <b>klaar voor de toekomst</b>",
         five: "<b>Eén partner</b> voor al je digitale behoeften; design, code & SEO",
     },
@@ -463,6 +463,7 @@ export default {
             websites: "Website laten maken",
             webapps: "Webapplicatie laten maken",
             webshops: "Webshop laten maken",
+            apps: "(Mobiele) applicatie laten maken",
             seo: "SEO (Zoekmachineoptimalisatie)",
             maintenance: "Onderhoud & Updates",
             optimizations: "Optimalisaties",
@@ -535,6 +536,29 @@ export default {
             itemFive: {
                 question: "Hoe veilig zijn de betaalprocessen?",
                 answer: "Alle betaalprocessen voldoen aan de hoogste beveiligingsstandaarden (PCI DSS), gebruik maken van SSL-encryptie en werken samen met gecertificeerde payment providers voor maximale veiligheid van klantgegevens.",
+            },
+        },
+
+        apps: {
+            itemOne: {
+                question: "Kunnen jullie helpen als ik alleen een idee voor een app heb?",
+                answer: "Zeker. Tijdens een kennismaking brengen we je idee, doelgroep en belangrijkste doelen in kaart. Vervolgens vertalen we dat naar een duidelijke aanpak en een eerste versie met de functies die echt nodig zijn.",
+            },
+            itemTwo: {
+                question: "Bouwen jullie apps voor iPhone, Android of allebei?",
+                answer: "We bepalen samen welke platforms het beste bij je doelgroep passen. Waar mogelijk ontwikkelen we een oplossing die op zowel iPhone als Android goed werkt, zodat je een groter bereik hebt zonder onnodige dubbele ontwikkelkosten.",
+            },
+            itemThree: {
+                question: "Kunnen jullie mijn app koppelen aan bestaande systemen?",
+                answer: "Ja. We kunnen koppelingen realiseren met bijvoorbeeld een website, CRM, agenda, boekhoudpakket of externe API. Vooraf onderzoeken we welke gegevens moeten worden uitgewisseld en wat technisch de beste oplossing is.",
+            },
+            itemFour: {
+                question: "Hoe verloopt het ontwerp en testen van mijn app?",
+                answer: "We werken stap voor stap: eerst bepalen we de gebruikerservaring en het ontwerp, daarna bouwen en testen we de functies. Je blijft betrokken bij belangrijke keuzes en kunt tussentijds feedback geven voordat de app wordt gelanceerd.",
+            },
+            itemFive: {
+                question: "Helpen jullie ook na de lancering van mijn app?",
+                answer: "Ja. Na de lancering kunnen we ondersteuning bieden bij updates, bugfixes, prestaties en nieuwe functies. Zo blijft je app veilig, compatibel met nieuwe versies van iOS en Android, en klaar om mee te groeien met je organisatie.",
             },
         },
 
@@ -688,13 +712,14 @@ export default {
         options: {
             choose: "Kies een optie",
             website: "Website ontwikkeling",
-            webapp: "Webapplicatie ontwikkeling",
+            app: "Applicatie ontwikkeling",
             webshop: "Webshop ontwikkeling",
             seo: "Zoekmachineoptimalisatie (SEO)",
             other: "Andere dienst",
         },
         placeholder: {
             websiteUrl: "bijv. https://www.jouwwebsite.nl",
+            app: "bijv. Huzl",
             name: "bijv. Jan Jansen",
             email: "bijv. jan.jansen@example.com",
             phone: "bijv. 0612345678",
@@ -710,19 +735,19 @@ export default {
                 default: "Heb je al een website/webshop/webapp?",
                 website: "Heb je al een website?",
                 webshop: "Heb je al een webshop?",
-                webapp: "Heb je al een webapplicatie?",
+                app: "Heb je al een (mobiele) applicatie?",
             },
             websiteUrl: {
                 default: "Wat is het domeinnaam/URL?",
                 website: "Wat is de URL van je website?",
                 webshop: "Wat is de URL van je webshop?",
-                webapp: "Wat is de URL van je webapplicatie?",
+                app: "Wat is de naam van je applicatie?",
             },
             selfManage: {
                 default: "Wil je het zelf beheren?",
                 website: "Wil je de content van je website zelf beheren?",
                 webshop: "Wil je de content van je webshop zelf beheren?",
-                webapp: "Wil je de content van je webapplicatie zelf beheren?",
+                app: "Wil je de content van je applicatie zelf beheren?",
             },
             budget: "Heb je een idee van je budget?",
             name: "Wat is je naam?",

@@ -103,7 +103,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/diensten/webapplicatie-laten-maken/">{t("footer.services.webapp")}</Link>
+                                    <Link to="/diensten/applicatie-laten-maken/">{t("footer.services.app")}</Link>
                                 </li>
                                 <li>
                                     <Link to="/diensten/webshop-laten-maken/">{t("footer.services.webshop")}</Link>

@@ -12,7 +12,7 @@
             "title" auto
             "intro" auto
             "websites" auto
-            "webapps" auto
+            "apps" auto
             "webshops" auto
             "seo" auto
             "maintenance" auto
@@ -27,7 +27,7 @@
                 "title title" 1fr
                 "intro intro" auto
                 "overlay websites" auto
-                "overlay webapps" auto
+                "overlay apps" auto
                 "overlay webshops" auto
                 "overlay seo" auto
                 "overlay maintenance" auto
@@ -39,7 +39,7 @@
             grid-template:
                 "overlay title title" 1fr
                 "overlay intro intro" auto
-                "overlay websites webapps" auto
+                "overlay websites apps" auto
                 "overlay webshops seo" auto
                 "overlay maintenance optimizations" auto
                 / auto 1fr 1fr;
@@ -173,8 +173,8 @@
             grid-area: websites;
         }
 
-        #{$service}-webapps {
-            grid-area: webapps;
+        #{$service}-apps {
+            grid-area: apps;
         }
 
         #{$service}-webshops {
@@ -195,7 +195,7 @@
 
         #{$service}-overlay,
         #{$service}-websites,
-        #{$service}-webapps,
+        #{$service}-apps,
         #{$service}-webshops,
         #{$service}-seo,
         #{$service}-maintenance,
@@ -207,7 +207,7 @@
         }
 
         #{$service}-websites,
-        #{$service}-webapps,
+        #{$service}-apps,
         #{$service}-webshops,
         #{$service}-seo,
         #{$service}-maintenance,

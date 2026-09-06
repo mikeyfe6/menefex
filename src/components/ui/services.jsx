@@ -27,16 +27,16 @@ const Services = () => {
             url: "/diensten/website-laten-maken/",
             cta: t("services.websites.cta"),
         },
-        webapps: {
-            name: t("services.webapps.name"),
+        apps: {
+            name: t("services.apps.name"),
             icon: {
                 prefix: "fas",
                 name: "mobile",
             },
-            excerpt: t("services.webapps.excerpt"),
-            focus: t("services.webapps.focus", { returnObjects: true }),
-            url: "/diensten/webapplicatie-laten-maken/",
-            cta: t("services.webapps.cta"),
+            excerpt: t("services.apps.excerpt"),
+            focus: t("services.apps.focus", { returnObjects: true }),
+            url: "/diensten/applicatie-laten-maken/",
+            cta: t("services.apps.cta"),
         },
         webshops: {
             name: t("services.webshops.name"),
@@ -84,14 +84,7 @@ const Services = () => {
         },
     };
 
-    const serviceKeys = [
-        "websites",
-        "webapps",
-        "webshops",
-        "seo",
-        "maintenance",
-        "optimizations",
-    ];
+    const serviceKeys = ["websites", "apps", "webshops", "seo", "maintenance", "optimizations"];
 
     const handleSelect = (key) => {
         setSelected(key);
@@ -105,12 +98,7 @@ const Services = () => {
             <div className={servicesStyles.serviceContainer}>
                 <div className={servicesStyles.serviceOverlay} ref={overlayRef}>
                     <div>
-                        <FontAwesomeIcon
-                            icon={[
-                                services[selected].icon.prefix,
-                                services[selected].icon.name,
-                            ]}
-                        />
+                        <FontAwesomeIcon icon={[services[selected].icon.prefix, services[selected].icon.name]} />
                     </div>
                     <h4>{services[selected].name}</h4>
                     <p>{services[selected].excerpt}</p>
@@ -120,9 +108,7 @@ const Services = () => {
                             <li key={idx}>{item}</li>
                         ))}
                     </ul>
-                    <Link to={services[selected].url}>
-                        {services[selected].cta}
-                    </Link>
+                    <Link to={services[selected].url}>{services[selected].cta}</Link>
                 </div>
                 <span>
                     <h3>{t("services.title")}</h3>
@@ -134,22 +120,13 @@ const Services = () => {
                     <button
                         key={key}
                         className={[
-                            servicesStyles[
-                                `service${
-                                    key.charAt(0).toUpperCase() + key.slice(1)
-                                }`
-                            ],
+                            servicesStyles[`service${key.charAt(0).toUpperCase() + key.slice(1)}`],
                             selected === key ? servicesStyles.isActive : "",
                         ].join(" ")}
                         onClick={() => handleSelect(key)}
                     >
                         <div>
-                            <FontAwesomeIcon
-                                icon={[
-                                    services[key].icon.prefix,
-                                    services[key].icon.name,
-                                ]}
-                            />
+                            <FontAwesomeIcon icon={[services[key].icon.prefix, services[key].icon.name]} />
                         </div>
                         <span>{services[key].name}</span>
                     </button>

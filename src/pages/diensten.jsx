@@ -35,31 +35,11 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.websites.snippet")}</p>
-                            <Link
-                                to="/diensten/website-laten-maken/"
-                                name="service"
-                            >
+                            <Link to="/diensten/website-laten-maken/" name="service">
                                 {t("services.websites.cta")}
                             </Link>
                         </div>
                         <FontAwesomeIcon icon={["fas", "globe"]} />
-                    </div>
-                    <div>
-                        <h3
-                            dangerouslySetInnerHTML={{
-                                __html: t("services.webapps.caption"),
-                            }}
-                        />
-                        <div>
-                            <p>{t("services.webapps.snippet")}</p>
-                            <Link
-                                to="/diensten/webapplicatie-laten-maken/"
-                                name="service"
-                            >
-                                {t("services.webapps.cta")}
-                            </Link>
-                        </div>
-                        <FontAwesomeIcon icon={["fas", "mobile"]} />
                     </div>
                     <div>
                         <h3
@@ -69,14 +49,25 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.webshops.snippet")}</p>
-                            <Link
-                                to="/diensten/webshop-laten-maken/"
-                                name="service"
-                            >
+                            <Link to="/diensten/webshop-laten-maken/" name="service">
                                 {t("services.webshops.cta")}
                             </Link>
                         </div>
                         <FontAwesomeIcon icon={["fas", "shopping-cart"]} />
+                    </div>
+                    <div>
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t("services.apps.caption"),
+                            }}
+                        />
+                        <div>
+                            <p>{t("services.apps.snippet")}</p>
+                            <Link to="/diensten/applicatie-laten-maken/" name="service">
+                                {t("services.apps.cta")}
+                            </Link>
+                        </div>
+                        <FontAwesomeIcon icon={["fas", "mobile"]} />
                     </div>
                     <div>
                         <h3
@@ -86,10 +77,7 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.seo.snippet")}</p>
-                            <Link
-                                to="/diensten/zoekmachineoptimalisatie/"
-                                name="service"
-                            >
+                            <Link to="/diensten/zoekmachineoptimalisatie/" name="service">
                                 {t("services.seo.cta")}
                             </Link>
                         </div>
@@ -103,10 +91,7 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.maintenance.snippet")}</p>
-                            <Link
-                                to="/diensten/onderhoud-updates-uitvoeren/"
-                                name="service"
-                            >
+                            <Link to="/diensten/onderhoud-updates-uitvoeren/" name="service">
                                 {t("services.maintenance.cta")}
                             </Link>
                         </div>
@@ -120,10 +105,7 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.optimizations.snippet")}</p>
-                            <Link
-                                to="/diensten/optimalisaties-laten-uitvoeren/"
-                                name="service"
-                            >
+                            <Link to="/diensten/optimalisaties-laten-uitvoeren/" name="service">
                                 {t("services.optimizations.cta")}
                             </Link>
                         </div>
@@ -137,16 +119,11 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.email.snippet")}</p>
-                            <Link
-                                to="/diensten/email-template-laten-maken/"
-                                name="service"
-                            >
+                            <Link to="/diensten/email-template-laten-maken/" name="service">
                                 {t("services.email.cta")}
                             </Link>
                         </div>
-                        <FontAwesomeIcon
-                            icon={["fas", "envelope-circle-check"]}
-                        />
+                        <FontAwesomeIcon icon={["fas", "envelope-circle-check"]} />
                     </div>
                     <div>
                         <h3
@@ -156,10 +133,7 @@ const ServicesPage = () => {
                         />
                         <div>
                             <p>{t("services.analyse.snippet")}</p>
-                            <Link
-                                to="/diensten/analyse-laten-uitvoeren/"
-                                name="service"
-                            >
+                            <Link to="/diensten/analyse-laten-uitvoeren/" name="service">
                                 {t("services.analyse.cta")}
                             </Link>
                         </div>
@@ -197,7 +171,7 @@ export const Head = () => {
         <SEO
             title={pageTitle}
             description="Hier een overzicht van de verschillende diensten die wij aanbieden. Deze diensten zijn ontworpen om bedrijven te helpen met hun online aanwezigheid en efficiëntie."
-            keywords="diensten, website laten maken, webapplicatie laten maken, webshop laten maken, zoekmachineoptimalisatie, onderhoud en updates, optimalisaties, email template laten maken"
+            keywords="diensten, website laten maken, webapplicatie laten maken, (mobiele) applicaties laten maken, webshop laten maken, zoekmachineoptimalisatie, onderhoud en updates, optimalisaties, email template laten maken"
             pathname={pageSlug}
             schemaMarkup={breadcrumbSchema}
         />

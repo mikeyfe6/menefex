@@ -11,7 +11,7 @@ const siteMetadata = {
 
     title: "Menefex",
     company: "Menefex Webmediabureau",
-    description: "Bij Menefex bouwen wij websites, webshops & webapplicaties met oog voor detail.",
+    description: "Bij Menefex bouwen wij websites, webshops & (mobiele applicaties met oog voor detail.",
 
     telephone: "31611054318",
     email: "info@menefex.nl",

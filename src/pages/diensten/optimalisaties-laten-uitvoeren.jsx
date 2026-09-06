@@ -40,12 +40,10 @@ const OptimizationPage = () => {
 
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
-                            <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                            {t("services.allServices")}
+                            <FontAwesomeIcon icon={["fas", "angles-left"]} /> {t("services.allServices")}
                         </Link>
                         <Link to="/prijzen/">
-                            {t("services.goToPrices")}{" "}
-                            <FontAwesomeIcon icon={["fas", "angles-right"]} />
+                            {t("services.goToPrices")} <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
 
@@ -108,7 +106,7 @@ export const Head = () => {
         <SEO
             title={pageTitle}
             description={pageDescription}
-            keywords="optimalisaties, website optimalisatie, webapplicatie optimalisatie, webshop optimalisatie"
+            keywords="optimalisaties, website optimalisatie, webapplicatie optimalisatie, (mobiele) applicatie optimalisatie, webshop optimalisatie"
             pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />

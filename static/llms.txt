@@ -9,7 +9,7 @@ Menefex is een vooraanstaand & innovatief webmediabureau in Amsterdam, opgericht
 
 - [Diensten](https://menefex.nl/diensten/): Overzicht van alle diensten die Menefex aanbiedt
 - [Website laten maken](https://menefex.nl/diensten/website-laten-maken/): Op maat gemaakte websites met uniek design, snelle laadtijden en SEO-optimalisatie
-- [Webapplicatie laten maken](https://menefex.nl/diensten/webapplicatie-laten-maken/): Professionele webapplicaties voor bedrijfsprocessen en efficiëntie
+- [Applicatie laten maken](https://menefex.nl/diensten/webapplicatie-laten-maken/): Professionele web- en (mobiele)   applicaties voor bedrijfsprocessen en efficiëntie
 - [Webshop laten maken](https://menefex.nl/diensten/webshop-laten-maken/): Complete e-commerce oplossingen voor online verkoop
 - [Zoekmachineoptimalisatie (SEO)](https://menefex.nl/diensten/zoekmachineoptimalisatie/): Verbeter je vindbaarheid in Google en andere zoekmachines
 - [Onderhoud & Updates](https://menefex.nl/diensten/onderhoud-updates-uitvoeren/): Regelmatig onderhoud voor optimale prestaties en veiligheid

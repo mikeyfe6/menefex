@@ -85,6 +85,28 @@ const FaqPage = () => {
                 answer: t("faq.webshops.itemFive.answer"),
             },
         ],
+        apps: [
+            {
+                question: t("faq.apps.itemOne.question"),
+                answer: t("faq.apps.itemOne.answer"),
+            },
+            {
+                question: t("faq.apps.itemTwo.question"),
+                answer: t("faq.apps.itemTwo.answer"),
+            },
+            {
+                question: t("faq.apps.itemThree.question"),
+                answer: t("faq.apps.itemThree.answer"),
+            },
+            {
+                question: t("faq.apps.itemFour.question"),
+                answer: t("faq.apps.itemFour.answer"),
+            },
+            {
+                question: t("faq.apps.itemFive.question"),
+                answer: t("faq.apps.itemFive.answer"),
+            },
+        ],
         seo: [
             {
                 question: t("faq.seo.itemOne.question"),
@@ -207,99 +229,52 @@ const FaqPage = () => {
             <section className={faqStyles.faqOverview}>
                 <div className={faqStyles.faqNavigation}>
                     {Object.keys(faqCategories).map((categoryKey) => (
-                        <button
-                            key={categoryKey}
-                            onClick={() => scrollToCategory(categoryKey)}
-                        >
+                        <button key={categoryKey} onClick={() => scrollToCategory(categoryKey)}>
                             {t(`faq.categories.${categoryKey}`)}
                         </button>
                     ))}
                 </div>
 
                 <div className={faqStyles.faqContainer}>
-                    {Object.entries(faqCategories).map(
-                        ([categoryKey, items]) => (
-                            <div
-                                key={categoryKey}
-                                id={`category-${categoryKey}`}
-                            >
-                                <div className={faqStyles.faqCategory}>
-                                    <h3>
-                                        {t(`faq.categories.${categoryKey}`)}
-                                    </h3>
-                                </div>
-
-                                <div className={faqStyles.faqCategoryItems}>
-                                    {items.map((item, idx) => {
-                                        const itemId = `${categoryKey}-${idx}`;
-                                        const isOpen = openItem === itemId;
-
-                                        return (
-                                            <div
-                                                key={idx}
-                                                className={faqStyles.faqItem}
-                                            >
-                                                <button
-                                                    onClick={() =>
-                                                        toggleAnswer(
-                                                            categoryKey,
-                                                            idx
-                                                        )
-                                                    }
-                                                    aria-expanded={isOpen}
-                                                    className={
-                                                        faqStyles.faqQuestion
-                                                    }
-                                                >
-                                                    <h4 className="faq-tracking">
-                                                        {item.question}
-                                                    </h4>
-                                                </button>
-                                                <div
-                                                    className={`${
-                                                        faqStyles.faqAnswer
-                                                    } ${
-                                                        isOpen
-                                                            ? faqStyles.open
-                                                            : ""
-                                                    }`}
-                                                >
-                                                    <FontAwesomeIcon
-                                                        icon={[
-                                                            "fas",
-                                                            "right-long",
-                                                        ]}
-                                                        size="lg"
-                                                    />
-                                                    <p>
-                                                        {item.answer}
-                                                        {item.link && (
-                                                            <>
-                                                                {" "}
-                                                                {t(
-                                                                    "faq.priceText"
-                                                                )}{" "}
-                                                                <Link
-                                                                    to={
-                                                                        item.link
-                                                                    }
-                                                                >
-                                                                    {t(
-                                                                        "faq.priceLink"
-                                                                    )}
-                                                                </Link>
-                                                                .
-                                                            </>
-                                                        )}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
+                    {Object.entries(faqCategories).map(([categoryKey, items]) => (
+                        <div key={categoryKey} id={`category-${categoryKey}`}>
+                            <div className={faqStyles.faqCategory}>
+                                <h3>{t(`faq.categories.${categoryKey}`)}</h3>
                             </div>
-                        )
-                    )}
+
+                            <div className={faqStyles.faqCategoryItems}>
+                                {items.map((item, idx) => {
+                                    const itemId = `${categoryKey}-${idx}`;
+                                    const isOpen = openItem === itemId;
+
+                                    return (
+                                        <div key={idx} className={faqStyles.faqItem}>
+                                            <button
+                                                onClick={() => toggleAnswer(categoryKey, idx)}
+                                                aria-expanded={isOpen}
+                                                className={faqStyles.faqQuestion}
+                                            >
+                                                <h4 className="faq-tracking">{item.question}</h4>
+                                            </button>
+                                            <div className={`${faqStyles.faqAnswer} ${isOpen ? faqStyles.open : ""}`}>
+                                                <FontAwesomeIcon icon={["fas", "right-long"]} size="lg" />
+                                                <p>
+                                                    {item.answer}
+                                                    {item.link && (
+                                                        <>
+                                                            {" "}
+                                                            {t("faq.priceText")}{" "}
+                                                            <Link to={item.link}>{t("faq.priceLink")}</Link>.
+                                                        </>
+                                                    )}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
         </Layout>
@@ -320,6 +295,7 @@ export const Head = () => {
         const categories = [
             "websites",
             "webapps",
+            "apps",
             "webshops",
             "seo",
             "maintenance",
@@ -328,17 +304,15 @@ export const Head = () => {
         ];
 
         categories.forEach((category) => {
-            ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive"].forEach(
-                (item) => {
-                    const faqItem = nlTranslations.faq[category]?.[item];
-                    if (faqItem) {
-                        allFaqs.push({
-                            question: faqItem.question,
-                            answer: faqItem.answer,
-                        });
-                    }
+            ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive"].forEach((item) => {
+                const faqItem = nlTranslations.faq[category]?.[item];
+                if (faqItem) {
+                    allFaqs.push({
+                        question: faqItem.question,
+                        answer: faqItem.answer,
+                    });
                 }
-            );
+            });
         });
 
         return allFaqs;

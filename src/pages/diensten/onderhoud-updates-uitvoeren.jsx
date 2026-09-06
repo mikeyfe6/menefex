@@ -40,12 +40,10 @@ const MaintenancePage = () => {
 
                     <div className={servicesStyles.servicesButtons}>
                         <Link to="/diensten/">
-                            <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                            {t("services.allServices")}
+                            <FontAwesomeIcon icon={["fas", "angles-left"]} /> {t("services.allServices")}
                         </Link>
                         <Link to="/prijzen/">
-                            {t("services.goToPrices")}{" "}
-                            <FontAwesomeIcon icon={["fas", "angles-right"]} />
+                            {t("services.goToPrices")} <FontAwesomeIcon icon={["fas", "angles-right"]} />
                         </Link>
                     </div>
 
@@ -65,7 +63,7 @@ export const Head = () => {
 
     const pageTitle = "Onderhoud en/of updates uitvoeren";
     const pageDescription =
-        "Regelmatig onderhoud en updates om de optimale prestaties en veiligheid van je website of webapplicatie te garanderen. Wij zorgen ervoor dat alles up-to-date blijft en probleemloos werkt.";
+        "Regelmatig onderhoud en updates om de optimale prestaties en veiligheid van je website, webshop of (mobiele) applicatie te garanderen. Wij zorgen ervoor dat alles up-to-date blijft en probleemloos werkt.";
     const pageSlug = "/diensten/onderhoud-updates-uitvoeren/";
 
     const breadcrumbSchema = {
@@ -108,7 +106,7 @@ export const Head = () => {
         <SEO
             title={pageTitle}
             description={pageDescription}
-            keywords="onderhoud, updates, website onderhoud, webapplicatie onderhoud, software updates"
+            keywords="onderhoud, updates, website onderhoud, webapplicatie onderhoud, (mobiele) applicatie onderhoud, software updates"
             pathname={pageSlug}
             schemaMarkup={[breadcrumbSchema, serviceSchema]}
         />
