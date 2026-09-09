@@ -25,7 +25,7 @@ export default {
 
     hero: {
         menefex: "Menefex Webmediabureau",
-        slogan: "<span>Door Michael Fransman</span> — Freelance webdevelopment voor maatwerk oplossingen; snelle <u>websites</u>, slimme <u>applicaties</u> en converterende <u>webshops</u>.",
+        slogan: "<span>Door Michael Fransman</span> — Freelance softwareontwikkeling voor maatwerk oplossingen; snelle <u>websites</u>, slimme <u>applicaties</u> en converterende <u>webshops</u>.",
 
         cta: {
             start: "Start jouw project",
@@ -35,7 +35,7 @@ export default {
         affordable: "Betaalbaar",
         fast: "Snelle oplevering",
 
-        biography: "Biografie",
+        biography: "Over",
         services: "Diensten",
         portfolio: "Portfolio",
     },
@@ -61,7 +61,7 @@ export default {
     },
 
     biography: {
-        title: "Biografie",
+        title: "Ons verhaal",
         intro: "<b>Menefex</b> is een webmediabureau, opgericht door <b><a href='https://www.linkedin.com/in/michaelfransman' rel='noopener noreferrer' target='_blank'>Michael Fransman</a></b>. Wij zijn gespecialiseerd in het ontwerpen, ontwikkelen en optimaliseren van websites, webshops en applicaties voor zowel startups als gevestigde bedrijven. Onze focus ligt op het realiseren van digitale ambities en het creëren van op maat gemaakte softwareoplossingen die perfect aansluiten bij jouw bedrijfsdoelen. Met <b>Menefex</b> haal je een betrouwbare partner in huis die jouw online aanwezigheid naar een hoger niveau tilt.",
         more: "Meer over Menefex",
     },
