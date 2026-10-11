@@ -14,9 +14,7 @@ import * as aboutStyles from "../styles/modules/pages/about.module.scss";
 // TODO: klaar voor TS'en..
 
 const AboutPage = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <Layout>

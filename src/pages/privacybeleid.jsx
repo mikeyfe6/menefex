@@ -7,9 +7,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const PrivacyPolicy = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <Layout>

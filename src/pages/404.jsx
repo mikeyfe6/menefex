@@ -10,9 +10,7 @@ import SEO from "../components/seo";
 // TODO: klaar voor TS'en..
 
 const NotFound = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <Layout>
@@ -34,11 +32,4 @@ const NotFound = () => {
 
 export default NotFound;
 
-export const Head = () => (
-    <SEO
-        title="404"
-        description="oepss.. Pagina niet gevonden!"
-        pathname="/404/"
-        noindex
-    />
-);
+export const Head = () => <SEO title="404" description="oepss.. Pagina niet gevonden!" pathname="/404/" noindex />;

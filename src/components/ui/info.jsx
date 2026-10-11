@@ -10,10 +10,8 @@ import * as infoStyles from "../../styles/modules/ui/info.module.scss";
 // TODO: klaar voor TS'en..
 
 const Info = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const { email, telephone, handle } = useSiteMetadata();
-
-    if (!isHydrated) return null;
 
     return (
         <section className={infoStyles.info} id="info">

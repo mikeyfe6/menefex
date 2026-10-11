@@ -7,9 +7,7 @@ import useTranslation from "../../hooks/use-translation";
 import * as uspStyles from "../../styles/modules/ui/usp.module.scss";
 
 const Usp = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <section id="usp">

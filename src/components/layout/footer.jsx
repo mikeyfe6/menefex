@@ -15,7 +15,7 @@ import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 // TODO: klaar voor TS'en..
 
 const Footer = () => {
-    const { t, i18n, isHydrated } = useTranslation();
+    const { t, i18n } = useTranslation();
     const { title, email, company, handle, telephone } = useSiteMetadata();
 
     const currentLanguage = i18n.language;
@@ -44,8 +44,6 @@ const Footer = () => {
 
         lastLoadedLang.current = currentLanguage;
     }, [currentLanguage]);
-
-    if (!isHydrated) return null;
 
     const today = new Date().getFullYear();
 

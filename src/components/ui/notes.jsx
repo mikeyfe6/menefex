@@ -7,9 +7,7 @@ import * as notesStyles from "../../styles/modules/ui/notes.module.scss";
 // TODO: klaar voor TS'en..
 
 const Notes = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <section className={notesStyles.notes} id="notes">

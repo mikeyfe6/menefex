@@ -19,7 +19,7 @@
     "postinstall": "[ \"$NETLIFY\" = \"true\" ] && node node_modules/puppeteer/install.mjs || exit 0"
   },
   "dependencies": {
-    "@contentful/live-preview": "^4.10.24",
+    "@contentful/live-preview": "^4.10.26",
     "@contentful/rich-text-html-renderer": "17.2.3",
     "@contentful/rich-text-react-renderer": "16.2.2",
     "@contentful/rich-text-types": "17.2.7",
@@ -49,31 +49,31 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
     "google-map-react": "^2.2.5",
-    "i18next": "^26.4.2",
+    "i18next": "^26.4.3",
     "i18next-browser-languagedetector": "^8.2.1",
     "i18next-http-backend": "^4.0.2",
-    "puppeteer": "^25.12.0",
+    "puppeteer": "^25.13.0",
     "react": "18",
     "react-cookie-consent": "^10.0.2",
     "react-dom": "18",
-    "react-i18next": "^17.0.15",
-    "sass": "^1.105.0",
-    "sharp": "0.32.6",
-    "swiper": "^14.2.0"
+    "react-i18next": "^17.0.16",
+    "sass": "^1.105.1",
+    "sharp": "0.35.5",
+    "swiper": "^14.3.0"
   },
   "resolutions": {
     "immutable": "^5.1.9"
   },
   "devDependencies": {
-    "@babel/core": "^7",
-    "eslint": "^10.11.0",
+    "@babel/core": "^8",
+    "eslint": "^10.12.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "postcss": "^8",
-    "stylelint": "^17.15.0",
+    "stylelint": "^17.16.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^17.0.0"
   },

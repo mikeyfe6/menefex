@@ -15,9 +15,7 @@ import * as servicesStyles from "../styles/modules/pages/services.module.scss";
 // TODO: klaar voor TS'en..
 
 const ServicesPage = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <Layout>

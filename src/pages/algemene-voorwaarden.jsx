@@ -7,9 +7,7 @@ import SEO from "../components/seo";
 import Layout from "../components/layout";
 
 const TermsConditions = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <Layout>

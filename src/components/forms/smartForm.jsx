@@ -14,7 +14,7 @@ import * as smartFormStyles from "../../styles/modules/forms/smartForm.module.sc
 const RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY;
 
 const SmartForm = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const [answers, setAnswers] = useState({});
     const [currentStep, setCurrentStep] = useState(0);
     const [success, setSuccess] = useState(false);
@@ -596,8 +596,6 @@ const SmartForm = () => {
         setSuccess(false);
         setConfirmChecked(false);
     };
-
-    if (!isHydrated) return null;
 
     return (
         <section>

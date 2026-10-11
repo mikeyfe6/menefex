@@ -15,9 +15,8 @@ import * as contactStyles from "../styles/modules/pages/contact.module.scss";
 // TODO: klaar voor TS'en..
 
 const ContactPage = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
 
-    if (!isHydrated) return null;
 
     return (
         <Layout>

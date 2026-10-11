@@ -11,9 +11,7 @@ import * as biographyStyles from "../../styles/modules/ui/biography.module.scss"
 // TODO: klaar voor TS'en..
 
 const Biography = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <section className={biographyStyles.biography} id="biography">

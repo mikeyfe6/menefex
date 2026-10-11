@@ -14,6 +14,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
+    lng: "nl",
     fallbackLng: "nl",
     debug: process.env.NODE_ENV === "development",
     detection: {

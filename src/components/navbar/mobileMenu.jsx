@@ -9,7 +9,7 @@ import useSiteMetadata from "../../hooks/use-site-metadata";
 import * as mobileMenuStyles from "../../styles/modules/layout/mobileMenu.module.scss";
 
 const MobileMenu = ({ show }) => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const { telephone } = useSiteMetadata();
 
     let drawerClasses = mobileMenuStyles.mobileMenu;
@@ -28,8 +28,6 @@ const MobileMenu = ({ show }) => {
 
         return null;
     };
-
-    if (!isHydrated) return null;
 
     return (
         <nav className={drawerClasses}>

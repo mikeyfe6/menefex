@@ -16,7 +16,7 @@ import * as blogStyles from "../styles/modules/pages/blog.module.scss";
 // TODO: klaar voor TS'en..
 
 const BlogPage = () => {
-    const { t, i18n, isHydrated } = useTranslation();
+    const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
 
     const data = useStaticQuery(graphql`
@@ -62,8 +62,6 @@ const BlogPage = () => {
     if (!currentContent) {
         return <p>Geen content beschikbaar / No content available.</p>;
     }
-
-    if (!isHydrated) return null;
 
     return (
         <Layout>

@@ -11,7 +11,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import * as faqStyles from "../../styles/modules/ui/faq.module.scss";
 
 const Faq = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqData = [
@@ -57,8 +57,6 @@ const Faq = () => {
             answer: t("faq.itemTen.answer"),
         },
     ];
-
-    if (!isHydrated) return null;
 
     return (
         <section id="faq">

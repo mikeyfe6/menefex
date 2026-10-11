@@ -80,19 +80,10 @@
                     @include fluid-typing(22, 26);
                 }
 
-                > p,
-                > a[data-app] {
+                > p {
                     margin-bottom: rem-calc(16);
 
                     @extend %as-medium;
-                }
-
-                > a[data-app] {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: rem-calc(8);
-
-                    @include text-link;
                 }
 
                 > span {
@@ -115,6 +106,21 @@
                         white-space: nowrap;
 
                         @include fluid-typing(10, 11);
+                    }
+                }
+
+                #{$projects}-apps {
+                    display: flex;
+                    gap: rem-calc(12);
+                    flex-wrap: wrap;
+                    margin-bottom: rem-calc(16);
+
+                    > a[data-app] {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: rem-calc(4);
+
+                        @include text-link;
                     }
                 }
 

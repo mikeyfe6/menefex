@@ -44,8 +44,6 @@ const PortfolioPage = () => {
         if (el) el.scrollIntoView({ behavior: "smooth" });
     }, [isHydrated]);
 
-    if (!isHydrated) return null;
-
     return (
         <Layout>
             <section className="page-intro">
@@ -97,9 +95,17 @@ const PortfolioPage = () => {
                                 href="https://apps.apple.com/nl/app/huzl/id6757675910"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className={portfolioStyles.btnApp}
+                                className={portfolioStyles.btnIos}
                             >
                                 <FontAwesomeIcon icon={["fab", "app-store-ios"]} color="#1C92EF" />
+                            </a>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.menefex.huzl&hl=nl"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={portfolioStyles.btnAndroid}
+                            >
+                                <FontAwesomeIcon icon={["fab", "google-play"]} color="#dadada" />
                             </a>
                             <a
                                 href="https://github.com/mikeyfe6/huzl"

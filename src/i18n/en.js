@@ -260,7 +260,8 @@ export default {
         priozorg: "Dynamic care services with coaching and mentoring for young adults",
         edutainuproductions: "Freelance company by Otmar Watson for impactful cultural projects",
         huzl: "Own build no-nonsense money management app (and also website) for budgeting and cash control",
-        downloadApp: "Download in the App Store",
+        ios: "App Store",
+        android: "Google Play Store",
         seeAll: "See all projects",
     },
 

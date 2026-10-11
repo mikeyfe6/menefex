@@ -10,7 +10,7 @@ import * as actualStyles from "../../styles/modules/ui/actual.module.scss";
 // TODO: klaar voor TS'en..
 
 const Actual = () => {
-    const { t, i18n, isHydrated } = useTranslation();
+    const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
 
     const data = useStaticQuery(graphql`
@@ -67,14 +67,11 @@ const Actual = () => {
         }
     `);
 
-    const posts =
-        currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
+    const posts = currentLanguage === "nl" ? data.nlContent.edges : data.enContent.edges;
 
     if (!posts.length) {
         return <p>Geen content beschikbaar / No content available.</p>;
     }
-
-    if (!isHydrated) return null;
 
     return (
         <section className={actualStyles.actual} id="actual">
@@ -88,10 +85,7 @@ const Actual = () => {
                         {node.image && (
                             <div className={actualStyles.actualImage}>
                                 <Link to={`/blog/${node.slug}/`}>
-                                    <GatsbyImage
-                                        image={getImage(node.image)}
-                                        alt={node.image.title}
-                                    />
+                                    <GatsbyImage image={getImage(node.image)} alt={node.image.title} />
                                 </Link>
                             </div>
                         )}
@@ -100,24 +94,17 @@ const Actual = () => {
 
                             <div>
                                 <time dateTime={node.publishedDate}>
-                                    {new Date(
-                                        node.publishedDate
-                                    ).toLocaleDateString(
-                                        currentLanguage === "nl"
-                                            ? "nl-NL"
-                                            : "en-GB",
+                                    {new Date(node.publishedDate).toLocaleDateString(
+                                        currentLanguage === "nl" ? "nl-NL" : "en-GB",
                                         {
                                             day: "numeric",
                                             month: "short",
                                             year: "numeric",
-                                        }
+                                        },
                                     )}
                                 </time>
                                 <span> · </span>
-                                <Link
-                                    to={`/blog/${node.slug}/`}
-                                    aria-label={`Lees meer: ${node.title}`}
-                                >
+                                <Link to={`/blog/${node.slug}/`} aria-label={`Lees meer: ${node.title}`}>
                                     <b>{t("actual.readMore")}</b>
                                 </Link>
                             </div>
@@ -126,9 +113,7 @@ const Actual = () => {
                             {node.topics &&
                                 node.topics
                                     .slice()
-                                    .sort((a, b) =>
-                                        a.name.localeCompare(b.name)
-                                    )
+                                    .sort((a, b) => a.name.localeCompare(b.name))
                                     .map((topic) => (
                                         <li key={topic.slug}>
                                             <Link

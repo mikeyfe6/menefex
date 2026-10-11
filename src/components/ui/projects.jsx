@@ -22,7 +22,7 @@ import * as projectsStyles from "../../styles/modules/ui/projects.module.scss";
 // TODO: klaar voor TS'en..
 
 const Projects = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
@@ -144,7 +144,8 @@ const Projects = () => {
             title: "Huzl",
             description: t("projects.huzl"),
             url: "https://huzl.expo.app",
-            app: "https://apps.apple.com/nl/app/huzl/id6757675910",
+            ios: "https://apps.apple.com/nl/app/huzl/id6757675910",
+            android: "https://play.google.com/store/apps/details?id=com.menefex.huzl&hl=nl",
             hash: "#hzl",
             type: "site",
             stack: ["React Native", "Expo", "Supabase"],
@@ -174,8 +175,6 @@ const Projects = () => {
         return map;
     }, [data.slideShow.edges]);
 
-    if (!isHydrated) return null;
-
     return (
         <section id="projects">
             <div className={projectsStyles.projectsContainer}>
@@ -200,11 +199,22 @@ const Projects = () => {
 
                         <p>{currentProject.description}</p>
 
-                        {currentProject.app && (
-                            <a href={currentProject.app} target="_blank" rel="noopener noreferrer" data-app>
-                                <FontAwesomeIcon icon={["fab", "app-store-ios"]} size="lg" />{" "}
-                                {t("projects.downloadApp")}
-                            </a>
+                        {(currentProject.ios || currentProject.android) && (
+                            <div className={projectsStyles.projectsApps}>
+                                {currentProject.ios && (
+                                    <a href={currentProject.ios} target="_blank" rel="noopener noreferrer" data-app>
+                                        <FontAwesomeIcon icon={["fab", "app-store-ios"]} size="lg" />{" "}
+                                        {t("projects.ios")}
+                                    </a>
+                                )}
+
+                                {currentProject.android && (
+                                    <a href={currentProject.android} target="_blank" rel="noopener noreferrer" data-app>
+                                        <FontAwesomeIcon icon={["fab", "google-play"]} size="lg" />{" "}
+                                        {t("projects.android")}
+                                    </a>
+                                )}
+                            </div>
                         )}
 
                         <span>Tools:</span>

@@ -23,7 +23,7 @@ const discountUntil = new Date("2025-12-31").toLocaleDateString("nl-NL", {
 });
 
 const Prices = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const callRef = useRef(null);
 
     const goToCallForm = (event) => {
@@ -32,8 +32,6 @@ const Prices = () => {
             callRef.current.focus();
         }
     };
-
-    if (!isHydrated) return null;
 
     return (
         <Layout>

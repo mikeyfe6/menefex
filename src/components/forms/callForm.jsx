@@ -149,8 +149,6 @@ const Call = ({ callRef }) => {
         [inputs, recaptchaLoaded],
     );
 
-    if (!isHydrated) return null;
-
     return (
         <form onSubmit={handleSubmit} className={callStyles.callForm} action="/success/" id="call-form">
             <h3>{t("prices.form.title")}</h3>

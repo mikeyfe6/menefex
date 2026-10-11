@@ -9,7 +9,7 @@ import * as pricesStyles from "../../styles/modules/ui/prices.module.scss";
 // TODO: klaar voor TS'en..
 
 const PriceTable = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
 
     const SalePrice = ({ ogPrice }) => {
         const totalPrice = ogPrice - (ogPrice / 100) * 10;
@@ -33,8 +33,6 @@ const PriceTable = () => {
             }
         }, 100);
     };
-
-    if (!isHydrated) return null;
 
     return (
         <section>

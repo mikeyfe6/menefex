@@ -1,6 +1,6 @@
 [build.environment]
 NODE_VERSION = "24.21.0" # - latest NODE version
-NPM_VERSION = "12.1.0"   # - latest NPM version
+NPM_VERSION = "12.2.0"   # - latest NPM version
 YARN_VERSION = "4.18.1"  # - latest YARN version
 COREPACK_ENABLE = "1"
 

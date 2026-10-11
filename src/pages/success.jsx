@@ -10,9 +10,7 @@ import Layout from "../components/layout";
 // TODO: klaar voor TS'en..
 
 const ThankYouPage = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <Layout>

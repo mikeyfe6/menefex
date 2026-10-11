@@ -15,6 +15,7 @@ import {
     // faSkype,
     faSearchengin,
     faAppStoreIos,
+    faGooglePlay,
 } from "@fortawesome/free-brands-svg-icons";
 import {
     faRotateLeft,
@@ -91,6 +92,7 @@ library.add(
     faXmark,
     faCaretRight,
     faAppStoreIos,
+    faGooglePlay,
 );
 
 import useTranslation from "../hooks/use-translation";
@@ -108,7 +110,7 @@ import "../styles/layout.scss";
 // TODO: klaar voor TS'en..
 
 const Layout = ({ children }) => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
     const bannerRef = useRef(null);
@@ -126,8 +128,6 @@ const Layout = ({ children }) => {
     if (sideDrawerOpen) {
         backdrop = <MenuOverlay click={menuOverlayClickHandler} />;
     }
-
-    if (!isHydrated) return null;
 
     return (
         <>

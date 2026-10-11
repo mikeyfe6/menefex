@@ -11,7 +11,7 @@ import useTranslation from "../../hooks/use-translation";
 const RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY;
 
 const Form = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
     const [inputs, setInputs] = useState({
@@ -104,8 +104,6 @@ const Form = () => {
         },
         [inputs, recaptchaLoaded],
     );
-
-    if (!isHydrated) return null;
 
     return (
         <form onSubmit={handleSubmit} action="/success/" id="lead-form">

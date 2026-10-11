@@ -7,9 +7,7 @@ import * as spotifyStyles from "../../styles/modules/ui/spotify.module.scss";
 // TODO: klaar voor TS'en..
 
 const Spotify = () => {
-    const { t, isHydrated } = useTranslation();
-
-    if (!isHydrated) return null;
+    const { t } = useTranslation();
 
     return (
         <section className={spotifyStyles.spotify} id="spotify">

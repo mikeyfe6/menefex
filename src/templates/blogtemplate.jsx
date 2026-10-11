@@ -53,7 +53,7 @@ function collectAssetIds(document) {
 }
 
 const Post = ({ pageContext: { nlContent, enContent } }) => {
-    const { t, i18n, isHydrated } = useTranslation();
+    const { t, i18n } = useTranslation();
     const { siteUrl, handle } = useSiteMetadata();
 
     const currentLanguage = i18n.language;
@@ -331,7 +331,6 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
         }
     }, []);
 
-    if (!isHydrated) return null;
 
     return (
         <Layout>

@@ -262,7 +262,8 @@ export default {
         priozorg: "Dynamische hulpverlening met coaching en mentoring voor jongvolwassenen",
         edutainuproductions: "Freelancebedrijf van Otmar Watson voor culturele projecten met impact",
         huzl: "Ons eigen no-nonsense app/website voor geldbeheer met budgetten, overzichten en notificaties",
-        downloadApp: "Download in de App Store",
+        ios: "App Store",
+        android: "Google Play Store",
         seeAll: "Zie alle projecten",
     },
 

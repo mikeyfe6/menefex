@@ -27,7 +27,7 @@ const DefaultInfo = ({ text }) => (
 );
 
 const Topic = ({ pageContext: { nlContent, enContent } }) => {
-    const { t, i18n, isHydrated } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const currentLanguage = i18n.language;
     const content = currentLanguage === "nl" ? nlContent : enContent;
@@ -42,42 +42,23 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
         return <DefaultInfo text={t("topics.noContent")} />;
     }
 
-    if (!isHydrated) return null;
-
     return (
         <Layout>
             <section className="page-intro">
                 <h1>Topics</h1>
                 <h2>
-                    <span
-                        style={{ color: content.bdcolor, fontWeight: "bold" }}
-                    >
-                        #
-                    </span>{" "}
-                    {content.name}
+                    <span style={{ color: content.bdcolor, fontWeight: "bold" }}>#</span> {content.name}
                 </h2>
             </section>
 
             <section id="topic">
                 <div className={topicStyles.topicContainer}>
                     <ul>
-                        {!content.topicPosts ||
-                        content.topicPosts.length === 0 ? (
+                        {!content.topicPosts || content.topicPosts.length === 0 ?
                             <DefaultInfo text={t("topics.noPosts")} />
-                        ) : (
-                            content.topicPosts.map(
-                                ({
-                                    slug,
-                                    contentful_id,
-                                    title,
-                                    subtitle,
-                                    publishedDate,
-                                    author,
-                                    image,
-                                }) => {
-                                    const topcImage = getImage(
-                                        image.gatsbyImageData
-                                    );
+                        :   content.topicPosts.map(
+                                ({ slug, contentful_id, title, subtitle, publishedDate, author, image }) => {
+                                    const topcImage = getImage(image.gatsbyImageData);
 
                                     return (
                                         <li key={contentful_id}>
@@ -87,54 +68,32 @@ const Topic = ({ pageContext: { nlContent, enContent } }) => {
                                                     <p>{subtitle}</p>
                                                     <small>
                                                         <span>
-                                                            <FontAwesomeIcon
-                                                                icon={[
-                                                                    "fas",
-                                                                    "calendar-days",
-                                                                ]}
-                                                            />
+                                                            <FontAwesomeIcon icon={["fas", "calendar-days"]} />
                                                             <strong>
-                                                                <time
-                                                                    dateTime={
-                                                                        publishedDate
-                                                                    }
-                                                                >
-                                                                    {formatDate(
-                                                                        publishedDate
-                                                                    )}
+                                                                <time dateTime={publishedDate}>
+                                                                    {formatDate(publishedDate)}
                                                                 </time>
                                                             </strong>
                                                         </span>
                                                         <span>
-                                                            <FontAwesomeIcon
-                                                                icon={[
-                                                                    "fas",
-                                                                    "feather-pointed",
-                                                                ]}
-                                                            />
-                                                            <strong>
-                                                                {author}
-                                                            </strong>
+                                                            <FontAwesomeIcon icon={["fas", "feather-pointed"]} />
+                                                            <strong>{author}</strong>
                                                         </span>
                                                     </small>
                                                 </div>
                                                 <div>
-                                                    <GatsbyImage
-                                                        image={topcImage}
-                                                        alt={image.title}
-                                                    />
+                                                    <GatsbyImage image={topcImage} alt={image.title} />
                                                 </div>
                                             </Link>
                                         </li>
                                     );
-                                }
+                                },
                             )
-                        )}
+                        }
                     </ul>
 
                     <Link to="/topics/">
-                        <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                        {t("topics.allTopics")}
+                        <FontAwesomeIcon icon={["fas", "angles-left"]} /> {t("topics.allTopics")}
                     </Link>
                 </div>
             </section>

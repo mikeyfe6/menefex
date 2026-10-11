@@ -11,7 +11,7 @@ import useTranslation from "../../hooks/use-translation";
 // TODO: klaar voor TS'en..
 
 const Services = () => {
-    const { t, isHydrated } = useTranslation();
+    const { t } = useTranslation();
     const [selected, setSelected] = useState("websites");
     const overlayRef = useRef(null);
 
@@ -90,8 +90,6 @@ const Services = () => {
         setSelected(key);
         overlayRef.current?.scrollIntoView({ behavior: "smooth" });
     };
-
-    if (!isHydrated) return null;
 
     return (
         <section className={servicesStyles.service} id="services">

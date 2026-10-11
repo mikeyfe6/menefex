@@ -14,7 +14,7 @@ import * as topicStyles from "../styles/modules/pages/topics.module.scss";
 // TODO: klaar voor TS'en..
 
 const TopicPage = () => {
-    const { t, i18n, isHydrated } = useTranslation();
+    const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
 
     const data = useStaticQuery(graphql`
@@ -53,8 +53,6 @@ const TopicPage = () => {
     if (!currentContent) {
         return <p>Geen content beschikbaar / No content available.</p>;
     }
-
-    if (!isHydrated) return null;
 
     return (
         <Layout>
