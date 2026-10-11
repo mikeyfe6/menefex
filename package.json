@@ -58,7 +58,7 @@
     "react-dom": "18",
     "react-i18next": "^17.0.16",
     "sass": "^1.105.1",
-    "sharp": "0.35.5",
+    "sharp": "0.32.6",
     "swiper": "^14.3.0"
   },
   "resolutions": {
