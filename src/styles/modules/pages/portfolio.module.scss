@@ -47,11 +47,11 @@
                     aspect-ratio: 16 / 9;
                 }
 
-                &:has(img[alt*="404"]) {
+                &:has(img[alt*="404"], img[alt*="403"]) {
                     pointer-events: none;
                 }
 
-                &:not(:has(img[alt*="404"])) {
+                &:not(:has(img[alt*="404"], img[alt*="403"])) {
                     img {
                         object-position: top;
                     }

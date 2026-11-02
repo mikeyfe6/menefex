@@ -38,11 +38,9 @@ const PortfolioPage = () => {
 
     const renderProjectImage = (name, alt) => {
         const image = getProjectImage(name);
-        return image ? (
-            <GatsbyImage image={image} alt={alt} />
-        ) : (
-            <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt={`${alt} (geen screenshot)`} />
-        );
+        return image ?
+                <GatsbyImage image={image} alt={alt} />
+            :   <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt={`${alt} (403)`} />;
     };
 
     useEffect(() => {
@@ -188,9 +186,7 @@ const PortfolioPage = () => {
                             // target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {/* {renderProjectImage("priozorg", "Prio Zorg")} */}
-
-                            <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt="Prio Zorg (404)" />
+                            {renderProjectImage("priozorg", "Prio Zorg")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -299,13 +295,7 @@ const PortfolioPage = () => {
                             // target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {/* <StaticImage
-                                src="../../public/project-images/kn-acdig.png"
-                                alt="KN-ACDiG"
-                                className={portfolioStyles.portfolioImg}
-                            /> */}
-
-                            <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt="KN-ACDiG (404)" />
+                            {renderProjectImage("kn-acdig", "KN-ACDiG")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
