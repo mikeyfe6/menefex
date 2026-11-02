@@ -17,7 +17,6 @@ import * as contactStyles from "../styles/modules/pages/contact.module.scss";
 const ContactPage = () => {
     const { t } = useTranslation();
 
-
     return (
         <Layout>
             <section className="page-intro contact">

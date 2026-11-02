@@ -6,10 +6,7 @@ import { Disqus } from "gatsby-plugin-disqus";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 import axios from "axios";
-import {
-    useContentfulLiveUpdates,
-    useContentfulInspectorMode,
-} from "@contentful/live-preview/react";
+import { useContentfulLiveUpdates, useContentfulInspectorMode } from "@contentful/live-preview/react";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,10 +35,7 @@ const PREVIEW_TOKEN = process.env.GATSBY_CONTENTFUL_PREVIEW_TOKEN;
 function collectAssetIds(document) {
     const ids = new Set();
     function traverse(node) {
-        if (
-            node.nodeType === "embedded-asset-block" &&
-            node.data?.target?.sys?.id
-        ) {
+        if (node.nodeType === "embedded-asset-block" && node.data?.target?.sys?.id) {
             ids.add(node.data.target.sys.id);
         }
         if (node.content) {
@@ -95,11 +89,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
     }, [previewEntry]);
 
     useEffect(() => {
-        if (
-            process.env.NODE_ENV !== "development" ||
-            !previewContent?.fields?.body
-        )
-            return;
+        if (process.env.NODE_ENV !== "development" || !previewContent?.fields?.body) return;
 
         const assetIds = collectAssetIds(previewContent.fields.body);
         if (assetIds.length === 0) return;
@@ -108,9 +98,9 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
             const promises = assetIds.map((id) =>
                 axios
                     .get(
-                        `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/assets/${id}?access_token=${PREVIEW_TOKEN}`
+                        `https://preview.contentful.com/spaces/${SPACE_ID}/environments/master/assets/${id}?access_token=${PREVIEW_TOKEN}`,
                     )
-                    .then((res) => [id, res.data])
+                    .then((res) => [id, res.data]),
             );
             const results = await Promise.all(promises);
             const map = Object.fromEntries(results);
@@ -177,25 +167,17 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
             [BLOCKS.HR]: () => <hr />,
 
-            [BLOCKS.QUOTE]: (node, children) => (
-                <blockquote>{children}</blockquote>
-            ),
+            [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
 
             [INLINES.HYPERLINK]: ({ data }, children) => {
                 const isInternal = data.uri.startsWith(siteUrl);
-                const strippedUrl = isInternal
-                    ? data.uri.replace(siteUrl, "")
-                    : data.uri;
+                const strippedUrl = isInternal ? data.uri.replace(siteUrl, "") : data.uri;
 
                 if (isInternal) {
                     return <Link to={strippedUrl}>{children}</Link>;
                 } else {
                     return (
-                        <a
-                            href={data.uri}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <a href={data.uri} target="_blank" rel="noopener noreferrer">
                             {children}
                         </a>
                     );
@@ -229,14 +211,12 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                 const asset = previewAssets[assetId];
                 if (!asset) return null;
                 const { title, file } = asset.fields || {};
-                const url = file?.url?.startsWith("//")
-                    ? `https:${file.url}`
-                    : file?.url;
-                return url ? (
-                    <div className={postStyle.assets}>
-                        <img src={url} alt={title} />
-                    </div>
-                ) : null;
+                const url = file?.url?.startsWith("//") ? `https:${file.url}` : file?.url;
+                return url ?
+                        <div className={postStyle.assets}>
+                            <img src={url} alt={title} />
+                        </div>
+                    :   null;
             },
             [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {},
             [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
@@ -252,9 +232,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
             [BLOCKS.HR]: () => <hr />,
 
-            [BLOCKS.QUOTE]: (node, children) => (
-                <blockquote>{children}</blockquote>
-            ),
+            [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
 
             [INLINES.HYPERLINK]: (node, children) => {
                 const { uri } = node.data;
@@ -273,11 +251,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
             [INLINES.ENTRY_HYPERLINK]: (node, children) => {
                 const { slug } = node.data.target.fields || {};
-                return slug ? (
-                    <Link to={`/blog/${slug}`}>{children}</Link>
-                ) : (
-                    children
-                );
+                return slug ? <Link to={`/blog/${slug}`}>{children}</Link> : children;
             },
 
             [INLINES.ASSET_HYPERLINK]: (node, children) => {
@@ -287,11 +261,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
             [INLINES.EMBEDDED_ENTRY]: (node, children) => {
                 const { slug } = node.data.target.fields || {};
-                return slug ? (
-                    <Link to={`/blog/${slug}`}>{children}</Link>
-                ) : (
-                    children
-                );
+                return slug ? <Link to={`/blog/${slug}`}>{children}</Link> : children;
             },
         },
     };
@@ -304,10 +274,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
     postTopic.forEach((topic) => {
         topic.blog_post.forEach((post) => {
-            if (
-                post.slug !== currentPostSlug &&
-                !relatedPostsSet.has(post.slug)
-            ) {
+            if (post.slug !== currentPostSlug && !relatedPostsSet.has(post.slug)) {
                 relatedPostsSet.add(post.slug);
                 relatedPosts.push(post);
             }
@@ -330,7 +297,6 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
             };
         }
     }, []);
-
 
     return (
         <Layout>
@@ -357,25 +323,20 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                 fieldId: "image",
                             })}
                         >
-                            {previewImage ? (
+                            {previewImage ?
                                 <img
                                     src={
-                                        previewImage.fields.file.url.startsWith(
-                                            "//"
-                                        )
-                                            ? `https:${previewImage.fields.file.url}`
-                                            : previewImage.fields.file.url
+                                        previewImage.fields.file.url.startsWith("//") ?
+                                            `https:${previewImage.fields.file.url}`
+                                        :   previewImage.fields.file.url
                                     }
                                     alt={previewImage.fields.title}
                                 />
-                            ) : (
-                                <GatsbyImage
-                                    image={getImage(
-                                        currentContent.image.gatsbyImageData
-                                    )}
+                            :   <GatsbyImage
+                                    image={getImage(currentContent.image.gatsbyImageData)}
                                     alt={currentContent.title}
                                 />
-                            )}
+                            }
                         </div>
 
                         <h2
@@ -383,8 +344,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                 fieldId: "subtitle",
                             })}
                         >
-                            {previewContent?.fields?.subtitle ||
-                                currentContent.subtitle}
+                            {previewContent?.fields?.subtitle || currentContent.subtitle}
                         </h2>
                         <div
                             className={postStyle.postContent}
@@ -392,15 +352,9 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                 fieldId: "body",
                             })}
                         >
-                            {previewContent?.fields?.body
-                                ? documentToReactComponents(
-                                      previewContent.fields.body,
-                                      previewOptions
-                                  )
-                                : renderRichText(
-                                      currentContent.body,
-                                      currentOptions
-                                  )}
+                            {previewContent?.fields?.body ?
+                                documentToReactComponents(previewContent.fields.body, previewOptions)
+                            :   renderRichText(currentContent.body, currentOptions)}
                         </div>
 
                         <div className={postStyle.postTopics}>
@@ -448,10 +402,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <FontAwesomeIcon
-                                        icon={["fas", "rss"]}
-                                        size="lg"
-                                    />{" "}
+                                    <FontAwesomeIcon icon={["fas", "rss"]} size="lg" />{" "}
                                     <span>{t("blog.feedburner")}</span>
                                 </a>
                             </div>
@@ -491,8 +442,7 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                                     <u>{t("blog.lastUpdated")}</u>
                                 </span>
                                 <time dateTime={currentContent.updatedPost}>
-                                    {formatDate(currentContent.updatedPost)},{" "}
-                                    {formatTime(currentContent.updatedPost)}
+                                    {formatDate(currentContent.updatedPost)}, {formatTime(currentContent.updatedPost)}
                                 </time>
                             </div>
 
@@ -509,26 +459,14 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
                                 <ul>
                                     {relatedPosts
-                                        ?.sort(
-                                            (a, b) =>
-                                                new Date(b.publishedDate) -
-                                                new Date(a.publishedDate)
-                                        )
+                                        ?.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
                                         .slice(0, 3)
                                         .map((post) => (
                                             <li key={post.contentful_id}>
-                                                <Link
-                                                    to={`/blog/${post.slug}/`}
-                                                >
-                                                    <h5 title={post.title}>
-                                                        {post.title}
-                                                    </h5>
-                                                    <p title={post.subtitle}>
-                                                        {post.subtitle}
-                                                    </p>
-                                                    <span>
-                                                        {t("blog.readMore")}
-                                                    </span>
+                                                <Link to={`/blog/${post.slug}/`}>
+                                                    <h5 title={post.title}>{post.title}</h5>
+                                                    <p title={post.subtitle}>{post.subtitle}</p>
+                                                    <span>{t("blog.readMore")}</span>
                                                 </Link>
                                             </li>
                                         ))}
@@ -540,56 +478,32 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
 
                 <div className={postStyle.postButton}>
                     <Link to="/blog/">
-                        <FontAwesomeIcon icon={["fas", "angles-left"]} />{" "}
-                        {t("blog.allPosts")}
+                        <FontAwesomeIcon icon={["fas", "angles-left"]} /> {t("blog.allPosts")}
                     </Link>
                 </div>
 
                 <section className={postStyle.postFamily} id="related-posts">
-                    {relatedPosts?.length === 0 ? null : (
-                        <h6>{t("blog.alsoInteresting")}</h6>
-                    )}
+                    {relatedPosts?.length === 0 ? null : <h6>{t("blog.alsoInteresting")}</h6>}
 
                     <ul>
                         {relatedPosts
-                            ?.sort(
-                                (a, b) =>
-                                    new Date(b.publishedDate) -
-                                    new Date(a.publishedDate)
-                            )
+                            ?.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
                             .slice(0, 3)
                             .map((post) => {
-                                const projectImg = getImage(
-                                    post?.image?.gatsbyImageData
-                                );
+                                const projectImg = getImage(post?.image?.gatsbyImageData);
 
                                 return (
                                     <li key={post?.contentful_id}>
                                         <Link to={`/blog/${post?.slug}/`}>
-                                            <GatsbyImage
-                                                image={projectImg}
-                                                alt={post?.image?.title}
-                                            />
+                                            <GatsbyImage image={projectImg} alt={post?.image?.title} />
                                             <div>
-                                                <h5 title={post?.title}>
-                                                    {post?.title}
-                                                </h5>
-                                                <p title={post?.subtitle}>
-                                                    {post?.subtitle}
-                                                </p>
+                                                <h5 title={post?.title}>{post?.title}</h5>
+                                                <p title={post?.subtitle}>{post?.subtitle}</p>
                                                 <div>
-                                                    <span>
-                                                        {t("blog.readMore")}
-                                                    </span>
+                                                    <span>{t("blog.readMore")}</span>
                                                     {post?.publishedDate && (
-                                                        <time
-                                                            dateTime={
-                                                                post?.publishedDate
-                                                            }
-                                                        >
-                                                            {formatShortDate(
-                                                                post?.publishedDate
-                                                            )}
+                                                        <time dateTime={post?.publishedDate}>
+                                                            {formatShortDate(post?.publishedDate)}
                                                         </time>
                                                     )}
                                                 </div>
@@ -601,13 +515,9 @@ const Post = ({ pageContext: { nlContent, enContent } }) => {
                     </ul>
                 </section>
 
-                {process.env.NODE_ENV !== "development" && (
-                    <GoogleAdsDisplay slot="3266975443" />
-                )}
+                {process.env.NODE_ENV !== "development" && <GoogleAdsDisplay slot="3266975443" />}
 
-                {process.env.NODE_ENV !== "development" && (
-                    <GoogleAdsMulti slot="1625762341" />
-                )}
+                {process.env.NODE_ENV !== "development" && <GoogleAdsMulti slot="1625762341" />}
             </div>
         </Layout>
     );

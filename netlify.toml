@@ -1,6 +1,6 @@
 [build.environment]
-NODE_VERSION = "24.21.0" # - latest NODE version
-NPM_VERSION = "12.2.0"   # - latest NPM version
+NODE_VERSION = "26.13.0" # - latest NODE version
+NPM_VERSION = "12.2.1"   # - latest NPM version
 YARN_VERSION = "4.18.1"  # - latest YARN version
 COREPACK_ENABLE = "1"
 
@@ -18,6 +18,8 @@ Content-Security-Policy-Report-Only = "default-src * 'unsafe-inline' 'unsafe-eva
 
 Permissions-Policy = 'geolocation=(self "https://menefex.nl"), fullscreen=(self "https://menefex.nl" "https://connect.facebook.net" "https://www.facebook.com" "https://web.facebook.com")'
 
-Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://report-uri.com"}],"include_subdomains":true},{"group":"wizard","max_age":31536000,"endpoints":[{"url":"https://menefex.report-uri.com/r/d/csp/wizard"}],"include_subdomains":true},{"group":"scriptwatch","max_age":31536000,"endpoints":[{"url":"https://menefex.report-uri.com/r/d/csp/scriptwatch"}],"include_subdomains":true}'
+Reporting-Endpoints = 'default="https://menefex.report-uri.com/a/d/g", wizard="https://menefex.report-uri.com/a/d/g/wizard", scriptwatch="https://menefex.report-uri.com/a/d/g/scriptwatch"'
+
+Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://menefex.report-uri.com/a/d/g"}],"include_subdomains":true},{"group":"wizard","max_age":31536000,"endpoints":[{"url":"https://menefex.report-uri.com/a/d/g/wizard"}],"include_subdomains":true},{"group":"scriptwatch","max_age":31536000,"endpoints":[{"url":"https://menefex.report-uri.com/a/d/g/scriptwatch"}],"include_subdomains":true}'
 
 NEL = '{"report_to":"default","max_age":31536000,"include_subdomains":true}'

@@ -217,7 +217,6 @@ const FaqPage = () => {
         }
     };
 
-
     return (
         <Layout>
             <section className="page-intro">
