@@ -203,9 +203,9 @@ const runScreenshots = async () => {
     if (process.env.NODE_ENV === "production") {
         const screenshots = [
             ["https://eternitydrum.com", "eternitydrum", 2000],
-            ["https://blackharmony.nl", "blackharmony", 2000],
-            ["https://afrodiasphere.com", "afrodiasphere", 5000],
-            ["https://dsmelodies.com", "dsmelodies", 0],
+            // ["https://blackharmony.nl", "blackharmony", 2000],
+            ["https://afrodiasphere.com", "afrodiasphere", 10000],
+            // ["https://dsmelodies.com", "dsmelodies", 0],
             // ["https://kn-acdig.com", "kn-acdig", 0],
             ["https://keeptreal.nl", "keeptreal", 5000],
             // ["https://prio-zorg.nl", "priozorg", 2000],
