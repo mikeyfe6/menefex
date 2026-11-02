@@ -36,6 +36,15 @@ const PortfolioPage = () => {
         return node ? getImage(node.childImageSharp.gatsbyImageData) : null;
     };
 
+    const renderProjectImage = (name, alt) => {
+        const image = getProjectImage(name);
+        return image ? (
+            <GatsbyImage image={image} alt={alt} />
+        ) : (
+            <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt={`${alt} (geen screenshot)`} />
+        );
+    };
+
     useEffect(() => {
         if (!isHydrated) return;
         const hash = globalThis.location.hash?.slice(1);
@@ -61,7 +70,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("huzl") && <GatsbyImage image={getProjectImage("huzl")} alt="Huzl" />}
+                            {renderProjectImage("huzl", "Huzl")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -127,12 +136,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("edutainuproductions") && (
-                                <GatsbyImage
-                                    image={getProjectImage("edutainuproductions")}
-                                    alt="Edutain U Productions"
-                                />
-                            )}
+                            {renderProjectImage("edutainuproductions", "Edutain U Productions")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -184,12 +188,7 @@ const PortfolioPage = () => {
                             // target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {/* {getProjectImage("priozorg") && (
-                                <GatsbyImage
-                                    image={getProjectImage("priozorg")}
-                                    alt="Prio Zorg"
-                                />
-                            )} */}
+                            {/* {renderProjectImage("priozorg", "Prio Zorg")} */}
 
                             <StaticImage src="../images/mnfx-screens.jpeg" width={600} alt="Prio Zorg (404)" />
                         </a>
@@ -247,9 +246,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("keeptreal") && (
-                                <GatsbyImage image={getProjectImage("keeptreal")} alt="Keep It Real" />
-                            )}
+                            {renderProjectImage("keeptreal", "Keep It Real")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -353,9 +350,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("dsmelodies") && (
-                                <GatsbyImage image={getProjectImage("dsmelodies")} alt="DS Melodies" />
-                            )}
+                            {renderProjectImage("dsmelodies", "DS Melodies")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -401,9 +396,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("afrodiasphere") && (
-                                <GatsbyImage image={getProjectImage("afrodiasphere")} alt="Afrodiasphere" />
-                            )}
+                            {renderProjectImage("afrodiasphere", "Afrodiasphere")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -456,9 +449,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("blackharmony") && (
-                                <GatsbyImage image={getProjectImage("blackharmony")} alt="Black Harmony" />
-                            )}
+                            {renderProjectImage("blackharmony", "Black Harmony")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
@@ -503,9 +494,7 @@ const PortfolioPage = () => {
                             target="_blank"
                             className={portfolioStyles.portfolioImg}
                         >
-                            {getProjectImage("eternitydrum") && (
-                                <GatsbyImage image={getProjectImage("eternitydrum")} alt="Eternity Percussion" />
-                            )}
+                            {renderProjectImage("eternitydrum", "Eternity Percussion")}
                         </a>
                         <div className={portfolioStyles.portfolioInfo}>
                             <h3>
